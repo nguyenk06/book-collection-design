@@ -27,11 +27,11 @@ Implementation changes should be made in the application repository. Major archi
 | Area | Document |
 | --- | --- |
 | Direction | [Project Vision](docs/PROJECT_VISION.md) |
-| Delivery | [Roadmap](docs/ROADMAP.md) · [Current State](docs/CURRENT_STATE.md) · [Changelog](docs/CHANGELOG.md) |
+| Delivery | [Roadmap](docs/ROADMAP.md) · [Next Actions](docs/NEXT_ACTIONS.md) · [Backlog](docs/BACKLOG.md) · [Current State](docs/CURRENT_STATE.md) · [Changelog](docs/CHANGELOG.md) |
 | Architecture | [Architecture](docs/ARCHITECTURE.md) · [Database](docs/DATABASE.md) |
 | Core workflows | [Shopping Mode](docs/SHOPPING_MODE.md) · [Scanner and Matching](docs/SCANNER_AND_MATCHING.md) · [Bookshelf](docs/BOOKSHELF.md) |
 | Data workflows | [Import and Export](docs/IMPORT_EXPORT.md) · [AI Review](docs/AI_REVIEW.md) · [Asset Management](docs/ASSET_MANAGEMENT.md) · [Tags](docs/TAGS.md) |
-| Governance | [Decision Log](docs/DECISIONS.md) · [Contributing](docs/CONTRIBUTING.md) |
+| Governance | [Decision Log](docs/DECISIONS.md) · [Documentation Rules](docs/DOCUMENTATION_RULES.md) · [Contributing](docs/CONTRIBUTING.md) |
 
 ## GitHub Pages
 

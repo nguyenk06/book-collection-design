@@ -9,6 +9,11 @@ Architecture Decision Records capture durable choices and their consequences. Ac
 | [ADR-0003](decisions/ADR-0003-shopping-mode-priority.md) | Shopping Mode is the highest user priority | Accepted |
 | [ADR-0004](decisions/ADR-0004-reference-covers-as-enrichment.md) | Reference covers are enrichment, not core functionality | Accepted |
 | [ADR-0005](decisions/ADR-0005-completion-over-edition-perfection.md) | Collection completion over edition perfection | Accepted |
+| [ADR-0006](decisions/ADR-0006-preserve-identities-and-migrate-additively.md) | Preserve existing identities and migrate additively | Accepted |
+| [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md) | Separate Shopping persistence before UI work | Accepted |
+| [ADR-0008](decisions/ADR-0008-canonical-books-and-identifiers.md) | Use canonical books with related identifiers, not AltBooks | Accepted |
+
+The accepted database direction and migration sequence are summarized in [Database](DATABASE.md). Current implementation status is maintained in [Current State](CURRENT_STATE.md).
 
 ## Adding a decision
 

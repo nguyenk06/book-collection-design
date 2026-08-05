@@ -12,6 +12,8 @@ Architecture, planning, and product documentation for a collector-first Book Col
 - [Project Vision](PROJECT_VISION.md)
 - [Current State](CURRENT_STATE.md)
 - [Roadmap](ROADMAP.md)
+- [Next Actions](NEXT_ACTIONS.md)
+- [Backlog](BACKLOG.md)
 - [Architecture](ARCHITECTURE.md)
 - [Decision Log](DECISIONS.md)
 
@@ -29,4 +31,5 @@ Architecture, planning, and product documentation for a collector-first Book Col
 
 - [Database](DATABASE.md)
 - [Changelog](CHANGELOG.md)
+- [Documentation Rules](DOCUMENTATION_RULES.md)
 - [Contributing](CONTRIBUTING.md)
