@@ -4,43 +4,39 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Establish Authorized D1 Access and Retry Packet A
+### Investigate Sites-Native Version 17 Activation
 
-**Workflow state:** `BLOCKED-EXTERNAL`
+**Workflow state:** Active read-only investigation
 
-**Next owner:** `EXTERNAL/WAIT` - Product Owner establishes an authenticated, authorized production D1 operator path privately. After that condition is met, Designer prepares or revises the next Packet A brief and Product Owner separately authorizes the execution window.
+**Next owner:** `ENGINEER` - process `2026-08-08-sites-native-version-17-activation-investigation-implementation-brief.md` with `CB`.
 
 **Current objective**
 
-Provide an authorized, authenticated D1 operator path that supports private production-target verification and backup execution, then obtain new explicit Product Owner authorization for a Packet A retry.
+Determine the safest repeatable, data-preserving way to activate Version 17 using only supported ChatGPT Sites capabilities and the existing application architecture.
 
 **Why this is the current priority**
 
-Packet A revision 2 was authorized but automatically aborted before production D1 contact because the Engineer could not verify an authenticated/supported D1 access path. The no-write window ended. Resolving access is now the immediate prerequisite; migration, verification, publication, smoke testing, and destructive restore remain independent and unauthorized. See [Database](DATABASE.md).
-
-Planner confirmed the operator path is not yet established. Prefer an existing Sites/Cloudflare-supported authenticated path. Do not create a new persistent migration credential unless the supported workflow requires it and is separately reviewed. No new Packet A authorization or no-write window begins before the path is established privately.
+Planner accepted that external D1 administration is unavailable and not part of the project operating model. The next step is a read-only assessment of Sites saved versions/deployment, source packages, D1 bindings, checked-in migrations, runtime initialization such as `ensureSeeded()`, application APIs, local/disposable validation, and Sites logs/metadata. No production operation or publication is authorized. See [Database](DATABASE.md).
 
 **Success criteria**
 
-- An authorized D1 operator path is available privately through an authenticated operator session or supported connector.
-- Product Owner explicitly authorizes Packet A and agrees not to change the collection until completion or abort.
-- Site Engineer privately verifies the production target/access path, validates execution/results, and automatically aborts on any required stop condition.
-- Version 16 remains published and Version 17 remains saved/unpublished.
-- The exact production target and baseline are verified without exposing identifiers or row data.
-- The current Time Travel bookmark and verified protected SQL export exist in restricted storage.
-- The SQL export retention rule is recorded privately: retain through successful Version 17 migration, publication, and smoke testing until a later known-good backup exists.
-- Sanitized Packet A evidence is returned; no migration or Site operation occurs.
+- Actual Sites-native capabilities and limitations are verified without production writes.
+- Existing migration packaging, D1 binding use, runtime initialization, and `ensureSeeded()` behavior are traced from source and disposable validation.
+- Candidate strategies are compared for preservation, repeatability, failure behavior, authorization, rollback limitations, and maintainability.
+- Backup/recovery protections actually available through Sites or the application are identified without claiming unavailable export or Time Travel controls.
+- A recommended Sites-native activation strategy, conflicts, and required follow-up are returned in a sanitized handoff.
+- Version 16 remains published and Version 17 remains saved/unpublished; no production migration or publication occurs.
 
 **Expected deliverables**
 
-- Accepted Packet A implementation brief.
-- Restricted recovery bookmark and verified SQL export.
-- Sanitized target, baseline, migration-ledger, invariant, and backup pass/fail report.
-- Next approval request only after Packet A evidence is accepted.
+- Accepted Sites-native activation investigation brief.
+- Source/runtime capability assessment and disposable validation evidence.
+- Candidate comparison and recommended activation/recovery approach.
+- Explicit unknowns and approval boundaries for any later implementation or production brief.
 
 **Files likely affected**
 
-- Production target/read-only inspection, write-freeze coordination, and backup execution.
+- Site source, migrations, initialization paths, APIs, bindings, saved-version metadata, and disposable validation only.
 - Sanitized evidence handoff; private values remain outside repository and handoff artifacts.
 - [Current State](CURRENT_STATE.md), [Roadmap](ROADMAP.md), [Database](DATABASE.md), [Changelog](CHANGELOG.md), and this queue after each verified transition.
 
@@ -50,8 +46,9 @@ Medium.
 
 **Risks**
 
-- SQL export blocks database requests while running and may require a maintenance/write freeze.
-- Ambiguous target, schema, ledger, Time Travel support, or backup output requires immediate abort.
+- Sites migration execution and traffic gating may remain undocumented or unobservable.
+- Runtime schema upgrades could create partial-failure, concurrency, authorization, or repeatability risks if poorly designed.
+- Sites-native recovery controls may be weaker than direct D1 export/Time Travel administration.
 - Private backup artifacts or identifiers could leak if placed in source or handoffs.
 - Purchases and independently editable ownership state can still contradict one another.
 - Publication could be mistaken for migration validation if the gates are not recorded separately.
@@ -61,7 +58,7 @@ Medium.
 - Shopping Mode UI redesign.
 - Scanner, Bookshelf, import/export, AI review, reference covers, tags, and analysis changes.
 - Full edition modeling, Business locations, and generalized media support.
-- Applying any migration, changing the ledger/schema/data, or accessing R2.
+- Production reads or writes, applying any migration, changing ledger/schema/data, or accessing R2.
 - Site deployment/publication, production smoke testing, restore/import, or destructive rollback.
 
 ## Ready Next

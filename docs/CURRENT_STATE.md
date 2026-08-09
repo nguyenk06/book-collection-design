@@ -12,17 +12,17 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** `BLOCKED-EXTERNAL` - resume when an authenticated, authorized production D1 operator path has been established privately
+**Workflow state:** Active - Sites-native Version 17 activation investigation ready for Engineer intake
 
 ## Summary
 
 The production application remains a stable, private, single-user book tracker on Site Version 16. The validated Shopping persistence/API foundation is preserved in Site version history as unpublished Version 17 but has not been migrated to production or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
 
-The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. The accepted operational direction is therefore to prepare an operator-controlled D1 migration, not publish Version 17 or wait indefinitely for undocumented Sites behavior.
+The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. That behavior remains unknown and must not be assumed.
 
 The operator runbook and private-project readiness model are complete. The Product Owner explicitly authorized Packet A revision 2 and observed the no-write window, but the Engineer could not authenticate a direct D1 operator path, find a supported D1 connector, or use an existing authenticated Cloudflare session. The required ambiguous-target/access abort fired before any production D1 query or backup operation. The no-write window ended after abort.
 
-Planner confirmed that the D1 operator path is not yet established and Packet A remains blocked. Prefer an existing Sites/Cloudflare-supported authenticated operator path established privately. Do not introduce a new persistent credential solely for this migration unless the supported workflow requires it and it receives separate review.
+Planner accepted external D1 administration as unavailable and outside the intended operating model. The project must use only supported capabilities exposed through ChatGPT Sites. External Cloudflare sessions, Wrangler authentication, API credentials/tokens, direct D1 console access, and another deployment platform are not project requirements. Version 17 activation now requires a read-only Sites-native architecture investigation; no production operation or publication is authorized.
 
 ## Current Status Dashboard
 
@@ -119,7 +119,7 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 - Sites migration trigger, executor, tracking, retry behavior, atomicity, and traffic sequencing remain unknown from public documentation.
 - Raw migration `0004` applies once locally but is not directly idempotent; safe execution depends on the D1 migration ledger and controlled operator sequencing.
 - The production D1 target, access, migration ledger, Time Travel eligibility, and backup artifacts remain unverified until Packet A executes.
-- The immediate Packet A blocker is the absence of an authorized, authenticated D1 operator path capable of private target verification and backup execution.
+- Direct operator-controlled production D1 migration, export, and Time Travel controls are unavailable unless Sites itself exposes a supported mechanism.
 - The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
 - No roadmap bookshelf, exports, backups, or dry-run imports.
@@ -130,4 +130,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Establish an authorized D1 operator path. A retry then requires new explicit Product Owner Packet A authorization and a new no-write window. Migration, verification, publication, smoke testing, and destructive restore remain independent, unauthorized gates.
+Investigate the safest Sites-native Version 17 schema-activation strategy using the actual implementation and capabilities available to the Site Engineer. No production write, migration, publication, or destructive action is authorized.

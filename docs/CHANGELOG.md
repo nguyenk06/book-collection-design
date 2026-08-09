@@ -65,7 +65,9 @@ Planner authorized production target verification, read-only preflight, bookmark
 
 Planner subsequently right-sized Packet A readiness for the private, single-owner project. Explicit Product Owner authorization starts the backup window; the Product Owner/Site Engineer may operate without a second human verifier or separate communication plan. The Engineer validates results and Planner reviews sanitized evidence. Packet A remains unexecuted, and the six backup, migration, verification, publication, smoke-test, and destructive-restore gates remain independent.
 
-Packet A revision 2 was explicitly authorized and attempted, then automatically aborted at the required target/access verification gate. No production D1 query, bookmark retrieval, export, backup verification, migration, publication, or other production operation occurred. An authorized D1 operator path is required before a newly authorized retry.
+Packet A revision 2 was explicitly authorized and attempted, then automatically aborted at the required target/access verification gate. No production D1 query, bookmark retrieval, export, backup verification, migration, publication, or other production operation occurred. At that transition, an authorized D1 operator path was considered the retry prerequisite; the later Sites-native decision below superseded that requirement.
+
+Planner then accepted Sites-native operations as the project constraint and removed external D1 operator access as a requirement. Direct operator-controlled migration and backup controls are unavailable unless Sites exposes them. The next milestone is a read-only Sites-native Version 17 activation investigation; this decision did not migrate, verify, or publish Version 17.
 
 ### Changed
 

@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Packet A revision 2 aborted before D1 access, not backed up or migrated | Authorized D1 operator path, new Packet A authorization, verified backup, later `0004` migration and verification approvals | Medium | No authenticated/supported production D1 access path; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; external D1 administration excluded and Sites-native activation investigation ready | Verified Sites-native schema activation and recovery strategy, then separately approved implementation/production gates | Medium | Sites migration and recovery capabilities remain unverified; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,12 +27,12 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Establish an authorized D1 operator path, then retry only Packet A after new explicit Product Owner authorization:
+Complete a read-only Sites-native Version 17 activation investigation:
 
-- Verify the exact target, Version 16 baseline, migration ledger, and preservation invariants read-only.
-- Retrieve the current Time Travel bookmark and create/verify a protected SQL export where supported.
-- Stop after sanitized Packet A evidence.
-- Keep migration, publication, smoke testing, and destructive restore as separate approval gates.
+- Assess saved-version/deployment behavior, source packages, D1 bindings, checked-in migrations, runtime initialization, application APIs, and supported Sites logs/metadata.
+- Compare safe activation options for preservation, repeatability, failure handling, authorization, recovery limitations, and maintainability.
+- Record unavailable direct export or Time Travel controls as constraints rather than indefinite external prerequisites.
+- Keep implementation, production migration, publication, smoke testing, and destructive actions outside this investigation.
 
 Saving Version 17 does not mark this milestone released or in production. Production migration and publication remain separate approval gates; Version 16 remains live.
 

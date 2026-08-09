@@ -118,9 +118,13 @@ The read-only investigation completed without production D1/R2 access or changes
 - The Version 17 package contains migrations `0000` through `0004` and orders `0004_shopping_persistence` after the existing baseline.
 - Public Sites documentation distinguishes saving from deployment but does not establish the packaged D1 migration trigger, executor, applied-migration tracking, retry behavior, atomicity, or traffic sequencing.
 - Disposable validation confirmed that `0004` applies once to the Version 16 migration baseline. Directly replaying the raw SQL fails, so it must not be treated as idempotent.
-- The selected operational direction is an operator-controlled D1 migration after separately approved backup and preflight gates. This may be revisited if Sites provides an authoritative migration contract.
+- The earlier operator-controlled D1 migration direction is superseded as an actionable path. External D1 administration is outside the project operating model; schema activation must use capabilities supported directly by ChatGPT Sites.
 
 ### Production backup and execution gates
+
+The operator-controlled plan below is retained as investigation history, not an available execution path. Direct production D1 access, SQL export, and Time Travel controls are unavailable unless Sites itself exposes a supported mechanism. Do not block indefinitely on external Cloudflare administration and do not work around Sites security boundaries.
+
+The active design task is to assess Sites-native activation through saved-version/deployment capabilities, source packages, the existing D1 binding, checked-in Drizzle migrations, application APIs and data structures, runtime initialization including `ensureSeeded()`, disposable validation, and Sites-exposed logs or metadata. Packaged migration execution during publication remains unknown until supported tooling or evidence establishes it.
 
 No step below is authorized for execution by this document.
 
@@ -158,7 +162,7 @@ This authorization does not permit migration application, raw SQL execution, led
 
 Backup, migration, post-migration verification, publication, smoke testing, and destructive restore remain six independent gates. Completion of one does not authorize the next.
 
-Packet A revision 2 was attempted on 2026-08-08 and automatically aborted at target/access verification. Site identity and saved-version history were confirmed, but no authenticated direct D1 operator path, supported D1 connector, or existing authenticated Cloudflare session was available. Production D1 was not contacted; baseline, ledger, Time Travel, export, and backup verification remain unperformed. Retry requires an authorized D1 access path plus new explicit Packet A authorization and no-write window.
+Packet A revision 2 was attempted on 2026-08-08 and automatically aborted at target/access verification. Site identity and saved-version history were confirmed, but no authenticated direct D1 operator path, supported D1 connector, or existing authenticated Cloudflare session was available. Production D1 was not contacted; baseline, ledger, Time Travel, export, and backup verification remain unperformed. The former external-access retry requirement is superseded by the Sites-native constraint above.
 
 ## Accepted Direction
 
