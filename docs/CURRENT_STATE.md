@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
 
-**Engineer execution state:** `AVAILABLE` — P2 is complete and Engineer may use `CB` for the eligible P3 brief under `RUN`
+**Engineer execution state:** `WORKING` — P2 is complete; mandatory P3 `CB` intake is the current action under `RUN`, with brief acceptance still pending
 
 ## Current Engineering Workstreams
 

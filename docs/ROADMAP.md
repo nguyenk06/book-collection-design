@@ -29,12 +29,10 @@ The database-first assessment validated the priority order. Enabling foundations
 
 Run the bounded P3 scanner/identifier validation milestone while Shopping preservation and production activation remain separately gated:
 
-- Keep bridge traffic compatible with Version 16 until an explicit owner-authorized upgrade completes.
-- Reuse the verified same-origin Site path and existing server-side owner authorization for status, versioned JSON export, separately approved re-entrant upgrade, and verification.
-- Require deliberate confirmation and same-origin/CSRF protection before any schema-changing action.
-- Do not bypass authentication or provide owner credentials/session material to Engineer.
-- Preserve portable schema/business logic and treat application export as weaker than a D1 snapshot.
-- Keep bridge implementation, save, publication, production export/upgrade, final publication, smoke testing, and destructive actions separately scoped and gated.
+- Add focused local regression coverage for existing ISBN normalization, checksum validation, and scanner result/error boundaries.
+- Permit only narrow test-driven fixes within established scanner/identifier behavior.
+- Document advanced canonical matching and multi-identifier gaps as deferred rather than expanding architecture.
+- Keep Shopping components, schema/migrations, external services, Site saving, publication, production access, and destructive actions outside this milestone.
 
 Saving Version 17 does not mark Shopping released or active in production. Version 18 bridge is published, but schema activation and final Shopping publication remain separate gates.
 
