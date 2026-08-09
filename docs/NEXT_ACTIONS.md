@@ -4,34 +4,31 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Save and prepare the Shopping persistence foundation
+### Plan and authorize the Shopping production migration
 
 **Current objective**
 
-Move the locally validated Shopping persistence/API foundation into Site version history and prepare a safe, explicitly approved production migration and publication path.
+Prepare a safe production backup, migration, verification, and rollback plan for the Shopping persistence foundation preserved in unpublished Site Version 17.
 
 **Why this is the current priority**
 
-Shopping persistence and owner-authorized APIs are implemented and validated locally, but the work is not saved as a Site version, migrated to production, or published. Preserving that evidence and planning production activation are the immediate prerequisites to UI work. See [Database](DATABASE.md) and [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md).
+Shopping persistence and owner-authorized APIs are implemented, locally validated, and saved as unpublished Version 17. Production remains on Version 16, and the packaged migration has not been run. Safe migration planning is the immediate prerequisite to any production activation. See [Database](DATABASE.md) and [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md).
 
 **Success criteria**
 
-- The exact validated source is committed and pushed so a Site version can be saved.
-- A new Site version records the foundation without implying publication.
-- Production migration verification, rollback, backup, and authorization steps are documented.
+- Production backup, migration, verification, rollback, and authorization steps are documented.
+- The standalone production migration mechanism is confirmed before authorization.
 - The deferred book-to-collection foreign key has an explicit implementation sequence.
 - Production migration and publication occur only with separate explicit approval.
 
 **Expected deliverables**
 
-- Committed and pushed validated Site source.
-- Saved, unpublished Site version.
 - Production migration and rollback plan, including identifier and record preservation checks.
+- Evidence checklist for production schema and behavior verification.
 - Explicit decision point for production migration and later publication.
 
 **Files likely affected**
 
-- Site source/version workflow.
 - Production migration, backup, verification, and rollback documentation.
 - Book-to-collection foreign-key migration work when scheduled.
 - [Current State](CURRENT_STATE.md), [Roadmap](ROADMAP.md), [Database](DATABASE.md), [Changelog](CHANGELOG.md), and this queue after each verified transition.
@@ -42,7 +39,6 @@ Medium.
 
 **Risks**
 
-- Unsaved local work cannot be promoted through the Sites version workflow.
 - Production migration could expose orphaned relationships or incomplete rollback assumptions.
 - Purchases and independently editable ownership state can still contradict one another.
 - Publication could be mistaken for migration validation if the gates are not recorded separately.
@@ -70,6 +66,7 @@ Medium.
 
 ## Recently Completed
 
+- Preserved the exact validated Shopping persistence/API source and migration as unpublished Site Version 17; Version 16 remains live.
 - Implemented and locally validated Businesses, Purchases, collection target price, Added Date, owner-authorized APIs, and additive migration tests.
 - Preserved existing Book identities and data in disposable local migration validation.
 - Deferred portable Purchase identity until cross-database workflows require it.

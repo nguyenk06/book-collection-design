@@ -57,6 +57,20 @@ The Site Engineer must not:
 - Invent product direction.
 - Mark roadmap work complete without implementation evidence.
 - Publish without explicit approval.
+- Move briefs or reports between shared handoff folders.
+- Archive, overwrite, delete, or reorganize shared handoff artifacts.
+
+### Sites source-preservation exception
+
+The Site Engineer may create and push the minimum source commit required to preserve an already validated source state through the Sites saved-version workflow when that workflow requires pushed source provenance.
+
+- Limit the commit and push to the exact reviewed milestone source.
+- Revalidate scope and sanitization before preserving the version.
+- Treat the operation as Sites workflow plumbing, not a general user-managed Git release process.
+- Saving a Site version does not authorize a production migration, preview deployment, or publication.
+- Production migration and publication retain separate explicit approval gates.
+
+This is an operational workflow rule, not a product or database architecture decision, so it does not require an ADR unless its scope later expands materially.
 
 ## Shared Information Locations
 
@@ -132,18 +146,87 @@ The handoff workspace is outside both repositories. The Designer owns its housek
 1. The Designer prepares one milestone-specific brief in `briefs/` from the Implementation Brief template.
 2. The Designer shares that exact file with the Site Engineer.
 3. The brief remains in `briefs/` while receipt or scope acceptance is pending.
-4. Only after the Site Engineer confirms receipt and accepts it as the active implementation specification may the Designer move the brief to `processed/`.
-5. If the Engineer rejects or requests revision, retain the superseded brief without overwriting it and create a newly named revision.
+4. The Site Engineer reviews the brief and writes a sanitized acceptance report to `inbox/`; the Engineer does not edit or move the brief.
+5. Only after the Site Engineer confirms receipt and accepts it as the active implementation specification may the Designer move the brief to `processed/`.
+6. If the Engineer rejects or requests revision, retain the relevant artifacts without overwriting them and create a newly named revision after the conflict or approval request is resolved.
 
 Moving a brief records transport acceptance only. It does not prove implementation, validation, Site versioning, migration, or publication.
+
+### Brief acceptance report
+
+Brief acceptance is an observable Engineer state transition. Use a short milestone-specific report named:
+
+`YYYY-MM-DD-<milestone>-brief-acceptance.md`
+
+The report must contain:
+
+- Accepted brief filename
+- Status: `ACCEPTED AS ACTIVE SPECIFICATION`
+- Feasibility
+- Material conflicts, or `NONE`
+- Authorized scope
+- Explicitly unauthorized actions
+- Material risks or unknowns
+- Next Engineer action
+- Sanitization confirmation
+
+The Designer then:
+
+1. Verifies that the report references an existing brief in `briefs/`.
+2. Confirms that the Engineer accepted that exact brief as the active implementation specification.
+3. Checks for conflicts, scope changes, approval requests, or authorization mismatches.
+4. If clean, moves the accepted brief from `briefs/` to `processed/` using a collision-safe name.
+5. Leaves the Engineer report unchanged and read-only during review.
+6. Moves the acceptance report to `processed/` when brief acceptance and movement are recorded and no acceptance issue remains active.
+7. Does not treat acceptance as implementation completion or update product implementation status because of acceptance alone.
+
+If the report identifies a conflict, scope change, or required approval, keep the brief and report active until the issue is resolved.
+
+### Engineer state reports
+
+Meaningful cross-workspace state transitions produce small, sanitized reports in `inbox/`. At minimum, report:
+
+- `BRIEF ACCEPTED`
+- `BLOCKED`
+- `PARTIAL IMPLEMENTATION`
+- `COMPLETE IMPLEMENTATION`
+- `VALIDATION FAILED`
+- `SAVED SITE VERSION`
+- `PUBLICATION / DEPLOYMENT STATUS CHANGE`
+
+Reports should identify the milestone, transition, related brief or prior report, verified facts, scope or approval impact, next action, and sanitization confirmation. Use the full Design Handoff template for implementation evidence that should update permanent documentation; a small state report may announce a transition but does not replace the final evidence handoff.
+
+Routine progress, work-started notices, and action-by-action logs do not require inbox reports. The purpose is durable cross-workspace state, not implementation chatter.
+
+The Designer owns report housekeeping. Keep a report in `inbox/` while it represents an unresolved blocker, approval request, conflict, or unapplied implementation evidence. Move it to `processed/` only after its lifecycle purpose is satisfied, without altering or overwriting it.
+
+### Authority and continuation
+
+After accepting a brief, the Site Engineer proceeds without another Planner or product-owner “go” message when all of the following are true:
+
+- The brief is accepted as the active specification.
+- The work is feasible.
+- No material conflict exists.
+- The next actions are already authorized by the brief.
+
+The Site Engineer must stop and request approval when:
+
+- The brief contains an explicit approval gate for the next action.
+- Scope changes materially.
+- A new production-changing action is required.
+- A destructive action becomes necessary.
+- An unresolved design conflict appears.
+
+Acceptance never expands the brief's authorization boundary.
 
 ### Design handoff lifecycle
 
 1. A Site Engineer handoff enters `inbox/` and remains unchanged during intake review.
 2. The Designer verifies sanitization, evidence boundaries, conflicts, and referenced design authorities.
 3. The Designer incorporates only supported facts into permanent design documentation.
-4. Resolve and record any required product-owner decisions.
-5. Only after the verified evidence has been incorporated and the resulting documentation state is accepted may the Designer move the handoff to `processed/`.
+4. The Designer evaluates whether the evidence is a major milestone state transition and updates [`CHANGELOG.md`](CHANGELOG.md) when required by [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md).
+5. Resolve and record any required product-owner decisions.
+6. Only after the verified evidence has been incorporated and the resulting documentation state is accepted may the Designer move the handoff to `processed/`.
 
 Partial implementations and failed validations use the same gate: record their verified state before processing the artifact. If evidence is missing, conflicted, rejected, or still under review, leave the handoff in `inbox/`.
 
@@ -159,6 +242,8 @@ Use lowercase kebab-case for `<milestone>`, for example `2026-08-08-shopping-per
 Before creating, copying, or moving a file, check both the source and destination names. Never overwrite an unrelated or earlier handoff. If a destination filename already exists, compare its milestone and lifecycle context, then select a unique revision or timestamped filename. Do not delete or replace the existing artifact merely to resolve a collision.
 
 If permissions prevent the Designer from moving an artifact, leave it in place and report the housekeeping limitation. Never weaken read-only protection or modify the Site Engineer's source handoff to force a lifecycle transition.
+
+Only the Designer performs movement into `processed/`. The Site Engineer may read briefs and create new collision-safe reports or handoffs in `inbox/`, but may not move, archive, overwrite, delete, or reorganize shared artifacts.
 
 ## Conflict Rules
 

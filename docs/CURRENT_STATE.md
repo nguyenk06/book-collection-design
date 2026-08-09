@@ -4,21 +4,21 @@
 
 **Verified production implementation:** Site Version 16
 
-**Verified local implementation:** Shopping persistence/API foundation; validated locally, not saved as a Site version, migrated to production, or published
+**Verified saved implementation:** Shopping persistence/API foundation in unpublished Site Version 17; not migrated to production or published
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
 ## Summary
 
-The production application remains a stable, private, single-user book tracker on Site Version 16. A locally implemented Shopping persistence/API foundation has been validated but has not been saved in Site version history, migrated to production, or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
+The production application remains a stable, private, single-user book tracker on Site Version 16. The validated Shopping persistence/API foundation is preserved in Site version history as unpublished Version 17 but has not been migrated to production or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
 
 ## Current Status Dashboard
 
 | Area | Status | Current state |
 | --- | --- | --- |
 | Architecture | Partial | Viable D1/R2 foundation; responsibilities must be separated incrementally |
-| Database | Partial | Local additive schema and migration validation cover Businesses, Purchases, target price, and Added Date; production remains on the v16 schema and the book-to-collection relationship is not enforced |
-| Shopping | Partial | Persistence and owner-authorized APIs are locally validated but unsaved and unpublished; Shopping UI remains unchanged |
+| Database | Partial | Version 17 packages the locally validated additive migration for Businesses, Purchases, target price, and Added Date; production remains on the v16 schema and the book-to-collection relationship is not enforced |
+| Shopping | Partial | Persistence and owner-authorized APIs are saved in unpublished Version 17; production and Shopping UI remain unchanged |
 | Scanner | Partial | Live/photo ISBN scanning works; canonical same-book matching is weak |
 | Bookshelf | Planned | Collection gallery/list views exist, but the roadmap bookshelf is not implemented |
 | Import/Export | Partial | Immediate JSON collection import exists; export, dry run, conflicts, and backups do not |
@@ -41,9 +41,9 @@ See [Database](DATABASE.md) for verified schema details and accepted migration d
 
 The published application remains useful for current collection tracking. It supports collection selection, search, ISBN scanning, ownership and buying-state presentation, copy counts, expected CYOA positions, personal cover upload, collection import, and live KPIs.
 
-The local Site working copy additionally contains validated Business and Purchase persistence, collection target price, nullable Book Added Date, and owner-authorized Business/Purchase APIs. This work is not a saved Site version or a production capability. No Shopping Mode UI was added, and Purchase creation does not alter Book ownership or copy counts.
+Unpublished Site Version 17 preserves validated Business and Purchase persistence, collection target price, nullable Book Added Date, and owner-authorized Business/Purchase APIs. It is not a production capability: saving the version did not run the packaged migration or deploy the Site. No Shopping Mode UI was added, and Purchase creation does not alter Book ownership or copy counts.
 
-### Locally validated Shopping foundation
+### Saved, unpublished Shopping foundation
 
 - Businesses use cleaned display names and unique normalized names.
 - Purchases preserve transaction history separately from Book identity, ownership, and copy counts.
@@ -53,6 +53,7 @@ The local Site working copy additionally contains validated Business and Purchas
 - Existing Books retain unknown Added Dates as `NULL`; newly created or imported Books receive an Added Date.
 - Local migration tests preserved Book IDs, collection keys, records, ownership, copies, ISBNs, cover references, and timestamps.
 - Focused tests and the local production build pass. Full-project lint retains unrelated pre-existing failures.
+- Version 17 references the exact validated source state and contains the Shopping migration in its saved package.
 
 ## Current strengths
 
@@ -101,7 +102,7 @@ The local Site working copy additionally contains validated Business and Purchas
 ## Current known limitations
 
 - Production has no Businesses, Purchases, condition history, price history, collection target price, or Added Date migration.
-- The locally validated Shopping foundation is not saved in Site version history or published.
+- Version 17 is saved but unpublished; Version 16 remains live.
 - Production migration, rollback, and production behavior remain unverified.
 - The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
@@ -113,4 +114,4 @@ The local Site working copy additionally contains validated Business and Purchas
 
 ## Next milestone
 
-Save the locally validated Shopping persistence/API foundation as a Site version, complete production migration and rollback planning, and retain explicit approval gates before migration or publication. The full sequence and blockers are maintained in the [Roadmap](ROADMAP.md).
+Complete production backup, migration, verification, and rollback planning for saved Version 17. Migration and publication remain separate explicit approval gates. The full sequence and blockers are maintained in the [Roadmap](ROADMAP.md).

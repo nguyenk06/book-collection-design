@@ -7,6 +7,7 @@
 - Milestone: <!-- Short milestone name matching the accepted brief. -->
 - Prepared date: <!-- YYYY-MM-DD -->
 - Source brief: <!-- Descriptive brief filename or safe identifier. -->
+- Related state reports: <!-- Descriptive filenames or "None". -->
 - Recommended filename: <!-- YYYY-MM-DD-<milestone>-design-handoff.md -->
 
 The Designer keeps this source unchanged in `inbox/` until its verified evidence is incorporated into permanent documentation and accepted. It may then move to `processed/` without overwriting an existing artifact.

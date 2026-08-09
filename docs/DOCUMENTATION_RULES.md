@@ -74,6 +74,19 @@ Generalize operational details whenever practical.
 - Keep completed milestones visible.
 - Keep immediately actionable work in [NEXT_ACTIONS.md](NEXT_ACTIONS.md).
 
+## Planner Visibility
+
+Planner uses permanent design documentation rather than raw handoffs or implementation chat as the primary project visibility layer:
+
+1. [CURRENT_STATE.md](CURRENT_STATE.md) — what is true now.
+2. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — what should happen next.
+3. [CHANGELOG.md](CHANGELOG.md) — which major milestones and state transitions occurred.
+4. [ROADMAP.md](ROADMAP.md) — where the project is going.
+
+Temporary handoffs are transport and evidence. They do not replace these documents.
+
+For each significant Engineer handoff, evaluate whether it records a major milestone transition such as local implementation, local validation, saved Site version, production migration, production verification, publication, rollback, or supersession. Update the changelog when it does, keeping each state independent. Brief acceptance and routine progress reports do not create changelog entries.
+
 ## Architecture Decision Records
 
 Every major architectural decision should become an ADR containing:

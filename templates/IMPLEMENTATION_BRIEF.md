@@ -7,9 +7,9 @@
 - Milestone: <!-- Short milestone name. -->
 - Prepared date: <!-- YYYY-MM-DD -->
 - Recommended filename: <!-- YYYY-MM-DD-<milestone>-implementation-brief.md -->
-- Engineer acceptance: <!-- PENDING until the Site Engineer confirms receipt and accepts this as the active specification. -->
+- Engineer acceptance: PENDING <!-- Engineer reports acceptance separately; do not edit this brief in place. -->
 
-Keep this file in `briefs/` until Engineer acceptance is confirmed. The Designer may then move it to `processed/` without overwriting an existing artifact.
+Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
 
 ## Objective
 

@@ -96,9 +96,9 @@ Adding it requires an orphan audit, backup, controlled SQLite table rebuild, and
 
 The first responsibilities to move out of `books` are purchases, alternate identifiers, asset metadata, tags, and review state.
 
-## Verified Local Implementation
+## Verified Saved Implementation
 
-The Shopping persistence/API foundation is implemented and validated in the local Site working copy. It is not saved as a Site version, migrated to production, or published.
+The Shopping persistence/API foundation is implemented, locally validated, and preserved in unpublished Site Version 17. Its additive migration is packaged in that saved version, but saving did not execute the migration. No production database operation or verification was performed; production remains on the Version 16 schema.
 
 | Table | Locally implemented change |
 | --- | --- |
@@ -107,7 +107,7 @@ The Shopping persistence/API foundation is implemented and validated in the loca
 | `businesses` | Internal auto-increment integer ID, cleaned display name, unique normalized name, and timestamps |
 | `purchases` | Internal auto-increment integer ID, required Book, optional Business, independent nullable prices in integer cents, optional purchase date, controlled condition, and timestamps |
 
-Purchase references restrict deletion of referenced Books and Businesses. Purchase creation does not derive or update Book ownership or copy counts. Local disposable migration tests verified preservation, uniqueness, checks, foreign keys, and conservative deletion behavior; production records were not inspected.
+Purchase references restrict deletion of referenced Books and Businesses. Purchase creation does not derive or update Book ownership or copy counts. Local disposable migration tests verified preservation, uniqueness, checks, foreign keys, and conservative deletion behavior; production records were not inspected. Version 17 preserves this exact validated migration state for later, separately authorized production work.
 
 The locally implemented condition vocabulary is: New, Like New, Very Good, Good, Fair, Poor, and Unknown.
 

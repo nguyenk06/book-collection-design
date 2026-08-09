@@ -6,8 +6,8 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; persistence/API and additive migration validated locally, not saved or migrated to production | Saved Site version, D1 backup, production migration verification and rollback | Medium | Book-to-collection foreign key deferred; production state unverified |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local persistence/API foundation exists, UI unchanged | Saved foundation, production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
+| 0 | Database integrity and Shopping persistence foundation | Partial; validated foundation saved as unpublished Version 17, not migrated to production | D1 backup, migration mechanism confirmation, production verification and rollback | Medium | Book-to-collection foreign key deferred; production state unverified |
+| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial | Stable IDs, format version, revision token, dry run, conflict policy, backup metadata | Medium-large | Import writes immediately; no export or backup infrastructure |
@@ -27,15 +27,15 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Finish promotion planning for the locally validated Priority 0 Shopping persistence foundation:
+Prepare production migration for the Priority 0 Shopping persistence foundation preserved in unpublished Version 17:
 
-- Commit and push the exact validated Site source, then save it as an unpublished Site version.
 - Plan and explicitly authorize production backup, migration, verification, and rollback.
+- Confirm the standalone production migration mechanism before authorization.
 - Preserve existing Book IDs, collection keys, ownership data, and records.
 - Sequence the deferred book-to-collection foreign key after orphan audit and backup.
 - Keep Shopping UI redesign and later roadmap features out of scope.
 
-Local validation does not mark this milestone released or in production. Production migration and publication remain separate approval gates.
+Saving Version 17 does not mark this milestone released or in production. Production migration and publication remain separate approval gates; Version 16 remains live.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
