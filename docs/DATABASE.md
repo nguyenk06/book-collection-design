@@ -128,6 +128,16 @@ The active design task is to assess Sites-native activation through saved-versio
 
 Any selected Sites-native strategy must preserve portable schema/migration semantics and explicit application boundaries. Platform-specific execution may adapt an upgrade mechanism, but undocumented Sites behavior must not become the only representation of business rules or the only way to preserve data. This constraint does not require implementing another deployment target now.
 
+The read-only investigation established:
+
+- The build packages migrations `0000` through `0004`, but no source or exposed Sites control establishes their executor, trigger, ledger, ordering, atomicity, retry behavior, or traffic cutover.
+- `ensureSeeded()` runs on ordinary Books requests and performs legacy schema/data writes, but it does not create `books.added_at`, `collections.target_price_cents`, `businesses`, or `purchases`.
+- Version 17 models and routes assume those Shopping objects exist, so unmigrated ordinary traffic can fail.
+- No Sites-native D1 query/export/Time Travel control is exposed; an application-level versioned JSON export is the only identified portable backup candidate and is not equivalent to a D1 snapshot or R2-byte backup.
+- Disposable reconciliation passed first run, repeat run, and recovery from a partial `books.added_at` state while preserving Book IDs, collection keys, ownership, copies, ISBN, and existing timestamps. This establishes local feasibility, not production concurrency safety.
+
+The proposed, not-yet-accepted architecture is a temporary Version 16-compatible migration bridge with owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and verification APIs. It would exclude packaged `0004` from independent execution, keep ordinary reads compatible with Version 16 until upgrade completion, prefer forward repair over destructive down-migration, and preserve final Shopping publication as a separate gate.
+
 No step below is authorized for execution by this document.
 
 1. Freeze writes for the approved maintenance window.

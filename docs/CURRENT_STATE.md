@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Active - Sites-native Version 17 activation investigation ready for Engineer intake
+**Workflow state:** Sites-native activation investigation complete; migration-bridge strategy awaiting Planner approval
 
 ## Summary
 
@@ -23,6 +23,8 @@ The read-only migration investigation found no public Sites contract establishin
 The operator runbook and private-project readiness model are complete. The Product Owner explicitly authorized Packet A revision 2 and observed the no-write window, but the Engineer could not authenticate a direct D1 operator path, find a supported D1 connector, or use an existing authenticated Cloudflare session. The required ambiguous-target/access abort fired before any production D1 query or backup operation. The no-write window ended after abort.
 
 Planner accepted external D1 administration as unavailable and outside the intended operating model. The project must use only supported capabilities exposed through ChatGPT Sites. External Cloudflare sessions, Wrangler authentication, API credentials/tokens, direct D1 console access, and another deployment platform are not project requirements. Version 17 activation now requires a read-only Sites-native architecture investigation; no production operation or publication is authorized.
+
+The completed investigation found that migration packaging proves inclusion but not execution, ordering, atomicity, retry, or traffic gating. Runtime `ensureSeeded()` writes and repairs only the Version 16-era schema, while Version 17 ordinary queries and writes expect the new Shopping columns/tables; direct Version 17 publication is therefore unsafe on current evidence. Disposable validation showed that a guarded additive reconciler can repeat and resume from a partial state while preserving Book identity and collection data. Engineer recommends a temporary Version 16-compatible migration bridge, subject to Planner approval. No Site or production operation occurred.
 
 ## Current Status Dashboard
 
@@ -120,6 +122,8 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 - Raw migration `0004` applies once locally but is not directly idempotent; safe execution depends on the D1 migration ledger and controlled operator sequencing.
 - The production D1 target, access, migration ledger, Time Travel eligibility, and backup artifacts remain unverified until Packet A executes.
 - Direct operator-controlled production D1 migration, export, and Time Travel controls are unavailable unless Sites itself exposes a supported mechanism.
+- Sites exposes saved versions, deployment/status controls, worker logs, hosted access controls, and managed logical D1/R2 bindings, but no standalone D1 migration/query/export/Time Travel control was found.
+- `ensureSeeded()` performs legacy runtime writes but does not create Shopping schema; it cannot safely prepare an unmigrated database for direct Version 17 traffic.
 - The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
 - No roadmap bookshelf, exports, backups, or dry-run imports.
@@ -130,4 +134,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Investigate the safest Sites-native Version 17 schema-activation strategy using the actual implementation and capabilities available to the Site Engineer. No production write, migration, publication, or destructive action is authorized.
+Planner decides whether to adopt the proposed migration-bridge architecture. If approved, Designer prepares a local implementation/validation brief that may save a new unpublished Site version but does not authorize bridge publication, production export, schema upgrade, final Shopping publication, smoke testing, or destructive action.

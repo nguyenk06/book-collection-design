@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; external D1 administration excluded and Sites-native activation investigation ready | Verified Sites-native schema activation and recovery strategy, then separately approved implementation/production gates | Medium | Sites migration and recovery capabilities remain unverified; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; Sites-native investigation complete and migration bridge recommended, not approved or implemented | Planner bridge decision, then separately approved implementation and production gates | Medium | Packaged migration behavior unknown; no native D1 backup/query controls; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,12 +27,12 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Complete a read-only Sites-native Version 17 activation investigation:
+Decide whether to adopt the proposed temporary migration bridge:
 
-- Assess saved-version/deployment behavior, source packages, D1 bindings, checked-in migrations, runtime initialization, application APIs, and supported Sites logs/metadata.
-- Compare safe activation options for preservation, repeatability, failure handling, authorization, recovery limitations, and maintainability.
-- Record unavailable direct export or Time Travel controls as constraints rather than indefinite external prerequisites.
-- Keep implementation, production migration, publication, smoke testing, and destructive actions outside this investigation.
+- Keep bridge traffic compatible with Version 16 until an explicit owner-authorized upgrade completes.
+- Provide owner-only status, versioned JSON export, re-entrant upgrade, and verification API boundaries.
+- Preserve portable schema/business logic and treat application export as weaker than a D1 snapshot.
+- Keep bridge implementation, save, publication, production export/upgrade, final publication, smoke testing, and destructive actions separately scoped and gated.
 
 Saving Version 17 does not mark this milestone released or in production. Production migration and publication remain separate approval gates; Version 16 remains live.
 

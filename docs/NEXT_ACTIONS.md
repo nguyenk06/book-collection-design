@@ -4,36 +4,30 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Investigate Sites-Native Version 17 Activation
+### Decide Migration-Bridge Architecture
 
-**Workflow state:** Active read-only investigation
+**Workflow state:** Awaiting Planner decision
 
-**Next owner:** `ENGINEER` - process `2026-08-08-sites-native-version-17-activation-investigation-implementation-brief-r2.md` with `CB`.
+**Next owner:** `PLANNER` - decide `Approve Sites-Native Migration Bridge` in [Planner Inbox](PLANNER_INBOX.md).
 
 **Current objective**
 
-Determine the safest repeatable, data-preserving way to activate Version 17 using only supported ChatGPT Sites capabilities and the existing application architecture.
+Approve, revise, or reject the proposed temporary Version 16-compatible migration bridge before any implementation brief is prepared.
 
 **Why this is the current priority**
 
-Planner accepted that external D1 administration is unavailable and not part of the project operating model. The next step is a read-only assessment of Sites saved versions/deployment, source packages, D1 bindings, checked-in migrations, runtime initialization such as `ensureSeeded()`, application APIs, local/disposable validation, and Sites logs/metadata. No production operation or publication is authorized. See [Database](DATABASE.md).
+The Sites-native investigation is complete. Direct Version 17 publication is unsafe on current evidence because packaged migration behavior is unknown and `ensureSeeded()` does not create Shopping schema before ordinary Version 17 access. A guarded migration bridge passed disposable repeat/partial-state validation and is the Engineer recommendation, but it requires Planner architecture approval. No production operation or publication occurred. See [Database](DATABASE.md).
 
 **Success criteria**
 
-- Actual Sites-native capabilities and limitations are verified without production writes.
-- Existing migration packaging, D1 binding use, runtime initialization, and `ensureSeeded()` behavior are traced from source and disposable validation.
-- Candidate strategies are compared for preservation, repeatability, failure behavior, authorization, rollback limitations, and maintainability.
-- The recommendation preserves explicit API/data boundaries and does not make undocumented Sites deployment behavior the sole data-preservation mechanism; no hypothetical platform implementation is added.
-- Backup/recovery protections actually available through Sites or the application are identified without claiming unavailable export or Time Travel controls.
-- A recommended Sites-native activation strategy, conflicts, and required follow-up are returned in a sanitized handoff.
-- Version 16 remains published and Version 17 remains saved/unpublished; no production migration or publication occurs.
+- Planner records approval, requested revision, or rejection of the bridge strategy.
+- Approval scope distinguishes local implementation/validation and saving an unpublished Site version from later production gates.
+- Portability, authorization, repeatability, concurrency, failure recovery, JSON export limitations, and backward compatibility remain explicit.
 
 **Expected deliverables**
 
-- Accepted Sites-native activation investigation brief.
-- Source/runtime capability assessment and disposable validation evidence.
-- Candidate comparison and recommended activation/recovery approach.
-- Explicit unknowns and approval boundaries for any later implementation or production brief.
+- Recorded Planner decision.
+- If approved, a concise bridge implementation brief for local implementation/validation and an unpublished saved Site version only.
 
 **Files likely affected**
 

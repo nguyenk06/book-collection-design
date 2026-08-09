@@ -69,6 +69,20 @@ Packet A revision 2 was explicitly authorized and attempted, then automatically 
 
 Planner then accepted Sites-native operations as the project constraint and removed external D1 operator access as a requirement. Direct operator-controlled migration and backup controls are unavailable unless Sites exposes them. The next milestone is a read-only Sites-native Version 17 activation investigation; this decision did not migrate, verify, or publish Version 17.
 
+### Sites-Native Version 17 Activation Investigation
+
+| State | Verified status |
+| --- | --- |
+| Read-only investigation complete | Yes |
+| Disposable repeat/partial-state validation | Passed |
+| Migration bridge recommended | Yes; awaiting Planner approval |
+| Site/source version changed | No |
+| Production data accessed | No |
+| Production migrated or verified | No |
+| Version 17 published | No; Version 16 remains published |
+
+The investigation found direct Version 17 publication unsafe on current evidence because packaged migration execution remains unknown and runtime `ensureSeeded()` does not create the Shopping schema expected by Version 17. A Version 16-compatible migration bridge is proposed; no architecture approval or implementation is implied by this entry.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.
