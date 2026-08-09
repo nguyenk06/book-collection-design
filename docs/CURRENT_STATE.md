@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** P2 partially implemented; all eligible work converged and Purchase price contract awaits Planner decision
+**Workflow state:** Purchase price decision resolved; narrow P2 continuation is queued for Purchase capture and final convergence
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
 
-**Engineer execution state:** `BLOCKED` — no authorized executable work remains until the Purchase price contract is resolved
+**Engineer execution state:** `AVAILABLE` — may accept the eligible P2 continuation with `CB`
 
 ## Current Engineering Workstreams
 
@@ -35,13 +35,13 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SAVE` | Preserve validated administration source | `[██████████] 100%` | COMPLETE | Unpublished Version 19 verified | Publication remains separately gated | No |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
 | `WS-SHOP-FLOW` | Mobile Shopping search/scan/status flow | `[██████████] 100%` | COMPLETE | Implemented locally; 47/47 total tests pass | Local flow validated | No further work required |
-| `WS-SHOP-PURCHASE` | Purchase capture and history | `[████░░░░░░] 40%` | BLOCKED | History complete; creation contract conflicted | Planner decides required vs nullable purchase price | No |
-| `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[███████░░░] 70%` | BLOCKED | Eligible flow validation passes | Purchase contract and final convergence | No |
+| `WS-SHOP-PURCHASE` | Purchase capture and history | `[████░░░░░░] 40%` | PLANNED | Required purchase price accepted | Eligible continuation brief through `CB` | Yes, coordinated with quality stream |
+| `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[███████░░░] 70%` | PLANNED | Eligible flow validation passes | Purchase capture and final convergence | No; convergence stream |
 | `WS-SCANNER` | Identifier/scanner improvements | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Higher-priority Shopping sequence and a future brief | No |
 
-**Engineer can continue:** NO — all independent P2 work has converged and no other brief is queued.
+**Engineer can continue:** YES — accept the narrow P2 continuation brief with `CB`.
 
-**Current Planner decisions:** Resolve whether Purchase price remains required in the UI or becomes nullable in persistence/API.
+**Current Planner decisions:** None.
 
 **Next production gate:** None is currently executable. An unpublished Site-version save is the next non-production gate; publication and all production actions remain separately gated.
 
@@ -77,7 +77,7 @@ The exact validated administration source is now preserved as unpublished Site V
 
 P2 Shopping Mode is partially implemented in the unsaved local working copy. Mobile title/author/series/ISBN search, existing camera/photo/manual scanning, match limitations, collection status, target price when supplied, owner-only Business/Purchase-history loading, repeated-shopping navigation, ownership-independence messaging, and accessible loading/empty/error states are locally implemented. Tests pass 47/47, focused Shopping/collection regression tests pass 17/17, build passes, and changed-file lint passes. Nothing was saved, published, or run against production.
 
-Purchase creation is blocked before implementation because accepted design describes purchase price as nullable while the validated migration and API require it. No zero value was fabricated and no schema/API change was attempted. The remaining Purchase capture and final convergence require a Planner decision.
+Planner resolved the Purchase contract in favor of the validated implementation: purchase price remains required and non-negative for this milestone, while sticker price remains optional. Unknown price must not be represented as zero. No schema/API/bridge change is required; Purchase capture and final convergence may continue locally under a narrow revised brief.
 
 ## Current Status Dashboard
 
@@ -190,4 +190,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Resolve the Purchase price contract, then revise the P2 authority for Purchase capture and final convergence. Site saving, production migration, publication, production verification, and smoke testing remain separately gated.
+Complete Purchase capture and final Shopping quality convergence using the required purchase-price contract. Site saving, production migration, publication, production verification, and smoke testing remain separately gated.

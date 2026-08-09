@@ -49,7 +49,7 @@ Unpublished Site Version 17 preserves locally validated persistence and owner-au
 
 - Business listing and creation with normalized-name duplicate prevention.
 - Purchase creation and per-Book Purchase history.
-- Required purchase price and optional sticker price in non-negative integer cents in the validated implementation; accepted nullability direction is under review.
+- Required purchase price and optional sticker price in non-negative integer cents.
 - Optional purchase date and controlled condition values.
 - Nullable collection target price, with CYOA configured to 600 cents locally.
 - Nullable Book Added Date for new manual/imported records without fabricating historical dates.
@@ -68,7 +68,7 @@ This bounded phase may proceed against local/disposable data before production s
 
 - Provide a mobile-first Shopping entry and fast title, author, or identifier search using existing matching capability.
 - Present ownership, buying status, copy count, relevant collection target price, and existing Purchase history without implying stronger edition certainty than the data supports.
-- Allow an owner to record a Purchase with optional Business, purchase/sticker prices, optional date, and controlled condition through the existing owner-authorized APIs. Purchase creation remains blocked until Planner resolves whether purchase price is required or nullable; never fabricate an unknown price as zero.
+- Allow an owner to record a Purchase with optional Business, required purchase price, optional sticker price, optional date, and controlled condition through the existing owner-authorized APIs. Never fabricate an unknown price as zero.
 - Keep Purchase history and editable Book ownership/copy count independent. After recording a Purchase, state clearly that ownership was not changed; do not silently reconcile or derive one from the other.
 - Provide explicit navigation to the existing Book edit flow when the collector chooses to update ownership separately.
 - Preserve one-handed mobile behavior, clear loading/empty/error/success states, and accessible labels/focus.

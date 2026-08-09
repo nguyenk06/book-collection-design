@@ -6,11 +6,11 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle RUN; P2 blocked at Purchase contract decision after independent work converged
+**Workflow state:** Queue Mode enabled; throttle RUN; Purchase contract resolved and P2 continuation queued
 
-**Next owner:** `PLANNER` - resolve the Purchase price contract in [Planner Inbox](PLANNER_INBOX.md).
+**Next owner:** `ENGINEER` - use `CB` to accept the narrow P2 Purchase-capture/convergence continuation.
 
-P1 is complete in unpublished Version 19. In P2, `WS-SHOP-FLOW` is complete, `WS-SHOP-PURCHASE` is blocked at 40%, and `WS-SHOP-QUALITY` is blocked at 70%. The accepted brief says purchase price is optional, but the validated schema/API require it. No eligible independent work or queued brief remains. Production migration, another Site save, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. In P2, `WS-SHOP-FLOW` is complete, `WS-SHOP-PURCHASE` is 40%, and `WS-SHOP-QUALITY` is 70%. Planner accepted required non-negative purchase price with optional sticker price, matching the validated schema/API. A narrow eligible continuation is queued. Production migration, another Site save, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
@@ -22,14 +22,12 @@ Planner approved the unpublished save and this bounded sprint. Shopping Mode is 
 
 **Success criteria**
 
-- Planner resolves required versus nullable Purchase price without using zero for unknown data.
-- Designer revises the local P2 authority to match the decision.
 - Purchase capture and quality/accessibility streams converge coherently.
+- Required purchase-price validation is clear and zero is never substituted for unknown data.
 - At sprint convergence, permanent state distinguishes local, saved, published, migrated, and production-verified status.
 
 **Expected deliverables**
 
-- Planner decision and revised P2 continuation brief.
 - Final P2 local implementation/validation handoff.
 - Mobile-readable sprint review at `DRAIN`, `STOP`, or sprint completion.
 

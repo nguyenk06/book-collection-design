@@ -109,7 +109,7 @@ The Shopping persistence/API foundation is implemented, locally validated, and p
 
 Purchase references restrict deletion of referenced Books and Businesses. Purchase creation does not derive or update Book ownership or copy counts. Local disposable migration tests verified preservation, uniqueness, checks, foreign keys, and conservative deletion behavior; production records were not inspected. Version 17 preserves this exact validated migration state for later, separately authorized production work.
 
-The validated migration and API require non-negative `purchase_price_cents`; `sticker_price_cents` is independently nullable. Permanent design previously described both prices as nullable, so Purchase capture is blocked pending a product decision. Unknown price must not be represented as zero.
+The validated migration and API require non-negative `purchase_price_cents`; `sticker_price_cents` is independently nullable. Planner accepted that contract for the current Shopping milestone. Unknown price must not be represented as zero, and changing purchase-price nullability would require a future separately approved design/schema change.
 
 The locally implemented condition vocabulary is: New, Like New, Very Good, Good, Fair, Poor, and Unknown.
 
@@ -224,7 +224,7 @@ Shopping persistence decisions are recorded in [ADR-0007](decisions/ADR-0007-sho
 ### Shopping persistence foundation
 
 - `businesses`: normalized business identity with an internal integer ID and unique normalized name.
-- `purchases`: internal integer primary key, book, optional business, purchase/sticker prices in integer cents, date, condition, and timestamps. Current implementation requires purchase price; whether accepted direction changes to match or persistence becomes nullable awaits Planner decision.
+- `purchases`: internal integer primary key, book, optional business, required non-negative purchase price, optional non-negative sticker price, optional date, condition, and timestamps.
 - An immutable Purchase `stable_id` is deferred and is not required for the current Shopping persistence foundation.
 - A portable immutable Purchase identifier is required before Import/Export, backup/restore reconciliation, or AI Review must preserve Purchase records across database boundaries.
 - `collections.target_price_cents`: collection-level target price; the CYOA target is initialized to approximately 600 cents.

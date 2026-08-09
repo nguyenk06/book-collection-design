@@ -154,6 +154,8 @@ The exact validated administration source was subsequently preserved as unpublis
 
 The unsaved local Shopping flow supports existing search/scanner behavior, collection status, Purchase history, repeat-shopping navigation, and accessible state handling. Purchase capture was not implemented because the brief allowed an omitted purchase price while the validated schema/API require it. No zero was fabricated and no unauthorized schema, API, Site, or production change occurred.
 
+Planner resolved the contract by requiring a non-negative purchase price for the current Shopping milestone while keeping sticker price optional. This aligns the UI requirement with the validated schema/API and avoids a wider migration change. The decision itself did not change source, schema, Site state, or production.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.
