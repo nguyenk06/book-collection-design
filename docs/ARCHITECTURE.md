@@ -1,6 +1,6 @@
 # Architecture
 
-This document defines system boundaries and information flow. Technology choices and deployed topology must be reconciled with the implementation repository during the database review.
+This document defines system boundaries and information flow. Technology choices and deployed topology must be reconciled with the actual ChatGPT Site implementation workspace and saved/deployed Site state.
 
 ## System context
 

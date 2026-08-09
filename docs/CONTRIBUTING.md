@@ -5,7 +5,7 @@ This repository documents the Book Collection System's product direction, archit
 ## Before changing documentation
 
 - Read [Project Vision](PROJECT_VISION.md), [Current State](CURRENT_STATE.md), and [Roadmap](ROADMAP.md).
-- Verify implementation claims against the application repository.
+- Verify implementation claims against the actual Site implementation workspace and saved/deployed Site evidence.
 - Keep current behavior separate from proposed behavior.
 - Avoid duplicating roadmap status inside feature documents.
 

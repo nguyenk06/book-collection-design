@@ -4,7 +4,7 @@ This repository is the permanent source of truth for the Book Collection System'
 
 ## Relationship to the application
 
-The application is maintained in a separate implementation repository. This repository describes intended behavior and architectural direction. Implementation-specific details belong here only when they clarify the current state or constrain future design.
+The application is maintained in the CYOA Collection ChatGPT Site implementation workspace. This repository describes intended behavior and architectural direction. Implementation-specific details belong here only when they clarify verified current state or constrain future design.
 
 ## Status
 
@@ -33,7 +33,7 @@ New contributors should read, in order:
 5. [Decision Log](docs/DECISIONS.md)
 6. [Design and Site Handoff Protocol](docs/HANDOFF_PROTOCOL.md)
 
-Implementation changes should be made in the application repository. Major architectural or product decisions should be reflected here.
+Implementation changes should be made in the Site implementation workspace. Major architectural or product decisions should be reflected here.
 
 ## Documentation
 
