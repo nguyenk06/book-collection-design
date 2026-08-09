@@ -105,9 +105,11 @@ The Shopping persistence/API foundation is implemented, locally validated, and p
 | `books` | Nullable `added_at`; existing unknown historical dates remain `NULL`, while newly created or imported Books receive an Added Date |
 | `collections` | Nullable, non-negative `target_price_cents`; CYOA is initialized to 600 cents and other collection targets remain `NULL` |
 | `businesses` | Internal auto-increment integer ID, cleaned display name, unique normalized name, and timestamps |
-| `purchases` | Internal auto-increment integer ID, required Book, optional Business, independent nullable prices in integer cents, optional purchase date, controlled condition, and timestamps |
+| `purchases` | Internal auto-increment integer ID, required Book, optional Business, required purchase price and optional sticker price in integer cents, optional purchase date, controlled condition, and timestamps |
 
 Purchase references restrict deletion of referenced Books and Businesses. Purchase creation does not derive or update Book ownership or copy counts. Local disposable migration tests verified preservation, uniqueness, checks, foreign keys, and conservative deletion behavior; production records were not inspected. Version 17 preserves this exact validated migration state for later, separately authorized production work.
+
+The validated migration and API require non-negative `purchase_price_cents`; `sticker_price_cents` is independently nullable. Permanent design previously described both prices as nullable, so Purchase capture is blocked pending a product decision. Unknown price must not be represented as zero.
 
 The locally implemented condition vocabulary is: New, Like New, Very Good, Good, Fair, Poor, and Unknown.
 
@@ -222,7 +224,7 @@ Shopping persistence decisions are recorded in [ADR-0007](decisions/ADR-0007-sho
 ### Shopping persistence foundation
 
 - `businesses`: normalized business identity with an internal integer ID and unique normalized name.
-- `purchases`: internal integer primary key, book, optional business, purchase/sticker prices in integer cents, date, condition, and timestamps.
+- `purchases`: internal integer primary key, book, optional business, purchase/sticker prices in integer cents, date, condition, and timestamps. Current implementation requires purchase price; whether accepted direction changes to match or persistence becomes nullable awaits Planner decision.
 - An immutable Purchase `stable_id` is deferred and is not required for the current Shopping persistence foundation.
 - A portable immutable Purchase identifier is required before Import/Export, backup/restore reconciliation, or AI Review must preserve Purchase records across database boundaries.
 - `collections.target_price_cents`: collection-level target price; the CYOA target is initialized to approximately 600 cents.

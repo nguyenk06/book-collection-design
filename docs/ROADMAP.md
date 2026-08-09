@@ -7,7 +7,7 @@ The database-first assessment validated the priority order. Enabling foundations
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
 | 0 | Database integrity and Shopping persistence foundation | Partial; owner-authenticated administration surface preserved in unpublished Version 19 | Separately gated publication/export/upgrade/verification | Medium | Production schema remains unverified; book-to-collection foreign key deferred |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
+| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local search/scan/status/history UI implemented and validated, Purchase capture blocked | Purchase price decision, local convergence, then production migration approval | Medium-large | Required-vs-nullable price conflict; ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial | Stable IDs, format version, revision token, dry run, conflict policy, backup metadata | Medium-large | Import writes immediately; no export or backup infrastructure |

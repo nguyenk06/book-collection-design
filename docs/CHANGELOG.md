@@ -141,6 +141,19 @@ Planner approved that unpublished Site-version preservation gate. The approval i
 
 The exact validated administration source was subsequently preserved as unpublished Site Version 19. Validation passed 44/44 tests, build, and task lint immediately before saving. Version 18 remains published; no application invocation, production request/data access, export, D1/R2 operation, migration, production verification, smoke test, or publication occurred.
 
+### Shopping Mode Local UI — Partial
+
+| State | Verified status |
+| --- | --- |
+| Search/scan/status flow | Implemented and locally validated |
+| Purchase history | Implemented locally |
+| Purchase creation | Blocked by required-vs-nullable price contract |
+| Tests/build/task lint | 47/47 tests, build, and changed-file lint pass |
+| Saved as Site version | No; Version 19 remains latest |
+| Published/production changed | No; Version 18 remains published |
+
+The unsaved local Shopping flow supports existing search/scanner behavior, collection status, Purchase history, repeat-shopping navigation, and accessible state handling. Purchase capture was not implemented because the brief allowed an omitted purchase price while the validated schema/API require it. No zero was fabricated and no unauthorized schema, API, Site, or production change occurred.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.
