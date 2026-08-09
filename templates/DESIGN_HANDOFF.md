@@ -80,6 +80,7 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 - Relevant feature document — <!-- UPDATE | NO CHANGE | REVIEW NEEDED --> — <!-- document and reason -->
 - `docs/ROADMAP.md` — <!-- UPDATE | NO CHANGE | REVIEW NEEDED --> — <!-- reason -->
 - `docs/CHANGELOG.md` — <!-- UPDATE | NO CHANGE | REVIEW NEEDED --> — <!-- reason -->
+- `docs/PLANNER_INBOX.md` — <!-- UPDATE | NO CHANGE | REVIEW NEEDED --> — <!-- unresolved Planner decision only -->
 - ADRs / `docs/DECISIONS.md` — <!-- UPDATE | NO CHANGE | REVIEW NEEDED --> — <!-- reason -->
 
 ## Sanitization confirmation

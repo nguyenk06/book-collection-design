@@ -111,6 +111,30 @@ Purchase references restrict deletion of referenced Books and Businesses. Purcha
 
 The locally implemented condition vocabulary is: New, Like New, Very Good, Good, Fair, Poor, and Unknown.
 
+### Production migration investigation
+
+The read-only investigation completed without production D1/R2 access or changes.
+
+- The Version 17 package contains migrations `0000` through `0004` and orders `0004_shopping_persistence` after the existing baseline.
+- Public Sites documentation distinguishes saving from deployment but does not establish the packaged D1 migration trigger, executor, applied-migration tracking, retry behavior, atomicity, or traffic sequencing.
+- Disposable validation confirmed that `0004` applies once to the Version 16 migration baseline. Directly replaying the raw SQL fails, so it must not be treated as idempotent.
+- The selected operational direction is an operator-controlled D1 migration after separately approved backup and preflight gates. This may be revisited if Sites provides an authoritative migration contract.
+
+### Production backup and execution gates
+
+No step below is authorized for execution by this document.
+
+1. Freeze writes for the approved maintenance window.
+2. Confirm the exact production D1 target and list unapplied migrations.
+3. Record the current automatic Time Travel bookmark immediately before migration.
+4. Create a protected full remote SQL export where supported, then verify completion, expected content, size, and checksum without exposing data.
+5. Capture approved aggregate preservation invariants and confirm the Version 16 schema baseline.
+6. Apply only `0004_shopping_persistence` through the confirmed operator-controlled D1 migration mechanism.
+7. Verify schema, constraints, empty Businesses/Purchases tables, CYOA target, preserved records and identities, and foreign-key integrity.
+8. Seek separate approval to publish Version 17, then perform an approved production smoke test.
+
+Time Travel history is automatic on supported production D1 databases; the operator records the current bookmark rather than creating a traditional backup. Time Travel restore overwrites the database in place and remains a separately authorized destructive rollback. The SQL export is the portable backup artifact and must remain outside source control and handoff files.
+
 ## Accepted Direction
 
 The accepted strategy is additive migration, not a rewrite or immediate title/edition/copy hierarchy.

@@ -32,7 +32,21 @@ Major milestone states are independent. Implementation does not imply validation
 | Published | No; Version 16 remains published and live |
 | Superseded or rolled back | No |
 
-Next major transition: complete the read-only production migration and rollback investigation, then seek separate approval for any production operation. See [Current State](CURRENT_STATE.md), [Database](DATABASE.md), and [Next Actions](NEXT_ACTIONS.md).
+Next major transition: prepare the gated Production Backup & Migration Execution Plan, then seek separate approval for each production operation. See [Current State](CURRENT_STATE.md), [Database](DATABASE.md), and [Next Actions](NEXT_ACTIONS.md).
+
+### Production Migration & Rollback Investigation
+
+| State | Verified status |
+| --- | --- |
+| Planned | Yes |
+| Read-only investigation complete | Yes |
+| Production data accessed | No |
+| Production backup/export executed | No |
+| Production migrated | No |
+| Production verified | No |
+| Version 17 published | No |
+
+Planner selected preparation for an operator-controlled D1 migration because public Sites documentation does not establish packaged migration execution or traffic gating. Time Travel bookmark capture, SQL export, migration, verification, publication, smoke testing, and destructive restore remain separately gated. See [Database](DATABASE.md) and [Next Actions](NEXT_ACTIONS.md).
 
 ### Changed
 

@@ -7,6 +7,14 @@ title: Book Collection System Design
 
 Architecture, planning, and product documentation for a collector-first Book Collection System.
 
+## Planner view
+
+1. [Planner Inbox](PLANNER_INBOX.md)
+2. [Current State](CURRENT_STATE.md)
+3. [Next Actions](NEXT_ACTIONS.md)
+4. [Changelog](CHANGELOG.md)
+5. [Roadmap](ROADMAP.md)
+
 ## Start here
 
 - [Project Vision](PROJECT_VISION.md)

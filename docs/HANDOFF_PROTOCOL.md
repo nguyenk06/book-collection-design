@@ -34,6 +34,7 @@ The Designer works in the `book-collection-design` repository and owns:
 - ADRs
 - Preparation of implementation briefs
 - Handoff workspace housekeeping
+- Planner decision framing and `PLANNER_INBOX.md` housekeeping
 
 The Designer must not:
 
@@ -59,6 +60,7 @@ The Site Engineer must not:
 - Publish without explicit approval.
 - Move briefs or reports between shared handoff folders.
 - Archive, overwrite, delete, or reorganize shared handoff artifacts.
+- Edit `PLANNER_INBOX.md` directly.
 
 ### Sites source-preservation exception
 
@@ -200,6 +202,8 @@ Routine progress, work-started notices, and action-by-action logs do not require
 
 The Designer owns report housekeeping. Keep a report in `inbox/` while it represents an unresolved blocker, approval request, conflict, or unapplied implementation evidence. Move it to `processed/` only after its lifecycle purpose is satisfied, without altering or overwriting it.
 
+When a report contains an unresolved conflict, explicit approval requirement, material product choice, or meaningful risk acceptance, Designer evaluates whether a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item is required. Do not create an item merely because Engineer reports an unknown; first determine whether further authorized investigation can resolve it without Planner input.
+
 ### Authority and continuation
 
 After accepting a brief, the Site Engineer proceeds without another Planner or product-owner “go” message when all of the following are true:
@@ -225,8 +229,9 @@ Acceptance never expands the brief's authorization boundary.
 2. The Designer verifies sanitization, evidence boundaries, conflicts, and referenced design authorities.
 3. The Designer incorporates only supported facts into permanent design documentation.
 4. The Designer evaluates whether the evidence is a major milestone state transition and updates [`CHANGELOG.md`](CHANGELOG.md) when required by [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md).
-5. Resolve and record any required product-owner decisions.
-6. Only after the verified evidence has been incorporated and the resulting documentation state is accepted may the Designer move the handoff to `processed/`.
+5. The Designer evaluates unresolved conflicts, approval requirements, product choices, and risk acceptance for a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item.
+6. Resolve and record any required product-owner decisions.
+7. Only after the verified evidence has been incorporated and the resulting documentation state is accepted may the Designer move the handoff to `processed/`.
 
 Partial implementations and failed validations use the same gate: record their verified state before processing the artifact. If evidence is missing, conflicted, rejected, or still under review, leave the handoff in `inbox/`.
 

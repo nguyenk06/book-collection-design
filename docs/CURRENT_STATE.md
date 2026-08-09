@@ -8,9 +8,13 @@
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
+**Production migration investigation:** Completed 2026-08-08; no production access or change performed
+
 ## Summary
 
 The production application remains a stable, private, single-user book tracker on Site Version 16. The validated Shopping persistence/API foundation is preserved in Site version history as unpublished Version 17 but has not been migrated to production or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
+
+The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. The accepted operational direction is therefore to prepare an operator-controlled D1 migration, not publish Version 17 or wait indefinitely for undocumented Sites behavior.
 
 ## Current Status Dashboard
 
@@ -104,6 +108,8 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 - Production has no Businesses, Purchases, condition history, price history, collection target price, or Added Date migration.
 - Version 17 is saved but unpublished; Version 16 remains live.
 - Production migration, rollback, and production behavior remain unverified.
+- Sites migration trigger, executor, tracking, retry behavior, atomicity, and traffic sequencing remain unknown from public documentation.
+- Raw migration `0004` applies once locally but is not directly idempotent; safe execution depends on the D1 migration ledger and controlled operator sequencing.
 - The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
 - No roadmap bookshelf, exports, backups, or dry-run imports.
@@ -114,4 +120,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Complete production backup, migration, verification, and rollback planning for saved Version 17. Migration and publication remain separate explicit approval gates. The full sequence and blockers are maintained in the [Roadmap](ROADMAP.md).
+Prepare the gated Production Backup & Migration Execution Plan for saved Version 17. The intended sequence is backup, backup verification, unapplied-migration inspection, application of only `0004`, schema/data verification, separate Version 17 publication approval, and production smoke testing. No production operation is authorized by this documentation update.

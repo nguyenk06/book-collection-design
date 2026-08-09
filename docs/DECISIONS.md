@@ -15,6 +15,8 @@ Architecture Decision Records capture durable choices and their consequences. Ac
 
 The accepted database direction and migration sequence are summarized in [Database](DATABASE.md). Current implementation status is maintained in [Current State](CURRENT_STATE.md).
 
+Unresolved questions requiring product-owner authority belong in the [Planner Inbox](PLANNER_INBOX.md). Only accepted, durable architectural decisions belong in this log and its ADRs.
+
 ## Adding a decision
 
 1. Copy the structure of an existing ADR.

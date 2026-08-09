@@ -78,14 +78,56 @@ Generalize operational details whenever practical.
 
 Planner uses permanent design documentation rather than raw handoffs or implementation chat as the primary project visibility layer:
 
-1. [CURRENT_STATE.md](CURRENT_STATE.md) — what is true now.
-2. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — what should happen next.
-3. [CHANGELOG.md](CHANGELOG.md) — which major milestones and state transitions occurred.
-4. [ROADMAP.md](ROADMAP.md) — where the project is going.
+1. [PLANNER_INBOX.md](PLANNER_INBOX.md) — what requires a decision.
+2. [CURRENT_STATE.md](CURRENT_STATE.md) — what is true now.
+3. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — what should happen next.
+4. [CHANGELOG.md](CHANGELOG.md) — which major milestones and state transitions occurred.
+5. [ROADMAP.md](ROADMAP.md) — where the project is going.
 
 Temporary handoffs are transport and evidence. They do not replace these documents.
 
 For each significant Engineer handoff, evaluate whether it records a major milestone transition such as local implementation, local validation, saved Site version, production migration, production verification, publication, rollback, or supersession. Update the changelog when it does, keeping each state independent. Brief acceptance and routine progress reports do not create changelog entries.
+
+## Planner Decision Queue
+
+[PLANNER_INBOX.md](PLANNER_INBOX.md) is the current queue for unresolved decisions that require Planner or product-owner authority. It contains no resolved history and must not duplicate the backlog, roadmap, changelog, current state, next actions, ADRs, or technical handoffs.
+
+Designer owns the queue. Engineer supplies sanitized evidence through handoffs or state reports but does not edit the queue. Planner may directly ask Designer to record a question.
+
+Create an item only when delegated authority cannot safely resolve a genuine choice involving:
+
+- Product direction, user experience, or meaningful prioritization
+- Scope expansion or reduction, or conflicting accepted requirements
+- Architecture with material product consequences
+- Release or production risk requiring owner acceptance
+- Destructive operations
+- Cost or external-service commitments
+- Privacy or public-data implications
+
+Do not escalate routine implementation choices, ordinary brief acceptance, fixable test failures, documentation housekeeping, delegated engineering details, or questions answerable from accepted direction. An unknown alone is not a Planner decision; first determine whether it blocks authorized work or can be resolved through further authorized investigation.
+
+Each pending item uses this concise structure:
+
+- Short decision title
+- Status: `AWAITING PLANNER`
+- Raised by
+- One clear decision question
+- Why Planner authority is required
+- Two concise options when possible, with consequences
+- Designer recommendation, or `NONE`
+- Impact
+- Short response format such as `Decision: A`
+
+Include only the minimum sanitized technical context required to decide. Link to permanent repository documents for detail; never link to local handoff paths.
+
+Decision lifecycle:
+
+1. Engineer evidence or Designer work identifies a genuine decision.
+2. Designer confirms Planner authority is required and creates or updates the queue item.
+3. Planner responds.
+4. Designer records the accepted decision in the appropriate permanent source of truth and updates requirements, roadmap, or briefs when required.
+5. Designer updates the changelog for a material milestone consequence and creates or supersedes an ADR when warranted.
+6. Designer removes the resolved queue item. Git history and permanent design documents retain the durable record.
 
 ## Architecture Decision Records
 

@@ -4,33 +4,34 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Plan and authorize the Shopping production migration
+### Production Backup & Migration Execution Plan
 
 **Current objective**
 
-Prepare a safe production backup, migration, verification, and rollback plan for the Shopping persistence foundation preserved in unpublished Site Version 17.
+Turn the completed read-only investigation into an approval-ready operator plan for backing up and migrating production D1 before any Version 17 publication.
 
 **Why this is the current priority**
 
-Shopping persistence and owner-authorized APIs are implemented, locally validated, and saved as unpublished Version 17. Production remains on Version 16, and the packaged migration has not been run. Safe migration planning is the immediate prerequisite to any production activation. See [Database](DATABASE.md) and [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md).
+The investigation confirmed that public Sites documentation does not define packaged D1 migration execution or traffic gating. Planner selected an operator-controlled D1 migration path rather than waiting for undocumented behavior, but has not authorized production backup, migration, publication, or rollback. See [Database](DATABASE.md).
 
 **Success criteria**
 
-- Production backup, migration, verification, rollback, and authorization steps are documented.
-- The standalone production migration mechanism is confirmed before authorization.
-- The deferred book-to-collection foreign key has an explicit implementation sequence.
-- Production migration and publication occur only with separate explicit approval.
+- The execution plan enforces: backup → verify backup → inspect/list unapplied migrations → apply only `0004` → schema/data verification → publication approval → production smoke test.
+- Time Travel bookmark capture and portable SQL export are distinct backup controls.
+- Every gate has an operator, target check, pass/fail criteria, abort condition, evidence requirement, and approval boundary.
+- Destructive Time Travel restore remains separately gated.
 
 **Expected deliverables**
 
-- Production migration and rollback plan, including identifier and record preservation checks.
-- Evidence checklist for production schema and behavior verification.
-- Explicit decision point for production migration and later publication.
+- Milestone-specific execution brief and accepted operator runbook.
+- Backup and backup-verification checklist.
+- Migration, schema/data verification, publication, smoke-test, abort, and rollback gates.
+- Explicit approval requests for production access and each production-changing transition.
 
 **Files likely affected**
 
 - Production migration, backup, verification, and rollback documentation.
-- Book-to-collection foreign-key migration work when scheduled.
+- Operator tooling and D1 migration-ledger inspection.
 - [Current State](CURRENT_STATE.md), [Roadmap](ROADMAP.md), [Database](DATABASE.md), [Changelog](CHANGELOG.md), and this queue after each verified transition.
 
 **Estimated effort**
@@ -40,6 +41,8 @@ Medium.
 **Risks**
 
 - Production migration could expose orphaned relationships or incomplete rollback assumptions.
+- Raw `0004` is not directly idempotent and must not be replayed after an ambiguous failure.
+- SQL export blocks database requests while running and may require a maintenance/write freeze.
 - Purchases and independently editable ownership state can still contradict one another.
 - Publication could be mistaken for migration validation if the gates are not recorded separately.
 
@@ -49,6 +52,7 @@ Medium.
 - Scanner, Bookshelf, import/export, AI review, reference covers, tags, and analysis changes.
 - Full edition modeling, Business locations, and generalized media support.
 - Production migration or publication without explicit approval.
+- Production backup/export execution or destructive restore without explicit approval.
 
 ## Ready Next
 
@@ -66,6 +70,7 @@ Medium.
 
 ## Recently Completed
 
+- Completed the read-only Production Migration & Rollback Investigation; confirmed Sites execution details remain undocumented and performed no production access or change.
 - Preserved the exact validated Shopping persistence/API source and migration as unpublished Site Version 17; Version 16 remains live.
 - Implemented and locally validated Businesses, Purchases, collection target price, Added Date, owner-authorized APIs, and additive migration tests.
 - Preserved existing Book identities and data in disposable local migration validation.
