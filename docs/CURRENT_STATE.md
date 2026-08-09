@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Owner-authenticated Site browser context reported available; preflight/export retry brief ready for Engineer intake
+**Workflow state:** Two preflight/export attempts failed before an admin API response; auth/persistence-path investigation ready for Engineer intake
 
 ## Summary
 
@@ -34,7 +34,7 @@ Planner approved the next isolated read-only gate: owner-authenticated productio
 
 The first preflight/export attempt automatically aborted at the authentication prerequisite. The available Site browser context was signed out and no alternate signed-in context was available. The schema-status endpoint returned no application response, no export was requested or created, and the no-write window ended. One read-only Site root load occurred during troubleshooting outside the brief's strict two-endpoint scope; no interaction or mutation followed.
 
-The Product Owner subsequently reported that the Site is open in the intended browser context. Engineer must verify owner authentication before either approved endpoint call; this report is a resume condition, not production execution evidence.
+The Product Owner subsequently reported owner mode, but the second attempt still could not access an owner-authenticated Site tab in the Engineer browser session. Direct navigation to schema status was blocked before an application response. No production read succeeded, no export was produced, and no write or D1/R2 change occurred. Version 18 remains published, but its application health and schema state remain unverified. Repeating the same external/direct invocation is no longer the next action.
 
 ## Current Status Dashboard
 
@@ -146,4 +146,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Retry the approved read-only preflight/export gate after verifying owner authentication, using a fresh no-write window and the existing two-endpoint boundary. Schema upgrade and all later gates remain unauthorized.
+Investigate why proven normal Site flows can use authenticated persistence while the Version 18 administrative bridge cannot be operated from the Engineer context. Compare authentication, request origin, routing, bindings, and an owner-only in-Site administration surface without production execution or implementation.

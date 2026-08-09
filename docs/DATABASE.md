@@ -144,6 +144,8 @@ Version 18 has now been published successfully through Sites. Publication perfor
 
 The first owner-only schema-status/export attempt aborted because the available Site browser context was signed out. No bridge endpoint returned an application response, no export was created, and no database operation occurred. Production preflight/export remains incomplete until an owner-authenticated Site browser context is available.
 
+A second attempt after Product Owner reported owner mode also aborted before an application response because the authenticated Site tab was not available to the Engineer browser session and direct endpoint navigation was blocked by the browser context. No production read, export, write, or D1/R2 operation occurred. This is now authentication/invocation architecture evidence: Site runtime D1 access, signed-in normal Site use, and external/direct Engineer invocation of an owner-only endpoint are separate capabilities and must not be conflated.
+
 The bridge export contract is `cyoa-collection-bridge-export` version 1. It includes complete structured Books, Collections, and present Businesses/Purchases plus deduplicated R2 object references. It excludes secrets and R2 bytes and has no restore/import counterpart in this milestone.
 
 No step below is authorized for execution by this document.

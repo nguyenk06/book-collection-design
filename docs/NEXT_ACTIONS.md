@@ -4,31 +4,31 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Retry Production Preflight and JSON Export
+### Investigate Site Authentication and Persistence Paths
 
-**Workflow state:** Retry brief ready
+**Workflow state:** Read-only investigation brief ready
 
-**Next owner:** `ENGINEER` - process `2026-08-08-version-18-production-preflight-export-implementation-brief-r2.md` with `CB`.
+**Next owner:** `ENGINEER` - process `2026-08-08-site-auth-persistence-path-investigation-implementation-brief.md` with `CB`.
 
 **Current objective**
 
-Verify the reported owner-authenticated Site context, then retry only the approved schema-status and export GET endpoints under a fresh no-write window.
+Explain why existing authenticated Site workflows can use production persistence while the Version 18 admin bridge cannot be operated from the Engineer context, and recommend the simplest safe Sites-native design using the proven path.
 
 **Why this is the current priority**
 
-The Product Owner reports that the intended Site browser context is now open. Engineer must verify owner authentication before proceeding and automatically abort if it is still unavailable. The existing approval remains limited to the two owner-only GET endpoints; schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
+Two attempts failed before an admin endpoint returned an application response, including after Product Owner reported owner mode. Do not issue another identical direct-invocation retry. The investigation must compare known-working scanner/book persistence and other normal mutation paths against the bridge authentication, origin, route, runtime, middleware, and D1-binding path, then evaluate an in-Site owner administration control and other Sites-native alternatives. No production execution is authorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 
-- An owner-authenticated Site browser context is available before a new attempt.
-- Owner authentication succeeds for the two approved admin GET endpoints.
-- Schema status establishes the pre-upgrade production baseline without changing it.
-- Export is stored privately and verified for contract/version, parseability, required record categories, sanitized counts/identity invariants, and R2 references.
-- No POST, ordinary application/API access, D1/R2 write, schema upgrade, final Shopping publication, smoke test, restore/import, rollback, or destructive action occurs.
+- Known-working scanner/book persistence and representative mutation paths are traced from in-Site request through authentication/authorization to D1 binding.
+- Admin bridge authentication, request origin/context, routes, middleware/runtime, and binding acquisition are compared against the proven path.
+- Site runtime D1 access, signed-in normal Site use, and Engineer direct endpoint invocation are distinguished explicitly.
+- Repairing the bridge, reusing normal auth, an owner-only in-Site admin surface, controlled application migration, architecture adjustment, and other supported options are compared for safety, preservation, idempotence, portability, rollback, maintainability, user complexity, and undocumented dependencies.
+- A simplest safe Sites-native recommendation and next approval boundary are returned without implementation or production activity.
 
 **Expected deliverables**
 
-- Sanitized preflight/export handoff and next approval request.
+- Sanitized authentication/persistence-path investigation and recommendation.
 
 **Files likely affected**
 

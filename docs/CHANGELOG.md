@@ -107,6 +107,8 @@ Planner approved owner-only production schema status and versioned JSON export a
 
 The first preflight/export attempt automatically aborted because no owner-authenticated Site browser context was available. Neither approved bridge endpoint returned an application response, no export or database operation occurred, and the no-write window ended. A single read-only Site root load occurred outside the strict endpoint scope during troubleshooting; no interaction or mutation followed.
 
+A second attempt also aborted before an application response after Product Owner reported owner mode; the authenticated tab was not available to the Engineer browser context and direct navigation was blocked. No production read, export, write, or D1/R2 change occurred. The next milestone changed from retry to read-only comparison of proven in-Site persistence/authentication paths against the administrative bridge.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.
