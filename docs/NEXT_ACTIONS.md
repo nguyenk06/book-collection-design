@@ -4,39 +4,41 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Decide the Sites-Native Administration Boundary
+### Implement the Owner-Authenticated Administration Surface
 
-**Workflow state:** Investigation complete; Planner decision pending
+**Workflow state:** Architecture approved; implementation brief ready
 
-**Next owner:** `PLANNER` - decide the owner-only in-Site administration proposal in [Planner Inbox](PLANNER_INBOX.md).
+**Next owner:** `ENGINEER` - process `2026-08-09-owner-authenticated-administration-surface-implementation-brief.md` with `CB`.
 
 **Current objective**
 
-Approve, reject, or redirect the proposed permanent owner-only in-Site administration surface that would invoke the existing bridge APIs through the proven same-origin Site request path.
+Implement and locally validate a small permanent owner-authenticated Site administration page that invokes the existing bridge APIs through the proven same-origin Site request path.
 
 **Why this is the current priority**
 
-The completed investigation found that normal mutations and bridge routes share the same server-side owner helper, Site worker, and managed bindings. Normal UI calls are same-origin; the two Engineer attempts failed before application execution. A permanent narrow administration page is recommended to reuse that proven path while keeping status, export, approved upgrade, and verification separately gated. This is a material architecture/security boundary requiring Planner approval. See [Planner Inbox](PLANNER_INBOX.md), [Architecture](ARCHITECTURE.md), and [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md).
+Planner approved the permanent narrow administration page, with the explicit constraint that it is an owner-authenticated surface rather than an authentication bypass or a way to provide Engineer with owner credentials. It must reuse the existing server-side owner authorization and same-origin Site path while keeping status, export, approved upgrade, and verification separately gated. See [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md).
 
 **Success criteria**
 
-- Planner decides whether a permanent owner-only in-Site administration surface is an acceptable operational and security boundary.
-- Any approval preserves server-side owner authorization, same-origin/CSRF protection, deliberate confirmation, private export handling, and independent production gates.
-- If approved, Designer records the architecture decision and prepares a local implementation/validation brief that does not authorize production operations.
+- An owner-authenticated administration page uses existing same-origin bridge APIs and server-side owner authorization.
+- Anonymous and non-owner users receive no administrative data or capability.
+- The implementation contains no authentication bypass, embedded credentials, session forwarding, impersonation, or Engineer credential path.
+- Schema-changing action requires deliberate confirmation and same-origin/CSRF protection and remains unusable without owner authentication.
+- Local/disposable tests validate authorization, gating, presentation, confirmation behavior, and failure handling without production access.
 
 **Expected deliverables**
 
-- Planner decision recorded in permanent documentation.
-- If approved, a separately scoped implementation brief.
+- Locally implemented and validated administration surface.
+- Sanitized Engineer handoff; no Site save or production change.
 
 **Files likely affected**
 
-- [Planner Inbox](PLANNER_INBOX.md) and permanent architecture/status documents for the decision.
-- No Site source changes until a separate brief is approved and accepted.
+- Site UI/routes and focused tests within the accepted brief.
+- No production or Site saved-version change.
 
 **Estimated effort**
 
-Small decision; implementation effort is separately estimated as small-medium.
+Small-medium.
 
 **Risks**
 

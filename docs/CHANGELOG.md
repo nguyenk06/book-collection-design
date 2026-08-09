@@ -122,6 +122,8 @@ A second attempt also aborted before an application response after Product Owner
 
 The investigation verified that normal owner mutations and bridge routes share the same server-side owner authorization helper, Site worker, and managed D1 binding. Normal UI requests use a same-origin browser path; both direct Engineer attempts failed before application route execution and therefore do not establish an application-authentication or D1 failure. A narrow permanent owner-only in-Site administration surface is recommended but awaits Planner approval; no implementation or production authority follows from the investigation.
 
+Planner approved the administration-surface architecture for local implementation and validation. The surface must operate only within an owner-authenticated Site session, retain server-side authorization, and must not bypass authentication or provide owner credentials/session material to Engineer. Site saving, publication, production requests, export, migration, verification, and destructive actions remain unauthorized.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.

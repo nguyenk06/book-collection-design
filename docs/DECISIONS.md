@@ -13,6 +13,7 @@ Architecture Decision Records capture durable choices and their consequences. Ac
 | [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md) | Separate Shopping persistence before UI work | Accepted |
 | [ADR-0008](decisions/ADR-0008-canonical-books-and-identifiers.md) | Use canonical books with related identifiers, not AltBooks | Accepted |
 | [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) | Use a Sites-native migration bridge before Shopping schema activation | Accepted |
+| [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md) | Operate the migration bridge through an owner-authenticated in-Site administration surface | Accepted |
 
 The accepted database direction and migration sequence are summarized in [Database](DATABASE.md). Current implementation status is maintained in [Current State](CURRENT_STATE.md).
 

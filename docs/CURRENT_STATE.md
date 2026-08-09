@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Authentication/persistence-path investigation complete; owner-only in-Site administration architecture awaits Planner approval
+**Workflow state:** Owner-authenticated in-Site administration architecture approved; implementation brief ready for Engineer intake
 
 ## Summary
 
@@ -38,7 +38,7 @@ The Product Owner subsequently reported owner mode, but the second attempt still
 
 The completed read-only authentication/persistence-path investigation established that normal owner mutations and the Version 18 bridge use the same server-side owner authorization helper, Site worker, and managed D1 binding; cover operations additionally use the managed R2 binding. Normal signed-in UI operations originate as same-origin browser requests, while the two Engineer attempts failed before application route execution. Focused disposable validation passed 34/34. No source, production request, data/schema operation, Site version, deployment, or publication changed.
 
-The recommended next architecture is a narrowly scoped permanent owner-only in-Site administration surface that invokes the existing bridge APIs through the proven same-origin request path. Server-side authorization remains authoritative; schema status, private export, approved upgrade, and verification remain distinct steps, with explicit confirmation and same-origin/CSRF protection before any future schema-changing request. This recommendation is not yet accepted and requires Planner approval before implementation.
+Planner approved a narrowly scoped permanent owner-authenticated in-Site administration surface that invokes the existing bridge APIs through the proven same-origin request path. Server-side authorization remains authoritative; schema status, private export, approved upgrade, and verification remain distinct steps, with explicit confirmation and same-origin/CSRF protection before any future schema-changing request. This surface is not an authentication bypass and must not provide owner credentials, session material, or impersonation capability to Engineer. See [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md).
 
 ## Current Status Dashboard
 
@@ -151,4 +151,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Obtain Planner approval or rejection of the proposed permanent owner-only in-Site administration surface and its security/operational boundary. If approved, prepare a separately scoped local implementation/validation brief; no production operation is authorized by the investigation.
+Implement and locally validate the approved owner-authenticated in-Site administration surface under the active brief. Stop before saving a Site version, publication, production requests, export, migration, or any other production operation.
