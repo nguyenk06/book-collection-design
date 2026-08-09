@@ -202,7 +202,7 @@ Routine progress, work-started notices, and action-by-action logs do not require
 
 The Designer owns report housekeeping. Keep a report in `inbox/` while it represents an unresolved blocker, approval request, conflict, or unapplied implementation evidence. Move it to `processed/` only after its lifecycle purpose is satisfied, without altering or overwriting it.
 
-When a report contains an unresolved conflict, explicit approval requirement, material product choice, or meaningful risk acceptance, Designer evaluates whether a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item is required. Do not create an item merely because Engineer reports an unknown; first determine whether further authorized investigation can resolve it without Planner input.
+When a report contains an unresolved conflict, explicit approval requirement, material product choice, or meaningful risk acceptance, Designer evaluates whether a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item is required. When it is, Designer creates or updates the item automatically during intake without waiting for a separate instruction. Do not create an item merely because Engineer reports an unknown; first determine whether further authorized investigation can resolve it without Planner input.
 
 ### Authority and continuation
 

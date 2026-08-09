@@ -123,7 +123,7 @@ Include only the minimum sanitized technical context required to decide. Link to
 Decision lifecycle:
 
 1. Engineer evidence or Designer work identifies a genuine decision.
-2. Designer confirms Planner authority is required and creates or updates the queue item.
+2. Designer confirms Planner authority is required and automatically creates or updates the queue item during intake; no separate queueing instruction is required.
 3. Planner responds.
 4. Designer records the accepted decision in the appropriate permanent source of truth and updates requirements, roadmap, or briefs when required.
 5. Designer updates the changelog for a material milestone consequence and creates or supersedes an ADR when warranted.
