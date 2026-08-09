@@ -10,7 +10,7 @@
 
 **Production migration investigation:** Completed 2026-08-08; no production access or change performed
 
-**Production execution planning:** Complete; private-project Packet A readiness model accepted, awaiting explicit Product Owner execution authorization
+**Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
 ## Summary
 
@@ -18,7 +18,7 @@ The production application remains a stable, private, single-user book tracker o
 
 The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. The accepted operational direction is therefore to prepare an operator-controlled D1 migration, not publish Version 17 or wait indefinitely for undocumented Sites behavior.
 
-The operator runbook and independent approval packets are complete. Planner replaced the earlier enterprise-style readiness fields with a private-project model: the Product Owner/Site Engineer may operate under explicit authorization, the existing communication channel is sufficient, and no second human operator is required. Packet A becomes actionable when the Product Owner explicitly authorizes it and agrees not to change the collection until completion or abort. No Packet A operation has occurred.
+The operator runbook and private-project readiness model are complete. The Product Owner explicitly authorized Packet A revision 2 and observed the no-write window, but the Engineer could not authenticate a direct D1 operator path, find a supported D1 connector, or use an existing authenticated Cloudflare session. The required ambiguous-target/access abort fired before any production D1 query or backup operation. The no-write window ended after abort.
 
 ## Current Status Dashboard
 
@@ -115,6 +115,7 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 - Sites migration trigger, executor, tracking, retry behavior, atomicity, and traffic sequencing remain unknown from public documentation.
 - Raw migration `0004` applies once locally but is not directly idempotent; safe execution depends on the D1 migration ledger and controlled operator sequencing.
 - The production D1 target, access, migration ledger, Time Travel eligibility, and backup artifacts remain unverified until Packet A executes.
+- The immediate Packet A blocker is the absence of an authorized, authenticated D1 operator path capable of private target verification and backup execution.
 - The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
 - No roadmap bookshelf, exports, backups, or dry-run imports.
@@ -125,4 +126,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Obtain explicit Product Owner authorization for revised Packet A and execute only the production backup gate under the private-project write freeze. Stop after sanitized backup evidence. Migration, verification, publication, smoke testing, and destructive restore remain independent, unauthorized gates.
+Establish an authorized D1 operator path. A retry then requires new explicit Product Owner Packet A authorization and a new no-write window. Migration, verification, publication, smoke testing, and destructive restore remain independent, unauthorized gates.

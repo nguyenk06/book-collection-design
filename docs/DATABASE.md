@@ -158,6 +158,8 @@ This authorization does not permit migration application, raw SQL execution, led
 
 Backup, migration, post-migration verification, publication, smoke testing, and destructive restore remain six independent gates. Completion of one does not authorize the next.
 
+Packet A revision 2 was attempted on 2026-08-08 and automatically aborted at target/access verification. Site identity and saved-version history were confirmed, but no authenticated direct D1 operator path, supported D1 connector, or existing authenticated Cloudflare session was available. Production D1 was not contacted; baseline, ledger, Time Travel, export, and backup verification remain unperformed. Retry requires an authorized D1 access path plus new explicit Packet A authorization and no-write window.
+
 ## Accepted Direction
 
 The accepted strategy is additive migration, not a rewrite or immediate title/edition/copy hierarchy.

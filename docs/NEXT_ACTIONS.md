@@ -4,18 +4,19 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Execute Packet A: Production Backup Gate
+### Establish Authorized D1 Access and Retry Packet A
 
 **Current objective**
 
-Obtain a simple explicit Product Owner authorization, execute revised Packet A under the private-project write freeze, and stop for evidence review.
+Provide an authorized, authenticated D1 operator path that supports private production-target verification and backup execution, then obtain new explicit Product Owner authorization for a Packet A retry.
 
 **Why this is the current priority**
 
-Planner right-sized readiness for this private, single-owner project. A second operator, separate communication plan, and enterprise-style readiness attestation are not required. Packet A remains unexecuted and requires explicit Product Owner authorization; migration, verification, publication, smoke testing, and destructive restore remain independent and unauthorized. See [Database](DATABASE.md).
+Packet A revision 2 was authorized but automatically aborted before production D1 contact because the Engineer could not verify an authenticated/supported D1 access path. The no-write window ended. Resolving access is now the immediate prerequisite; migration, verification, publication, smoke testing, and destructive restore remain independent and unauthorized. See [Database](DATABASE.md).
 
 **Success criteria**
 
+- An authorized D1 operator path is available privately through an authenticated operator session or supported connector.
 - Product Owner explicitly authorizes Packet A and agrees not to change the collection until completion or abort.
 - Site Engineer privately verifies the production target/access path, validates execution/results, and automatically aborts on any required stop condition.
 - Version 16 remains published and Version 17 remains saved/unpublished.

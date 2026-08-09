@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; execution plan complete and private-project Packet A model accepted, not executed or migrated | Explicit Product Owner Packet A authorization, verified backup, later `0004` migration and verification approvals | Medium | Packet A execution authorization pending; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; Packet A revision 2 aborted before D1 access, not backed up or migrated | Authorized D1 operator path, new Packet A authorization, verified backup, later `0004` migration and verification approvals | Medium | No authenticated/supported production D1 access path; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,7 +27,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Execute only Packet A for the Priority 0 foundation after explicit Product Owner authorization:
+Establish an authorized D1 operator path, then retry only Packet A after new explicit Product Owner authorization:
 
 - Verify the exact target, Version 16 baseline, migration ledger, and preservation invariants read-only.
 - Retrieve the current Time Travel bookmark and create/verify a protected SQL export where supported.
