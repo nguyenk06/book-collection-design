@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Sites-native investigation complete and migration bridge recommended, not approved or implemented | Planner bridge decision, then separately approved implementation and production gates | Medium | Packaged migration behavior unknown; no native D1 backup/query controls; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; migration bridge approved for local implementation/validation and unpublished save | Bridge implementation and saved version, then separately approved production gates | Medium | Packaged migration behavior unknown; no native D1 backup/query controls; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,7 +27,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Decide whether to adopt the proposed temporary migration bridge:
+Implement and validate the approved temporary migration bridge, then save it unpublished:
 
 - Keep bridge traffic compatible with Version 16 until an explicit owner-authorized upgrade completes.
 - Provide owner-only status, versioned JSON export, re-entrant upgrade, and verification API boundaries.

@@ -4,30 +4,34 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Decide Migration-Bridge Architecture
+### Implement and Save Migration Bridge
 
-**Workflow state:** Awaiting Planner decision
+**Workflow state:** Active implementation brief ready
 
-**Next owner:** `PLANNER` - decide `Approve Sites-Native Migration Bridge` in [Planner Inbox](PLANNER_INBOX.md).
+**Next owner:** `ENGINEER` - process `2026-08-08-sites-native-migration-bridge-implementation-brief.md` with `CB`.
 
 **Current objective**
 
-Approve, revise, or reject the proposed temporary Version 16-compatible migration bridge before any implementation brief is prepared.
+Implement and validate the approved Version 16-compatible migration bridge locally, then save a new unpublished Site version and stop.
 
 **Why this is the current priority**
 
-The Sites-native investigation is complete. Direct Version 17 publication is unsafe on current evidence because packaged migration behavior is unknown and `ensureSeeded()` does not create Shopping schema before ordinary Version 17 access. A guarded migration bridge passed disposable repeat/partial-state validation and is the Engineer recommendation, but it requires Planner architecture approval. No production operation or publication occurred. See [Database](DATABASE.md).
+Planner approved the migration-bridge architecture for local implementation/validation and an unpublished Site save only. The bridge must keep ordinary traffic Version 16-compatible and provide explicit owner-only status, JSON export, re-entrant upgrade, and verification boundaries. Publication and every production operation remain separately gated. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 
-- Planner records approval, requested revision, or rejection of the bridge strategy.
-- Approval scope distinguishes local implementation/validation and saving an unpublished Site version from later production gates.
-- Portability, authorization, repeatability, concurrency, failure recovery, JSON export limitations, and backward compatibility remain explicit.
+- Bridge ordinary application paths remain compatible with the Version 16 schema.
+- Owner-only status, versioned JSON export, re-entrant upgrade, and verification APIs are implemented behind isolated authorization and server boundaries.
+- Repeated and partial-state disposable validation preserves identities/data and reports phases/failures explicitly.
+- Packaged `0004` cannot execute independently as part of the bridge version.
+- Tests, build, lint, and migration validation pass or any unrelated baseline failures are clearly separated.
+- A new unpublished Site version is saved; Version 16 remains published and no production operation occurs.
 
 **Expected deliverables**
 
-- Recorded Planner decision.
-- If approved, a concise bridge implementation brief for local implementation/validation and an unpublished saved Site version only.
+- Accepted bridge implementation brief.
+- Validated bridge source, tests, and disposable reconciliation evidence.
+- New unpublished saved Site version and sanitized design handoff.
 
 **Files likely affected**
 

@@ -136,7 +136,7 @@ The read-only investigation established:
 - No Sites-native D1 query/export/Time Travel control is exposed; an application-level versioned JSON export is the only identified portable backup candidate and is not equivalent to a D1 snapshot or R2-byte backup.
 - Disposable reconciliation passed first run, repeat run, and recovery from a partial `books.added_at` state while preserving Book IDs, collection keys, ownership, copies, ISBN, and existing timestamps. This establishes local feasibility, not production concurrency safety.
 
-The proposed, not-yet-accepted architecture is a temporary Version 16-compatible migration bridge with owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and verification APIs. It would exclude packaged `0004` from independent execution, keep ordinary reads compatible with Version 16 until upgrade completion, prefer forward repair over destructive down-migration, and preserve final Shopping publication as a separate gate.
+The accepted architecture is a temporary Version 16-compatible migration bridge with owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and verification APIs. It excludes packaged `0004` from independent bridge execution, keeps ordinary reads compatible with Version 16 until upgrade completion, prefers forward repair over destructive down-migration, and preserves final Shopping publication as a separate gate. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md).
 
 No step below is authorized for execution by this document.
 

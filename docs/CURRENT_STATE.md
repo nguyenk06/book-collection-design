@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Sites-native activation investigation complete; migration-bridge strategy awaiting Planner approval
+**Workflow state:** Migration bridge approved; local implementation/validation and unpublished Site save ready for Engineer intake
 
 ## Summary
 
@@ -24,7 +24,7 @@ The operator runbook and private-project readiness model are complete. The Produ
 
 Planner accepted external D1 administration as unavailable and outside the intended operating model. The project must use only supported capabilities exposed through ChatGPT Sites. External Cloudflare sessions, Wrangler authentication, API credentials/tokens, direct D1 console access, and another deployment platform are not project requirements. Version 17 activation now requires a read-only Sites-native architecture investigation; no production operation or publication is authorized.
 
-The completed investigation found that migration packaging proves inclusion but not execution, ordering, atomicity, retry, or traffic gating. Runtime `ensureSeeded()` writes and repairs only the Version 16-era schema, while Version 17 ordinary queries and writes expect the new Shopping columns/tables; direct Version 17 publication is therefore unsafe on current evidence. Disposable validation showed that a guarded additive reconciler can repeat and resume from a partial state while preserving Book identity and collection data. Engineer recommends a temporary Version 16-compatible migration bridge, subject to Planner approval. No Site or production operation occurred.
+The completed investigation found that migration packaging proves inclusion but not execution, ordering, atomicity, retry, or traffic gating. Runtime `ensureSeeded()` writes and repairs only the Version 16-era schema, while Version 17 ordinary queries and writes expect the new Shopping columns/tables; direct Version 17 publication is therefore unsafe on current evidence. Disposable validation showed that a guarded additive reconciler can repeat and resume from a partial state while preserving Book identity and collection data. Planner approved the temporary Version 16-compatible migration bridge architecture for local implementation/validation and an unpublished Site save only. No Site or production operation has occurred from that approval.
 
 ## Current Status Dashboard
 
@@ -134,4 +134,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Planner decides whether to adopt the proposed migration-bridge architecture. If approved, Designer prepares a local implementation/validation brief that may save a new unpublished Site version but does not authorize bridge publication, production export, schema upgrade, final Shopping publication, smoke testing, or destructive action.
+Implement and validate the approved migration bridge locally, then save it as a new unpublished Site version. Bridge publication, production export, schema upgrade, final Shopping publication, smoke testing, and destructive action remain unauthorized.

@@ -75,13 +75,15 @@ Planner then accepted Sites-native operations as the project constraint and remo
 | --- | --- |
 | Read-only investigation complete | Yes |
 | Disposable repeat/partial-state validation | Passed |
-| Migration bridge recommended | Yes; awaiting Planner approval |
+| Migration bridge architecture | Approved for local implementation/validation and unpublished Site save only |
 | Site/source version changed | No |
 | Production data accessed | No |
 | Production migrated or verified | No |
 | Version 17 published | No; Version 16 remains published |
 
 The investigation found direct Version 17 publication unsafe on current evidence because packaged migration execution remains unknown and runtime `ensureSeeded()` does not create the Shopping schema expected by Version 17. A Version 16-compatible migration bridge is proposed; no architecture approval or implementation is implied by this entry.
+
+Planner approved the migration-bridge architecture for local implementation/validation and an unpublished Site save only. Bridge publication, production export, production schema upgrade, final Shopping publication, smoke testing, and destructive recovery remain unauthorized.
 
 ### Changed
 
