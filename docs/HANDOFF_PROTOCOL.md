@@ -128,6 +128,26 @@ Shortcuts are convenience aliases for existing lifecycle behavior. They reduce m
 
 Keep the shortcut set deliberately small. Add another shortcut only after repeated workflow use demonstrates a clear need.
 
+### All roles: `INIT`
+
+`INIT` initializes or reinitializes the current role from authoritative project state. It is always read-only.
+
+- **DESIGNER:** execute [`DESIGNER_STARTUP.md`](../templates/DESIGNER_STARTUP.md) inside the Design Codex Project.
+- **SITE ENGINEER:** after the bootstrap prompt is supplied to the Sites chat, execute [`ENGINEER_STARTUP.md`](../templates/ENGINEER_STARTUP.md).
+- **PLANNER:** execute [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md) from the public Design repository.
+
+`INIT` never accepts a brief, processes inbox artifacts, moves handoffs, updates documentation, modifies source, touches production, publishes/deploys, or makes a product decision automatically. It only reconstructs role state and reports readiness.
+
+This repository has no guaranteed project-level Codex trigger file. For a new Designer thread, use: **“Read `templates/DESIGNER_STARTUP.md` and run `INIT` in read-only mode.”** After the template is loaded, `INIT` is sufficient for reinitialization.
+
+### Designer: `PE`
+
+`PE` means **Prompt Engineer**. Output the current self-contained, copy/paste-ready contents of [`ENGINEER_STARTUP.md`](../templates/ENGINEER_STARTUP.md), including the instruction to run `INIT` in the actual CYOA Collection Sites context. Do not embed milestone state that belongs in permanent documents, expose sensitive/local details, or alter project state.
+
+### Designer: `PP`
+
+`PP` means **Prompt Planner**. Output the current self-contained, copy/paste-ready contents of [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md), including its public repository link, reading order, and `INIT` instruction. Do not depend on prior Planner memory or alter project state.
+
 ### Designer: `CI`
 
 `CI` means **Check Inbox / Process Inbox**. It does not merely list `inbox/`.
@@ -182,6 +202,18 @@ No formal Planner shortcut system is defined. Planner may continue using convers
 3. [`NEXT_ACTIONS.md`](NEXT_ACTIONS.md)
 4. [`CHANGELOG.md`](CHANGELOG.md)
 5. [`ROADMAP.md`](ROADMAP.md)
+
+## Thread Replacement and Recovery
+
+Chat history is not the project source of truth. When a role thread becomes too large, stale, or unreliable:
+
+1. Start a new thread in the correct role context.
+2. Supply the appropriate startup template when the context does not already know `INIT`.
+3. Run the read-only `INIT` bootstrap.
+4. Validate role, permanent state, and next owner.
+5. Continue from permanent documentation, actual Site/source state, and active handoff artifacts.
+
+Do not create large conversational handoff summaries when authoritative sources are sufficient. Site Engineer must re-check actual Site/source state and accepted brief evidence after bootstrap; Site state outranks stale claims about what is deployed.
 
 ## File Handling
 

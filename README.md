@@ -8,7 +8,7 @@ The application is maintained in a separate implementation repository. This repo
 
 ## Status
 
-Site Version 16 remains published and live. The validated Shopping persistence foundation is saved as unpublished Version 17; production has not been migrated or verified, and Version 17 has not been published. The immediate work is the gated Production Backup & Migration Execution Plan. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 16 remains the verified published version. Version 17 preserves the unpublished Shopping foundation, and Version 18 preserves the validated unpublished migration bridge; Version 18 publication is approved but not yet verified complete. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 
@@ -46,6 +46,7 @@ Implementation changes should be made in the application repository. Major archi
 | Data workflows | [Import and Export](docs/IMPORT_EXPORT.md) · [AI Review](docs/AI_REVIEW.md) · [Asset Management](docs/ASSET_MANAGEMENT.md) · [Tags](docs/TAGS.md) |
 | Governance | [Decision Log](docs/DECISIONS.md) · [Documentation Rules](docs/DOCUMENTATION_RULES.md) · [Contributing](docs/CONTRIBUTING.md) |
 | Handoffs | [Protocol](docs/HANDOFF_PROTOCOL.md) · [Implementation Brief template](templates/IMPLEMENTATION_BRIEF.md) · [Design Handoff template](templates/DESIGN_HANDOFF.md) |
+| Role startup | [Designer](templates/DESIGNER_STARTUP.md) · [Site Engineer](templates/ENGINEER_STARTUP.md) · [Planner](templates/PLANNER_STARTUP.md) |
 
 ## GitHub Pages
 
