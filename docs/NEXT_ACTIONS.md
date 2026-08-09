@@ -8,9 +8,9 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 **Workflow state:** Queue Mode enabled; throttle STOP; Engineer paused at a safe resumable checkpoint; P2/P3 complete locally and one read-only environment-feasibility brief remains queued and unaccepted
 
-**Next owner:** `EXTERNAL/WAIT` - after usage refresh, start the replacement Engineer chat, run read-only `INIT`, and issue explicit `RUN` only when ready to resume.
+**Next owner:** `EXTERNAL/WAIT` - replacement Engineer `INIT` is complete; after usage refresh, issue explicit `RUN` only when ready to resume.
 
-P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. Engineering is paused with no active workstream. The queued read-only brief remains unaccepted and cannot be consumed until explicit future `RUN`. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. Replacement Engineer read-only `INIT` is complete, and Planner and Engineer confirmed the stopping point. The queued read-only brief remains unaccepted and cannot be consumed until explicit future `RUN`. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 

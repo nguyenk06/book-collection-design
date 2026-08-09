@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
 
-**Engineer execution state:** `PAUSED` — no active workstream or queue consumption; replacement Engineer must run read-only `INIT` and wait for explicit future `RUN`
+**Engineer execution state:** `PAUSED` — replacement Engineer completed read-only `INIT`; no active workstream or queue consumption, and explicit future `RUN` is still required
 
 ## Current Engineering Workstreams
 
@@ -41,13 +41,13 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-PO-SHOP-ENV` | Shopping validation-environment feasibility | `[░░░░░░░░░░] 0%` | PLANNED | Read-only feasibility brief queued and unaccepted | Explicit future `RUN`, then Engineer acceptance; verify a private functional option without creating it | No while paused |
 | `WS-PO-SHOP-VALIDATE` | Product Owner hands-on Shopping validation | `[░░░░░░░░░░] 0%` | PLANNED | Checkpoint required before Shopping production activation | Verify a private user-accessible environment with disposable/isolated data, then obtain separate authority to create/use it | No |
 
-**Engineer can continue:** NO while throttle is `STOP`. After usage refresh, a replacement Engineer runs read-only `INIT` and waits for explicit `RUN` before `CB`.
+**Engineer can continue:** NO while throttle is `STOP`. Replacement Engineer initialization is complete; after usage refresh, wait for explicit `RUN` before `CB`.
 
 **Current Planner decisions:** None. Technical environment feasibility must be established before asking for save/preview authority.
 
 **Next production gate:** None is currently executable. Product Owner hands-on Shopping validation is required before Shopping production activation; preview/save authority, publication, migration, and all production actions remain separately gated and unauthorized.
 
-**Resume condition:** After usage refresh, start the replacement Site Engineer chat, run read-only `INIT`, verify the preserved unsaved P2/P3 source and queued brief, then issue explicit `RUN` when ready. `INIT` alone does not resume queue consumption.
+**Resume condition:** Replacement Site Engineer read-only `INIT` and stopping-point verification are complete. After usage refresh, issue explicit `RUN` when ready; until then, do not consume the queued brief. Planner and Engineer have confirmed this stopping point.
 
 ## Summary
 
@@ -85,7 +85,7 @@ P3 focused scanner/identifier validation is also complete in the unsaved local s
 
 Planner added a reusable Product Owner hands-on validation checkpoint at meaningful user-facing milestones. P2 Shopping now requires this checkpoint before production activation. The current Shopping/P3 source is unsaved and not user-accessible; Version 19 does not contain Shopping. A supported private preview or unpublished saved version backed by disposable/isolated data is the preferred validation environment, but current evidence does not establish that Sites can expose one without production bindings or publication. That feasibility must be verified read-only before separate preview/save authority is requested.
 
-Engineering then stopped at a safe resumable checkpoint for usage refresh. The feasibility brief remains queued and unaccepted, no workstream is active, and Queue Mode remains enabled with throttle `STOP`. No Site version contains the completed Shopping/P3 source, and no preview, production request, D1/R2 operation, migration, publication, deployment, smoke test, rollback, or destructive action occurred.
+Engineering then stopped at a safe resumable checkpoint for usage refresh. The replacement Engineer completed read-only `INIT`, and Planner and Engineer confirmed the stopping point. The feasibility brief remains queued and unaccepted, no workstream is active, and Queue Mode remains enabled with throttle `STOP`. No Site version contains the completed Shopping/P3 source, and no preview, production request, D1/R2 operation, migration, publication, deployment, smoke test, rollback, or destructive action occurred.
 
 ## Current Status Dashboard
 
