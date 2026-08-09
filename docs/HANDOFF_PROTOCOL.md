@@ -91,7 +91,7 @@ The Site Engineer reads the public design repository at <https://github.com/nguy
 
 ## Design to Site Handoff
 
-The Designer prepares [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) for one milestone. It is a concise, share-ready specification containing only what the Site Engineer needs.
+The Designer prepares [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) for one coherent milestone. A brief may contain one or several bounded workstreams and remains a concise, share-ready specification containing only what the Site Engineer needs.
 
 - Link to authoritative design documents instead of copying them.
 - Distinguish verified current state from accepted requirements.
@@ -157,21 +157,23 @@ When the Designer receives `CI`, execute the normal inbox lifecycle:
 1. Inspect the shared local `inbox/` and identify new Engineer reports or handoffs.
 2. Validate evidence and referenced briefs or artifacts.
 3. Classify each artifact as accepted, incomplete, blocked, conflicted, superseded, or awaiting a genuine Planner/product-owner decision.
-4. Update permanent project documentation only from verified evidence.
-5. Evaluate whether [`CHANGELOG.md`](CHANGELOG.md) needs a major milestone or state-transition update.
-6. Evaluate whether [`PLANNER_INBOX.md`](PLANNER_INBOX.md) needs a genuine Planner decision; do not escalate routine artifacts unnecessarily.
-7. Perform Designer-owned housekeeping, moving eligible artifacts to `processed/` without overwriting or deleting unrelated artifacts and leaving unresolved artifacts active.
-8. Run the continuation check and identify who acts next.
-9. Report the resulting state concisely.
+4. Associate evidence with the affected workstream or workstreams; update permanent state and coarse progress only from verified evidence.
+5. Identify completed, blocked, ready-for-review, and still-authorized workstreams.
+6. Evaluate whether [`CHANGELOG.md`](CHANGELOG.md) needs a major milestone or state-transition update.
+7. Add genuine Planner decisions to [`PLANNER_INBOX.md`](PLANNER_INBOX.md), batching independent non-urgent decisions when useful.
+8. Perform Designer-owned housekeeping, moving eligible artifacts to `processed/` without overwriting or deleting unrelated artifacts and leaving unresolved artifacts active.
+9. Prepare a new or revised brief only when remaining authority is insufficient; do not replace an implementation envelope that already authorizes eligible work.
+10. Run the continuation check, including whether Engineer still has executable work, and identify active owners plus any owner blocking all progress.
+11. Report the resulting state concisely.
 
-Before `CI` is complete, at least one legitimate continuation must be clear:
+Before `CI` is complete, at least one legitimate continuation must be clear. Several may exist simultaneously:
 
 - **ENGINEER:** an eligible implementation brief exists in `briefs/`; identify the brief.
 - **PLANNER:** a genuine actionable choice, approval, rejection, or requested provision exists in [`PLANNER_INBOX.md`](PLANNER_INBOX.md); identify the decision.
 - **EXTERNAL/WAIT:** permanent state is explicitly `PAUSED` or `BLOCKED-EXTERNAL`; identify the condition required to resume.
 - **NONE - PROJECT COMPLETE:** permanent state explicitly records completion.
 
-Treat an empty `inbox/`, empty `briefs/`, empty Planner Inbox, actionable work in [`NEXT_ACTIONS.md`](NEXT_ACTIONS.md), and no explicit waiting/completion state as a workflow-continuity error. Do not merely report that there is nothing to process; determine the legitimate next owner.
+Treat an empty `inbox/`, empty `briefs/`, empty Planner Inbox, actionable work in [`NEXT_ACTIONS.md`](NEXT_ACTIONS.md), and no explicit waiting/completion state as a workflow-continuity error. Do not merely report that there is nothing to process; determine the legitimate active owner or owners.
 
 After processing an Engineer completion handoff, the Designer:
 
@@ -189,12 +191,13 @@ When the Site Engineer receives `CB`, execute the normal brief-intake lifecycle:
 
 1. Inspect the shared local `briefs/` and identify the next eligible implementation brief.
 2. Read the complete brief and validate feasibility against the actual implementation workspace.
-3. Identify material conflicts, unknowns, scope changes, and approval gates.
-4. Identify whether the brief begins a new attempt sequence, continues Attempt 2, continues Attempt 3, or follows a completed mandatory reassessment. Do not accept a brief that silently creates Attempt 4.
-5. Accept the brief as the active specification when appropriate and create the required sanitized brief-acceptance report in `inbox/`, including its attempt-sequence classification.
+3. Identify every named workstream, its dependencies, local authority, production exclusions, likely ordering/parallelism, and file/surface collision risks.
+4. Identify each workstream's attempt sequence: new, Attempt 2, Attempt 3, post-reassessment, or not applicable. Do not accept a workstream that silently creates Attempt 4.
+5. Accept the brief as the active specification when appropriate and create the required sanitized brief-acceptance report in `inbox/`, including accepted workstreams and their attempt classifications.
 6. Do not move the brief; Designer owns housekeeping.
-7. If the brief is accepted, work is feasible, no material conflict exists, and the next action is already authorized, proceed automatically as far as that authority permits.
-8. Stop when an explicit approval gate, production-changing or destructive action, material scope change, unresolved design conflict, or mandatory third-failure reassessment requires escalation.
+7. If the brief is accepted, work is feasible, no material conflict exists, and actions are already authorized, advance eligible workstreams without a new go message.
+8. If one workstream blocks, continue independent authorized workstreams that do not share the blocker or an unsafe file/surface collision.
+9. Stop only the affected workstream at its gate. Stop the whole engineering cycle when every eligible stream is blocked, a cross-cutting conflict prevents safe continuation, shared-file conflicts require convergence, production sequencing requires waiting, or no authorized work remains.
 
 No formal Planner shortcut system is defined. Planner may continue using conversational commands such as `inbox`, `status`, and `next`. Planner reads permanent documentation in this order:
 
@@ -211,7 +214,7 @@ Chat history is not the project source of truth. When a role thread becomes too 
 1. Start a new thread in the correct role context.
 2. Supply the appropriate startup template when the context does not already know `INIT`.
 3. Run the read-only `INIT` bootstrap.
-4. Validate role, permanent state, and next owner.
+4. Validate role, permanent state, active workstreams, and active/blocking owners.
 5. Continue from permanent documentation, actual Site/source state, and active handoff artifacts.
 
 Do not create large conversational handoff summaries when authoritative sources are sufficient. Site Engineer must re-check actual Site/source state and accepted brief evidence after bootstrap; Site state outranks stale claims about what is deployed.
@@ -231,10 +234,26 @@ ACTION:
 <single clearest next action, command, approval, or resume condition>
 ```
 
+When work can proceed in parallel, replace `NEXT OWNER` with:
+
+```text
+ACTIVE OWNERS:
+- ENGINEER — <eligible workstreams>
+- PLANNER — <pending decisions>
+
+BLOCKING OWNER:
+<NONE | DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT>
+
+ACTION:
+<concise actions that can proceed now>
+```
+
 Use it for `CI`, `CB`, and `INIT` reports; brief acceptance; implementation completion; Designer handoff processing; Planner decisions; blocked states; and publication/deployment reports. Short or trivial acknowledgements do not require it.
 
 - Keep `TL;DR` concise and mobile-readable.
 - `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.
+- Use `ACTIVE OWNERS` when two or more roles have independent actions. `BLOCKING OWNER: NONE` means at least one authorized stream can continue.
+- Do not imply Engineer must stop merely because Planner has a pending decision on an unrelated stream.
 - `ACTION` states what that owner should do next. Do not invent an action when legitimately waiting.
 - Use `PLANNER` for approval gates, `ENGINEER` for an actionable or already-authorized brief, and `DESIGNER` for a completed Engineer handoff awaiting intake.
 - Use `EXTERNAL/WAIT` with the resume condition when blocked outside the three roles.
@@ -284,6 +303,9 @@ The report must contain:
 
 - Accepted brief filename
 - Status: `ACCEPTED AS ACTIVE SPECIFICATION`
+- Accepted workstream IDs and names
+- Dependencies, planned ordering/parallelism, and likely shared-file/surface collisions
+- Local authority and explicit production exclusions
 - Attempt-sequence classification and underlying-problem reference
 - Feasibility
 - Material conflicts, or `NONE`
@@ -321,6 +343,8 @@ Reports should identify the milestone, transition, related brief or prior report
 
 Routine progress, work-started notices, and action-by-action logs do not require inbox reports. The purpose is durable cross-workspace state, not implementation chatter.
 
+Report workstream transitions at `BLOCKED`, `READY FOR REVIEW`, `COMPLETE`, mandatory reassessment, direction-changing validation failure, coherent milestone convergence, saved Site version, production gate, or publication/deployment change. Do not report every file edit, test run, minor progress increment, or ordinary authorized start.
+
 The Designer owns report housekeeping. Keep a report in `inbox/` while it represents an unresolved blocker, approval request, conflict, or unapplied implementation evidence. Move it to `processed/` only after its lifecycle purpose is satisfied, without altering or overwriting it.
 
 When a report contains an unresolved conflict, explicit approval requirement, material product choice, or meaningful risk acceptance, Designer evaluates whether a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item is required. When it is, Designer creates or updates the item automatically during intake without waiting for a separate instruction. Do not create an item merely because Engineer reports an unknown; first determine whether further authorized investigation can resolve it without Planner input.
@@ -344,9 +368,42 @@ The Site Engineer must stop and request approval when:
 
 Acceptance never expands the brief's authorization boundary.
 
+### Parallel workstreams
+
+A workstream is a bounded unit of engineering work with a stable short ID, descriptive name, objective, scope, dependencies, relevant file/surface ownership, state, coarse progress, attempt number when applicable, blocker, next gate, authority level, and whether it can continue independently.
+
+Use only these states:
+
+- `PLANNED` — authorized or design-defined, but not started.
+- `ACTIVE` — Engineer may work on it now.
+- `BLOCKED` — it cannot continue until a named dependency, decision, or gate resolves.
+- `READY FOR REVIEW` — its planned engineering work reached its convergence/review point.
+- `COMPLETE` — its accepted objective is complete for the current milestone.
+- `DEFERRED` — intentionally outside the current execution envelope without permanent cancellation.
+
+Record the concise current view in [`CURRENT_STATE.md`](CURRENT_STATE.md). Use a 10-segment bar and coarse 10% increments, for example `[████████░░] 80% — ACTIVE`. Progress estimates completion toward the current workstream objective; they are informational, retain their last value while blocked, and never replace acceptance criteria or validation evidence. `PLANNED` is normally 0%; `COMPLETE` is 100%.
+
+A blocked workstream does not block Engineer when another authorized, independent stream can safely continue. Report the whole engineering cycle blocked only when every eligible stream is blocked, remaining work requires approval, a cross-cutting conflict or shared hotspot prevents safe continuation, production sequencing requires waiting, or no authorized work remains.
+
+Briefs may authorize several named workstreams under one local implementation envelope. Each workstream states dependencies, expected files/surfaces, allowed actions, exclusions, attempt sequence, production authority, and convergence gate. Local authority never implies production authority.
+
+Identify likely ownership boundaries and shared hotspots. Common hotspots include the main page, authentication/database helpers, shared API routes, migrations, global styles, and configuration. When streams need the same hotspot, serialize or coordinate that portion, or converge one stream before the other edits it. Do not create competing implementations to preserve parallelism.
+
+### Convergence gate
+
+Individually complete workstreams do not make a combined milestone ready. Before saving or presenting a combined Site version:
+
+- Resolve shared-file conflicts and integrate the workstreams.
+- Run integrated relevant tests, lint, and build.
+- Verify cross-workstream interactions and schema/migration assumptions.
+- Verify existing behavior remains intact and no unauthorized production behavior exists.
+- Produce one coherent review handoff that identifies each workstream's outcome.
+
+Production remains sequential. Saved-version creation, publication, production status/export, schema upgrade, verification, Shopping-capable publication, smoke testing, and destructive recovery retain explicit independent gates in dependency order. Never infer production authorization from a local multi-workstream brief.
+
 ### Three-attempt reassessment rule
 
-For a materially similar implementation, integration, deployment, migration, authentication, or production-operation problem, the Site Engineer may make at most three substantive attempts before mandatory reassessment.
+Within each workstream, a materially similar implementation, integration, deployment, migration, authentication, or production-operation problem may receive at most three substantive attempts before mandatory reassessment.
 
 An attempt is a meaningful execution path intended to resolve the same underlying problem. It is not rerunning after a typo, correcting obvious syntax, fixing trivial local setup, or rerunning a flaky test without changing the approach. The rule protects usage, time, momentum, simplicity, and Product Owner attention without discouraging ordinary debugging.
 
@@ -357,7 +414,7 @@ After Attempt 1 or 2 fails, Engineer may continue only when the accepted brief s
 - Result
 - New evidence justifying another attempt
 
-After Attempt 3 fails, stop. Do not make Attempt 4 automatically. Create a sanitized `BLOCKED / REASSESSMENT REQUIRED` report in `inbox/` that answers:
+After Attempt 3 fails, stop that workstream. Do not make Attempt 4 automatically. Other independent authorized workstreams may continue. Create a sanitized `BLOCKED / REASSESSMENT REQUIRED` report in `inbox/` that answers:
 
 1. Original objective
 2. Attempts 1, 2, and 3
@@ -378,7 +435,7 @@ When Designer receives a third-attempt reassessment, do not simply create anothe
 
 Planner escalation asks whether solving the problem remains worth the added complexity/cost, not merely whether Engineer may try again. Include original value, failed assumptions/evidence, proposed alternative, expected effort/risk, and consequences of deferring or dropping.
 
-Do not reset the attempt count because a new filename or brief exists. Reset only when Designer records that the underlying problem materially changed through a different architecture, different supported platform capability, materially revised requirement, or new authoritative information that changes the premise. State the reset rationale in the new brief.
+Do not reset the attempt count because another workstream exists, a report was archived, or a new filename/brief exists. Reset only when Designer records that the underlying problem materially changed through a different architecture, different supported platform capability, materially revised requirement, or new authoritative information that changes the premise. State the reset rationale in the new brief.
 
 ### Design handoff lifecycle
 

@@ -92,6 +92,8 @@ For each significant Engineer handoff, evaluate whether it records a major miles
 
 [PLANNER_INBOX.md](PLANNER_INBOX.md) is the current queue for unresolved decisions that require Planner or product-owner authority. It contains no resolved history and must not duplicate the backlog, roadmap, changelog, current state, next actions, ADRs, or technical handoffs.
 
+The queue may contain multiple independently understandable decisions. Batch non-urgent independent decisions when useful, but do not delay an urgent or high-risk gate merely to form a batch. A blocked workstream does not make the whole project blocked while another authorized independent workstream can continue.
+
 Designer owns the queue. Engineer supplies sanitized evidence through handoffs or state reports but does not edit the queue. Planner may directly ask Designer to record a question.
 
 Create an item only when delegated authority cannot safely resolve a genuine choice involving:
@@ -203,7 +205,7 @@ Before staging documentation, verify:
 - [ ] No duplicate information exists.
 - [ ] `CURRENT_STATE.md` matches the latest assessment.
 - [ ] `ROADMAP.md` matches accepted priorities.
-- [ ] `NEXT_ACTIONS.md` reflects exactly one current sprint.
+- [ ] `NEXT_ACTIONS.md` reflects one coherent current execution horizon, which may contain multiple bounded workstreams.
 - [ ] No sensitive information exists.
 - [ ] New architectural decisions are recorded.
 - [ ] Documentation remains concise.

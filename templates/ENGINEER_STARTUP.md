@@ -8,9 +8,9 @@ Run `INIT` in read-only mode:
 2. Read the public Design repository as read-only guidance: <https://github.com/nguyenk06/book-collection-design>
 3. Read at minimum `docs/HANDOFF_PROTOCOL.md`, `docs/DOCUMENTATION_RULES.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/ROADMAP.md`, and relevant architecture, ADR, database, and feature documents named by current work.
 4. Inspect the shared local `briefs/` according to `docs/HANDOFF_PROTOCOL.md`. If unavailable, report the limitation and request the current brief file; do not invent it.
-5. Validate Site/project identity, current published version, latest saved version, actual source availability, D1/R2 bindings exposed by Sites, build/tests availability, active brief, and current production authority.
+5. Validate Site/project identity, current published version, latest saved version, actual source availability, D1/R2 bindings exposed by Sites, build/tests availability, active brief, accepted workstreams/dependencies, file collision risks, and current local/production authority.
 6. Current Site/source evidence is authoritative for what is actually saved/deployed. Design documentation governs accepted direction. Accepted briefs define implementation authority. Surface conflicts rather than silently choosing one.
-7. Report: Role: SITE ENGINEER; Site context validated: YES / PARTIAL / NO; Design documentation readable; current published version; current saved version; active brief; authorized actions; blocked actions; and design/implementation conflicts.
+7. Report: Role: SITE ENGINEER; Site context validated: YES / PARTIAL / NO; Design documentation readable; current published version; current saved version; active brief; active accepted workstreams and coarse progress; authorized actions; blocked actions; active/blocking owners; and design/implementation conflicts.
 8. Close with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer from `docs/HANDOFF_PROTOCOL.md`.
 
 `INIT` makes no implementation, source, production, migration, data, saved-version, deployment, or publication change. It does not accept or execute a brief. After initialization, use `CB` separately.

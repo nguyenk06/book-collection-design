@@ -6,9 +6,11 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### Implement the Owner-Authenticated Administration Surface
 
-**Workflow state:** Architecture approved; implementation brief ready
+**Workflow state:** Brief accepted; local implementation active
 
-**Next owner:** `ENGINEER` - process `2026-08-09-owner-authenticated-administration-surface-implementation-brief.md` with `CB`.
+**Next owner:** `ENGINEER` - continue the accepted owner-authenticated administration-surface brief through local convergence; stop before Site save or production activity.
+
+The current local envelope may be tracked as `WS-ADMIN`, `WS-AUTH`, `WS-EXPORT`, and `WS-CONVERGE`; these labels do not expand the accepted brief. See [Current State](CURRENT_STATE.md). Production migration, Shopping UI, and scanner work are not authorized by this envelope.
 
 **Current objective**
 
@@ -99,7 +101,8 @@ Small-medium.
 
 ## Queue Rules
 
-- Keep exactly one Current Sprint.
+- Keep one coherent Current Sprint; it may contain multiple bounded workstreams under one or more compatible briefs.
+- A blocked stream does not block unrelated authorized streams, but shared hotspots and the convergence gate must be coordinated.
 - Do not duplicate the [Roadmap](ROADMAP.md); link to durable requirements.
 - Focus only on the next implementation horizon.
 - After each milestone, move completed work to Recently Completed and promote the next ready task.

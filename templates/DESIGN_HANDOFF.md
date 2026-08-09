@@ -23,6 +23,14 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 
 ## Implementation completed
 
+### Workstream summary
+
+| ID | State | Progress | Attempt | Blocker / next gate |
+| --- | --- | ---: | --- | --- |
+| <!-- WS-ID --> | <!-- controlled state --> | <!-- coarse % --> | <!-- number / N/A --> | <!-- concise --> |
+
+Use `PLANNED`, `ACTIVE`, `BLOCKED`, `READY FOR REVIEW`, `COMPLETE`, or `DEFERRED`. Progress is informational; evidence and acceptance criteria remain authoritative.
+
 ### Implemented
 
 - <!-- Verified implementation fact. -->
@@ -112,3 +120,12 @@ NEXT OWNER:
 
 ACTION:
 <!-- The single clearest next action, approval, command, or resume condition. -->
+
+<!-- When roles have independent simultaneous actions, replace NEXT OWNER with:
+ACTIVE OWNERS:
+- ENGINEER — <eligible workstreams>
+- PLANNER — <pending decisions>
+
+BLOCKING OWNER:
+<NONE | DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT>
+-->

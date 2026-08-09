@@ -12,7 +12,27 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Owner-authenticated in-Site administration architecture approved; implementation brief ready for Engineer intake
+**Workflow state:** Owner-authenticated in-Site administration brief accepted; Engineer is implementing locally under a no-production authority boundary
+
+## Current Engineering Workstreams
+
+Progress is a coarse estimate toward each current objective, not validation evidence. The active administration brief remains the authority; splitting its existing scope below does not expand it.
+
+| ID | Workstream | Progress | State | Authority | Blocker / next gate | Independent continuation |
+| --- | --- | --- | --- | --- | --- | --- |
+| `WS-ADMIN` | Owner-authenticated administration page | `[█░░░░░░░░░] 10%` | ACTIVE | Local implementation/validation authorized | Local review and convergence | Yes, coordinated with shared auth/UI hotspots |
+| `WS-AUTH` | Same-origin authorization and security validation | `[░░░░░░░░░░] 0%` | PLANNED | Authorized within active brief | Coordinate shared auth routes with `WS-ADMIN` | Yes, except shared hotspots |
+| `WS-EXPORT` | Private export-download and validation UX | `[░░░░░░░░░░] 0%` | PLANNED | Authorized within active brief | Admin shell and authorization path | Yes after dependency is available |
+| `WS-CONVERGE` | Integrated admin milestone validation | `[░░░░░░░░░░] 0%` | PLANNED | Authorized within active brief | `WS-ADMIN`, `WS-AUTH`, and `WS-EXPORT` ready | No; convergence point |
+| `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
+| `WS-SHOPPING` | Shopping Mode UI | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Production schema activation and a future brief | No |
+| `WS-SCANNER` | Identifier/scanner improvements | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Higher-priority Shopping sequence and a future brief | No |
+
+**Engineer can continue:** YES — `WS-ADMIN`, then eligible authorized `WS-AUTH` and `WS-EXPORT` work while respecting shared-file coordination.
+
+**Current Planner decisions:** None.
+
+**Next production gate:** None is currently executable. After local convergence, Site-version saving and every subsequent production action require their documented sequential gates.
 
 ## Summary
 

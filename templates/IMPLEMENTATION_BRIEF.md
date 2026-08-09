@@ -14,6 +14,25 @@
 
 Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
 
+## Workstreams
+
+Use one block per bounded stream. Remove this section only when the brief contains one simple workstream whose fields are fully represented below.
+
+### <!-- WS-ID — Descriptive name -->
+
+- Objective:
+- Scope:
+- Dependencies:
+- Expected files/surfaces:
+- Allowed actions:
+- Explicit exclusions:
+- Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT | NOT APPLICABLE -->
+- Production authority: <!-- Normally NONE; local authority never implies production authority. -->
+- May continue independently: <!-- YES | NO; identify dependency/collision when NO. -->
+- Convergence gate:
+
+Identify shared hotspots across workstreams and serialize or coordinate conflicting edits. Do not create competing implementations merely to preserve parallel execution.
+
 ## Objective
 
 <!-- State the single implementation outcome. -->
@@ -64,7 +83,8 @@ Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<
 
 ## Approval boundary
 
-- Implement and validate only the scope above.
+- **Local authority:** Implement and validate only the named workstreams and scope above.
+- **Production authority:** <!-- NONE unless a separately approved production action is stated explicitly. -->
 - Stop before publishing unless explicit approval is provided separately.
 - Do not modify the design repository.
 

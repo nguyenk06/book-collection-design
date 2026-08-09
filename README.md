@@ -22,6 +22,8 @@ Planner should read, in order:
 
 Temporary handoffs are evidence and transport; Planner should not normally need to read them.
 
+The concise current workstream view in [Current State](docs/CURRENT_STATE.md) shows what is active, blocked, able to continue, and approaching a production gate. Progress estimates are informational; briefs and validation evidence remain authoritative.
+
 ## Contributor reading
 
 New contributors should read, in order:

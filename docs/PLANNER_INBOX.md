@@ -7,3 +7,5 @@ It is not a task backlog, technical issue tracker, Engineer progress log, change
 ## Current Decisions
 
 No Planner decisions currently pending.
+
+When several decisions are pending, number them and keep each independently understandable. Planner may respond compactly, for example `1: B; 2: A; 3: DEFER`. Do not delay urgent or high-risk decisions for batching.
