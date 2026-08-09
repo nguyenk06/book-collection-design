@@ -48,6 +48,20 @@ Next major transition: prepare the gated Production Backup & Migration Execution
 
 Planner selected preparation for an operator-controlled D1 migration because public Sites documentation does not establish packaged migration execution or traffic gating. Time Travel bookmark capture, SQL export, migration, verification, publication, smoke testing, and destructive restore remain separately gated. See [Database](DATABASE.md) and [Next Actions](NEXT_ACTIONS.md).
 
+### Production Backup & Migration Execution Planning
+
+| State | Verified status |
+| --- | --- |
+| Operator runbook complete | Yes |
+| Packet A backup gate authorized | Yes; conditional on private readiness confirmation |
+| Production access performed | No |
+| Time Travel bookmark retrieved | No |
+| SQL export created | No |
+| Production migrated | No |
+| Version 17 published | No |
+
+Planner authorized production target verification, read-only preflight, bookmark retrieval, protected export, and write freeze only. Migration, publication, smoke testing, and destructive recovery remain separately gated.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.

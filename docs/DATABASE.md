@@ -135,6 +135,17 @@ No step below is authorized for execution by this document.
 
 Time Travel history is automatic on supported production D1 databases; the operator records the current bookmark rather than creating a traditional backup. Time Travel restore overwrites the database in place and remains a separately authorized destructive rollback. The SQL export is the portable backup artifact and must remain outside source control and handoff files.
 
+The operator runbook is complete. Planner authorized only the first production gate after private readiness confirmation:
+
+- Verify the exact production target and Version 16 schema baseline with read-only metadata and aggregate checks.
+- Inspect the migration ledger and unapplied migration list without changing them.
+- Enforce the approved maintenance/write freeze.
+- Retrieve the current Time Travel bookmark and store it only in the restricted change record.
+- Create, protect, and verify the full remote SQL export where supported.
+- Stop after reporting sanitized pass/fail evidence.
+
+This authorization does not permit migration application, raw SQL execution, ledger edits, forward repair, restore/import, R2 access, Site deployment/publication, or production smoke testing.
+
 ## Accepted Direction
 
 The accepted strategy is additive migration, not a rewrite or immediate title/edition/copy hierarchy.

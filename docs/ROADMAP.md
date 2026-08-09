@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Version 17 saved and read-only migration investigation complete, not migrated to production | Approved backup, operator-controlled `0004` migration, production verification and rollback gates | Medium | Production access not authorized; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; execution plan complete and Packet A conditionally authorized, not executed or migrated | Confirmed readiness, verified backup, later `0004` migration and verification approvals | Medium | Private operator/window/storage readiness pending; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,15 +27,12 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Prepare the gated Production Backup & Migration Execution Plan for the Priority 0 foundation preserved in unpublished Version 17:
+Execute only Packet A for the Priority 0 foundation after private readiness confirmation:
 
-- Backup and verify with an immediate Time Travel bookmark plus protected SQL export where supported.
-- Inspect/list unapplied migrations, then separately authorize application of only `0004`.
-- Verify schema and preservation invariants before seeking Version 17 publication approval.
-- Keep destructive restore as a separate approval gate.
-- Preserve existing Book IDs, collection keys, ownership data, and records.
-- Sequence the deferred book-to-collection foreign key after orphan audit and backup.
-- Keep Shopping UI redesign and later roadmap features out of scope.
+- Verify the exact target, Version 16 baseline, migration ledger, and preservation invariants read-only.
+- Retrieve the current Time Travel bookmark and create/verify a protected SQL export where supported.
+- Stop after sanitized Packet A evidence.
+- Keep migration, publication, smoke testing, and destructive restore as separate approval gates.
 
 Saving Version 17 does not mark this milestone released or in production. Production migration and publication remain separate approval gates; Version 16 remains live.
 

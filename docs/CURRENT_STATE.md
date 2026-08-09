@@ -10,11 +10,15 @@
 
 **Production migration investigation:** Completed 2026-08-08; no production access or change performed
 
+**Production execution planning:** Complete; Packet A backup gate authorized after private readiness confirmation, not yet executed
+
 ## Summary
 
 The production application remains a stable, private, single-user book tracker on Site Version 16. The validated Shopping persistence/API foundation is preserved in Site version history as unpublished Version 17 but has not been migrated to production or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
 
 The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. The accepted operational direction is therefore to prepare an operator-controlled D1 migration, not publish Version 17 or wait indefinitely for undocumented Sites behavior.
+
+The operator runbook and independent approval packets are complete. Planner authorized Packet A for production target verification, read-only preflight, current Time Travel bookmark retrieval, protected SQL export, and a maintenance/write freeze only after the operator, verifier, window, secure storage, retention, freeze method, and abort authority are confirmed privately. No Packet A operation has occurred.
 
 ## Current Status Dashboard
 
@@ -110,6 +114,7 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 - Production migration, rollback, and production behavior remain unverified.
 - Sites migration trigger, executor, tracking, retry behavior, atomicity, and traffic sequencing remain unknown from public documentation.
 - Raw migration `0004` applies once locally but is not directly idempotent; safe execution depends on the D1 migration ledger and controlled operator sequencing.
+- The production D1 target, access, migration ledger, Time Travel eligibility, and backup artifacts remain unverified until Packet A executes.
 - The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
 - No roadmap bookshelf, exports, backups, or dry-run imports.
@@ -120,4 +125,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Prepare the gated Production Backup & Migration Execution Plan for saved Version 17. The intended sequence is backup, backup verification, unapplied-migration inspection, application of only `0004`, schema/data verification, separate Version 17 publication approval, and production smoke testing. No production operation is authorized by this documentation update.
+Execute only the conditionally authorized Packet A production backup gate after private readiness confirmation. Stop after target/preflight evidence, Time Travel bookmark retrieval, protected SQL export, and backup verification. Migration, publication, smoke testing, and rollback remain unauthorized.

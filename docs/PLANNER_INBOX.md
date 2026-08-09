@@ -6,42 +6,41 @@ It is not a task backlog, technical issue tracker, Engineer progress log, change
 
 ## Current Decisions
 
-## Authorize Production Backup Gate
+### Confirm Packet A Readiness Gate
 
-**Status:** AWAITING PLANNER
+**Status:** AWAITING PLANNER / PRODUCT OWNER
 
-**Raised by:** Engineer evidence reviewed by Designer
+**Raised by:** Site Engineer acceptance and blocked reports reviewed by Designer
 
-### Decision needed
+#### Decision needed
 
-Should Packet A be authorized to perform production target verification, read-only preflight queries, capture the current Time Travel bookmark, create and verify a protected SQL export, and enforce a maintenance/write freeze?
+Confirm, through a sanitized attestation only, whether all Packet A readiness details have been established privately:
 
-### Why this needs Planner
+- Responsible operator and independent verifier
+- UTC maintenance window
+- Approved write-freeze method and communication boundary
+- Protected backup location and retention period
+- Abort authority
+- Exact production target and least-privilege access path
 
-Packet A accesses production data infrastructure and can temporarily block database requests during export. Existing delegated authority covers planning only, not production access, backup execution, retention, or maintenance-window risk.
+Do not place the private values, identities, identifiers, credentials, storage details, or access details in this repository or a handoff.
 
-### Options
+#### Current evidence
 
-**A — Authorize Packet A after readiness details are confirmed**
+The Site Engineer accepted `2026-08-08-production-backup-gate-implementation-brief.md` as the active specification with no design conflict, but reported `BLOCKED` because none of the readiness prerequisites are verified in the Site workspace. No production access or operation was attempted.
 
-Proceed only after the operator, verifier, maintenance window, secure backup location, retention period, write-freeze method, and abort authority are confirmed through the appropriate private channel. This does not authorize migration.
+#### Designer recommendation
 
-**B — Defer Packet A**
+Confirm readiness only after every prerequisite has actually been established through the appropriate private channel. If any prerequisite remains incomplete, keep Packet A blocked.
 
-Keep Version 16 live and Version 17 unpublished. Production migration remains blocked.
+#### Impact
 
-### Designer recommendation
+A positive attestation releases only Packet A: authorized production target verification, read-only preflight, approved write-freeze coordination, Time Travel bookmark retrieval, and protected SQL export verification. It does not authorize migration, D1/R2 writes, restore/import, Site deployment/publication, or production smoke testing.
 
-**A** — The verified backup is the required recovery gate before migration, while migration, publication, and destructive restore remain separately unauthorized.
+#### Response format
 
-### Impact
-
-This controls the next Priority 0 operational gate. Approval permits production reads and backup creation only; it does not permit applying `0004`, publishing Version 17, smoke testing, or rollback.
-
-### Response format
-
-`Decision: A — authorize Packet A after readiness details are confirmed privately`
+`Packet A readiness: CONFIRMED — all required details are established privately`
 
 or
 
-`Decision: B — defer Packet A`
+`Packet A readiness: NOT READY`

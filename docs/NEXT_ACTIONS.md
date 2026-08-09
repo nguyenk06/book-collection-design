@@ -4,34 +4,35 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Production Backup & Migration Execution Plan
+### Execute Packet A: Production Backup Gate
 
 **Current objective**
 
-Turn the completed read-only investigation into an approval-ready operator plan for backing up and migrating production D1 before any Version 17 publication.
+Execute the conditionally authorized production-read and backup gate after all readiness details are confirmed privately, then stop for evidence review.
 
 **Why this is the current priority**
 
-The investigation confirmed that public Sites documentation does not define packaged D1 migration execution or traffic gating. Planner selected an operator-controlled D1 migration path rather than waiting for undocumented behavior, but has not authorized production backup, migration, publication, or rollback. See [Database](DATABASE.md).
+The operator runbook is complete. Planner authorized Packet A only: target verification, read-only preflight, Time Travel bookmark retrieval, protected SQL export, backup verification, and the maintenance/write freeze after readiness confirmation. Migration, publication, and rollback remain unauthorized. See [Database](DATABASE.md).
 
 **Success criteria**
 
-- The execution plan enforces: backup → verify backup → inspect/list unapplied migrations → apply only `0004` → schema/data verification → publication approval → production smoke test.
-- Time Travel bookmark capture and portable SQL export are distinct backup controls.
-- Every gate has an operator, target check, pass/fail criteria, abort condition, evidence requirement, and approval boundary.
-- Destructive Time Travel restore remains separately gated.
+- Operator, verifier, UTC window, secure backup location, retention, freeze method, communication channel, and abort authority are confirmed privately.
+- Version 16 remains published and Version 17 remains saved/unpublished.
+- The exact production target and baseline are verified without exposing identifiers or row data.
+- The current Time Travel bookmark and verified protected SQL export exist in restricted storage.
+- Sanitized Packet A evidence is returned; no migration or Site operation occurs.
 
 **Expected deliverables**
 
-- Milestone-specific execution brief and accepted operator runbook.
-- Backup and backup-verification checklist.
-- Migration, schema/data verification, publication, smoke-test, abort, and rollback gates.
-- Explicit approval requests for production access and each production-changing transition.
+- Accepted Packet A implementation brief.
+- Restricted recovery bookmark and verified SQL export.
+- Sanitized target, baseline, migration-ledger, invariant, and backup pass/fail report.
+- Next approval request only after Packet A evidence is accepted.
 
 **Files likely affected**
 
-- Production migration, backup, verification, and rollback documentation.
-- Operator tooling and D1 migration-ledger inspection.
+- Production target/read-only inspection, write-freeze coordination, and backup execution.
+- Sanitized evidence handoff; private values remain outside repository and handoff artifacts.
 - [Current State](CURRENT_STATE.md), [Roadmap](ROADMAP.md), [Database](DATABASE.md), [Changelog](CHANGELOG.md), and this queue after each verified transition.
 
 **Estimated effort**
@@ -40,9 +41,9 @@ Medium.
 
 **Risks**
 
-- Production migration could expose orphaned relationships or incomplete rollback assumptions.
-- Raw `0004` is not directly idempotent and must not be replayed after an ambiguous failure.
 - SQL export blocks database requests while running and may require a maintenance/write freeze.
+- Ambiguous target, schema, ledger, Time Travel support, or backup output requires immediate abort.
+- Private backup artifacts or identifiers could leak if placed in source or handoffs.
 - Purchases and independently editable ownership state can still contradict one another.
 - Publication could be mistaken for migration validation if the gates are not recorded separately.
 
@@ -51,8 +52,8 @@ Medium.
 - Shopping Mode UI redesign.
 - Scanner, Bookshelf, import/export, AI review, reference covers, tags, and analysis changes.
 - Full edition modeling, Business locations, and generalized media support.
-- Production migration or publication without explicit approval.
-- Production backup/export execution or destructive restore without explicit approval.
+- Applying any migration, changing the ledger/schema/data, or accessing R2.
+- Site deployment/publication, production smoke testing, restore/import, or destructive rollback.
 
 ## Ready Next
 
@@ -70,6 +71,7 @@ Medium.
 
 ## Recently Completed
 
+- Completed and accepted the Production Backup & Migration Execution Plan with independent backup, migration, publication, and incident-response gates.
 - Completed the read-only Production Migration & Rollback Investigation; confirmed Sites execution details remain undocumented and performed no production access or change.
 - Preserved the exact validated Shopping persistence/API source and migration as unpublished Site Version 17; Version 16 remains live.
 - Implemented and locally validated Businesses, Purchases, collection target price, Added Date, owner-authorized APIs, and additive migration tests.
