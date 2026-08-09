@@ -103,6 +103,8 @@ Planner approved Version 18 bridge publication as an isolated next gate. Approva
 
 Sites subsequently reported Version 18 publication succeeded. No application/API request, export, D1/R2 operation, schema migration/verification, Shopping activation, smoke test, restore/import, rollback, or destructive action occurred. Publication status does not establish application health or database schema state.
 
+Planner approved owner-only production schema status and versioned JSON export as the next isolated read-only gate. Approval is not execution evidence and does not authorize schema upgrade, D1/R2 writes, final Shopping publication, smoke testing, restore/import, or destructive recovery.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.

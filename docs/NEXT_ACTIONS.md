@@ -4,28 +4,30 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Decide Production Preflight and JSON Export
+### Execute Production Preflight and JSON Export
 
-**Workflow state:** Awaiting Planner backup-gate approval
+**Workflow state:** Read-only backup brief ready
 
-**Next owner:** `PLANNER` - decide `Authorize Version 18 Production Preflight and JSON Export` in [Planner Inbox](PLANNER_INBOX.md).
+**Next owner:** `ENGINEER` - process `2026-08-08-version-18-production-preflight-export-implementation-brief.md` with `CB`.
 
 **Current objective**
 
-Approve or defer an owner-only, read-only production schema-status preflight and versioned structured JSON export using the published Version 18 bridge.
+Invoke only the owner-authorized production schema-status and export APIs, privately verify the pre-upgrade baseline and portable JSON artifact, return sanitized evidence, and stop.
 
 **Why this is the current priority**
 
-Version 18 publication succeeded, but no application/API request or database operation occurred. The next proposed backup gate would call only owner-authorized schema status and export APIs, validate sanitized pre-upgrade invariants and a private parseable export, and stop. Schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
+Planner approved the read-only preflight/export gate. It is limited to `GET /api/admin/schema-status` and `GET /api/admin/export`, private artifact retention, and sanitized verification. Schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 
-- Planner records approval or deferral of the read-only preflight/export gate.
-- Any approval permits only owner-authorized schema status plus export download/verification and explicitly excludes schema upgrade or unrelated application access.
+- Owner authentication succeeds for the two approved admin GET endpoints.
+- Schema status establishes the pre-upgrade production baseline without changing it.
+- Export is stored privately and verified for contract/version, parseability, required record categories, sanitized counts/identity invariants, and R2 references.
+- No POST, ordinary application/API access, D1/R2 write, schema upgrade, final Shopping publication, smoke test, restore/import, rollback, or destructive action occurs.
 
 **Expected deliverables**
 
-- Recorded Planner decision and, if approved, a preflight/export-only implementation brief.
+- Sanitized preflight/export handoff and next approval request.
 
 **Files likely affected**
 

@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Version 18 bridge published; production preflight and JSON export awaiting Planner approval
+**Workflow state:** Version 18 production preflight and JSON export approved; read-only execution brief ready for Engineer intake
 
 ## Summary
 
@@ -29,6 +29,8 @@ The completed investigation found that migration packaging proves inclusion but 
 The bridge is implemented and locally validated. Its preserved Version 18 archive contains migrations `0000` through `0003` and excludes independently executable `0004`. The bridge provides Version 16-compatible ordinary data access plus owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and read-only upgrade verification APIs. Full tests pass 37/37, build and bridge/task lint pass, and full lint retains only three pre-existing errors and one warning in the main page. Version 18 is now published; Version 17 remains unpublished.
 
 Sites reported the exact saved Version 18 deployment succeeded. Version 18 is now published and Version 16 is superseded but retained in version history. Publication did not invoke the application or bridge APIs and does not establish application health, database schema state, packaged migration execution, or data preservation. No export, D1/R2 operation, schema upgrade, verification, final Shopping publication, smoke test, restore/import, or destructive action occurred.
+
+Planner approved the next isolated read-only gate: owner-authenticated production schema status and versioned structured JSON export with private storage and sanitized verification evidence. Approval is not execution evidence and does not authorize the schema-upgrade POST, D1/R2 writes, ordinary application smoke testing, final Shopping publication, restore/import, rollback, or destructive action.
 
 ## Current Status Dashboard
 
@@ -140,4 +142,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Planner decides whether to authorize owner-only production schema-status preflight and versioned JSON export. Schema upgrade, final Shopping publication, smoke testing, restore/import, and destructive action remain unauthorized.
+Execute only the approved Version 18 production schema-status preflight and private JSON export, verify the artifact without exposing its contents, and stop. Schema upgrade and all later gates remain unauthorized.
