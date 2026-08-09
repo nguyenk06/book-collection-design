@@ -134,8 +134,11 @@ For every future documentation task, read these authorities first:
 2. [PROJECT_VISION.md](PROJECT_VISION.md) — product authority.
 3. [ROADMAP.md](ROADMAP.md) — long-term plan.
 4. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — active engineering queue.
+5. [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md) — required for implementation handoffs.
 
 Preserve consistency across the repository, update these documents when appropriate, and prefer cross-links over duplication.
+
+Also read [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md) before preparing or applying an implementation handoff. Use its linked templates for implementation briefs and verified Site-to-Design reports; keep detailed handoff rules there rather than duplicating them in this policy.
 
 ## Review Checklist
 

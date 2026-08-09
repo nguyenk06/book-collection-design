@@ -32,4 +32,10 @@ Architecture, planning, and product documentation for a collector-first Book Col
 - [Database](DATABASE.md)
 - [Changelog](CHANGELOG.md)
 - [Documentation Rules](DOCUMENTATION_RULES.md)
+- [Design and Site Handoff Protocol](HANDOFF_PROTOCOL.md)
 - [Contributing](CONTRIBUTING.md)
+
+## Handoff templates
+
+- [Implementation Brief](../templates/IMPLEMENTATION_BRIEF.md)
+- [Design Repository Handoff](../templates/DESIGN_HANDOFF.md)
