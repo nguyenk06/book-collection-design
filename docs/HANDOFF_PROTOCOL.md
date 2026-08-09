@@ -199,6 +199,16 @@ When the Site Engineer receives `CB`, execute the normal brief-intake lifecycle:
 8. If one workstream blocks, continue independent authorized workstreams that do not share the blocker or an unsafe file/surface collision.
 9. Stop only the affected workstream at its gate. Stop the whole engineering cycle when every eligible stream is blocked, a cross-cutting conflict prevents safe continuation, shared-file conflicts require convergence, production sequencing requires waiting, or no authorized work remains.
 
+When Queue Mode is enabled with `RUN`, completion of the current milestone triggers a mandatory fresh queue check before the Engineer ends its turn or declares itself available:
+
+1. Create the required sanitized completion/state handoff for the finished milestone.
+2. Refresh the live `briefs/` directory after creating the handoff. A listing captured at startup or before completion is stale for this decision.
+3. Reconfirm Queue Mode, throttle, dependencies, Planner decisions, attempt sequence, and collision boundaries.
+4. If an eligible brief exists, run `CB` immediately and continue after clean acceptance without waiting for another operator message.
+5. Use `AVAILABLE` only when the fresh scan finds no eligible authorized brief. Report every waiting brief with its unmet eligibility condition.
+
+`DRAIN`, `STOP`, an explicit gate, unsafe collision, missing authority, or no eligible work overrides automatic continuation. These checks do not auto-accept a brief or expand its scope.
+
 No formal Planner shortcut system is defined. Planner may continue using conversational commands such as `inbox`, `status`, and `next`. Planner reads permanent documentation in this order:
 
 1. [`PLANNER_INBOX.md`](PLANNER_INBOX.md)
@@ -238,6 +248,7 @@ When work can proceed in parallel, replace `NEXT OWNER` with:
 
 ```text
 ACTIVE OWNERS:
+- DESIGNER — <completed handoff intake, when applicable>
 - ENGINEER — <eligible workstreams>
 - PLANNER — <pending decisions>
 
@@ -252,7 +263,7 @@ Use it for `CI`, `CB`, and `INIT` reports; brief acceptance; implementation comp
 
 - Keep `TL;DR` concise and mobile-readable.
 - `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.
-- Use `ACTIVE OWNERS` when two or more roles have independent actions. `BLOCKING OWNER: NONE` means at least one authorized stream can continue.
+- Use `ACTIVE OWNERS` when two or more roles have independent actions, including Designer intake running alongside continued engineering. `BLOCKING OWNER: NONE` means at least one authorized stream can continue.
 - Do not imply Engineer must stop merely because Planner has a pending decision on an unrelated stream.
 - `ACTION` states what that owner should do next. Do not invent an action when legitimately waiting.
 - Use `PLANNER` for approval gates, `ENGINEER` for an actionable or already-authorized brief, and `DESIGNER` for a completed Engineer handoff awaiting intake.
@@ -442,6 +453,8 @@ Filename order is not authoritative. Each queued brief states:
 
 Under enabled `RUN`, Engineer may use `CB` to consider the highest-priority eligible brief only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued brief is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
 
+At milestone completion, “may use `CB`” becomes a required queue-refresh and intake check before stopping under `RUN`. The Engineer must not conclude that the operator is done, infer that no follow-on work exists from silence, or rely on a queue listing taken before the completion handoff was written.
+
 A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
 
 #### Designer work-ahead and reporting
@@ -456,11 +469,14 @@ Meaningful future Engineer reports include:
 ENGINEER STATE:
 <WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | STOPPED AT GATE>
 
-ACTIVE:
-<workstreams>
+AWAITING DESIGNER INTAKE:
+<completed milestones and handoff filenames, or NONE>
 
-QUEUED:
-<eligible or waiting briefs/workstreams>
+CURRENTLY PROCESSING:
+<active workstreams and accepted brief, or NONE>
+
+QUEUED AFTER CURRENT:
+<eligible or waiting briefs/workstreams and unmet conditions, or NONE>
 
 BLOCKED:
 <blocked streams and reason>
@@ -470,6 +486,19 @@ ENGINEER CAN CONTINUE:
 ```
 
 Do not require this expanded block for trivial acknowledgements. Queue state survives thread replacement through permanent `CURRENT_STATE.md`, accepted/queued transport artifacts, and the normal `INIT` bootstrap.
+
+This block is operator-facing live context, not merely handoff metadata. When a completed milestone is waiting in `inbox/` while the next brief is being accepted or executed, show both facts simultaneously. Use the footer's `ACTIVE OWNERS` form so the operator can enable Designer intake or Planner work without interrupting Engineer continuation, for example:
+
+```text
+ACTIVE OWNERS:
+- DESIGNER — process the completed P2 handoff
+- ENGINEER — accept or execute P3 under RUN
+
+BLOCKING OWNER:
+NONE
+```
+
+Do not list Planner as active unless a genuine independent decision is present in `PLANNER_INBOX.md` or the current evidence requires one.
 
 ### Three-attempt reassessment rule
 

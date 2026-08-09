@@ -6,35 +6,34 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle RUN; P2 continuation active and one P3 quality brief queued
+**Workflow state:** Queue Mode enabled; throttle RUN; P2 complete locally and one eligible P3 quality brief queued
 
-**Next owner:** `ENGINEER` - complete active P2 convergence, then use `CB` for the P3 scanner-test brief if still eligible and no `DRAIN`/`STOP` is active.
+**Next owner:** `ENGINEER` - use `CB` for the P3 scanner-test brief if `RUN` remains active and no acceptance conflict or `DRAIN`/`STOP` exists.
 
-P1 is complete in unpublished Version 19. The P2 continuation is accepted: `WS-SHOP-PURCHASE` is active at 40% and `WS-SHOP-QUALITY` remains 70% pending convergence. One P3 focused scanner/identifier test brief is queued behind a collision check. Production migration, another Site save, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. P2 is complete and validated locally: all three Shopping workstreams are 100%, the serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. One P3 focused scanner/identifier test brief is now eligible for normal acceptance and collision checks. Production migration, a Shopping Site save, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
-Prove Queue Mode with two coherent milestones: first preserve the exact validated administration source as an unpublished Site version, then implement and locally validate a bounded Shopping Mode UI against local/disposable data.
+Complete the first Queue-Mode sprint with focused scanner/identifier regression validation that does not expand into the future matching architecture.
 
 **Why this is the current priority**
 
-Planner approved the unpublished save and this bounded sprint. Shopping Mode is the highest product priority after the database foundation; safe local UI progress does not require production schema activation. The Product Owner monitors usage externally and may issue `DRAIN` or `STOP`; project roles must not infer precise usage.
+P1 and P2 reached coherent local convergence. Scanner/matching is the next roadmap priority, and the queued P3 brief permits low-collision validation of current behavior without schema, UI, Site, or production expansion. The Product Owner monitors usage externally and may issue `DRAIN` or `STOP`; project roles must not infer precise usage.
 
 **Success criteria**
 
-- Purchase capture and quality/accessibility streams converge coherently.
-- Required purchase-price validation is clear and zero is never substituted for unknown data.
-- At sprint convergence, permanent state distinguishes local, saved, published, migrated, and production-verified status.
+- Focused identifier normalization, checksum, and scanner-boundary tests pass where technically feasible.
+- Any narrow defect fix is supported by a reproducing test and does not expand scanner architecture.
+- Deferred advanced matching and identifier gaps are documented explicitly.
 
 **Expected deliverables**
 
-- Final P2 local implementation/validation handoff.
-- P3 focused scanner/identifier validation evidence if it becomes eligible and is accepted before `DRAIN`/`STOP`.
+- P3 focused scanner/identifier acceptance and completion or partial evidence if accepted before `DRAIN`/`STOP`.
 - Mobile-readable sprint review at `DRAIN`, `STOP`, or sprint completion.
 
 **Files likely affected**
 
-- Site source and disposable tests for P2 only.
+- Scanner/ISBN tests and only narrow test-driven utility fixes authorized by P3.
 - Permanent documentation through normal CI processing.
 
 **Estimated effort**
@@ -75,6 +74,7 @@ Bounded sprint; Product Owner intends approximately 20 percentage points of exte
 
 ## Recently Completed
 
+- Completed and locally validated the bounded Shopping Mode UI, including required-price Purchase capture; 50/50 serial tests, 6/6 focused Shopping tests, 14/14 isolated collection tests, build, and task lint pass, with no Site save or production action.
 - Preserved the exact validated owner-authenticated administration source as unpublished Site Version 19; Version 18 remains published and production was untouched.
 - Implemented and locally validated the owner-authenticated administration surface; 44/44 tests, build, and task lint pass, with no Site save or production operation.
 - Completed the read-only Site authentication/persistence-path investigation; 34/34 focused tests passed and no production or Site state changed.

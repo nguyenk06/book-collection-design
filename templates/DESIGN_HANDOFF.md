@@ -22,10 +22,12 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 - Queue mode: <!-- ENABLED | DISABLED -->
 - Throttle: <!-- RUN | DRAIN | STOP | NOT APPLICABLE -->
 - Engineer state: <!-- WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | STOPPED AT GATE -->
-- Active:
-- Queued:
+- Awaiting Designer intake: <!-- Completed milestone reports/handoffs still in inbox, or NONE. -->
+- Currently processing: <!-- Accepted active workstreams and brief, or NONE. -->
+- Queued after current: <!-- Briefs plus eligibility conditions, or NONE. -->
 - Blocked:
 - Engineer can continue: <!-- YES | NO -->
+- Fresh queue check: <!-- Confirm the live briefs directory was refreshed after this handoff was written. -->
 
 ## Baseline
 
@@ -133,6 +135,7 @@ ACTION:
 
 <!-- When roles have independent simultaneous actions, replace NEXT OWNER with:
 ACTIVE OWNERS:
+- DESIGNER — <completed handoff intake, when applicable>
 - ENGINEER — <eligible workstreams>
 - PLANNER — <pending decisions>
 

@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** P2 continuation accepted and active; one bounded P3 scanner-test brief queued
+**Workflow state:** P2 Shopping milestone complete locally; one eligible bounded P3 scanner-test brief queued
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
 
-**Engineer execution state:** `WORKING` — P2 Purchase capture and convergence are active
+**Engineer execution state:** `AVAILABLE` — P2 is complete and Engineer may use `CB` for the eligible P3 brief under `RUN`
 
 ## Current Engineering Workstreams
 
@@ -34,16 +34,16 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Approved save execution in a future session | No |
 | `WS-SAVE` | Preserve validated administration source | `[██████████] 100%` | COMPLETE | Unpublished Version 19 verified | Publication remains separately gated | No |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
-| `WS-SHOP-FLOW` | Mobile Shopping search/scan/status flow | `[██████████] 100%` | COMPLETE | Implemented locally; 47/47 total tests pass | Local flow validated | No further work required |
-| `WS-SHOP-PURCHASE` | Purchase capture and history | `[████░░░░░░] 40%` | ACTIVE | P2 continuation accepted | Local Purchase capture review | Yes, coordinated with quality stream |
-| `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[███████░░░] 70%` | PLANNED | Eligible flow validation passes | Purchase capture and final convergence | No; convergence stream |
-| `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[░░░░░░░░░░] 0%` | PLANNED | P3 local quality brief queued | P2 convergence or confirmed isolated surfaces | Yes when collision-free |
+| `WS-SHOP-FLOW` | Mobile Shopping search/scan/status flow | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
+| `WS-SHOP-PURCHASE` | Purchase capture and history | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
+| `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
+| `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[░░░░░░░░░░] 0%` | PLANNED | Eligible P3 local quality brief queued | Engineer brief acceptance and collision check | Yes when collision-free |
 
-**Engineer can continue:** YES — finish active P2; then use `CB` for P3 if throttle remains `RUN` and eligibility/collision checks pass.
+**Engineer can continue:** YES — use `CB` for the eligible P3 brief if throttle remains `RUN` and acceptance/collision checks pass.
 
 **Current Planner decisions:** None.
 
-**Next production gate:** None is currently executable. An unpublished Site-version save is the next non-production gate; publication and all production actions remain separately gated.
+**Next production gate:** None is currently executable. P3 focused scanner/identifier validation is the next authorized local gate; a Shopping Site save, publication, and all production actions remain separately gated and unauthorized.
 
 ## Summary
 
@@ -75,9 +75,7 @@ That surface is now implemented and validated locally. Owners receive a staged s
 
 The exact validated administration source is now preserved as unpublished Site Version 19. Validation immediately before preservation passed 44/44 tests, build, and task lint. Version 18 remains published. Saving Version 19 did not publish, invoke the application, access production data, export, migrate, verify production, or change D1/R2.
 
-P2 Shopping Mode is partially implemented in the unsaved local working copy. Mobile title/author/series/ISBN search, existing camera/photo/manual scanning, match limitations, collection status, target price when supplied, owner-only Business/Purchase-history loading, repeated-shopping navigation, ownership-independence messaging, and accessible loading/empty/error states are locally implemented. Tests pass 47/47, focused Shopping/collection regression tests pass 17/17, build passes, and changed-file lint passes. Nothing was saved, published, or run against production.
-
-Planner resolved the Purchase contract in favor of the validated implementation: purchase price remains required and non-negative for this milestone, while sticker price remains optional. Unknown price must not be represented as zero. No schema/API/bridge change is required; Purchase capture and final convergence may continue locally under a narrow revised brief.
+The bounded P2 Shopping Mode UI is complete and validated in the unsaved local working copy. Mobile title/author/series/ISBN search, existing camera/photo/manual scanning, match limitations, collection status, target price when supplied, owner-only Business/Purchase history and capture, repeated-shopping navigation, ownership-independence messaging, and accessible loading/empty/error/success states are implemented. Purchase price is required and non-negative; sticker price and the other supported details remain optional, and unknown price is never converted to zero. The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. Nothing was saved, published, migrated, or run against production.
 
 ## Current Status Dashboard
 
@@ -85,7 +83,7 @@ Planner resolved the Purchase contract in favor of the validated implementation:
 | --- | --- | --- |
 | Architecture | Partial | Viable D1/R2 foundation; responsibilities must be separated incrementally |
 | Database | Partial | Version 17 packages the locally validated additive migration for Businesses, Purchases, target price, and Added Date; production remains on the v16 schema and the book-to-collection relationship is not enforced |
-| Shopping | Partial | Foundation saved in Version 17; search/scan/status/history UI implemented locally but unsaved; Purchase capture blocked; production unchanged |
+| Shopping | Partial | Bounded search/scan/status/history/Purchase UI complete and validated locally but unsaved; production unchanged |
 | Scanner | Partial | Live/photo ISBN scanning works; canonical same-book matching is weak |
 | Bookshelf | Planned | Collection gallery/list views exist, but the roadmap bookshelf is not implemented |
 | Import/Export | Partial | Immediate JSON collection import exists; export, dry run, conflicts, and backups do not |
@@ -114,7 +112,7 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 - Businesses use cleaned display names and unique normalized names.
 - Purchases preserve transaction history separately from Book identity, ownership, and copy counts.
-- The validated implementation requires a non-negative purchase price and allows an independently nullable sticker price; accepted nullability direction awaits Planner decision.
+- The validated implementation requires a non-negative purchase price and allows an independently nullable sticker price; Planner accepted that contract for the current Shopping milestone.
 - Purchase condition is limited to New, Like New, Very Good, Good, Fair, Poor, or Unknown.
 - Collection target price is nullable; the CYOA target is 600 cents in the local migration.
 - Existing Books retain unknown Added Dates as `NULL`; newly created or imported Books receive an Added Date.
@@ -190,4 +188,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Complete Purchase capture and final Shopping quality convergence using the required purchase-price contract. Site saving, production migration, publication, production verification, and smoke testing remain separately gated.
+Run the eligible focused scanner/identifier validation brief through normal `CB` acceptance under `RUN`. Shopping Site saving, production migration, publication, production verification, and smoke testing remain separately gated.

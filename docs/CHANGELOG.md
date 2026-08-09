@@ -131,7 +131,7 @@ Planner approved the administration-surface architecture for local implementatio
 | Implemented locally | Yes |
 | Validated locally | Yes; 44/44 tests, build, and task lint pass |
 | Full source lint | Known three errors and one warning remain; no new task lint debt |
-| Saved as Site version | No; Version 18 remains latest |
+| Saved as Site version | Yes; unpublished Version 19 |
 | Published/deployed | No change; Version 18 remains published |
 | Production request/export/migration/verification | No |
 
@@ -141,20 +141,18 @@ Planner approved that unpublished Site-version preservation gate. The approval i
 
 The exact validated administration source was subsequently preserved as unpublished Site Version 19. Validation passed 44/44 tests, build, and task lint immediately before saving. Version 18 remains published; no application invocation, production request/data access, export, D1/R2 operation, migration, production verification, smoke test, or publication occurred.
 
-### Shopping Mode Local UI — Partial
+### Shopping Mode Local UI
 
 | State | Verified status |
 | --- | --- |
 | Search/scan/status flow | Implemented and locally validated |
-| Purchase history | Implemented locally |
-| Purchase creation | Blocked by required-vs-nullable price contract |
-| Tests/build/task lint | 47/47 tests, build, and changed-file lint pass |
+| Purchase history and capture | Implemented and locally validated |
+| Price contract | Required non-negative purchase price; optional sticker price; unknown is never zero |
+| Tests/build/task lint | 50/50 serial tests, 6/6 focused Shopping tests, 14/14 isolated collection tests, build, and task lint pass |
 | Saved as Site version | No; Version 19 remains latest |
 | Published/production changed | No; Version 18 remains published |
 
-The unsaved local Shopping flow supports existing search/scanner behavior, collection status, Purchase history, repeat-shopping navigation, and accessible state handling. Purchase capture was not implemented because the brief allowed an omitted purchase price while the validated schema/API require it. No zero was fabricated and no unauthorized schema, API, Site, or production change occurred.
-
-Planner resolved the contract by requiring a non-negative purchase price for the current Shopping milestone while keeping sticker price optional. This aligns the UI requirement with the validated schema/API and avoids a wider migration change. The decision itself did not change source, schema, Site state, or production.
+The unsaved local Shopping flow supports existing search/scanner behavior, collection status, Purchase history and owner-only capture, repeat-shopping navigation, ownership-independence messaging, and accessible state handling. Successful Purchase creation refreshes history without changing Book ownership or copies. The first parallel full-suite run encountered resource timeouts in unchanged collection tests; the isolated collection suite and authoritative serial full suite passed, establishing local resource contention rather than a behavior regression. No unauthorized schema, API, Site, or production change occurred.
 
 ### Changed
 

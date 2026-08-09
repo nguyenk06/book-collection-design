@@ -14,3 +14,30 @@ Run `INIT` in read-only mode:
 8. Close with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer from `docs/HANDOFF_PROTOCOL.md`.
 
 `INIT` makes no implementation, source, production, migration, data, saved-version, deployment, or publication change. It does not accept or execute a brief. After initialization, use `CB` separately.
+
+## Queue continuation guard
+
+When Queue Mode is `ENABLED` and throttle is `RUN`, completing a workstream or milestone is not permission to end the engineering cycle.
+
+Before the Engineer stops, yields as finished, or reports `AVAILABLE`:
+
+1. Write the required sanitized completion/state handoff for the finished work.
+2. Refresh the live shared `briefs/` directory after writing that handoff; do not rely on an earlier listing or chat memory.
+3. Re-read Queue Mode and throttle from authoritative state and check for `DRAIN` or `STOP`.
+4. If an eligible brief exists, immediately run the normal `CB` intake, validate collisions/authority/attempt sequence, and continue when accepted. Do not wait for another operator message merely because the prior milestone completed.
+5. Report `AVAILABLE` only after a fresh queue scan establishes that no eligible authorized brief exists. Name waiting briefs and their unmet eligibility conditions rather than saying none were identified.
+
+While a completed handoff awaits Designer intake and the Engineer is accepting or executing the next brief, keep this operator-visible context in meaningful responses:
+
+```text
+AWAITING DESIGNER INTAKE:
+<completed milestone and handoff filenames, or NONE>
+
+CURRENTLY PROCESSING:
+<accepted/current workstream and brief, or NONE>
+
+QUEUED AFTER CURRENT:
+<briefs and eligibility, or NONE>
+```
+
+Use `ACTIVE OWNERS` in the footer when Designer can process the completed handoff while Engineer continues the next brief. Add Planner only when a genuine independent Planner decision is pending. Production, Site-save, publication, destructive-action, collision, attempt, and approval gates still stop only the affected action as defined by the protocol.

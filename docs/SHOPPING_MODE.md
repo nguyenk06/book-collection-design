@@ -59,12 +59,12 @@ This foundation is saved but has not been migrated to production or published; V
 ## Remaining Milestone Work
 
 - Approve and execute production migration and verification separately from publication.
-- Complete Shopping Mode UI on the persistence foundation.
+- Separately approve preservation of the completed local Shopping source if a Site save is desired.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
 
-## Accepted Local UI Phase
+## Verified Local UI Phase
 
-This bounded phase may proceed against local/disposable data before production schema activation:
+This bounded phase is complete and validated against local/disposable data before production schema activation:
 
 - Provide a mobile-first Shopping entry and fast title, author, or identifier search using existing matching capability.
 - Present ownership, buying status, copy count, relevant collection target price, and existing Purchase history without implying stronger edition certainty than the data supports.
@@ -74,6 +74,8 @@ This bounded phase may proceed against local/disposable data before production s
 - Preserve one-handed mobile behavior, clear loading/empty/error/success states, and accessible labels/focus.
 
 Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
+
+The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. The Shopping source remains unsaved; Version 19 is still the latest saved version and Version 18 remains published.
 
 ## Future improvements
 

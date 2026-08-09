@@ -7,7 +7,7 @@ The database-first assessment validated the priority order. Enabling foundations
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
 | 0 | Database integrity and Shopping persistence foundation | Partial; owner-authenticated administration surface preserved in unpublished Version 19 | Separately gated publication/export/upgrade/verification | Medium | Production schema remains unverified; book-to-collection foreign key deferred |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local search/scan/status/history UI implemented and validated, Purchase capture continuation queued | Local Purchase capture/convergence, then production migration approval | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
+| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; bounded local UI including Purchase capture is complete and validated but unsaved/unpublished | Separately gated Site save, production migration, and publication | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial | Stable IDs, format version, revision token, dry run, conflict policy, backup metadata | Medium-large | Import writes immediately; no export or backup infrastructure |
@@ -27,7 +27,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Complete the active local Shopping Mode UI milestone while production activation remains separately gated:
+Run the bounded P3 scanner/identifier validation milestone while Shopping preservation and production activation remain separately gated:
 
 - Keep bridge traffic compatible with Version 16 until an explicit owner-authorized upgrade completes.
 - Reuse the verified same-origin Site path and existing server-side owner authorization for status, versioned JSON export, separately approved re-entrant upgrade, and verification.
