@@ -139,6 +139,8 @@ The local surface uses the existing owner-authenticated same-origin path, withho
 
 Planner approved that unpublished Site-version preservation gate. The approval is recorded for a future explicitly started development session; no save, publication, production request, export, migration, verification, or other Site/production change occurred from the decision.
 
+The exact validated administration source was subsequently preserved as unpublished Site Version 19. Validation passed 44/44 tests, build, and task lint immediately before saving. Version 18 remains published; no application invocation, production request/data access, export, D1/R2 operation, migration, production verification, smoke test, or publication occurred.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.

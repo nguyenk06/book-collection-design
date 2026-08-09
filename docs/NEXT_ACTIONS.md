@@ -6,11 +6,11 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle RUN; two-brief bounded queue ready
+**Workflow state:** Queue Mode enabled; throttle RUN; P1 complete and P2 active
 
-**Next owner:** `ENGINEER` - use `CB` to accept P1 unpublished administration-source preservation, then consume P2 local Shopping UI only after P1 completes or safely aborts.
+**Next owner:** `ENGINEER` - continue the accepted P2 local Shopping Mode workstreams through integrated convergence.
 
-`WS-ADMIN`, `WS-AUTH`, `WS-EXPORT`, and `WS-CONVERGE` are complete locally. The bounded queue contains P1 `WS-SAVE` and P2 `WS-SHOPPING`; filename order is not authority. P1 must converge before P2 edits the shared source. Production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 `WS-SAVE` is complete in unpublished Version 19; Version 18 remains published. P2 `WS-SHOPPING` is accepted and active against the stable Version 19 source baseline. Production migration, another Site save, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
@@ -22,21 +22,18 @@ Planner approved the unpublished save and this bounded sprint. Shopping Mode is 
 
 **Success criteria**
 
-- P1 preserves the exact validated administration source as an unpublished Site version without publication or production invocation.
 - P2 implements the bounded Shopping workflow defined in [Shopping Mode](SHOPPING_MODE.md) using local/disposable data only.
-- Each brief receives normal CB acceptance and separate validation evidence.
+- Shopping flow, Purchase capture/history, and quality/accessibility streams converge coherently.
 - At sprint convergence, permanent state distinguishes local, saved, published, migrated, and production-verified status.
 
 **Expected deliverables**
 
-- P1 saved-version evidence or sanitized abort/blocker report.
-- P2 local implementation/validation handoff when eligible and accepted.
+- P2 local implementation/validation handoff.
 - Mobile-readable sprint review at `DRAIN`, `STOP`, or sprint completion.
 
 **Files likely affected**
 
-- Site saved-version workflow for P1 only.
-- Site source and disposable tests for P2 only after P1 convergence.
+- Site source and disposable tests for P2 only.
 - Permanent documentation through normal CI processing.
 
 **Estimated effort**
@@ -77,6 +74,7 @@ Bounded sprint; Product Owner intends approximately 20 percentage points of exte
 
 ## Recently Completed
 
+- Preserved the exact validated owner-authenticated administration source as unpublished Site Version 19; Version 18 remains published and production was untouched.
 - Implemented and locally validated the owner-authenticated administration surface; 44/44 tests, build, and task lint pass, with no Site save or production operation.
 - Completed the read-only Site authentication/persistence-path investigation; 34/34 focused tests passed and no production or Site state changed.
 - Published the exact validated Version 18 migration bridge; Sites deployment succeeded without application/API or database operations.

@@ -54,7 +54,7 @@ Unpublished Site Version 17 preserves locally validated persistence and owner-au
 - Nullable collection target price, with CYOA configured to 600 cents locally.
 - Nullable Book Added Date for new manual/imported records without fabricating historical dates.
 
-This foundation is saved but has not been migrated to production or published; Version 16 remains live. Saving Version 17 did not execute its packaged migration or add Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
+This foundation is saved but has not been migrated to production or published; Version 18 remains live as the migration bridge, and Version 19 is an unpublished administration surface. Saving Version 17 did not execute its packaged migration or add Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
 
 ## Remaining Milestone Work
 

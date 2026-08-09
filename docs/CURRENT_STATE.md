@@ -4,7 +4,7 @@
 
 **Published Site version:** Version 18 migration bridge; deployment succeeded, but application and schema behavior remain unverified
 
-**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; migration bridge source preserved in Version 18 and now published; owner-authenticated administration surface implemented locally but not saved
+**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; migration bridge published as Version 18; owner-authenticated administration surface preserved in unpublished Version 19
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** First bounded Queue Mode sprint active; P1 unpublished preservation and P2 local Shopping UI are queued
+**Workflow state:** P1 unpublished preservation complete; P2 local Shopping UI accepted and active
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
 
-**Engineer execution state:** `AVAILABLE` — may use `CB` to accept the highest-priority eligible brief
+**Engineer execution state:** `WORKING` — P2 Shopping Mode local UI is active
 
 ## Current Engineering Workstreams
 
@@ -32,12 +32,12 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-AUTH` | Same-origin authorization and security validation | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-EXPORT` | Private export-download and validation UX | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Approved save execution in a future session | No |
-| `WS-SAVE` | Preserve validated administration source | `[░░░░░░░░░░] 0%` | PLANNED | P1 unpublished save authorized | Eligible immediately through `CB`; stop before publication | No; source/version serialization gate |
+| `WS-SAVE` | Preserve validated administration source | `[██████████] 100%` | COMPLETE | Unpublished Version 19 verified | Publication remains separately gated | No |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
-| `WS-SHOPPING` | Shopping Mode local UI | `[░░░░░░░░░░] 0%` | PLANNED | P2 local/disposable implementation authorized by sprint | Eligible after `WS-SAVE` completes or safely aborts | Yes after source baseline is clear |
+| `WS-SHOPPING` | Shopping Mode local UI | `[█░░░░░░░░░] 10%` | ACTIVE | P2 accepted for local/disposable implementation | Integrated local convergence | Yes within accepted internal streams |
 | `WS-SCANNER` | Identifier/scanner improvements | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Higher-priority Shopping sequence and a future brief | No |
 
-**Engineer can continue:** YES — accept P1 `WS-SAVE` with `CB`; P2 Shopping remains queued behind the source-preservation gate.
+**Engineer can continue:** YES — continue the accepted P2 Shopping workstreams under `RUN`.
 
 **Current Planner decisions:** None.
 
@@ -69,7 +69,9 @@ The completed read-only authentication/persistence-path investigation establishe
 
 Planner approved a narrowly scoped permanent owner-authenticated in-Site administration surface that invokes the existing bridge APIs through the proven same-origin request path. Server-side authorization remains authoritative; schema status, private export, approved upgrade, and verification remain distinct steps, with explicit confirmation and same-origin/CSRF protection before any future schema-changing request. This surface is not an authentication bypass and must not provide owner credentials, session material, or impersonation capability to Engineer. See [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md).
 
-That surface is now implemented and validated locally. Owners receive a staged status, private export, separately approved upgrade, and verification workflow; anonymous users use the existing sign-in flow, and authenticated non-owners receive no controls or administrative data. Upgrade submission requires owner authorization, same-origin validation, JSON content type, a dedicated action header, explicit acknowledgment, and an exact confirmation phrase. Duplicate submission is disabled while active. Tests pass 44/44, build and task lint pass, and full lint retains only three pre-existing errors and one warning. No source was saved as a Site version, and no production request, export, D1/R2 operation, schema change, deployment, or publication occurred.
+That surface is now implemented and validated locally. Owners receive a staged status, private export, separately approved upgrade, and verification workflow; anonymous users use the existing sign-in flow, and authenticated non-owners receive no controls or administrative data. Upgrade submission requires owner authorization, same-origin validation, JSON content type, a dedicated action header, explicit acknowledgment, and an exact confirmation phrase. Duplicate submission is disabled while active. Tests pass 44/44, build and task lint pass, and full lint retains only three pre-existing errors and one warning. At the local-completion transition, no source had yet been saved as a Site version, and no production request, export, D1/R2 operation, schema change, deployment, or publication occurred.
+
+The exact validated administration source is now preserved as unpublished Site Version 19. Validation immediately before preservation passed 44/44 tests, build, and task lint. Version 18 remains published. Saving Version 19 did not publish, invoke the application, access production data, export, migrate, verify production, or change D1/R2.
 
 ## Current Status Dashboard
 
@@ -182,4 +184,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Run the bounded Queue Mode sprint: preserve the exact validated administration source as an unpublished Site version first, then advance the eligible local/disposable Shopping Mode UI milestone. Production migration, publication, production verification, and smoke testing remain separately gated.
+Complete and locally converge the accepted P2 Shopping Mode UI workstreams. Site saving, production migration, publication, production verification, and smoke testing remain separately gated.
