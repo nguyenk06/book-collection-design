@@ -9,8 +9,10 @@
 - Recommended filename: <!-- YYYY-MM-DD-<milestone>-implementation-brief.md -->
 - Engineer acceptance: PENDING <!-- Engineer reports acceptance separately; do not edit this brief in place. -->
 - Planner decision: <!-- NONE, or a concise accepted direction with a permanent repository link. Do not copy decision history. -->
+- Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT -->
+- Attempt/reset rationale: <!-- Identify the underlying problem and prior attempt evidence; for a reset, explain the material architecture/capability/requirement/premise change. -->
 
-Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
+Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
 
 ## Objective
 

@@ -9,6 +9,7 @@
 - Source brief: <!-- Descriptive brief filename or safe identifier. -->
 - Related state reports: <!-- Descriptive filenames or "None". -->
 - Recommended filename: <!-- YYYY-MM-DD-<milestone>-design-handoff.md -->
+- Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT | NOT APPLICABLE -->
 
 The Designer keeps this source unchanged in `inbox/` until its verified evidence is incorporated into permanent documentation and accepted. It may then move to `processed/` without overwriting an existing artifact.
 
@@ -67,6 +68,10 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 ## Known limitations
 
 - <!-- Remaining limitation or uncertainty. -->
+
+## Attempt / reassessment evidence
+
+<!-- When repeated failures apply, summarize attempt numbers, hypotheses, results, new evidence, blocker classification, simpler alternatives, and continuation cost. Otherwise use "Not applicable." -->
 
 ## Roadmap impact
 

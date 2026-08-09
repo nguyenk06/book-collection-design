@@ -190,10 +190,11 @@ When the Site Engineer receives `CB`, execute the normal brief-intake lifecycle:
 1. Inspect the shared local `briefs/` and identify the next eligible implementation brief.
 2. Read the complete brief and validate feasibility against the actual implementation workspace.
 3. Identify material conflicts, unknowns, scope changes, and approval gates.
-4. Accept the brief as the active specification when appropriate and create the required sanitized brief-acceptance report in `inbox/`.
-5. Do not move the brief; Designer owns housekeeping.
-6. If the brief is accepted, work is feasible, no material conflict exists, and the next action is already authorized, proceed automatically as far as that authority permits.
-7. Stop when an explicit approval gate, production-changing or destructive action, material scope change, or unresolved design conflict requires escalation.
+4. Identify whether the brief begins a new attempt sequence, continues Attempt 2, continues Attempt 3, or follows a completed mandatory reassessment. Do not accept a brief that silently creates Attempt 4.
+5. Accept the brief as the active specification when appropriate and create the required sanitized brief-acceptance report in `inbox/`, including its attempt-sequence classification.
+6. Do not move the brief; Designer owns housekeeping.
+7. If the brief is accepted, work is feasible, no material conflict exists, and the next action is already authorized, proceed automatically as far as that authority permits.
+8. Stop when an explicit approval gate, production-changing or destructive action, material scope change, unresolved design conflict, or mandatory third-failure reassessment requires escalation.
 
 No formal Planner shortcut system is defined. Planner may continue using conversational commands such as `inbox`, `status`, and `next`. Planner reads permanent documentation in this order:
 
@@ -283,6 +284,7 @@ The report must contain:
 
 - Accepted brief filename
 - Status: `ACCEPTED AS ACTIVE SPECIFICATION`
+- Attempt-sequence classification and underlying-problem reference
 - Feasibility
 - Material conflicts, or `NONE`
 - Authorized scope
@@ -341,6 +343,42 @@ The Site Engineer must stop and request approval when:
 - An unresolved design conflict appears.
 
 Acceptance never expands the brief's authorization boundary.
+
+### Three-attempt reassessment rule
+
+For a materially similar implementation, integration, deployment, migration, authentication, or production-operation problem, the Site Engineer may make at most three substantive attempts before mandatory reassessment.
+
+An attempt is a meaningful execution path intended to resolve the same underlying problem. It is not rerunning after a typo, correcting obvious syntax, fixing trivial local setup, or rerunning a flaky test without changing the approach. The rule protects usage, time, momentum, simplicity, and Product Owner attention without discouraging ordinary debugging.
+
+After Attempt 1 or 2 fails, Engineer may continue only when the accepted brief still authorizes the work, new evidence materially informs the next attempt, no new approval gate is crossed, and no material design conflict appears. Record concisely:
+
+- Attempt number
+- Hypothesis tested
+- Result
+- New evidence justifying another attempt
+
+After Attempt 3 fails, stop. Do not make Attempt 4 automatically. Create a sanitized `BLOCKED / REASSESSMENT REQUIRED` report in `inbox/` that answers:
+
+1. Original objective
+2. Attempts 1, 2, and 3
+3. What each established
+4. Blocker classification: implementation defect, architecture mismatch, platform limitation, authorization/access limitation, unclear requirement, unsupported assumption, or unknown
+5. Whether the original request remains worth pursuing
+6. Simpler alternatives
+7. Scope, cost, and usage risk of another attempt
+8. Engineer recommendation: revised approach, redesign, defer, drop, or request Planner/product-owner decision
+
+When Designer receives a third-attempt reassessment, do not simply create another retry brief. Review the original product need, all attempt evidence, architecture, platform constraints, roadmap priority, user value, and continuation cost. Then choose one outcome:
+
+- Brief a clearly different implementation/design approach.
+- Revise requirements.
+- Defer the feature/operation.
+- Drop the requirement.
+- Frame a genuine Planner/product-owner decision.
+
+Planner escalation asks whether solving the problem remains worth the added complexity/cost, not merely whether Engineer may try again. Include original value, failed assumptions/evidence, proposed alternative, expected effort/risk, and consequences of deferring or dropping.
+
+Do not reset the attempt count because a new filename or brief exists. Reset only when Designer records that the underlying problem materially changed through a different architecture, different supported platform capability, materially revised requirement, or new authoritative information that changes the premise. State the reset rationale in the new brief.
 
 ### Design handoff lifecycle
 
