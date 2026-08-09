@@ -6,9 +6,9 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### Preserve the Validated Administration Surface
 
-**Workflow state:** Local implementation complete; unpublished Site-version approval pending
+**Workflow state:** Unpublished Site-version save approved; execution deferred to a future explicitly started session
 
-**Next owner:** `PLANNER` - approve or defer preserving the exact validated administration source as a new unpublished Site version in [Planner Inbox](PLANNER_INBOX.md).
+**Next owner:** `EXTERNAL/WAIT` - Product Owner starts the next development session and requests the narrow unpublished Site-version save brief.
 
 `WS-ADMIN`, `WS-AUTH`, `WS-EXPORT`, and `WS-CONVERGE` are complete locally. Queue Mode is disabled, so no follow-on executable brief is prepared or consumed in this session. Production migration, Shopping UI, and scanner work remain unauthorized.
 
@@ -28,8 +28,8 @@ The administration page is implemented locally under [ADR-0010](decisions/ADR-00
 
 **Expected deliverables**
 
-- Planner decision on the unpublished Site-version preservation gate.
-- A separate narrow execution brief only if approved in a future instruction.
+- A future narrow execution brief when Product Owner starts the next development session.
+- Verified saved-version evidence after that separately scoped execution.
 
 **Files likely affected**
 

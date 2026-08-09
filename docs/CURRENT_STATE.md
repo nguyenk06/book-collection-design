@@ -12,13 +12,13 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Owner-authenticated administration milestone complete locally; separate unpublished Site-version save awaits Planner approval
+**Workflow state:** Unpublished Site-version preservation approved but not executed; current session remains closed to additional briefs
 
 **Queue mode:** `DISABLED` — planned for a future development session/sprint and activated only by explicit `QUEUE MODE: ENABLED`
 
 **Queue throttle:** `NOT APPLICABLE`
 
-**Engineer execution state:** `STOPPED AT GATE` — local milestone complete; no further brief may be consumed while Queue Mode is disabled
+**Engineer execution state:** `PAUSED` — validated source is resumable; no further brief may be consumed while Queue Mode is disabled
 
 ## Current Engineering Workstreams
 
@@ -26,17 +26,17 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 | ID | Workstream | Progress | State | Authority | Blocker / next gate | Independent continuation |
 | --- | --- | --- | --- | --- | --- | --- |
-| `WS-ADMIN` | Owner-authenticated administration page | `[██████████] 100%` | COMPLETE | Local implementation/validation completed | Unpublished Site-version save approval | No further local work authorized |
+| `WS-ADMIN` | Owner-authenticated administration page | `[██████████] 100%` | COMPLETE | Local implementation/validation completed | Approved save execution in a future session | No further local work authorized |
 | `WS-AUTH` | Same-origin authorization and security validation | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-EXPORT` | Private export-download and validation UX | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
-| `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Unpublished Site-version save approval | No |
+| `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Approved save execution in a future session | No |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
 | `WS-SHOPPING` | Shopping Mode UI | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Production schema activation and a future brief | No |
 | `WS-SCANNER` | Identifier/scanner improvements | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Higher-priority Shopping sequence and a future brief | No |
 
 **Engineer can continue:** NO — the accepted local brief is complete, Queue Mode is disabled, and the next action is a separate Site-version gate.
 
-**Current Planner decisions:** Approve or defer preserving the exact validated administration source as a new unpublished Site version.
+**Current Planner decisions:** None.
 
 **Next production gate:** None is currently executable. An unpublished Site-version save is the next non-production gate; publication and all production actions remain separately gated.
 
@@ -179,4 +179,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Seek Planner approval to preserve the exact validated owner-authenticated administration source as a new unpublished Site version. Queue Mode remains disabled; do not create or consume another implementation milestone in the current session.
+In a future explicitly started development session, prepare and execute a narrow brief to preserve the exact validated owner-authenticated administration source as a new unpublished Site version. Planner approval is recorded, but no save has occurred and Queue Mode remains disabled.

@@ -137,6 +137,8 @@ Planner approved the administration-surface architecture for local implementatio
 
 The local surface uses the existing owner-authenticated same-origin path, withholds controls/data from non-owners, validates private exports before download, and adds server-enforced same-origin and deliberate-confirmation checks before the schema-upgrade service. It creates no authentication bypass or Engineer credential path. Preserving this exact source as an unpublished Site version is the next separately approved gate.
 
+Planner approved that unpublished Site-version preservation gate. The approval is recorded for a future explicitly started development session; no save, publication, production request, export, migration, verification, or other Site/production change occurred from the decision.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.
