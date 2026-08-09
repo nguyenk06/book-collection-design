@@ -141,7 +141,25 @@ When the Designer receives `CI`, execute the normal inbox lifecycle:
 5. Evaluate whether [`CHANGELOG.md`](CHANGELOG.md) needs a major milestone or state-transition update.
 6. Evaluate whether [`PLANNER_INBOX.md`](PLANNER_INBOX.md) needs a genuine Planner decision; do not escalate routine artifacts unnecessarily.
 7. Perform Designer-owned housekeeping, moving eligible artifacts to `processed/` without overwriting or deleting unrelated artifacts and leaving unresolved artifacts active.
-8. Report the resulting state concisely.
+8. Run the continuation check and identify who acts next.
+9. Report the resulting state concisely.
+
+Before `CI` is complete, at least one legitimate continuation must be clear:
+
+- **ENGINEER:** an eligible implementation brief exists in `briefs/`; identify the brief.
+- **PLANNER:** a genuine actionable choice, approval, rejection, or requested provision exists in [`PLANNER_INBOX.md`](PLANNER_INBOX.md); identify the decision.
+- **EXTERNAL/WAIT:** permanent state is explicitly `PAUSED` or `BLOCKED-EXTERNAL`; identify the condition required to resume.
+- **NONE - PROJECT COMPLETE:** permanent state explicitly records completion.
+
+Treat an empty `inbox/`, empty `briefs/`, empty Planner Inbox, actionable work in [`NEXT_ACTIONS.md`](NEXT_ACTIONS.md), and no explicit waiting/completion state as a workflow-continuity error. Do not merely report that there is nothing to process; determine the legitimate next owner.
+
+After processing an Engineer completion handoff, the Designer:
+
+- Prepares the next adequately defined implementation brief when no Planner decision is needed.
+- Creates or updates a Planner Inbox item when product direction, approval, scope choice, or risk acceptance is genuinely required.
+- Records `PAUSED`, `COMPLETE`, or `BLOCKED-EXTERNAL` in permanent state when nobody can currently advance; a blocked-external state must name its resume condition.
+
+Do not invent work or prepare a brief with inadequate requirements merely to keep the Engineer busy. The invariant ensures continuity of ownership, not continuous activity.
 
 ### Site Engineer: `CB`
 
@@ -178,13 +196,14 @@ Do not treat transport files as permanent project history unless the product own
 
 ## Handoff Workspace Lifecycle
 
-The handoff workspace is outside both repositories. The Designer owns its housekeeping and maintains three logical areas:
+The handoff workspace is outside both repositories. The Designer owns its housekeeping and maintains four logical areas:
 
 | Area | Purpose | Exit gate |
 | --- | --- | --- |
 | `inbox/` | Read-only Site Engineer handoffs awaiting Design review | Verified evidence is incorporated into permanent documentation and the resulting documentation state is accepted |
 | `briefs/` | Designer-prepared implementation briefs awaiting Engineer acceptance | Site Engineer confirms receipt and accepts the brief as the active implementation specification |
-| `processed/` | Transport artifacts that passed their applicable exit gate | Retain locally according to product-owner housekeeping needs; do not commit by default |
+| `processed/` | Recently completed transport artifacts useful for immediate reference | Retain for approximately 30 days after completion/processing, then archive when eligible |
+| `archive/YYYY-MM/` | Older completed artifacts retained as readable implementation evidence and history | Local/private retention; do not commit by default or routinely delete |
 
 ### Implementation brief lifecycle
 
@@ -292,6 +311,29 @@ Before creating, copying, or moving a file, check both the source and destinatio
 If permissions prevent the Designer from moving an artifact, leave it in place and report the housekeeping limitation. Never weaken read-only protection or modify the Site Engineer's source handoff to force a lifecycle transition.
 
 Only the Designer performs movement into `processed/`. The Site Engineer may read briefs and create new collision-safe reports or handoffs in `inbox/`, but may not move, archive, overwrite, delete, or reorganize shared artifacts.
+
+### Processed artifact archive
+
+During normal Designer housekeeping, keep approximately the most recent 30 days of completed artifacts in `processed/`. Move older eligible artifacts into `archive/YYYY-MM/` according to their completion or processing period.
+
+- Preserve filenames when possible and use collision-safe descriptive naming when necessary.
+- Never overwrite, routinely delete, ZIP, or compress normal Markdown artifacts.
+- Never archive an active artifact, unresolved conflict, or item still awaiting approval.
+- Archival means **completed and retained**, not discarded.
+- The Designer alone owns archival housekeeping; the Site Engineer must not reorganize the archive.
+
+Sanitization overrides retention. If an artifact contains credentials, tokens, secrets, private resource identifiers, sensitive personal information, or inappropriate environment details, do not preserve it merely because it otherwise qualifies for archival. Do not silently rewrite historical evidence. Report the issue and follow [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md) and the applicable safe-handling procedure.
+
+Archived handoffs are supporting evidence, not primary project truth. Permanent truth remains in:
+
+- [`PLANNER_INBOX.md`](PLANNER_INBOX.md) for unresolved owner decisions
+- [`CURRENT_STATE.md`](CURRENT_STATE.md) for what is true now
+- [`NEXT_ACTIONS.md`](NEXT_ACTIONS.md) for what should happen next
+- [`CHANGELOG.md`](CHANGELOG.md) for major milestone and state history
+- [`ROADMAP.md`](ROADMAP.md) for future direction
+- [`DECISIONS.md`](DECISIONS.md) and ADRs for durable accepted decisions
+
+The archive supports troubleshooting and reconstruction; Planner should not normally need to read it.
 
 ## Conflict Rules
 

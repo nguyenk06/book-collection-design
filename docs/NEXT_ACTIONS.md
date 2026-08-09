@@ -6,6 +6,10 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### Establish Authorized D1 Access and Retry Packet A
 
+**Workflow state:** `BLOCKED-EXTERNAL`
+
+**Next owner:** `EXTERNAL/WAIT` - Product Owner establishes an authenticated, authorized production D1 operator path privately. After that condition is met, Designer prepares or revises the next Packet A brief and Product Owner separately authorizes the execution window.
+
 **Current objective**
 
 Provide an authorized, authenticated D1 operator path that supports private production-target verification and backup execution, then obtain new explicit Product Owner authorization for a Packet A retry.

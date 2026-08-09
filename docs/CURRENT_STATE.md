@@ -12,6 +12,8 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
+**Workflow state:** `BLOCKED-EXTERNAL` - resume when an authenticated, authorized production D1 operator path has been established privately
+
 ## Summary
 
 The production application remains a stable, private, single-user book tracker on Site Version 16. The validated Shopping persistence/API foundation is preserved in Site version history as unpublished Version 17 but has not been migrated to production or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
