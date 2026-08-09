@@ -8,7 +8,7 @@ The application is maintained in a separate implementation repository. This repo
 
 ## Status
 
-Site Version 16 remains the verified published version. Version 17 preserves the unpublished Shopping foundation, and Version 18 preserves the validated unpublished migration bridge; Version 18 publication is approved but not yet verified complete. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 18 is now the published migration bridge; Version 16 is superseded in Site history, and Version 17 remains the unpublished Shopping foundation. Production application and schema behavior remain unverified because no bridge API or database operation has occurred. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

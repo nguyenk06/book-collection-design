@@ -4,29 +4,28 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Publish Version 18 Migration Bridge
+### Decide Production Preflight and JSON Export
 
-**Workflow state:** Publication-only brief ready
+**Workflow state:** Awaiting Planner backup-gate approval
 
-**Next owner:** `ENGINEER` - process `2026-08-08-version-18-bridge-publication-implementation-brief.md` with `CB`.
+**Next owner:** `PLANNER` - decide `Authorize Version 18 Production Preflight and JSON Export` in [Planner Inbox](PLANNER_INBOX.md).
 
 **Current objective**
 
-Publish/deploy the exact saved Version 18 bridge, confirm the Sites deployment transition through supported metadata/status, and stop.
+Approve or defer an owner-only, read-only production schema-status preflight and versioned structured JSON export using the published Version 18 bridge.
 
 **Why this is the current priority**
 
-Planner approved Version 18 bridge publication as an isolated production deployment gate. The exact saved archive is validated and excludes `0004`. Production API invocation, export, schema upgrade, final Shopping publication, smoke testing, restore/import, and destructive actions remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
+Version 18 publication succeeded, but no application/API request or database operation occurred. The next proposed backup gate would call only owner-authorized schema status and export APIs, validate sanitized pre-upgrade invariants and a private parseable export, and stop. Schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 
-- Engineer publishes the exact saved Version 18 bridge without rebuilding or substituting another source state.
-- Sites deployment metadata/status confirms success or failure and identifies Version 18 as published without exposing private details.
-- No production application/API access, export, D1/R2 operation, schema upgrade, smoke test, or final Shopping publication occurs.
+- Planner records approval or deferral of the read-only preflight/export gate.
+- Any approval permits only owner-authorized schema status plus export download/verification and explicitly excludes schema upgrade or unrelated application access.
 
 **Expected deliverables**
 
-- Sanitized publication-status handoff and next approval request.
+- Recorded Planner decision and, if approved, a preflight/export-only implementation brief.
 
 **Files likely affected**
 
@@ -71,6 +70,7 @@ Medium.
 
 ## Recently Completed
 
+- Published the exact validated Version 18 migration bridge; Sites deployment succeeded without application/API or database operations.
 - Implemented and locally validated the Version 16-compatible migration bridge; saved it as unpublished Site Version 18 with packaged `0004` excluded.
 - Completed and accepted the Production Backup & Migration Execution Plan with independent backup, migration, publication, and incident-response gates.
 - Completed the read-only Production Migration & Rollback Investigation; confirmed Sites execution details remain undocumented and performed no production access or change.

@@ -2,9 +2,9 @@
 
 **Last reviewed:** 2026-08-08
 
-**Verified production implementation:** Site Version 16
+**Published Site version:** Version 18 migration bridge; deployment succeeded, but application and schema behavior remain unverified
 
-**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; validated migration bridge in unpublished Version 18; neither migrated to production or published
+**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; migration bridge source preserved in Version 18 and now published
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
@@ -12,11 +12,11 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Version 18 bridge publication approved; publication-only brief ready for Engineer intake
+**Workflow state:** Version 18 bridge published; production preflight and JSON export awaiting Planner approval
 
 ## Summary
 
-The production application remains a stable, private, single-user book tracker on Site Version 16. The validated Shopping persistence/API foundation is preserved in Site version history as unpublished Version 17 but has not been migrated to production or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
+The published Site is now Version 18, a temporary migration bridge whose ordinary data paths remain compatible with the Version 16 schema. The validated Shopping persistence/API foundation remains preserved as unpublished Version 17 and has not been activated in production. Version 18 publication is verified from Sites deployment status only; application and schema behavior are not yet verified.
 
 The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. That behavior remains unknown and must not be assumed.
 
@@ -26,9 +26,9 @@ Planner accepted external D1 administration as unavailable and outside the inten
 
 The completed investigation found that migration packaging proves inclusion but not execution, ordering, atomicity, retry, or traffic gating. Runtime `ensureSeeded()` writes and repairs only the Version 16-era schema, while Version 17 ordinary queries and writes expect the new Shopping columns/tables; direct Version 17 publication is therefore unsafe on current evidence. Disposable validation showed that a guarded additive reconciler can repeat and resume from a partial state while preserving Book identity and collection data. Planner approved the temporary Version 16-compatible migration bridge architecture for local implementation/validation and an unpublished Site save only. No Site or production operation has occurred from that approval.
 
-The bridge is now implemented and locally validated. Site Version 18 is saved and unpublished with validated source provenance; its archive contains migrations `0000` through `0003` and excludes independently executable `0004`. The bridge provides Version 16-compatible ordinary data access plus owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and read-only upgrade verification APIs. Full tests pass 37/37, build and bridge/task lint pass, and full lint retains only three pre-existing errors and one warning in the main page. Version 16 remains published; Version 17 and Version 18 remain unpublished. No production operation occurred.
+The bridge is implemented and locally validated. Its preserved Version 18 archive contains migrations `0000` through `0003` and excludes independently executable `0004`. The bridge provides Version 16-compatible ordinary data access plus owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and read-only upgrade verification APIs. Full tests pass 37/37, build and bridge/task lint pass, and full lint retains only three pre-existing errors and one warning in the main page. Version 18 is now published; Version 17 remains unpublished.
 
-Planner approved publication of the exact saved Version 18 bridge as a standalone gate. The approval does not authorize invoking any production bridge API, exporting data, upgrading schema, publishing final Shopping behavior, smoke testing, restore/import, or destructive action. Until Engineer provides publication evidence, Version 16 remains the verified published version.
+Sites reported the exact saved Version 18 deployment succeeded. Version 18 is now published and Version 16 is superseded but retained in version history. Publication did not invoke the application or bridge APIs and does not establish application health, database schema state, packaged migration execution, or data preservation. No export, D1/R2 operation, schema upgrade, verification, final Shopping publication, smoke test, restore/import, or destructive action occurred.
 
 ## Current Status Dashboard
 
@@ -140,4 +140,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Publish the exact saved Version 18 bridge and stop after sanitized Sites deployment-status evidence. Do not invoke production APIs or perform application smoke testing.
+Planner decides whether to authorize owner-only production schema-status preflight and versioned JSON export. Schema upgrade, final Shopping publication, smoke testing, restore/import, and destructive action remain unauthorized.

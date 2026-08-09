@@ -29,7 +29,7 @@ Major milestone states are independent. Implementation does not imply validation
 | Saved as Site version | Yes; unpublished Version 17 |
 | Production migrated | No |
 | Production verified | No |
-| Published | No; Version 16 remains published and live |
+| Published | No; Version 17 remains unpublished while Version 18 bridge is published |
 | Superseded or rolled back | No |
 
 Next major transition: prepare the gated Production Backup & Migration Execution Plan, then seek separate approval for each production operation. See [Current State](CURRENT_STATE.md), [Database](DATABASE.md), and [Next Actions](NEXT_ACTIONS.md).
@@ -79,7 +79,7 @@ Planner then accepted Sites-native operations as the project constraint and remo
 | Site/source version changed | No |
 | Production data accessed | No |
 | Production migrated or verified | No |
-| Version 17 published | No; Version 16 remains published |
+| Version 17 published | No; Version 18 bridge is now published |
 
 The investigation found direct Version 17 publication unsafe on current evidence because packaged migration execution remains unknown and runtime `ensureSeeded()` does not create the Shopping schema expected by Version 17. A Version 16-compatible migration bridge is proposed; no architecture approval or implementation is implied by this entry.
 
@@ -93,13 +93,15 @@ Planner approved the migration-bridge architecture for local implementation/vali
 | Validated locally | Yes; 37/37 tests, build and bridge/task lint pass |
 | Saved as Site version | Yes; unpublished Version 18 |
 | Archive excludes packaged `0004` | Yes; migrations `0000`-`0003` present |
-| Production deployed/published | No; Version 16 remains published |
+| Production deployed/published | Yes; Version 18 deployment succeeded and Version 16 was superseded |
 | Production export or schema upgrade | No |
 | Production verified or smoke tested | No |
 
 Full-project lint still reports three pre-existing errors and one warning in the main page. Version 18 publication and all production API/database operations remain separate approval gates.
 
 Planner approved Version 18 bridge publication as an isolated next gate. Approval is not publication evidence and does not authorize production API invocation, export, schema upgrade, final Shopping publication, smoke testing, or destructive recovery.
+
+Sites subsequently reported Version 18 publication succeeded. No application/API request, export, D1/R2 operation, schema migration/verification, Shopping activation, smoke test, restore/import, rollback, or destructive action occurred. Publication status does not establish application health or database schema state.
 
 ### Changed
 
