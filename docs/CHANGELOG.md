@@ -8,7 +8,12 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 
 ### Added
 
+- Documented the locally implemented and validated Shopping persistence/API foundation: Businesses, Purchases, collection target price, Added Date, controlled conditions, and owner-authorized APIs.
+
 ### Changed
+
+- Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.
+- Recorded that the foundation is not saved as a Site version, migrated to production, or published.
 
 ## 2026-08-04
 

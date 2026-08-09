@@ -1,22 +1,24 @@
 # Current State
 
-**Last reviewed:** 2026-08-04
+**Last reviewed:** 2026-08-08
 
-**Verified implementation:** v16 at commit `ead79e2`
+**Verified production implementation:** Site Version 16
+
+**Verified local implementation:** Shopping persistence/API foundation; validated locally, not saved as a Site version, migrated to production, or published
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
 ## Summary
 
-The production application is a stable, private, single-user book tracker. Its Cloudflare D1 and R2 foundation can support the [Roadmap](ROADMAP.md) through additive migrations; a rewrite is not required. The current schema is suitable for the tracker but not sufficient unchanged for purchase history, advanced matching, safe interchange, AI review, reference covers, or tags.
+The production application remains a stable, private, single-user book tracker on Site Version 16. A locally implemented Shopping persistence/API foundation has been validated but has not been saved in Site version history, migrated to production, or published. Its additive approach remains compatible with the [Roadmap](ROADMAP.md); a rewrite is not required.
 
 ## Current Status Dashboard
 
 | Area | Status | Current state |
 | --- | --- | --- |
 | Architecture | Partial | Viable D1/R2 foundation; responsibilities must be separated incrementally |
-| Database | Partial | Durable records and migrations exist; relationships are not enforced and `books` is overloaded |
-| Shopping | Partial | Guidance and basic purchase confirmation exist; purchase persistence does not |
+| Database | Partial | Local additive schema and migration validation cover Businesses, Purchases, target price, and Added Date; production remains on the v16 schema and the book-to-collection relationship is not enforced |
+| Shopping | Partial | Persistence and owner-authorized APIs are locally validated but unsaved and unpublished; Shopping UI remains unchanged |
 | Scanner | Partial | Live/photo ISBN scanning works; canonical same-book matching is weak |
 | Bookshelf | Planned | Collection gallery/list views exist, but the roadmap bookshelf is not implemented |
 | Import/Export | Partial | Immediate JSON collection import exists; export, dry run, conflicts, and backups do not |
@@ -37,7 +39,20 @@ See [Database](DATABASE.md) for verified schema details and accepted migration d
 
 ## Implementation maturity
 
-The application is published and useful for current collection tracking. It supports collection selection, search, ISBN scanning, ownership and buying-state presentation, copy counts, expected CYOA positions, personal cover upload, collection import, and live KPIs. Several future workflows have interface foundations but lack the relational persistence and integrity needed for reliable expansion.
+The published application remains useful for current collection tracking. It supports collection selection, search, ISBN scanning, ownership and buying-state presentation, copy counts, expected CYOA positions, personal cover upload, collection import, and live KPIs.
+
+The local Site working copy additionally contains validated Business and Purchase persistence, collection target price, nullable Book Added Date, and owner-authorized Business/Purchase APIs. This work is not a saved Site version or a production capability. No Shopping Mode UI was added, and Purchase creation does not alter Book ownership or copy counts.
+
+### Locally validated Shopping foundation
+
+- Businesses use cleaned display names and unique normalized names.
+- Purchases preserve transaction history separately from Book identity, ownership, and copy counts.
+- Purchase and sticker prices use independent, nullable, non-negative integer cents.
+- Purchase condition is limited to New, Like New, Very Good, Good, Fair, Poor, or Unknown.
+- Collection target price is nullable; the CYOA target is 600 cents in the local migration.
+- Existing Books retain unknown Added Dates as `NULL`; newly created or imported Books receive an Added Date.
+- Local migration tests preserved Book IDs, collection keys, records, ownership, copies, ISBNs, cover references, and timestamps.
+- Focused tests and the local production build pass. Full-project lint retains unrelated pre-existing failures.
 
 ## Current strengths
 
@@ -85,7 +100,10 @@ The application is published and useful for current collection tracking. It supp
 
 ## Current known limitations
 
-- No purchases, businesses, condition history, price history, or collection target-price persistence.
+- Production has no Businesses, Purchases, condition history, price history, collection target price, or Added Date migration.
+- The locally validated Shopping foundation is not saved in Site version history or published.
+- Production migration, rollback, and production behavior remain unverified.
+- The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
 - No roadmap bookshelf, exports, backups, or dry-run imports.
 - No stable external IDs, record revisions, review batches, or proposals.
@@ -95,4 +113,4 @@ The application is published and useful for current collection tracking. It supp
 
 ## Next milestone
 
-Implement the database integrity and Shopping Mode persistence foundation described in [Database](DATABASE.md), before redesigning Shopping Mode UI. The full sequence and blockers are maintained in the [Roadmap](ROADMAP.md).
+Save the locally validated Shopping persistence/API foundation as a Site version, complete production migration and rollback planning, and retain explicit approval gates before migration or publication. The full sequence and blockers are maintained in the [Roadmap](ROADMAP.md).

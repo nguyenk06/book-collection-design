@@ -24,6 +24,7 @@ Make collection data portable, recoverable, and safely transferable between the 
 
 - Documented field names, types, required values, and format version.
 - Stable record identifiers where safe round trips require them.
+- A portable immutable Purchase identifier before Purchase records must survive Import/Export, backup/restore reconciliation, or AI Review across database boundaries; this is deferred from the current Shopping persistence foundation.
 - Batch identity, source, timestamps, row outcome, and error details.
 - Provenance for imported values.
 - Export metadata sufficient to interpret the file independently.

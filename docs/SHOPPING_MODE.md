@@ -43,6 +43,26 @@ Help a collector decide quickly whether to buy, skip, or investigate a book whil
 - Reliable mobile application behavior
 - Collection search and status rules
 
+## Verified Local Foundation
+
+The Site working copy has locally validated persistence and owner-authorized APIs for:
+
+- Business listing and creation with normalized-name duplicate prevention.
+- Purchase creation and per-Book Purchase history.
+- Independent purchase and sticker prices in non-negative integer cents.
+- Optional purchase date and controlled condition values.
+- Nullable collection target price, with CYOA configured to 600 cents locally.
+- Nullable Book Added Date for new manual/imported records without fabricating historical dates.
+
+This foundation is not saved as a Site version, migrated to production, or published. It adds no Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
+
+## Remaining Milestone Work
+
+- Save the validated source as an unpublished Site version.
+- Approve and execute production migration and verification separately from publication.
+- Complete Shopping Mode UI on the persistence foundation.
+- Define user-facing reconciliation when Purchase history and editable ownership state disagree.
+
 ## Future improvements
 
 - Configurable decision cues and duplicate warnings.

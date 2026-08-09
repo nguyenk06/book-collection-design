@@ -6,8 +6,8 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence design | Partial; assessment complete, migration not implemented | D1 backup, orphan audit, migration verification and rollback | Medium | No foreign keys; overloaded `books`; invariants need definition |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial | Purchases, normalized Businesses, collection target price, condition vocabulary, transactional confirmation | Medium-large | No purchase history; ownership derivation rule unresolved |
+| 0 | Database integrity and Shopping persistence foundation | Partial; persistence/API and additive migration validated locally, not saved or migrated to production | Saved Site version, D1 backup, production migration verification and rollback | Medium | Book-to-collection foreign key deferred; production state unverified |
+| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local persistence/API foundation exists, UI unchanged | Saved foundation, production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial | Stable IDs, format version, revision token, dry run, conflict policy, backup metadata | Medium-large | Import writes immediately; no export or backup infrastructure |
@@ -27,14 +27,15 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Implement only the Priority 0 integrity and Shopping persistence foundation:
+Finish promotion planning for the locally validated Priority 0 Shopping persistence foundation:
 
-- Preserve existing book IDs and collection keys.
-- Add Businesses, purchases, and collection target price.
-- Store money in integer cents and define condition values.
-- Enforce the book-to-collection relationship after audit and backup.
-- Add owner-authorized purchase create/read routes and focused migration tests.
+- Commit and push the exact validated Site source, then save it as an unpublished Site version.
+- Plan and explicitly authorize production backup, migration, verification, and rollback.
+- Preserve existing Book IDs, collection keys, ownership data, and records.
+- Sequence the deferred book-to-collection foreign key after orphan audit and backup.
 - Keep Shopping UI redesign and later roadmap features out of scope.
+
+Local validation does not mark this milestone released or in production. Production migration and publication remain separate approval gates.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 

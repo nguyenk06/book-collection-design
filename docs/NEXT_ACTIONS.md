@@ -4,39 +4,37 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Database integrity and Shopping persistence foundation
+### Save and prepare the Shopping persistence foundation
 
 **Current objective**
 
-Add the minimum relational foundation required to represent purchases safely while preserving every existing book and collection identifier.
+Move the locally validated Shopping persistence/API foundation into Site version history and prepare a safe, explicitly approved production migration and publication path.
 
 **Why this is the current priority**
 
-Shopping Mode is the highest-priority user workflow. Persistence and relational integrity must exist before its interface is expanded. See [ADR-0003](decisions/ADR-0003-shopping-mode-priority.md) and [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md).
+Shopping persistence and owner-authorized APIs are implemented and validated locally, but the work is not saved as a Site version, migrated to production, or published. Preserving that evidence and planning production activation are the immediate prerequisites to UI work. See [Database](DATABASE.md) and [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md).
 
 **Success criteria**
 
-- Existing book IDs, collection keys, ownership data, and production records remain intact.
-- Businesses, purchases, and collection target price have validated persistence.
-- The book-to-collection relationship is enforced after an orphan audit and backup.
-- Money uses integer cents; purchase condition values are defined.
-- Owner-authorized purchase create/read behavior is tested.
-- Migration verification and rollback procedures are documented.
+- The exact validated source is committed and pushed so a Site version can be saved.
+- A new Site version records the foundation without implying publication.
+- Production migration verification, rollback, backup, and authorization steps are documented.
+- The deferred book-to-collection foreign key has an explicit implementation sequence.
+- Production migration and publication occur only with separate explicit approval.
 
 **Expected deliverables**
 
-- Additive schema migration and rollback documentation.
-- Purchase and Business persistence with collection target price.
-- Owner-authorized purchase create/read routes.
-- Constraint, validation, preservation, and migration tests.
-- Updated design documentation after implementation verification.
+- Committed and pushed validated Site source.
+- Saved, unpublished Site version.
+- Production migration and rollback plan, including identifier and record preservation checks.
+- Explicit decision point for production migration and later publication.
 
 **Files likely affected**
 
-- Implementation database schema and migrations.
-- Books, collections, purchase, and Business API modules.
-- Database and API tests.
-- [Current State](CURRENT_STATE.md), [Roadmap](ROADMAP.md), [Database](DATABASE.md), [Changelog](CHANGELOG.md), and this queue after completion.
+- Site source/version workflow.
+- Production migration, backup, verification, and rollback documentation.
+- Book-to-collection foreign-key migration work when scheduled.
+- [Current State](CURRENT_STATE.md), [Roadmap](ROADMAP.md), [Database](DATABASE.md), [Changelog](CHANGELOG.md), and this queue after each verified transition.
 
 **Estimated effort**
 
@@ -44,16 +42,17 @@ Medium.
 
 **Risks**
 
-- Orphaned collection references or identifier changes during table rebuild.
-- Contradictions between purchases and independently editable ownership state.
-- Incorrect money or condition validation.
-- Incomplete rollback or production-data preservation checks.
+- Unsaved local work cannot be promoted through the Sites version workflow.
+- Production migration could expose orphaned relationships or incomplete rollback assumptions.
+- Purchases and independently editable ownership state can still contradict one another.
+- Publication could be mistaken for migration validation if the gates are not recorded separately.
 
 **Out of scope**
 
 - Shopping Mode UI redesign.
 - Scanner, Bookshelf, import/export, AI review, reference covers, tags, and analysis changes.
 - Full edition modeling, Business locations, and generalized media support.
+- Production migration or publication without explicit approval.
 
 ## Ready Next
 
@@ -71,6 +70,9 @@ Medium.
 
 ## Recently Completed
 
+- Implemented and locally validated Businesses, Purchases, collection target price, Added Date, owner-authorized APIs, and additive migration tests.
+- Preserved existing Book identities and data in disposable local migration validation.
+- Deferred portable Purchase identity until cross-database workflows require it.
 - Completed the read-only v16 database-first architecture assessment.
 - Verified the current D1/R2 architecture, schema risks, and capability maturity.
 - Validated the roadmap order and accepted additive migration direction.

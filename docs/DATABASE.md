@@ -1,8 +1,8 @@
 # Database
 
-This document distinguishes verified v16 behavior from accepted direction and future ideas. It does not authorize or implement schema changes.
+This document distinguishes verified production behavior, verified local implementation, accepted direction, and future ideas. It does not authorize production schema changes.
 
-## Verified Current State
+## Verified Production State
 
 ### Persistence
 
@@ -96,13 +96,28 @@ Adding it requires an orphan audit, backup, controlled SQLite table rebuild, and
 
 The first responsibilities to move out of `books` are purchases, alternate identifiers, asset metadata, tags, and review state.
 
+## Verified Local Implementation
+
+The Shopping persistence/API foundation is implemented and validated in the local Site working copy. It is not saved as a Site version, migrated to production, or published.
+
+| Table | Locally implemented change |
+| --- | --- |
+| `books` | Nullable `added_at`; existing unknown historical dates remain `NULL`, while newly created or imported Books receive an Added Date |
+| `collections` | Nullable, non-negative `target_price_cents`; CYOA is initialized to 600 cents and other collection targets remain `NULL` |
+| `businesses` | Internal auto-increment integer ID, cleaned display name, unique normalized name, and timestamps |
+| `purchases` | Internal auto-increment integer ID, required Book, optional Business, independent nullable prices in integer cents, optional purchase date, controlled condition, and timestamps |
+
+Purchase references restrict deletion of referenced Books and Businesses. Purchase creation does not derive or update Book ownership or copy counts. Local disposable migration tests verified preservation, uniqueness, checks, foreign keys, and conservative deletion behavior; production records were not inspected.
+
+The locally implemented condition vocabulary is: New, Like New, Very Good, Good, Fair, Poor, and Unknown.
+
 ## Accepted Direction
 
 The accepted strategy is additive migration, not a rewrite or immediate title/edition/copy hierarchy.
 
 1. Preserve existing `books.id` and `collections.key` values.
 2. Audit orphaned collection references and back up D1.
-3. Add `businesses`, then `purchases`, and `collections.target_price_cents`.
+3. Add `businesses`, then `purchases`, `collections.target_price_cents`, and nullable `books.added_at`.
 4. Rebuild `books` in a controlled migration to enforce `books.collection_key -> collections.key`.
 5. Add `book_identifiers` before advanced scanner matching; do not create a parallel `AltBooks` table.
 6. Add immutable stable IDs, revisions, format versioning, and conflict handling before safe export/import.
@@ -128,8 +143,11 @@ Shopping persistence decisions are recorded in [ADR-0007](decisions/ADR-0007-sho
 ### Shopping persistence foundation
 
 - `businesses`: normalized business identity with an internal integer ID and unique normalized name.
-- `purchases`: internal integer ID, immutable stable ID, book, optional business, purchase/sticker prices in integer cents, date, condition, and timestamps.
+- `purchases`: internal integer primary key, book, optional business, purchase/sticker prices in integer cents, date, condition, and timestamps.
+- An immutable Purchase `stable_id` is deferred and is not required for the current Shopping persistence foundation.
+- A portable immutable Purchase identifier is required before Import/Export, backup/restore reconciliation, or AI Review must preserve Purchase records across database boundaries.
 - `collections.target_price_cents`: collection-level target price; the CYOA target is initialized to approximately 600 cents.
+- `books.added_at`: nullable Added Date; preserve `NULL` when the true historical date is unknown, and set it for newly created or imported Books going forward. Historical dates must not be fabricated.
 - Historical averages are calculated from purchases rather than stored as aggregates.
 - Persistence and integrity precede Shopping Mode UI redesign.
 
