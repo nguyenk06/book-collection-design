@@ -4,28 +4,29 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Decide Version 18 Bridge Publication
+### Publish Version 18 Migration Bridge
 
-**Workflow state:** Awaiting Planner publication decision
+**Workflow state:** Publication-only brief ready
 
-**Next owner:** `PLANNER` - decide `Authorize Version 18 Bridge Publication` in [Planner Inbox](PLANNER_INBOX.md).
+**Next owner:** `ENGINEER` - process `2026-08-08-version-18-bridge-publication-implementation-brief.md` with `CB`.
 
 **Current objective**
 
-Approve or defer publication of saved Site Version 18 as the temporary Version 16-compatible migration bridge.
+Publish/deploy the exact saved Version 18 bridge, confirm the Sites deployment transition through supported metadata/status, and stop.
 
 **Why this is the current priority**
 
-The bridge implementation and validation are complete, and Version 18 is saved unpublished with `0004` absent from its archive. Publishing Version 18 is a production deployment gate but does not itself authorize calling its admin APIs, exporting production data, upgrading schema, or publishing final Shopping behavior. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
+Planner approved Version 18 bridge publication as an isolated production deployment gate. The exact saved archive is validated and excludes `0004`. Production API invocation, export, schema upgrade, final Shopping publication, smoke testing, restore/import, and destructive actions remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 
-- Planner records approval or deferral of Version 18 bridge publication.
-- Any approval is limited to publication/deployment of Version 18 and confirms that production export, schema upgrade, final Shopping publication, smoke testing, and destructive actions remain separate gates.
+- Engineer publishes the exact saved Version 18 bridge without rebuilding or substituting another source state.
+- Sites deployment metadata/status confirms success or failure and identifies Version 18 as published without exposing private details.
+- No production application/API access, export, D1/R2 operation, schema upgrade, smoke test, or final Shopping publication occurs.
 
 **Expected deliverables**
 
-- Recorded Planner decision and, if approved, a publication-only implementation brief.
+- Sanitized publication-status handoff and next approval request.
 
 **Files likely affected**
 

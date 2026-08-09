@@ -99,6 +99,8 @@ Planner approved the migration-bridge architecture for local implementation/vali
 
 Full-project lint still reports three pre-existing errors and one warning in the main page. Version 18 publication and all production API/database operations remain separate approval gates.
 
+Planner approved Version 18 bridge publication as an isolated next gate. Approval is not publication evidence and does not authorize production API invocation, export, schema upgrade, final Shopping publication, smoke testing, or destructive recovery.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.

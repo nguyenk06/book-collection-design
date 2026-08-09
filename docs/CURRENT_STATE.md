@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Migration bridge implemented, validated, and saved as unpublished Version 18; bridge publication awaiting Planner approval
+**Workflow state:** Version 18 bridge publication approved; publication-only brief ready for Engineer intake
 
 ## Summary
 
@@ -27,6 +27,8 @@ Planner accepted external D1 administration as unavailable and outside the inten
 The completed investigation found that migration packaging proves inclusion but not execution, ordering, atomicity, retry, or traffic gating. Runtime `ensureSeeded()` writes and repairs only the Version 16-era schema, while Version 17 ordinary queries and writes expect the new Shopping columns/tables; direct Version 17 publication is therefore unsafe on current evidence. Disposable validation showed that a guarded additive reconciler can repeat and resume from a partial state while preserving Book identity and collection data. Planner approved the temporary Version 16-compatible migration bridge architecture for local implementation/validation and an unpublished Site save only. No Site or production operation has occurred from that approval.
 
 The bridge is now implemented and locally validated. Site Version 18 is saved and unpublished with validated source provenance; its archive contains migrations `0000` through `0003` and excludes independently executable `0004`. The bridge provides Version 16-compatible ordinary data access plus owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and read-only upgrade verification APIs. Full tests pass 37/37, build and bridge/task lint pass, and full lint retains only three pre-existing errors and one warning in the main page. Version 16 remains published; Version 17 and Version 18 remain unpublished. No production operation occurred.
+
+Planner approved publication of the exact saved Version 18 bridge as a standalone gate. The approval does not authorize invoking any production bridge API, exporting data, upgrading schema, publishing final Shopping behavior, smoke testing, restore/import, or destructive action. Until Engineer provides publication evidence, Version 16 remains the verified published version.
 
 ## Current Status Dashboard
 
@@ -138,4 +140,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Planner decides whether to publish Version 18 as the temporary migration bridge. Publication would not authorize production export, schema upgrade, final Shopping publication, smoke testing, restore/import, or destructive action.
+Publish the exact saved Version 18 bridge and stop after sanitized Sites deployment-status evidence. Do not invoke production APIs or perform application smoke testing.
