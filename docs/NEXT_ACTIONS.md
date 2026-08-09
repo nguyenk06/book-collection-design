@@ -4,19 +4,19 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Establish Owner-Authenticated Site Context and Retry Preflight
+### Retry Production Preflight and JSON Export
 
-**Workflow state:** `BLOCKED-EXTERNAL`
+**Workflow state:** Retry brief ready
 
-**Next owner:** `EXTERNAL/WAIT` - Product Owner makes an owner-authenticated Site browser context available; Designer then prepares or reaffirms a collision-safe retry brief.
+**Next owner:** `ENGINEER` - process `2026-08-08-version-18-production-preflight-export-implementation-brief-r2.md` with `CB`.
 
 **Current objective**
 
-Resume the approved read-only preflight/export gate only after an owner-authenticated Site browser context is available.
+Verify the reported owner-authenticated Site context, then retry only the approved schema-status and export GET endpoints under a fresh no-write window.
 
 **Why this is the current priority**
 
-The first attempt aborted before either bridge endpoint returned an application response because the available browser context was signed out. No export or database operation occurred, and the no-write window ended. The existing approval remains limited to the two owner-only GET endpoints; schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
+The Product Owner reports that the intended Site browser context is now open. Engineer must verify owner authentication before proceeding and automatically abort if it is still unavailable. The existing approval remains limited to the two owner-only GET endpoints; schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 

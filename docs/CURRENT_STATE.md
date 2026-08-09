@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** `BLOCKED-EXTERNAL` - production preflight/export aborted; resume when an owner-authenticated Site browser context is available
+**Workflow state:** Owner-authenticated Site browser context reported available; preflight/export retry brief ready for Engineer intake
 
 ## Summary
 
@@ -33,6 +33,8 @@ Sites reported the exact saved Version 18 deployment succeeded. Version 18 is no
 Planner approved the next isolated read-only gate: owner-authenticated production schema status and versioned structured JSON export with private storage and sanitized verification evidence. Approval is not execution evidence and does not authorize the schema-upgrade POST, D1/R2 writes, ordinary application smoke testing, final Shopping publication, restore/import, rollback, or destructive action.
 
 The first preflight/export attempt automatically aborted at the authentication prerequisite. The available Site browser context was signed out and no alternate signed-in context was available. The schema-status endpoint returned no application response, no export was requested or created, and the no-write window ended. One read-only Site root load occurred during troubleshooting outside the brief's strict two-endpoint scope; no interaction or mutation followed.
+
+The Product Owner subsequently reported that the Site is open in the intended browser context. Engineer must verify owner authentication before either approved endpoint call; this report is a resume condition, not production execution evidence.
 
 ## Current Status Dashboard
 
@@ -144,4 +146,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Establish an owner-authenticated browser context for the published Site. A retry requires a fresh no-write window and the existing read-only authorization boundary; schema upgrade and all later gates remain unauthorized.
+Retry the approved read-only preflight/export gate after verifying owner authentication, using a fresh no-write window and the existing two-endpoint boundary. Schema upgrade and all later gates remain unauthorized.

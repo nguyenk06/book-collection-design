@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Version 18 bridge published, preflight/export attempt aborted before authentication | Owner-authenticated Site context and read-only retry, then separately gated upgrade, verification, and final Shopping publication | Medium | Owner-authenticated browser context unavailable; production schema unverified; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; Version 18 bridge published and owner-authenticated context reported available for preflight/export retry | Verify authentication and execute read-only retry, then separately gated upgrade, verification, and final Shopping publication | Medium | Production schema remains unverified; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
