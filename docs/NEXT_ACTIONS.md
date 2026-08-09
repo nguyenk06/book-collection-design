@@ -6,19 +6,19 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle RUN; P2 and P3 complete locally; one bounded read-only environment-feasibility brief queued at the Product Owner Shopping validation gate
+**Workflow state:** Queue Mode enabled; throttle STOP; Engineer paused at a safe resumable checkpoint; P2/P3 complete locally and one read-only environment-feasibility brief remains queued and unaccepted
 
-**Next owner:** `ENGINEER` - use `CB` to evaluate the Shopping validation-environment feasibility brief; do not create a preview/save or start another major product stage.
+**Next owner:** `EXTERNAL/WAIT` - after usage refresh, start the replacement Engineer chat, run read-only `INIT`, and issue explicit `RUN` only when ready to resume.
 
-P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. Before Shopping production activation, Product Owner must perform the recorded hands-on checklist in a safe user-accessible environment. One read-only brief now authorizes investigation of Sites-native options only; preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. Engineering is paused with no active workstream. The queued read-only brief remains unaccepted and cannot be consumed until explicit future `RUN`. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
-Establish the Product Owner Shopping validation checkpoint and determine a safe functional environment without advancing another major product stage.
+Preserve the safe pause. After explicit future `RUN`, determine a safe functional Shopping validation environment without advancing another major product stage.
 
 **Why this is the current priority**
 
-Automated and Designer convergence evidence cannot substitute for hands-on usability review at a major user-facing boundary. Shopping is complete locally but remains an inaccessible black box until Product Owner can exercise realistic desktop and mobile scenarios safely. The Product Owner monitors usage externally; project roles must not infer precise usage.
+Automated and Designer convergence evidence cannot substitute for hands-on usability review at a major user-facing boundary. Shopping is complete locally but remains an inaccessible black box until Product Owner can exercise realistic desktop and mobile scenarios safely. Work is intentionally paused for usage refresh; `INIT` does not resume it, and the Product Owner must explicitly restore `RUN`.
 
 **Success criteria**
 
@@ -60,7 +60,7 @@ Bounded sprint; Product Owner intends approximately 20 percentage points of exte
 
 ## Ready Next
 
-- Verify a safe Product Owner-accessible Shopping validation environment using disposable/isolated data.
+- After explicit future `RUN`, accept and execute the queued read-only feasibility brief for a safe Product Owner-accessible Shopping validation environment using disposable/isolated data.
 - Run the Shopping hands-on checklist after separate environment/save authority is granted.
 - Add normalized book identifiers and candidate matching before advanced scanner work.
 

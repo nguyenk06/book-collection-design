@@ -12,15 +12,15 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** P2 Shopping and P3 focused validation complete locally; one bounded read-only Shopping validation-environment feasibility brief is queued at the Product Owner checkpoint gate
+**Workflow state:** Safe end-of-day pause; P2 Shopping and P3 focused validation complete locally; one bounded read-only Shopping validation-environment feasibility brief remains queued and unaccepted
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
-**Queue throttle:** `RUN`
+**Queue throttle:** `STOP`
 
 **Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
 
-**Engineer execution state:** `WORKING` — mandatory `CB` intake of the bounded validation-environment feasibility brief is the only authorized engineering continuation under `RUN`
+**Engineer execution state:** `PAUSED` — no active workstream or queue consumption; replacement Engineer must run read-only `INIT` and wait for explicit future `RUN`
 
 ## Current Engineering Workstreams
 
@@ -38,14 +38,16 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SHOP-PURCHASE` | Purchase capture and history | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
-| `WS-PO-SHOP-ENV` | Shopping validation-environment feasibility | `[░░░░░░░░░░] 0%` | PLANNED | Read-only feasibility brief queued | Engineer acceptance; verify a private functional option without creating it | Yes; only authorized engineering continuation |
+| `WS-PO-SHOP-ENV` | Shopping validation-environment feasibility | `[░░░░░░░░░░] 0%` | PLANNED | Read-only feasibility brief queued and unaccepted | Explicit future `RUN`, then Engineer acceptance; verify a private functional option without creating it | No while paused |
 | `WS-PO-SHOP-VALIDATE` | Product Owner hands-on Shopping validation | `[░░░░░░░░░░] 0%` | PLANNED | Checkpoint required before Shopping production activation | Verify a private user-accessible environment with disposable/isolated data, then obtain separate authority to create/use it | No |
 
-**Engineer can continue:** YES only through `CB` acceptance and execution of the queued read-only validation-environment feasibility brief. Another major product stage remains stopped.
+**Engineer can continue:** NO while throttle is `STOP`. After usage refresh, a replacement Engineer runs read-only `INIT` and waits for explicit `RUN` before `CB`.
 
 **Current Planner decisions:** None. Technical environment feasibility must be established before asking for save/preview authority.
 
 **Next production gate:** None is currently executable. Product Owner hands-on Shopping validation is required before Shopping production activation; preview/save authority, publication, migration, and all production actions remain separately gated and unauthorized.
+
+**Resume condition:** After usage refresh, start the replacement Site Engineer chat, run read-only `INIT`, verify the preserved unsaved P2/P3 source and queued brief, then issue explicit `RUN` when ready. `INIT` alone does not resume queue consumption.
 
 ## Summary
 
@@ -82,6 +84,8 @@ The bounded P2 Shopping Mode UI is complete and validated in the unsaved local w
 P3 focused scanner/identifier validation is also complete in the unsaved local source. Focused tests pass 18/18, the authoritative full serial suite passes 68/68, task lint and build pass, and two narrow validation defects were corrected: unsupported extra characters can no longer normalize into an otherwise valid ISBN, and invalid checksums are rejected before external lookup. Physical-device validation, ISBN-10/13 conversion, canonical multi-identifier persistence, and advanced candidate matching remain deferred. No Shopping component, schema, Site version, or production state changed.
 
 Planner added a reusable Product Owner hands-on validation checkpoint at meaningful user-facing milestones. P2 Shopping now requires this checkpoint before production activation. The current Shopping/P3 source is unsaved and not user-accessible; Version 19 does not contain Shopping. A supported private preview or unpublished saved version backed by disposable/isolated data is the preferred validation environment, but current evidence does not establish that Sites can expose one without production bindings or publication. That feasibility must be verified read-only before separate preview/save authority is requested.
+
+Engineering then stopped at a safe resumable checkpoint for usage refresh. The feasibility brief remains queued and unaccepted, no workstream is active, and Queue Mode remains enabled with throttle `STOP`. No Site version contains the completed Shopping/P3 source, and no preview, production request, D1/R2 operation, migration, publication, deployment, smoke test, rollback, or destructive action occurred.
 
 ## Current Status Dashboard
 
@@ -194,4 +198,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Establish the safe Shopping hands-on validation environment and run the Product Owner checkpoint before any Shopping production activation. Do not begin another major product stage; preview/save creation, migration, publication, production verification, and smoke testing remain separately gated.
+After explicit future `RUN`, investigate the safe Shopping hands-on validation environment under the queued read-only brief. Then run the Product Owner checkpoint before any Shopping production activation. Do not begin another major product stage; preview/save creation, migration, publication, production verification, and smoke testing remain separately gated.

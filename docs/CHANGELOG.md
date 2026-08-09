@@ -19,6 +19,13 @@ Major milestone states are independent. Implementation does not imply validation
 
 ## Unreleased
 
+### Engineering Session Paused
+
+- Queue Mode remains enabled, but throttle changed from `RUN` to `STOP` at a safe resumable checkpoint for usage refresh.
+- Engineer state is `PAUSED`; P2 Shopping and P3 focused validation remain complete in unsaved local source.
+- The Shopping validation-environment feasibility brief remains queued and unaccepted. A replacement Engineer must run read-only `INIT` and wait for explicit future `RUN` before `CB`.
+- No preview, Site version, source change, production request, D1/R2 operation, migration, publication, deployment, smoke test, rollback, or destructive action occurred during the stop transition.
+
 ### Product Owner Hands-On Validation Checkpoint
 
 - Added a lightweight checkpoint for major user-facing boundaries that separates automated engineering validation, Designer convergence, Product Owner hands-on validation, and production approval.
