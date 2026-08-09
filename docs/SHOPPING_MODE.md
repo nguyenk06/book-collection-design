@@ -62,6 +62,19 @@ This foundation is saved but has not been migrated to production or published; V
 - Complete Shopping Mode UI on the persistence foundation.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
 
+## Accepted Local UI Phase
+
+This bounded phase may proceed against local/disposable data before production schema activation:
+
+- Provide a mobile-first Shopping entry and fast title, author, or identifier search using existing matching capability.
+- Present ownership, buying status, copy count, relevant collection target price, and existing Purchase history without implying stronger edition certainty than the data supports.
+- Allow an owner to record a Purchase with optional Business, independent purchase/sticker prices, optional date, and controlled condition through the existing owner-authorized APIs.
+- Keep Purchase history and editable Book ownership/copy count independent. After recording a Purchase, state clearly that ownership was not changed; do not silently reconcile or derive one from the other.
+- Provide explicit navigation to the existing Book edit flow when the collector chooses to update ownership separately.
+- Preserve one-handed mobile behavior, clear loading/empty/error/success states, and accessible labels/focus.
+
+Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
+
 ## Future improvements
 
 - Configurable decision cues and duplicate warnings.

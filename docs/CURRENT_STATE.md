@@ -12,13 +12,15 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Unpublished Site-version preservation approved but not executed; current session remains closed to additional briefs
+**Workflow state:** First bounded Queue Mode sprint active; P1 unpublished preservation and P2 local Shopping UI are queued
 
-**Queue mode:** `DISABLED` — planned for a future development session/sprint and activated only by explicit `QUEUE MODE: ENABLED`
+**Queue mode:** `ENABLED` — first bounded development sprint
 
-**Queue throttle:** `NOT APPLICABLE`
+**Queue throttle:** `RUN`
 
-**Engineer execution state:** `PAUSED` — validated source is resumable; no further brief may be consumed while Queue Mode is disabled
+**Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
+
+**Engineer execution state:** `AVAILABLE` — may use `CB` to accept the highest-priority eligible brief
 
 ## Current Engineering Workstreams
 
@@ -30,11 +32,12 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-AUTH` | Same-origin authorization and security validation | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-EXPORT` | Private export-download and validation UX | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Approved save execution in a future session | No |
+| `WS-SAVE` | Preserve validated administration source | `[░░░░░░░░░░] 0%` | PLANNED | P1 unpublished save authorized | Eligible immediately through `CB`; stop before publication | No; source/version serialization gate |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
-| `WS-SHOPPING` | Shopping Mode UI | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Production schema activation and a future brief | No |
+| `WS-SHOPPING` | Shopping Mode local UI | `[░░░░░░░░░░] 0%` | PLANNED | P2 local/disposable implementation authorized by sprint | Eligible after `WS-SAVE` completes or safely aborts | Yes after source baseline is clear |
 | `WS-SCANNER` | Identifier/scanner improvements | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Higher-priority Shopping sequence and a future brief | No |
 
-**Engineer can continue:** NO — the accepted local brief is complete, Queue Mode is disabled, and the next action is a separate Site-version gate.
+**Engineer can continue:** YES — accept P1 `WS-SAVE` with `CB`; P2 Shopping remains queued behind the source-preservation gate.
 
 **Current Planner decisions:** None.
 
@@ -179,4 +182,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-In a future explicitly started development session, prepare and execute a narrow brief to preserve the exact validated owner-authenticated administration source as a new unpublished Site version. Planner approval is recorded, but no save has occurred and Queue Mode remains disabled.
+Run the bounded Queue Mode sprint: preserve the exact validated administration source as an unpublished Site version first, then advance the eligible local/disposable Shopping Mode UI milestone. Production migration, publication, production verification, and smoke testing remain separately gated.

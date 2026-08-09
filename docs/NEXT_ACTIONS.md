@@ -4,41 +4,44 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Preserve the Validated Administration Surface
+### First Queue-Mode Sprint
 
-**Workflow state:** Unpublished Site-version save approved; execution deferred to a future explicitly started session
+**Workflow state:** Queue Mode enabled; throttle RUN; two-brief bounded queue ready
 
-**Next owner:** `EXTERNAL/WAIT` - Product Owner starts the next development session and requests the narrow unpublished Site-version save brief.
+**Next owner:** `ENGINEER` - use `CB` to accept P1 unpublished administration-source preservation, then consume P2 local Shopping UI only after P1 completes or safely aborts.
 
-`WS-ADMIN`, `WS-AUTH`, `WS-EXPORT`, and `WS-CONVERGE` are complete locally. Queue Mode is disabled, so no follow-on executable brief is prepared or consumed in this session. Production migration, Shopping UI, and scanner work remain unauthorized.
+`WS-ADMIN`, `WS-AUTH`, `WS-EXPORT`, and `WS-CONVERGE` are complete locally. The bounded queue contains P1 `WS-SAVE` and P2 `WS-SHOPPING`; filename order is not authority. P1 must converge before P2 edits the shared source. Production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
-Preserve the exact locally validated owner-authenticated administration source in a new unpublished Site version without publishing or invoking production.
+Prove Queue Mode with two coherent milestones: first preserve the exact validated administration source as an unpublished Site version, then implement and locally validate a bounded Shopping Mode UI against local/disposable data.
 
 **Why this is the current priority**
 
-The administration page is implemented locally under [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md). Tests pass 44/44, build and task lint pass, and no Site or production state changed. Saving the exact validated source is a separate gate and does not authorize publication or production use.
+Planner approved the unpublished save and this bounded sprint. Shopping Mode is the highest product priority after the database foundation; safe local UI progress does not require production schema activation. The Product Owner monitors usage externally and may issue `DRAIN` or `STOP`; project roles must not infer precise usage.
 
 **Success criteria**
 
-- Planner decides the unpublished save gate independently from publication and production gates.
-- If approved later through a separate execution scope, the saved version must reference the exact validated source and remain unpublished.
-- Saving must not invoke production APIs, export, migration, verification, smoke testing, or other production behavior.
+- P1 preserves the exact validated administration source as an unpublished Site version without publication or production invocation.
+- P2 implements the bounded Shopping workflow defined in [Shopping Mode](SHOPPING_MODE.md) using local/disposable data only.
+- Each brief receives normal CB acceptance and separate validation evidence.
+- At sprint convergence, permanent state distinguishes local, saved, published, migrated, and production-verified status.
 
 **Expected deliverables**
 
-- A future narrow execution brief when Product Owner starts the next development session.
-- Verified saved-version evidence after that separately scoped execution.
+- P1 saved-version evidence or sanitized abort/blocker report.
+- P2 local implementation/validation handoff when eligible and accepted.
+- Mobile-readable sprint review at `DRAIN`, `STOP`, or sprint completion.
 
 **Files likely affected**
 
-- [Planner Inbox](PLANNER_INBOX.md) and milestone state documents.
-- No new executable brief while Queue Mode remains disabled for this session.
+- Site saved-version workflow for P1 only.
+- Site source and disposable tests for P2 only after P1 convergence.
+- Permanent documentation through normal CI processing.
 
 **Estimated effort**
 
-Small decision; execution remains separately scoped.
+Bounded sprint; Product Owner intends approximately 20 percentage points of externally monitored weekly usage, but project roles do not calculate or claim usage.
 
 **Risks**
 
