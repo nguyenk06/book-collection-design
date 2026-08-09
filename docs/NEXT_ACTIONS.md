@@ -6,11 +6,11 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle RUN; Purchase contract resolved and P2 continuation queued
+**Workflow state:** Queue Mode enabled; throttle RUN; P2 continuation active and one P3 quality brief queued
 
-**Next owner:** `ENGINEER` - use `CB` to accept the narrow P2 Purchase-capture/convergence continuation.
+**Next owner:** `ENGINEER` - complete active P2 convergence, then use `CB` for the P3 scanner-test brief if still eligible and no `DRAIN`/`STOP` is active.
 
-P1 is complete in unpublished Version 19. In P2, `WS-SHOP-FLOW` is complete, `WS-SHOP-PURCHASE` is 40%, and `WS-SHOP-QUALITY` is 70%. Planner accepted required non-negative purchase price with optional sticker price, matching the validated schema/API. A narrow eligible continuation is queued. Production migration, another Site save, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. The P2 continuation is accepted: `WS-SHOP-PURCHASE` is active at 40% and `WS-SHOP-QUALITY` remains 70% pending convergence. One P3 focused scanner/identifier test brief is queued behind a collision check. Production migration, another Site save, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
@@ -29,6 +29,7 @@ Planner approved the unpublished save and this bounded sprint. Shopping Mode is 
 **Expected deliverables**
 
 - Final P2 local implementation/validation handoff.
+- P3 focused scanner/identifier validation evidence if it becomes eligible and is accepted before `DRAIN`/`STOP`.
 - Mobile-readable sprint review at `DRAIN`, `STOP`, or sprint completion.
 
 **Files likely affected**

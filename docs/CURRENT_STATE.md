@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Purchase price decision resolved; narrow P2 continuation is queued for Purchase capture and final convergence
+**Workflow state:** P2 continuation accepted and active; one bounded P3 scanner-test brief queued
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,11 +20,11 @@
 
 **Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
 
-**Engineer execution state:** `AVAILABLE` — may accept the eligible P2 continuation with `CB`
+**Engineer execution state:** `WORKING` — P2 Purchase capture and convergence are active
 
 ## Current Engineering Workstreams
 
-Progress is a coarse estimate toward each current objective, not validation evidence. The active administration brief remains the authority; splitting its existing scope below does not expand it.
+Progress is a coarse estimate toward each current objective, not validation evidence. Accepted briefs remain the authority; workstream tracking does not expand them.
 
 | ID | Workstream | Progress | State | Authority | Blocker / next gate | Independent continuation |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -35,11 +35,11 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SAVE` | Preserve validated administration source | `[██████████] 100%` | COMPLETE | Unpublished Version 19 verified | Publication remains separately gated | No |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
 | `WS-SHOP-FLOW` | Mobile Shopping search/scan/status flow | `[██████████] 100%` | COMPLETE | Implemented locally; 47/47 total tests pass | Local flow validated | No further work required |
-| `WS-SHOP-PURCHASE` | Purchase capture and history | `[████░░░░░░] 40%` | PLANNED | Required purchase price accepted | Eligible continuation brief through `CB` | Yes, coordinated with quality stream |
+| `WS-SHOP-PURCHASE` | Purchase capture and history | `[████░░░░░░] 40%` | ACTIVE | P2 continuation accepted | Local Purchase capture review | Yes, coordinated with quality stream |
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[███████░░░] 70%` | PLANNED | Eligible flow validation passes | Purchase capture and final convergence | No; convergence stream |
-| `WS-SCANNER` | Identifier/scanner improvements | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Higher-priority Shopping sequence and a future brief | No |
+| `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[░░░░░░░░░░] 0%` | PLANNED | P3 local quality brief queued | P2 convergence or confirmed isolated surfaces | Yes when collision-free |
 
-**Engineer can continue:** YES — accept the narrow P2 continuation brief with `CB`.
+**Engineer can continue:** YES — finish active P2; then use `CB` for P3 if throttle remains `RUN` and eligibility/collision checks pass.
 
 **Current Planner decisions:** None.
 
