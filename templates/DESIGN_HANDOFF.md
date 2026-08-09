@@ -17,6 +17,16 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 
 <!-- Select exactly one: COMPLETE IMPLEMENTATION | PARTIAL IMPLEMENTATION | VALIDATION FAILED -->
 
+## Engineer execution state
+
+- Queue mode: <!-- ENABLED | DISABLED -->
+- Throttle: <!-- RUN | DRAIN | STOP | NOT APPLICABLE -->
+- Engineer state: <!-- WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | STOPPED AT GATE -->
+- Active:
+- Queued:
+- Blocked:
+- Engineer can continue: <!-- YES | NO -->
+
 ## Baseline
 
 <!-- Identify the design brief or safe implementation baseline reviewed. Do not include machine paths, private IDs, or unnecessary commit hashes. -->

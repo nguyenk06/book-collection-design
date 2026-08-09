@@ -401,6 +401,76 @@ Individually complete workstreams do not make a combined milestone ready. Before
 
 Production remains sequential. Saved-version creation, publication, production status/export, schema upgrade, verification, Shopping-capable publication, smoke testing, and destructive recovery retain explicit independent gates in dependency order. Never infer production authorization from a local multi-workstream brief.
 
+### Future engineering queue mode
+
+The existing shared `briefs/` directory may serve as a lightweight future work queue. This capability is dormant unless Planner or Product Owner explicitly records `QUEUE MODE: ENABLED` for a bounded development session or sprint. A new week, `INIT`, `CI`, `CB`, or the mere presence of briefs never activates it.
+
+When Queue Mode is disabled:
+
+- Engineer completes only already accepted work and does not consume another brief automatically.
+- Designer may document or plan future work but must not populate executable follow-on briefs for the current session unless separately authorized.
+- Queue throttle is `NOT APPLICABLE`; an earlier `RUN` instruction cannot carry across a disabled period.
+
+When enabled, record an Engineer execution state distinct from workstream states:
+
+- `WORKING` — authorized executable work is actively progressing.
+- `AVAILABLE` — current work is complete and Engineer may use `CB` to accept eligible queued work.
+- `BLOCKED` — no authorized executable work can currently continue.
+- `DRAINING` — finish the current safe unit or convergence point, then do not accept another queued brief.
+- `PAUSED` — a safe resumable state is preserved; do not consume queued work until resumed.
+- `STOPPED AT GATE` — an explicit design, approval, or production gate prevents continuation.
+
+Planner/Product Owner controls future automatic queue consumption with:
+
+- `RUN` — continue current authorized work and, at a suitable transition point, use `CB` to consider the highest-priority eligible queued brief within the approved sprint/envelope. It does not accept a brief or expand authority.
+- `DRAIN` — finish the current safe unit, validation, or convergence point; preserve/report a resumable state; do not start another queued brief.
+- `STOP` — stop at the nearest safe checkpoint, preserve/report resumable state, and do not start another queued brief. It is not an abrupt interruption during an integrity-sensitive write, migration, save, or similar operation unless Product Owner explicitly orders an emergency stop.
+
+`RUN`, `DRAIN`, and `STOP` never authorize production, override exclusions or decisions, bypass dependencies or attempt limits, or cross a design/production gate. After `DRAIN` or `STOP`, preserve workstream progress, accepted and queued briefs, blockers, attempt counts, decisions, and next eligibility so a future `INIT` plus explicit `RUN` can resume safely.
+
+#### Queue priority and eligibility
+
+Filename order is not authoritative. Each queued brief states:
+
+- Queue priority: `P1` highest currently useful, `P2` normal upcoming, or `P3` useful fill-in.
+- Dependencies and a precise `Eligible when` condition.
+- Whether it can run alongside active work.
+- Shared-file/surface collisions.
+- Required Planner decisions.
+- Local and production authority.
+- Sprint/envelope association when applicable.
+
+Under enabled `RUN`, Engineer may use `CB` to consider the highest-priority eligible brief only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued brief is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
+
+A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
+
+#### Designer work-ahead and reporting
+
+During enabled `RUN`, Designer may process CI evidence, maintain permanent state, batch decisions, reprioritize unaccepted briefs within Planner direction, and prepare eligible future work while Engineer continues. Stay only one or two meaningful executable briefs ahead. Do not create speculative work merely to keep the queue non-empty.
+
+When Queue Mode is enabled, CI reports Engineer state, active workstreams, queued work, blocked work, pending decisions, whether Engineer can continue, whether replenishment is needed, and whether `DRAIN` or `STOP` is in effect. Do not ask Planner to act merely because a decision is pending when Engineer can safely continue elsewhere.
+
+Meaningful future Engineer reports include:
+
+```text
+ENGINEER STATE:
+<WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | STOPPED AT GATE>
+
+ACTIVE:
+<workstreams>
+
+QUEUED:
+<eligible or waiting briefs/workstreams>
+
+BLOCKED:
+<blocked streams and reason>
+
+ENGINEER CAN CONTINUE:
+<YES | NO>
+```
+
+Do not require this expanded block for trivial acknowledgements. Queue state survives thread replacement through permanent `CURRENT_STATE.md`, accepted/queued transport artifacts, and the normal `INIT` bootstrap.
+
 ### Three-attempt reassessment rule
 
 Within each workstream, a materially similar implementation, integration, deployment, migration, authentication, or production-operation problem may receive at most three substantive attempts before mandatory reassessment.

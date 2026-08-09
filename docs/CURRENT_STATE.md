@@ -4,7 +4,7 @@
 
 **Published Site version:** Version 18 migration bridge; deployment succeeded, but application and schema behavior remain unverified
 
-**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; migration bridge source preserved in Version 18 and now published
+**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; migration bridge source preserved in Version 18 and now published; owner-authenticated administration surface implemented locally but not saved
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
@@ -12,7 +12,13 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Owner-authenticated in-Site administration brief accepted; Engineer is implementing locally under a no-production authority boundary
+**Workflow state:** Owner-authenticated administration milestone complete locally; separate unpublished Site-version save awaits Planner approval
+
+**Queue mode:** `DISABLED` — planned for a future development session/sprint and activated only by explicit `QUEUE MODE: ENABLED`
+
+**Queue throttle:** `NOT APPLICABLE`
+
+**Engineer execution state:** `STOPPED AT GATE` — local milestone complete; no further brief may be consumed while Queue Mode is disabled
 
 ## Current Engineering Workstreams
 
@@ -20,19 +26,19 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 | ID | Workstream | Progress | State | Authority | Blocker / next gate | Independent continuation |
 | --- | --- | --- | --- | --- | --- | --- |
-| `WS-ADMIN` | Owner-authenticated administration page | `[█░░░░░░░░░] 10%` | ACTIVE | Local implementation/validation authorized | Local review and convergence | Yes, coordinated with shared auth/UI hotspots |
-| `WS-AUTH` | Same-origin authorization and security validation | `[░░░░░░░░░░] 0%` | PLANNED | Authorized within active brief | Coordinate shared auth routes with `WS-ADMIN` | Yes, except shared hotspots |
-| `WS-EXPORT` | Private export-download and validation UX | `[░░░░░░░░░░] 0%` | PLANNED | Authorized within active brief | Admin shell and authorization path | Yes after dependency is available |
-| `WS-CONVERGE` | Integrated admin milestone validation | `[░░░░░░░░░░] 0%` | PLANNED | Authorized within active brief | `WS-ADMIN`, `WS-AUTH`, and `WS-EXPORT` ready | No; convergence point |
+| `WS-ADMIN` | Owner-authenticated administration page | `[██████████] 100%` | COMPLETE | Local implementation/validation completed | Unpublished Site-version save approval | No further local work authorized |
+| `WS-AUTH` | Same-origin authorization and security validation | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
+| `WS-EXPORT` | Private export-download and validation UX | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
+| `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Unpublished Site-version save approval | No |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
 | `WS-SHOPPING` | Shopping Mode UI | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Production schema activation and a future brief | No |
 | `WS-SCANNER` | Identifier/scanner improvements | `[░░░░░░░░░░] 0%` | DEFERRED | Not in current brief | Higher-priority Shopping sequence and a future brief | No |
 
-**Engineer can continue:** YES — `WS-ADMIN`, then eligible authorized `WS-AUTH` and `WS-EXPORT` work while respecting shared-file coordination.
+**Engineer can continue:** NO — the accepted local brief is complete, Queue Mode is disabled, and the next action is a separate Site-version gate.
 
-**Current Planner decisions:** None.
+**Current Planner decisions:** Approve or defer preserving the exact validated administration source as a new unpublished Site version.
 
-**Next production gate:** None is currently executable. After local convergence, Site-version saving and every subsequent production action require their documented sequential gates.
+**Next production gate:** None is currently executable. An unpublished Site-version save is the next non-production gate; publication and all production actions remain separately gated.
 
 ## Summary
 
@@ -59,6 +65,8 @@ The Product Owner subsequently reported owner mode, but the second attempt still
 The completed read-only authentication/persistence-path investigation established that normal owner mutations and the Version 18 bridge use the same server-side owner authorization helper, Site worker, and managed D1 binding; cover operations additionally use the managed R2 binding. Normal signed-in UI operations originate as same-origin browser requests, while the two Engineer attempts failed before application route execution. Focused disposable validation passed 34/34. No source, production request, data/schema operation, Site version, deployment, or publication changed.
 
 Planner approved a narrowly scoped permanent owner-authenticated in-Site administration surface that invokes the existing bridge APIs through the proven same-origin request path. Server-side authorization remains authoritative; schema status, private export, approved upgrade, and verification remain distinct steps, with explicit confirmation and same-origin/CSRF protection before any future schema-changing request. This surface is not an authentication bypass and must not provide owner credentials, session material, or impersonation capability to Engineer. See [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md).
+
+That surface is now implemented and validated locally. Owners receive a staged status, private export, separately approved upgrade, and verification workflow; anonymous users use the existing sign-in flow, and authenticated non-owners receive no controls or administrative data. Upgrade submission requires owner authorization, same-origin validation, JSON content type, a dedicated action header, explicit acknowledgment, and an exact confirmation phrase. Duplicate submission is disabled while active. Tests pass 44/44, build and task lint pass, and full lint retains only three pre-existing errors and one warning. No source was saved as a Site version, and no production request, export, D1/R2 operation, schema change, deployment, or publication occurred.
 
 ## Current Status Dashboard
 
@@ -171,4 +179,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Implement and locally validate the approved owner-authenticated in-Site administration surface under the active brief. Stop before saving a Site version, publication, production requests, export, migration, or any other production operation.
+Seek Planner approval to preserve the exact validated owner-authenticated administration source as a new unpublished Site version. Queue Mode remains disabled; do not create or consume another implementation milestone in the current session.

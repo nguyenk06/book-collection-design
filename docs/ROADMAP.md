@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Version 18 bridge published and owner-authenticated administration design approved | Administration-surface implementation, then separately gated export/upgrade/verification/publication | Medium | Administration surface not implemented; production schema remains unverified; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; owner-authenticated administration surface implemented and validated locally but not saved | Unpublished Site-version preservation, then separately gated publication/export/upgrade/verification | Medium | Save/publication gates pending; production schema remains unverified; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,7 +27,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Implement the approved small permanent owner-authenticated in-Site administration surface for the migration bridge:
+Preserve the exact validated owner-authenticated administration surface as an unpublished Site version after separate approval:
 
 - Keep bridge traffic compatible with Version 16 until an explicit owner-authorized upgrade completes.
 - Reuse the verified same-origin Site path and existing server-side owner authorization for status, versioned JSON export, separately approved re-entrant upgrade, and verification.

@@ -4,43 +4,41 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Implement the Owner-Authenticated Administration Surface
+### Preserve the Validated Administration Surface
 
-**Workflow state:** Brief accepted; local implementation active
+**Workflow state:** Local implementation complete; unpublished Site-version approval pending
 
-**Next owner:** `ENGINEER` - continue the accepted owner-authenticated administration-surface brief through local convergence; stop before Site save or production activity.
+**Next owner:** `PLANNER` - approve or defer preserving the exact validated administration source as a new unpublished Site version in [Planner Inbox](PLANNER_INBOX.md).
 
-The current local envelope may be tracked as `WS-ADMIN`, `WS-AUTH`, `WS-EXPORT`, and `WS-CONVERGE`; these labels do not expand the accepted brief. See [Current State](CURRENT_STATE.md). Production migration, Shopping UI, and scanner work are not authorized by this envelope.
+`WS-ADMIN`, `WS-AUTH`, `WS-EXPORT`, and `WS-CONVERGE` are complete locally. Queue Mode is disabled, so no follow-on executable brief is prepared or consumed in this session. Production migration, Shopping UI, and scanner work remain unauthorized.
 
 **Current objective**
 
-Implement and locally validate a small permanent owner-authenticated Site administration page that invokes the existing bridge APIs through the proven same-origin Site request path.
+Preserve the exact locally validated owner-authenticated administration source in a new unpublished Site version without publishing or invoking production.
 
 **Why this is the current priority**
 
-Planner approved the permanent narrow administration page, with the explicit constraint that it is an owner-authenticated surface rather than an authentication bypass or a way to provide Engineer with owner credentials. It must reuse the existing server-side owner authorization and same-origin Site path while keeping status, export, approved upgrade, and verification separately gated. See [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md).
+The administration page is implemented locally under [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md). Tests pass 44/44, build and task lint pass, and no Site or production state changed. Saving the exact validated source is a separate gate and does not authorize publication or production use.
 
 **Success criteria**
 
-- An owner-authenticated administration page uses existing same-origin bridge APIs and server-side owner authorization.
-- Anonymous and non-owner users receive no administrative data or capability.
-- The implementation contains no authentication bypass, embedded credentials, session forwarding, impersonation, or Engineer credential path.
-- Schema-changing action requires deliberate confirmation and same-origin/CSRF protection and remains unusable without owner authentication.
-- Local/disposable tests validate authorization, gating, presentation, confirmation behavior, and failure handling without production access.
+- Planner decides the unpublished save gate independently from publication and production gates.
+- If approved later through a separate execution scope, the saved version must reference the exact validated source and remain unpublished.
+- Saving must not invoke production APIs, export, migration, verification, smoke testing, or other production behavior.
 
 **Expected deliverables**
 
-- Locally implemented and validated administration surface.
-- Sanitized Engineer handoff; no Site save or production change.
+- Planner decision on the unpublished Site-version preservation gate.
+- A separate narrow execution brief only if approved in a future instruction.
 
 **Files likely affected**
 
-- Site UI/routes and focused tests within the accepted brief.
-- No production or Site saved-version change.
+- [Planner Inbox](PLANNER_INBOX.md) and milestone state documents.
+- No new executable brief while Queue Mode remains disabled for this session.
 
 **Estimated effort**
 
-Small-medium.
+Small decision; execution remains separately scoped.
 
 **Risks**
 
@@ -76,6 +74,7 @@ Small-medium.
 
 ## Recently Completed
 
+- Implemented and locally validated the owner-authenticated administration surface; 44/44 tests, build, and task lint pass, with no Site save or production operation.
 - Completed the read-only Site authentication/persistence-path investigation; 34/34 focused tests passed and no production or Site state changed.
 - Published the exact validated Version 18 migration bridge; Sites deployment succeeded without application/API or database operations.
 - Implemented and locally validated the Version 16-compatible migration bridge; saved it as unpublished Site Version 18 with packaged `0004` excluded.

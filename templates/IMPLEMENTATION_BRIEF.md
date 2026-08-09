@@ -11,8 +11,16 @@
 - Planner decision: <!-- NONE, or a concise accepted direction with a permanent repository link. Do not copy decision history. -->
 - Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT -->
 - Attempt/reset rationale: <!-- Identify the underlying problem and prior attempt evidence; for a reset, explain the material architecture/capability/requirement/premise change. -->
+- Queue priority: <!-- P1 | P2 | P3 | NOT QUEUED -->
+- Eligible when: <!-- Objective dependency/gate condition. -->
+- Can run alongside active work: <!-- YES | NO -->
+- Collision/shared-surface concerns: <!-- Concise hotspots or NONE. -->
+- Required Planner decision: <!-- Decision reference or NONE. -->
+- Sprint/envelope association: <!-- Identifier or NOT APPLICABLE. -->
 
 Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
+
+Queue metadata does not activate Queue Mode, make a brief executable, or replace `CB` acceptance. When Queue Mode is disabled, Engineer must not consume this as follow-on work without separate authority.
 
 ## Workstreams
 
