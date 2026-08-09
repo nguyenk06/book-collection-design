@@ -8,11 +8,11 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 **Current objective**
 
-Execute the conditionally authorized production-read and backup gate after all readiness details are confirmed privately, then stop for evidence review.
+Establish the private Packet A readiness prerequisites. Packet A must remain blocked until a later sanitized readiness attestation confirms every prerequisite.
 
 **Why this is the current priority**
 
-The operator runbook is complete. Planner authorized Packet A only: target verification, read-only preflight, Time Travel bookmark retrieval, protected SQL export, backup verification, and the maintenance/write freeze after readiness confirmation. Migration, publication, and rollback remain unauthorized. See [Database](DATABASE.md).
+The operator runbook is complete, but the product owner reported `Packet A readiness: NOT READY` on 2026-08-08. No production access may occur until readiness is later confirmed. Migration, publication, and rollback remain unauthorized. See [Database](DATABASE.md).
 
 **Success criteria**
 
