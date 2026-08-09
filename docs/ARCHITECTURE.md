@@ -129,3 +129,11 @@ The implemented temporary bridge follows [ADR-0009](decisions/ADR-0009-sites-nat
 - Duplicate invocation protection is process-local, not a distributed lock; the private single-owner workflow must serialize production invocation.
 - Schema inspection is durable truth because runtime phase/error memory can reset.
 - Versioned JSON export contains structured records and R2 references but is not a database snapshot, R2-byte backup, or restore mechanism.
+
+### Verified authentication and invocation paths
+
+- Normal owner mutations and bridge administration routes use the same server-side owner authorization helper in the same Site worker.
+- Sites-forwarded identity is checked against the configured owner identity on every protected server request; client-side owner-mode controls are advisory only.
+- Normal UI operations use same-origin browser requests. D1 access is acquired server-side through the managed binding; cover operations also use the managed R2 binding.
+- The failed Engineer preflight attempts ended before application route execution. They do not establish an authorization-helper, routing, or binding failure, and direct Engineer invocation is not a proven operational path.
+- A narrow permanent owner-only in-Site administration surface is proposed, not yet accepted, to reuse the proven same-origin path while leaving bridge business logic in server modules. Any schema-changing action must add deliberate confirmation and same-origin/CSRF protection and remain separately authorized.

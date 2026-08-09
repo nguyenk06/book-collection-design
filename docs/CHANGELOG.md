@@ -109,6 +109,19 @@ The first preflight/export attempt automatically aborted because no owner-authen
 
 A second attempt also aborted before an application response after Product Owner reported owner mode; the authenticated tab was not available to the Engineer browser context and direct navigation was blocked. No production read, export, write, or D1/R2 change occurred. The next milestone changed from retry to read-only comparison of proven in-Site persistence/authentication paths against the administrative bridge.
 
+### Site Authentication and Persistence Path Investigation
+
+| State | Verified status |
+| --- | --- |
+| Read-only investigation complete | Yes |
+| Focused disposable validation | Passed; 34/34 |
+| Source or Site version changed | No |
+| Production request/data access | No |
+| Production migration or verification | No |
+| Publication/deployment changed | No; Version 18 remains published |
+
+The investigation verified that normal owner mutations and bridge routes share the same server-side owner authorization helper, Site worker, and managed D1 binding. Normal UI requests use a same-origin browser path; both direct Engineer attempts failed before application route execution and therefore do not establish an application-authentication or D1 failure. A narrow permanent owner-only in-Site administration surface is recommended but awaits Planner approval; no implementation or production authority follows from the investigation.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.

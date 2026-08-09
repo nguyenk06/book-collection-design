@@ -146,6 +146,8 @@ The first owner-only schema-status/export attempt aborted because the available 
 
 A second attempt after Product Owner reported owner mode also aborted before an application response because the authenticated Site tab was not available to the Engineer browser session and direct endpoint navigation was blocked by the browser context. No production read, export, write, or D1/R2 operation occurred. This is now authentication/invocation architecture evidence: Site runtime D1 access, signed-in normal Site use, and external/direct Engineer invocation of an owner-only endpoint are separate capabilities and must not be conflated.
 
+The subsequent read-only path investigation verified that ordinary owner mutations and bridge routes use the same authorization helper, Site worker, and managed D1 binding. Normal UI requests use the same-origin browser path; direct Engineer invocation failed before route execution and is not evidence of an application-authentication or D1 failure. Focused disposable validation passed 34/34. A permanent owner-only in-Site administration surface is recommended for Planner approval so status, export, separately approved upgrade, and verification can use the proven request path. No production operation or architecture approval resulted from the investigation.
+
 The bridge export contract is `cyoa-collection-bridge-export` version 1. It includes complete structured Books, Collections, and present Businesses/Purchases plus deduplicated R2 object references. It excludes secrets and R2 bytes and has no restore/import counterpart in this milestone.
 
 No step below is authorized for execution by this document.

@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Version 18 bridge published, two admin preflight attempts blocked before application response | Auth/persistence-path investigation and accepted Sites-native invocation design, then separately gated backup/upgrade/verification/publication | Medium | Admin invocation model unproven; production schema remains unverified; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; Version 18 bridge published and auth/persistence-path investigation complete | Planner decision on the proposed in-Site administration boundary, then implementation and separately gated export/upgrade/verification/publication | Medium | Administration design not yet approved; production schema remains unverified; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,10 +27,11 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Complete a read-only authentication and persistence-path investigation before another production preflight attempt:
+Decide whether to use a small permanent owner-only in-Site administration surface for the migration bridge:
 
 - Keep bridge traffic compatible with Version 16 until an explicit owner-authorized upgrade completes.
-- Provide owner-only status, versioned JSON export, re-entrant upgrade, and verification API boundaries.
+- Reuse the verified same-origin Site path and existing server-side owner authorization for status, versioned JSON export, separately approved re-entrant upgrade, and verification.
+- Require deliberate confirmation and same-origin/CSRF protection before any schema-changing action.
 - Preserve portable schema/business logic and treat application export as weaker than a D1 snapshot.
 - Keep bridge implementation, save, publication, production export/upgrade, final publication, smoke testing, and destructive actions separately scoped and gated.
 
