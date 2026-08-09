@@ -33,6 +33,7 @@ The Designer works in the `book-collection-design` repository and owns:
 - Documentation
 - ADRs
 - Preparation of implementation briefs
+- Handoff workspace housekeeping
 
 The Designer must not:
 
@@ -111,10 +112,53 @@ The preferred workflow is file-based rather than large chat copy-and-paste block
 
 | Direction | File | Handling |
 | --- | --- | --- |
-| Design to Site | `IMPLEMENTATION_BRIEF.md` | Download or share from the Design workspace; upload to the Site workspace |
-| Site to Design | `DESIGN_HANDOFF.md` | Download or share from the Site workspace; upload to the Design workspace |
+| Design to Site | `IMPLEMENTATION_BRIEF.md` template | Create a milestone-specific file in `briefs/`; share it with the Site Engineer |
+| Site to Design | `DESIGN_HANDOFF.md` template | Receive a milestone-specific file in `inbox/`; review it as read-only evidence |
 
-Each new handoff file may replace the prior temporary handoff. Do not treat these files as permanent project history unless the product owner explicitly asks to archive them. Durable facts must be incorporated into the relevant design documents or Site version history.
+Do not treat transport files as permanent project history unless the product owner explicitly asks to archive them. Durable facts must be incorporated into the relevant design documents or Site version history.
+
+## Handoff Workspace Lifecycle
+
+The handoff workspace is outside both repositories. The Designer owns its housekeeping and maintains three logical areas:
+
+| Area | Purpose | Exit gate |
+| --- | --- | --- |
+| `inbox/` | Read-only Site Engineer handoffs awaiting Design review | Verified evidence is incorporated into permanent documentation and the resulting documentation state is accepted |
+| `briefs/` | Designer-prepared implementation briefs awaiting Engineer acceptance | Site Engineer confirms receipt and accepts the brief as the active implementation specification |
+| `processed/` | Transport artifacts that passed their applicable exit gate | Retain locally according to product-owner housekeeping needs; do not commit by default |
+
+### Implementation brief lifecycle
+
+1. The Designer prepares one milestone-specific brief in `briefs/` from the Implementation Brief template.
+2. The Designer shares that exact file with the Site Engineer.
+3. The brief remains in `briefs/` while receipt or scope acceptance is pending.
+4. Only after the Site Engineer confirms receipt and accepts it as the active implementation specification may the Designer move the brief to `processed/`.
+5. If the Engineer rejects or requests revision, retain the superseded brief without overwriting it and create a newly named revision.
+
+Moving a brief records transport acceptance only. It does not prove implementation, validation, Site versioning, migration, or publication.
+
+### Design handoff lifecycle
+
+1. A Site Engineer handoff enters `inbox/` and remains unchanged during intake review.
+2. The Designer verifies sanitization, evidence boundaries, conflicts, and referenced design authorities.
+3. The Designer incorporates only supported facts into permanent design documentation.
+4. Resolve and record any required product-owner decisions.
+5. Only after the verified evidence has been incorporated and the resulting documentation state is accepted may the Designer move the handoff to `processed/`.
+
+Partial implementations and failed validations use the same gate: record their verified state before processing the artifact. If evidence is missing, conflicted, rejected, or still under review, leave the handoff in `inbox/`.
+
+### Naming and collision safety
+
+Use descriptive milestone filenames rather than generic transport names. Recommended patterns are:
+
+- `YYYY-MM-DD-<milestone>-implementation-brief.md`
+- `YYYY-MM-DD-<milestone>-design-handoff.md`
+
+Use lowercase kebab-case for `<milestone>`, for example `2026-08-08-shopping-persistence-design-handoff.md`. Add a revision suffix such as `-r2` when the same milestone produces another artifact.
+
+Before creating, copying, or moving a file, check both the source and destination names. Never overwrite an unrelated or earlier handoff. If a destination filename already exists, compare its milestone and lifecycle context, then select a unique revision or timestamped filename. Do not delete or replace the existing artifact merely to resolve a collision.
+
+If permissions prevent the Designer from moving an artifact, leave it in place and report the housekeeping limitation. Never weaken read-only protection or modify the Site Engineer's source handoff to force a lifecycle transition.
 
 ## Conflict Rules
 

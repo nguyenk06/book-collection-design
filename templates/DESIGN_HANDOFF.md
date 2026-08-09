@@ -2,6 +2,15 @@
 
 > Temporary Site-to-Design report. Include only verified, sanitized evidence needed to update permanent design documentation.
 
+## Transfer metadata
+
+- Milestone: <!-- Short milestone name matching the accepted brief. -->
+- Prepared date: <!-- YYYY-MM-DD -->
+- Source brief: <!-- Descriptive brief filename or safe identifier. -->
+- Recommended filename: <!-- YYYY-MM-DD-<milestone>-design-handoff.md -->
+
+The Designer keeps this source unchanged in `inbox/` until its verified evidence is incorporated into permanent documentation and accepted. It may then move to `processed/` without overwriting an existing artifact.
+
 ## Handoff status
 
 <!-- Select exactly one: COMPLETE IMPLEMENTATION | PARTIAL IMPLEMENTATION | VALIDATION FAILED -->

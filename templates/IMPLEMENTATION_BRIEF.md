@@ -2,6 +2,15 @@
 
 > Temporary Design-to-Site handoff for one milestone. Keep concise, link to design authority, and remove all sensitive or machine-specific information before sharing.
 
+## Transfer metadata
+
+- Milestone: <!-- Short milestone name. -->
+- Prepared date: <!-- YYYY-MM-DD -->
+- Recommended filename: <!-- YYYY-MM-DD-<milestone>-implementation-brief.md -->
+- Engineer acceptance: <!-- PENDING until the Site Engineer confirms receipt and accepts this as the active specification. -->
+
+Keep this file in `briefs/` until Engineer acceptance is confirmed. The Designer may then move it to `processed/` without overwriting an existing artifact.
+
 ## Objective
 
 <!-- State the single implementation outcome. -->
