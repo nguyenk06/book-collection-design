@@ -117,3 +117,15 @@ Avoid:
 - Data formats that only one runtime can interpret.
 
 Apply this constraint proportionately. It guides boundaries and tradeoffs in current work but does not authorize speculative abstractions, new platform implementations, or broader milestone scope.
+
+## Sites-native migration bridge
+
+The implemented temporary bridge follows [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md):
+
+- Ordinary Books, Collections, and cover paths use Version 16-compatible schema access until explicit upgrade completion.
+- Owner-only HTTP/JSON APIs separate schema status, structured export, explicit upgrade, and verification from UI, startup, `ensureSeeded()`, and ordinary traffic.
+- Sites authentication is isolated at the authorization boundary; testable server modules own reconciliation and export rules.
+- Reconciliation inspects before additive changes, supports repeat and partial-state recovery, and verifies preservation before completion.
+- Duplicate invocation protection is process-local, not a distributed lock; the private single-owner workflow must serialize production invocation.
+- Schema inspection is durable truth because runtime phase/error memory can reset.
+- Versioned JSON export contains structured records and R2 references but is not a database snapshot, R2-byte backup, or restore mechanism.

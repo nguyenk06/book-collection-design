@@ -4,7 +4,7 @@
 
 **Verified production implementation:** Site Version 16
 
-**Verified saved implementation:** Shopping persistence/API foundation in unpublished Site Version 17; not migrated to production or published
+**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; validated migration bridge in unpublished Version 18; neither migrated to production or published
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Migration bridge approved; local implementation/validation and unpublished Site save ready for Engineer intake
+**Workflow state:** Migration bridge implemented, validated, and saved as unpublished Version 18; bridge publication awaiting Planner approval
 
 ## Summary
 
@@ -25,6 +25,8 @@ The operator runbook and private-project readiness model are complete. The Produ
 Planner accepted external D1 administration as unavailable and outside the intended operating model. The project must use only supported capabilities exposed through ChatGPT Sites. External Cloudflare sessions, Wrangler authentication, API credentials/tokens, direct D1 console access, and another deployment platform are not project requirements. Version 17 activation now requires a read-only Sites-native architecture investigation; no production operation or publication is authorized.
 
 The completed investigation found that migration packaging proves inclusion but not execution, ordering, atomicity, retry, or traffic gating. Runtime `ensureSeeded()` writes and repairs only the Version 16-era schema, while Version 17 ordinary queries and writes expect the new Shopping columns/tables; direct Version 17 publication is therefore unsafe on current evidence. Disposable validation showed that a guarded additive reconciler can repeat and resume from a partial state while preserving Book identity and collection data. Planner approved the temporary Version 16-compatible migration bridge architecture for local implementation/validation and an unpublished Site save only. No Site or production operation has occurred from that approval.
+
+The bridge is now implemented and locally validated. Site Version 18 is saved and unpublished with validated source provenance; its archive contains migrations `0000` through `0003` and excludes independently executable `0004`. The bridge provides Version 16-compatible ordinary data access plus owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and read-only upgrade verification APIs. Full tests pass 37/37, build and bridge/task lint pass, and full lint retains only three pre-existing errors and one warning in the main page. Version 16 remains published; Version 17 and Version 18 remain unpublished. No production operation occurred.
 
 ## Current Status Dashboard
 
@@ -124,6 +126,8 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 - Direct operator-controlled production D1 migration, export, and Time Travel controls are unavailable unless Sites itself exposes a supported mechanism.
 - Sites exposes saved versions, deployment/status controls, worker logs, hosted access controls, and managed logical D1/R2 bindings, but no standalone D1 migration/query/export/Time Travel control was found.
 - `ensureSeeded()` performs legacy runtime writes but does not create Shopping schema; it cannot safely prepare an unmigrated database for direct Version 17 traffic.
+- Version 18 is the saved migration bridge. Its duplicate-request guard is runtime-local rather than distributed, and schema inspection remains the durable source of truth.
+- The bridge JSON export is portable structured data with R2 references, not a D1 snapshot, R2-byte backup, or restore facility.
 - The book-to-collection foreign key and historical Added Date backfill remain deferred; unknown historical dates must not be fabricated.
 - No advanced same-book candidate workflow or multiple normalized identifiers.
 - No roadmap bookshelf, exports, backups, or dry-run imports.
@@ -134,4 +138,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Implement and validate the approved migration bridge locally, then save it as a new unpublished Site version. Bridge publication, production export, schema upgrade, final Shopping publication, smoke testing, and destructive action remain unauthorized.
+Planner decides whether to publish Version 18 as the temporary migration bridge. Publication would not authorize production export, schema upgrade, final Shopping publication, smoke testing, restore/import, or destructive action.

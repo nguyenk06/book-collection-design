@@ -4,34 +4,28 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Implement and Save Migration Bridge
+### Decide Version 18 Bridge Publication
 
-**Workflow state:** Active implementation brief ready
+**Workflow state:** Awaiting Planner publication decision
 
-**Next owner:** `ENGINEER` - process `2026-08-08-sites-native-migration-bridge-implementation-brief.md` with `CB`.
+**Next owner:** `PLANNER` - decide `Authorize Version 18 Bridge Publication` in [Planner Inbox](PLANNER_INBOX.md).
 
 **Current objective**
 
-Implement and validate the approved Version 16-compatible migration bridge locally, then save a new unpublished Site version and stop.
+Approve or defer publication of saved Site Version 18 as the temporary Version 16-compatible migration bridge.
 
 **Why this is the current priority**
 
-Planner approved the migration-bridge architecture for local implementation/validation and an unpublished Site save only. The bridge must keep ordinary traffic Version 16-compatible and provide explicit owner-only status, JSON export, re-entrant upgrade, and verification boundaries. Publication and every production operation remain separately gated. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
+The bridge implementation and validation are complete, and Version 18 is saved unpublished with `0004` absent from its archive. Publishing Version 18 is a production deployment gate but does not itself authorize calling its admin APIs, exporting production data, upgrading schema, or publishing final Shopping behavior. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 
-- Bridge ordinary application paths remain compatible with the Version 16 schema.
-- Owner-only status, versioned JSON export, re-entrant upgrade, and verification APIs are implemented behind isolated authorization and server boundaries.
-- Repeated and partial-state disposable validation preserves identities/data and reports phases/failures explicitly.
-- Packaged `0004` cannot execute independently as part of the bridge version.
-- Tests, build, lint, and migration validation pass or any unrelated baseline failures are clearly separated.
-- A new unpublished Site version is saved; Version 16 remains published and no production operation occurs.
+- Planner records approval or deferral of Version 18 bridge publication.
+- Any approval is limited to publication/deployment of Version 18 and confirms that production export, schema upgrade, final Shopping publication, smoke testing, and destructive actions remain separate gates.
 
 **Expected deliverables**
 
-- Accepted bridge implementation brief.
-- Validated bridge source, tests, and disposable reconciliation evidence.
-- New unpublished saved Site version and sanitized design handoff.
+- Recorded Planner decision and, if approved, a publication-only implementation brief.
 
 **Files likely affected**
 
@@ -76,6 +70,7 @@ Medium.
 
 ## Recently Completed
 
+- Implemented and locally validated the Version 16-compatible migration bridge; saved it as unpublished Site Version 18 with packaged `0004` excluded.
 - Completed and accepted the Production Backup & Migration Execution Plan with independent backup, migration, publication, and incident-response gates.
 - Completed the read-only Production Migration & Rollback Investigation; confirmed Sites execution details remain undocumented and performed no production access or change.
 - Preserved the exact validated Shopping persistence/API source and migration as unpublished Site Version 17; Version 16 remains live.

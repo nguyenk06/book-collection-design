@@ -85,6 +85,20 @@ The investigation found direct Version 17 publication unsafe on current evidence
 
 Planner approved the migration-bridge architecture for local implementation/validation and an unpublished Site save only. Bridge publication, production export, production schema upgrade, final Shopping publication, smoke testing, and destructive recovery remain unauthorized.
 
+### Sites-Native Migration Bridge
+
+| State | Verified status |
+| --- | --- |
+| Implemented locally | Yes |
+| Validated locally | Yes; 37/37 tests, build and bridge/task lint pass |
+| Saved as Site version | Yes; unpublished Version 18 |
+| Archive excludes packaged `0004` | Yes; migrations `0000`-`0003` present |
+| Production deployed/published | No; Version 16 remains published |
+| Production export or schema upgrade | No |
+| Production verified or smoke tested | No |
+
+Full-project lint still reports three pre-existing errors and one warning in the main page. Version 18 publication and all production API/database operations remain separate approval gates.
+
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.

@@ -138,6 +138,10 @@ The read-only investigation established:
 
 The accepted architecture is a temporary Version 16-compatible migration bridge with owner-only schema status, versioned JSON export, explicit re-entrant Shopping upgrade, and verification APIs. It excludes packaged `0004` from independent bridge execution, keeps ordinary reads compatible with Version 16 until upgrade completion, prefers forward repair over destructive down-migration, and preserves final Shopping publication as a separate gate. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md).
 
+This bridge is implemented, locally validated, and saved as unpublished Site Version 18. Its archive includes migrations `0000` through `0003` and excludes `0004`. Disposable tests cover authorization/pre-upgrade readability, repeated reconciliation, partial-state recovery, duplicate invocation, preservation, and export. Reconciliation inspects each object, re-inspects after duplicate column errors, changes the CYOA target only when null, and completes only after schema/foreign-key/target/preservation checks. The runtime duplicate guard is not distributed. Production behavior remains unverified.
+
+The bridge export contract is `cyoa-collection-bridge-export` version 1. It includes complete structured Books, Collections, and present Businesses/Purchases plus deduplicated R2 object references. It excludes secrets and R2 bytes and has no restore/import counterpart in this milestone.
+
 No step below is authorized for execution by this document.
 
 1. Freeze writes for the approved maintenance window.
