@@ -126,6 +126,8 @@ The operator-controlled plan below is retained as investigation history, not an 
 
 The active design task is to assess Sites-native activation through saved-version/deployment capabilities, source packages, the existing D1 binding, checked-in Drizzle migrations, application APIs and data structures, runtime initialization including `ensureSeeded()`, disposable validation, and Sites-exposed logs or metadata. Packaged migration execution during publication remains unknown until supported tooling or evidence establishes it.
 
+Any selected Sites-native strategy must preserve portable schema/migration semantics and explicit application boundaries. Platform-specific execution may adapt an upgrade mechanism, but undocumented Sites behavior must not become the only representation of business rules or the only way to preserve data. This constraint does not require implementing another deployment target now.
+
 No step below is authorized for execution by this document.
 
 1. Freeze writes for the approved maintenance window.

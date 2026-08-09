@@ -8,7 +8,7 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 **Workflow state:** Active read-only investigation
 
-**Next owner:** `ENGINEER` - process `2026-08-08-sites-native-version-17-activation-investigation-implementation-brief.md` with `CB`.
+**Next owner:** `ENGINEER` - process `2026-08-08-sites-native-version-17-activation-investigation-implementation-brief-r2.md` with `CB`.
 
 **Current objective**
 
@@ -23,6 +23,7 @@ Planner accepted that external D1 administration is unavailable and not part of 
 - Actual Sites-native capabilities and limitations are verified without production writes.
 - Existing migration packaging, D1 binding use, runtime initialization, and `ensureSeeded()` behavior are traced from source and disposable validation.
 - Candidate strategies are compared for preservation, repeatability, failure behavior, authorization, rollback limitations, and maintainability.
+- The recommendation preserves explicit API/data boundaries and does not make undocumented Sites deployment behavior the sole data-preservation mechanism; no hypothetical platform implementation is added.
 - Backup/recovery protections actually available through Sites or the application are identified without claiming unavailable export or Time Travel controls.
 - A recommended Sites-native activation strategy, conflicts, and required follow-up are returned in a sanitized handoff.
 - Version 16 remains published and Version 17 remains saved/unpublished; no production migration or publication occurs.

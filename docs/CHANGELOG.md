@@ -72,6 +72,7 @@ Planner then accepted Sites-native operations as the project constraint and remo
 ### Changed
 
 - Deferred portable immutable Purchase identifiers until cross-database Import/Export, reconciliation, or AI Review requires them.
+- Established platform portability as a proportional architecture constraint: keep APIs, migrations, JSON contracts, adapters, and business rules reasonably replaceable without adding new deployment targets to current scope.
 
 ## 2026-08-04
 

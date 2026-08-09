@@ -29,6 +29,7 @@ Help a book collector understand, maintain, and complete a personal collection w
 - **Evidence over assumptions:** Distinguish observed, imported, inferred, and reviewed information.
 - **Human control:** Automation proposes; the collector confirms consequential changes.
 - **Portable by default:** Core collection data must remain importable, exportable, and understandable.
+- **Platform-portable architecture:** ChatGPT Sites is the current deployment target, but core APIs, data contracts, persistence rules, and business logic should preserve a reasonable path to PWA, mobile packaging, self-hosting, and alternative front ends without expanding current scope to implement them.
 - **Progressive enrichment:** Covers, metadata, tags, and edition detail enhance rather than block core workflows.
 
 ## Collector-first workflow

@@ -95,3 +95,25 @@ flowchart LR
 - Imports are repeatable and report validation failures.
 - Exports are documented and usable without the application.
 - Destructive or ambiguous changes require explicit confirmation.
+
+## Portability constraint
+
+ChatGPT Sites is the current deployment environment, not the permanent boundary of the application architecture. Preserve a reasonable future path to PWA packaging, Android/iOS packaging, self-hosted web deployment, and alternative front ends such as Power Apps without implementing or separately roadmapping those targets now.
+
+Prefer:
+
+- Explicit APIs between user interfaces and persistence.
+- Portable schema migrations and standard JSON data contracts.
+- Platform-specific authentication isolated behind a narrow boundary.
+- Replaceable database and object-storage adapters where practical.
+- Business rules outside platform-specific UI or deployment components.
+- Responsive, mobile-first interfaces and browser-compatible camera/scanning behavior where practical.
+
+Avoid:
+
+- Critical business logic embedded in Sites deployment behavior.
+- Undocumented platform behavior as the only data-preservation mechanism.
+- Direct UI coupling to D1/R2 where an API boundary is practical.
+- Data formats that only one runtime can interpret.
+
+Apply this constraint proportionately. It guides boundaries and tradeoffs in current work but does not authorize speculative abstractions, new platform implementations, or broader milestone scope.
