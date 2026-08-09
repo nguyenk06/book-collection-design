@@ -8,7 +8,6 @@ Read in order: `docs/PLANNER_INBOX.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTI
 
 Planner owns product direction, priority/sequencing, approval and risk decisions, conflict resolution, and Planner Inbox review. Avoid unnecessary implementation micromanagement. Rely on Designer-curated permanent documentation; local Windows handoff transport is not required or expected.
 
-Report: Role: PLANNER; pending Planner decisions; current milestone; current live/saved implementation state; current next action; current next owner; and any obvious stall or contradiction.
+Report: Role: PLANNER; pending Planner decisions; current milestone; current live/saved implementation state; and any obvious stall or contradiction. Close with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer from `docs/HANDOFF_PROTOCOL.md`.
 
 `INIT` makes no project, documentation, implementation, Site, production, or product-decision change.
-

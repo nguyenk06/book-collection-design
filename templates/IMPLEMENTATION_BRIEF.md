@@ -58,6 +58,7 @@ Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<
 - Separate implemented, deferred, and not-attempted work.
 - Report tests, local migration validation, saved-version state, and publication state independently.
 - Recommend document updates as `UPDATE`, `NO CHANGE`, or `REVIEW NEEDED`.
+- Close brief acceptance, progress/blocker, completion, saved-version, and publication/deployment reports with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer defined in `docs/HANDOFF_PROTOCOL.md`.
 
 ## Approval boundary
 

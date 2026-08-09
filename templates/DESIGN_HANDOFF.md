@@ -96,3 +96,14 @@ Complete each item to confirm that this handoff contains no:
 <!-- Check every box before sharing. -->
 
 See [`docs/DOCUMENTATION_RULES.md`](https://github.com/nguyenk06/book-collection-design/blob/main/docs/DOCUMENTATION_RULES.md) for the governing sanitization policy.
+
+## Workflow footer
+
+TL;DR:
+<!-- Usually 1-4 short lines summarizing the verified result/state. -->
+
+NEXT OWNER:
+<!-- DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT | NONE — PROJECT COMPLETE -->
+
+ACTION:
+<!-- The single clearest next action, approval, command, or resume condition. -->

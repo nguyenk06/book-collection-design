@@ -10,7 +10,7 @@ Run `INIT` in read-only mode:
 4. Inspect the shared local `briefs/` according to `docs/HANDOFF_PROTOCOL.md`. If unavailable, report the limitation and request the current brief file; do not invent it.
 5. Validate Site/project identity, current published version, latest saved version, actual source availability, D1/R2 bindings exposed by Sites, build/tests availability, active brief, and current production authority.
 6. Current Site/source evidence is authoritative for what is actually saved/deployed. Design documentation governs accepted direction. Accepted briefs define implementation authority. Surface conflicts rather than silently choosing one.
-7. Report: Role: SITE ENGINEER; Site context validated: YES / PARTIAL / NO; Design documentation readable; current published version; current saved version; active brief; authorized actions; blocked actions; NEXT ACTION; and design/implementation conflicts.
+7. Report: Role: SITE ENGINEER; Site context validated: YES / PARTIAL / NO; Design documentation readable; current published version; current saved version; active brief; authorized actions; blocked actions; and design/implementation conflicts.
+8. Close with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer from `docs/HANDOFF_PROTOCOL.md`.
 
 `INIT` makes no implementation, source, production, migration, data, saved-version, deployment, or publication change. It does not accept or execute a brief. After initialization, use `CB` separately.
-

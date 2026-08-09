@@ -215,6 +215,31 @@ Chat history is not the project source of truth. When a role thread becomes too 
 
 Do not create large conversational handoff summaries when authoritative sources are sufficient. Site Engineer must re-check actual Site/source state and accepted brief evidence after bootstrap; Site state outranks stale claims about what is deployed.
 
+## Standard Response Footer
+
+All roles use this concise footer for meaningful workflow responses:
+
+```text
+TL;DR:
+<brief current result or state, usually 1-4 short lines>
+
+NEXT OWNER:
+<DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT | NONE — PROJECT COMPLETE>
+
+ACTION:
+<single clearest next action, command, approval, or resume condition>
+```
+
+Use it for `CI`, `CB`, and `INIT` reports; brief acceptance; implementation completion; Designer handoff processing; Planner decisions; blocked states; and publication/deployment reports. Short or trivial acknowledgements do not require it.
+
+- Keep `TL;DR` concise and mobile-readable.
+- `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.
+- `ACTION` states what that owner should do next. Do not invent an action when legitimately waiting.
+- Use `PLANNER` for approval gates, `ENGINEER` for an actionable or already-authorized brief, and `DESIGNER` for a completed Engineer handoff awaiting intake.
+- Use `EXTERNAL/WAIT` with the resume condition when blocked outside the three roles.
+- Use `NONE — PROJECT COMPLETE` when no action remains.
+- The footer does not replace evidence, acceptance criteria, handoffs, Planner Inbox entries, or permanent documentation. The full protocol remains authoritative.
+
 ## File Handling
 
 The preferred workflow is file-based rather than large chat copy-and-paste blocks.
