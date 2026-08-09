@@ -412,6 +412,34 @@ Individually complete workstreams do not make a combined milestone ready. Before
 
 Production remains sequential. Saved-version creation, publication, production status/export, schema upgrade, verification, Shopping-capable publication, smoke testing, and destructive recovery retain explicit independent gates in dependency order. Never infer production authorization from a local multi-workstream brief.
 
+### Product Owner hands-on validation checkpoint
+
+Use this lightweight checkpoint at major user-facing boundaries: a new primary workflow, substantial navigation or interaction change, meaningful data-entry behavior, or a release candidate whose usability cannot be established by automated checks alone. Do not require it after background-only changes, refactors, documentation work, or narrow technical fixes with no meaningful user-facing effect.
+
+The checkpoint preserves four independent layers:
+
+1. **Automated engineering validation** — tests, lint, build, migration checks, and implementation evidence establish technical behavior.
+2. **Designer convergence review** — Designer confirms the milestone coheres with accepted requirements and that evidence, state, and exclusions are documented.
+3. **Product Owner hands-on validation** — Product Owner performs a short realistic scenario checklist in a safe user-accessible environment and returns one outcome: `ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE`.
+4. **Production approval** — a separate explicit decision authorizes publication, migration, production writes, smoke testing, or other production action. No checkpoint outcome grants this authority automatically.
+
+Before hands-on validation, record:
+
+- The exact preview, unpublished saved version, or other safe validation environment the Product Owner can open.
+- Whether it uses disposable/isolated data and whether any production D1/R2 binding or operation is possible.
+- A short scenario checklist, normally three to seven realistic tasks and only the relevant desktop/mobile coverage.
+- Known limitations, excluded production actions, and how feedback returns to Designer/Engineer.
+
+Outcome meanings:
+
+- `ACCEPT` — the milestone satisfies the hands-on scenarios; Designer may record checkpoint completion and prepare the next separately authorized gate.
+- `ACCEPT WITH FOLLOW-UP` — the milestone is usable for the current boundary; Designer records bounded follow-up work that does not silently expand release authority.
+- `REVISE BEFORE RELEASE` — user-facing issues must return to Designer/Engineer and converge again before release consideration.
+
+Product Owner feedback must reach Designer before production activation. Engineer may receive actionable implementation feedback in parallel, but Designer owns requirement reconciliation and permanent state. Do not expand Queue Mode merely to keep capacity occupied while this gate is unresolved.
+
+After an explicitly approved publication, perform a concise Product Owner smoke review of critical workflows in production. Read-only checks are preferred. Any write, cleanup, restore, rollback, or destructive action remains separately authorized; the smoke review does not inherit authority from pre-publication validation.
+
 ### Future engineering queue mode
 
 The existing shared `briefs/` directory may serve as a lightweight future work queue. This capability is dormant unless Planner or Product Owner explicitly records `QUEUE MODE: ENABLED` for a bounded development session or sprint. A new week, `INIT`, `CI`, `CB`, or the mere presence of briefs never activates it.

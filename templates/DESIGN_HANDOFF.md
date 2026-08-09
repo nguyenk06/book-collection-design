@@ -97,6 +97,14 @@ Use `PLANNED`, `ACTIVE`, `BLOCKED`, `READY FOR REVIEW`, `COMPLETE`, or `DEFERRED
 
 - <!-- Evidence-supported impact only; do not mark work released or complete without support. -->
 
+## Product Owner validation checkpoint
+
+- Required: <!-- YES | NO -->
+- Environment status: <!-- READY | NOT READY | NOT APPLICABLE -->
+- Checklist/result: <!-- Link or safe identifier; ACCEPT | ACCEPT WITH FOLLOW-UP | REVISE BEFORE RELEASE | PENDING -->
+- Feedback routed to: <!-- DESIGNER | ENGINEER | BOTH | NOT APPLICABLE -->
+- Production authority remains separate: <!-- YES -->
+
 ## Suggested documentation updates
 
 - `docs/CURRENT_STATE.md` — <!-- UPDATE | NO CHANGE | REVIEW NEEDED --> — <!-- reason -->

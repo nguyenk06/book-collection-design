@@ -77,6 +77,34 @@ Advanced candidate matching, normalized multi-identifier persistence, offline ca
 
 The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. The Shopping source remains unsaved; Version 19 is still the latest saved version and Version 18 remains published.
 
+## Product Owner validation checkpoint
+
+Shopping requires hands-on Product Owner validation before production activation. The validation environment must be private and user-accessible, expose the completed Shopping source, and use disposable/isolated data without production D1/R2 mutation. The preferred path is a supported Sites preview or unpublished saved version only after read-only feasibility confirms those boundaries and separate save/preview authority is granted.
+
+Current blocker: the completed Shopping/P3 source exists only in the Engineer's unsaved local workspace. Version 19 does not include Shopping, and current evidence does not establish whether an unpublished Sites version can be opened functionally with isolated data rather than production bindings.
+
+Use this concise checklist:
+
+### Desktop
+
+1. Open Shopping from collection navigation; search by title, author, and ISBN and confirm results explain current matching limitations.
+2. Open a result and verify ownership, buying status, copies, target price when present, and Purchase history are understandable and distinct.
+3. As owner, record a Purchase with required price and optional Business/sticker price/date/condition; verify blank or invalid price is rejected, duplicate submission is prevented, history refreshes, and ownership/copies remain unchanged with clear guidance to edit them separately.
+
+### Mobile
+
+4. Repeat a one-handed search and another-book flow; confirm controls, loading/empty/error/retry/success states, focus, and labels remain usable.
+5. Exercise manual ISBN plus mocked/supported live-camera or photo scan behavior available in the validation environment; confirm malformed identifiers fail clearly and no unconfirmed Book/Purchase mutation occurs.
+6. Confirm owner-only Purchase details/actions are not exposed when the available validation environment supports a signed-out or non-owner view.
+
+Return exactly one outcome with concise notes:
+
+- `ACCEPT`
+- `ACCEPT WITH FOLLOW-UP`
+- `REVISE BEFORE RELEASE`
+
+Designer records the result and routes bounded feedback before any production-activation decision. After an explicitly approved publication, repeat a short smoke review of search, status presentation, navigation, and other approved critical paths. Production writes or cleanup require their own authority.
+
 ## Future improvements
 
 - Configurable decision cues and duplicate warnings.

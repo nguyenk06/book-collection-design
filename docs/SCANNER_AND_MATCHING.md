@@ -42,6 +42,12 @@ Convert a barcode, cover, or text capture into a transparent, reviewable candida
 - External metadata adapters, where used
 - Review interface and canonical identity rules
 
+## Verified focused validation
+
+The current local implementation has deterministic coverage for ISBN normalization, checksums, invalid inputs, manual scan handling, mocked live-camera/photo results, lookup success/failure, and absence of unconfirmed Book/Purchase mutation. Focused tests pass 18/18; the authoritative full serial suite passes 68/68; task lint and build pass.
+
+Two narrow defects were corrected without expanding architecture: unsupported extra characters no longer normalize into a valid ISBN, and invalid checksums are rejected before external lookup. Physical-device testing, ISBN-10/13 conversion, canonical multi-identifier persistence, candidate scoring, duplicate merging, and external-provider redesign remain deferred.
+
 ## Future improvements
 
 - Explainable composite scoring across identifier, title, author, and cover evidence.

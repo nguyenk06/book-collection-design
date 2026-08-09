@@ -89,6 +89,13 @@ Identify shared hotspots across workstreams and serialize or coordinate conflict
 - Recommend document updates as `UPDATE`, `NO CHANGE`, or `REVIEW NEEDED`.
 - Close brief acceptance, progress/blocker, completion, saved-version, and publication/deployment reports with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer defined in `docs/HANDOFF_PROTOCOL.md`.
 
+## Product Owner validation checkpoint
+
+- Required for this milestone: <!-- YES | NO; use YES only for a meaningful user-facing boundary. -->
+- Safe validation environment: <!-- Exact preview/saved version/environment, or NOT YET VERIFIED. -->
+- Scenario checklist authority: <!-- Feature document section or concise attached checklist. -->
+- Production separation: <!-- Confirm checkpoint completion does not authorize save, migration, publication, production writes, smoke testing, rollback, or destructive action. -->
+
 ## Approval boundary
 
 - **Local authority:** Implement and validate only the named workstreams and scope above.

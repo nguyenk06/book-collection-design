@@ -6,34 +6,34 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle RUN; P2 complete locally and one eligible P3 quality brief queued
+**Workflow state:** Queue Mode enabled; throttle RUN; P2 and P3 complete locally; one bounded read-only environment-feasibility brief queued at the Product Owner Shopping validation gate
 
-**Next owner:** `ENGINEER` - use `CB` for the P3 scanner-test brief if `RUN` remains active and no acceptance conflict or `DRAIN`/`STOP` exists.
+**Next owner:** `ENGINEER` - use `CB` to evaluate the Shopping validation-environment feasibility brief; do not create a preview/save or start another major product stage.
 
-P1 is complete in unpublished Version 19. P2 is complete and validated locally: all three Shopping workstreams are 100%, the serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. One P3 focused scanner/identifier test brief is now eligible for normal acceptance and collision checks. Production migration, a Shopping Site save, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. Before Shopping production activation, Product Owner must perform the recorded hands-on checklist in a safe user-accessible environment. One read-only brief now authorizes investigation of Sites-native options only; preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
-Complete the first Queue-Mode sprint with focused scanner/identifier regression validation that does not expand into the future matching architecture.
+Establish the Product Owner Shopping validation checkpoint and determine a safe functional environment without advancing another major product stage.
 
 **Why this is the current priority**
 
-P1 and P2 reached coherent local convergence. Scanner/matching is the next roadmap priority, and the queued P3 brief permits low-collision validation of current behavior without schema, UI, Site, or production expansion. The Product Owner monitors usage externally and may issue `DRAIN` or `STOP`; project roles must not infer precise usage.
+Automated and Designer convergence evidence cannot substitute for hands-on usability review at a major user-facing boundary. Shopping is complete locally but remains an inaccessible black box until Product Owner can exercise realistic desktop and mobile scenarios safely. The Product Owner monitors usage externally; project roles must not infer precise usage.
 
 **Success criteria**
 
-- Focused identifier normalization, checksum, and scanner-boundary tests pass where technically feasible.
-- Any narrow defect fix is supported by a reproducing test and does not expand scanner architecture.
-- Deferred advanced matching and identifier gaps are documented explicitly.
+- A private user-accessible validation environment is verified without production mutation or publication.
+- Product Owner completes the concise Shopping desktop/mobile checklist and returns `ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE`.
+- Feedback is reconciled before any Shopping production-activation decision.
 
 **Expected deliverables**
 
-- P3 focused scanner/identifier acceptance and completion or partial evidence if accepted before `DRAIN`/`STOP`.
-- Mobile-readable sprint review at `DRAIN`, `STOP`, or sprint completion.
+- Read-only environment feasibility evidence.
+- Product Owner Shopping validation result and bounded feedback.
 
 **Files likely affected**
 
-- Scanner/ISBN tests and only narrow test-driven utility fixes authorized by P3.
+- Permanent documentation and a separately authorized preview/checkpoint artifact only.
 - Permanent documentation through normal CI processing.
 
 **Estimated effort**
@@ -60,9 +60,9 @@ Bounded sprint; Product Owner intends approximately 20 percentage points of exte
 
 ## Ready Next
 
-- Complete Shopping Mode behavior on the new persistence foundation.
+- Verify a safe Product Owner-accessible Shopping validation environment using disposable/isolated data.
+- Run the Shopping hands-on checklist after separate environment/save authority is granted.
 - Add normalized book identifiers and candidate matching before advanced scanner work.
-- Apply small scanner test and validation improvements that do not change roadmap order.
 
 ## Blocked
 
@@ -74,6 +74,7 @@ Bounded sprint; Product Owner intends approximately 20 percentage points of exte
 
 ## Recently Completed
 
+- Completed P3 focused scanner/identifier validation; 18/18 focused and 68/68 full serial tests, task lint, and build pass, with two narrow ISBN-validation defects fixed locally and no Site or production action.
 - Completed and locally validated the bounded Shopping Mode UI, including required-price Purchase capture; 50/50 serial tests, 6/6 focused Shopping tests, 14/14 isolated collection tests, build, and task lint pass, with no Site save or production action.
 - Preserved the exact validated owner-authenticated administration source as unpublished Site Version 19; Version 18 remains published and production was untouched.
 - Implemented and locally validated the owner-authenticated administration surface; 44/44 tests, build, and task lint pass, with no Site save or production operation.

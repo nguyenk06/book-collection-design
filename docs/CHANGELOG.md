@@ -19,6 +19,24 @@ Major milestone states are independent. Implementation does not imply validation
 
 ## Unreleased
 
+### Product Owner Hands-On Validation Checkpoint
+
+- Added a lightweight checkpoint for major user-facing boundaries that separates automated engineering validation, Designer convergence, Product Owner hands-on validation, and production approval.
+- Defined `ACCEPT`, `ACCEPT WITH FOLLOW-UP`, and `REVISE BEFORE RELEASE` outcomes plus a post-publication critical-workflow smoke review.
+- Made completed local Shopping UI subject to Product Owner desktop/mobile validation before production activation.
+- No preview, Site version, migration, publication, production operation, or destructive action was authorized or performed.
+
+### Scanner and Identifier Focused Validation
+
+| State | Verified status |
+| --- | --- |
+| Implemented locally | Yes; two narrow ISBN-validation fixes |
+| Validated locally | Yes; 18/18 focused and 68/68 full serial tests, task lint, and build pass |
+| Saved as Site version | No; Version 19 remains latest |
+| Published/production changed | No; Version 18 remains published |
+
+Unsupported extra characters can no longer normalize into an otherwise valid ISBN, and invalid checksums are rejected before external lookup. Physical-device validation, conversion, canonical identifiers, and advanced matching remain deferred.
+
 ### Shopping Persistence Foundation
 
 | State | Verified status |
