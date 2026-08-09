@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Version 18 production preflight and JSON export approved; read-only execution brief ready for Engineer intake
+**Workflow state:** `BLOCKED-EXTERNAL` - production preflight/export aborted; resume when an owner-authenticated Site browser context is available
 
 ## Summary
 
@@ -31,6 +31,8 @@ The bridge is implemented and locally validated. Its preserved Version 18 archiv
 Sites reported the exact saved Version 18 deployment succeeded. Version 18 is now published and Version 16 is superseded but retained in version history. Publication did not invoke the application or bridge APIs and does not establish application health, database schema state, packaged migration execution, or data preservation. No export, D1/R2 operation, schema upgrade, verification, final Shopping publication, smoke test, restore/import, or destructive action occurred.
 
 Planner approved the next isolated read-only gate: owner-authenticated production schema status and versioned structured JSON export with private storage and sanitized verification evidence. Approval is not execution evidence and does not authorize the schema-upgrade POST, D1/R2 writes, ordinary application smoke testing, final Shopping publication, restore/import, rollback, or destructive action.
+
+The first preflight/export attempt automatically aborted at the authentication prerequisite. The available Site browser context was signed out and no alternate signed-in context was available. The schema-status endpoint returned no application response, no export was requested or created, and the no-write window ended. One read-only Site root load occurred during troubleshooting outside the brief's strict two-endpoint scope; no interaction or mutation followed.
 
 ## Current Status Dashboard
 
@@ -122,7 +124,7 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 ## Current known limitations
 
 - Production has no Businesses, Purchases, condition history, price history, collection target price, or Added Date migration.
-- Version 17 is saved but unpublished; Version 16 remains live.
+- Version 17 is saved but unpublished; Version 18 bridge is published, and Version 16 is retained as superseded history.
 - Production migration, rollback, and production behavior remain unverified.
 - Sites migration trigger, executor, tracking, retry behavior, atomicity, and traffic sequencing remain unknown from public documentation.
 - Raw migration `0004` applies once locally but is not directly idempotent; safe execution depends on the D1 migration ledger and controlled operator sequencing.
@@ -142,4 +144,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Execute only the approved Version 18 production schema-status preflight and private JSON export, verify the artifact without exposing its contents, and stop. Schema upgrade and all later gates remain unauthorized.
+Establish an owner-authenticated browser context for the published Site. A retry requires a fresh no-write window and the existing read-only authorization boundary; schema upgrade and all later gates remain unauthorized.

@@ -6,7 +6,7 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Version 18 bridge published and read-only preflight/export approved, not executed | Execute/verify preflight and JSON export, then separately gated upgrade, verification, and final Shopping publication | Medium | Production bridge/schema behavior unverified; no native D1 snapshot controls; book-to-collection foreign key deferred |
+| 0 | Database integrity and Shopping persistence foundation | Partial; Version 18 bridge published, preflight/export attempt aborted before authentication | Owner-authenticated Site context and read-only retry, then separately gated upgrade, verification, and final Shopping publication | Medium | Owner-authenticated browser context unavailable; production schema unverified; book-to-collection foreign key deferred |
 | 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; foundation saved in Version 17, production and UI unchanged | Production migration approval, transactional UI behavior | Medium-large | Ownership reconciliation rule unresolved; no published Purchase history |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial | `book_identifiers`, ISBN-10/13 normalization, candidate workflow | Medium | One ISBN field; weak canonical matching; overwrite risk |
 | 3 | [Bookshelf](BOOKSHELF.md) | Planned | Reliable expected-series positions, missing-position rules, detail behavior | Medium | Shelf view and mobile shelf-scroll behavior absent |
@@ -27,14 +27,14 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Execute and verify the approved Version 18 read-only production preflight and JSON export gate:
+Resume and verify the approved Version 18 read-only production preflight and JSON export gate after owner authentication is available:
 
 - Keep bridge traffic compatible with Version 16 until an explicit owner-authorized upgrade completes.
 - Provide owner-only status, versioned JSON export, re-entrant upgrade, and verification API boundaries.
 - Preserve portable schema/business logic and treat application export as weaker than a D1 snapshot.
 - Keep bridge implementation, save, publication, production export/upgrade, final publication, smoke testing, and destructive actions separately scoped and gated.
 
-Saving Version 17 does not mark this milestone released or in production. Production migration and publication remain separate approval gates; Version 16 remains live.
+Saving Version 17 does not mark Shopping released or active in production. Version 18 bridge is published, but schema activation and final Shopping publication remain separate gates.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 

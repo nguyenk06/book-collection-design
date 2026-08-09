@@ -142,6 +142,8 @@ This bridge is implemented, locally validated, preserved as Site Version 18, and
 
 Version 18 has now been published successfully through Sites. Publication performed no verified database operation and establishes no schema claim; the application and bridge APIs were not invoked. Production schema status, data counts, export behavior, and preservation remain unverified.
 
+The first owner-only schema-status/export attempt aborted because the available Site browser context was signed out. No bridge endpoint returned an application response, no export was created, and no database operation occurred. Production preflight/export remains incomplete until an owner-authenticated Site browser context is available.
+
 The bridge export contract is `cyoa-collection-bridge-export` version 1. It includes complete structured Books, Collections, and present Businesses/Purchases plus deduplicated R2 object references. It excludes secrets and R2 bytes and has no restore/import counterpart in this milestone.
 
 No step below is authorized for execution by this document.

@@ -4,22 +4,23 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ## Current Sprint
 
-### Execute Production Preflight and JSON Export
+### Establish Owner-Authenticated Site Context and Retry Preflight
 
-**Workflow state:** Read-only backup brief ready
+**Workflow state:** `BLOCKED-EXTERNAL`
 
-**Next owner:** `ENGINEER` - process `2026-08-08-version-18-production-preflight-export-implementation-brief.md` with `CB`.
+**Next owner:** `EXTERNAL/WAIT` - Product Owner makes an owner-authenticated Site browser context available; Designer then prepares or reaffirms a collision-safe retry brief.
 
 **Current objective**
 
-Invoke only the owner-authorized production schema-status and export APIs, privately verify the pre-upgrade baseline and portable JSON artifact, return sanitized evidence, and stop.
+Resume the approved read-only preflight/export gate only after an owner-authenticated Site browser context is available.
 
 **Why this is the current priority**
 
-Planner approved the read-only preflight/export gate. It is limited to `GET /api/admin/schema-status` and `GET /api/admin/export`, private artifact retention, and sanitized verification. Schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
+The first attempt aborted before either bridge endpoint returned an application response because the available browser context was signed out. No export or database operation occurred, and the no-write window ended. The existing approval remains limited to the two owner-only GET endpoints; schema upgrade and all later gates remain unauthorized. See [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) and [Database](DATABASE.md).
 
 **Success criteria**
 
+- An owner-authenticated Site browser context is available before a new attempt.
 - Owner authentication succeeds for the two approved admin GET endpoints.
 - Schema status establishes the pre-upgrade production baseline without changing it.
 - Export is stored privately and verified for contract/version, parseability, required record categories, sanitized counts/identity invariants, and R2 references.
@@ -76,7 +77,7 @@ Medium.
 - Implemented and locally validated the Version 16-compatible migration bridge; saved it as unpublished Site Version 18 with packaged `0004` excluded.
 - Completed and accepted the Production Backup & Migration Execution Plan with independent backup, migration, publication, and incident-response gates.
 - Completed the read-only Production Migration & Rollback Investigation; confirmed Sites execution details remain undocumented and performed no production access or change.
-- Preserved the exact validated Shopping persistence/API source and migration as unpublished Site Version 17; Version 16 remains live.
+- Preserved the exact validated Shopping persistence/API source and migration as unpublished Site Version 17; Version 18 bridge now supersedes Version 16 in production.
 - Implemented and locally validated Businesses, Purchases, collection target price, Added Date, owner-authorized APIs, and additive migration tests.
 - Preserved existing Book identities and data in disposable local migration validation.
 - Deferred portable Purchase identity until cross-database workflows require it.
