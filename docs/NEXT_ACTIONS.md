@@ -14,6 +14,8 @@ Provide an authorized, authenticated D1 operator path that supports private prod
 
 Packet A revision 2 was authorized but automatically aborted before production D1 contact because the Engineer could not verify an authenticated/supported D1 access path. The no-write window ended. Resolving access is now the immediate prerequisite; migration, verification, publication, smoke testing, and destructive restore remain independent and unauthorized. See [Database](DATABASE.md).
 
+Planner confirmed the operator path is not yet established. Prefer an existing Sites/Cloudflare-supported authenticated path. Do not create a new persistent migration credential unless the supported workflow requires it and is separately reviewed. No new Packet A authorization or no-write window begins before the path is established privately.
+
 **Success criteria**
 
 - An authorized D1 operator path is available privately through an authenticated operator session or supported connector.

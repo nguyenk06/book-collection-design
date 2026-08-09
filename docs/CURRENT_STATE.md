@@ -20,6 +20,8 @@ The read-only migration investigation found no public Sites contract establishin
 
 The operator runbook and private-project readiness model are complete. The Product Owner explicitly authorized Packet A revision 2 and observed the no-write window, but the Engineer could not authenticate a direct D1 operator path, find a supported D1 connector, or use an existing authenticated Cloudflare session. The required ambiguous-target/access abort fired before any production D1 query or backup operation. The no-write window ended after abort.
 
+Planner confirmed that the D1 operator path is not yet established and Packet A remains blocked. Prefer an existing Sites/Cloudflare-supported authenticated operator path established privately. Do not introduce a new persistent credential solely for this migration unless the supported workflow requires it and it receives separate review.
+
 ## Current Status Dashboard
 
 | Area | Status | Current state |

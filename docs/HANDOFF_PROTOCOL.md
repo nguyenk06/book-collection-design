@@ -122,6 +122,49 @@ The templates make these four commands sufficient for normal work:
 3. Site Engineer: **“Prepare design handoff.”**
 4. Designer: **“Apply attached handoff according to DOCUMENTATION_RULES.md.”**
 
+## Workflow Shortcuts
+
+Shortcuts are convenience aliases for existing lifecycle behavior. They reduce mobile typing but do not create authority, replace evidence or required reports, or bypass approval, production, destructive-action, sanitization, lifecycle, or workspace-ownership rules. The full written protocol is authoritative; if a shortcut conflicts with it, the full protocol wins.
+
+Keep the shortcut set deliberately small. Add another shortcut only after repeated workflow use demonstrates a clear need.
+
+### Designer: `CI`
+
+`CI` means **Check Inbox / Process Inbox**. It does not merely list `inbox/`.
+
+When the Designer receives `CI`, execute the normal inbox lifecycle:
+
+1. Inspect the shared local `inbox/` and identify new Engineer reports or handoffs.
+2. Validate evidence and referenced briefs or artifacts.
+3. Classify each artifact as accepted, incomplete, blocked, conflicted, superseded, or awaiting a genuine Planner/product-owner decision.
+4. Update permanent project documentation only from verified evidence.
+5. Evaluate whether [`CHANGELOG.md`](CHANGELOG.md) needs a major milestone or state-transition update.
+6. Evaluate whether [`PLANNER_INBOX.md`](PLANNER_INBOX.md) needs a genuine Planner decision; do not escalate routine artifacts unnecessarily.
+7. Perform Designer-owned housekeeping, moving eligible artifacts to `processed/` without overwriting or deleting unrelated artifacts and leaving unresolved artifacts active.
+8. Report the resulting state concisely.
+
+### Site Engineer: `CB`
+
+`CB` means **Check Briefs / Process Next Brief**. It does not merely list `briefs/`.
+
+When the Site Engineer receives `CB`, execute the normal brief-intake lifecycle:
+
+1. Inspect the shared local `briefs/` and identify the next eligible implementation brief.
+2. Read the complete brief and validate feasibility against the actual implementation workspace.
+3. Identify material conflicts, unknowns, scope changes, and approval gates.
+4. Accept the brief as the active specification when appropriate and create the required sanitized brief-acceptance report in `inbox/`.
+5. Do not move the brief; Designer owns housekeeping.
+6. If the brief is accepted, work is feasible, no material conflict exists, and the next action is already authorized, proceed automatically as far as that authority permits.
+7. Stop when an explicit approval gate, production-changing or destructive action, material scope change, or unresolved design conflict requires escalation.
+
+No formal Planner shortcut system is defined. Planner may continue using conversational commands such as `inbox`, `status`, and `next`. Planner reads permanent documentation in this order:
+
+1. [`PLANNER_INBOX.md`](PLANNER_INBOX.md)
+2. [`CURRENT_STATE.md`](CURRENT_STATE.md)
+3. [`NEXT_ACTIONS.md`](NEXT_ACTIONS.md)
+4. [`CHANGELOG.md`](CHANGELOG.md)
+5. [`ROADMAP.md`](ROADMAP.md)
+
 ## File Handling
 
 The preferred workflow is file-based rather than large chat copy-and-paste blocks.
