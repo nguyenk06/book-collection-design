@@ -135,7 +135,17 @@ No step below is authorized for execution by this document.
 
 Time Travel history is automatic on supported production D1 databases; the operator records the current bookmark rather than creating a traditional backup. Time Travel restore overwrites the database in place and remains a separately authorized destructive rollback. The SQL export is the portable backup artifact and must remain outside source control and handoff files.
 
-The operator runbook is complete. Planner authorized only the first production gate after private readiness confirmation:
+The operator runbook is complete. For this private, single-owner project, Packet A uses this readiness model:
+
+- The Product Owner/Site Engineer acts as operator under explicit Product Owner authorization; no second human operator is required.
+- The Site Engineer validates execution and results, and Planner reviews sanitized completion evidence.
+- Explicit Product Owner authorization starts the maintenance window and the Product Owner agrees not to change the collection until completion or abort.
+- The existing Product Owner/Site Engineer channel is sufficient for coordination.
+- The SQL export is stored privately outside public repositories and shared design documentation and retained through successful Version 17 migration, publication, and smoke testing until a later known-good backup exists.
+- The Product Owner may abort at any time. The Engineer automatically aborts on an ambiguous production target, unsupported Time Travel, export failure, unexpected migration state, or failed verification.
+- The Engineer privately verifies the exact production target and access path immediately before Packet A; private identifiers remain outside GitHub and sanitized handoffs.
+
+After explicit authorization, Packet A permits only:
 
 - Verify the exact production target and Version 16 schema baseline with read-only metadata and aggregate checks.
 - Inspect the migration ledger and unapplied migration list without changing them.
@@ -145,6 +155,8 @@ The operator runbook is complete. Planner authorized only the first production g
 - Stop after reporting sanitized pass/fail evidence.
 
 This authorization does not permit migration application, raw SQL execution, ledger edits, forward repair, restore/import, R2 access, Site deployment/publication, or production smoke testing.
+
+Backup, migration, post-migration verification, publication, smoke testing, and destructive restore remain six independent gates. Completion of one does not authorize the next.
 
 ## Accepted Direction
 

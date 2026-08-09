@@ -6,4 +6,4 @@ It is not a task backlog, technical issue tracker, Engineer progress log, change
 
 ## Current Decisions
 
-No Planner decisions currently pending. Packet A readiness was reported `NOT READY`; the active brief remains blocked until a later sanitized readiness confirmation.
+No Planner decisions currently pending. The private-project Packet A readiness model is accepted; execution awaits explicit Product Owner authorization under the revised brief.

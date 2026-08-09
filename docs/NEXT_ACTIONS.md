@@ -8,18 +8,20 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 **Current objective**
 
-Establish the private Packet A readiness prerequisites. Packet A must remain blocked until a later sanitized readiness attestation confirms every prerequisite.
+Obtain a simple explicit Product Owner authorization, execute revised Packet A under the private-project write freeze, and stop for evidence review.
 
 **Why this is the current priority**
 
-The operator runbook is complete, but the product owner reported `Packet A readiness: NOT READY` on 2026-08-08. No production access may occur until readiness is later confirmed. Migration, publication, and rollback remain unauthorized. See [Database](DATABASE.md).
+Planner right-sized readiness for this private, single-owner project. A second operator, separate communication plan, and enterprise-style readiness attestation are not required. Packet A remains unexecuted and requires explicit Product Owner authorization; migration, verification, publication, smoke testing, and destructive restore remain independent and unauthorized. See [Database](DATABASE.md).
 
 **Success criteria**
 
-- Operator, verifier, UTC window, secure backup location, retention, freeze method, communication channel, and abort authority are confirmed privately.
+- Product Owner explicitly authorizes Packet A and agrees not to change the collection until completion or abort.
+- Site Engineer privately verifies the production target/access path, validates execution/results, and automatically aborts on any required stop condition.
 - Version 16 remains published and Version 17 remains saved/unpublished.
 - The exact production target and baseline are verified without exposing identifiers or row data.
 - The current Time Travel bookmark and verified protected SQL export exist in restricted storage.
+- The SQL export retention rule is recorded privately: retain through successful Version 17 migration, publication, and smoke testing until a later known-good backup exists.
 - Sanitized Packet A evidence is returned; no migration or Site operation occurs.
 
 **Expected deliverables**

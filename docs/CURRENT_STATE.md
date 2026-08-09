@@ -10,7 +10,7 @@
 
 **Production migration investigation:** Completed 2026-08-08; no production access or change performed
 
-**Production execution planning:** Complete; Packet A remains blocked because private readiness is not ready, and no operation has occurred
+**Production execution planning:** Complete; private-project Packet A readiness model accepted, awaiting explicit Product Owner execution authorization
 
 ## Summary
 
@@ -18,7 +18,7 @@ The production application remains a stable, private, single-user book tracker o
 
 The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. The accepted operational direction is therefore to prepare an operator-controlled D1 migration, not publish Version 17 or wait indefinitely for undocumented Sites behavior.
 
-The operator runbook and independent approval packets are complete. Planner conditionally authorized Packet A only after the operator, verifier, window, secure storage, retention, freeze method, and abort authority are confirmed privately. On 2026-08-08, the product owner reported Packet A readiness as `NOT READY`; Packet A remains blocked and no production access or operation has occurred.
+The operator runbook and independent approval packets are complete. Planner replaced the earlier enterprise-style readiness fields with a private-project model: the Product Owner/Site Engineer may operate under explicit authorization, the existing communication channel is sufficient, and no second human operator is required. Packet A becomes actionable when the Product Owner explicitly authorizes it and agrees not to change the collection until completion or abort. No Packet A operation has occurred.
 
 ## Current Status Dashboard
 
@@ -125,4 +125,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Establish all Packet A readiness prerequisites privately. Only after a later sanitized `CONFIRMED` attestation may the production backup gate execute. Migration, publication, smoke testing, and rollback remain unauthorized.
+Obtain explicit Product Owner authorization for revised Packet A and execute only the production backup gate under the private-project write freeze. Stop after sanitized backup evidence. Migration, verification, publication, smoke testing, and destructive restore remain independent, unauthorized gates.

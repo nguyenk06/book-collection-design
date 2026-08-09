@@ -53,7 +53,7 @@ Planner selected preparation for an operator-controlled D1 migration because pub
 | State | Verified status |
 | --- | --- |
 | Operator runbook complete | Yes |
-| Packet A backup gate authorized | Yes; conditional on private readiness confirmation |
+| Packet A backup gate authorized | Awaiting explicit Product Owner execution authorization under the accepted private-project model |
 | Production access performed | No |
 | Time Travel bookmark retrieved | No |
 | SQL export created | No |
@@ -61,6 +61,8 @@ Planner selected preparation for an operator-controlled D1 migration because pub
 | Version 17 published | No |
 
 Planner authorized production target verification, read-only preflight, bookmark retrieval, protected export, and write freeze only. Migration, publication, smoke testing, and destructive recovery remain separately gated.
+
+Planner subsequently right-sized Packet A readiness for the private, single-owner project. Explicit Product Owner authorization starts the backup window; the Product Owner/Site Engineer may operate without a second human verifier or separate communication plan. The Engineer validates results and Planner reviews sanitized evidence. Packet A remains unexecuted, and the six backup, migration, verification, publication, smoke-test, and destructive-restore gates remain independent.
 
 ### Changed
 
