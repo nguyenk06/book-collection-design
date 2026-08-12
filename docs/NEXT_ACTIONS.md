@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled with throttle RUN; M1 first, M2 checkpoint-gated, M3 independent after M1 transition, and M4–M5 not queued
+**Workflow state:** Queue Mode RUN; M1 feasibility complete, M2 blocked, M3 active, and M4–M5 not queued
 
-**Next owner:** `ENGINEER` - run normal `CB` for M1; after a completion or blocker report, refresh the queue and move to the next independently eligible brief.
+**Next owner:** `ENGINEER` - implement and validate accepted M3 locally; stop only for its identity, integrity, architecture, validation, or production gates.
 
-P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. M1–M3 are present in local `briefs/`; M1 is eligible under `RUN`. M2 still requires accepted feasibility evidence plus Product Owner authority and participation. If M2 is blocked, Engineer reports it and moves to M3 when M3's baseline/collision checks pass. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+M1 found no verified Sites-native option that is simultaneously Product Owner-accessible, private, isolated, and non-production. M2 remains queued but blocked. M3 passed its 68/68 baseline, was accepted as Attempt 1, and is active for local/disposable work. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
-Execute M1 read-only feasibility. Attempt M2 only when its checkpoint gates are satisfied; otherwise preserve/report its blocker and continue to independent local M3.
+Complete and validate the bounded M3 canonical identifier foundation while Designer/Planner resolves M2 environment direction independently.
 
 **Why this is the current priority**
 
@@ -60,9 +60,8 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 
 ## Ready Next
 
-- Accept and execute the local Milestone 1 read-only feasibility brief through normal `CB`.
-- Milestone 2 is gated on accepted feasibility evidence and separate Product Owner environment authority/participation.
-- Milestone 3 becomes eligible after the M1 completion/blocker transition and clean baseline/collision checks; M2 remains separately blocked if its Product Owner gates are unmet.
+- Continue accepted M3 local/disposable implementation and validation.
+- Keep M2 blocked pending the Planner Inbox decision and any later explicit environment authority.
 - Do not start M4 Bookshelf or M5 export-first portability. Their accepted definitions are `NOT QUEUED`; future briefs require preceding convergence and Designer action.
 
 ## Blocked
