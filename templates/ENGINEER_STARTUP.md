@@ -12,9 +12,44 @@ Run `INIT` in read-only mode:
 5. Validate Site/project identity, current published version, latest saved version, actual source availability, D1/R2 bindings exposed by Sites, build/tests availability, Queue Mode/throttle, Engineer execution state, active/queued briefs, accepted workstreams/dependencies, file collision risks, and current local/production authority.
 6. Current Site/source evidence is authoritative for what is actually saved/deployed. Design documentation governs accepted direction. Accepted briefs define implementation authority. Surface conflicts rather than silently choosing one.
 7. Report: Role: SITE ENGINEER; Site context validated: YES / PARTIAL / NO; Design documentation readable; current published version; current saved version; Queue Mode/throttle; Engineer execution state; active and queued briefs; accepted workstreams and coarse progress; authorized actions; blocked actions; active/blocking owners; and design/implementation conflicts.
-8. Close with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer from `docs/HANDOFF_PROTOCOL.md`.
+8. Close with one of the exact canonical footers below. Do not omit `TL;DR` or `ACTION`.
 
 `INIT` makes no implementation, source, production, migration, data, saved-version, deployment, or publication change. It does not accept or execute a brief. After initialization, use `CB` separately.
+
+## Required workflow footer
+
+Single-owner form:
+
+```text
+TL;DR:
+<brief current result or state, usually 1-4 short lines>
+
+NEXT OWNER:
+<DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT | NONE — PROJECT COMPLETE>
+
+ACTION:
+<single clearest next action, command, approval, or resume condition>
+```
+
+Parallel form:
+
+```text
+TL;DR:
+<brief current result or state, usually 1-4 short lines>
+
+ACTIVE OWNERS:
+- DESIGNER — <Designer action>
+- ENGINEER — <Engineer action>
+- PLANNER — <Planner action, only when genuinely pending>
+
+BLOCKING OWNER:
+<NONE | DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT>
+
+ACTION:
+<concise actions that can proceed now>
+```
+
+Use exactly one ownership form. Remove inactive role lines. A blocked workstream does not make `BLOCKING OWNER` global when another authorized stream can continue.
 
 ## Queue continuation guard
 

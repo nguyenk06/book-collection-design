@@ -262,9 +262,12 @@ ACTION:
 <single clearest next action, command, approval, or resume condition>
 ```
 
-When work can proceed in parallel, replace `NEXT OWNER` with:
+When work can proceed in parallel, use this complete footer instead:
 
 ```text
+TL;DR:
+<brief current result or state, usually 1-4 short lines>
+
 ACTIVE OWNERS:
 - DESIGNER — <completed handoff intake, when applicable>
 - ENGINEER — <eligible workstreams>
@@ -276,6 +279,8 @@ BLOCKING OWNER:
 ACTION:
 <concise actions that can proceed now>
 ```
+
+`TL;DR` and `ACTION` are always present in either form. Use exactly one ownership form: single-owner `NEXT OWNER`, or parallel `ACTIVE OWNERS` plus `BLOCKING OWNER`. Do not mix or omit these labels in meaningful workflow responses.
 
 Use it for `CI`, `CB`, and `INIT` reports; brief acceptance; implementation completion; Designer handoff processing; Planner decisions; blocked states; and publication/deployment reports. Short or trivial acknowledgements do not require it.
 
@@ -552,12 +557,18 @@ Do not require this expanded block for trivial acknowledgements. Queue state sur
 This block is operator-facing live context, not merely handoff metadata. When a completed milestone is waiting in `inbox/` while the next brief is being accepted or executed, show both facts simultaneously. Use the footer's `ACTIVE OWNERS` form so the operator can enable Designer intake or Planner work without interrupting Engineer continuation, for example:
 
 ```text
+TL;DR:
+P2 is waiting for Designer intake while Engineer continues P3 under RUN.
+
 ACTIVE OWNERS:
 - DESIGNER — process the completed P2 handoff
 - ENGINEER — accept or execute P3 under RUN
 
 BLOCKING OWNER:
 NONE
+
+ACTION:
+Designer may process P2 independently; Engineer may accept or execute P3.
 ```
 
 Do not list Planner as active unless a genuine independent decision is present in `PLANNER_INBOX.md` or the current evidence requires one.

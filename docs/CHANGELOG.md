@@ -26,6 +26,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Accepted M5 local completion: immutable Book stable IDs and catalog export v1 passed 3/3 focused, 19/19 layered, and 84/84 full tests, lint/build, and explicit no-write verification. No UI, Site, production export, backup claim, migration, or publication occurred.
 - Product Owner canceled the separate validation-Site direction and accepted ADR-0012's controlled live Shopping release/validation sequence. No production gate executed from this decision; candidate isolation, administration publication, export, schema activation/verification, Shopping publication, live validation, smoke review, and rollback remain separately evidenced.
 - Added a standing independent-promotion rule: parallel workstreams should retain separate source/migration manifests, validation evidence, Site-save, and publication authority; unavoidable release coupling must be surfaced for an explicit convergence decision.
+- Embedded the exact single-owner and parallel workflow footers in every role startup prompt. Clarified that `TL;DR` and `ACTION` are mandatory in both forms and that the parallel form replaces only the ownership block.
 
 ## Milestone State Model
 
