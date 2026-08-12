@@ -39,7 +39,7 @@ Saving Version 17 does not mark Shopping released or active in production. Versi
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The bounded continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally. Revised M2 is queued for candidate preflight only; its production gates remain sequential and unexecuted.
+The bounded continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gate 0 are complete locally. M2 is stopped pending separate Gate 1 administration-publication authority; all production gates remain sequential, and none has executed.
 
 ## Deferred
 

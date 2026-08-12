@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4/M5 complete locally; revised M2 candidate preflight eligible; all Site/production gates closed; M4 transport closure awaits acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gate 0 complete locally; Gate 1 awaits separate Product Owner authority; M4 transport closure awaits acceptance report
 
-**Next owner:** `ENGINEER` - accept revised M2 for candidate isolation/local preflight only and stop before the first Site/production gate.
+**Next owner:** `PLANNER` - approve or decline M2 Gate 1 publication of only the existing Version 19 administration surface.
 
 The Product Owner canceled the separate validation Site. Revised M2 uses the live Site only after exact release-candidate isolation, local convergence, administration publication, owner-authenticated export, schema activation/verification, and Shopping publication succeed through distinct gates. No such Site or production step has occurred. M4's separate acceptance report remains missing.
 
 **Current objective**
 
-Prepare the exact Shopping release candidate and gate evidence without performing a Site save, publication, production request, export, schema change, or live validation.
+Decide whether Engineer may publish only the already preserved Version 19 owner-authenticated administration surface as M2 Gate 1. Gate 0 established the exact later Shopping candidate locally; that candidate is not authorized for saving or publication.
 
 **Why this is the current priority**
 
@@ -22,14 +22,14 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Success criteria**
 
-- A private user-accessible validation environment is verified without production mutation or publication.
-- Product Owner completes the concise Shopping desktop/mobile checklist and returns `ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE`.
-- Feedback is reconciled before any Shopping production-activation decision.
+- Product Owner explicitly approves or declines Gate 1 after reviewing the Gate 0 boundary.
+- If approved, Engineer republishes only the exact existing Version 19 administration source and verifies deployment/minimal availability without invoking export or schema upgrade.
+- Shopping remains unpublished and production schema/data remain unchanged during Gate 1.
 
 **Expected deliverables**
 
-- Read-only environment feasibility evidence.
-- Product Owner Shopping validation result and bounded feedback.
+- Explicit Gate 1 decision.
+- If approved and executed, a sanitized Gate 1 report separating deployment, application availability, Shopping publication, and production data/schema state.
 
 **Files likely affected**
 
@@ -61,7 +61,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 ## Ready Next
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
-- Execute only revised M2 local candidate preflight; request the next explicit gate after clean evidence.
+- After explicit approval, execute only M2 Gate 1 publication of the existing Version 19 administration surface and stop before Gate 2.
 - M5 requires no further local implementation; any downloadable UI, Site save, production export, migration, or activation needs a new brief and separate gates.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 

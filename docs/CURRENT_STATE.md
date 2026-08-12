@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4/M5 complete locally; M2 revised to controlled live release/validation and queued at candidate-preflight gate; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4/M5 complete locally; M2 Gate 0 exact candidate preflight complete and awaiting separate Gate 1 publication authority; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner supplied a fresh 71% reading before M5; Engineer reports approximately 50–60% remaining after completion, preserving the required 30% reserve.
 
-**Engineer execution state:** `AVAILABLE` — revised M2 local candidate-preflight work may be accepted under `RUN`; every Site/production step remains separately gated
+**Engineer execution state:** `STOPPED AT GATE` — M2 Gate 0 is complete; Gate 1 administration-surface publication requires separate Product Owner authorization
 
 ## Current Engineering Workstreams
 
@@ -39,22 +39,22 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[██████████] 100%` | COMPLETE | Read-only capability investigation accepted | No verified option is runnable, private, isolated, and non-production | Transitioned to M2 blocker |
-| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[░░░░░░░░░░] 0%` | QUEUED / PREFLIGHT ELIGIBLE | Revised local brief; ADR-0012 | Accept local candidate-isolation/preflight only; stop at first Site/production gate | Yes for preflight |
+| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[██░░░░░░░░] 20%` | STOPPED AT GATE | Gate 0 completed under revised brief; ADR-0012 | Product Owner must separately authorize Gate 1 publication of existing Version 19 | No until Gate 1 authority |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
 
-**Engineer can continue:** YES for revised M2 candidate isolation, source-composition verification, and local convergence only. Administration publication, production export, schema activation/verification, Shopping publication, live validation, smoke testing, and rollback require their recorded sequential gates.
+**Engineer can continue:** NO. M2 Gate 0 candidate isolation, source-composition verification, and local convergence are complete. Administration publication, production export, schema activation/verification, Shopping publication, live validation, smoke testing, and rollback require their recorded sequential gates.
 
-**Current Planner decisions:** None. Product Owner canceled the separate validation-Site direction and selected controlled live Shopping release/validation; the decision does not itself execute or approve individual production gates.
+**Current Planner decisions:** One. Product Owner must approve or decline M2 Gate 1 publication of the existing Version 19 owner-authenticated administration surface.
 
-**Next production gate:** None is currently executable. First complete M2 local candidate preflight. The first later production gate is explicit authorization to publish the owner-authenticated administration surface; export, schema activation/verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
+**Next production gate:** None is currently executable. Gate 0 is complete; the next gate is explicit authorization to publish only the existing Version 19 owner-authenticated administration surface. Export, schema activation/verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
 
 **Resume condition:** Satisfied. Replacement Site Engineer read-only `INIT` and stopping-point verification are complete, and the Product Owner has set throttle `RUN` for the bounded M1–M3 sequence.
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally. M2 is revised and preflight-eligible but stops before any Site/production action. M4 still requires its missing acceptance report before local transport artifacts can close.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally. M2 Gate 0 is complete locally and stopped before Gate 1. M4 still requires its missing acceptance report before local transport artifacts can close.
 
 ## Summary
 

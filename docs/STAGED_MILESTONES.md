@@ -4,7 +4,7 @@
 
 **Execution budget:** Engineer estimate up to approximately 50% for M1–M3 through existing blockers; preserve reserve for convergence, evidence, and a clean stop
 
-**Queue state:** M1/M3/M4/M5 complete locally; revised M2 candidate preflight eligible; production gates closed
+**Queue state:** M1/M3/M4/M5 and M2 Gate 0 complete locally; M2 stopped pending separate Gate 1 authority; later production gates closed
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -80,7 +80,7 @@ Future parallel milestones should remain independently promotable. Completion in
 - **Stop/escalate:** Missing external-ID contract; Purchase portability ambiguity; pressure to omit required data silently; mutation/restore requirement; sensitive leakage; integrity mismatch; schema migration; or production access.
 - **Completion/handoff:** Future local reports separate format implementation, validation, artifact handling, Site state, and production state. Import remains a later decision and brief.
 
-M4 and M5 are complete locally. M4's transport lifecycle awaits a missing acceptance report. M5 has no downloadable UI or production authority. Neither completion alters M2, user-checkpoint, Site-save, migration, publication, or production gates.
+M4 and M5 are complete locally. M2 Gate 0 also completed locally with an isolated Version 19 plus Shopping/P3 candidate; M3–M5 were excluded and no Site or production action occurred. M2 is stopped pending separate Gate 1 authority. M4's transport lifecycle awaits a missing acceptance report. M5 has no downloadable UI or production authority. Neither completion alters later M2, user-checkpoint, Site-save, migration, publication, or production gates.
 
 ## Shared controls
 
