@@ -208,6 +208,8 @@ The accepted strategy is additive migration, not a rewrite or immediate title/ed
 
 Step 5 is now complete in the unsaved local working copy: additive `book_identifiers`, deterministic ISBN-10/13 equivalence, conservative conflict-aware backfill planning, and exact canonical lookup passed 29/29 focused and 79/79 full serial tests. Production schema and saved Site versions remain unchanged.
 
+For export format v1, step 6 is narrowed to an additive immutable Book `stable_id`; existing `collections.key` is the Collection external ID. Revisions, import conflict handling, and portable Business/Purchase identities remain deferred. See [ADR-0011](decisions/ADR-0011-catalog-first-export-identities.md). This direction authorizes only separately briefed local/disposable M5 work, not production migration.
+
 Shopping persistence decisions are recorded in [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md); identifier strategy is recorded in [ADR-0008](decisions/ADR-0008-canonical-books-and-identifiers.md).
 
 ### Recommended relationship behavior

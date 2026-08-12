@@ -8,9 +8,9 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 **Workflow state:** M1/M3/M4 complete locally; Engineer paused at reserve; M2 and M5 blocked; M4 transport closure awaits acceptance report
 
-**Next owner:** `PLANNER` - choose the M5 version-1 entity scope; Engineer must also supply the missing M4 acceptance trace before artifact closure.
+**Next owner:** `EXTERNAL/WAIT` - obtain a fresh usage reading before M5 intake; Engineer must also supply the missing M4 acceptance trace for artifact closure.
 
-M4 completed locally with 16/16 focused and 81/81 full tests, build, and scoped lint passing. No schema, Site, or production action occurred. Its separate brief-acceptance report is missing, so local transport artifacts remain active. M5 awaits a Designer-approved external-ID/export-scope contract and sufficient usage margin above the 30% reserve.
+M4 completed locally with 16/16 focused and 81/81 full tests, build, and scoped lint passing. Its separate brief-acceptance report is missing. M5 now has an accepted catalog-first external-ID/export-scope contract but remains budget-gated pending a fresh usage reading above the 30% reserve.
 
 **Current objective**
 
@@ -62,7 +62,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
 - Keep M2 blocked pending a future explicit isolated validation-Site action brief/approval.
-- Keep M5 blocked until Designer approves the immutable external-ID/export-scope contract and usage safely exceeds reserve.
+- Keep M5 unaccepted until a fresh usage reading safely exceeds reserve; then normal `CB` may validate the revised contract and baseline.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 
 ## Blocked

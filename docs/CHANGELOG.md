@@ -21,6 +21,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Queued local M4 Bookshelf and M5 export-first briefs under `RUN`; M4 is eligible and M5 remains blocked on M4 plus the export identity/scope contract.
 - Accepted M4 implementation evidence: bounded Bookshelf behavior passed 16/16 focused and 81/81 full tests, build, and scoped lint, with no schema/Site/production change. The separate acceptance report is missing, so transport closure remains pending.
 - Engineer paused after M4 with an estimated 31–47% remaining to protect the 30% reserve; M5 remains blocked on its identity/scope contract and budget margin.
+- Planner selected catalog-first M5 format v1. ADR-0011 defines existing Collection keys plus new immutable persisted Book stable IDs; Businesses/Purchases and their history are explicitly deferred. M5 remains unaccepted pending a fresh usage check above reserve.
 
 ## Milestone State Model
 

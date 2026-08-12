@@ -56,6 +56,20 @@ Planner accepted an export-first safety foundation before mutable round-trip imp
 
 This boundary does not authorize a production export, backup operation, schema migration, Site save, publication, or implementation. Purchase portability remains dependent on an accepted immutable Purchase identifier.
 
+## Accepted format version 1 contract
+
+Planner selected a catalog-first format. Version 1 includes:
+
+- Format metadata: contract name, version `1`, generated timestamp, application/schema compatibility marker, and explicit included/excluded entity lists.
+- Collections: immutable `collections.key`, display name, system/custom marker, and collection-level settings present in the accepted schema.
+- Books: a new persisted immutable globally unique `stable_id`; collection reference by `collections.key`; bibliographic fields; series position; ownership, buying, copy, reading, notes/guidance, Added Date, and timestamps without fabricating unknown values.
+- Canonical identifiers: identifier type/value associated by Book `stable_id`.
+- Image manifest: Book `stable_id` plus existing image reference and explicit `bytes_included: false`; no image bytes or claim of complete media backup.
+
+Version 1 explicitly excludes Businesses, Purchases, secrets, internal numeric Book IDs as portable identity, raw database structures, and R2 bytes. Unknown/null values remain null. The export must be read-only, self-describing, referentially consistent, and deterministic except for documented generation metadata.
+
+The additive Book `stable_id` must be generated once, persisted, globally unique, immutable, and unrelated to mutable title/author/ISBN data. Existing `collections.key` remains the Collection external ID. See [ADR-0011](decisions/ADR-0011-catalog-first-export-identities.md).
+
 ## Future improvements
 
 - Mapping profiles for common collection tools.

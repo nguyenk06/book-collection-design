@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4 complete locally; M2 blocked on isolated validation-Site setup; M5 blocked on export contract and execution reserve; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4 complete locally; M2 blocked on isolated validation-Site setup; M5 contract-complete but budget-gated; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -42,11 +42,11 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-PO-SHOP-VALIDATE` | M2 safe environment and Product Owner validation | `[░░░░░░░░░░] 0%` | BLOCKED | Local brief remains queued; checkpoint required before Shopping activation | Planner/Product Owner direction on separate isolated validation Site or deferral | No; does not block M3 |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
-| `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[░░░░░░░░░░] 0%` | BLOCKED | Local brief present | Designer-approved immutable external-ID/export-scope contract plus adequate usage above reserve | No |
+| `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[░░░░░░░░░░] 0%` | QUEUED / BUDGET-GATED | Catalog-first identity/scope contract accepted; local brief revised | Fresh usage confirmation must safely exceed 30% reserve before acceptance | No in current run |
 
 **Engineer can continue:** NO in this run. M5 is not eligible, and Engineer has preserved the usage reserve. A future `RUN` after contract completion and budget confirmation may resume intake.
 
-**Current Planner decisions:** One: whether M5 format version 1 is catalog-first or includes Purchase/Business history with new immutable IDs. Planner's isolated validation-Site direction remains accepted; creation/deployment are separately gated.
+**Current Planner decisions:** None. Planner accepted catalog-first M5 format v1 and the separate isolated validation-Site direction; execution/creation gates remain separate.
 
 **Next production gate:** None is currently executable. Product Owner hands-on Shopping validation is required before Shopping production activation; preview/save authority, publication, migration, and all production actions remain separately gated and unauthorized.
 
