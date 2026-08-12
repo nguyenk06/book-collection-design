@@ -12,15 +12,15 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3 complete locally; M2 blocked pending separately authorized isolated validation-Site setup; M4 queued/eligible and M5 queued/dependency-blocked under `RUN`
+**Workflow state:** M1/M3/M4 complete locally; M2 blocked on isolated validation-Site setup; M5 blocked on export contract and execution reserve; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
 **Queue throttle:** `RUN`
 
-**Usage guidance:** Engineer reported approximately 49–61% remaining after M1/M3, above the required 30% reserve. Work completed faster than expected; preserve reserve and continue only through independently eligible briefs.
+**Usage guidance:** Engineer estimates approximately 31–47% remaining after M4 and is preserving the required 30% reserve. Do not begin M5 until its contract is complete and the available margin safely covers implementation, validation, evidence, and a clean stop.
 
-**Engineer execution state:** `AVAILABLE` — M3 completed and validated locally; mandatory fresh queue scan may accept eligible M4
+**Engineer execution state:** `PAUSED` — M4 completed locally; Engineer explicitly declined another milestone in this run to protect the 30% reserve
 
 ## Current Engineering Workstreams
 
@@ -41,12 +41,12 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[██████████] 100%` | COMPLETE | Read-only capability investigation accepted | No verified option is runnable, private, isolated, and non-production | Transitioned to M2 blocker |
 | `WS-PO-SHOP-VALIDATE` | M2 safe environment and Product Owner validation | `[░░░░░░░░░░] 0%` | BLOCKED | Local brief remains queued; checkpoint required before Shopping activation | Planner/Product Owner direction on separate isolated validation Site or deferral | No; does not block M3 |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
-| `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[░░░░░░░░░░] 0%` | QUEUED / ELIGIBLE | Local brief prepared | Normal `CB`, baseline/collision verification | Yes |
-| `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[░░░░░░░░░░] 0%` | QUEUED / BLOCKED | Local brief prepared | M4 convergence plus Designer-approved immutable external-ID and export-scope contract | No |
+| `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
+| `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[░░░░░░░░░░] 0%` | BLOCKED | Local brief present | Designer-approved immutable external-ID/export-scope contract plus adequate usage above reserve | No |
 
-**Engineer can continue:** YES. Refresh local `briefs/` and run normal `CB` for M4. M2 and M5 blockers do not stop independently eligible work.
+**Engineer can continue:** NO in this run. M5 is not eligible, and Engineer has preserved the usage reserve. A future `RUN` after contract completion and budget confirmation may resume intake.
 
-**Current Planner decisions:** None. Planner selected the separate isolated validation-Site design direction; creation and deployment remain separately gated.
+**Current Planner decisions:** One: whether M5 format version 1 is catalog-first or includes Purchase/Business history with new immutable IDs. Planner's isolated validation-Site direction remains accepted; creation/deployment are separately gated.
 
 **Next production gate:** None is currently executable. Product Owner hands-on Shopping validation is required before Shopping production activation; preview/save authority, publication, migration, and all production actions remain separately gated and unauthorized.
 
@@ -54,7 +54,7 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3 are complete, M2 remains blocked, M4 is queued/eligible, and M5 is queued but dependency-blocked.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4 are complete locally; M2 and M5 remain blocked. M4 still requires its missing acceptance report before local transport artifacts can close.
 
 ## Summary
 

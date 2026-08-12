@@ -54,6 +54,10 @@ Planner accepted a bounded collection shelf using existing collection and series
 
 This accepted contract now has a local M4 implementation brief under Queue Mode `RUN`. Brief acceptance authorizes only bounded local implementation and validation; user-facing activation remains checkpoint-gated.
 
+## Verified local implementation
+
+The bounded Bookshelf is complete in the unsaved local working copy. It adds a persisted Bookshelf collection view, deterministic series-position ordering, explicit noninteractive missing-position gaps, keyboard-operable real Book spines, an accessible detail dialog with metadata fallbacks, and return behavior that preserves collection/view/scroll context. Focused collection tests pass 16/16; the full suite passes 81/81; build and scoped lint pass apart from one pre-existing scanner hook warning. No schema, Site save, publication, or production state changed. Product Owner hands-on validation remains required before activation.
+
 ## Future improvements
 
 - Saved views and configurable shelf groupings.

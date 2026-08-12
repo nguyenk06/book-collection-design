@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode RUN; M1/M3 complete, M2 blocked, M4 eligible, and M5 dependency-blocked
+**Workflow state:** M1/M3/M4 complete locally; Engineer paused at reserve; M2 and M5 blocked; M4 transport closure awaits acceptance report
 
-**Next owner:** `ENGINEER` - refresh the local queue and run normal `CB` for M4 bounded Bookshelf.
+**Next owner:** `PLANNER` - choose the M5 version-1 entity scope; Engineer must also supply the missing M4 acceptance trace before artifact closure.
 
-M1 found no safe existing validation option; Planner selected a separate isolated validation-Site direction, but its creation remains unauthorized. M3 completed locally with 29/29 focused and 79/79 full serial tests, lint, and build passing. M4 and M5 briefs are local; M4 is next eligible, while M5 awaits M4 convergence and an approved export identity/scope contract.
+M4 completed locally with 16/16 focused and 81/81 full tests, build, and scoped lint passing. No schema, Site, or production action occurred. Its separate brief-acceptance report is missing, so local transport artifacts remain active. M5 awaits a Designer-approved external-ID/export-scope contract and sufficient usage margin above the 30% reserve.
 
 **Current objective**
 
-Implement and validate M4 bounded Bookshelf locally without schema changes or production/Site actions.
+Converge M4 documentation and transport evidence, then define the M5 contract without beginning implementation.
 
 **Why this is the current priority**
 
@@ -60,10 +60,10 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 
 ## Ready Next
 
-- Accept and execute M4 after normal baseline/collision checks.
+- Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
 - Keep M2 blocked pending a future explicit isolated validation-Site action brief/approval.
-- Keep M5 blocked until M4 converges and Designer approves the immutable external-ID/export-scope contract.
-- Do not start M4 Bookshelf or M5 export-first portability. Their accepted definitions are `NOT QUEUED`; future briefs require preceding convergence and Designer action.
+- Keep M5 blocked until Designer approves the immutable external-ID/export-scope contract and usage safely exceeds reserve.
+- M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 
 ## Blocked
 
