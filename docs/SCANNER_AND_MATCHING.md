@@ -48,6 +48,8 @@ The current local implementation has deterministic coverage for ISBN normalizati
 
 Two narrow defects were corrected without expanding architecture: unsupported extra characters no longer normalize into a valid ISBN, and invalid checksums are rejected before external lookup. Physical-device testing, ISBN-10/13 conversion, canonical multi-identifier persistence, candidate scoring, duplicate merging, and external-provider redesign remain deferred.
 
+The subsequent local canonical identifier foundation completed additive `book_identifiers` persistence, deterministic ISBN-10/13 conversion/equivalence, conservative conflict-aware backfill planning, and exact canonical lookup without merge or overwrite. Focused tests pass 29/29 and the full serial suite passes 79/79; lint and build pass. Fuzzy scoring, physical-device claims, provider redesign, and production/Site activation remain deferred.
+
 ## Future improvements
 
 - Explainable composite scoring across identifier, title, author, and cover evidence.

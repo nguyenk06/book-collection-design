@@ -52,7 +52,7 @@ Planner accepted a bounded collection shelf using existing collection and series
 - Preserve the active collection, browsing position, and applicable view context when returning.
 - Do not add physical locations, saved views, tags, bulk actions, or a new identity model in this phase.
 
-This accepted contract defines a future milestone but does not queue or authorize implementation.
+This accepted contract now has a local M4 implementation brief under Queue Mode `RUN`. Brief acceptance authorizes only bounded local implementation and validation; user-facing activation remains checkpoint-gated.
 
 ## Future improvements
 

@@ -4,7 +4,7 @@
 
 **Execution budget:** Engineer estimate up to approximately 50% for M1–M3 through existing blockers; preserve reserve for convergence, evidence, and a clean stop
 
-**Queue state:** enabled with throttle `RUN`; M1 complete with no safe option, M2 blocked, and M3 accepted/active independently
+**Queue state:** enabled with throttle `RUN`; M1/M3 complete, M2 blocked, M4 eligible, and M5 dependency-blocked
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -56,7 +56,7 @@ The queue is ordered, but blockers are per milestone rather than global. After c
 - **Objective/user outcome:** Browse one collection in existing series order, see explicit missing-position gaps, open a real Book, and return without losing browsing context.
 - **Included:** Existing collection selection and series positions; real Book cover/text fallbacks; non-book gap indicators; existing detail/edit navigation; return-context preservation; responsive keyboard/mobile behavior.
 - **Excluded:** Physical shelf locations, saved views, tags, bulk actions, synthetic Books for gaps, new identity/schema models, enrichment, analysis, and production actions.
-- **Dependencies/starting state:** M3 accepted by Designer; canonical identifier changes converged without regression; existing collection/series-position rules verified; Designer creates a future brief. Definition alone is `NOT QUEUED` and not executable.
+- **Dependencies/starting state:** M3 accepted by Designer; canonical identifier changes converged without regression; existing collection/series-position rules verified; local brief accepted through normal `CB`.
 - **Acceptance:** Stable ordering; gaps never mutate or masquerade as Books; real Books open existing detail/edit; return restores collection and browsing context; missing covers/metadata degrade safely; existing collection behavior remains intact.
 - **Tests/evidence:** Ordering/gap fixtures, navigation/return tests, cover/metadata fallback, keyboard/accessibility, responsive viewport coverage, full regression suite, build, and task lint.
 - **Data/rollback:** No schema change expected. Preserve all Book/collection identities and state. Local UI changes must be revertible without data cleanup.
@@ -70,7 +70,7 @@ The queue is ordered, but blockers are per milestone rather than global. After c
 - **Objective/user outcome:** Produce a locally validated, versioned read-only export whose identity, scope, and referenced-image manifest can be understood independently.
 - **Included:** Format/version metadata; immutable external IDs required for exported identity; core collection export; referential validation; attachment-reference manifest; deterministic serialization where practical; local/disposable export validation.
 - **Excluded:** Import mutation, dry-run import, revisions/conflicts, restore, rollback, raw database dump as user format, image-byte backup unless separately designed, production export, migration, Site save/publication, and research review.
-- **Dependencies/starting state:** M4 accepted by Designer; M3 identifier foundation stable; external-ID contract for every exported entity—including Purchases if included—accepted in a future brief; export field/scope schema documented; Designer creates that brief. Definition is `NOT QUEUED` and not executable.
+- **Dependencies/starting state:** M4 accepted by Designer; M3 identifier foundation stable; Designer-approved external-ID contract for every exported entity—including Purchases if included; export field/scope schema documented; local brief accepted through normal `CB`.
 - **Acceptance:** Versioned contract is self-describing; stable IDs and references are unique/consistent; required core records are complete; manifest distinguishes references from bytes; unknown/null values are preserved; repeated export of unchanged fixture is equivalent; no mutation occurs.
 - **Tests/evidence:** Contract/schema validation, representative complete/empty/null fixtures, referential and uniqueness checks, deterministic comparison, malformed-state failure, no-write verification, full regressions, build, and task lint.
 - **Data/rollback:** Read-only local/disposable execution. No production data or backup claim. No rollback needed because export must not mutate; any observed mutation stops work.
@@ -78,7 +78,7 @@ The queue is ordered, but blockers are per milestone rather than global. After c
 - **Stop/escalate:** Missing external-ID contract; Purchase portability ambiguity; pressure to omit required data silently; mutation/restore requirement; sensitive leakage; integrity mismatch; schema migration; or production access.
 - **Completion/handoff:** Future local reports separate format implementation, validation, artifact handling, Site state, and production state. Import remains a later decision and brief.
 
-M4 and M5 are defined but deliberately have no implementation briefs, queue priority, or execution authority. They do not alter M1–M3 gates.
+M4 and M5 now have local implementation briefs. M4 is eligible after M3 convergence; M5 remains blocked until M4 convergence and the missing export identity/scope contract are recorded. Neither alters M2 or production gates.
 
 ## Shared controls
 

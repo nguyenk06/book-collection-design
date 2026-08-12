@@ -83,6 +83,18 @@ Shopping requires hands-on Product Owner validation before production activation
 
 Current blocker: the completed Shopping/P3 source exists only in the Engineer's unsaved local workspace. Version 19 does not include Shopping, and current evidence does not establish whether an unpublished Sites version can be opened functionally with isolated data rather than production bindings.
 
+### Accepted separate validation-Site direction
+
+Planner selected a separately isolated validation Site as the future M2 direction after M1 established that the existing Site exposes no safe runnable non-production option. The design must require:
+
+- A distinct non-production Site identity and lifecycle.
+- Independently isolated disposable D1/R2 bindings and data; never production bindings or copied private production data.
+- Owner-only access sufficient for the Product Owner checklist without credential/session transfer to Engineer.
+- The exact validated Shopping/P3 source baseline, with drift detection before use.
+- Clear teardown/retention rules for disposable data and access.
+
+This decision authorizes design direction only. Creating the Site, bindings, access policy, saved version, deployment, or cleanup requires a future explicit action brief and approval. M2 and Shopping activation remain blocked until those gates are satisfied.
+
 Use this concise checklist:
 
 ### Desktop

@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode RUN; M1 feasibility complete, M2 blocked, M3 active, and M4–M5 not queued
+**Workflow state:** Queue Mode RUN; M1/M3 complete, M2 blocked, M4 eligible, and M5 dependency-blocked
 
-**Next owner:** `ENGINEER` - implement and validate accepted M3 locally; stop only for its identity, integrity, architecture, validation, or production gates.
+**Next owner:** `ENGINEER` - refresh the local queue and run normal `CB` for M4 bounded Bookshelf.
 
-M1 found no verified Sites-native option that is simultaneously Product Owner-accessible, private, isolated, and non-production. M2 remains queued but blocked. M3 passed its 68/68 baseline, was accepted as Attempt 1, and is active for local/disposable work. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+M1 found no safe existing validation option; Planner selected a separate isolated validation-Site direction, but its creation remains unauthorized. M3 completed locally with 29/29 focused and 79/79 full serial tests, lint, and build passing. M4 and M5 briefs are local; M4 is next eligible, while M5 awaits M4 convergence and an approved export identity/scope contract.
 
 **Current objective**
 
-Complete and validate the bounded M3 canonical identifier foundation while Designer/Planner resolves M2 environment direction independently.
+Implement and validate M4 bounded Bookshelf locally without schema changes or production/Site actions.
 
 **Why this is the current priority**
 
@@ -60,8 +60,9 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 
 ## Ready Next
 
-- Continue accepted M3 local/disposable implementation and validation.
-- Keep M2 blocked pending the Planner Inbox decision and any later explicit environment authority.
+- Accept and execute M4 after normal baseline/collision checks.
+- Keep M2 blocked pending a future explicit isolated validation-Site action brief/approval.
+- Keep M5 blocked until M4 converges and Designer approves the immutable external-ID/export-scope contract.
 - Do not start M4 Bookshelf or M5 export-first portability. Their accepted definitions are `NOT QUEUED`; future briefs require preceding convergence and Designer action.
 
 ## Blocked

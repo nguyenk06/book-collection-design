@@ -206,6 +206,8 @@ The accepted strategy is additive migration, not a rewrite or immediate title/ed
 8. Add asset metadata immediately before reference-cover enrichment.
 9. Add tags and assignments when the Tags roadmap item begins.
 
+Step 5 is now complete in the unsaved local working copy: additive `book_identifiers`, deterministic ISBN-10/13 equivalence, conservative conflict-aware backfill planning, and exact canonical lookup passed 29/29 focused and 79/79 full serial tests. Production schema and saved Site versions remain unchanged.
+
 Shopping persistence decisions are recorded in [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md); identifier strategy is recorded in [ADR-0008](decisions/ADR-0008-canonical-books-and-identifiers.md).
 
 ### Recommended relationship behavior

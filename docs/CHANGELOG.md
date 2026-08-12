@@ -16,6 +16,9 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Clarified blocker continuation: a blocked milestone is preserved and reported, then Engineer scans forward to the next independently eligible brief. M2 checkpoint blockers do not prevent local M3 work and still block Shopping activation.
 - Accepted M1 feasibility evidence: no verified Sites-native option is simultaneously runnable by Product Owner, private, isolated, and non-production; no Site/source/production state changed. M2 is blocked and a non-blocking validation-environment direction decision was added to Planner Inbox.
 - Accepted M3 brief intake after a clean 68/68 baseline; M3 is active for local/disposable Attempt 1 while M2 remains blocked.
+- Accepted M3 completion: additive canonical identifiers, ISBN-10/13 equivalence, conservative conflicts, and exact lookup passed 29/29 focused and 79/79 full serial tests, lint, and build; no Site or production state changed.
+- Recorded Planner decision A for a separately isolated validation-Site design; creation, bindings, access, deployment, and cleanup remain separately gated.
+- Queued local M4 Bookshelf and M5 export-first briefs under `RUN`; M4 is eligible and M5 remains blocked on M4 plus the export identity/scope contract.
 
 ## Milestone State Model
 
