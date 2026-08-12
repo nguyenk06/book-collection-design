@@ -6,19 +6,19 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle STOP; Engineer paused; M1–M3 briefed serially, M4–M5 defined but not queued, and only M1 eligible after explicit `RUN`
+**Workflow state:** Queue Mode enabled with throttle RUN; Engineer available; M1–M3 queued serially, M4–M5 defined but not queued, and only M1 currently eligible
 
-**Next owner:** `EXTERNAL/WAIT` - replacement Engineer `INIT` is complete; issue explicit `RUN` only when ready to begin Milestone 1.
+**Next owner:** `ENGINEER` - run normal `CB`, accept M1 if its starting state verifies, and continue through the serial queue only as each gate is satisfied.
 
-P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. The [three-milestone serial plan](STAGED_MILESTONES.md) is staged; only Milestone 1 is eligible after explicit `RUN`. Milestone 2 requires accepted feasibility evidence plus Product Owner authority and participation. Milestone 3 requires the reconciled Shopping checkpoint. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. M1–M3 are present in local `briefs/`; M1 is eligible for normal acceptance under `RUN`. M2 still requires accepted feasibility evidence plus Product Owner authority and participation. M3 still requires the reconciled Shopping checkpoint. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
-Preserve the safe pause. After explicit future `RUN`, determine a safe functional Shopping validation environment without advancing another major product stage.
+Execute M1 read-only feasibility, then advance to M2 and M3 only when their recorded dependencies and approvals are satisfied.
 
 **Why this is the current priority**
 
-Automated and Designer convergence evidence cannot substitute for hands-on usability review at a major user-facing boundary. Shopping is complete locally but remains an inaccessible black box until Product Owner can exercise realistic desktop and mobile scenarios safely. Work is intentionally paused for usage refresh; `INIT` does not resume it, and the Product Owner must explicitly restore `RUN`.
+Automated and Designer convergence evidence cannot substitute for hands-on usability review at a major user-facing boundary. Shopping is complete locally but remains an inaccessible black box until Product Owner can exercise realistic desktop and mobile scenarios safely. The prior usage pause is complete; `RUN` now permits M1 intake but does not satisfy M2’s Product Owner checkpoint conditions.
 
 **Success criteria**
 
@@ -38,7 +38,7 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Estimated effort**
 
-Product Owner reported approximately 87% usage available on 2026-08-12. Preserve reserve for convergence, evidence, and a clean stop; throttle remains `STOP` until explicit `RUN`.
+Engineer estimates up to approximately 50% usage for M1–M3 through existing blockers. This is a ceiling; preserve reserve for convergence, evidence, and a clean stop.
 
 **Risks**
 
@@ -60,7 +60,7 @@ Product Owner reported approximately 87% usage available on 2026-08-12. Preserve
 
 ## Ready Next
 
-- After explicit `RUN`, accept and execute the revised Milestone 1 read-only feasibility brief.
+- Accept and execute the local Milestone 1 read-only feasibility brief through normal `CB`.
 - Milestone 2 is gated on accepted feasibility evidence and separate Product Owner environment authority/participation.
 - Milestone 3 is gated on the reconciled Shopping checkpoint and is limited to the local canonical identifier foundation.
 - Do not start M4 Bookshelf or M5 export-first portability. Their accepted definitions are `NOT QUEUED`; future briefs require preceding convergence and Designer action.

@@ -12,15 +12,15 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Safe resumable pause; P2 Shopping and P3 focused validation complete locally; M1–M3 briefed serially, M4–M5 defined but not queued, and only M1 eligible after explicit `RUN`
+**Workflow state:** M1–M3 queued serially under `RUN`; M4–M5 remain defined but not queued; Engineer begins with normal M1 `CB` acceptance and advances only through satisfied gates
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
-**Queue throttle:** `STOP`
+**Queue throttle:** `RUN`
 
-**Usage guidance:** Product Owner reported approximately 87% usage available on 2026-08-12. Usage is shared: prefer complete validated milestones and preserve reserve for evidence and a clean stop. This does not change throttle `STOP` or authorize queue consumption.
+**Usage guidance:** Engineer estimates up to approximately 50% usage to execute M1–M3 through their existing blockers. Treat that as a ceiling, not a target: complete and validate each eligible milestone, preserve reserve for evidence and a clean stop, and do not spend through a dependency or approval gate.
 
-**Engineer execution state:** `PAUSED` — replacement Engineer completed read-only `INIT`; no active workstream or queue consumption, and explicit future `RUN` is still required
+**Engineer execution state:** `AVAILABLE` — replacement Engineer completed read-only `INIT`; Queue Mode is `RUN`, and Engineer may perform normal `CB` acceptance of M1
 
 ## Current Engineering Workstreams
 
@@ -38,20 +38,21 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SHOP-PURCHASE` | Purchase capture and history | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
-| `WS-PO-SHOP-ENV` | Shopping validation-environment feasibility | `[░░░░░░░░░░] 0%` | PLANNED | Read-only feasibility brief queued and unaccepted | Explicit future `RUN`, then Engineer acceptance; verify a private functional option without creating it | No while paused |
-| `WS-PO-SHOP-VALIDATE` | Product Owner hands-on Shopping validation | `[░░░░░░░░░░] 0%` | PLANNED | Checkpoint required before Shopping production activation | Verify a private user-accessible environment with disposable/isolated data, then obtain separate authority to create/use it | No |
+| `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[░░░░░░░░░░] 0%` | QUEUED / ELIGIBLE | Read-only local brief; normal `CB` acceptance required | Verify a private functional option without creating it | Yes under `RUN` |
+| `WS-PO-SHOP-VALIDATE` | M2 safe environment and Product Owner validation | `[░░░░░░░░░░] 0%` | QUEUED / BLOCKED | Local brief present; checkpoint required before Shopping activation | Accepted M1 evidence, exact safe option, separate preview/save authority, and Product Owner availability | No |
+| `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[░░░░░░░░░░] 0%` | QUEUED / BLOCKED | Local brief present; local-only implementation authority | Designer-reconciled M2 outcome and clean baseline convergence | No |
 
-**Engineer can continue:** NO while throttle is `STOP`. Replacement Engineer initialization is complete; after usage refresh, wait for explicit `RUN` before `CB`.
+**Engineer can continue:** YES. Run normal `CB` for M1 now. After every completion, refresh local `briefs/`; accept a later brief only when its recorded dependency and approval gates are satisfied.
 
 **Current Planner decisions:** None. Planner accepted bounded Bookshelf (`1: A`) and export-first portability (`2: A`). Milestone 2 will separately require Product Owner preview/save authority and participation after feasibility; that future gate is not yet actionable.
 
 **Next production gate:** None is currently executable. Product Owner hands-on Shopping validation is required before Shopping production activation; preview/save authority, publication, migration, and all production actions remain separately gated and unauthorized.
 
-**Resume condition:** Replacement Site Engineer read-only `INIT` and stopping-point verification are complete. After usage refresh, issue explicit `RUN` when ready; until then, do not consume the queued brief. Planner and Engineer have confirmed this stopping point.
+**Resume condition:** Satisfied. Replacement Site Engineer read-only `INIT` and stopping-point verification are complete, and the Product Owner has set throttle `RUN` for the bounded M1–M3 sequence.
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1–M3 retain their serial briefs and gates; only M1 may become executable after explicit `RUN`. M4 bounded Bookshelf and M5 export-first portability are future definitions only, with no briefs or execution authority.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1–M3 have local serial briefs and unchanged gates; M1 is currently eligible for normal acceptance. M4 bounded Bookshelf and M5 export-first portability remain future definitions only, with no briefs or execution authority.
 
 ## Summary
 
@@ -204,4 +205,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-After explicit future `RUN`, investigate the safe Shopping hands-on validation environment under the queued read-only brief. Then run the Product Owner checkpoint before any Shopping production activation. Do not begin another major product stage; preview/save creation, migration, publication, production verification, and smoke testing remain separately gated.
+Under current `RUN`, accept and investigate the safe Shopping hands-on validation environment through M1. Then proceed only as M2/M3 dependencies are satisfied. Preview/save creation, Product Owner checkpoint participation, migration, publication, production verification, and smoke testing remain separately gated.

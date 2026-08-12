@@ -12,6 +12,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Did not stage Bookshelf or Import/Export because required contracts are incomplete; no knowledge sandbox, external research, or Future Improvement Catalog material was processed.
 - Added two non-blocking Planner Inbox decisions to resolve the Bookshelf first-release behavior and Import/Export staging boundary; neither decision authorizes implementation.
 - Planner accepted both recommendations: bounded collection Bookshelf (`1: A`) and export-first portability (`2: A`). Defined future M4/M5 without briefs, queue eligibility, or execution authority; M1–M3 gates remain unchanged.
+- Product Owner set Queue Mode throttle to `RUN` for the existing M1–M3 local brief sequence. Engineer is `AVAILABLE` for M1 `CB`; the approximately 50% estimate is a ceiling through existing blockers and does not weaken M2/M3, preview/save, validation, migration, publication, or production gates.
 
 ## Milestone State Model
 

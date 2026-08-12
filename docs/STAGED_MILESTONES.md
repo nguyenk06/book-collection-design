@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** approximately 87%; preserve reserve for convergence, evidence, and a clean stop
+**Execution budget:** Engineer estimate up to approximately 50% for M1–M3 through existing blockers; preserve reserve for convergence, evidence, and a clean stop
 
-**Queue state:** enabled with throttle `STOP`; staging does not resume Engineer
+**Queue state:** enabled with throttle `RUN`; M1 eligible for normal `CB`, M2/M3 remain dependency-gated
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
