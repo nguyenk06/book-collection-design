@@ -24,6 +24,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Planner selected catalog-first M5 format v1. ADR-0011 defines existing Collection keys plus new immutable persisted Book stable IDs; Businesses/Purchases and their history are explicitly deferred. M5 remains unaccepted pending a fresh usage check above reserve.
 - Accepted M5 intake after Product Owner supplied a fresh 71% usage reading and Engineer projected adequate reserve.
 - Accepted M5 local completion: immutable Book stable IDs and catalog export v1 passed 3/3 focused, 19/19 layered, and 84/84 full tests, lint/build, and explicit no-write verification. No UI, Site, production export, backup claim, migration, or publication occurred.
+- Product Owner canceled the separate validation-Site direction and accepted ADR-0012's controlled live Shopping release/validation sequence. No production gate executed from this decision; candidate isolation, administration publication, export, schema activation/verification, Shopping publication, live validation, smoke review, and rollback remain separately evidenced.
 
 ## Milestone State Model
 

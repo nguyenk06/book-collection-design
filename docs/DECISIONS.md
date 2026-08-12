@@ -15,6 +15,7 @@ Architecture Decision Records capture durable choices and their consequences. Ac
 | [ADR-0009](decisions/ADR-0009-sites-native-migration-bridge.md) | Use a Sites-native migration bridge before Shopping schema activation | Accepted |
 | [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md) | Operate the migration bridge through an owner-authenticated in-Site administration surface | Accepted |
 | [ADR-0011](decisions/ADR-0011-catalog-first-export-identities.md) | Use catalog-first format v1 with persisted immutable Book IDs | Accepted |
+| [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md) | Validate Shopping through a controlled live release | Accepted |
 
 The accepted database direction and migration sequence are summarized in [Database](DATABASE.md). Current implementation status is maintained in [Current State](CURRENT_STATE.md).
 

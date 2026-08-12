@@ -454,7 +454,9 @@ Outcome meanings:
 - `ACCEPT WITH FOLLOW-UP` — the milestone is usable for the current boundary; Designer records bounded follow-up work that does not silently expand release authority.
 - `REVISE BEFORE RELEASE` — user-facing issues must return to Designer/Engineer and converge again before release consideration.
 
-Product Owner feedback must reach Designer before production activation. Engineer may receive actionable implementation feedback in parallel, but Designer owns requirement reconciliation and permanent state. Do not expand Queue Mode merely to keep capacity occupied while this gate is unresolved.
+Product Owner feedback normally reaches Designer before production activation. Under a specifically documented live-validation exception, it must reach Designer immediately after controlled publication and before release acceptance or further progression. Engineer may receive actionable implementation feedback in parallel, but Designer owns requirement reconciliation and permanent state. Do not expand Queue Mode merely to keep capacity occupied while this gate is unresolved.
+
+When Product Owner explicitly selects post-publication live validation because no safe preview exists, document that exception in an accepted decision and preserve the same separation of layers. Require backup/export and preservation evidence, schema activation/verification, publication, hands-on validation, and smoke review as sequential gates. The direction does not authorize every gate automatically or make later evidence retroactive. A failed live checkpoint stops further release progression and triggers rollback/repair assessment under existing authority rules.
 
 After an explicitly approved publication, perform a concise Product Owner smoke review of critical workflows in production. Read-only checks are preferred. Any write, cleanup, restore, rollback, or destructive action remains separately authorized; the smoke review does not inherit authority from pre-publication validation.
 

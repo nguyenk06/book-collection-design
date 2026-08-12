@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4/M5 complete locally; M2 blocked; no executable brief remains; M4 transport closure awaits acceptance report
+**Workflow state:** M1/M3/M4/M5 complete locally; revised M2 candidate preflight eligible; all Site/production gates closed; M4 transport closure awaits acceptance report
 
-**Next owner:** `DESIGNER` - prepare a separately gated isolated validation-Site design/action path only when requested; Engineer must supply the missing M4 acceptance trace for artifact closure.
+**Next owner:** `ENGINEER` - accept revised M2 for candidate isolation/local preflight only and stop before the first Site/production gate.
 
-M5 completed locally after a fresh 71% usage reading. The catalog-first export foundation passed 3/3 focused, 19/19 layered, and 84/84 full tests, task lint, build, and explicit export no-write verification. No downloadable UI, Site save, publication, production export, backup claim, or production mutation occurred. M4's separate acceptance report remains missing.
+The Product Owner canceled the separate validation Site. Revised M2 uses the live Site only after exact release-candidate isolation, local convergence, administration publication, owner-authenticated export, schema activation/verification, and Shopping publication succeed through distinct gates. No such Site or production step has occurred. M4's separate acceptance report remains missing.
 
 **Current objective**
 
-Preserve the completed local milestone state and resolve the remaining M2 environment gate and M4 transport trace without implying activation.
+Prepare the exact Shopping release candidate and gate evidence without performing a Site save, publication, production request, export, schema change, or live validation.
 
 **Why this is the current priority**
 
@@ -61,7 +61,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 ## Ready Next
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
-- Keep M2 blocked pending a future explicit isolated validation-Site action brief/approval.
+- Execute only revised M2 local candidate preflight; request the next explicit gate after clean evidence.
 - M5 requires no further local implementation; any downloadable UI, Site save, production export, migration, or activation needs a new brief and separate gates.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 

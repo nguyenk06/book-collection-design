@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4/M5 complete locally; M2 blocked on isolated validation-Site setup; no independently executable brief remains; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4/M5 complete locally; M2 revised to controlled live release/validation and queued at candidate-preflight gate; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner supplied a fresh 71% reading before M5; Engineer reports approximately 50–60% remaining after completion, preserving the required 30% reserve.
 
-**Engineer execution state:** `BLOCKED` — M5 completed locally and no independently executable brief remains; M2 requires a separately authorized validation-Site action
+**Engineer execution state:** `AVAILABLE` — revised M2 local candidate-preflight work may be accepted under `RUN`; every Site/production step remains separately gated
 
 ## Current Engineering Workstreams
 
@@ -39,22 +39,22 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[██████████] 100%` | COMPLETE | Read-only capability investigation accepted | No verified option is runnable, private, isolated, and non-production | Transitioned to M2 blocker |
-| `WS-PO-SHOP-VALIDATE` | M2 safe environment and Product Owner validation | `[░░░░░░░░░░] 0%` | BLOCKED | Local brief remains queued; checkpoint required before Shopping activation | Planner/Product Owner direction on separate isolated validation Site or deferral | No; does not block M3 |
+| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[░░░░░░░░░░] 0%` | QUEUED / PREFLIGHT ELIGIBLE | Revised local brief; ADR-0012 | Accept local candidate-isolation/preflight only; stop at first Site/production gate | Yes for preflight |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
 
-**Engineer can continue:** NO. No independently executable brief remains. M2 requires a future explicitly authorized isolated validation-Site setup brief; production and Site gates remain closed.
+**Engineer can continue:** YES for revised M2 candidate isolation, source-composition verification, and local convergence only. Administration publication, production export, schema activation/verification, Shopping publication, live validation, smoke testing, and rollback require their recorded sequential gates.
 
-**Current Planner decisions:** None. Planner accepted catalog-first M5 format v1 and the separate isolated validation-Site direction; execution/creation gates remain separate.
+**Current Planner decisions:** None. Product Owner canceled the separate validation-Site direction and selected controlled live Shopping release/validation; the decision does not itself execute or approve individual production gates.
 
-**Next production gate:** None is currently executable. Product Owner hands-on Shopping validation is required before Shopping production activation; preview/save authority, publication, migration, and all production actions remain separately gated and unauthorized.
+**Next production gate:** None is currently executable. First complete M2 local candidate preflight. The first later production gate is explicit authorization to publish the owner-authenticated administration surface; export, schema activation/verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
 
 **Resume condition:** Satisfied. Replacement Site Engineer read-only `INIT` and stopping-point verification are complete, and the Product Owner has set throttle `RUN` for the bounded M1–M3 sequence.
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally; M2 remains blocked. M4 still requires its missing acceptance report before local transport artifacts can close.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally. M2 is revised and preflight-eligible but stops before any Site/production action. M4 still requires its missing acceptance report before local transport artifacts can close.
 
 ## Summary
 
@@ -90,7 +90,7 @@ The bounded P2 Shopping Mode UI is complete and validated in the unsaved local w
 
 P3 focused scanner/identifier validation is also complete in the unsaved local source. Focused tests pass 18/18, the authoritative full serial suite passes 68/68, task lint and build pass, and two narrow validation defects were corrected: unsupported extra characters can no longer normalize into an otherwise valid ISBN, and invalid checksums are rejected before external lookup. Physical-device validation, ISBN-10/13 conversion, canonical multi-identifier persistence, and advanced candidate matching remain deferred. No Shopping component, schema, Site version, or production state changed.
 
-Planner added a reusable Product Owner hands-on validation checkpoint at meaningful user-facing milestones. P2 Shopping now requires this checkpoint before production activation. The current Shopping/P3 source is unsaved and not user-accessible; Version 19 does not contain Shopping. A supported private preview or unpublished saved version backed by disposable/isolated data is the preferred validation environment, but current evidence does not establish that Sites can expose one without production bindings or publication. That feasibility must be verified read-only before separate preview/save authority is requested.
+Planner added a reusable Product Owner hands-on validation checkpoint at meaningful user-facing milestones. M1 later established that Sites exposes no safe runnable non-production Shopping option. The Product Owner canceled the separate validation-Site direction and accepted ADR-0012's live-validation exception: Shopping hands-on validation occurs only after candidate isolation, administration publication, export/preflight, schema activation/verification, and Shopping publication pass their distinct gates. None of those gates has executed from the decision.
 
 Engineering then stopped at a safe resumable checkpoint for usage refresh. The replacement Engineer completed read-only `INIT`, and Planner and Engineer confirmed the stopping point. The feasibility brief remains queued and unaccepted, no workstream is active, and Queue Mode remains enabled with throttle `STOP`. No Site version contains the completed Shopping/P3 source, and no preview, production request, D1/R2 operation, migration, publication, deployment, smoke test, rollback, or destructive action occurred.
 
@@ -207,4 +207,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Under current `RUN`, accept and investigate the safe Shopping hands-on validation environment through M1. Then proceed only as M2/M3 dependencies are satisfied. Preview/save creation, Product Owner checkpoint participation, migration, publication, production verification, and smoke testing remain separately gated.
+Under current `RUN`, revised M2 may perform exact Shopping candidate isolation and local preflight. Then stop before administration publication. Export, schema activation, verification, Shopping publication, live Product Owner validation, smoke testing, rollback, and destructive recovery remain separately gated.

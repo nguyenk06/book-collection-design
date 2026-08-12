@@ -79,21 +79,11 @@ The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, is
 
 ## Product Owner validation checkpoint
 
-Shopping requires hands-on Product Owner validation before production activation. The validation environment must be private and user-accessible, expose the completed Shopping source, and use disposable/isolated data without production D1/R2 mutation. The preferred path is a supported Sites preview or unpublished saved version only after read-only feasibility confirms those boundaries and separate save/preview authority is granted.
+The separate validation-Site direction is canceled. Shopping hands-on validation will occur on the live Site using existing collection data only after the controlled sequence in [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md) reaches publication successfully.
 
-Current blocker: the completed Shopping/P3 source exists only in the Engineer's unsaved local workspace. Version 19 does not include Shopping, and current evidence does not establish whether an unpublished Sites version can be opened functionally with isolated data rather than production bindings.
+The sequence does not weaken data preservation because the database is lightweight or correctable. Before schema activation, create and privately retain the bridge structured export, record preservation invariants, and acknowledge that the artifact excludes R2 bytes and is not a D1 snapshot. Preserve and verify Book IDs, collection keys/data, covers/references, ownership, copy counts, and existing values. Keep schema activation, verification, Shopping publication, hands-on validation, post-publication smoke testing, code rollback, forward repair, and destructive recovery as separate gates.
 
-### Accepted separate validation-Site direction
-
-Planner selected a separately isolated validation Site as the future M2 direction after M1 established that the existing Site exposes no safe runnable non-production option. The design must require:
-
-- A distinct non-production Site identity and lifecycle.
-- Independently isolated disposable D1/R2 bindings and data; never production bindings or copied private production data.
-- Owner-only access sufficient for the Product Owner checklist without credential/session transfer to Engineer.
-- The exact validated Shopping/P3 source baseline, with drift detection before use.
-- Clear teardown/retention rules for disposable data and access.
-
-This decision authorizes design direction only. Creating the Site, bindings, access policy, saved version, deployment, or cleanup requires a future explicit action brief and approval. M2 and Shopping activation remain blocked until those gates are satisfied.
+The Shopping release candidate must not accidentally include later M3–M5 work from the cumulative unsaved working copy. Engineer must establish an exact source baseline containing only the approved administration/migration path, Shopping UI, and P3 validation fixes. Stop before Site action if that candidate cannot be isolated and validated safely.
 
 Use this concise checklist:
 
@@ -115,7 +105,7 @@ Return exactly one outcome with concise notes:
 - `ACCEPT WITH FOLLOW-UP`
 - `REVISE BEFORE RELEASE`
 
-Designer records the result and routes bounded feedback before any production-activation decision. After an explicitly approved publication, repeat a short smoke review of search, status presentation, navigation, and other approved critical paths. Production writes or cleanup require their own authority.
+Designer records the live result and routes bounded feedback. `REVISE BEFORE RELEASE` in this live sequence means stop further use where practical, assess code rollback to the last compatible version, and require a corrective brief; it does not authorize destructive database recovery. After publication, repeat a short smoke review of search, status presentation, navigation, ownership/copies, cover rendering, and other approved critical paths. Production writes or cleanup require their own authority.
 
 ## Future improvements
 

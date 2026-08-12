@@ -4,7 +4,7 @@
 
 **Execution budget:** Engineer estimate up to approximately 50% for M1–M3 through existing blockers; preserve reserve for convergence, evidence, and a clean stop
 
-**Queue state:** M1/M3/M4/M5 complete locally; M2 blocked; no independently executable brief remains
+**Queue state:** M1/M3/M4/M5 complete locally; revised M2 candidate preflight eligible; production gates closed
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -23,18 +23,18 @@ The queue is ordered, but blockers are per milestone rather than global. After c
 - **Stop/escalate:** Required mutation, unverified isolation, authentication bypass, credential/session request, missing source, ambiguous identity, unsupported assumption, or production invocation.
 - **Completion/handoff:** Local `inbox/` acceptance and completion/blocker reports followed by a fresh queue scan. M2 uses accepted M1 evidence; if M1 or M2 cannot proceed, evaluate independent M3 rather than stopping the whole cycle.
 
-## Milestone 2 — Safe Shopping environment and Product Owner checkpoint
+## Milestone 2 — Controlled live Shopping release and Product Owner checkpoint
 
 - **Roadmap authority:** [Roadmap priority 1 and Immediate milestone](ROADMAP.md#immediate-milestone); [Shopping checkpoint](SHOPPING_MODE.md#product-owner-validation-checkpoint); [Handoff Protocol checkpoint](HANDOFF_PROTOCOL.md#product-owner-hands-on-validation-checkpoint).
-- **Objective/user outcome:** Product Owner can privately open completed Shopping/P3 against disposable/isolated data and perform the approved desktop/mobile scenarios.
-- **Included:** Only the option verified in Milestone 1; preserve the exact baseline if separately authorized; access instructions; existing checklist; one outcome—`ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE`; Designer reconciliation.
-- **Excluded:** Production bindings/data, schema activation, final publication, production smoke testing, unrelated fixes, new product stages, external platforms, research review, and destructive actions.
-- **Dependencies/starting state:** Designer-accepted Milestone 1 evidence; verified safe option; exact environment recorded in a brief addendum/replacement; separate Product Owner authority for required preview/save creation; Product Owner available for the checkpoint. Never assume these conditions.
-- **Acceptance/tests/evidence:** Verify environment identity/isolation; expose completed P2/P3; rerun appropriate suite/build/lint; complete checklist and record outcome; report sanitized environment evidence, baseline comparison, results, notes, and confirmation production remained unchanged.
-- **Data/rollback:** Disposable/isolated data only. Remove disposable artifacts only with explicit safe authority; otherwise stop and request cleanup authority. Preserve prior source and Site versions.
-- **User validation:** Required under `SHOPPING_MODE.md`.
-- **Stop/escalate:** Product Owner unavailable; no explicit preview/save authority; environment differs; production binding cannot be excluded; source drift; test failure; integrity concern; scope expansion; or `REVISE BEFORE RELEASE`.
-- **Completion/handoff:** Local `inbox/` reports separate engineering validation, Designer convergence, Product Owner outcome, environment state, and production state. A blocked M2 continues to gate Shopping activation but does not prevent independent local M3 intake.
+- **Objective/user outcome:** Release the exact approved Shopping candidate through controlled live gates, then let Product Owner validate desktop/mobile behavior against the existing collection.
+- **Included:** Candidate isolation/local validation; separately approved administration-surface publication; owner schema status and private structured export; separately approved guarded schema activation and verification; separately approved Shopping publication; live checklist; smoke review; sanitized evidence after every gate.
+- **Excluded:** Separate validation Site, accidental M3–M5 publication, unapproved schema/source changes, destructive restore, silent data correction, external platform, credentials/session transfer, and research review.
+- **Dependencies/starting state:** Exact cumulative source and Site/version identity verified; Shopping-only release candidate can be isolated; Product Owner is available; each production gate receives its required explicit authority before execution.
+- **Acceptance/tests/evidence:** Preserve Book IDs, collections, covers/references, ownership, copies, and existing values; verify structured export and its limitations; schema/foreign-key/target/count checks pass; exact candidate deploys; checklist returns one allowed outcome; critical smoke paths pass.
+- **Data/rollback:** Use live data. Retain export privately; keep compatible prior Site versions; prefer forward repair after additive migration. Code rollback and destructive data recovery remain separate decisions.
+- **User validation:** Required live after schema verification and Shopping publication.
+- **Stop/escalate:** Candidate contamination, failed backup/export, unexpected schema, preservation mismatch, partial upgrade, failed deployment/health, failed checklist/smoke, unavailable owner session, missing authority, or any destructive recovery need.
+- **Completion/handoff:** One local report per gate plus a final outcome; never combine gate approvals or infer success from this definition.
 
 ## Milestone 3 — Canonical book-identifier foundation
 

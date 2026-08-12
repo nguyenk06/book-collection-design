@@ -7,7 +7,7 @@ The database-first assessment validated the priority order. Enabling foundations
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
 | 0 | Database integrity and Shopping persistence foundation | Partial; owner-authenticated administration surface preserved in unpublished Version 19 | Separately gated publication/export/upgrade/verification | Medium | Production schema remains unverified; book-to-collection foreign key deferred |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; bounded local UI complete and technically validated but awaiting Product Owner hands-on validation | Safe user-accessible environment, checkpoint outcome, then separately gated activation | Medium-large | No verified private/disposable preview; ownership reconciliation unresolved |
+| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local UI complete; controlled live release/validation accepted but unexecuted | Exact release candidate, admin publication, export, schema activation/verification, Shopping publication, live validation/smoke | Medium-large | Every production gate remains unexecuted; cumulative source must be isolated |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial; canonical identifier foundation complete locally | Future candidate workflow and user-facing matching | Medium | Production unchanged; fuzzy candidate matching deferred |
 | 3 | [Bookshelf](BOOKSHELF.md) | Bounded first release complete locally; user checkpoint pending | Safe validation environment and Product Owner outcome before activation | Medium | Unsaved/unpublished; checkpoint environment blocked |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first foundation complete locally | Future downloadable UI/checkpoint and separately gated activation | Medium-large | No production export/backup; import remains unsafe/immediate |
@@ -27,18 +27,19 @@ The database-first assessment validated the priority order. Enabling foundations
 
 ## Immediate milestone
 
-Establish and run the Product Owner Shopping validation checkpoint before another major product stage:
+Execute the controlled live Shopping release sequence in ADR-0012 without a separate validation Site:
 
-- Verify whether Sites can expose the completed Shopping source privately with disposable/isolated data and without publication or production bindings.
-- Obtain separate authority before creating an unpublished validation version or preview.
-- Run the concise desktop/mobile Shopping checklist and record one checkpoint outcome.
-- Reconcile Product Owner feedback before considering Shopping activation; keep migration, publication, production access, smoke testing, and destructive actions separately gated.
+- Isolate and validate the exact Shopping release candidate from the cumulative local worktree.
+- Preserve/publish the owner-authenticated administration path through its own gate.
+- Run owner-authenticated schema status, structured export, and preservation preflight before schema activation.
+- Keep schema activation/verification and Shopping publication independently approved and evidenced.
+- Run the desktop/mobile checklist and post-publication smoke review on the live Site.
 
 Saving Version 17 does not mark Shopping released or active in production. Version 18 bridge is published, but schema activation and final Shopping publication remain separate gates.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The bounded continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1–M3 have serial briefs and unchanged gates. Planner accepted definitions for future M4 bounded Bookshelf and M5 export-first portability, but neither is queued, briefed, or executable.
+The bounded continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally. Revised M2 is queued for candidate preflight only; its production gates remain sequential and unexecuted.
 
 ## Deferred
 
