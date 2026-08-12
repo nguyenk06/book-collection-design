@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1–M3 queued serially under `RUN`; M4–M5 remain defined but not queued; Engineer begins with normal M1 `CB` acceptance and advances only through satisfied gates
+**Workflow state:** M1–M3 queued in priority order under `RUN`; blockers pause only the affected milestone; M4–M5 remain defined but not queued
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -40,9 +40,9 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[░░░░░░░░░░] 0%` | QUEUED / ELIGIBLE | Read-only local brief; normal `CB` acceptance required | Verify a private functional option without creating it | Yes under `RUN` |
 | `WS-PO-SHOP-VALIDATE` | M2 safe environment and Product Owner validation | `[░░░░░░░░░░] 0%` | QUEUED / BLOCKED | Local brief present; checkpoint required before Shopping activation | Accepted M1 evidence, exact safe option, separate preview/save authority, and Product Owner availability | No |
-| `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[░░░░░░░░░░] 0%` | QUEUED / BLOCKED | Local brief present; local-only implementation authority | Designer-reconciled M2 outcome and clean baseline convergence | No |
+| `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[░░░░░░░░░░] 0%` | QUEUED / WAITING | Local brief present; independent local implementation authority | M1 completion/blocker transition, clean baseline convergence, and no Shopping/scanner collision | Yes after M1 transition |
 
-**Engineer can continue:** YES. Run normal `CB` for M1 now. After every completion, refresh local `briefs/`; accept a later brief only when its recorded dependency and approval gates are satisfied.
+**Engineer can continue:** YES. Run normal `CB` for M1 now. After every completion or blocker, report it, refresh local `briefs/`, and accept the next independently eligible brief. M2 blockers do not block M3; they continue to block Shopping activation.
 
 **Current Planner decisions:** None. Planner accepted bounded Bookshelf (`1: A`) and export-first portability (`2: A`). Milestone 2 will separately require Product Owner preview/save authority and participation after feasibility; that future gate is not yet actionable.
 
@@ -52,7 +52,7 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1–M3 have local serial briefs and unchanged gates; M1 is currently eligible for normal acceptance. M4 bounded Bookshelf and M5 export-first portability remain future definitions only, with no briefs or execution authority.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1–M3 have local ordered briefs; M1 is currently eligible, M2 retains its checkpoint gates, and M3 is an independent local continuation after M1 transitions. M4/M5 remain future definitions with no briefs or authority.
 
 ## Summary
 

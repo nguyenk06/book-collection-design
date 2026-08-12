@@ -13,6 +13,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Added two non-blocking Planner Inbox decisions to resolve the Bookshelf first-release behavior and Import/Export staging boundary; neither decision authorizes implementation.
 - Planner accepted both recommendations: bounded collection Bookshelf (`1: A`) and export-first portability (`2: A`). Defined future M4/M5 without briefs, queue eligibility, or execution authority; M1–M3 gates remain unchanged.
 - Product Owner set Queue Mode throttle to `RUN` for the existing M1–M3 local brief sequence. Engineer is `AVAILABLE` for M1 `CB`; the approximately 50% estimate is a ceiling through existing blockers and does not weaken M2/M3, preview/save, validation, migration, publication, or production gates.
+- Clarified blocker continuation: a blocked milestone is preserved and reported, then Engineer scans forward to the next independently eligible brief. M2 checkpoint blockers do not prevent local M3 work and still block Shopping activation.
 
 ## Milestone State Model
 

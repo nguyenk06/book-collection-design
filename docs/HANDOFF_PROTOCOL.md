@@ -503,6 +503,8 @@ At milestone completion, “may use `CB`” becomes a required queue-refresh and
 
 A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
 
+Under `RUN`, encountering a milestone blocker is a queue transition, not a reason to end the engineering cycle. Engineer must preserve the affected milestone, write the required sanitized blocker/state report to local `inbox/`, refresh local `briefs/`, and run `CB` against the next priority. Continue with the next independently authorized brief when its own dependencies, authority, collision checks, and acceptance criteria are satisfied. Never treat moving on as permission to bypass the blocked milestone's gate, weaken its acceptance criteria, or activate its user-facing/production outcome.
+
 #### Designer work-ahead and reporting
 
 During enabled `RUN`, Designer may process CI evidence, maintain permanent state, batch decisions, reprioritize unaccepted briefs within Planner direction, and prepare eligible future work while Engineer continues. Stay only one or two meaningful executable briefs ahead. Do not create speculative work merely to keep the queue non-empty.

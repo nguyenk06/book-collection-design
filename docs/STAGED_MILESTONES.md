@@ -4,11 +4,11 @@
 
 **Execution budget:** Engineer estimate up to approximately 50% for M1–M3 through existing blockers; preserve reserve for convergence, evidence, and a clean stop
 
-**Queue state:** enabled with throttle `RUN`; M1 eligible for normal `CB`, M2/M3 remain dependency-gated
+**Queue state:** enabled with throttle `RUN`; M1 is first, M2 is checkpoint-gated, and M3 is an independent local continuation after the M1 transition
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
-Each milestone is serial. A later brief is ineligible until Designer accepts the preceding completion evidence and records satisfaction of its dependency. Technical validation, Designer convergence, Product Owner hands-on validation, and production approval remain separate gates.
+The queue is ordered, but blockers are per milestone rather than global. After completing or blocking a milestone, Engineer reports to local `inbox/`, refreshes local `briefs/`, and accepts the next independently eligible brief. A skipped blocker remains unresolved and still gates its own user-facing or production outcome. Technical validation, Designer convergence, Product Owner hands-on validation, and production approval remain separate gates.
 
 ## Milestone 1 — Shopping validation-environment feasibility
 
@@ -21,7 +21,7 @@ Each milestone is serial. A later brief is ineligible until Designer accepts the
 - **Data/rollback:** No data access or mutation; rollback not applicable. Any unexpected mutation ends the milestone.
 - **User validation:** Not performed; this prepares the checkpoint.
 - **Stop/escalate:** Required mutation, unverified isolation, authentication bypass, credential/session request, missing source, ambiguous identity, unsupported assumption, or production invocation.
-- **Completion/handoff:** Local `inbox/` acceptance and completion reports; Designer accepts evidence before Milestone 2 eligibility.
+- **Completion/handoff:** Local `inbox/` acceptance and completion/blocker reports followed by a fresh queue scan. M2 uses accepted M1 evidence; if M1 or M2 cannot proceed, evaluate independent M3 rather than stopping the whole cycle.
 
 ## Milestone 2 — Safe Shopping environment and Product Owner checkpoint
 
@@ -34,7 +34,7 @@ Each milestone is serial. A later brief is ineligible until Designer accepts the
 - **Data/rollback:** Disposable/isolated data only. Remove disposable artifacts only with explicit safe authority; otherwise stop and request cleanup authority. Preserve prior source and Site versions.
 - **User validation:** Required under `SHOPPING_MODE.md`.
 - **Stop/escalate:** Product Owner unavailable; no explicit preview/save authority; environment differs; production binding cannot be excluded; source drift; test failure; integrity concern; scope expansion; or `REVISE BEFORE RELEASE`.
-- **Completion/handoff:** Local `inbox/` reports separate engineering validation, Designer convergence, Product Owner outcome, environment state, and production state. Milestone 3 requires recorded `ACCEPT` or reconciled non-blocking `ACCEPT WITH FOLLOW-UP`.
+- **Completion/handoff:** Local `inbox/` reports separate engineering validation, Designer convergence, Product Owner outcome, environment state, and production state. A blocked M2 continues to gate Shopping activation but does not prevent independent local M3 intake.
 
 ## Milestone 3 — Canonical book-identifier foundation
 
@@ -42,7 +42,7 @@ Each milestone is serial. A later brief is ineligible until Designer accepts the
 - **Objective/user outcome:** Local/disposable search and scan paths resolve validated equivalent ISBN-10/ISBN-13 identifiers to one canonical Book without silent overwrite or duplicate creation.
 - **Included:** Additive local `book_identifiers` model/migration; type, normalized value, canonical Book relation, global type/value uniqueness; deterministic normalization/conversion; conservative valid-ISBN backfill; exact lookup; explicit conflict reporting; minimal integration needed for canonical results.
 - **Excluded:** Production migration/data; Site save/publication; fuzzy scoring; silent merges; edition/copy hierarchy; `AltBooks`; provider redesign; physical-device claims; batch scanning; Bookshelf; Import/Export; research review.
-- **Dependencies/starting state:** Milestone 2 accepted/reconciled; exact P2/P3 baseline preserved; baseline suite, focused tests, lint, and build pass; no unresolved Shopping follow-up collides with scanner/search surfaces.
+- **Dependencies/starting state:** M1 has reached a reported completion or blocker transition; exact P2/P3 baseline is preserved; baseline suite, focused tests, lint, and build pass; no unresolved Shopping issue collides with scanner/search surfaces. M2 acceptance is not required for this local foundation.
 - **Acceptance:** Preserve Book IDs and collection state in disposable migration tests; backfill valid ISBNs conservatively; invalid/conflicting values never overwrite/merge; uniqueness prevents duplicate claims; ISBN-10/13 equivalents resolve to one Book; scanning alone causes no Book/Purchase mutation; legacy `books.isbn` remains compatible.
 - **Tests/evidence:** Representative migration, failure behavior, normalization/checksum/conversion vectors, uniqueness/conflicts, exact lookup, no-mutation scanner tests, full serial/focused suites, task lint, and build. Report counts, not private data.
 - **Data/rollback:** Local/disposable only and additive. Preserve `books.id`, `collections.key`, ownership, copies, purchases, covers, and timestamps. Retain pre-migration fixture and prove clean failure without partial reassignment. No production rollback authority.

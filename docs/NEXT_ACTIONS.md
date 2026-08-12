@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled with throttle RUN; Engineer available; M1–M3 queued serially, M4–M5 defined but not queued, and only M1 currently eligible
+**Workflow state:** Queue Mode enabled with throttle RUN; M1 first, M2 checkpoint-gated, M3 independent after M1 transition, and M4–M5 not queued
 
-**Next owner:** `ENGINEER` - run normal `CB`, accept M1 if its starting state verifies, and continue through the serial queue only as each gate is satisfied.
+**Next owner:** `ENGINEER` - run normal `CB` for M1; after a completion or blocker report, refresh the queue and move to the next independently eligible brief.
 
-P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. M1–M3 are present in local `briefs/`; M1 is eligible for normal acceptance under `RUN`. M2 still requires accepted feasibility evidence plus Product Owner authority and participation. M3 still requires the reconciled Shopping checkpoint. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. M1–M3 are present in local `briefs/`; M1 is eligible under `RUN`. M2 still requires accepted feasibility evidence plus Product Owner authority and participation. If M2 is blocked, Engineer reports it and moves to M3 when M3's baseline/collision checks pass. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
-Execute M1 read-only feasibility, then advance to M2 and M3 only when their recorded dependencies and approvals are satisfied.
+Execute M1 read-only feasibility. Attempt M2 only when its checkpoint gates are satisfied; otherwise preserve/report its blocker and continue to independent local M3.
 
 **Why this is the current priority**
 
@@ -62,7 +62,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 
 - Accept and execute the local Milestone 1 read-only feasibility brief through normal `CB`.
 - Milestone 2 is gated on accepted feasibility evidence and separate Product Owner environment authority/participation.
-- Milestone 3 is gated on the reconciled Shopping checkpoint and is limited to the local canonical identifier foundation.
+- Milestone 3 becomes eligible after the M1 completion/blocker transition and clean baseline/collision checks; M2 remains separately blocked if its Product Owner gates are unmet.
 - Do not start M4 Bookshelf or M5 export-first portability. Their accepted definitions are `NOT QUEUED`; future briefs require preceding convergence and Designer action.
 
 ## Blocked
