@@ -418,6 +418,18 @@ Briefs may authorize several named workstreams under one local implementation en
 
 Identify likely ownership boundaries and shared hotspots. Common hotspots include the main page, authentication/database helpers, shared API routes, migrations, global styles, and configuration. When streams need the same hotspot, serialize or coordinate that portion, or converge one stream before the other edits it. Do not create competing implementations to preserve parallelism.
 
+### Independent promotion boundary
+
+Design parallel workstreams so each can be preserved, validated, saved, and published independently whenever the implementation platform permits. A shared working copy, dirty worktree, common file, or later completed milestone must not silently bundle unrelated scope into an earlier release candidate.
+
+- Give each workstream an explicit source baseline, included/excluded change set, tests, migration set, and release authority.
+- Prefer isolated branches, commits, patches, saved versions, or other supported source-selection mechanisms in the Site implementation workspace when they preserve exact provenance safely.
+- Shared-file edits require deliberate integration, but integration for testing does not automatically create joint publication authority.
+- Before saving or publishing, compare the candidate against its approved manifest and remove or reject unrelated work.
+- If the platform cannot promote the pieces independently, report the coupling before release. Designer decides whether to re-isolate, deliberately converge scopes, or defer; Engineer must not publish the bundle by convenience.
+
+This rule never permits Engineer writes to `book-collection-design`. Any implementation-source push allowed by the Sites source-preservation exception remains scoped to the exact independently approved Site candidate.
+
 ### Convergence gate
 
 Individually complete workstreams do not make a combined milestone ready. Before saving or presenting a combined Site version:

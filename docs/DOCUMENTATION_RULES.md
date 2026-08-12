@@ -183,6 +183,9 @@ Favor:
 - Preservation of user data
 - Minimal schema changes
 - Simple designs before generalized solutions
+- Independently promotable workstreams and release candidates where platform capabilities permit
+
+Parallel implementation must not create accidental release coupling. Record genuine dependencies and shared hotspots, but keep unrelated source, migrations, validation evidence, Site saves, and publication authority separable. When separation is technically impossible, document the coupling and require an explicit convergence decision before release.
 
 Avoid complexity before the roadmap requires it.
 

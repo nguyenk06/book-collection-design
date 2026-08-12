@@ -10,6 +10,8 @@ This sequence stages only work supported by the approved roadmap and permanent d
 
 The queue is ordered, but blockers are per milestone rather than global. After completing or blocking a milestone, Engineer reports to local `inbox/`, refreshes local `briefs/`, and accepts the next independently eligible brief. A skipped blocker remains unresolved and still gates its own user-facing or production outcome. Technical validation, Designer convergence, Product Owner hands-on validation, and production approval remain separate gates.
 
+Future parallel milestones should remain independently promotable. Completion in one cumulative working copy does not authorize bundling: each saved or published candidate must name its exact included/excluded source and migration set. If independent promotion is not technically possible, stop before release and request an explicit convergence decision.
+
 ## Milestone 1 — Shopping validation-environment feasibility
 
 - **Roadmap authority:** [Roadmap priority 1 and Immediate milestone](ROADMAP.md#immediate-milestone); [Shopping checkpoint](SHOPPING_MODE.md#product-owner-validation-checkpoint).

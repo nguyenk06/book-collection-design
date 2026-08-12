@@ -27,3 +27,4 @@ Do not create a separate validation Site. Validate Shopping only after a control
 - The bridge structured export is required but is not a D1 snapshot or R2-byte backup. Its limitation must be recorded before schema activation.
 - Additive schema activation and code rollback remain distinct. Prefer forward repair; destructive restore remains separately authorized.
 - This decision defines the sequence. It is not evidence that a candidate was saved, the administration surface was published, an export occurred, schema changed, Shopping was published, or validation/smoke testing passed.
+- The need to isolate Shopping from cumulative M3–M5 work is a release-packaging correction, not a preferred future workflow. Future parallel work should remain independently promotable and must not become interconnected merely because it shares a working copy.
