@@ -70,6 +70,12 @@ Version 1 explicitly excludes Businesses, Purchases, secrets, internal numeric B
 
 The additive Book `stable_id` must be generated once, persisted, globally unique, immutable, and unrelated to mutable title/author/ISBN data. Existing `collections.key` remains the Collection external ID. See [ADR-0011](decisions/ADR-0011-catalog-first-export-identities.md).
 
+## Verified local format-v1 foundation
+
+The catalog-first foundation is complete in the unsaved local working copy. It adds an additive Book `stable_id` migration with one-time UUID backfill, uniqueness, required-on-insert behavior, and update immutability; all post-migration Book creation paths generate the ID. A separate catalog export service implements the approved allowlist and leaves the older operational bridge export unchanged.
+
+Focused contract tests pass 3/3, layered export/migration/identifier tests pass 19/19, the full serial suite passes 84/84, task lint and build pass, and SQLite change counts prove export queries do not mutate data. Fixtures cover empty, complete, null-heavy, deterministic repeat, identity conflicts, and malformed references. No downloadable UI, Site save, production migration/export, backup claim, import, restore, or publication occurred.
+
 ## Future improvements
 
 - Mapping profiles for common collection tools.

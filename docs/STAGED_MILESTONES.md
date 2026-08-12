@@ -4,7 +4,7 @@
 
 **Execution budget:** Engineer estimate up to approximately 50% for M1–M3 through existing blockers; preserve reserve for convergence, evidence, and a clean stop
 
-**Queue state:** M1/M3/M4 complete locally; Engineer paused at reserve; M2 blocked and M5 contract-complete but budget-gated
+**Queue state:** M1/M3/M4/M5 complete locally; M2 blocked; no independently executable brief remains
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -78,7 +78,7 @@ The queue is ordered, but blockers are per milestone rather than global. After c
 - **Stop/escalate:** Missing external-ID contract; Purchase portability ambiguity; pressure to omit required data silently; mutation/restore requirement; sensitive leakage; integrity mismatch; schema migration; or production access.
 - **Completion/handoff:** Future local reports separate format implementation, validation, artifact handling, Site state, and production state. Import remains a later decision and brief.
 
-M4 is complete locally but its transport lifecycle awaits a missing acceptance report. M5's catalog-first identity/scope contract is recorded; intake still requires a fresh budget check safely above reserve. Neither alters M2 or production gates.
+M4 and M5 are complete locally. M4's transport lifecycle awaits a missing acceptance report. M5 has no downloadable UI or production authority. Neither completion alters M2, user-checkpoint, Site-save, migration, publication, or production gates.
 
 ## Shared controls
 

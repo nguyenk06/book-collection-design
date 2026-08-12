@@ -210,6 +210,8 @@ Step 5 is now complete in the unsaved local working copy: additive `book_identif
 
 For export format v1, step 6 is narrowed to an additive immutable Book `stable_id`; existing `collections.key` is the Collection external ID. Revisions, import conflict handling, and portable Business/Purchase identities remain deferred. See [ADR-0011](decisions/ADR-0011-catalog-first-export-identities.md). This direction authorizes only separately briefed local/disposable M5 work, not production migration.
 
+The narrowed M5 step is complete locally: Book stable-ID backfill, uniqueness, required insertion, and immutability enforcement passed disposable migration/export validation. Production schema and Site versions remain unchanged.
+
 Shopping persistence decisions are recorded in [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md); identifier strategy is recorded in [ADR-0008](decisions/ADR-0008-canonical-books-and-identifiers.md).
 
 ### Recommended relationship behavior

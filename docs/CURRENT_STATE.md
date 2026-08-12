@@ -12,15 +12,15 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4 complete locally; M2 blocked on isolated validation-Site setup; M5 contract-complete but budget-gated; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4/M5 complete locally; M2 blocked on isolated validation-Site setup; no independently executable brief remains; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
 **Queue throttle:** `RUN`
 
-**Usage guidance:** Engineer estimates approximately 31–47% remaining after M4 and is preserving the required 30% reserve. Do not begin M5 until its contract is complete and the available margin safely covers implementation, validation, evidence, and a clean stop.
+**Usage guidance:** Product Owner supplied a fresh 71% reading before M5; Engineer reports approximately 50–60% remaining after completion, preserving the required 30% reserve.
 
-**Engineer execution state:** `PAUSED` — M4 completed locally; Engineer explicitly declined another milestone in this run to protect the 30% reserve
+**Engineer execution state:** `BLOCKED` — M5 completed locally and no independently executable brief remains; M2 requires a separately authorized validation-Site action
 
 ## Current Engineering Workstreams
 
@@ -42,9 +42,9 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-PO-SHOP-VALIDATE` | M2 safe environment and Product Owner validation | `[░░░░░░░░░░] 0%` | BLOCKED | Local brief remains queued; checkpoint required before Shopping activation | Planner/Product Owner direction on separate isolated validation Site or deferral | No; does not block M3 |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
-| `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[░░░░░░░░░░] 0%` | QUEUED / BUDGET-GATED | Catalog-first identity/scope contract accepted; local brief revised | Fresh usage confirmation must safely exceed 30% reserve before acceptance | No in current run |
+| `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
 
-**Engineer can continue:** NO in this run. M5 is not eligible, and Engineer has preserved the usage reserve. A future `RUN` after contract completion and budget confirmation may resume intake.
+**Engineer can continue:** NO. No independently executable brief remains. M2 requires a future explicitly authorized isolated validation-Site setup brief; production and Site gates remain closed.
 
 **Current Planner decisions:** None. Planner accepted catalog-first M5 format v1 and the separate isolated validation-Site direction; execution/creation gates remain separate.
 
@@ -54,7 +54,7 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4 are complete locally; M2 and M5 remain blocked. M4 still requires its missing acceptance report before local transport artifacts can close.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally; M2 remains blocked. M4 still requires its missing acceptance report before local transport artifacts can close.
 
 ## Summary
 

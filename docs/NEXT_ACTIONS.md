@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4 complete locally; Engineer paused at reserve; M2 and M5 blocked; M4 transport closure awaits acceptance report
+**Workflow state:** M1/M3/M4/M5 complete locally; M2 blocked; no executable brief remains; M4 transport closure awaits acceptance report
 
-**Next owner:** `EXTERNAL/WAIT` - obtain a fresh usage reading before M5 intake; Engineer must also supply the missing M4 acceptance trace for artifact closure.
+**Next owner:** `DESIGNER` - prepare a separately gated isolated validation-Site design/action path only when requested; Engineer must supply the missing M4 acceptance trace for artifact closure.
 
-M4 completed locally with 16/16 focused and 81/81 full tests, build, and scoped lint passing. Its separate brief-acceptance report is missing. M5 now has an accepted catalog-first external-ID/export-scope contract but remains budget-gated pending a fresh usage reading above the 30% reserve.
+M5 completed locally after a fresh 71% usage reading. The catalog-first export foundation passed 3/3 focused, 19/19 layered, and 84/84 full tests, task lint, build, and explicit export no-write verification. No downloadable UI, Site save, publication, production export, backup claim, or production mutation occurred. M4's separate acceptance report remains missing.
 
 **Current objective**
 
-Converge M4 documentation and transport evidence, then define the M5 contract without beginning implementation.
+Preserve the completed local milestone state and resolve the remaining M2 environment gate and M4 transport trace without implying activation.
 
 **Why this is the current priority**
 
@@ -62,7 +62,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
 - Keep M2 blocked pending a future explicit isolated validation-Site action brief/approval.
-- Keep M5 unaccepted until a fresh usage reading safely exceeds reserve; then normal `CB` may validate the revised contract and baseline.
+- M5 requires no further local implementation; any downloadable UI, Site save, production export, migration, or activation needs a new brief and separate gates.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 
 ## Blocked

@@ -22,6 +22,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Accepted M4 implementation evidence: bounded Bookshelf behavior passed 16/16 focused and 81/81 full tests, build, and scoped lint, with no schema/Site/production change. The separate acceptance report is missing, so transport closure remains pending.
 - Engineer paused after M4 with an estimated 31–47% remaining to protect the 30% reserve; M5 remains blocked on its identity/scope contract and budget margin.
 - Planner selected catalog-first M5 format v1. ADR-0011 defines existing Collection keys plus new immutable persisted Book stable IDs; Businesses/Purchases and their history are explicitly deferred. M5 remains unaccepted pending a fresh usage check above reserve.
+- Accepted M5 intake after Product Owner supplied a fresh 71% usage reading and Engineer projected adequate reserve.
+- Accepted M5 local completion: immutable Book stable IDs and catalog export v1 passed 3/3 focused, 19/19 layered, and 84/84 full tests, lint/build, and explicit no-write verification. No UI, Site, production export, backup claim, migration, or publication occurred.
 
 ## Milestone State Model
 
