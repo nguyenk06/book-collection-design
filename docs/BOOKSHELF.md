@@ -42,6 +42,18 @@ Provide an understandable, useful view of the collector's books for browsing, fi
 - [Tags](TAGS.md)
 - Consistent search and collection-state rules
 
+## Accepted bounded first release
+
+Planner accepted a bounded collection shelf using existing collection and series-position data:
+
+- Order within the selected collection by the existing series position.
+- Represent gaps as clearly labeled missing-position indicators, not synthetic Book records.
+- Open the existing Book detail/edit behavior for real Book records.
+- Preserve the active collection, browsing position, and applicable view context when returning.
+- Do not add physical locations, saved views, tags, bulk actions, or a new identity model in this phase.
+
+This accepted contract defines a future milestone but does not queue or authorize implementation.
+
 ## Future improvements
 
 - Saved views and configurable shelf groupings.

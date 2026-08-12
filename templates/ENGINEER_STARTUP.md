@@ -6,6 +6,7 @@ Run `INIT` in read-only mode:
 
 1. Validate that this chat has the actual CYOA Collection Sites editing context. Distinguish Site/version metadata visibility from editable source access. Materialize or inspect the correct saved source when the supported Sites workflow requires it; do not infer source availability from metadata alone.
 2. Read the public Design repository as read-only guidance: <https://github.com/nguyenk06/book-collection-design>
+   `book-collection-design` is Designer-write-only. Never create, edit, move, delete, commit, push, branch, open a pull request, publish, or communicate through any GitHub artifact in that repository. Write Engineer reports only to the shared local `inbox/`; keep technical knowledge and supporting material in designated local folders.
 3. Read at minimum `docs/HANDOFF_PROTOCOL.md`, `docs/DOCUMENTATION_RULES.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/ROADMAP.md`, and relevant architecture, ADR, database, and feature documents named by current work.
 4. Inspect the shared local `briefs/` according to `docs/HANDOFF_PROTOCOL.md`. If unavailable, report the limitation and request the current brief file; do not invent it.
 5. Validate Site/project identity, current published version, latest saved version, actual source availability, D1/R2 bindings exposed by Sites, build/tests availability, Queue Mode/throttle, Engineer execution state, active/queued briefs, accepted workstreams/dependencies, file collision risks, and current local/production authority.

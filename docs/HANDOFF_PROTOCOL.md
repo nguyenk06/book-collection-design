@@ -1,6 +1,6 @@
 # Design and Site Handoff Protocol
 
-This protocol defines the file-based exchange between the Design workspace and the Site implementation workspace. Permanent product state belongs in the design documents and Site version history; handoff files are temporary transport artifacts unless explicitly archived.
+This protocol defines the file-based exchange between the Design workspace and the Site implementation workspace. Permanent product state belongs in GitHub design documents and Site version history. All briefs, reports, acceptance records, and handoff files are transport artifacts stored only in the external local handoff workspace; they must never be committed to `book-collection-design`, including for staging or archival.
 
 ## Site Engineer Read Location
 
@@ -18,7 +18,7 @@ Priority documents:
 6. `docs/DOCUMENTATION_RULES.md`
 7. Relevant feature documents and ADRs
 
-The Site Engineer treats the public design repository as read-only reference. When starting significant implementation work, read or request the relevant current documents. If the Site workspace cannot read GitHub directly, use the latest exported [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) as the handoff package.
+The Site Engineer treats the public design repository as read-only reference. Engineer has no write role in `book-collection-design`: do not create, edit, move, delete, commit, push, branch, open a pull request, publish a release, or use GitHub issues/comments as an Engineer communication channel. When starting significant implementation work, read or request the relevant current documents. If the Site workspace cannot read GitHub directly, use the latest exported [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) as the handoff package.
 
 ## Roles
 
@@ -35,6 +35,8 @@ The Designer works in the `book-collection-design` repository and owns:
 - Preparation of implementation briefs
 - Handoff workspace housekeeping
 - Planner decision framing and `PLANNER_INBOX.md` housekeeping
+
+GitHub communication is limited to Planner-facing decision items in `PLANNER_INBOX.md`. Designer-to-Engineer and Engineer-to-Designer communication uses only the external local `briefs/` and `inbox/` folders.
 
 The Designer must not:
 
@@ -55,6 +57,8 @@ The Site Engineer works in the CYOA Collection ChatGPT Site workspace and owns:
 The Site Engineer must not:
 
 - Modify the design repository directly.
+- Create commits, branches, pull requests, issues, comments, releases, or any other GitHub artifact in `book-collection-design`.
+- Return Engineer reports through GitHub; use only the local shared `inbox/` and other role-appropriate local folders.
 - Invent product direction.
 - Mark roadmap work complete without implementation evidence.
 - Publish without explicit approval.
@@ -65,6 +69,8 @@ The Site Engineer must not:
 ### Sites source-preservation exception
 
 The Site Engineer may create and push the minimum source commit required to preserve an already validated source state through the Sites saved-version workflow when that workflow requires pushed source provenance.
+
+This exception applies only to implementation source managed by the Sites workflow. It never permits any write to `book-collection-design`, which remains Designer-write-only.
 
 - Limit the commit and push to the exact reviewed milestone source.
 - Revalidate scope and sanitization before preserving the version.
@@ -85,7 +91,19 @@ The Designer reads the following authorities in `book-collection-design`:
 - `docs/NEXT_ACTIONS.md`
 - `docs/DOCUMENTATION_RULES.md`
 - `docs/DECISIONS.md`
+- `docs/KNOWLEDGE_INDEX.md` when research or future-improvement classification is in scope
 - Relevant feature documents
+
+## Research and knowledge handoff boundary
+
+- Future Improvement Catalog records product/UX opportunities; it does not authorize roadmap scope.
+- Engineer Research Sandbox is stored locally under the shared handoff workspace's `knowledge/` area and records technical feasibility, patterns, risks, experiments, and options; entries do not authorize implementation.
+- Engineer briefs contain approved implementation only.
+- Tester knowledge contains coverage strategy, regression knowledge, and evidence conventions; it does not authorize product or implementation changes.
+
+Engineer reviews only local knowledge mapped to the new sprint, relevant `Needs Revalidation` records, and newly added notes affecting that component. No-change findings allow work to proceed. Preserve non-blocking improvements locally and report them to Designer without stopping implementation. Escalate material conflicts involving safety, data integrity, acceptance criteria, architecture, cost, behavior, priority, or scope before affected work proceeds.
+
+All Engineer-to-Designer communication is written to the local shared `inbox/`; supporting Engineer material remains in the appropriate local folder. Engineer must not place raw or sanitized reports in GitHub. Designer alone decides whether a reported conclusion becomes authoritative GitHub design, roadmap scope, a Future Improvement Catalog disposition, or a brief. Planner/Product Owner participates only when a material escalation affects product behavior, priority, cost, risk, or scope. Research classification must never copy external code or authorize dependencies, schema changes, source changes, Site operations, or production actions.
 
 The Site Engineer reads the public design repository at <https://github.com/nguyenk06/book-collection-design> or receives the latest implementation brief when direct reading is unavailable.
 
@@ -280,7 +298,7 @@ The preferred workflow is file-based rather than large chat copy-and-paste block
 | Design to Site | `IMPLEMENTATION_BRIEF.md` template | Create a milestone-specific file in `briefs/`; share it with the Site Engineer |
 | Site to Design | `DESIGN_HANDOFF.md` template | Receive a milestone-specific file in `inbox/`; review it as read-only evidence |
 
-Do not treat transport files as permanent project history unless the product owner explicitly asks to archive them. Durable facts must be incorporated into the relevant design documents or Site version history.
+Never treat transport files as GitHub project history. If local retention is needed, use the external local `processed/` or `archive/` areas. Durable conclusions belong in the relevant high-level design documents, milestone state, decisions, changelog, or Site version history—not as copied briefs or handoffs.
 
 ## Handoff Workspace Lifecycle
 

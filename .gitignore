@@ -1,0 +1,7 @@
+# Designer/Engineer transport artifacts belong only in the external local workspace.
+/handoff_staging/
+/inbox/
+/briefs/
+/processed/
+/archive/
+/knowledge/

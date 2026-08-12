@@ -4,6 +4,15 @@ Material changes to the project's design, architecture, and documented milestone
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and uses calendar dates. This documentation project does not currently assign versions.
 
+## 2026-08-12 — Bounded continuation staged
+
+- Staged three serial milestones from existing authority: Shopping environment feasibility, the conditional Product Owner Shopping checkpoint, and the post-checkpoint local canonical identifier foundation.
+- Retained throttle `STOP`; only Milestone 1 may become eligible after explicit `RUN`.
+- Preserved separate preview/save, validation, schema, publication, migration, production, smoke-test, rollback, and destructive-action gates.
+- Did not stage Bookshelf or Import/Export because required contracts are incomplete; no knowledge sandbox, external research, or Future Improvement Catalog material was processed.
+- Added two non-blocking Planner Inbox decisions to resolve the Bookshelf first-release behavior and Import/Export staging boundary; neither decision authorizes implementation.
+- Planner accepted both recommendations: bounded collection Bookshelf (`1: A`) and export-first portability (`2: A`). Defined future M4/M5 without briefs, queue eligibility, or execution authority; M1–M3 gates remain unchanged.
+
 ## Milestone State Model
 
 Major milestone states are independent. Implementation does not imply validation; validation does not imply a saved Site version; saving does not imply production migration, verification, or publication. Record only verified transitions using these states when applicable:
@@ -18,6 +27,15 @@ Major milestone states are independent. Implementation does not imply validation
 - Superseded or rolled back
 
 ## Unreleased
+
+### Knowledge Classification Spaces
+
+- Added the Planner/Designer-owned Future Improvement Catalog and knowledge-ownership rules.
+- Preserved confirmed scan-destination, duplicate-validation, and separate reference-cover ideas plus approved app-derived candidates without promoting them to roadmap scope.
+- Engineer completed the first-pass classification without implementation. The raw sandbox, project/source reviews, feasibility notes, mappings, revalidation notes, licensing warnings, and completion handoff were relocated intact to the Engineer-local shared `knowledge/` workspace.
+- Corrected the storage and authorship boundary: `book-collection-design` is Designer-write-only; Engineer reads it but communicates solely through local `inbox/` and keeps research/supporting material in local folders. Designer alone may incorporate approved conclusions into GitHub authority.
+- Explicitly excluded ZXing from the current system, plan, and active research; kept spine recognition deferred to its low-priority future sprint.
+- Recorded approximately 97% weekly usage availability while preserving throttle `STOP`, Engineer `PAUSED`, and all existing Site/production gates.
 
 ### Engineering Session Paused
 

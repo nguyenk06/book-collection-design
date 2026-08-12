@@ -43,6 +43,19 @@ Make collection data portable, recoverable, and safely transferable between the 
 - Backup and recovery procedures
 - Review UI for conflicts
 
+## Accepted export-first boundary
+
+Planner accepted an export-first safety foundation before mutable round-trip import:
+
+- Define a versioned, read-only export of user-owned core collection data.
+- Introduce immutable external IDs only where required for stable exported identity.
+- Include an attachment manifest for referenced images; do not imply that a manifest contains image bytes.
+- Include sufficient metadata to identify the format, creation time, scope, and compatibility version.
+- Validate export completeness and internal referential consistency against disposable/local data.
+- Defer dry-run import, revision semantics, conflict handling, import mutation, restore, and rollback to a later separately approved contract.
+
+This boundary does not authorize a production export, backup operation, schema migration, Site save, publication, or implementation. Purchase portability remains dependent on an accepted immutable Purchase identifier.
+
 ## Future improvements
 
 - Mapping profiles for common collection tools.

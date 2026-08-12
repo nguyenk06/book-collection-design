@@ -6,11 +6,11 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** Queue Mode enabled; throttle STOP; Engineer paused at a safe resumable checkpoint; P2/P3 complete locally and one read-only environment-feasibility brief remains queued and unaccepted
+**Workflow state:** Queue Mode enabled; throttle STOP; Engineer paused; M1–M3 briefed serially, M4–M5 defined but not queued, and only M1 eligible after explicit `RUN`
 
-**Next owner:** `EXTERNAL/WAIT` - replacement Engineer `INIT` is complete; after usage refresh, issue explicit `RUN` only when ready to resume.
+**Next owner:** `EXTERNAL/WAIT` - replacement Engineer `INIT` is complete; issue explicit `RUN` only when ready to begin Milestone 1.
 
-P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. Replacement Engineer read-only `INIT` is complete, and Planner and Engineer confirmed the stopping point. The queued read-only brief remains unaccepted and cannot be consumed until explicit future `RUN`. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
+P1 is complete in unpublished Version 19. P2 Shopping and P3 focused scanner/identifier validation are complete in unsaved local source; the authoritative full suite passes 68/68, task lint and build pass. The [three-milestone serial plan](STAGED_MILESTONES.md) is staged; only Milestone 1 is eligible after explicit `RUN`. Milestone 2 requires accepted feasibility evidence plus Product Owner authority and participation. Milestone 3 requires the reconciled Shopping checkpoint. Preview/save creation, production migration, publication, production smoke testing, and destructive actions remain unauthorized.
 
 **Current objective**
 
@@ -38,7 +38,7 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Estimated effort**
 
-Bounded sprint; Product Owner intends approximately 20 percentage points of externally monitored weekly usage, but project roles do not calculate or claim usage.
+Product Owner reported approximately 87% usage available on 2026-08-12. Preserve reserve for convergence, evidence, and a clean stop; throttle remains `STOP` until explicit `RUN`.
 
 **Risks**
 
@@ -60,9 +60,10 @@ Bounded sprint; Product Owner intends approximately 20 percentage points of exte
 
 ## Ready Next
 
-- After explicit future `RUN`, accept and execute the queued read-only feasibility brief for a safe Product Owner-accessible Shopping validation environment using disposable/isolated data.
-- Run the Shopping hands-on checklist after separate environment/save authority is granted.
-- Add normalized book identifiers and candidate matching before advanced scanner work.
+- After explicit `RUN`, accept and execute the revised Milestone 1 read-only feasibility brief.
+- Milestone 2 is gated on accepted feasibility evidence and separate Product Owner environment authority/participation.
+- Milestone 3 is gated on the reconciled Shopping checkpoint and is limited to the local canonical identifier foundation.
+- Do not start M4 Bookshelf or M5 export-first portability. Their accepted definitions are `NOT QUEUED`; future briefs require preceding convergence and Designer action.
 
 ## Blocked
 
@@ -97,7 +98,7 @@ Bounded sprint; Product Owner intends approximately 20 percentage points of exte
 - No declared database foreign keys or expected-revision concurrency checks.
 - Request-time schema and catalog updates in the books GET path.
 - One large client page component and outstanding hook/compiler lint issues.
-- Incomplete server ISBN checksum validation and scanner candidate handling.
+- ISBN-10/13 conversion and canonical scanner candidate handling remain incomplete.
 - R2 cover replacement can leave unused objects; asset metadata is absent.
 - Import writes immediately with limited validation; some query filters are not persisted.
 

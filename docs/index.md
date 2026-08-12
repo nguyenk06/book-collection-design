@@ -14,6 +14,7 @@ Architecture, planning, and product documentation for a collector-first Book Col
 3. [Next Actions](NEXT_ACTIONS.md)
 4. [Changelog](CHANGELOG.md)
 5. [Roadmap](ROADMAP.md)
+6. [Staged Milestones](STAGED_MILESTONES.md)
 
 ## Start here
 
@@ -34,6 +35,11 @@ Architecture, planning, and product documentation for a collector-first Book Col
 - [AI Review](AI_REVIEW.md)
 - [Asset Management](ASSET_MANAGEMENT.md)
 - [Tags](TAGS.md)
+
+## Knowledge ownership
+
+- [Knowledge Ownership Index](KNOWLEDGE_INDEX.md)
+- [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md)
 
 ## Project maintenance
 

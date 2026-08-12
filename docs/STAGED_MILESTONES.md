@@ -1,0 +1,88 @@
+# Staged Milestone Sequence
+
+**Prepared:** 2026-08-12
+
+**Execution budget:** approximately 87%; preserve reserve for convergence, evidence, and a clean stop
+
+**Queue state:** enabled with throttle `STOP`; staging does not resume Engineer
+
+This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
+
+Each milestone is serial. A later brief is ineligible until Designer accepts the preceding completion evidence and records satisfaction of its dependency. Technical validation, Designer convergence, Product Owner hands-on validation, and production approval remain separate gates.
+
+## Milestone 1 — Shopping validation-environment feasibility
+
+- **Roadmap authority:** [Roadmap priority 1 and Immediate milestone](ROADMAP.md#immediate-milestone); [Shopping checkpoint](SHOPPING_MODE.md#product-owner-validation-checkpoint).
+- **Objective/user outcome:** Determine, without mutation, whether a private, runnable, Product Owner-accessible environment can expose the completed Shopping/P3 source with disposable or isolated data. This milestone creates no environment.
+- **Included:** Verify actual Sites-native preview/version options, runnability, privacy, authentication, binding isolation, source baseline, access steps, and the narrow next approval request.
+- **Excluded:** Source changes; preview/version creation; save, deployment, publication, production requests, D1/R2 access, migration, smoke testing, credentials/session transfer, external platforms, research review, and destructive action.
+- **Starting state:** Verify published Version 18; unpublished Version 19 latest saved; completed P2 Shopping plus P3 fixes in the unsaved local copy; prior 68/68 serial tests, 18/18 focused scanner tests, task lint, and build passing; no Site version containing P2/P3; explicit `RUN` before `CB`.
+- **Acceptance/tests/evidence:** Classify supported options for runnability, privacy, authentication, and D1/R2 isolation; report one safe option and exact access steps, or the blocker and simplest supported alternatives; provide sanitized capability evidence, baseline verification, and explicit no-change confirmation.
+- **Data/rollback:** No data access or mutation; rollback not applicable. Any unexpected mutation ends the milestone.
+- **User validation:** Not performed; this prepares the checkpoint.
+- **Stop/escalate:** Required mutation, unverified isolation, authentication bypass, credential/session request, missing source, ambiguous identity, unsupported assumption, or production invocation.
+- **Completion/handoff:** Local `inbox/` acceptance and completion reports; Designer accepts evidence before Milestone 2 eligibility.
+
+## Milestone 2 — Safe Shopping environment and Product Owner checkpoint
+
+- **Roadmap authority:** [Roadmap priority 1 and Immediate milestone](ROADMAP.md#immediate-milestone); [Shopping checkpoint](SHOPPING_MODE.md#product-owner-validation-checkpoint); [Handoff Protocol checkpoint](HANDOFF_PROTOCOL.md#product-owner-hands-on-validation-checkpoint).
+- **Objective/user outcome:** Product Owner can privately open completed Shopping/P3 against disposable/isolated data and perform the approved desktop/mobile scenarios.
+- **Included:** Only the option verified in Milestone 1; preserve the exact baseline if separately authorized; access instructions; existing checklist; one outcome—`ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE`; Designer reconciliation.
+- **Excluded:** Production bindings/data, schema activation, final publication, production smoke testing, unrelated fixes, new product stages, external platforms, research review, and destructive actions.
+- **Dependencies/starting state:** Designer-accepted Milestone 1 evidence; verified safe option; exact environment recorded in a brief addendum/replacement; separate Product Owner authority for required preview/save creation; Product Owner available for the checkpoint. Never assume these conditions.
+- **Acceptance/tests/evidence:** Verify environment identity/isolation; expose completed P2/P3; rerun appropriate suite/build/lint; complete checklist and record outcome; report sanitized environment evidence, baseline comparison, results, notes, and confirmation production remained unchanged.
+- **Data/rollback:** Disposable/isolated data only. Remove disposable artifacts only with explicit safe authority; otherwise stop and request cleanup authority. Preserve prior source and Site versions.
+- **User validation:** Required under `SHOPPING_MODE.md`.
+- **Stop/escalate:** Product Owner unavailable; no explicit preview/save authority; environment differs; production binding cannot be excluded; source drift; test failure; integrity concern; scope expansion; or `REVISE BEFORE RELEASE`.
+- **Completion/handoff:** Local `inbox/` reports separate engineering validation, Designer convergence, Product Owner outcome, environment state, and production state. Milestone 3 requires recorded `ACCEPT` or reconciled non-blocking `ACCEPT WITH FOLLOW-UP`.
+
+## Milestone 3 — Canonical book-identifier foundation
+
+- **Roadmap authority:** [Roadmap priority 2](ROADMAP.md); [Database accepted direction, step 5](DATABASE.md#accepted-direction); [ADR-0008](decisions/ADR-0008-canonical-books-and-identifiers.md); [Scanner and Matching](SCANNER_AND_MATCHING.md).
+- **Objective/user outcome:** Local/disposable search and scan paths resolve validated equivalent ISBN-10/ISBN-13 identifiers to one canonical Book without silent overwrite or duplicate creation.
+- **Included:** Additive local `book_identifiers` model/migration; type, normalized value, canonical Book relation, global type/value uniqueness; deterministic normalization/conversion; conservative valid-ISBN backfill; exact lookup; explicit conflict reporting; minimal integration needed for canonical results.
+- **Excluded:** Production migration/data; Site save/publication; fuzzy scoring; silent merges; edition/copy hierarchy; `AltBooks`; provider redesign; physical-device claims; batch scanning; Bookshelf; Import/Export; research review.
+- **Dependencies/starting state:** Milestone 2 accepted/reconciled; exact P2/P3 baseline preserved; baseline suite, focused tests, lint, and build pass; no unresolved Shopping follow-up collides with scanner/search surfaces.
+- **Acceptance:** Preserve Book IDs and collection state in disposable migration tests; backfill valid ISBNs conservatively; invalid/conflicting values never overwrite/merge; uniqueness prevents duplicate claims; ISBN-10/13 equivalents resolve to one Book; scanning alone causes no Book/Purchase mutation; legacy `books.isbn` remains compatible.
+- **Tests/evidence:** Representative migration, failure behavior, normalization/checksum/conversion vectors, uniqueness/conflicts, exact lookup, no-mutation scanner tests, full serial/focused suites, task lint, and build. Report counts, not private data.
+- **Data/rollback:** Local/disposable only and additive. Preserve `books.id`, `collections.key`, ownership, copies, purchases, covers, and timestamps. Retain pre-migration fixture and prove clean failure without partial reassignment. No production rollback authority.
+- **User validation:** Designer convergence required. Product Owner checkpoint only if a material new resolution flow is introduced; this does not authorize activation.
+- **Stop/escalate:** ADR conflict; unsafe backfill/uniqueness; ambiguity; proposed merge/overwrite; undocumented product/architecture decision; persistent regression; missing source/data/access; or Site/production need.
+- **Completion/handoff:** Local `inbox/` acceptance and final handoff separate implementation, local migration evidence, save, publication, and production states.
+
+## Milestone 4 — Bounded collection Bookshelf
+
+- **Roadmap authority:** [Roadmap priority 3](ROADMAP.md); Planner decision `1: A`; [Bookshelf accepted bounded first release](BOOKSHELF.md#accepted-bounded-first-release).
+- **Objective/user outcome:** Browse one collection in existing series order, see explicit missing-position gaps, open a real Book, and return without losing browsing context.
+- **Included:** Existing collection selection and series positions; real Book cover/text fallbacks; non-book gap indicators; existing detail/edit navigation; return-context preservation; responsive keyboard/mobile behavior.
+- **Excluded:** Physical shelf locations, saved views, tags, bulk actions, synthetic Books for gaps, new identity/schema models, enrichment, analysis, and production actions.
+- **Dependencies/starting state:** M3 accepted by Designer; canonical identifier changes converged without regression; existing collection/series-position rules verified; Designer creates a future brief. Definition alone is `NOT QUEUED` and not executable.
+- **Acceptance:** Stable ordering; gaps never mutate or masquerade as Books; real Books open existing detail/edit; return restores collection and browsing context; missing covers/metadata degrade safely; existing collection behavior remains intact.
+- **Tests/evidence:** Ordering/gap fixtures, navigation/return tests, cover/metadata fallback, keyboard/accessibility, responsive viewport coverage, full regression suite, build, and task lint.
+- **Data/rollback:** No schema change expected. Preserve all Book/collection identities and state. Local UI changes must be revertible without data cleanup.
+- **User validation:** Required at this user-facing boundary using desktop and mobile browse/gap/detail/return scenarios in a separately authorized safe environment.
+- **Stop/escalate:** Required schema or identity change; ambiguous expected-position rule; synthetic record proposal; context cannot be preserved safely; persistent regression; or any save/production need.
+- **Completion/handoff:** Future local acceptance/completion reports and Designer convergence; separate Product Owner outcome before any activation.
+
+## Milestone 5 — Export-first portability foundation
+
+- **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); Planner decision `2: A`; [Import/Export accepted export-first boundary](IMPORT_EXPORT.md#accepted-export-first-boundary).
+- **Objective/user outcome:** Produce a locally validated, versioned read-only export whose identity, scope, and referenced-image manifest can be understood independently.
+- **Included:** Format/version metadata; immutable external IDs required for exported identity; core collection export; referential validation; attachment-reference manifest; deterministic serialization where practical; local/disposable export validation.
+- **Excluded:** Import mutation, dry-run import, revisions/conflicts, restore, rollback, raw database dump as user format, image-byte backup unless separately designed, production export, migration, Site save/publication, and research review.
+- **Dependencies/starting state:** M4 accepted by Designer; M3 identifier foundation stable; external-ID contract for every exported entity—including Purchases if included—accepted in a future brief; export field/scope schema documented; Designer creates that brief. Definition is `NOT QUEUED` and not executable.
+- **Acceptance:** Versioned contract is self-describing; stable IDs and references are unique/consistent; required core records are complete; manifest distinguishes references from bytes; unknown/null values are preserved; repeated export of unchanged fixture is equivalent; no mutation occurs.
+- **Tests/evidence:** Contract/schema validation, representative complete/empty/null fixtures, referential and uniqueness checks, deterministic comparison, malformed-state failure, no-write verification, full regressions, build, and task lint.
+- **Data/rollback:** Read-only local/disposable execution. No production data or backup claim. No rollback needed because export must not mutate; any observed mutation stops work.
+- **User validation:** Required only when a safe downloadable user-facing export experience is later implemented; validate understandable scope, filename/metadata, and image-manifest limitation before activation.
+- **Stop/escalate:** Missing external-ID contract; Purchase portability ambiguity; pressure to omit required data silently; mutation/restore requirement; sensitive leakage; integrity mismatch; schema migration; or production access.
+- **Completion/handoff:** Future local reports separate format implementation, validation, artifact handling, Site state, and production state. Import remains a later decision and brief.
+
+M4 and M5 are defined but deliberately have no implementation briefs, queue priority, or execution authority. They do not alter M1–M3 gates.
+
+## Shared controls
+
+- Finish and validate the current milestone before starting another; reserve usage for tests, evidence, and a clean stop.
+- Stop for undocumented product/architecture choices, destructive or irreversible actions, ungated publication/activation, unauthorized migration, material expansion, bypassed criteria, missing source/data/credentials/access, failed validation, or unresolved integrity risk.
+- Designer alone writes GitHub documentation. Engineer communicates through local `inbox/`; technical material remains local.
+- Migration, publication, activation, production smoke testing, rollback, and destructive cleanup remain separately gated.

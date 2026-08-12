@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-09
+**Last reviewed:** 2026-08-12
 
 **Published Site version:** Version 18 migration bridge; deployment succeeded, but application and schema behavior remain unverified
 
@@ -12,13 +12,13 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** Safe end-of-day pause; P2 Shopping and P3 focused validation complete locally; one bounded read-only Shopping validation-environment feasibility brief remains queued and unaccepted
+**Workflow state:** Safe resumable pause; P2 Shopping and P3 focused validation complete locally; M1–M3 briefed serially, M4–M5 defined but not queued, and only M1 eligible after explicit `RUN`
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
 **Queue throttle:** `STOP`
 
-**Usage guidance:** Product Owner reported approximately 46% weekly usage remaining at sprint start, intends at most approximately 20 percentage points for this sprint, and targets approximately 26% reserve. Product Owner is the authoritative meter; project roles do not calculate or claim updated usage.
+**Usage guidance:** Product Owner reported approximately 87% usage available on 2026-08-12. Usage is shared: prefer complete validated milestones and preserve reserve for evidence and a clean stop. This does not change throttle `STOP` or authorize queue consumption.
 
 **Engineer execution state:** `PAUSED` — replacement Engineer completed read-only `INIT`; no active workstream or queue consumption, and explicit future `RUN` is still required
 
@@ -43,11 +43,15 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 **Engineer can continue:** NO while throttle is `STOP`. Replacement Engineer initialization is complete; after usage refresh, wait for explicit `RUN` before `CB`.
 
-**Current Planner decisions:** None. Technical environment feasibility must be established before asking for save/preview authority.
+**Current Planner decisions:** None. Planner accepted bounded Bookshelf (`1: A`) and export-first portability (`2: A`). Milestone 2 will separately require Product Owner preview/save authority and participation after feasibility; that future gate is not yet actionable.
 
 **Next production gate:** None is currently executable. Product Owner hands-on Shopping validation is required before Shopping production activation; preview/save authority, publication, migration, and all production actions remain separately gated and unauthorized.
 
 **Resume condition:** Replacement Site Engineer read-only `INIT` and stopping-point verification are complete. After usage refresh, issue explicit `RUN` when ready; until then, do not consume the queued brief. Planner and Engineer have confirmed this stopping point.
+
+## Staged continuation
+
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1–M3 retain their serial briefs and gates; only M1 may become executable after explicit `RUN`. M4 bounded Bookshelf and M5 export-first portability are future definitions only, with no briefs or execution authority.
 
 ## Summary
 
@@ -86,6 +90,8 @@ P3 focused scanner/identifier validation is also complete in the unsaved local s
 Planner added a reusable Product Owner hands-on validation checkpoint at meaningful user-facing milestones. P2 Shopping now requires this checkpoint before production activation. The current Shopping/P3 source is unsaved and not user-accessible; Version 19 does not contain Shopping. A supported private preview or unpublished saved version backed by disposable/isolated data is the preferred validation environment, but current evidence does not establish that Sites can expose one without production bindings or publication. That feasibility must be verified read-only before separate preview/save authority is requested.
 
 Engineering then stopped at a safe resumable checkpoint for usage refresh. The replacement Engineer completed read-only `INIT`, and Planner and Engineer confirmed the stopping point. The feasibility brief remains queued and unaccepted, no workstream is active, and Queue Mode remains enabled with throttle `STOP`. No Site version contains the completed Shopping/P3 source, and no preview, production request, D1/R2 operation, migration, publication, deployment, smoke test, rollback, or destructive action occurred.
+
+The Product Owner later reported approximately 97% weekly usage available, retiring the earlier “final 25%” constraint without resuming engineering. Planner/Designer retained the authoritative Future Improvement Catalog and knowledge-coordination rules in GitHub. Engineer completed the first-pass technical classification without implementation; its raw sandbox, source reviews, feasibility notes, classifications, license warnings, and completion handoff are preserved in the Engineer-local shared `knowledge/` workspace rather than this repository. `book-collection-design` is Designer-write-only for this workflow: Engineer reads it but communicates only through local `inbox/` and stores supporting material in local folders. No research conclusion has been promoted automatically to design, roadmap scope, or a brief.
 
 ## Current Status Dashboard
 
@@ -194,7 +200,7 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 - No reference-cover enrichment, asset metadata, tags, or dedicated administration area.
 - Direct Engineer invocation of owner-only endpoints is not an established operational path; the failure boundary occurred before application execution.
 - Uploaded cover replacement can leave unused R2 objects; cover upload also marks a book Owned.
-- Server ISBN validation does not verify checksums, and some filters are not persisted.
+- ISBN-10/13 conversion and canonical candidate handling remain incomplete; some filters are not persisted.
 
 ## Next milestone
 

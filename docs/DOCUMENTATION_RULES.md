@@ -15,6 +15,8 @@ This repository is the permanent design authority for the Book Collection System
 
 It is not the implementation repository.
 
+It is also not a role-to-role transport workspace. GitHub contains durable high-level product documentation, architecture, roadmap/milestones, accepted decisions, workflow run rules, and the Designer-owned Planner Inbox. Engineer briefs, Engineer reports, acceptance records, completion handoffs, and other Designer/Engineer transport artifacts exist only in the external local handoff workspace.
+
 ## Documentation Philosophy
 
 Documents should explain why a decision exists, what it establishes, and when it applies. Prefer architecture over code and omit implementation detail that does not clarify a durable constraint.
@@ -84,7 +86,7 @@ Planner uses permanent design documentation rather than raw handoffs or implemen
 4. [CHANGELOG.md](CHANGELOG.md) — which major milestones and state transitions occurred.
 5. [ROADMAP.md](ROADMAP.md) — where the project is going.
 
-Temporary handoffs are transport and evidence. They do not replace these documents.
+Temporary handoffs are local transport and evidence. They must not be committed to this repository and do not replace these documents.
 
 For each significant Engineer handoff, evaluate whether it records a major milestone transition such as local implementation, local validation, saved Site version, production migration, production verification, publication, rollback, or supersession. Update the changelog when it does, keeping each state independent. Brief acceptance and routine progress reports do not create changelog entries.
 
@@ -156,7 +158,20 @@ Create or supersede ADRs when required.
 
 ## Backlog
 
-Ideas that have not been accepted belong in [BACKLOG.md](BACKLOG.md). Keep them brief. Do not move speculative ideas into the roadmap until they are accepted.
+Unstructured internal ideas that have not been accepted belong in [BACKLOG.md](BACKLOG.md). Comparable-application product/UX findings belong in the [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md), where they remain ranked candidates rather than roadmap commitments. Keep both concise. Do not move speculative ideas into the roadmap until they are accepted.
+
+## Knowledge Spaces
+
+Use the [Knowledge Index](KNOWLEDGE_INDEX.md) to keep four authority levels distinct:
+
+- [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md) — Planner/Designer-ranked product and UX opportunities from comparable applications. Entries are candidates, not roadmap commitments.
+- Engineer Research Sandbox — Engineer-local technical feasibility, patterns, risks, experiments, and options stored in the shared handoff workspace's `knowledge/` area. Raw entries do not belong in this repository and do not authorize implementation.
+- Engineer brief — approved implementation scope only.
+- Tester knowledge — coverage strategy, regression knowledge, and evidence conventions only; it does not define product behavior or implementation scope.
+
+Designer owns promotion from research into accepted product direction or an Engineer brief. Planner/Product Owner participates only when a material escalation changes behavior, priority, cost, risk, or scope. Preserve rejected/superseded records briefly so research is not repeatedly rediscovered.
+
+Engineer records source URL, review date/status, license warning, revisit trigger, and explicit confirmation that no code was copied in local knowledge. Engineer has read-only access to `book-collection-design` and communicates only through the shared local `inbox/` and role-appropriate local folders; Engineer must not create or modify any repository or GitHub artifact. Designer alone may incorporate an approved conclusion into authoritative GitHub documentation. Do not present observed patterns as verified CYOA implementation facts.
 
 ## Architecture Principles
 
@@ -192,6 +207,7 @@ For every future documentation task, read these authorities first:
 3. [ROADMAP.md](ROADMAP.md) — long-term plan.
 4. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — active engineering queue.
 5. [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md) — required for implementation handoffs.
+6. [KNOWLEDGE_INDEX.md](KNOWLEDGE_INDEX.md) — research/catalog routing when the task involves external findings or future ideas.
 
 Preserve consistency across the repository, update these documents when appropriate, and prefer cross-links over duplication.
 
