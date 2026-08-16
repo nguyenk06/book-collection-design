@@ -15,12 +15,12 @@ Gate 3 was invoked exactly once. Its immediate response reported Shopping schema
 
 ## Ready when source is available
 
-Resume M6 at its recorded safe pre-`CB` boundary:
+Resume M6 at its recorded safe pre-`!brief` boundary:
 
 1. Identify the exact cumulative editable M5 source in the supported Sites context.
 2. Verify its composition and collision separation from Version 19 and the isolated Shopping candidate.
 3. Revalidate M5 tests, dependencies, usage reserve, and clean-stop capacity.
-4. Run `CB` as the documented brief-intake convention and accept M6 only if all eligibility checks pass.
+4. Run `!brief` and accept M6 only if all eligibility checks pass.
 5. Implement and validate only the local/disposable, owner-only downloadable catalog format-v1 UI described by the existing brief.
 
 M6 excludes Site save/publication, production access/export, bridge-export replacement, schema or migration changes, import/restore, image bytes, Businesses/Purchases, Shopping changes, and backup claims. A later user checkpoint and any activation remain separately gated.
@@ -40,4 +40,4 @@ Gate 4 verification requires separate explicit Product Owner approval. It is not
 - A parked task resumes without reinitialization solely for the resolved condition, but affected assumptions, source, dependencies, collisions, usage, and tests must be revalidated.
 - A blocked task does not stop unrelated eligible work. In the current batch, no unrelated eligible task remains.
 - Stop for missing authority, source ambiguity, collision risk, failed validation, private-data leakage, mutation, production access, or approach to the protected reserve.
-- Workflow labels such as `CB` are documented conventions, not guaranteed executable commands unless the active environment explicitly provides them.
+- Unprefixed words and abbreviations are normal conversation and do not trigger workflow behavior.

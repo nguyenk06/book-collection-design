@@ -133,50 +133,63 @@ The Designer reviews the handoff under [`DOCUMENTATION_RULES.md`](DOCUMENTATION_
 
 ## Mobile-Friendly Workflow
 
-The templates make these four commands sufficient for normal work:
+Use explicit `!` commands for defined lifecycle actions and ordinary sentences for requests that are not workflow commands. For example:
 
-1. Designer: **“Prepare implementation brief.”**
-2. Site Engineer: **“Implement attached brief. Stop before publish.”**
-3. Site Engineer: **“Prepare design handoff.”**
-4. Designer: **“Apply attached handoff according to DOCUMENTATION_RULES.md.”**
+1. Designer: `!inbox` to process Engineer evidence, or “Prepare an implementation brief” as a normal request.
+2. Site Engineer: `!brief` to accept the next eligible brief, then `!drain` when the current safe unit should finish without new intake.
+3. Any role: `!status` for a read-only state report or `!init` for a read-only state refresh.
+4. Designer: `!prompt-engineer`, `!prompt-designer`, or `!prompt-planner` to produce a copy/paste-ready startup prompt.
 
-## Workflow Shortcuts
+Never omit `!` when explicit workflow behavior is intended. Plain words and abbreviations remain conversation.
 
-`PD`, `CI`, `CB`, and related labels in this protocol are documented workflow conventions. They are not guaranteed shell, Codex, or application commands unless the active environment explicitly configures them as commands. A user may invoke a convention in natural language; the responsible role must still follow the full documented procedure and current authority boundaries.
+## Workflow Commands
 
-Shortcuts are convenience aliases for existing lifecycle behavior. They reduce mobile typing but do not create authority, replace evidence or required reports, or bypass approval, production, destructive-action, sanitization, lifecycle, or workspace-ownership rules. The full written protocol is authoritative; if a shortcut conflicts with it, the full protocol wins.
+The `!` prefix identifies explicit workflow intent. Commands are case-insensitive. An unprefixed word or abbreviation is normal conversation and must not trigger workflow behavior. Commands invoke only their documented lifecycle behavior; they do not create authority, replace evidence or required reports, or bypass approval, production, destructive-action, sanitization, lifecycle, or workspace-ownership rules.
 
-Keep the shortcut set deliberately small. Add another shortcut only after repeated workflow use demonstrates a clear need.
+| Command | Role | Behavior |
+| --- | --- | --- |
+| `!init` | All | Read-only role initialization or state refresh |
+| `!status` | All | Read-only current-state report; do not process artifacts or change authority |
+| `!inbox` | Designer | Process the Engineer inbox lifecycle |
+| `!brief` | Site Engineer | Check and process the next eligible brief |
+| `!prompt-engineer` | Designer | Output the complete Engineer startup prompt |
+| `!prompt-designer` | Designer | Output the complete Designer startup prompt |
+| `!prompt-planner` | Designer | Output the complete Planner startup prompt |
+| `!run` | Authorized operator | Activate or continue an approved execution batch |
+| `!drain` | Authorized operator | Finish the current safe unit and accept no further work |
+| `!stop` | Authorized operator | Stop at the nearest safe checkpoint |
 
-### All roles: `INIT`
+Optional compact aliases are `!pe`, `!pd`, `!pp`, `!ci`, and `!cb`, mapping respectively to the five long-form prompt/inbox/brief commands above. Plain `PE`, `PD`, `PP`, `CI`, `CB`, `INIT`, `RUN`, `DRAIN`, or `STOP` tokens are not commands.
 
-`INIT` initializes or reinitializes the current role from authoritative project state. It is always read-only.
+### All roles: `!init` and `!status`
+
+`!init` initializes or reinitializes the current role from authoritative project state. It is always read-only.
 
 - **DESIGNER:** execute [`DESIGNER_STARTUP.md`](../templates/DESIGNER_STARTUP.md) inside the Design Codex Project.
 - **SITE ENGINEER:** after the bootstrap prompt is supplied to the Sites chat, execute [`ENGINEER_STARTUP.md`](../templates/ENGINEER_STARTUP.md).
 - **PLANNER:** execute [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md) from the public Design repository.
 
-`INIT` never accepts a brief, processes inbox artifacts, moves handoffs, updates documentation, modifies source, touches production, publishes/deploys, or makes a product decision automatically. It only reconstructs role state and reports readiness.
+`!init` never accepts a brief, processes inbox artifacts, moves handoffs, updates documentation, modifies source, touches production, publishes/deploys, or makes a product decision automatically. It only reconstructs role state and reports readiness.
 
-This repository has no guaranteed project-level Codex trigger file. For a new Designer thread, use: **“Read `templates/DESIGNER_STARTUP.md` and run `INIT` in read-only mode.”** After the template is loaded, `INIT` is sufficient for reinitialization.
+`!status` reports the same current role, queue, gate, ownership, and blocker state without processing artifacts or changing authority. It is always read-only.
 
-### Designer: `PE`
+For a new Designer thread, use: **“Read `templates/DESIGNER_STARTUP.md` and run `!init`.”**
 
-`PE` means **Prompt Engineer**. Output the current self-contained, copy/paste-ready contents of [`ENGINEER_STARTUP.md`](../templates/ENGINEER_STARTUP.md), including the instruction to run `INIT` in the actual CYOA Collection Sites context. Do not embed milestone state that belongs in permanent documents, expose sensitive/local details, or alter project state.
+### Designer prompt commands
 
-### Designer: `PP`
+`!prompt-engineer` (alias `!pe`) outputs the current self-contained, copy/paste-ready contents of [`ENGINEER_STARTUP.md`](../templates/ENGINEER_STARTUP.md), including the instruction to run `!init` in the actual CYOA Collection Sites context.
 
-`PP` means **Prompt Planner**. Output the current self-contained, copy/paste-ready contents of [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md), including its public repository link, reading order, and `INIT` instruction. Do not depend on prior Planner memory or alter project state.
+`!prompt-designer` (alias `!pd`) outputs the complete [`DESIGNER_STARTUP.md`](../templates/DESIGNER_STARTUP.md) prompt for a replacement Designer.
 
-### Designer: `PD`
+`!prompt-planner` (alias `!pp`) outputs the complete [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md) prompt for a replacement Planner.
 
-`PD` means **Prompt Designer**. Output the current self-contained, copy/paste-ready contents of [`DESIGNER_STARTUP.md`](../templates/DESIGNER_STARTUP.md), including its public repository link, authoritative reading order, local transport inspection rules, read-only `INIT` instruction, and canonical workflow footer. It is intended to initialize a replacement Designer without prior chat memory. Do not embed transient milestone state that belongs in permanent documents, process or move inbox artifacts, expose sensitive local paths or evidence, or alter project state.
+Prompt commands are read-only. Do not embed transient milestone state, process transport, expose sensitive/local details, depend on prior role memory, or alter project state.
 
-### Designer: `CI`
+### Designer: `!inbox`
 
-`CI` means **Check Inbox / Process Inbox**. It does not merely list `inbox/`.
+`!inbox` (alias `!ci`) means **Process Engineer Inbox**. It does not merely list `inbox/`.
 
-When the Designer receives `CI`, execute the normal inbox lifecycle:
+When the Designer receives `!inbox`, execute the normal inbox lifecycle:
 
 1. Inspect the shared local `inbox/` and identify new Engineer reports or handoffs.
 2. Validate evidence and referenced briefs or artifacts.
@@ -190,7 +203,7 @@ When the Designer receives `CI`, execute the normal inbox lifecycle:
 10. Run the continuation check, including whether Engineer still has executable work, and identify active owners plus any owner blocking all progress.
 11. Report the resulting state concisely.
 
-Before `CI` is complete, at least one legitimate continuation must be clear. Several may exist simultaneously:
+Before `!inbox` is complete, at least one legitimate continuation must be clear. Several may exist simultaneously:
 
 - **ENGINEER:** an eligible implementation brief exists in `briefs/`; identify the brief.
 - **PLANNER:** a genuine actionable choice, approval, rejection, or requested provision exists in [`PLANNER_INBOX.md`](PLANNER_INBOX.md); identify the decision.
@@ -207,11 +220,11 @@ After processing an Engineer completion handoff, the Designer:
 
 Do not invent work or prepare a brief with inadequate requirements merely to keep the Engineer busy. The invariant ensures continuity of ownership, not continuous activity.
 
-### Site Engineer: `CB`
+### Site Engineer: `!brief`
 
-`CB` means **Check Briefs / Process Next Brief**. It does not merely list `briefs/`.
+`!brief` (alias `!cb`) means **Check and Process Next Brief**. It does not merely list `briefs/`.
 
-When the Site Engineer receives `CB`, execute the normal brief-intake lifecycle:
+When the Site Engineer receives `!brief`, execute the normal brief-intake lifecycle:
 
 1. Inspect the shared local `briefs/` and identify the next eligible implementation brief.
 2. Read the complete brief and validate feasibility against the actual implementation workspace.
@@ -223,17 +236,17 @@ When the Site Engineer receives `CB`, execute the normal brief-intake lifecycle:
 8. If one workstream blocks, continue independent authorized workstreams that do not share the blocker or an unsafe file/surface collision.
 9. Stop only the affected workstream at its gate. Stop the whole engineering cycle when every eligible stream is blocked, a cross-cutting conflict prevents safe continuation, shared-file conflicts require convergence, production sequencing requires waiting, or no authorized work remains.
 
-When Queue Mode is enabled with `RUN`, completion of the current milestone triggers a mandatory fresh queue check before the Engineer ends its turn or declares itself available:
+When Queue Mode is enabled with `!run`, completion of the current milestone triggers a mandatory fresh queue check before the Engineer ends its turn or declares itself available:
 
 1. Create the required sanitized completion/state handoff for the finished milestone.
 2. Refresh the live `briefs/` directory after creating the handoff. A listing captured at startup or before completion is stale for this decision.
 3. Reconfirm Queue Mode, throttle, dependencies, Planner decisions, attempt sequence, and collision boundaries.
-4. If an eligible brief exists, run `CB` immediately and continue after clean acceptance without waiting for another operator message.
+4. If an eligible brief exists, run `!brief` immediately and continue after clean acceptance without waiting for another operator message.
 5. Use `AVAILABLE` only when the fresh scan finds no eligible authorized brief. Report every waiting brief with its unmet eligibility condition.
 
-`DRAIN`, `STOP`, an explicit gate, unsafe collision, missing authority, or no eligible work overrides automatic continuation. These checks do not auto-accept a brief or expand its scope.
+`!drain`, `!stop`, an explicit gate, unsafe collision, missing authority, or no eligible work overrides automatic continuation. These checks do not auto-accept a brief or expand its scope.
 
-No formal Planner shortcut system is defined. Planner may continue using conversational commands such as `inbox`, `status`, and `next`. Planner reads permanent documentation in this order:
+Planner uses `!init` and `!status`. Unprefixed conversational words such as “inbox,” “status,” and “next” remain normal conversation. Planner reads permanent documentation in this order:
 
 1. [`PLANNER_INBOX.md`](PLANNER_INBOX.md)
 2. [`CURRENT_STATE.md`](CURRENT_STATE.md)
@@ -246,8 +259,8 @@ No formal Planner shortcut system is defined. Planner may continue using convers
 Chat history is not the project source of truth. When a role thread becomes too large, stale, or unreliable:
 
 1. Start a new thread in the correct role context.
-2. Supply the appropriate startup template when the context does not already know `INIT`.
-3. Run the read-only `INIT` bootstrap.
+2. Supply the appropriate startup template when the context does not already know `!init`.
+3. Run the read-only `!init` bootstrap.
 4. Validate role, permanent state, active workstreams, and active/blocking owners.
 5. Continue from permanent documentation, actual Site/source state, and active handoff artifacts.
 
@@ -288,7 +301,7 @@ ACTION:
 
 `TL;DR` and `ACTION` are always present in either form. Use exactly one ownership form: single-owner `NEXT OWNER`, or parallel `ACTIVE OWNERS` plus `BLOCKING OWNER`. Do not mix or omit these labels in meaningful workflow responses.
 
-Use it for `CI`, `CB`, and `INIT` reports; brief acceptance; implementation completion; Designer handoff processing; Planner decisions; blocked states; and publication/deployment reports. Short or trivial acknowledgements do not require it.
+Use it for `!inbox`, `!brief`, and `!init` reports; brief acceptance; implementation completion; Designer handoff processing; Planner decisions; blocked states; and publication/deployment reports. Short or trivial acknowledgements do not require it.
 
 - Keep `TL;DR` concise and mobile-readable.
 - `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.
@@ -485,18 +498,18 @@ After an explicitly approved publication, perform a concise Product Owner smoke 
 
 ### Future engineering queue mode
 
-The existing shared `briefs/` directory may serve as a lightweight future work queue. This capability is dormant unless Planner or Product Owner explicitly records `QUEUE MODE: ENABLED` for a bounded development session or sprint. A new week, `INIT`, `CI`, `CB`, or the mere presence of briefs never activates it.
+The existing shared `briefs/` directory may serve as a lightweight future work queue. This capability is dormant unless Planner or Product Owner explicitly records `QUEUE MODE: ENABLED` for a bounded development session or sprint. A new week, `!init`, `!inbox`, `!brief`, or the mere presence of briefs never activates it.
 
 When Queue Mode is disabled:
 
 - Engineer completes only already accepted work and does not consume another brief automatically.
 - Designer may document or plan future work but must not populate executable follow-on briefs for the current session unless separately authorized.
-- Queue throttle is `NOT APPLICABLE`; an earlier `RUN` instruction cannot carry across a disabled period.
+- Queue throttle is `NOT APPLICABLE`; an earlier `!run` instruction cannot carry across a disabled period.
 
 When enabled, record an Engineer execution state distinct from workstream states:
 
 - `WORKING` — authorized executable work is actively progressing.
-- `AVAILABLE` — current work is complete and Engineer may use `CB` to accept eligible queued work.
+- `AVAILABLE` — current work is complete and Engineer may use `!brief` to accept eligible queued work.
 - `BLOCKED` — no authorized executable work can currently continue.
 - `DRAINING` — finish the current safe unit or convergence point, then do not accept another queued brief.
 - `PAUSED` — a safe resumable state is preserved; do not consume queued work until resumed.
@@ -504,15 +517,15 @@ When enabled, record an Engineer execution state distinct from workstream states
 
 Planner/Product Owner controls future automatic queue consumption with:
 
-- `RUN` — continue current authorized work and, at a suitable transition point, use `CB` to consider the highest-priority eligible queued brief within the approved sprint/envelope. It does not accept a brief or expand authority.
-- `DRAIN` — finish the current safe unit, validation, or convergence point; preserve/report a resumable state; do not start another queued brief.
-- `STOP` — stop at the nearest safe checkpoint, preserve/report resumable state, and do not start another queued brief. It is not an abrupt interruption during an integrity-sensitive write, migration, save, or similar operation unless Product Owner explicitly orders an emergency stop.
+- `!run` — continue current authorized work and, at a suitable transition point, use `!brief` to consider the highest-priority eligible queued brief within the approved sprint/envelope. It does not accept a brief or expand authority.
+- `!drain` — finish the current safe unit, validation, or convergence point; preserve/report a resumable state; do not start another queued brief.
+- `!stop` — stop at the nearest safe checkpoint, preserve/report resumable state, and do not start another queued brief. It is not an abrupt interruption during an integrity-sensitive write, migration, save, or similar operation unless Product Owner explicitly orders an emergency stop.
 
-`RUN`, `DRAIN`, and `STOP` never authorize production, override exclusions or decisions, bypass dependencies or attempt limits, or cross a design/production gate. After `DRAIN` or `STOP`, preserve workstream progress, accepted and queued briefs, blockers, attempt counts, decisions, and next eligibility so a future `INIT` plus explicit `RUN` can resume safely.
+`!run`, `!drain`, and `!stop` never authorize production, override exclusions or decisions, bypass dependencies or attempt limits, or cross a design/production gate. After `!drain` or `!stop`, preserve workstream progress, accepted and queued briefs, blockers, attempt counts, decisions, and next eligibility so a future `!init` plus explicit `!run` can resume safely.
 
-Before issuing `RUN`, Designer must review the current remaining usage, estimate a coherent prioritized batch that preserves the recorded reserve, identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, and likely blockers, and present that batch and estimate to Planner/Product Owner. Reduce or split the batch when the estimated range does not preserve sufficient capacity for remediation, complete validation, reporting, transport, and a clean stopping point.
+Before issuing `!run`, Designer must review the current remaining usage, estimate a coherent prioritized batch that preserves the recorded reserve, identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, and likely blockers, and present that batch and estimate to Planner/Product Owner. Reduce or split the batch when the estimated range does not preserve sufficient capacity for remediation, complete validation, reporting, transport, and a clean stopping point.
 
-After `RUN`, Engineer owns practical sequencing within the approved priorities. Within each accepted brief and the approved batch, Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. A blocked stream is preserved and reported, then Engineer moves to another independently eligible, non-conflicting stream. Do not consume usage merely to approach the reserve. Drain or stop when usage approaches the reserve, no eligible work remains, or every path requires new authority. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
+After `!run`, Engineer owns practical sequencing within the approved priorities. Within each accepted brief and the approved batch, Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. A blocked stream is preserved and reported, then Engineer moves to another independently eligible, non-conflicting stream. Do not consume usage merely to approach the reserve. Drain or stop when usage approaches the reserve, no eligible work remains, or every path requires new authority. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
 
 #### Queue priority and eligibility
 
@@ -530,13 +543,13 @@ Filename order is not authoritative. Each queued brief states:
 - Local and production authority.
 - Sprint/envelope association when applicable.
 
-Under enabled `RUN`, Engineer may use `CB` to consider the highest-priority eligible brief only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued brief is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
+Under enabled `!run`, Engineer may use `!brief` to consider the highest-priority eligible brief only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued brief is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
 
-At milestone completion, “may use `CB`” becomes a required queue-refresh and intake check before stopping under `RUN`. The Engineer must not conclude that the operator is done, infer that no follow-on work exists from silence, or rely on a queue listing taken before the completion handoff was written.
+At milestone completion, “may use `!brief`” becomes a required queue-refresh and intake check before stopping under `!run`. The Engineer must not conclude that the operator is done, infer that no follow-on work exists from silence, or rely on a queue listing taken before the completion handoff was written.
 
 A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
 
-Under `RUN`, encountering a milestone blocker is a queue transition, not a reason to end the engineering cycle. Engineer must preserve the affected milestone, write the required sanitized blocker/state report to local `inbox/`, refresh local `briefs/`, and run `CB` against the next priority. Continue with the next independently authorized brief when its own dependencies, authority, collision checks, and acceptance criteria are satisfied. Never treat moving on as permission to bypass the blocked milestone's gate, weaken its acceptance criteria, or activate its user-facing/production outcome.
+Under `!run`, encountering a milestone blocker is a queue transition, not a reason to end the engineering cycle. Engineer must preserve the affected milestone, write the required sanitized blocker/state report to local `inbox/`, refresh local `briefs/`, and run `!brief` against the next priority. Continue with the next independently authorized brief when its own dependencies, authority, collision checks, and acceptance criteria are satisfied. Never treat moving on as permission to bypass the blocked milestone's gate, weaken its acceptance criteria, or activate its user-facing/production outcome.
 
 #### Park and resume
 
@@ -549,13 +562,13 @@ A question or decision affecting one task blocks only that task unless it also a
 5. Attaches the authoritative Planner/Designer answer when received and resumes at the next safe work boundary, including after the alternate task completes or blocks.
 6. Revalidates affected assumptions, dependencies, and shared files before resuming. If the answer materially changes completed work, Engineer reports the impact before substantial rework.
 
-Designer and Planner may review questions, change future priorities, and approve gates while Engineer works elsewhere. New instructions enter the queue without interrupting safe active work unless they explicitly say `STOP` or `HOLD`, or invalidate the work in progress. A parked question may pause the entire run only when it affects every remaining eligible task; continued work could cross an unapproved production, destructive, security, or privacy boundary; the answer could invalidate shared architecture or create conflicting work; no independent task remains; or usage approaches the protected remediation reserve.
+Designer and Planner may review questions, change future priorities, and approve gates while Engineer works elsewhere. New instructions enter the queue without interrupting safe active work unless they explicitly invoke `!stop`, say `HOLD`, or invalidate the work in progress. A parked question may pause the entire run only when it affects every remaining eligible task; continued work could cross an unapproved production, destructive, security, or privacy boundary; the answer could invalidate shared architecture or create conflicting work; no independent task remains; or usage approaches the protected remediation reserve.
 
 #### Designer work-ahead and reporting
 
-During enabled `RUN`, Designer may process CI evidence, maintain permanent state, batch decisions, reprioritize unaccepted briefs within Planner direction, and prepare eligible future work while Engineer continues. Stay only one or two meaningful executable briefs ahead. Do not create speculative work merely to keep the queue non-empty.
+During enabled `!run`, Designer may process `!inbox` evidence, maintain permanent state, batch decisions, reprioritize unaccepted briefs within Planner direction, and prepare eligible future work while Engineer continues. Stay only one or two meaningful executable briefs ahead. Do not create speculative work merely to keep the queue non-empty.
 
-When Queue Mode is enabled, CI reports Engineer state, active workstreams, queued work, blocked work, pending decisions, whether Engineer can continue, whether replenishment is needed, and whether `DRAIN` or `STOP` is in effect. Do not ask Planner to act merely because a decision is pending when Engineer can safely continue elsewhere.
+When Queue Mode is enabled, `!inbox` reports Engineer state, active workstreams, queued work, blocked work, pending decisions, whether Engineer can continue, whether replenishment is needed, and whether `!drain` or `!stop` is in effect. Do not ask Planner to act merely because a decision is pending when Engineer can safely continue elsewhere.
 
 Meaningful future Engineer reports include:
 
@@ -582,17 +595,17 @@ ENGINEER CAN CONTINUE:
 <YES | NO>
 ```
 
-Do not require this expanded block for trivial acknowledgements. Queue state survives thread replacement through permanent `CURRENT_STATE.md`, accepted/queued transport artifacts, and the normal `INIT` bootstrap.
+Do not require this expanded block for trivial acknowledgements. Queue state survives thread replacement through permanent `CURRENT_STATE.md`, accepted/queued transport artifacts, and the normal `!init` bootstrap.
 
 This block is operator-facing live context, not merely handoff metadata. When a completed milestone is waiting in `inbox/` while the next brief is being accepted or executed, show both facts simultaneously. Use the footer's `ACTIVE OWNERS` form so the operator can enable Designer intake or Planner work without interrupting Engineer continuation, for example:
 
 ```text
 TL;DR:
-P2 is waiting for Designer intake while Engineer continues P3 under RUN.
+P2 is waiting for Designer intake while Engineer continues P3 under `!run`.
 
 ACTIVE OWNERS:
 - DESIGNER — process the completed P2 handoff
-- ENGINEER — accept or execute P3 under RUN
+- ENGINEER — accept or execute P3 under `!run`
 
 BLOCKING OWNER:
 NONE

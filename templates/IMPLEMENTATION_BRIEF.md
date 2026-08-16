@@ -20,7 +20,7 @@
 
 Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
 
-Queue metadata does not activate Queue Mode, make a brief executable, or replace `CB` acceptance. When Queue Mode is disabled, Engineer must not consume this as follow-on work without separate authority.
+Queue metadata does not activate Queue Mode, make a brief executable, or replace `!brief` acceptance. When Queue Mode is disabled, Engineer must not consume this as follow-on work without separate authority.
 
 ## Workstreams
 
