@@ -14,6 +14,7 @@
 - Closed the M4 transport check as unverifiable from existing evidence. The local completion remains valid, but no formal acceptance transition was inferred or recreated.
 - Parked M6 before acceptance because the cumulative editable M5 source and collision boundaries are unavailable in the current supported Sites context. `RUN` remains active, but no independent approved batch task is currently eligible.
 - Corrected `ARCHITECTURE.md` to reflect that the owner administration surface was saved and published as Version 19 and used for Gates 2–3, while preserving the distinct Gate 4 verification boundary.
+- Repaired and simplified the Engineer startup prompt: removed the read-only/materialization contradiction, aligned `INIT` with current authority boundaries, and added the approved park-and-resume and queue-state reporting rules.
 
 Material changes to the project's design, architecture, and documented milestones will be recorded here.
 
