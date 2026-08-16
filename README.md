@@ -8,7 +8,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 18 is now the published migration bridge; Version 16 is superseded in Site history, and Version 17 remains the unpublished Shopping foundation. Production application and schema behavior remain unverified because no bridge API or database operation has occurred. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 19 is now the published owner-authenticated administration surface; Version 18 remains retained in Site history, and Version 17 remains the unpublished Shopping foundation. Publication succeeded, but application rendering and production schema behavior remain unverified because no administration API or database operation occurred. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

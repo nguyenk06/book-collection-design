@@ -2,9 +2,9 @@
 
 **Last reviewed:** 2026-08-12
 
-**Published Site version:** Version 18 migration bridge; deployment succeeded, but application and schema behavior remain unverified
+**Published Site version:** Version 19 owner-authenticated administration surface; deployment succeeded, but application rendering and schema behavior remain unverified
 
-**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; migration bridge published as Version 18; owner-authenticated administration surface preserved in unpublished Version 19
+**Verified saved implementations:** Shopping persistence/API foundation in unpublished Version 17; migration bridge retained as Version 18; owner-authenticated administration surface published as Version 19
 
 **Assessment:** Database-first architecture review completed 2026-08-03
 
@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4/M5 complete locally; M2 Gate 0 exact candidate preflight complete and awaiting separate Gate 1 publication authority; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–1 complete; Gate 2 owner status/export awaits separate Product Owner authority; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner supplied a fresh 71% reading before M5; Engineer reports approximately 50–60% remaining after completion, preserving the required 30% reserve.
 
-**Engineer execution state:** `STOPPED AT GATE` — M2 Gate 0 is complete; Gate 1 administration-surface publication requires separate Product Owner authorization
+**Engineer execution state:** `STOPPED AT GATE` — M2 Gate 1 publication is complete; Gate 2 production status/export requires separate Product Owner authorization
 
 ## Current Engineering Workstreams
 
@@ -32,33 +32,33 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-AUTH` | Same-origin authorization and security validation | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-EXPORT` | Private export-download and validation UX | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Approved save execution in a future session | No |
-| `WS-SAVE` | Preserve validated administration source | `[██████████] 100%` | COMPLETE | Unpublished Version 19 verified | Publication remains separately gated | No |
+| `WS-SAVE` | Preserve and publish validated administration source | `[██████████] 100%` | COMPLETE | Version 19 publication succeeded | Minimal application rendering remains unverified; no data/schema operation occurred | No |
 | `WS-MIGRATION` | Production status/export and schema activation | `[░░░░░░░░░░] 0%` | BLOCKED | No production authority | Admin convergence, Site-save/publication approval, then sequential production gates | No |
 | `WS-SHOP-FLOW` | Mobile Shopping search/scan/status flow | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-PURCHASE` | Purchase capture and history | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[██████████] 100%` | COMPLETE | Read-only capability investigation accepted | No verified option is runnable, private, isolated, and non-production | Transitioned to M2 blocker |
-| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[██░░░░░░░░] 20%` | STOPPED AT GATE | Gate 0 completed under revised brief; ADR-0012 | Product Owner must separately authorize Gate 1 publication of existing Version 19 | No until Gate 1 authority |
+| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[███░░░░░░░] 30%` | STOPPED AT GATE | Gates 0–1 completed under ADR-0012 | Product Owner must separately authorize Gate 2 owner status/export | No until Gate 2 authority |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
 
-**Engineer can continue:** NO. M2 Gate 0 candidate isolation, source-composition verification, and local convergence are complete. Administration publication, production export, schema activation/verification, Shopping publication, live validation, smoke testing, and rollback require their recorded sequential gates.
+**Engineer can continue:** NO. M2 Gate 1 published only the existing Version 19 administration surface. Owner-authenticated production schema status/export, schema activation/verification, Shopping publication, live validation, smoke testing, and rollback require their recorded sequential gates.
 
-**Current Planner decisions:** One. Product Owner must approve or decline M2 Gate 1 publication of the existing Version 19 owner-authenticated administration surface.
+**Current Planner decisions:** One. Product Owner must approve or decline M2 Gate 2 owner-authenticated schema status, private structured export, and preservation preflight.
 
-**Next production gate:** None is currently executable. Gate 0 is complete; the next gate is explicit authorization to publish only the existing Version 19 owner-authenticated administration surface. Export, schema activation/verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
+**Next production gate:** None is currently executable. Gates 0–1 are complete; the next gate is explicit authorization for owner-authenticated schema status and private structured export only. Schema activation/verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
 
 **Resume condition:** Satisfied. Replacement Site Engineer read-only `INIT` and stopping-point verification are complete, and the Product Owner has set throttle `RUN` for the bounded M1–M3 sequence.
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 are complete locally. M2 Gate 0 is complete locally and stopped before Gate 1. M4 still requires its missing acceptance report before local transport artifacts can close.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–1 are complete. M2 is stopped before Gate 2. M4 still requires its missing acceptance report before local transport artifacts can close.
 
 ## Summary
 
-The published Site is now Version 18, a temporary migration bridge whose ordinary data paths remain compatible with the Version 16 schema. The validated Shopping persistence/API foundation remains preserved as unpublished Version 17 and has not been activated in production. Version 18 publication is verified from Sites deployment status only; application and schema behavior are not yet verified.
+The published Site is now Version 19, the owner-authenticated administration surface built on the temporary migration bridge. The validated Shopping persistence/API foundation remains preserved as unpublished Version 17 and has not been activated in production. Version 19 publication is verified from Sites deployment status only; application rendering and schema behavior are not yet verified.
 
 The read-only migration investigation found no public Sites contract establishing when packaged D1 migrations execute or whether migration success gates production traffic. That behavior remains unknown and must not be assumed.
 
@@ -84,7 +84,9 @@ Planner approved a narrowly scoped permanent owner-authenticated in-Site adminis
 
 That surface is now implemented and validated locally. Owners receive a staged status, private export, separately approved upgrade, and verification workflow; anonymous users use the existing sign-in flow, and authenticated non-owners receive no controls or administrative data. Upgrade submission requires owner authorization, same-origin validation, JSON content type, a dedicated action header, explicit acknowledgment, and an exact confirmation phrase. Duplicate submission is disabled while active. Tests pass 44/44, build and task lint pass, and full lint retains only three pre-existing errors and one warning. At the local-completion transition, no source had yet been saved as a Site version, and no production request, export, D1/R2 operation, schema change, deployment, or publication occurred.
 
-The exact validated administration source is now preserved as unpublished Site Version 19. Validation immediately before preservation passed 44/44 tests, build, and task lint. Version 18 remains published. Saving Version 19 did not publish, invoke the application, access production data, export, migrate, verify production, or change D1/R2.
+The exact validated administration source was preserved as Site Version 19. Validation immediately before preservation passed 44/44 tests, build, and task lint. Saving Version 19 did not publish, invoke the application, access production data, export, migrate, verify production, or change D1/R2.
+
+Product Owner then explicitly approved publication of only Version 19 and confirmed public publication. Sites deployment reached terminal `succeeded` status with the existing Version 19 administration-only source; Shopping, M3–M5, and migrations `0005`/`0006` were excluded. A separate root-page checker refused the URL before request and the in-app browser was unavailable, so application rendering remains unverified. No administration API, schema status, export, schema upgrade, Shopping route, D1/R2 operation, smoke test, rollback, or destructive action occurred.
 
 The bounded P2 Shopping Mode UI is complete and validated in the unsaved local working copy. Mobile title/author/series/ISBN search, existing camera/photo/manual scanning, match limitations, collection status, target price when supplied, owner-only Business/Purchase history and capture, repeated-shopping navigation, ownership-independence messaging, and accessible loading/empty/error/success states are implemented. Purchase price is required and non-negative; sticker price and the other supported details remain optional, and unknown price is never converted to zero. The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. Nothing was saved, published, migrated, or run against production.
 
@@ -186,7 +188,7 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 ## Current known limitations
 
 - Production has no Businesses, Purchases, condition history, price history, collection target price, or Added Date migration.
-- Version 17 is saved but unpublished; Version 18 bridge is published, and Version 16 is retained as superseded history.
+- Version 17 is saved but unpublished; Version 19 administration is published, while Versions 18 and 16 are retained in Site history.
 - Production migration, rollback, and production behavior remain unverified.
 - Sites migration trigger, executor, tracking, retry behavior, atomicity, and traffic sequencing remain unknown from public documentation.
 - Raw migration `0004` applies once locally but is not directly idempotent; safe execution depends on the D1 migration ledger and controlled operator sequencing.
@@ -207,4 +209,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-Under current `RUN`, revised M2 may perform exact Shopping candidate isolation and local preflight. Then stop before administration publication. Export, schema activation, verification, Shopping publication, live Product Owner validation, smoke testing, rollback, and destructive recovery remain separately gated.
+M2 Gates 0–1 are complete. The project is stopped before Gate 2 owner-authenticated schema status, private structured export, and preservation preflight. Schema activation, verification, Shopping publication, live Product Owner validation, smoke testing, rollback, and destructive recovery remain separately gated.

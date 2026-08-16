@@ -28,6 +28,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and 
 - Added a standing independent-promotion rule: parallel workstreams should retain separate source/migration manifests, validation evidence, Site-save, and publication authority; unavoidable release coupling must be surfaced for an explicit convergence decision.
 - Embedded the exact single-owner and parallel workflow footers in every role startup prompt. Clarified that `TL;DR` and `ACTION` are mandatory in both forms and that the parallel form replaces only the ownership block.
 - Accepted M2 Gate 0 candidate-preflight evidence: an exact disposable candidate from Version 19 plus allowlisted Shopping/P3 changes excluded M3–M5 and migrations `0005`/`0006`; 54/54 focused and 68/68 full serial tests, task lint, build, and preservation checks passed. No Site or production action occurred. M2 is stopped pending separate Gate 1 administration-publication authority.
+- Accepted M2 Gate 1 evidence: Product Owner explicitly approved and confirmed public publication of only the existing Version 19 administration source; Sites deployment succeeded. Shopping, M3–M5, and migrations `0005`/`0006` remained excluded. Application rendering was not independently observed, and no API, export, schema, data, migration, smoke, rollback, or destructive operation occurred. M2 is stopped pending separate Gate 2 status/export authority.
 
 ## Milestone State Model
 

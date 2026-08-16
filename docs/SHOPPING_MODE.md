@@ -54,7 +54,7 @@ Unpublished Site Version 17 preserves locally validated persistence and owner-au
 - Nullable collection target price, with CYOA configured to 600 cents locally.
 - Nullable Book Added Date for new manual/imported records without fabricating historical dates.
 
-This foundation is saved but has not been migrated to production or published; Version 18 remains live as the migration bridge, and Version 19 is an unpublished administration surface. Saving Version 17 did not execute its packaged migration or add Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
+This foundation is saved but has not been migrated to production or published; Version 19 is live as the owner-authenticated administration surface, while Version 18 is retained in Site history. Publishing Version 19 did not publish Shopping or invoke export/schema operations. Saving Version 17 did not execute its packaged migration or add Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
 
 ## Remaining Milestone Work
 
@@ -75,7 +75,7 @@ This bounded phase is complete and validated against local/disposable data befor
 
 Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
 
-The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. The Shopping source remains unsaved; Version 19 is still the latest saved version and Version 18 remains published.
+The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. The Shopping source remains unsaved; Version 19 is the latest saved and published administration version, but contains no Shopping UI.
 
 ## Product Owner validation checkpoint
 
