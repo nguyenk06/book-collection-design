@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-16 — Explicit workflow command prefix adopted
+
+- Replaced ambiguous plain workflow abbreviations with case-insensitive `!` commands, including `!init`, `!status`, `!inbox`, `!brief`, prompt commands, and `!run`/`!drain`/`!stop`.
+- Retained compact prefixed aliases `!pe`, `!pd`, `!pp`, `!ci`, and `!cb`; unprefixed words and abbreviations now remain normal conversation.
+- Added role-specific command references to all startup templates and aligned mobile workflow, queue, brief, and recovery guidance without expanding authority or weakening existing gates.
+
 ## 2026-08-15 — Engineer batch planning and autonomy clarified
 
 - Changed throttle to `STOP` pending approval of a coherent Gate 3/M4/M6 batch; the existing one-time Gate 3 approval and safeguards remain unchanged.

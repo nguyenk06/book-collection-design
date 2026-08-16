@@ -16,7 +16,7 @@
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`; this preserves the approved batch and does not authorize Gate 4 or any later production gate.
 - **Engineer state:** `BLOCKED` because M6 is `WAITING FOR ANSWER / SOURCE` and no other approved batch task is eligible.
-- **Engineer continuation:** Resume M6 at the safe pre-`CB` boundary when the correct cumulative editable M5 source is available. Revalidate source composition, collision boundaries, dependencies, tests, and usage before acceptance. No reinitialization is required solely because the task is parked.
+- **Engineer continuation:** Resume M6 at the safe pre-`!brief` boundary when the correct cumulative editable M5 source is available. Revalidate source composition, collision boundaries, dependencies, tests, and usage before acceptance. No reinitialization is required solely because the task is parked.
 - **Planner decisions:** None pending.
 - **Active owner:** `EXTERNAL/WAIT` for supported cumulative editable M5 source availability.
 - **Potential later owner:** Product Owner must separately authorize Gate 4 before production verification; no such decision is currently queued.
