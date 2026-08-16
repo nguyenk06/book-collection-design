@@ -4,9 +4,9 @@
 
 **Execution budget:** Approximately 50% remains; 30% remaining is the protected reserve and mandatory stopping threshold. The proposed next batch is 8–12 points and should finish around 38–42%. Stop earlier when an estimate overruns, no eligible work remains, or a safe handoff requires it.
 
-**Queue state:** Throttle `DRAIN`; approved local batch complete through M6; Engineer paused with no eligible brief; proposed next batch awaits Planner/Product Owner review; later Site and production gates remain closed
+**Queue state:** Throttle `DRAIN`; approved local batch complete through M6; Engineer paused; next read-only P1/P2 briefs are queued but ineligible until explicit `!run`; later Site and production gates remain closed
 
-**Proposed next batch estimate:** 8–12 percentage points total from approximately 50% remaining, for an expected finish at approximately 38–42%. This range includes intake, collision checks, execution, ordinary remediation, full relevant validation, evidence, transport, and clean stopping capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md). No activity is executable before its required decision and brief.
+**Approved next batch estimate:** 8–12 percentage points total from approximately 50% remaining, for an expected finish at approximately 38–42%. This range includes intake, collision checks, execution, ordinary remediation, full relevant validation, evidence, transport, and clean stopping capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md). No activity is executable before explicit `!run` and individual brief acceptance.
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 

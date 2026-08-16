@@ -18,9 +18,9 @@
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the approved batch is complete, no eligible brief remains, and new work requires a reviewed batch plus explicit authorization.
 - **Engineer state:** `PAUSED`; the approved local batch is complete and no independently eligible brief remains.
-- **Engineer continuation:** Preserve the cumulative M3–M6/Shopping/Bookshelf working source unchanged. Any checkpoint, Site save, publication, production export, or activation requires new explicit authority.
-- **Planner decisions:** Two pending: Gate 4 read-only verification and read-only checkpoint/source-preservation feasibility investigation.
-- **Active owner:** `PLANNER` — review the proposed next batch and its two independent authorization questions.
+- **Engineer continuation:** Preserve the cumulative M3–M6/Shopping/Bookshelf working source unchanged. Two read-only briefs are queued in P1/P2 order but remain ineligible until explicit `!run`.
+- **Planner decisions:** None pending. Planner/Product Owner approved Gate 4 read-only verification and the independent read-only checkpoint/source-preservation feasibility investigation.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` when ready to activate the approved 8–12 point batch.
 - **Potential later owner:** Product Owner must separately authorize any unpublished save/preview and hands-on validation after feasibility evidence identifies an exact safe environment.
 
 ## Usage reserve
@@ -66,4 +66,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-M6 is complete and validated locally, and the current cycle is drained. The proposed next batch contains separately gated Gate 4 read-only verification followed by read-only checkpoint feasibility and candidate-preservation assessment. No preview, Site save, publication, production export, activation, or fallback development is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
+M6 is complete and validated locally, and the current cycle remains drained. The approved next batch contains separately gated Gate 4 read-only verification followed by read-only checkpoint feasibility and candidate-preservation assessment. Both briefs are prepared but require explicit `!run` and individual acceptance. No preview, Site save, source change, publication, production export, activation, or fallback development is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).

@@ -8,7 +8,7 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the completed cycle is preserved and no new intake is allowed before authorization.
 - **Engineer state:** `PAUSED`; the approved local batch is complete and no eligible brief remains.
-- **Next owner:** `PLANNER` — review the independent Gate 4 and checkpoint-feasibility decisions in [Planner Inbox](PLANNER_INBOX.md).
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` to activate the approved P1/P2 read-only batch.
 - **Usage:** Approximately 50% remains. The proposed 8–12 point batch expects 38–42% remaining; 30% is the protected floor, not a consumption target.
 
 Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.
@@ -27,13 +27,12 @@ M6 remains in the cumulative dirty local source. Saved and published Site versio
 
 ## Proposed next batch
 
-See [Proposed Next Execution Batch](NEXT_BATCH_PLAN.md). Priority is:
+See [Approved Next Execution Batch](NEXT_BATCH_PLAN.md). Final priority is:
 
-1. Separately approved M2 Gate 4 read-only production verification: 3–5 points.
-2. Separately approved read-only Sites checkpoint/preview feasibility investigation: 2–4 points.
-3. Candidate composition and preservation assessment based on feasibility evidence: 2–3 points.
+1. P1 M2 Gate 4 read-only production verification: 3–5 points.
+2. P2 read-only Sites checkpoint/preview feasibility plus candidate composition/preservation assessment: 5–7 points.
 
-Shared overhead yields an estimated 8–12 points total. No fallback implementation is proposed. Remain at `DRAIN` until Planner/Product Owner decisions are recorded and Designer prepares bounded briefs.
+Shared overhead yields an estimated 8–12 points total. No fallback implementation is proposed. Both briefs are queued but ineligible under `DRAIN`; only explicit `!run` activates intake. P2 follows P1's completion or automatic-stop report unless P1 identifies a cross-cutting safety or identity conflict.
 
 ## Closed production gate
 

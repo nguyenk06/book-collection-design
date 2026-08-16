@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — Next read-only batch approved and briefed under drain
+
+- Planner/Product Owner approved Gate 4 read-only verification and the independent read-only checkpoint/source-preservation feasibility investigation (`1: A; 2: A`).
+- Finalized order as P1 Gate 4, then P2 checkpoint/source-preservation feasibility and candidate composition assessment, retaining the 8–12 point estimate from approximately 50% remaining.
+- Prepared two queued briefs while retaining throttle `DRAIN`; neither brief is executable until explicit `!run` and individual acceptance.
+- No Site save, preview creation, source change, publication, corrective write, migration retry, restore, rollback, hands-on validation, or later production gate was authorized.
+
 ## 2026-08-16 — Completed batch drained and next review envelope proposed
 
 - Drained the completed M3–M6/Shopping/Bookshelf cycle at approximately 50% usage remaining; Engineer — Sei remains paused in the continuing source-bearing chat with no eligible brief.

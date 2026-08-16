@@ -1,12 +1,12 @@
 # Proposed Next Execution Batch
 
-**Status:** AWAITING PLANNER / PRODUCT OWNER REVIEW  
+**Status:** APPROVED FOR BRIEF PREPARATION; AWAITING EXPLICIT `!run`
 **Prepared:** 2026-08-16  
 **Current usage:** Approximately 50% remaining  
 **Protected reserve:** 30% remaining  
 **Preferred planning cushion:** Finish above 35% remaining
 
-This is a planning envelope, not executable authority. It creates no brief, `!run`, Site action, production access, schema action, publication, or fallback implementation authority.
+Planner/Product Owner approved both bounded read-only activities (`1: A; 2: A`). Two queued briefs implement this envelope, but throttle remains `DRAIN`: neither brief is executable until a separate explicit `!run`. The decisions create no Site save, preview, source change, publication, corrective write, migration retry, restore, rollback, or later production-gate authority.
 
 ## Current stopping state
 
@@ -100,10 +100,10 @@ No fallback implementation should be queued. AI Review, assets/covers, tags, imp
 
 ## Required authority sequence
 
-1. Planner/Product Owner decides whether to authorize Gate 4 read-only verification.
-2. Independently, Planner/Product Owner decides whether to authorize the read-only checkpoint/source-preservation feasibility investigation.
+1. Gate 4 read-only verification is approved for the next batch but awaits explicit `!run` and brief acceptance.
+2. The read-only checkpoint/source-preservation feasibility investigation is independently approved for the next batch but awaits P1 transition, explicit `!run`, and brief acceptance.
 3. Based on feasibility evidence, a later separate decision may authorize an exact unpublished save or supported preview. No such operation is authorized now.
 4. After an exact safe environment exists, a later separate decision schedules Product Owner hands-on validation. Its outcome does not authorize publication.
 5. No fallback implementation decision is needed because none is proposed.
 
-Until decisions 1 or 2 are accepted and converted into bounded briefs, remain at `DRAIN` with Engineer — Sei paused.
+Remain at `DRAIN` with Engineer — Sei paused until the Product Owner explicitly issues `!run`. Final batch order is P1 Gate 4 verification, then P2 checkpoint/source-preservation feasibility and composition assessment. P2 may proceed after P1 produces a completion or automatic-stop report unless P1 exposes a cross-cutting safety or identity conflict.
