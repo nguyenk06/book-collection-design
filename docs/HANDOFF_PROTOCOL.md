@@ -166,6 +166,10 @@ This repository has no guaranteed project-level Codex trigger file. For a new De
 
 `PP` means **Prompt Planner**. Output the current self-contained, copy/paste-ready contents of [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md), including its public repository link, reading order, and `INIT` instruction. Do not depend on prior Planner memory or alter project state.
 
+### Designer: `PD`
+
+`PD` means **Prompt Designer**. Output the current self-contained, copy/paste-ready contents of [`DESIGNER_STARTUP.md`](../templates/DESIGNER_STARTUP.md), including its public repository link, authoritative reading order, local transport inspection rules, read-only `INIT` instruction, and canonical workflow footer. It is intended to initialize a replacement Designer without prior chat memory. Do not embed transient milestone state that belongs in permanent documents, process or move inbox artifacts, expose sensitive local paths or evidence, or alter project state.
+
 ### Designer: `CI`
 
 `CI` means **Check Inbox / Process Inbox**. It does not merely list `inbox/`.
