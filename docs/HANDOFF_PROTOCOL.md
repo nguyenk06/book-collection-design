@@ -20,13 +20,13 @@ Priority documents:
 
 The Site Engineer treats the public design repository as read-only reference. Engineer has no write role in `book-collection-design`: do not create, edit, move, delete, commit, push, branch, open a pull request, publish a release, or use GitHub issues/comments as an Engineer communication channel. When starting significant implementation work, read or request the relevant current documents. If the Site workspace cannot read GitHub directly, use the latest exported [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) as the handoff package.
 
-## Engineer Chat Identity
+## Role Identity and Chat Continuity
 
-Designer assigns a unique Engineer name and `E-##` instance directly in every Engineer brief. Keep identity inside the brief; do not create a separate registry unless repeated conflicts later justify one. Replacement chats always receive a new name and ID, identities are never reused, and unpublished working state does not automatically transfer between chats.
+The permanent role identities are Planner — Quatre, Designer — Relena, and Engineer — Sei. Required titles are `CYOA — Planner Quatre`, `CYOA — Designer Relena`, and `CYOA — Engineer Sei`. Each role's first `!init` response displays its identity, exact required title, context continuity, unpublished-work state, and editable-source access. The Product Owner applies the title manually; chats must not claim they can rename themselves.
 
-Every brief includes the Engineer role, assigned name, instance, required chat title, and expected context. At startup Engineer reports identity, required title, context match, unpublished-work state, and editable-source access before accepting the brief. The Product Owner manually applies the reported title because a chat cannot reliably rename itself.
+Designer includes Sei's assignment directly in every Engineer brief: assigned role/name, expected chat, expected context, and required source state. Keep this inside the brief and do not create a separate naming workflow or registry. If a real replacement is necessary, use a suffix such as `Sei II`; do not create numbered identities preemptively.
 
-If expected and actual message/Sites context disagree, stop acceptance and report the mismatch. Preserve and inventory unpublished work before materializing, replacing, rebuilding, or overwriting anything. If source is absent or inaccessible, report it and do not reconstruct without authority. Every acceptance, blocker, completion, and source-recovery report includes the Engineer name and instance ID. Role authority remains shared across Engineer instances; identity distinguishes work contexts only.
+Before `!brief` acceptance, Sei inspects actual message/Sites context for prior unpublished implementation, editable source, dirty or unsaved state, latest saved and published Site versions, context match, source composition, and collision boundaries. If expected and actual context disagree, park only the affected task and report the mismatch. Preserve and inventory unpublished work before materializing, replacing, rebuilding, or overwriting anything. If source is absent or inaccessible, report it and do not reconstruct without authority. Every acceptance, blocker, completion, and source-recovery report identifies Engineer — Sei.
 
 ## Roles
 
@@ -262,17 +262,20 @@ Planner uses `!init` and `!status`. Unprefixed conversational words such as “i
 4. [`CHANGELOG.md`](CHANGELOG.md)
 5. [`ROADMAP.md`](ROADMAP.md)
 
-## Thread Replacement and Recovery
+## Thread Continuity and Necessary Replacement
 
-Chat history is not the project source of truth. When a role thread becomes too large, stale, or unreliable:
+Permanent documentation and actual implementation/source state remain authoritative, but continuity is preferred. Continue using the same role chat while it remains coherent and retains the correct repository, Sites, source, and transport access. Do not replace a chat merely because the conversation is long, Codex compacts or summarizes older context, a milestone finishes, one task blocks, a new brief appears, or substantial context has been used.
 
-1. Start a new thread in the correct role context.
-2. Supply the appropriate startup template when the context does not already know `!init`.
-3. Run the read-only `!init` bootstrap.
-4. Validate role, permanent state, active workstreams, and active/blocking owners.
-5. Continue from permanent documentation, actual Site/source state, and active handoff artifacts.
+Replacement is justified only when required workspace, Sites context, editable source, or tools are unavailable; `!init` cannot reconcile identity and authoritative state; the chat repeatedly uses stale or contradictory state after reinitialization; the role changes materially; or Product Owner explicitly requests replacement or an independent context.
 
-Do not create large conversational handoff summaries when authoritative sources are sufficient. Site Engineer must re-check actual Site/source state and accepted brief evidence after bootstrap; Site state outranks stale claims about what is deployed.
+Before replacing an Engineer chat, inspect and report unpublished working state. A new chat does not automatically inherit unsaved source. If replacement is necessary:
+
+1. Preserve concise evidence of unpublished source, active authority, task state, safe resume point, and access requirements.
+2. Start the new thread in the correct role/workspace context and use a suffix such as `Sei II` only for a real Engineer replacement.
+3. Supply the applicable startup template and run read-only `!init`.
+4. Validate identity, context continuity, permanent state, actual source/Site access, active workstreams, and owners before resuming.
+
+Do not require a handoff solely because a chat is long or compacted. Retain concise, evidence-focused handoffs for Designer-to-Engineer briefs; Engineer completion, blocker, and validation evidence; production-gate evidence; cross-role decisions/conflicts; and unpublished-source preservation before an actual replacement.
 
 ## Standard Response Footer
 

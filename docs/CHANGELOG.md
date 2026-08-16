@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-16 — Permanent role identities and continuity adopted
+
+- Established Planner — Quatre, Designer — Relena, and Engineer — Sei with fixed Product Owner-applied chat titles and mandatory first-`!init` identity/continuity/source-access headers.
+- Replaced preemptive numbered Engineer instances with continuity-first use of the Sei chat; a real replacement uses a suffix such as `Sei II` only when justified.
+- Removed long-thread, compaction, milestone, blocker, new-brief, and context-usage pressure as replacement reasons while retaining concise authority/evidence handoffs and unpublished-source preservation before actual replacement.
+
 ## 2026-08-16 — Engineer chat identities assigned
 
 - Designer assigned Stan `[E-01]` to the original M5 source-recovery context and Steve `[E-02]` to the replacement/current M6 context; current coordination identities are Dana `[D-01]` and Parker `[P-01]`.
