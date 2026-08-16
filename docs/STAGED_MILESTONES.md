@@ -4,7 +4,9 @@
 
 **Execution budget:** Approximately 80% remains; 30% remaining is the protected reserve and mandatory stopping threshold. Stop earlier when no eligible work remains or a safe handoff requires it.
 
-**Queue state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 authorized once; M4 transport closure pending; M6 local export-download UI queued; later production gates closed
+**Queue state:** Throttle `STOP`; proposed Gate 3/M4/M6 batch awaits approval and explicit `RUN`; later production gates closed
+
+**Proposed batch estimate:** 24–38 percentage points total from approximately 80% remaining, for an expected finish at approximately 42–56%. This range includes intake, ordinary remediation, full validation, evidence, transport, and clean stopping capacity. Reduce or drain rather than threaten the 30% reserve.
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -88,7 +90,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.
 - **Included:** Owner-only local UI/route integration over the existing catalog export service; safe filename and format metadata; explicit included/excluded entities; `bytes_included: false` limitation; loading, success, error, retry, and accessibility states; no-mutation verification.
 - **Excluded:** Import, restore, production export, bridge-export replacement, schema/migration changes, image bytes, Businesses/Purchases, Shopping changes, Version 19 administration changes, Site save/publication, production access, and research review.
-- **Dependencies/eligibility:** Gate 3 completion/abort report exists; production sequence is stopped before Gate 4; M4 acceptance transition is factually reported or explicitly unverifiable; exact cumulative source and collision boundaries are verified; M5 tests remain green; usage remains above the protected 30% reserve with clean-stop capacity.
+- **Dependencies/eligibility:** The proposed batch has explicit `RUN`; Gate 3 completion/abort report exists; production sequence is stopped before Gate 4; M4 acceptance transition is factually reported or explicitly unverifiable; exact cumulative source and collision boundaries are verified; M5 tests remain green; usage remains above the protected 30% reserve with clean-stop capacity.
 - **Acceptance/tests/evidence:** Downloaded format-v1 artifact matches the accepted contract; owner-only behavior; understandable filename/scope/limitations; deterministic payload except documented metadata; empty/error/retry/accessibility coverage; explicit no-write checks; focused/full serial tests, task lint, and build.
 - **Data/rollback:** Local/disposable and read-only. No production data, save, publication, backup claim, import, restore, or rollback authority.
 - **User validation:** A later separately authorized checkpoint is required before activation; no Site operation follows from local completion.

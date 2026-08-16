@@ -504,6 +504,10 @@ Planner/Product Owner controls future automatic queue consumption with:
 
 `RUN`, `DRAIN`, and `STOP` never authorize production, override exclusions or decisions, bypass dependencies or attempt limits, or cross a design/production gate. After `DRAIN` or `STOP`, preserve workstream progress, accepted and queued briefs, blockers, attempt counts, decisions, and next eligibility so a future `INIT` plus explicit `RUN` can resume safely.
 
+Before issuing `RUN`, Designer must review the current remaining usage, estimate a coherent prioritized batch that preserves the recorded reserve, identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, and likely blockers, and present that batch and estimate to Planner/Product Owner. Reduce or split the batch when the estimated range does not preserve sufficient capacity for remediation, complete validation, reporting, transport, and a clean stopping point.
+
+After `RUN`, Engineer owns practical sequencing within the approved priorities. Within each accepted brief and the approved batch, Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. A blocked stream is preserved and reported, then Engineer moves to another independently eligible, non-conflicting stream. Do not consume usage merely to approach the reserve. Drain or stop when usage approaches the reserve, no eligible work remains, or every path requires new authority. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
+
 #### Queue priority and eligibility
 
 Filename order is not authoritative. Each queued brief states:

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-15 — Engineer batch planning and autonomy clarified
+
+- Changed throttle to `STOP` pending approval of a coherent Gate 3/M4/M6 batch; the existing one-time Gate 3 approval and safeguards remain unchanged.
+- Recorded a 24–38 percentage-point estimate from approximately 80% remaining, with an expected 42–56% remaining and a protected 30% reserve.
+- Clarified that, after explicit `RUN`, Engineer may sequence approved priorities practically and investigate, implement, remediate, validate, converge, and report within accepted scope without repeated Planner approval.
+- Preserved separate production gates and blocker continuation: Gate 4 remains closed, while unrelated eligible local work may continue after the Gate 3 production sequence stops.
+
 Material changes to the project's design, architecture, and documented milestones will be recorded here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and uses calendar dates. This documentation project does not currently assign versions.

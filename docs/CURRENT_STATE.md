@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-12
+**Last reviewed:** 2026-08-15
 
 **Published Site version:** Version 19 owner-authenticated administration surface; Gate 2 surface rendered and production reported the expected pre-upgrade schema baseline
 
@@ -16,11 +16,11 @@
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
-**Queue throttle:** `RUN` — continue eligible, non-conflicting work until the protected reserve or another stop condition
+**Queue throttle:** `STOP` — proposed Gate 3/M4/M6 batch awaits Planner/Product Owner approval and explicit `RUN`
 
 **Usage guidance:** Product Owner reports approximately 80% remaining. Engineer may continue until 30% remains; 30% is the protected reserve and mandatory stopping threshold, not an amount of usage granted. Stop earlier when no eligible work remains or a safe handoff requires it, and preserve sufficient usage for validation, reporting, transport, and a clean stop.
 
-**Engineer execution state:** `AVAILABLE` — Gate 3 brief is eligible for `CB`; authority ends before Gate 4 regardless of outcome
+**Engineer execution state:** `PAUSED` — no Engineer work begins until the proposed batch estimate is approved with explicit `RUN`
 
 ## Current Engineering Workstreams
 
@@ -45,13 +45,13 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
 | `WS-EXPORT-DOWNLOAD` | M6 local downloadable catalog export UI | `[░░░░░░░░░░] 0%` | QUEUED / ELIGIBLE AFTER TRANSITION | Accepted Import/Export direction and completed M5 foundation | Gate 3 report, factual M4 transport check, source/collision validation | Yes; local/disposable only |
 
-**Engineer can continue:** YES. First execute/abort and report the one-time Gate 3 action, stopping that production sequence before Gate 4. Then perform the factual M4 transport check from existing evidence and use `CB` for independently eligible M6 local downloadable-export UI work if usage remains above the protected 30% reserve and source/collision checks pass. Gate 4 and all other production actions remain unauthorized.
+**Engineer can continue:** NO while throttle is `STOP`. Proposed batch priority is Gate 3, factual M4 transport closure, then independently eligible M6 local downloadable-export UI. Estimated total usage is 24–38 percentage points, leaving approximately 42–56% remaining from the reported 80%. Gate 4 and all other production actions remain unauthorized.
 
-**Current Planner decisions:** None. Product Owner approved Gate 3 only under the recorded safeguards and usage boundary.
+**Current Planner decisions:** One: approve/revise the proposed Gate 3/M4/M6 batch and issue `RUN`. The prior one-time Gate 3 approval remains recorded but is not executable while throttle is `STOP`.
 
 **Next production gate:** Gate 3 is authorized but unexecuted: one guarded additive Shopping schema activation attempt. Gate 4 verification, corrective write/retry, Shopping publication, live validation/smoke, and recovery remain closed.
 
-**Resume condition:** Satisfied. Replacement Site Engineer read-only `INIT` and stopping-point verification are complete, and the Product Owner has set throttle `RUN` for the bounded M1–M3 sequence.
+**Resume condition:** Planner/Product Owner selects Decision A in `PLANNER_INBOX.md`, approving the estimated batch and issuing explicit `RUN`.
 
 ## Staged continuation
 

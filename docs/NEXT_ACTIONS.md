@@ -14,7 +14,7 @@ Gate 2 succeeded through the owner-authenticated Version 19 administration surfa
 
 **Current objective**
 
-Execute or automatically abort the approved one-time Gate 3 activation and preserve the immediate response without performing Gate 4 verification. Then close or report the M4 transport gap from existing evidence and continue to the bounded local M6 export-download UI when eligible. The Shopping candidate remains unauthorized for saving or publication.
+Approve or revise the proposed Gate 3/M4/M6 Engineer batch. Do not begin Engineer work until explicit `RUN`. The Shopping candidate remains unauthorized for saving or publication.
 
 **Why this is the current priority**
 
@@ -24,7 +24,10 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 - Engineer cleanly accepts the Gate 3 brief and reconfirms target/session, write freeze, unchanged expected baseline, private export availability, security controls, exact confirmation, and usage boundary.
 - The guarded upgrade is invoked no more than once and Engineer stops before Gate 4 regardless of result.
-- After reporting Gate 3, complete the M4 acceptance/transport check from factual existing evidence, then continue to eligible M6 local work if usage remains above the protected reserve.
+- Proposed batch: Gate 3 once (with existing safeguards), factual M4 acceptance/transport closure, then bounded M6 local export-download UI implementation and full validation.
+- Estimated usage: Gate 3 intake/action/report 4–7 points; M4 existing-evidence closure 1–2; M6 intake, implementation, ordinary remediation, full validation, and transport 19–29; total 24–38. Expected remaining usage is approximately 42–56% from the reported 80%, preserving at least a 12-point cushion above the protected reserve.
+- Expected completion range: Gate 3 completion/abort and M4 closure should finish; M6 should reach validated completion across one coherent run, or a clean partial handoff if unexpected remediation pushes the forecast toward reserve.
+- After `RUN`, Engineer may choose the practical order within dependencies, remediate and validate within accepted scope, and move past an independently blocked stream. Gate 3 must still precede M6 intake and the production sequence must stop before Gate 4.
 
 **Expected deliverables**
 
@@ -65,8 +68,7 @@ Product Owner reports approximately 80% remaining. Engineer may continue until 3
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
 - Accept and execute/abort only M2 Gate 3, report, and stop the production sequence before Gate 4.
 - Complete the M4 transport check from existing evidence only; do not recreate or infer acceptance.
-- Run `CB` for the queued M6 local downloadable catalog-export UI when Gate 3 reporting and the M4 transport check are complete, source/collision checks pass, and usage remains above the protected reserve.
-- M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
+- Planner/Product Owner: select Decision A or B in `PLANNER_INBOX.md`. Until A, throttle remains `STOP`.
 - M6 is local/disposable only: no Site save, publication, production export, migration, schema/data change, or activation.
 
 ## Blocked
