@@ -9,6 +9,7 @@
 - Added the park-and-resume rule: task-level questions preserve a safe resume point and enter `WAITING FOR ANSWER` while independent approved work continues; only cross-cutting safety, correctness, authority, collision, exhaustion, or reserve conditions pause the whole run.
 - Required every queued task to track priority, eligibility, dependencies, state, blocker/question, resume point, answer reference, hotspots, and remaining validation.
 - Added `PD` (**Prompt Designer**) alongside `PE` and `PP`; it outputs the self-contained Designer startup prompt for a replacement session without processing transport or changing state.
+- Product Owner selected Decision A and issued `RUN` for the Gate 3/M4/M6 batch under the recorded priorities, dependencies, park-and-resume rules, production gates, and 30% remaining reserve. Gate 4 and every later production action remain closed.
 
 Material changes to the project's design, architecture, and documented milestones will be recorded here.
 

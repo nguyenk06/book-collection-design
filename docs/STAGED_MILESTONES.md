@@ -4,7 +4,7 @@
 
 **Execution budget:** Approximately 80% remains; 30% remaining is the protected reserve and mandatory stopping threshold. Stop earlier when no eligible work remains or a safe handoff requires it.
 
-**Queue state:** Throttle `STOP`; proposed Gate 3/M4/M6 batch awaits approval and explicit `RUN`; later production gates closed
+**Queue state:** Throttle `RUN`; Product Owner approved the Gate 3/M4/M6 batch; later production gates remain closed
 
 **Proposed batch estimate:** 24–38 percentage points total from approximately 80% remaining, for an expected finish at approximately 42–56%. This range includes intake, ordinary remediation, full validation, evidence, transport, and clean stopping capacity. Reduce or drain rather than threaten the 30% reserve.
 

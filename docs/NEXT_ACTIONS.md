@@ -14,7 +14,7 @@ Gate 2 succeeded through the owner-authenticated Version 19 administration surfa
 
 **Current objective**
 
-Approve or revise the proposed Gate 3/M4/M6 Engineer batch. Do not begin Engineer work until explicit `RUN`. The Shopping candidate remains unauthorized for saving or publication.
+Execute the approved Gate 3/M4/M6 Engineer batch under `RUN`. The Shopping candidate remains unauthorized for saving or publication.
 
 **Why this is the current priority**
 
@@ -69,7 +69,7 @@ Product Owner reports approximately 80% remaining. Engineer may continue until 3
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
 - Accept and execute/abort only M2 Gate 3, report, and stop the production sequence before Gate 4.
 - Complete the M4 transport check from existing evidence only; do not recreate or infer acceptance.
-- Planner/Product Owner: select Decision A or B in `PLANNER_INBOX.md`. Until A, throttle remains `STOP`.
+- Engineer: run `CB` for Gate 3, preserve its completion/abort report, stop that production sequence before Gate 4, close M4 transport factually, then continue eligible M6 local work.
 - M6 is local/disposable only: no Site save, publication, production export, migration, schema/data change, or activation.
 
 ## Blocked
