@@ -8,7 +8,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 19 is now the published owner-authenticated administration surface; Version 18 remains retained in Site history, and Version 17 remains the unpublished Shopping foundation. Publication succeeded, but application rendering and production schema behavior remain unverified because no administration API or database operation occurred. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 19 is the published owner-authenticated administration surface; Version 18 remains retained in Site history, and Version 17 remains the unpublished Shopping foundation. The administration surface rendered, production reported the expected pre-upgrade baseline with zero foreign-key issues, and a validated structured export is retained privately. No production write or schema activation has occurred. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

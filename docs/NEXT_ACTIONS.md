@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–1 complete; Gate 2 authorized and queued; M4 transport closure awaits acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 awaits separate Product Owner authority; M4 transport closure awaits acceptance report
 
-**Next owner:** `ENGINEER` - run `CB` for the Gate 2 status/export brief, then execute only its bounded read/export preflight after clean acceptance.
+**Next owner:** `PLANNER` - approve or decline M2 Gate 3 guarded additive schema activation.
 
-The Product Owner canceled the separate validation Site. Gate 1 published only Version 19 successfully, but application rendering was not independently observed and no production endpoint or database operation occurred. Gate 2 remains a distinct production read/export decision. M4's separate acceptance report remains missing.
+Gate 2 succeeded through the owner-authenticated Version 19 administration surface: production reported the expected pre-upgrade baseline with zero foreign-key issues, and a validated structured export is retained privately. No production write occurred. M4's separate acceptance report remains missing.
 
 **Current objective**
 
-Execute the approved Gate 2 through an owner-authenticated Version 19 session: inspect schema status, create and privately retain the structured export, and verify preservation preflight evidence. The later Shopping candidate remains unauthorized for saving or publication.
+Decide whether Engineer may invoke the guarded additive Shopping schema activation once as Gate 3, with a mandatory stop before Gate 4 verification. The later Shopping candidate remains unauthorized for saving or publication.
 
 **Why this is the current priority**
 
@@ -22,18 +22,18 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Success criteria**
 
-- Engineer cleanly accepts the Gate 2 brief and verifies target/session, authority, limits, and usage reserve.
-- Target/session, write freeze, expected schema baseline, private export storage, export integrity/limitations, and preservation invariants are verified with sanitized evidence.
-- Engineer stops before schema activation; Shopping remains unpublished and no production write occurs.
+- Product Owner explicitly approves or declines Gate 3 after reviewing the validated export and its limitations.
+- If approved, Engineer reconfirms target/session, write freeze, unchanged expected baseline, private export availability, security controls, confirmation, and usage reserve.
+- The guarded upgrade is invoked no more than once and Engineer stops before Gate 4 regardless of result.
 
 **Expected deliverables**
 
-- Gate 2 brief-acceptance report.
-- Sanitized Gate 2 completion/abort report separating schema-status observation, private export validation, preservation evidence, and explicit no-write state.
+- Explicit Gate 3 decision.
+- If approved and executed, sanitized Gate 3 acceptance and completion/abort reports separating invocation/result from later verification.
 
 **Files likely affected**
 
-- Permanent documentation and private local export/evidence locations only.
+- Permanent documentation and a separately authorized Gate 3 report only; the private Gate 2 export remains outside GitHub and handoff transport.
 - Permanent documentation through normal CI processing.
 
 **Estimated effort**
@@ -55,13 +55,13 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 - Shopping Mode UI redesign.
 - Scanner, Bookshelf, import/export, AI review, reference covers, tags, and analysis changes.
 - Full edition modeling, Business locations, and generalized media support.
-- Production writes, applying any migration, changing ledger/schema/data, or accessing R2 bytes.
+- Raw SQL, migration-ledger edits, direct packaged migration execution, corrective writes, or R2-byte access.
 - Site deployment/publication, Shopping activation, production smoke testing, restore/import, or destructive rollback.
 
 ## Ready Next
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
-- Accept and execute only M2 Gate 2 owner status/private export/preservation preflight and stop before schema activation.
+- After explicit approval, prepare/accept and execute only M2 Gate 3 guarded activation, then stop before Gate 4 verification.
 - M5 requires no further local implementation; any downloadable UI, Site save, production export, migration, or activation needs a new brief and separate gates.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 
@@ -75,6 +75,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 
 ## Recently Completed
 
+- Completed Gate 2 owner status/private export preflight: expected pre-upgrade baseline, zero foreign-key issues, and a privately retained validated structured export; no production write or schema activation occurred.
 - Published only the existing Version 19 owner-authenticated administration source; Sites deployment succeeded, Shopping/M3–M5 remained excluded, application rendering was not independently observed, and no API/data/schema operation occurred.
 - Completed P3 focused scanner/identifier validation; 18/18 focused and 68/68 full serial tests, task lint, and build pass, with two narrow ISBN-validation defects fixed locally and no Site or production action.
 - Completed and locally validated the bounded Shopping Mode UI, including required-price Purchase capture; 50/50 serial tests, 6/6 focused Shopping tests, 14/14 isolated collection tests, build, and task lint pass, with no Site save or production action.

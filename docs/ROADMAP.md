@@ -6,8 +6,8 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; owner-authenticated administration surface published as Version 19 | Separately gated status/export/upgrade/verification | Medium | Application rendering and production schema remain unverified; book-to-collection foreign key deferred |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local UI complete; controlled live sequence through administration publication | Status/export, schema activation/verification, Shopping publication, live validation/smoke | Medium-large | Gate 2 and every later production gate remain unexecuted; application rendering is unverified |
+| 0 | Database integrity and Shopping persistence foundation | Partial; Version 19 published and Gate 2 status/export complete | Separately gated upgrade/verification | Medium | Production is expected pre-upgrade; export is not a D1 snapshot and excludes R2 bytes; book-to-collection foreign key deferred |
+| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local UI complete; controlled live sequence through status/export | Schema activation/verification, Shopping publication, live validation/smoke | Medium-large | Gate 3 and every later production gate remain unexecuted |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial; canonical identifier foundation complete locally | Future candidate workflow and user-facing matching | Medium | Production unchanged; fuzzy candidate matching deferred |
 | 3 | [Bookshelf](BOOKSHELF.md) | Bounded first release complete locally; user checkpoint pending | Safe validation environment and Product Owner outcome before activation | Medium | Unsaved/unpublished; checkpoint environment blocked |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first foundation complete locally | Future downloadable UI/checkpoint and separately gated activation | Medium-large | No production export/backup; import remains unsafe/immediate |
@@ -35,11 +35,11 @@ Execute the controlled live Shopping release sequence in ADR-0012 without a sepa
 - Keep schema activation/verification and Shopping publication independently approved and evidenced.
 - Run the desktop/mobile checklist and post-publication smoke review on the live Site.
 
-Saving Version 17 does not mark Shopping released or active in production. Version 19 administration is published, but status/export, schema activation/verification, and final Shopping publication remain separate gates.
+Saving Version 17 does not mark Shopping released or active in production. Version 19 administration is published and status/export is complete, but schema activation/verification and final Shopping publication remain separate gates.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The bounded continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–1 are complete. Gate 2 status/export is authorized and unexecuted; later production gates remain sequential and unexecuted.
+The bounded continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–2 are complete. M2 is stopped pending separate Gate 3 schema-activation authority; later gates remain sequential and unexecuted.
 
 ## Deferred
 

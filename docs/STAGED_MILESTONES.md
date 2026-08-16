@@ -4,7 +4,7 @@
 
 **Execution budget:** Engineer estimate up to approximately 50% for M1–M3 through existing blockers; preserve reserve for convergence, evidence, and a clean stop
 
-**Queue state:** M1/M3/M4/M5 and M2 Gates 0–1 complete; Gate 2 authorized and queued; later production gates closed
+**Queue state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; M2 stopped pending separate Gate 3 authority; later gates closed
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -80,7 +80,7 @@ Future parallel milestones should remain independently promotable. Completion in
 - **Stop/escalate:** Missing external-ID contract; Purchase portability ambiguity; pressure to omit required data silently; mutation/restore requirement; sensitive leakage; integrity mismatch; schema migration; or production access.
 - **Completion/handoff:** Future local reports separate format implementation, validation, artifact handling, Site state, and production state. Import remains a later decision and brief.
 
-M4 and M5 are complete locally. M2 Gate 0 completed with an isolated Version 19 plus Shopping/P3 candidate, and Gate 1 subsequently published only the existing Version 19 administration source. Application rendering remains unverified and no production endpoint/data/schema operation occurred. Gate 2 status/export is explicitly approved and queued; every later gate remains closed. M4's transport lifecycle awaits a missing acceptance report. M5 has no downloadable UI or production authority.
+M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 published only Version 19 administration, and Gate 2 verified the expected pre-upgrade baseline, zero foreign-key issues, and a privately retained structured export without a production write. M2 is stopped pending separate Gate 3 authority; every later gate remains closed. M4's transport lifecycle awaits a missing acceptance report. M5 has no downloadable UI or production authority.
 
 ## Shared controls
 
