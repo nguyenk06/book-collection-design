@@ -8,14 +8,14 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`.
 - **Engineer state:** `BLOCKED`; no independently eligible approved task remains.
-- **Next owner:** `PLANNER` — select recovery of the original M5 editing context or authorize bounded reconstruction if that context cannot be recovered.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner reopens or assigns the original M5 Engineer/Sites context for read-only recovery inspection.
 - **Usage:** Last reported reading was approximately 80% before the bounded cycle; 30% remaining is the protected stopping reserve. Obtain a fresh reading before resumed implementation when available.
 
 Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.
 
 ## Ready when source is available
 
-The preferred clearing path is to reopen or assign the original M5 Engineer/Sites chat or workspace, because M5 completion evidence states that its six changed files existed only in an unsaved, uncommitted dirty Site worktree. The replacement Engineer context has Site/version metadata but not that working copy. If recovery proves impossible, stop and use the Planner-approved reconstruction path; do not silently rebuild M5.
+Planner selected recovery first. Reopen or assign the original M5 Engineer/Sites chat or workspace, because M5 completion evidence states that its six changed files existed only in an unsaved, uncommitted dirty Site worktree. Engineer then verifies `app/catalog-export.ts`, `db/schema.ts`, `db/bridge-schema.ts`, `app/api/books/route.ts`, `shopping-migrations/0006_book_stable_ids.sql`, and `tests/catalog-export.test.ts`; confirms source composition, prior test reproducibility, and collision separation from Version 19 and the isolated Shopping candidate; and reports the result without changing source. If any required source is unavailable, stop and return for an explicit reconstruction decision. Reconstruction is not currently authorized.
 
 Resume M6 at its recorded safe pre-`!brief` boundary:
 

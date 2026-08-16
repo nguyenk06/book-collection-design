@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-16 — Original M5 source recovery selected
+
+- Planner selected recovery and read-only inspection of the original M5 Engineer/Sites context before any reconstruction.
+- Required verification covers the six reported M5 files, source composition, test reproducibility, and collision separation from Version 19 and the isolated Shopping candidate.
+- If the source is unavailable, Engineer must stop and return for an explicit reconstruction decision; no reconstruction, Site action, production access, or later gate was authorized.
+
 ## 2026-08-16 — Explicit workflow command prefix adopted
 
 - Replaced ambiguous plain workflow abbreviations with case-insensitive `!` commands, including `!init`, `!status`, `!inbox`, `!brief`, prompt commands, and `!run`/`!drain`/`!stop`.

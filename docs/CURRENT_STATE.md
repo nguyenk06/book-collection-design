@@ -17,8 +17,8 @@
 - **Throttle:** `RUN`; this preserves the approved batch and does not authorize Gate 4 or any later production gate.
 - **Engineer state:** `BLOCKED` because M6 is `WAITING FOR ANSWER / SOURCE` and no other approved batch task is eligible.
 - **Engineer continuation:** Resume M6 at the safe pre-`!brief` boundary when the correct cumulative editable M5 source is available. Revalidate source composition, collision boundaries, dependencies, tests, and usage before acceptance. No reinitialization is required solely because the task is parked.
-- **Planner decisions:** One pending — M5 editable-source recovery disposition.
-- **Active owner:** `PLANNER` to select original-context recovery or authorized reconstruction; Product Owner context assignment is required under the recommended recovery path.
+- **Planner decisions:** None pending. Planner selected original M5 context recovery first.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner must reopen or assign the original M5 Engineer/Sites context so Engineer can inspect its unsaved working copy.
 - **Potential later owner:** Product Owner must separately authorize Gate 4 before production verification; no such decision is currently queued.
 
 ## Usage reserve
@@ -64,4 +64,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The only approved implementation continuation is M6 after supported source availability. Planner must first disposition recovery of the original M5 editing context versus authorized reconstruction. Gate 4 remains a separate closed production gate and is not part of that continuation. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
+The only approved implementation continuation is M6 after supported source availability. Planner selected recovery and inspection of the original M5 Engineer/Sites context first. Engineer must verify the six reported M5 files, source composition, prior tests, and collision boundaries without modifying source. If the source is unavailable, stop and return for an explicit reconstruction decision. Gate 4 remains a separate closed production gate and is not part of that continuation. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
