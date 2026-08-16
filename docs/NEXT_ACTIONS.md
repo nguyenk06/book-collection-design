@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 awaits separate Product Owner authority; M4 transport closure awaits acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 authorized and queued; M4 transport closure awaits acceptance report
 
-**Next owner:** `PLANNER` - approve or decline M2 Gate 3 guarded additive schema activation.
+**Next owner:** `ENGINEER` - run `CB` for Gate 3, invoke the guarded activation no more than once, report, and stop before Gate 4.
 
 Gate 2 succeeded through the owner-authenticated Version 19 administration surface: production reported the expected pre-upgrade baseline with zero foreign-key issues, and a validated structured export is retained privately. No production write occurred. M4's separate acceptance report remains missing.
 
 **Current objective**
 
-Decide whether Engineer may invoke the guarded additive Shopping schema activation once as Gate 3, with a mandatory stop before Gate 4 verification. The later Shopping candidate remains unauthorized for saving or publication.
+Execute or automatically abort the approved one-time Gate 3 activation and preserve the immediate response without performing Gate 4 verification. The later Shopping candidate remains unauthorized for saving or publication.
 
 **Why this is the current priority**
 
@@ -22,14 +22,15 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Success criteria**
 
-- Product Owner explicitly approves or declines Gate 3 after reviewing the validated export and its limitations.
-- If approved, Engineer reconfirms target/session, write freeze, unchanged expected baseline, private export availability, security controls, confirmation, and usage reserve.
+- Engineer cleanly accepts the Gate 3 brief and reconfirms target/session, write freeze, unchanged expected baseline, private export availability, security controls, exact confirmation, and usage boundary.
 - The guarded upgrade is invoked no more than once and Engineer stops before Gate 4 regardless of result.
+- After reporting Gate 3, any remaining allowance is used only for a missing M4 acceptance/transport report supported by existing evidence.
 
 **Expected deliverables**
 
-- Explicit Gate 3 decision.
-- If approved and executed, sanitized Gate 3 acceptance and completion/abort reports separating invocation/result from later verification.
+- Gate 3 brief-acceptance report.
+- Sanitized Gate 3 completion/abort report separating the immediate response from later verification.
+- M4 acceptance/transport report only if existing local evidence proves it; otherwise a concise inability-to-verify report.
 
 **Files likely affected**
 
@@ -38,7 +39,7 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Estimated effort**
 
-Engineer estimates up to approximately 50% usage for M1–M3 through existing blockers. This is a ceiling; preserve reserve for convergence, evidence, and a clean stop.
+Product Owner reports 80% remaining and authorizes a cumulative maximum of 30 percentage points for Gate 3 plus the later transport-only M4 check. Engineer must stop no later than 50% remaining and preserve enough allowance for the required reports and clean stop.
 
 **Risks**
 
@@ -61,7 +62,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 ## Ready Next
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
-- After explicit approval, prepare/accept and execute only M2 Gate 3 guarded activation, then stop before Gate 4 verification.
+- Accept and execute/abort only M2 Gate 3, report, then use remaining allowance solely for factual M4 transport closure and stop by 50% remaining.
 - M5 requires no further local implementation; any downloadable UI, Site save, production export, migration, or activation needs a new brief and separate gates.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 

@@ -12,15 +12,15 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 schema activation awaits separate Product Owner authority; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 one-time schema activation authorized and queued; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
-**Queue throttle:** `RUN`
+**Queue throttle:** `RUN` — bounded Gate 3/M4-transport allowance only
 
-**Usage guidance:** Product Owner supplied a fresh 71% reading before M5; Engineer reports approximately 50–60% remaining after completion, preserving the required 30% reserve.
+**Usage guidance:** Product Owner supplied a fresh 80% reading. This run may consume at most 30 percentage points cumulatively and must stop no later than 50% remaining. After Gate 3 reporting, remaining allowance applies only to a factual M4 acceptance/transport report from existing evidence.
 
-**Engineer execution state:** `STOPPED AT GATE` — Gate 2 completed successfully; Gate 3 schema activation requires separate Product Owner authorization
+**Engineer execution state:** `AVAILABLE` — Gate 3 brief is eligible for `CB`; authority ends before Gate 4 regardless of outcome
 
 ## Current Engineering Workstreams
 
@@ -33,28 +33,28 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-EXPORT` | Private export-download and validation UX | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Approved save execution in a future session | No |
 | `WS-SAVE` | Preserve and publish validated administration source | `[██████████] 100%` | COMPLETE | Version 19 publication succeeded | Minimal application rendering remains unverified; no data/schema operation occurred | No |
-| `WS-MIGRATION` | Production status/export and schema activation | `[█████░░░░░] 50%` | STOPPED AT GATE | Status/export preflight complete; schema activation unauthorized | Product Owner must separately authorize guarded Gate 3 activation | No |
+| `WS-MIGRATION` | Production status/export and schema activation | `[█████░░░░░] 50%` | QUEUED / AUTHORIZED | Gate 3 approved once under recorded safeguards | Accept Gate 3 brief, invoke no more than once, preserve immediate response, stop before Gate 4 | Yes for Gate 3 only |
 | `WS-SHOP-FLOW` | Mobile Shopping search/scan/status flow | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-PURCHASE` | Purchase capture and history | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[██████████] 100%` | COMPLETE | Read-only capability investigation accepted | No verified option is runnable, private, isolated, and non-production | Transitioned to M2 blocker |
-| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[████░░░░░░] 40%` | STOPPED AT GATE | Gates 0–2 complete under ADR-0012 | Product Owner must separately authorize Gate 3 guarded schema activation | No until Gate 3 authority |
+| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[████░░░░░░] 40%` | QUEUED / AUTHORIZED | Gates 0–2 complete; Gate 3 approved once | Execute/abort Gate 3 and stop before verification | Yes for Gate 3 only |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
 
-**Engineer can continue:** NO. Gate 2 completed with an expected pre-upgrade baseline and a privately retained validated export. Schema activation, post-activation verification, Shopping publication, live validation, smoke testing, and rollback require their later separate gates.
+**Engineer can continue:** YES for Gate 3 brief intake and one guarded activation attempt only. After its completion/abort report, any remaining part of the 30-point allowance may be used only to provide the missing M4 acceptance/transport report from existing local evidence. Gate 4 verification and every later action remain unauthorized.
 
-**Current Planner decisions:** One. Product Owner must approve or decline Gate 3 guarded additive Shopping schema activation.
+**Current Planner decisions:** None. Product Owner approved Gate 3 only under the recorded safeguards and usage boundary.
 
-**Next production gate:** None is currently executable. Gate 2 is complete; the next gate is separate authority for one guarded additive Shopping schema activation. Post-activation verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
+**Next production gate:** Gate 3 is authorized but unexecuted: one guarded additive Shopping schema activation attempt. Gate 4 verification, corrective write/retry, Shopping publication, live validation/smoke, and recovery remain closed.
 
 **Resume condition:** Satisfied. Replacement Site Engineer read-only `INIT` and stopping-point verification are complete, and the Product Owner has set throttle `RUN` for the bounded M1–M3 sequence.
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–2 are complete. M2 is stopped before Gate 3. M4 still requires its missing acceptance report before local transport artifacts can close.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–2 are complete. Gate 3 is authorized and queued. M4 still requires its missing acceptance report before local transport artifacts can close; only existing evidence may support it.
 
 ## Summary
 
@@ -211,4 +211,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-M2 Gates 0–2 are complete. Production remains at the expected pre-upgrade baseline and a validated structured export is retained privately, with the explicit limitation that it is not a D1 snapshot and excludes R2 bytes. Gate 3 schema activation, Gate 4 verification, Shopping publication, live Product Owner validation, smoke testing, rollback, and destructive recovery remain separately gated.
+M2 Gates 0–2 are complete. Production remains at the expected pre-upgrade baseline and a validated structured export is retained privately, with the explicit limitation that it is not a D1 snapshot and excludes R2 bytes. Product Owner authorized Gate 3 once: invoke the guarded additive activation no more than once, preserve the immediate response, and stop before Gate 4 regardless of outcome. No verification, correction, retry, Shopping publication, live checklist, smoke testing, rollback, restore, or destructive recovery is authorized.
