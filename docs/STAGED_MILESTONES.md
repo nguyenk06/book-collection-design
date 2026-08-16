@@ -10,7 +10,7 @@
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
-The queue is ordered, but blockers are per milestone rather than global. After completing or blocking a milestone, Engineer reports to local `inbox/`, refreshes local `briefs/`, and accepts the next independently eligible brief. A skipped blocker remains unresolved and still gates its own user-facing or production outcome. Technical validation, Designer convergence, Product Owner hands-on validation, and production approval remain separate gates.
+The queue is ordered, but blockers and questions are per milestone rather than global. Park a task requiring clarification as `WAITING FOR ANSWER` with its minimum question, assumptions deliberately not made, safe resume point, conflicts, and remaining validation. Then continue the next independently eligible brief. Attach the authoritative answer and revalidate affected assumptions/shared files before resuming; report material rework impact first. A parked blocker remains unresolved and still gates its own user-facing or production outcome. Technical validation, Designer convergence, Product Owner hands-on validation, and production approval remain separate gates.
 
 Future parallel milestones should remain independently promotable. Completion in one cumulative working copy does not authorize bundling: each saved or published candidate must name its exact included/excluded source and migration set. If independent promotion is not technically possible, stop before release and request an explicit convergence decision.
 
@@ -101,6 +101,8 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 - Finish and validate the current milestone before starting another; reserve usage for tests, evidence, and a clean stop.
 - If one workstream blocks, report it and continue the next independently eligible, non-conflicting workstream. Waiting for a production gate does not idle authorized local work.
+- A task-level question causes `WAITING FOR ANSWER`, not a global stop, unless it affects all eligible work, crosses a risk gate, threatens shared architecture/correctness, leaves no independent task, or usage approaches reserve.
+- New instructions queue behind safe active work unless they explicitly say `STOP` or `HOLD`, or invalidate work in progress.
 - Stop for undocumented product/architecture choices, destructive or irreversible actions, ungated publication/activation, unauthorized migration, material expansion, bypassed criteria, missing source/data/credentials/access, failed validation, or unresolved integrity risk.
 - Designer alone writes GitHub documentation. Engineer communicates through local `inbox/`; technical material remains local.
 - Migration, publication, activation, production smoke testing, rollback, and destructive cleanup remain separately gated.

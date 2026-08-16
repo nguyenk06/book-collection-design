@@ -47,6 +47,16 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 **Engineer can continue:** NO while throttle is `STOP`. Proposed batch priority is Gate 3, factual M4 transport closure, then independently eligible M6 local downloadable-export UI. Estimated total usage is 24–38 percentage points, leaving approximately 42–56% remaining from the reported 80%. Gate 4 and all other production actions remain unauthorized.
 
+### Proposed batch task records
+
+| Task | Priority | Eligibility / dependencies | Current state | Blocker or question | Safe resume point | Answer reference | Hotspots | Remaining validation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| M2 Gate 3 | P1 | Explicit batch `RUN`; all Gate 3 preconditions | QUEUED / AUTHORIZED ONCE | Batch `RUN` pending | Before brief acceptance and precondition checks | `PLANNER_INBOX.md` Decision 1 when answered | Version 19 production administration surface; serialize before M6 | Immediate response and sanitized completion/abort report only; Gate 4 excluded |
+| M4 transport closure | P2 | Gate 3 completion/abort report; existing evidence only | QUEUED | Batch `RUN` pending; evidence may be insufficient | Before existing-evidence inspection | `PLANNER_INBOX.md` Decision 1 when answered | Local transport artifacts only | Factual acceptance report or inability-to-verify report |
+| M6 local export UI | P3 | Batch `RUN`; Gate 3 stopped before Gate 4; M4 reported; source/collision checks | QUEUED | Batch `RUN` pending | Before `CB`, source composition, and collision checks | `PLANNER_INBOX.md` Decision 1 when answered | Cumulative M5 source; preserve Version 19 and isolated Shopping candidate | Focused/full tests, no-write proof, lint, build, diff check, transport report |
+
+After `RUN`, a task needing clarification becomes `WAITING FOR ANSWER` at its recorded safe resume point; it does not stop independent tasks. Answers attach to the parked task, affected assumptions/shared files are revalidated before resumption, and material rework impact is reported first.
+
 **Current Planner decisions:** One: approve/revise the proposed Gate 3/M4/M6 batch and issue `RUN`. The prior one-time Gate 3 approval remains recorded but is not executable while throttle is `STOP`.
 
 **Next production gate:** Gate 3 is authorized but unexecuted: one guarded additive Shopping schema activation attempt. Gate 4 verification, corrective write/retry, Shopping publication, live validation/smoke, and recovery remain closed.

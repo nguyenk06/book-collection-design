@@ -6,6 +6,8 @@
 - Recorded a 24–38 percentage-point estimate from approximately 80% remaining, with an expected 42–56% remaining and a protected 30% reserve.
 - Clarified that, after explicit `RUN`, Engineer may sequence approved priorities practically and investigate, implement, remediate, validate, converge, and report within accepted scope without repeated Planner approval.
 - Preserved separate production gates and blocker continuation: Gate 4 remains closed, while unrelated eligible local work may continue after the Gate 3 production sequence stops.
+- Added the park-and-resume rule: task-level questions preserve a safe resume point and enter `WAITING FOR ANSWER` while independent approved work continues; only cross-cutting safety, correctness, authority, collision, exhaustion, or reserve conditions pause the whole run.
+- Required every queued task to track priority, eligibility, dependencies, state, blocker/question, resume point, answer reference, hotspots, and remaining validation.
 
 Material changes to the project's design, architecture, and documented milestones will be recorded here.
 

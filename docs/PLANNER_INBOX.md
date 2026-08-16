@@ -23,4 +23,6 @@ Gate 3 and M6 do not share a source-editing window: Gate 3 must report and stop 
 
 **Estimate basis and fallback:** Gate 3 is 4–7 points, factual M4 closure 1–2, and M6 implementation/remediation/full validation/transport 19–29. Gate 3 completion or automatic abort supplies the transition report; either way, the production sequence stops before Gate 4 and Engineer can move to M4/M6. If M6 blocks, Engineer preserves the blocker and may perform only another independently eligible, non-conflicting brief already inside this approved batch; none currently follows M6, so the safe outcome is a clean handoff rather than speculative work.
 
+Approval also activates the documented park-and-resume rule: a task-level question is recorded as `WAITING FOR ANSWER` and does not interrupt other eligible batch work. It does not weaken any production or risk gate.
+
 When several decisions are pending, number them and keep each independently understandable. Planner may respond compactly, for example `1: B; 2: A; 3: DEFER`. Do not delay urgent or high-risk decisions for batching.

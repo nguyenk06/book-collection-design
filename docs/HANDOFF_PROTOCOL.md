@@ -513,9 +513,13 @@ After `RUN`, Engineer owns practical sequencing within the approved priorities. 
 Filename order is not authoritative. Each queued brief states:
 
 - Queue priority: `P1` highest currently useful, `P2` normal upcoming, or `P3` useful fill-in.
-- Dependencies and a precise `Eligible when` condition.
-- Whether it can run alongside active work.
-- Shared-file/surface collisions.
+- Eligibility and a precise `Eligible when` condition.
+- Dependencies and current state.
+- Blocker or minimum pending question, if any.
+- Precise safe resume point.
+- Authoritative answer reference, when answered.
+- Whether it can run alongside active work and any shared-file/surface hotspot conflicts.
+- Remaining validation requirements.
 - Required Planner decisions.
 - Local and production authority.
 - Sprint/envelope association when applicable.
@@ -527,6 +531,19 @@ At milestone completion, “may use `CB`” becomes a required queue-refresh and
 A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
 
 Under `RUN`, encountering a milestone blocker is a queue transition, not a reason to end the engineering cycle. Engineer must preserve the affected milestone, write the required sanitized blocker/state report to local `inbox/`, refresh local `briefs/`, and run `CB` against the next priority. Continue with the next independently authorized brief when its own dependencies, authority, collision checks, and acceptance criteria are satisfied. Never treat moving on as permission to bypass the blocked milestone's gate, weaken its acceptance criteria, or activate its user-facing/production outcome.
+
+#### Park and resume
+
+A question or decision affecting one task blocks only that task unless it also affects the safety or correctness of every other eligible task. When clarification is required, Engineer:
+
+1. Preserves the task state and records a precise safe resume point.
+2. Records only the minimum specific question and the assumptions deliberately not made.
+3. Marks the task `WAITING FOR ANSWER` and reports it through local `inbox/`.
+4. Continues with the next independently eligible, non-conflicting task in the approved batch without ending the run or reinitializing solely for the parked task.
+5. Attaches the authoritative Planner/Designer answer when received and resumes at the next safe work boundary, including after the alternate task completes or blocks.
+6. Revalidates affected assumptions, dependencies, and shared files before resuming. If the answer materially changes completed work, Engineer reports the impact before substantial rework.
+
+Designer and Planner may review questions, change future priorities, and approve gates while Engineer works elsewhere. New instructions enter the queue without interrupting safe active work unless they explicitly say `STOP` or `HOLD`, or invalidate the work in progress. A parked question may pause the entire run only when it affects every remaining eligible task; continued work could cross an unapproved production, destructive, security, or privacy boundary; the answer could invalidate shared architecture or create conflicting work; no independent task remains; or usage approaches the protected remediation reserve.
 
 #### Designer work-ahead and reporting
 
@@ -551,6 +568,9 @@ QUEUED AFTER CURRENT:
 
 BLOCKED:
 <blocked streams and reason>
+
+WAITING FOR ANSWER:
+<task; minimum question; assumptions not made; safe resume point; answer reference or PENDING; conflicts; remaining validation; or NONE>
 
 ENGINEER CAN CONTINUE:
 <YES | NO>

@@ -28,6 +28,7 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 - Estimated usage: Gate 3 intake/action/report 4–7 points; M4 existing-evidence closure 1–2; M6 intake, implementation, ordinary remediation, full validation, and transport 19–29; total 24–38. Expected remaining usage is approximately 42–56% from the reported 80%, preserving at least a 12-point cushion above the protected reserve.
 - Expected completion range: Gate 3 completion/abort and M4 closure should finish; M6 should reach validated completion across one coherent run, or a clean partial handoff if unexpected remediation pushes the forecast toward reserve.
 - After `RUN`, Engineer may choose the practical order within dependencies, remediate and validate within accepted scope, and move past an independently blocked stream. Gate 3 must still precede M6 intake and the production sequence must stop before Gate 4.
+- If a task needs clarification, preserve it at a precise safe resume point, record the minimum question and assumptions not made, mark it `WAITING FOR ANSWER`, and continue another independent task. Attach the authoritative answer and revalidate affected assumptions/shared files before resuming; report material rework impact first.
 
 **Expected deliverables**
 
