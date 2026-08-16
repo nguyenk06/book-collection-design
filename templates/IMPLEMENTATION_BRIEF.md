@@ -2,6 +2,16 @@
 
 > Temporary Design-to-Site handoff for one milestone. Keep concise, link to design authority, and remove all sensitive or machine-specific information before sharing.
 
+## CHAT IDENTITY
+
+- Role: ENGINEER
+- Name: <!-- Unique Designer-assigned name. Never reuse an earlier chat identity. -->
+- Instance: <!-- E-## -->
+- Required chat title: <!-- CYOA — Engineer <Name> [E-##] — <current milestone> -->
+- Expected context: <!-- new context | original context | replacement context | source-recovery context -->
+
+The Engineer must output the required title at startup so the Product Owner can rename the conversation manually. If the brief identity or expected context does not match the actual message/Sites context, stop before acceptance and report the mismatch. Unpublished working state does not automatically transfer between chats.
+
 ## Transfer metadata
 
 - Milestone: <!-- Short milestone name. -->
@@ -83,6 +93,7 @@ Identify shared hotspots across workstreams and serialize or coordinate conflict
 
 ## Documentation handoff requirements
 
+- Include the Engineer name and instance ID in every acceptance, blocker, completion, and source-recovery report.
 - Return a completed `DESIGN_HANDOFF.md` based on verified evidence.
 - Separate implemented, deferred, and not-attempted work.
 - Report tests, local migration validation, saved-version state, and publication state independently.

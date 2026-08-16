@@ -20,6 +20,14 @@ Priority documents:
 
 The Site Engineer treats the public design repository as read-only reference. Engineer has no write role in `book-collection-design`: do not create, edit, move, delete, commit, push, branch, open a pull request, publish a release, or use GitHub issues/comments as an Engineer communication channel. When starting significant implementation work, read or request the relevant current documents. If the Site workspace cannot read GitHub directly, use the latest exported [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) as the handoff package.
 
+## Engineer Chat Identity
+
+Designer assigns a unique Engineer name and `E-##` instance directly in every Engineer brief. Keep identity inside the brief; do not create a separate registry unless repeated conflicts later justify one. Replacement chats always receive a new name and ID, identities are never reused, and unpublished working state does not automatically transfer between chats.
+
+Every brief includes the Engineer role, assigned name, instance, required chat title, and expected context. At startup Engineer reports identity, required title, context match, unpublished-work state, and editable-source access before accepting the brief. The Product Owner manually applies the reported title because a chat cannot reliably rename itself.
+
+If expected and actual message/Sites context disagree, stop acceptance and report the mismatch. Preserve and inventory unpublished work before materializing, replacing, rebuilding, or overwriting anything. If source is absent or inaccessible, report it and do not reconstruct without authority. Every acceptance, blocker, completion, and source-recovery report includes the Engineer name and instance ID. Role authority remains shared across Engineer instances; identity distinguishes work contexts only.
+
 ## Roles
 
 ### Designer

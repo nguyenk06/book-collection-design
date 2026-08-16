@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-16 — Engineer chat identities assigned
+
+- Designer assigned Stan `[E-01]` to the original M5 source-recovery context and Steve `[E-02]` to the replacement/current M6 context; current coordination identities are Dana `[D-01]` and Parker `[P-01]`.
+- Added required identity, chat-title, expected-context, unpublished-work, and editable-source checks to Engineer startup and every Engineer brief.
+- Added a P1 read-only Stan source-recovery brief ahead of Steve's dependent M6 brief; identities distinguish work contexts without changing Engineer authority or creating a separate registry.
+
 ## 2026-08-16 — Original M5 source recovery selected
 
 - Planner selected recovery and read-only inspection of the original M5 Engineer/Sites context before any reconstruction.

@@ -4,11 +4,11 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** M1/M3/M4/M5 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. M6 is parked before acceptance.
+- **Workflow state:** M1/M3/M4/M5 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. Stan `[E-01]` is assigned the P1 original-context M5 source-recovery inspection; Steve `[E-02]` and M6 remain parked pending its result.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`.
 - **Engineer state:** `BLOCKED`; no independently eligible approved task remains.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner reopens or assigns the original M5 Engineer/Sites context for read-only recovery inspection.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner reopens or assigns the original M5 Engineer/Sites context to Stan `[E-01]`, applies the required chat title, and starts the read-only recovery brief.
 - **Usage:** Last reported reading was approximately 80% before the bounded cycle; 30% remaining is the protected stopping reserve. Obtain a fresh reading before resumed implementation when available.
 
 Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.

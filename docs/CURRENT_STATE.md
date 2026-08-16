@@ -9,9 +9,11 @@
 - **Production gate:** M2 Gate 3 was invoked exactly once through Version 19. Its immediate response reported Shopping schema completion and zero foreign-key issues. This is not Gate 4 verification or preservation proof.
 - **Closed operations:** Gate 4 verification, corrective writes, Shopping publication, live validation, smoke testing, rollback, restore, and destructive recovery all require later authority. Gate 3 cannot be retried.
 - **Local milestones:** M1, M3, M4, and M5 are complete. M2 Gates 0–3 are complete within their distinct evidence layers. M4's missing formal transport acceptance was closed as unverifiable and was not reconstructed.
-- **Parked work:** M6 local downloadable catalog-export UI is parked before brief acceptance because the supported Sites context does not expose the cumulative editable M5 source or verified collision boundaries.
+- **Parked work:** Stan `[E-01]` has the P1 original-context M5 source-recovery inspection brief; Steve `[E-02]` retains the dependent M6 brief. M6 remains parked before acceptance until Stan's original context exposes and verifies the cumulative editable M5 source and collision boundaries.
 
 ## Queue and ownership
+
+- **Current role identities:** Designer Dana `[D-01]`; Planner Parker `[P-01]`; original M5 Engineer Stan `[E-01]`; replacement/current Engineer Steve `[E-02]`.
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`; this preserves the approved batch and does not authorize Gate 4 or any later production gate.
