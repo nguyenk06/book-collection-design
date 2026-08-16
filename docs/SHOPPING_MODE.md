@@ -54,7 +54,7 @@ Unpublished Site Version 17 preserves locally validated persistence and owner-au
 - Nullable collection target price, with CYOA configured to 600 cents locally.
 - Nullable Book Added Date for new manual/imported records without fabricating historical dates.
 
-This foundation is saved but has not been migrated to production or published; Version 19 is live as the owner-authenticated administration surface, while Version 18 is retained in Site history. Gate 2 observed the expected pre-upgrade baseline and retained a validated structured export privately, but performed no schema write. Saving Version 17 did not execute its packaged migration or add Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
+This foundation is saved but has not been published as Shopping UI; Version 19 is live as the owner-authenticated administration surface, while Version 18 is retained in Site history. Gate 2 observed the pre-upgrade baseline and retained a validated structured export privately. Gate 3 later invoked the guarded additive activation exactly once and its immediate response reported completion with zero foreign-key issues, but Gate 4 verification remains unperformed. Saving Version 17 itself did not execute its packaged migration or add Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
 
 ## Remaining Milestone Work
 

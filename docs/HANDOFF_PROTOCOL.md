@@ -142,6 +142,8 @@ The templates make these four commands sufficient for normal work:
 
 ## Workflow Shortcuts
 
+`PD`, `CI`, `CB`, and related labels in this protocol are documented workflow conventions. They are not guaranteed shell, Codex, or application commands unless the active environment explicitly configures them as commands. A user may invoke a convention in natural language; the responsible role must still follow the full documented procedure and current authority boundaries.
+
 Shortcuts are convenience aliases for existing lifecycle behavior. They reduce mobile typing but do not create authority, replace evidence or required reports, or bypass approval, production, destructive-action, sanitization, lifecycle, or workspace-ownership rules. The full written protocol is authoritative; if a shortcut conflicts with it, the full protocol wins.
 
 Keep the shortcut set deliberately small. Add another shortcut only after repeated workflow use demonstrates a clear need.
