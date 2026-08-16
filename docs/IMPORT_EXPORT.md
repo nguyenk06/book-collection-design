@@ -76,6 +76,12 @@ The catalog-first foundation is complete in the unsaved local working copy. It a
 
 Focused contract tests pass 3/3, layered export/migration/identifier tests pass 19/19, the full serial suite passes 84/84, task lint and build pass, and SQLite change counts prove export queries do not mutate data. Fixtures cover empty, complete, null-heavy, deterministic repeat, identity conflicts, and malformed references. No downloadable UI, Site save, production migration/export, backup claim, import, restore, or publication occurred.
 
+## Queued local download phase
+
+The next bounded local phase exposes the existing catalog format-v1 service through an owner-only downloadable UI. It must explain included and excluded entities, use safe filename/format metadata, state that image bytes are excluded, preserve deterministic/read-only behavior, and cover loading, success, error, retry, and accessibility states.
+
+This phase must not replace the operational bridge export, alter Version 19 administration or the isolated Shopping candidate, add schema/import/restore behavior, access production, save or publish a Site version, or claim backup completeness. Local completion requires a later separately authorized user checkpoint before any activation.
+
 ## Future improvements
 
 - Mapping profiles for common collection tools.

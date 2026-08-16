@@ -6,7 +6,7 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 authorized and queued; M4 transport closure awaits acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 authorized; M4 transport closure pending; M6 local export-download UI queued independently
 
 **Next owner:** `ENGINEER` - run `CB` for Gate 3, invoke the guarded activation no more than once, report, and stop before Gate 4.
 
@@ -14,7 +14,7 @@ Gate 2 succeeded through the owner-authenticated Version 19 administration surfa
 
 **Current objective**
 
-Execute or automatically abort the approved one-time Gate 3 activation and preserve the immediate response without performing Gate 4 verification. The later Shopping candidate remains unauthorized for saving or publication.
+Execute or automatically abort the approved one-time Gate 3 activation and preserve the immediate response without performing Gate 4 verification. Then close or report the M4 transport gap from existing evidence and continue to the bounded local M6 export-download UI when eligible. The Shopping candidate remains unauthorized for saving or publication.
 
 **Why this is the current priority**
 
@@ -24,13 +24,14 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 - Engineer cleanly accepts the Gate 3 brief and reconfirms target/session, write freeze, unchanged expected baseline, private export availability, security controls, exact confirmation, and usage boundary.
 - The guarded upgrade is invoked no more than once and Engineer stops before Gate 4 regardless of result.
-- After reporting Gate 3, any remaining allowance is used only for a missing M4 acceptance/transport report supported by existing evidence.
+- After reporting Gate 3, complete the M4 acceptance/transport check from factual existing evidence, then continue to eligible M6 local work if usage remains above the protected reserve.
 
 **Expected deliverables**
 
 - Gate 3 brief-acceptance report.
 - Sanitized Gate 3 completion/abort report separating the immediate response from later verification.
 - M4 acceptance/transport report only if existing local evidence proves it; otherwise a concise inability-to-verify report.
+- M6 acceptance and completion/blocker evidence for a local/disposable downloadable catalog-export UI.
 
 **Files likely affected**
 
@@ -39,7 +40,7 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Estimated effort**
 
-Product Owner reports 80% remaining and authorizes a cumulative maximum of 30 percentage points for Gate 3 plus the later transport-only M4 check. Engineer must stop no later than 50% remaining and preserve enough allowance for the required reports and clean stop.
+Product Owner reports approximately 80% remaining. Engineer may continue until 30% remains. The 30% value is a protected reserve and mandatory stopping threshold, not a usage grant or target. Stop earlier when no eligible work remains or safe handoff requires it, and reserve enough usage for validation, evidence, transport, and a clean stop.
 
 **Risks**
 
@@ -54,7 +55,7 @@ Product Owner reports 80% remaining and authorizes a cumulative maximum of 30 pe
 **Out of scope**
 
 - Shopping Mode UI redesign.
-- Scanner, Bookshelf, import/export, AI review, reference covers, tags, and analysis changes.
+- Scanner, Bookshelf implementation, mutable import, AI review, reference covers, tags, and analysis changes. The separately queued bounded M6 read-only export-download UI is allowed only after the Gate 3/M4 transition.
 - Full edition modeling, Business locations, and generalized media support.
 - Raw SQL, migration-ledger edits, direct packaged migration execution, corrective writes, or R2-byte access.
 - Site deployment/publication, Shopping activation, production smoke testing, restore/import, or destructive rollback.
@@ -62,9 +63,11 @@ Product Owner reports 80% remaining and authorizes a cumulative maximum of 30 pe
 ## Ready Next
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
-- Accept and execute/abort only M2 Gate 3, report, then use remaining allowance solely for factual M4 transport closure and stop by 50% remaining.
-- M5 requires no further local implementation; any downloadable UI, Site save, production export, migration, or activation needs a new brief and separate gates.
+- Accept and execute/abort only M2 Gate 3, report, and stop the production sequence before Gate 4.
+- Complete the M4 transport check from existing evidence only; do not recreate or infer acceptance.
+- Run `CB` for the queued M6 local downloadable catalog-export UI when Gate 3 reporting and the M4 transport check are complete, source/collision checks pass, and usage remains above the protected reserve.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
+- M6 is local/disposable only: no Site save, publication, production export, migration, schema/data change, or activation.
 
 ## Blocked
 

@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Fresh 80% reading; cumulative Gate 3 plus transport-only M4 allowance is 30 percentage points; hard stop at 50% remaining
+**Execution budget:** Approximately 80% remains; 30% remaining is the protected reserve and mandatory stopping threshold. Stop earlier when no eligible work remains or a safe handoff requires it.
 
-**Queue state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 authorized once and queued; later gates closed
+**Queue state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 authorized once; M4 transport closure pending; M6 local export-download UI queued; later production gates closed
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -82,9 +82,23 @@ Future parallel milestones should remain independently promotable. Completion in
 
 M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 published only Version 19 administration, and Gate 2 verified the expected pre-upgrade baseline, zero foreign-key issues, and a privately retained structured export without a production write. Gate 3 is authorized for one guarded invocation with a mandatory stop before Gate 4; every later gate remains closed. M4's transport lifecycle awaits a missing acceptance report that may be supplied only from existing evidence.
 
+## Milestone 6 — Local downloadable catalog export UI
+
+- **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); [Import/Export accepted export-first boundary and format v1](IMPORT_EXPORT.md#accepted-format-version-1-contract); completed M5 foundation.
+- **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.
+- **Included:** Owner-only local UI/route integration over the existing catalog export service; safe filename and format metadata; explicit included/excluded entities; `bytes_included: false` limitation; loading, success, error, retry, and accessibility states; no-mutation verification.
+- **Excluded:** Import, restore, production export, bridge-export replacement, schema/migration changes, image bytes, Businesses/Purchases, Shopping changes, Version 19 administration changes, Site save/publication, production access, and research review.
+- **Dependencies/eligibility:** Gate 3 completion/abort report exists; production sequence is stopped before Gate 4; M4 acceptance transition is factually reported or explicitly unverifiable; exact cumulative source and collision boundaries are verified; M5 tests remain green; usage remains above the protected 30% reserve with clean-stop capacity.
+- **Acceptance/tests/evidence:** Downloaded format-v1 artifact matches the accepted contract; owner-only behavior; understandable filename/scope/limitations; deterministic payload except documented metadata; empty/error/retry/accessibility coverage; explicit no-write checks; focused/full serial tests, task lint, and build.
+- **Data/rollback:** Local/disposable and read-only. No production data, save, publication, backup claim, import, restore, or rollback authority.
+- **User validation:** A later separately authorized checkpoint is required before activation; no Site operation follows from local completion.
+- **Stop/escalate:** Source collision with Version 19 or the isolated Shopping candidate, need for schema/product expansion, private leakage, mutation, failed validation, unavailable source, or reserve risk.
+- **Completion/handoff:** Local brief acceptance and completion/blocker reports, followed by a fresh queue scan. Keep release composition independent.
+
 ## Shared controls
 
 - Finish and validate the current milestone before starting another; reserve usage for tests, evidence, and a clean stop.
+- If one workstream blocks, report it and continue the next independently eligible, non-conflicting workstream. Waiting for a production gate does not idle authorized local work.
 - Stop for undocumented product/architecture choices, destructive or irreversible actions, ungated publication/activation, unauthorized migration, material expansion, bypassed criteria, missing source/data/credentials/access, failed validation, or unresolved integrity risk.
 - Designer alone writes GitHub documentation. Engineer communicates through local `inbox/`; technical material remains local.
 - Migration, publication, activation, production smoke testing, rollback, and destructive cleanup remain separately gated.

@@ -16,9 +16,9 @@
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
-**Queue throttle:** `RUN` — bounded Gate 3/M4-transport allowance only
+**Queue throttle:** `RUN` — continue eligible, non-conflicting work until the protected reserve or another stop condition
 
-**Usage guidance:** Product Owner supplied a fresh 80% reading. This run may consume at most 30 percentage points cumulatively and must stop no later than 50% remaining. After Gate 3 reporting, remaining allowance applies only to a factual M4 acceptance/transport report from existing evidence.
+**Usage guidance:** Product Owner reports approximately 80% remaining. Engineer may continue until 30% remains; 30% is the protected reserve and mandatory stopping threshold, not an amount of usage granted. Stop earlier when no eligible work remains or a safe handoff requires it, and preserve sufficient usage for validation, reporting, transport, and a clean stop.
 
 **Engineer execution state:** `AVAILABLE` — Gate 3 brief is eligible for `CB`; authority ends before Gate 4 regardless of outcome
 
@@ -43,8 +43,9 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
+| `WS-EXPORT-DOWNLOAD` | M6 local downloadable catalog export UI | `[░░░░░░░░░░] 0%` | QUEUED / ELIGIBLE AFTER TRANSITION | Accepted Import/Export direction and completed M5 foundation | Gate 3 report, factual M4 transport check, source/collision validation | Yes; local/disposable only |
 
-**Engineer can continue:** YES for Gate 3 brief intake and one guarded activation attempt only. After its completion/abort report, any remaining part of the 30-point allowance may be used only to provide the missing M4 acceptance/transport report from existing local evidence. Gate 4 verification and every later action remain unauthorized.
+**Engineer can continue:** YES. First execute/abort and report the one-time Gate 3 action, stopping that production sequence before Gate 4. Then perform the factual M4 transport check from existing evidence and use `CB` for independently eligible M6 local downloadable-export UI work if usage remains above the protected 30% reserve and source/collision checks pass. Gate 4 and all other production actions remain unauthorized.
 
 **Current Planner decisions:** None. Product Owner approved Gate 3 only under the recorded safeguards and usage boundary.
 
@@ -54,7 +55,7 @@ Progress is a coarse estimate toward each current objective, not validation evid
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–2 are complete. Gate 3 is authorized and queued. M4 still requires its missing acceptance report before local transport artifacts can close; only existing evidence may support it.
+Six milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–2 are complete. Gate 3 is authorized and queued. M4 still requires its missing acceptance report before transport closure; M6 local downloadable-export UI is queued independently after the Gate 3/M4 transition.
 
 ## Summary
 
