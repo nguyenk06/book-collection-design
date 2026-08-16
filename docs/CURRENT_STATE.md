@@ -16,16 +16,16 @@
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`; this preserves the approved batch and does not authorize Gate 4 or any later production gate.
+- **Throttle:** `DRAIN`; the approved batch is complete, no eligible brief remains, and new work requires a reviewed batch plus explicit authorization.
 - **Engineer state:** `PAUSED`; the approved local batch is complete and no independently eligible brief remains.
 - **Engineer continuation:** Preserve the cumulative M3–M6/Shopping/Bookshelf working source unchanged. Any checkpoint, Site save, publication, production export, or activation requires new explicit authority.
-- **Planner decisions:** None pending. Planner selected original M5 context recovery first.
-- **Active owner:** `EXTERNAL/WAIT` — Product Owner may authorize a bounded M6 hands-on checkpoint as a separate next step.
-- **Potential later owner:** Product Owner must separately authorize Gate 4 before production verification; no such decision is currently queued.
+- **Planner decisions:** Two pending: Gate 4 read-only verification and read-only checkpoint/source-preservation feasibility investigation.
+- **Active owner:** `PLANNER` — review the proposed next batch and its two independent authorization questions.
+- **Potential later owner:** Product Owner must separately authorize any unpublished save/preview and hands-on validation after feasibility evidence identifies an exact safe environment.
 
 ## Usage reserve
 
-The last Product Owner reading was approximately 80% remaining before the bounded Gate 3/M4/M6 cycle. No fresh numeric reading was exposed afterward, but Engineer reported that the cycle did not approach the protected reserve. Engineer must stop at 30% remaining or earlier when no eligible work remains or a safe handoff requires it, preserving capacity for validation, evidence, transport, and a clean stop.
+The current Product Owner reading is approximately 50% remaining. The proposed next batch is estimated at 8–12 percentage points, leaving approximately 38–42%. The 30% remaining reserve is a mandatory floor, not a target; drain earlier for estimate overrun, missing authority, ambiguity, or insufficient validation/evidence/stop capacity.
 
 ## Current workstreams
 
@@ -66,4 +66,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-M6 is complete and validated locally. The next possible step is a separately authorized Product Owner hands-on checkpoint; no preview, Site save, publication, production export, or activation follows automatically. Gate 4 remains a separate closed production gate and is not part of the M6 checkpoint. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
+M6 is complete and validated locally, and the current cycle is drained. The proposed next batch contains separately gated Gate 4 read-only verification followed by read-only checkpoint feasibility and candidate-preservation assessment. No preview, Site save, publication, production export, activation, or fallback development is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).

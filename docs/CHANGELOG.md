@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — Completed batch drained and next review envelope proposed
+
+- Drained the completed M3–M6/Shopping/Bookshelf cycle at approximately 50% usage remaining; Engineer — Sei remains paused in the continuing source-bearing chat with no eligible brief.
+- Preserved the recovered cumulative editable source unchanged and recommended against reconstructing separate dirty worktrees before supported preservation capabilities are known.
+- Proposed an 8–12 point next envelope: separately gated Gate 4 read-only verification, read-only checkpoint/preview feasibility, and candidate composition/preservation assessment, targeting approximately 38–42% remaining.
+- Added independent Planner decisions for Gate 4 and checkpoint/source-preservation feasibility; no brief, `!run`, save, preview, publication, production operation, hands-on validation, or fallback development was authorized.
+
 ## 2026-08-16 — M6 downloadable catalog export UI completed locally
 
 - Accepted local completion evidence for an isolated owner-only catalog download route and read-only API endpoint over the M5 format-v1 service.

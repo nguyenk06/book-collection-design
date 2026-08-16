@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. M6 is locally validated, unsaved, and unpublished.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`.
+- **Throttle:** `DRAIN`; the completed cycle is preserved and no new intake is allowed before authorization.
 - **Engineer state:** `PAUSED`; the approved local batch is complete and no eligible brief remains.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner may separately authorize a bounded M6 hands-on checkpoint.
-- **Usage:** Last reported reading was approximately 80% before the bounded cycle; 30% remaining is the protected stopping reserve. Obtain a fresh reading before resumed implementation when available.
+- **Next owner:** `PLANNER` — review the independent Gate 4 and checkpoint-feasibility decisions in [Planner Inbox](PLANNER_INBOX.md).
+- **Usage:** Approximately 50% remains. The proposed 8–12 point batch expects 38–42% remaining; 30% is the protected floor, not a consumption target.
 
 Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.
 
@@ -24,6 +24,16 @@ Validation passed:
 - Anonymous and non-owner API denial, owner page gating, read-only query evidence, duplicate-click protection, safe filenames, and accessible state behavior.
 
 M6 remains in the cumulative dirty local source. Saved and published Site versions remain Version 19. A later Product Owner checkpoint and any preview/save/activation remain separately gated.
+
+## Proposed next batch
+
+See [Proposed Next Execution Batch](NEXT_BATCH_PLAN.md). Priority is:
+
+1. Separately approved M2 Gate 4 read-only production verification: 3–5 points.
+2. Separately approved read-only Sites checkpoint/preview feasibility investigation: 2–4 points.
+3. Candidate composition and preservation assessment based on feasibility evidence: 2–3 points.
+
+Shared overhead yields an estimated 8–12 points total. No fallback implementation is proposed. Remain at `DRAIN` until Planner/Product Owner decisions are recorded and Designer prepares bounded briefs.
 
 ## Closed production gate
 

@@ -40,7 +40,7 @@ Saving Version 17 does not mark Shopping released or active in production. Versi
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The bounded continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–3 are complete within their bounded evidence layers. Gate 3 was invoked exactly once and cannot be retried; its immediate success response is not Gate 4 verification. Later gates remain sequential, closed, and unauthorized.
+The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within their bounded evidence layers, and the cycle is drained. Gate 3 was invoked exactly once and cannot be retried; its immediate success response is not Gate 4 verification. The [proposed next batch](NEXT_BATCH_PLAN.md) awaits Planner/Product Owner review, and every later gate remains sequential, closed, and unauthorized.
 
 ## Deferred
 
