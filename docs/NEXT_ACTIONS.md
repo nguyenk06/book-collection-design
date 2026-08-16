@@ -4,26 +4,25 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** M1/M3/M4/M5 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. Engineer — Sei retains the P1 source-recovery inspection; M6 remains parked pending its result.
+- **Workflow state:** M1/M3/M4/M5 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. Engineer — Sei completed the P1 source-recovery inspection; M6 is ready for brief acceptance.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`.
-- **Engineer state:** `BLOCKED`; no independently eligible approved task remains.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner continues the Engineer — Sei chat with the correct M5 Sites/source context, applies `CYOA — Engineer Sei`, and starts the read-only recovery brief. Create a replacement only if the documented replacement conditions are met.
+- **Engineer state:** `AVAILABLE` for M6 at its safe pre-`!brief` boundary.
+- **Next owner:** `ENGINEER` — in the continuing source-bearing Engineer — Sei context, revalidate the M6 acceptance conditions and run `!brief`.
 - **Usage:** Last reported reading was approximately 80% before the bounded cycle; 30% remaining is the protected stopping reserve. Obtain a fresh reading before resumed implementation when available.
 
 Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.
 
-## Ready when source is available
+## Ready for M6 brief acceptance
 
-Planner selected recovery first. Reopen or assign the original M5 Engineer/Sites chat or workspace, because M5 completion evidence states that its six changed files existed only in an unsaved, uncommitted dirty Site worktree. Engineer then verifies `app/catalog-export.ts`, `db/schema.ts`, `db/bridge-schema.ts`, `app/api/books/route.ts`, `shopping-migrations/0006_book_stable_ids.sql`, and `tests/catalog-export.test.ts`; confirms source composition, prior test reproducibility, and collision separation from Version 19 and the isolated Shopping candidate; and reports the result without changing source. If any required source is unavailable, stop and return for an explicit reconstruction decision. Reconstruction is not currently authorized.
+The read-only recovery inspection found all six reported M5 files in the original cumulative editable working source. Current focused, layered, and full serial tests, task lint, build, `git diff --check`, and no-write evidence passed. Published and saved Version 19 remains the clean base; cumulative M3–M5, Bookshelf, and Shopping work remains unsaved/unpublished and separate from the saved Version 17 Shopping foundation. No source transfer or reconstruction is required.
 
 Resume M6 at its recorded safe pre-`!brief` boundary:
 
-1. Identify the exact cumulative editable M5 source in the supported Sites context.
-2. Verify its composition and collision separation from Version 19 and the isolated Shopping candidate.
-3. Revalidate M5 tests, dependencies, usage reserve, and clean-stop capacity.
-4. Run `!brief` and accept M6 only if all eligibility checks pass.
-5. Implement and validate only the local/disposable, owner-only downloadable catalog format-v1 UI described by the existing brief.
+1. Continue in the verified source-bearing Engineer — Sei context.
+2. Revalidate source composition, collision separation, dependencies, usage reserve, and clean-stop capacity.
+3. Run `!brief` and accept M6 only if all eligibility checks pass.
+4. Implement and validate only the local/disposable, owner-only downloadable catalog format-v1 UI described by the existing brief.
 
 M6 excludes Site save/publication, production access/export, bridge-export replacement, schema or migration changes, import/restore, image bytes, Businesses/Purchases, Shopping changes, and backup claims. A later user checkpoint and any activation remain separately gated.
 

@@ -4,7 +4,7 @@
 
 **Execution budget:** Approximately 80% remains; 30% remaining is the protected reserve and mandatory stopping threshold. Stop earlier when no eligible work remains or a safe handoff requires it.
 
-**Queue state:** Throttle `RUN`; Gate 3 and M4 transport tasks complete; M6 `WAITING FOR ANSWER`/source; no other approved batch task eligible; later production gates remain closed
+**Queue state:** Throttle `RUN`; Gate 3 and M4 transport tasks complete; M5 source recovery verified; M6 ready for `!brief`; later production gates remain closed
 
 **Proposed batch estimate:** 24–38 percentage points total from approximately 80% remaining, for an expected finish at approximately 42–56%. This range includes intake, ordinary remediation, full validation, evidence, transport, and clean stopping capacity. Reduce or drain rather than threaten the 30% reserve.
 
@@ -90,7 +90,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.
 - **Included:** Owner-only local UI/route integration over the existing catalog export service; safe filename and format metadata; explicit included/excluded entities; `bytes_included: false` limitation; loading, success, error, retry, and accessibility states; no-mutation verification.
 - **Excluded:** Import, restore, production export, bridge-export replacement, schema/migration changes, image bytes, Businesses/Purchases, Shopping changes, Version 19 administration changes, Site save/publication, production access, and research review.
-- **Dependencies/eligibility:** Batch throttle is `RUN` after the authorized `!run`; Gate 3/M4 transitions and the production stop before Gate 4 are satisfied. M6 remains parked before acceptance until the exact cumulative editable M5 source is available, collision boundaries are verified, M5 tests remain green, and usage safely clears the protected reserve with clean-stop capacity.
+- **Dependencies/eligibility:** Batch throttle is `RUN` after the authorized `!run`; Gate 3/M4 transitions and the production stop before Gate 4 are satisfied. The exact cumulative editable M5 source, collision boundaries, and current validation are verified. Before acceptance, Engineer must revalidate source composition, dependencies, usage safely above the protected reserve, and clean-stop capacity.
 - **Acceptance/tests/evidence:** Downloaded format-v1 artifact matches the accepted contract; owner-only behavior; understandable filename/scope/limitations; deterministic payload except documented metadata; empty/error/retry/accessibility coverage; explicit no-write checks; focused/full serial tests, task lint, and build.
 - **Data/rollback:** Local/disposable and read-only. No production data, save, publication, backup claim, import, restore, or rollback authority.
 - **User validation:** A later separately authorized checkpoint is required before activation; no Site operation follows from local completion.

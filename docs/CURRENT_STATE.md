@@ -9,7 +9,7 @@
 - **Production gate:** M2 Gate 3 was invoked exactly once through Version 19. Its immediate response reported Shopping schema completion and zero foreign-key issues. This is not Gate 4 verification or preservation proof.
 - **Closed operations:** Gate 4 verification, corrective writes, Shopping publication, live validation, smoke testing, rollback, restore, and destructive recovery all require later authority. Gate 3 cannot be retried.
 - **Local milestones:** M1, M3, M4, and M5 are complete. M2 Gates 0–3 are complete within their distinct evidence layers. M4's missing formal transport acceptance was closed as unverifiable and was not reconstructed.
-- **Parked work:** Engineer — Sei retains the P1 source-recovery inspection and dependent M6 work. M6 remains parked before acceptance until the continuing Engineer context exposes and verifies the cumulative editable M5 source and collision boundaries.
+- **Ready work:** Engineer — Sei completed the read-only P1 source-recovery inspection. The cumulative editable M5 source and collision boundaries are verified, so M6 is ready to resume at its safe pre-`!brief` boundary.
 
 ## Queue and ownership
 
@@ -17,10 +17,10 @@
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`; this preserves the approved batch and does not authorize Gate 4 or any later production gate.
-- **Engineer state:** `BLOCKED` because M6 is `WAITING FOR ANSWER / SOURCE` and no other approved batch task is eligible.
-- **Engineer continuation:** Resume M6 at the safe pre-`!brief` boundary when the correct cumulative editable M5 source is available. Revalidate source composition, collision boundaries, dependencies, tests, and usage before acceptance. No reinitialization is required solely because the task is parked.
+- **Engineer state:** `AVAILABLE` for M6 brief acceptance in the continuing source-bearing context.
+- **Engineer continuation:** Resume M6 at the safe pre-`!brief` boundary. Revalidate source composition, collision boundaries, dependencies, tests, and usage before acceptance. No reinitialization or source transfer is required solely because the task was parked.
 - **Planner decisions:** None pending. Planner selected original M5 context recovery first.
-- **Active owner:** `EXTERNAL/WAIT` — Product Owner must reopen or assign the original M5 Engineer/Sites context so Engineer can inspect its unsaved working copy.
+- **Active owner:** `ENGINEER` — run `!brief` for M6 in the continuing source-bearing Engineer — Sei context.
 - **Potential later owner:** Product Owner must separately authorize Gate 4 before production verification; no such decision is currently queued.
 
 ## Usage reserve
@@ -36,8 +36,8 @@ The last Product Owner reading was approximately 80% remaining before the bounde
 | Shopping UI | Complete locally; unsaved/unpublished | Search/scan/status, Purchase history/capture, quality, and accessibility validation passed | Gate 4 and later separately gated release steps |
 | M3 canonical identifiers | Complete locally | Focused/full tests, lint, and build passed | Future promotion remains separately gated |
 | M4 bounded Bookshelf | Complete locally; unsaved/unpublished | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
-| M5 catalog export foundation | Complete locally; unsaved/unpublished | Format v1, stable Book IDs, referential validation, deterministic output, and no-write proof passed | Source availability for M6 |
-| M6 downloadable export UI | `WAITING FOR ANSWER / SOURCE` | Parked before acceptance; no implementation started | Materialize cumulative editable M5 source and verify collisions |
+| M5 catalog export foundation | Complete locally; unsaved/unpublished | Format v1, stable Book IDs, referential validation, deterministic output, no-write proof, and recovered editable source verified | M6 may consume it within the existing brief boundary |
+| M6 downloadable export UI | Ready for `!brief` | Recovered cumulative M5 source passed focused, layered, and full serial validation; collision boundaries remain separate | Revalidate usage and source boundary, then accept the existing M6 brief |
 
 ## Data and export status
 
@@ -66,4 +66,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The only approved implementation continuation is M6 after supported source availability. Planner selected recovery and inspection of the original M5 Engineer/Sites context first. Engineer must verify the six reported M5 files, source composition, prior tests, and collision boundaries without modifying source. If the source is unavailable, stop and return for an explicit reconstruction decision. Gate 4 remains a separate closed production gate and is not part of that continuation. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
+The only approved implementation continuation is M6. The read-only recovery inspection verified all six reported M5 files in the cumulative editable source, reproduced current validation, and confirmed separation from published Version 19 and the saved Version 17 Shopping foundation. Engineer may now revalidate the recorded acceptance checks and run `!brief` for M6 in that continuing source-bearing context. Gate 4 remains a separate closed production gate and is not part of this continuation. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).

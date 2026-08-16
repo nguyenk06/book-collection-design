@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — Original M5 editable source recovered
+
+- Accepted read-only recovery evidence that all six reported M5 files remain present in the cumulative editable working source based on published Version 19.
+- Current focused, layered, and full serial tests, task lint, build, diff checks, and no-write evidence passed; the recovered work remains unsaved/unpublished and separate from saved Version 17.
+- Cleared M6's source-availability blocker and returned it to the safe pre-`!brief` boundary without authorizing reconstruction, source transfer, Site save/publication, production access, or Gate 4.
+- Preserved the retired Engineer identity labels in the historical transport reports; current authority and continuation use Engineer — Sei.
+
 ## 2026-08-16 — Permanent role identities and continuity adopted
 
 - Established Planner — Quatre, Designer — Relena, and Engineer — Sei with fixed Product Owner-applied chat titles and mandatory first-`!init` identity/continuity/source-access headers.
