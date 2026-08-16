@@ -74,13 +74,13 @@ The additive Book `stable_id` must be generated once, persisted, globally unique
 
 The catalog-first foundation is complete in the unsaved local working copy. It adds an additive Book `stable_id` migration with one-time UUID backfill, uniqueness, required-on-insert behavior, and update immutability; all post-migration Book creation paths generate the ID. A separate catalog export service implements the approved allowlist and leaves the older operational bridge export unchanged.
 
-Focused contract tests pass 3/3, layered export/migration/identifier tests pass 19/19, the full serial suite passes 84/84, task lint and build pass, and SQLite change counts prove export queries do not mutate data. Fixtures cover empty, complete, null-heavy, deterministic repeat, identity conflicts, and malformed references. No downloadable UI, Site save, production migration/export, backup claim, import, restore, or publication occurred.
+Focused M5 contract tests pass 3/3, layered export/migration/identifier tests pass 19/19, and SQLite change counts prove export queries do not mutate data. M6 adds a locally validated owner-only downloadable UI and API endpoint; its final focused suite passes 8/8 and the cumulative full serial suite passes 160/160, with task lint, build, owner-boundary, read-only, filename, contract, and accessibility evidence. No Site save, production migration/export, backup claim, import, restore, or publication occurred.
 
-## Queued local download phase
+## Completed local download phase
 
-The next bounded local phase exposes the existing catalog format-v1 service through an owner-only downloadable UI. It must explain included and excluded entities, use safe filename/format metadata, state that image bytes are excluded, preserve deterministic/read-only behavior, and cover loading, success, error, retry, and accessibility states.
+The bounded local phase exposes the existing catalog format-v1 service through an owner-only downloadable UI. It explains included and excluded entities, uses safe filename/format metadata, states that image bytes are excluded, preserves read-only behavior, and covers loading, success, empty, error, retry, duplicate-submission, focus, and announcement states.
 
-This phase must not replace the operational bridge export, alter Version 19 administration or the isolated Shopping candidate, add schema/import/restore behavior, access production, save or publish a Site version, or claim backup completeness. Local completion requires a later separately authorized user checkpoint before any activation.
+This phase did not replace the operational bridge export, alter Version 19 administration or the isolated Shopping candidate, add schema/import/restore behavior, access production, save or publish a Site version, or claim backup completeness. Local completion requires a later separately authorized user checkpoint before any activation.
 
 ## Future improvements
 

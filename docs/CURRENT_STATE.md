@@ -9,7 +9,7 @@
 - **Production gate:** M2 Gate 3 was invoked exactly once through Version 19. Its immediate response reported Shopping schema completion and zero foreign-key issues. This is not Gate 4 verification or preservation proof.
 - **Closed operations:** Gate 4 verification, corrective writes, Shopping publication, live validation, smoke testing, rollback, restore, and destructive recovery all require later authority. Gate 3 cannot be retried.
 - **Local milestones:** M1, M3, M4, and M5 are complete. M2 Gates 0–3 are complete within their distinct evidence layers. M4's missing formal transport acceptance was closed as unverifiable and was not reconstructed.
-- **Ready work:** Engineer — Sei completed the read-only P1 source-recovery inspection. The cumulative editable M5 source and collision boundaries are verified, so M6 is ready to resume at its safe pre-`!brief` boundary.
+- **Completed work:** Engineer — Sei completed and validated M6 locally in the recovered cumulative source. The downloadable catalog export UI remains unsaved and unpublished.
 
 ## Queue and ownership
 
@@ -17,10 +17,10 @@
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`; this preserves the approved batch and does not authorize Gate 4 or any later production gate.
-- **Engineer state:** `AVAILABLE` for M6 brief acceptance in the continuing source-bearing context.
-- **Engineer continuation:** Resume M6 at the safe pre-`!brief` boundary. Revalidate source composition, collision boundaries, dependencies, tests, and usage before acceptance. No reinitialization or source transfer is required solely because the task was parked.
+- **Engineer state:** `PAUSED`; the approved local batch is complete and no independently eligible brief remains.
+- **Engineer continuation:** Preserve the cumulative M3–M6/Shopping/Bookshelf working source unchanged. Any checkpoint, Site save, publication, production export, or activation requires new explicit authority.
 - **Planner decisions:** None pending. Planner selected original M5 context recovery first.
-- **Active owner:** `ENGINEER` — run `!brief` for M6 in the continuing source-bearing Engineer — Sei context.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner may authorize a bounded M6 hands-on checkpoint as a separate next step.
 - **Potential later owner:** Product Owner must separately authorize Gate 4 before production verification; no such decision is currently queued.
 
 ## Usage reserve
@@ -36,14 +36,14 @@ The last Product Owner reading was approximately 80% remaining before the bounde
 | Shopping UI | Complete locally; unsaved/unpublished | Search/scan/status, Purchase history/capture, quality, and accessibility validation passed | Gate 4 and later separately gated release steps |
 | M3 canonical identifiers | Complete locally | Focused/full tests, lint, and build passed | Future promotion remains separately gated |
 | M4 bounded Bookshelf | Complete locally; unsaved/unpublished | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
-| M5 catalog export foundation | Complete locally; unsaved/unpublished | Format v1, stable Book IDs, referential validation, deterministic output, no-write proof, and recovered editable source verified | M6 may consume it within the existing brief boundary |
-| M6 downloadable export UI | Ready for `!brief` | Recovered cumulative M5 source passed focused, layered, and full serial validation; collision boundaries remain separate | Revalidate usage and source boundary, then accept the existing M6 brief |
+| M5 catalog export foundation | Complete locally; unsaved/unpublished | Format v1, stable Book IDs, referential validation, deterministic output, no-write proof, and recovered editable source verified | Consumed by the completed local M6 UI |
+| M6 downloadable export UI | Complete locally; unsaved/unpublished | 8/8 focused and 160/160 full serial tests, task lint, build, owner gating, no-write checks, and collision separation passed | Separate Product Owner checkpoint authority before any Site save or activation |
 
 ## Data and export status
 
 - Gate 2 retained a private, validated structured bridge export covering 215 Books, 4 Collections, 0 Businesses, 0 Purchases, and 17 cover references, with unique identifiers and no broken references. It is not a D1 snapshot and excludes R2 bytes.
 - Gate 3's immediate response reported activation success, but current production schema and preservation invariants remain unverified until Gate 4.
-- M5 provides a separately validated local catalog format-v1 export foundation with persisted immutable Book stable IDs. It has no downloadable UI yet and has not been saved, published, or run against production.
+- M5 provides a validated local catalog format-v1 export foundation with persisted immutable Book stable IDs. M6 adds the validated owner-only downloadable UI locally; neither milestone has been saved, published, or run against production.
 - No complete production backup exists. Direct D1 export and Time Travel controls remain unavailable unless Sites exposes a supported mechanism.
 - Existing mutable import remains immediate and insufficiently safe; no restore or round-trip import workflow is authorized.
 
@@ -55,7 +55,7 @@ The last Product Owner reading was approximately 80% remaining before the bounde
 | Shopping | Bounded UI complete and validated locally; unsaved/unpublished |
 | Scanner | Existing scanning works; M3 canonical identifier foundation is complete locally |
 | Bookshelf | Bounded first release complete locally; unsaved/unpublished and checkpoint-gated |
-| Import/Export | Bridge export completed privately at Gate 2; catalog format-v1 foundation complete locally; M6 UI parked; import remains unsafe/immediate |
+| Import/Export | Bridge export completed privately at Gate 2; catalog format-v1 foundation and owner-only downloadable UI complete locally; import remains unsafe/immediate |
 | AI Review | Planned; safe interchange and proposal workflow incomplete |
 | Assets | Personal cover upload/R2 serving exist; metadata, variants, cleanup, and complete byte backup do not |
 | Tags | Planned; persistence absent |
@@ -66,4 +66,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The only approved implementation continuation is M6. The read-only recovery inspection verified all six reported M5 files in the cumulative editable source, reproduced current validation, and confirmed separation from published Version 19 and the saved Version 17 Shopping foundation. Engineer may now revalidate the recorded acceptance checks and run `!brief` for M6 in that continuing source-bearing context. Gate 4 remains a separate closed production gate and is not part of this continuation. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
+M6 is complete and validated locally. The next possible step is a separately authorized Product Owner hands-on checkpoint; no preview, Site save, publication, production export, or activation follows automatically. Gate 4 remains a separate closed production gate and is not part of the M6 checkpoint. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).

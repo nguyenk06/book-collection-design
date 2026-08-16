@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — M6 downloadable catalog export UI completed locally
+
+- Accepted local completion evidence for an isolated owner-only catalog download route and read-only API endpoint over the M5 format-v1 service.
+- Validation passed 8/8 focused and 160/160 full serial tests, task lint, build, owner-boundary checks, no-write evidence, safe filename/contract checks, and accessible state behavior.
+- M6 added five isolated files without changing Version 19 administration, Shopping, M3–M5 services, schema, migrations, import, or dependencies.
+- No Site save/version, preview, publication, deployment, production access/export, Gate 4, schema/data action, restore, or destructive action occurred; the next Product Owner checkpoint remains separately gated.
+
 ## 2026-08-16 — Original M5 editable source recovered
 
 - Accepted read-only recovery evidence that all six reported M5 files remain present in the cumulative editable working source based on published Version 19.

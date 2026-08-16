@@ -4,27 +4,26 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** M1/M3/M4/M5 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. Engineer — Sei completed the P1 source-recovery inspection; M6 is ready for brief acceptance.
+- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. M6 is locally validated, unsaved, and unpublished.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`.
-- **Engineer state:** `AVAILABLE` for M6 at its safe pre-`!brief` boundary.
-- **Next owner:** `ENGINEER` — in the continuing source-bearing Engineer — Sei context, revalidate the M6 acceptance conditions and run `!brief`.
+- **Engineer state:** `PAUSED`; the approved local batch is complete and no eligible brief remains.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner may separately authorize a bounded M6 hands-on checkpoint.
 - **Usage:** Last reported reading was approximately 80% before the bounded cycle; 30% remaining is the protected stopping reserve. Obtain a fresh reading before resumed implementation when available.
 
 Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.
 
-## Ready for M6 brief acceptance
+## M6 locally complete
 
-The read-only recovery inspection found all six reported M5 files in the original cumulative editable working source. Current focused, layered, and full serial tests, task lint, build, `git diff --check`, and no-write evidence passed. Published and saved Version 19 remains the clean base; cumulative M3–M5, Bookshelf, and Shopping work remains unsaved/unpublished and separate from the saved Version 17 Shopping foundation. No source transfer or reconstruction is required.
+Engineer added an isolated owner-only `/catalog-download` route and read-only `/api/catalog-export` endpoint over M5, with contract validation, safe download behavior, explicit scope/backup limitations, and accessible loading, success, empty, error, retry, focus, and announcement states. Five M6 files were added without changing Version 19 administration, Shopping, M3–M5 services, schema, migrations, import, or dependencies.
 
-Resume M6 at its recorded safe pre-`!brief` boundary:
+Validation passed:
 
-1. Continue in the verified source-bearing Engineer — Sei context.
-2. Revalidate source composition, collision separation, dependencies, usage reserve, and clean-stop capacity.
-3. Run `!brief` and accept M6 only if all eligibility checks pass.
-4. Implement and validate only the local/disposable, owner-only downloadable catalog format-v1 UI described by the existing brief.
+- 8/8 focused M6 tests and 160/160 full serial tests.
+- Task lint, production build, and diff/whitespace checks.
+- Anonymous and non-owner API denial, owner page gating, read-only query evidence, duplicate-click protection, safe filenames, and accessible state behavior.
 
-M6 excludes Site save/publication, production access/export, bridge-export replacement, schema or migration changes, import/restore, image bytes, Businesses/Purchases, Shopping changes, and backup claims. A later user checkpoint and any activation remain separately gated.
+M6 remains in the cumulative dirty local source. Saved and published Site versions remain Version 19. A later Product Owner checkpoint and any preview/save/activation remain separately gated.
 
 ## Closed production gate
 
@@ -39,6 +38,6 @@ Gate 4 verification requires separate explicit Product Owner approval. It is not
 ## Resume and stopping rules
 
 - A parked task resumes without reinitialization solely for the resolved condition, but affected assumptions, source, dependencies, collisions, usage, and tests must be revalidated.
-- A blocked task does not stop unrelated eligible work. In the current batch, no unrelated eligible task remains.
+- A blocked task does not stop unrelated eligible work. The current approved batch is complete and no unrelated eligible task remains.
 - Stop for missing authority, source ambiguity, collision risk, failed validation, private-data leakage, mutation, production access, or approach to the protected reserve.
 - Unprefixed words and abbreviations are normal conversation and do not trigger workflow behavior.

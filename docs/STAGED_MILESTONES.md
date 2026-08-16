@@ -4,7 +4,7 @@
 
 **Execution budget:** Approximately 80% remains; 30% remaining is the protected reserve and mandatory stopping threshold. Stop earlier when no eligible work remains or a safe handoff requires it.
 
-**Queue state:** Throttle `RUN`; Gate 3 and M4 transport tasks complete; M5 source recovery verified; M6 ready for `!brief`; later production gates remain closed
+**Queue state:** Throttle `RUN`; approved local batch complete through M6; Engineer paused with no eligible brief; later Site and production gates remain closed
 
 **Proposed batch estimate:** 24–38 percentage points total from approximately 80% remaining, for an expected finish at approximately 42–56%. This range includes intake, ordinary remediation, full validation, evidence, transport, and clean stopping capacity. Reduce or drain rather than threaten the 30% reserve.
 
@@ -85,6 +85,8 @@ Future parallel milestones should remain independently promotable. Completion in
 M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 published only Version 19 administration, and Gate 2 verified the expected pre-upgrade baseline, zero foreign-key issues, and a privately retained structured export without a production write. Gate 3 was invoked exactly once; its immediate response reported completion and the sequence stopped before Gate 4. That response is not verification. Every later gate remains closed. M4's missing formal acceptance transition was factually closed as unverifiable rather than inferred or recreated.
 
 ## Milestone 6 — Local downloadable catalog export UI
+
+**State:** Complete and validated locally; unsaved/unpublished; Product Owner checkpoint remains separately gated.
 
 - **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); [Import/Export accepted export-first boundary and format v1](IMPORT_EXPORT.md#accepted-format-version-1-contract); completed M5 foundation.
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.
