@@ -8,12 +8,14 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `RUN`.
 - **Engineer state:** `BLOCKED`; no independently eligible approved task remains.
-- **Next owner:** `EXTERNAL/WAIT` — make the correct cumulative editable M5 source available through the supported Sites editing context without contaminating published Version 19 or the isolated Shopping candidate.
+- **Next owner:** `PLANNER` — select recovery of the original M5 editing context or authorize bounded reconstruction if that context cannot be recovered.
 - **Usage:** Last reported reading was approximately 80% before the bounded cycle; 30% remaining is the protected stopping reserve. Obtain a fresh reading before resumed implementation when available.
 
 Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.
 
 ## Ready when source is available
+
+The preferred clearing path is to reopen or assign the original M5 Engineer/Sites chat or workspace, because M5 completion evidence states that its six changed files existed only in an unsaved, uncommitted dirty Site worktree. The replacement Engineer context has Site/version metadata but not that working copy. If recovery proves impossible, stop and use the Planner-approved reconstruction path; do not silently rebuild M5.
 
 Resume M6 at its recorded safe pre-`!brief` boundary:
 

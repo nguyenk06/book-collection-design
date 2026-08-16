@@ -17,8 +17,8 @@
 - **Throttle:** `RUN`; this preserves the approved batch and does not authorize Gate 4 or any later production gate.
 - **Engineer state:** `BLOCKED` because M6 is `WAITING FOR ANSWER / SOURCE` and no other approved batch task is eligible.
 - **Engineer continuation:** Resume M6 at the safe pre-`!brief` boundary when the correct cumulative editable M5 source is available. Revalidate source composition, collision boundaries, dependencies, tests, and usage before acceptance. No reinitialization is required solely because the task is parked.
-- **Planner decisions:** None pending.
-- **Active owner:** `EXTERNAL/WAIT` for supported cumulative editable M5 source availability.
+- **Planner decisions:** One pending — M5 editable-source recovery disposition.
+- **Active owner:** `PLANNER` to select original-context recovery or authorized reconstruction; Product Owner context assignment is required under the recommended recovery path.
 - **Potential later owner:** Product Owner must separately authorize Gate 4 before production verification; no such decision is currently queued.
 
 ## Usage reserve
@@ -64,4 +64,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The only approved continuation is M6 after supported source availability. Gate 4 remains a separate closed production gate and is not part of that continuation. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
+The only approved implementation continuation is M6 after supported source availability. Planner must first disposition recovery of the original M5 editing context versus authorized reconstruction. Gate 4 remains a separate closed production gate and is not part of that continuation. See [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
