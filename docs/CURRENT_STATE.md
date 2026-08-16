@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–1 complete; Gate 2 owner status/export awaits separate Product Owner authority; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–1 complete; Gate 2 owner status/export authorized and queued for Engineer acceptance; M4 transport lifecycle awaits missing acceptance report
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner supplied a fresh 71% reading before M5; Engineer reports approximately 50–60% remaining after completion, preserving the required 30% reserve.
 
-**Engineer execution state:** `STOPPED AT GATE` — M2 Gate 1 publication is complete; Gate 2 production status/export requires separate Product Owner authorization
+**Engineer execution state:** `AVAILABLE` — Gate 2 status/export brief is eligible for `CB` under `RUN`; schema activation and later gates remain closed
 
 ## Current Engineering Workstreams
 
@@ -39,22 +39,22 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[██████████] 100%` | COMPLETE | Read-only capability investigation accepted | No verified option is runnable, private, isolated, and non-production | Transitioned to M2 blocker |
-| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[███░░░░░░░] 30%` | STOPPED AT GATE | Gates 0–1 completed under ADR-0012 | Product Owner must separately authorize Gate 2 owner status/export | No until Gate 2 authority |
+| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[███░░░░░░░] 30%` | QUEUED / AUTHORIZED | Gates 0–1 complete; Gate 2 explicitly approved | Engineer accepts Gate 2 brief, validates owner session/target, then executes read/export preflight only | Yes for Gate 2 |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
 
-**Engineer can continue:** NO. M2 Gate 1 published only the existing Version 19 administration surface. Owner-authenticated production schema status/export, schema activation/verification, Shopping publication, live validation, smoke testing, and rollback require their recorded sequential gates.
+**Engineer can continue:** YES for Gate 2 brief intake and, after clean acceptance, owner-authenticated schema status/private export/preservation preflight only. Schema activation/verification, Shopping publication, live validation, smoke testing, and rollback require later separate gates.
 
-**Current Planner decisions:** One. Product Owner must approve or decline M2 Gate 2 owner-authenticated schema status, private structured export, and preservation preflight.
+**Current Planner decisions:** None. Product Owner approved Gate 2 status/export only with automatic abort conditions; no later gate was approved.
 
-**Next production gate:** None is currently executable. Gates 0–1 are complete; the next gate is explicit authorization for owner-authenticated schema status and private structured export only. Schema activation/verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
+**Next production gate:** Gate 2 is authorized but unexecuted: owner-authenticated schema status and private structured export only. Schema activation/verification, Shopping publication, live validation/smoke, and recovery remain subsequent separate gates.
 
 **Resume condition:** Satisfied. Replacement Site Engineer read-only `INIT` and stopping-point verification are complete, and the Product Owner has set throttle `RUN` for the bounded M1–M3 sequence.
 
 ## Staged continuation
 
-Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–1 are complete. M2 is stopped before Gate 2. M4 still requires its missing acceptance report before local transport artifacts can close.
+Five milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–1 are complete. Gate 2 is authorized and queued for acceptance. M4 still requires its missing acceptance report before local transport artifacts can close.
 
 ## Summary
 
@@ -209,4 +209,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-M2 Gates 0–1 are complete. The project is stopped before Gate 2 owner-authenticated schema status, private structured export, and preservation preflight. Schema activation, verification, Shopping publication, live Product Owner validation, smoke testing, rollback, and destructive recovery remain separately gated.
+M2 Gates 0–1 are complete. Product Owner approved Gate 2 owner-authenticated schema status, private structured export, and preservation preflight only, with automatic abort for unavailable owner session, ambiguous target, unexpected schema, failed/private-storage export, preservation mismatch, inadequate recovery posture, or usage reserve risk. Schema activation, verification, Shopping publication, live Product Owner validation, smoke testing, rollback, and destructive recovery remain separately gated.

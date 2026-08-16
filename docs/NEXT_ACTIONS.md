@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–1 complete; Gate 2 awaits separate Product Owner authority; M4 transport closure awaits acceptance report
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–1 complete; Gate 2 authorized and queued; M4 transport closure awaits acceptance report
 
-**Next owner:** `PLANNER` - approve or decline M2 Gate 2 owner-authenticated schema status, private export, and preservation preflight.
+**Next owner:** `ENGINEER` - run `CB` for the Gate 2 status/export brief, then execute only its bounded read/export preflight after clean acceptance.
 
 The Product Owner canceled the separate validation Site. Gate 1 published only Version 19 successfully, but application rendering was not independently observed and no production endpoint or database operation occurred. Gate 2 remains a distinct production read/export decision. M4's separate acceptance report remains missing.
 
 **Current objective**
 
-Decide whether Engineer may execute Gate 2 through an owner-authenticated Version 19 session: inspect schema status, create and privately retain the structured export, and verify preservation preflight evidence. The later Shopping candidate remains unauthorized for saving or publication.
+Execute the approved Gate 2 through an owner-authenticated Version 19 session: inspect schema status, create and privately retain the structured export, and verify preservation preflight evidence. The later Shopping candidate remains unauthorized for saving or publication.
 
 **Why this is the current priority**
 
@@ -22,14 +22,14 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Success criteria**
 
-- Product Owner explicitly approves or declines Gate 2 after reviewing Gate 1 and its application-rendering limitation.
-- If approved, target/session, write freeze, expected schema baseline, private export storage, export integrity/limitations, and preservation invariants are verified with sanitized evidence.
+- Engineer cleanly accepts the Gate 2 brief and verifies target/session, authority, limits, and usage reserve.
+- Target/session, write freeze, expected schema baseline, private export storage, export integrity/limitations, and preservation invariants are verified with sanitized evidence.
 - Engineer stops before schema activation; Shopping remains unpublished and no production write occurs.
 
 **Expected deliverables**
 
-- Explicit Gate 2 decision.
-- If approved and executed, a sanitized Gate 2 report separating schema-status observation, private export validation, preservation evidence, and explicit no-write state.
+- Gate 2 brief-acceptance report.
+- Sanitized Gate 2 completion/abort report separating schema-status observation, private export validation, preservation evidence, and explicit no-write state.
 
 **Files likely affected**
 
@@ -61,7 +61,7 @@ Engineer estimates up to approximately 50% usage for M1–M3 through existing bl
 ## Ready Next
 
 - Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
-- After explicit approval, execute only M2 Gate 2 owner status/private export/preservation preflight and stop before schema activation.
+- Accept and execute only M2 Gate 2 owner status/private export/preservation preflight and stop before schema activation.
 - M5 requires no further local implementation; any downloadable UI, Site save, production export, migration, or activation needs a new brief and separate gates.
 - M4 is complete locally. Do not start M5 until the Planner entity-scope decision is recorded, its local brief is revised/confirmed eligible, and usage safely clears reserve.
 
