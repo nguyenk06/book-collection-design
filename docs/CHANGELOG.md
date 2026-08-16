@@ -10,6 +10,10 @@
 - Required every queued task to track priority, eligibility, dependencies, state, blocker/question, resume point, answer reference, hotspots, and remaining validation.
 - Added `PD` (**Prompt Designer**) alongside `PE` and `PP`; it outputs the self-contained Designer startup prompt for a replacement session without processing transport or changing state.
 - Product Owner selected Decision A and issued `RUN` for the Gate 3/M4/M6 batch under the recorded priorities, dependencies, park-and-resume rules, production gates, and 30% remaining reserve. Gate 4 and every later production action remain closed.
+- Accepted Gate 3 evidence: after a provisional anonymous-session blocker cleared and all preconditions were revalidated, Engineer accepted the brief and invoked the guarded activation exactly once. The immediate response reported Shopping schema completion and zero foreign-key issues. Engineer stopped before Gate 4; no verification, retry, correction, publication, smoke test, rollback, restore, or destructive action occurred.
+- Closed the M4 transport check as unverifiable from existing evidence. The local completion remains valid, but no formal acceptance transition was inferred or recreated.
+- Parked M6 before acceptance because the cumulative editable M5 source and collision boundaries are unavailable in the current supported Sites context. `RUN` remains active, but no independent approved batch task is currently eligible.
+- Corrected `ARCHITECTURE.md` to reflect that the owner administration surface was saved and published as Version 19 and used for Gates 2–3, while preserving the distinct Gate 4 verification boundary.
 
 Material changes to the project's design, architecture, and documented milestones will be recorded here.
 

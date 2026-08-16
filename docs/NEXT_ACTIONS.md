@@ -6,15 +6,15 @@ This is the active engineering queue. Long-term priorities remain in the [Roadma
 
 ### First Queue-Mode Sprint
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 authorized; M4 transport closure pending; M6 local export-download UI queued independently
+**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–3 complete within bounded evidence; M4 transport gap closed as unverifiable; M6 parked before acceptance on source availability
 
-**Next owner:** `ENGINEER` - run `CB` for Gate 3, invoke the guarded activation no more than once, report, and stop before Gate 4.
+**Next owner:** `EXTERNAL/WAIT` - materialize the correct cumulative editable M5 source in the supported Sites editing context without contaminating Version 19 or the isolated Shopping candidate.
 
-Gate 2 succeeded through the owner-authenticated Version 19 administration surface: production reported the expected pre-upgrade baseline with zero foreign-key issues, and a validated structured export is retained privately. No production write occurred. M4's separate acceptance report remains missing.
+Gate 3 was invoked exactly once through the owner-authenticated Version 19 administration surface. Its immediate response reported Shopping schema completion and zero foreign-key issues; this is not Gate 4 verification. The production sequence stopped before Gate 4. M4's formal acceptance transition could not be verified and was not reconstructed.
 
 **Current objective**
 
-Execute the approved Gate 3/M4/M6 Engineer batch under `RUN`. The Shopping candidate remains unauthorized for saving or publication.
+Resume M6 from its safe pre-`CB` boundary when the correct cumulative editable M5 source becomes available. Keep Gate 4 and the Shopping candidate closed.
 
 **Why this is the current priority**
 
@@ -22,19 +22,13 @@ Automated and Designer convergence evidence cannot substitute for hands-on usabi
 
 **Success criteria**
 
-- Engineer cleanly accepts the Gate 3 brief and reconfirms target/session, write freeze, unchanged expected baseline, private export availability, security controls, exact confirmation, and usage boundary.
-- The guarded upgrade is invoked no more than once and Engineer stops before Gate 4 regardless of result.
-- Proposed batch: Gate 3 once (with existing safeguards), factual M4 acceptance/transport closure, then bounded M6 local export-download UI implementation and full validation.
-- Estimated usage: Gate 3 intake/action/report 4–7 points; M4 existing-evidence closure 1–2; M6 intake, implementation, ordinary remediation, full validation, and transport 19–29; total 24–38. Expected remaining usage is approximately 42–56% from the reported 80%, preserving at least a 12-point cushion above the protected reserve.
-- Expected completion range: Gate 3 completion/abort and M4 closure should finish; M6 should reach validated completion across one coherent run, or a clean partial handoff if unexpected remediation pushes the forecast toward reserve.
-- After `RUN`, Engineer may choose the practical order within dependencies, remediate and validate within accepted scope, and move past an independently blocked stream. Gate 3 must still precede M6 intake and the production sequence must stop before Gate 4.
-- If a task needs clarification, preserve it at a precise safe resume point, record the minimum question and assumptions not made, mark it `WAITING FOR ANSWER`, and continue another independent task. Attach the authoritative answer and revalidate affected assumptions/shared files before resuming; report material rework impact first.
+- Materialize and identify the cumulative editable M5 source through the supported Sites workflow.
+- Before M6 acceptance, verify its exact composition and collision separation from published Version 19 and the isolated Shopping candidate.
+- Resume M6 without reinitialization solely for this parked condition; revalidate dependencies, shared files, usage, and remaining tests first.
+- Preserve the 30% remaining reserve and the existing park-and-resume behavior.
 
 **Expected deliverables**
 
-- Gate 3 brief-acceptance report.
-- Sanitized Gate 3 completion/abort report separating the immediate response from later verification.
-- M4 acceptance/transport report only if existing local evidence proves it; otherwise a concise inability-to-verify report.
 - M6 acceptance and completion/blocker evidence for a local/disposable downloadable catalog-export UI.
 
 **Files likely affected**
@@ -66,11 +60,10 @@ Product Owner reports approximately 80% remaining. Engineer may continue until 3
 
 ## Ready Next
 
-- Obtain the missing M4 brief-acceptance report; do not recreate or infer it in GitHub.
-- Accept and execute/abort only M2 Gate 3, report, and stop the production sequence before Gate 4.
-- Complete the M4 transport check from existing evidence only; do not recreate or infer acceptance.
-- Engineer: run `CB` for Gate 3, preserve its completion/abort report, stop that production sequence before Gate 4, close M4 transport factually, then continue eligible M6 local work.
-- M6 is local/disposable only: no Site save, publication, production export, migration, schema/data change, or activation.
+- External/source owner: make the correct cumulative editable M5 source available in the supported Sites context.
+- Engineer after source availability: revalidate composition/collisions and run `CB` for M6.
+- M6 remains local/disposable only: no Site save, publication, production export, migration, schema/data change, or activation.
+- Gate 4 verification requires a new explicit Product Owner approval and is not part of this continuation.
 
 ## Blocked
 

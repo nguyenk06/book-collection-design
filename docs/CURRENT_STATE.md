@@ -12,7 +12,7 @@
 
 **Production backup gate:** Packet A revision 2 was authorized but automatically aborted before D1 access because no authenticated/supported production D1 operator path was available
 
-**Workflow state:** M1/M3/M4/M5 and M2 Gates 0–2 complete; Gate 3 one-time schema activation authorized and queued; M4 transport lifecycle awaits missing acceptance report
+**Workflow state:** M1/M3/M4/M5 complete; M2 Gates 0–3 complete through the bounded immediate response; M4 transport gap closed as unverifiable; M6 parked before acceptance on unavailable cumulative editable M5 source
 
 **Queue mode:** `ENABLED` — first bounded development sprint
 
@@ -20,7 +20,7 @@
 
 **Usage guidance:** Product Owner reports approximately 80% remaining. Engineer may continue until 30% remains; 30% is the protected reserve and mandatory stopping threshold, not an amount of usage granted. Stop earlier when no eligible work remains or a safe handoff requires it, and preserve sufficient usage for validation, reporting, transport, and a clean stop.
 
-**Engineer execution state:** `AVAILABLE` — Gate 3 is the first eligible `CB`; Engineer may continue the approved batch autonomously
+**Engineer execution state:** `BLOCKED` — M6 is `WAITING FOR ANSWER`/source availability and no other approved batch task remains eligible
 
 ## Current Engineering Workstreams
 
@@ -33,39 +33,39 @@ Progress is a coarse estimate toward each current objective, not validation evid
 | `WS-EXPORT` | Private export-download and validation UX | `[██████████] 100%` | COMPLETE | Completed within accepted brief | Integrated validation passed | No further local work authorized |
 | `WS-CONVERGE` | Integrated admin milestone validation | `[██████████] 100%` | COMPLETE | 44/44 tests, build, and task lint pass | Approved save execution in a future session | No |
 | `WS-SAVE` | Preserve and publish validated administration source | `[██████████] 100%` | COMPLETE | Version 19 publication succeeded | Minimal application rendering remains unverified; no data/schema operation occurred | No |
-| `WS-MIGRATION` | Production status/export and schema activation | `[█████░░░░░] 50%` | QUEUED / AUTHORIZED | Gate 3 approved once under recorded safeguards | Accept Gate 3 brief, invoke no more than once, preserve immediate response, stop before Gate 4 | Yes for Gate 3 only |
+| `WS-MIGRATION` | Production status/export and schema activation | `[███████░░░] 70%` | STOPPED AT GATE | Gate 3 invoked exactly once; immediate response reported completion | Gate 4 verification requires separate explicit approval | No |
 | `WS-SHOP-FLOW` | Mobile Shopping search/scan/status flow | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-PURCHASE` | Purchase capture and history | `[██████████] 100%` | COMPLETE | Implemented and validated locally | Local milestone complete | No further work required |
 | `WS-SHOP-QUALITY` | Shopping quality/accessibility convergence | `[██████████] 100%` | COMPLETE | 50/50 serial tests, focused tests, build, and task lint pass | Local convergence complete | No further work required |
 | `WS-SCANNER-TESTS` | Focused scanner/identifier validation | `[██████████] 100%` | COMPLETE | 18/18 focused tests, 68/68 full serial tests, task lint, and build pass | Local validation complete | No further work required |
 | `WS-PO-SHOP-ENV` | M1 Shopping validation-environment feasibility | `[██████████] 100%` | COMPLETE | Read-only capability investigation accepted | No verified option is runnable, private, isolated, and non-production | Transitioned to M2 blocker |
-| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[████░░░░░░] 40%` | QUEUED / AUTHORIZED | Gates 0–2 complete; Gate 3 approved once | Execute/abort Gate 3 and stop before verification | Yes for Gate 3 only |
+| `WS-PO-SHOP-VALIDATE` | M2 controlled live Shopping release/validation | `[█████░░░░░] 50%` | STOPPED AT GATE | Gates 0–3 complete through the immediate response | Gate 4 verification requires separate explicit approval | No |
 | `WS-CANONICAL-IDS` | M3 canonical book-identifier foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 29/29 focused, 79/79 full serial tests, lint, and build pass | Transition to M4 |
 | `WS-BOOKSHELF` | M4 bounded collection Bookshelf | `[██████████] 100%` | COMPLETE | Verified local completion evidence | 16/16 focused, 81/81 full tests, build/scoped lint pass; acceptance report missing for transport closure | No further implementation |
 | `WS-EXPORT-FIRST` | M5 export-first portability foundation | `[██████████] 100%` | COMPLETE | Local/disposable Attempt 1 complete | 3/3 focused, 19/19 layered, 84/84 full tests, lint/build and no-write verification pass | No further local work |
-| `WS-EXPORT-DOWNLOAD` | M6 local downloadable catalog export UI | `[░░░░░░░░░░] 0%` | QUEUED / ELIGIBLE AFTER TRANSITION | Accepted Import/Export direction and completed M5 foundation | Gate 3 report, factual M4 transport check, source/collision validation | Yes; local/disposable only |
+| `WS-EXPORT-DOWNLOAD` | M6 local downloadable catalog export UI | `[░░░░░░░░░░] 0%` | WAITING FOR ANSWER / SOURCE | Accepted Import/Export direction and completed M5 foundation | Materialize the correct cumulative editable M5 source and verify collision boundaries | No current alternate task |
 
-**Engineer can continue:** YES under `RUN`. Approved batch priority is Gate 3, factual M4 transport closure, then independently eligible M6 local downloadable-export UI. Estimated total usage is 24–38 percentage points, leaving approximately 42–56% remaining from the reported 80%. Stop before Gate 4 and before usage would fall below 30% remaining. Gate 4 and all other production actions remain unauthorized.
+**Engineer can continue:** NO. Gate 3 and the factual M4 transport check are complete. M6 is parked before acceptance because the cumulative editable M5 source and collision boundaries are unavailable, and no other task remains in the approved batch. Queue throttle remains `RUN` so M6 may resume at its safe boundary when the source is available; this does not authorize Gate 4. The environment exposed no fresh numeric usage reading, but Engineer reported the bounded cycle did not approach the protected 30% reserve.
 
 ### Proposed batch task records
 
 | Task | Priority | Eligibility / dependencies | Current state | Blocker or question | Safe resume point | Answer reference | Hotspots | Remaining validation |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| M2 Gate 3 | P1 | `RUN`; all Gate 3 preconditions | QUEUED / AUTHORIZED ONCE | None before `CB`; abort if a precondition fails | Before brief acceptance and precondition checks | Product Owner Decision A, 2026-08-15 | Version 19 production administration surface; serialize before M6 | Immediate response and sanitized completion/abort report only; Gate 4 excluded |
-| M4 transport closure | P2 | Gate 3 completion/abort report; existing evidence only | QUEUED | Evidence may be insufficient | Before existing-evidence inspection | Product Owner Decision A, 2026-08-15 | Local transport artifacts only | Factual acceptance report or inability-to-verify report |
-| M6 local export UI | P3 | `RUN`; Gate 3 stopped before Gate 4; M4 reported; source/collision checks | QUEUED | None; park any later task-specific question | Before `CB`, source composition, and collision checks | Product Owner Decision A, 2026-08-15 | Cumulative M5 source; preserve Version 19 and isolated Shopping candidate | Focused/full tests, no-write proof, lint, build, diff check, transport report |
+| M2 Gate 3 | P1 | Completed | COMPLETE / STOPPED BEFORE GATE 4 | Gate 4 closed | After Gate 3 report; do not resume production sequence | Product Owner Decision A and Gate 3 completion report, 2026-08-15 | Version 19 production administration surface | Immediate-response evidence complete; Gate 4 excluded |
+| M4 transport closure | P2 | Completed from existing evidence only | COMPLETE / UNVERIFIABLE | Formal acceptance artifact never existed in available transport | Closed with inability-to-verify report; do not reconstruct | M4 inability-to-verify report, 2026-08-15 | Local transport artifacts only | None; limitation permanently recorded without inferring acceptance |
+| M6 local export UI | P3 | Gate 3/M4 transitions complete; source/collision checks still required | WAITING FOR ANSWER / SOURCE | Correct cumulative editable M5 source unavailable | Before `CB`, source composition, and collision checks | PENDING supported source availability | Cumulative M5 source; preserve Version 19 and isolated Shopping candidate | Focused/full tests, no-write proof, lint, build, diff check, transport report |
 
 After `RUN`, a task needing clarification becomes `WAITING FOR ANSWER` at its recorded safe resume point; it does not stop independent tasks. Answers attach to the parked task, affected assumptions/shared files are revalidated before resumption, and material rework impact is reported first.
 
 **Current Planner decisions:** None. Product Owner selected Decision A and issued `RUN` for the Gate 3/M4/M6 batch; this retains rather than broadens the prior one-time Gate 3 authority.
 
-**Next production gate:** Gate 3 is authorized but unexecuted: one guarded additive Shopping schema activation attempt. Gate 4 verification, corrective write/retry, Shopping publication, live validation/smoke, and recovery remain closed.
+**Next production gate:** Gate 4 verification is closed pending separate explicit Product Owner approval. Gate 3 cannot be retried. Corrective writes, Shopping publication, live validation/smoke, and recovery remain closed.
 
-**Resume condition:** Satisfied. Engineer may run `CB` for Gate 3 and proceed through the approved batch under its dependencies and park-and-resume rules.
+**Resume condition:** Materialize the correct cumulative editable M5 source in the supported Sites editing context, then Engineer revalidates source composition and collision boundaries and reruns `CB` for M6. No reinitialization is required solely because M6 is parked.
 
 ## Staged continuation
 
-Six milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–2 are complete. Gate 3 is authorized and queued. M4 still requires its missing acceptance report before transport closure; M6 local downloadable-export UI is queued independently after the Gate 3/M4 transition.
+Six milestones are defined in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5 and M2 Gates 0–3 are complete within their bounded evidence layers. M4's missing formal acceptance transition was factually closed as unverifiable rather than reconstructed. M6 is parked before acceptance on source availability.
 
 ## Summary
 
@@ -222,4 +222,4 @@ Unpublished Site Version 17 preserves validated Business and Purchase persistenc
 
 ## Next milestone
 
-M2 Gates 0–2 are complete. Production remains at the expected pre-upgrade baseline and a validated structured export is retained privately, with the explicit limitation that it is not a D1 snapshot and excludes R2 bytes. Product Owner authorized Gate 3 once: invoke the guarded additive activation no more than once, preserve the immediate response, and stop before Gate 4 regardless of outcome. No verification, correction, retry, Shopping publication, live checklist, smoke testing, rollback, restore, or destructive recovery is authorized.
+M2 Gates 0–3 are complete within their bounded evidence layers. A validated structured export is retained privately, with the explicit limitation that it is not a D1 snapshot and excludes R2 bytes. Gate 3 was invoked exactly once; its immediate response reported Shopping schema completion and zero foreign-key issues. This is not Gate 4 verification or preservation proof. No verification, correction, retry, Shopping publication, live checklist, smoke testing, rollback, restore, or destructive recovery is authorized.
