@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-16 — Gate 4 stopped evidence-incomplete; preservation path verified
+
+- Accepted Gate 4 evidence that the owner-authenticated Version 19 read-only surface independently reports Shopping schema complete and zero foreign-key issues, agreeing with Gate 3.
+- Gate 4 automatically stopped incomplete because that surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons; no mismatch, retry, export, or write occurred.
+- Accepted Sites feasibility evidence that an exact cumulative source can be preserved as an unpublished saved version after commit/push/package, but no runnable unpublished preview exists and every deployment creates a production URL.
+- Retained Shopping and M3–M6 as one cumulative candidate because shared schema, API, page, style, authentication/runtime, and migration surfaces make manual splitting a reconstruction risk.
+- Added independent Planner decisions for a preservation-only save and a bounded current private export to complete Gate 4 evidence; no new brief or operational authority was created.
+
 ## 2026-08-16 — Next read-only batch approved and briefed under drain
 
 - Planner/Product Owner approved Gate 4 read-only verification and the independent read-only checkpoint/source-preservation feasibility investigation (`1: A; 2: A`).

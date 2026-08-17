@@ -6,8 +6,8 @@ The database-first assessment validated the priority order. Enabling foundations
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Version 19 published and Gate 3 immediate activation response complete | Separately gated Gate 4 verification | Medium | Activation is not independently verified; export is not a D1 snapshot and excludes R2 bytes; book-to-collection foreign key deferred |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local UI complete; controlled live sequence stopped after Gate 3 | Gate 4 verification, Shopping publication, live validation/smoke | Medium-large | Gate 4 and every later production gate remain unexecuted |
+| 0 | Database integrity and Shopping persistence foundation | Partial; Gate 4 independently confirmed schema-complete and zero-FK signals | Complete preservation evidence through a separately approved read-only path | Medium | Target price/counts/identities/preservation remain unverified; export is not a D1 snapshot and excludes R2 bytes |
+| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local UI complete; controlled live sequence stopped at incomplete Gate 4 | Preservation evidence, Shopping publication, live validation/smoke | Medium-large | Gate 4 preservation evidence and every later production gate remain incomplete/unexecuted |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial; canonical identifier foundation complete locally | Future candidate workflow and user-facing matching | Medium | Production unchanged; fuzzy candidate matching deferred |
 | 3 | [Bookshelf](BOOKSHELF.md) | Bounded first release complete locally; user checkpoint pending | Safe validation environment and Product Owner outcome before activation | Medium | Unsaved/unpublished; checkpoint environment blocked |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first export foundation and owner-only downloadable UI complete locally | Product Owner checkpoint and separately gated activation | Medium-large | Unsaved/unpublished; no production catalog export or complete backup; import remains unsafe/immediate |
@@ -32,15 +32,15 @@ Continue the controlled live Shopping release sequence in ADR-0012 without a sep
 - Retain the isolated, locally validated Shopping release candidate.
 - Retain published Version 19 as the owner-authenticated administration path.
 - Preserve the private Gate 2 structured export and its documented limitations.
-- Treat the Gate 3 immediate activation response as distinct from the still-unperformed Gate 4 verification.
+- Treat the Gate 3 immediate activation response as distinct from Gate 4's later independent but incomplete verification.
 - Keep Gate 4 verification and Shopping publication independently approved and evidenced.
 - Run the desktop/mobile checklist and post-publication smoke review on the live Site.
 
-Saving Version 17 does not mark Shopping released or active in production. Version 19 administration is published, status/export is complete, and Gate 3 reported activation success; Gate 4 verification and final Shopping publication remain separate closed gates.
+Saving Version 17 does not mark Shopping released or active in production. Version 19 administration is published, Gate 3 reported activation success, and Gate 4 independently confirmed schema-complete/zero-FK signals but not preservation invariants; final Shopping publication remains a separate closed gate.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within their bounded evidence layers, and the cycle is drained. Gate 3 was invoked exactly once and cannot be retried; its immediate success response is not Gate 4 verification. The [proposed next batch](NEXT_BATCH_PLAN.md) awaits Planner/Product Owner review, and every later gate remains sequential, closed, and unauthorized.
+The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within their bounded evidence layers. Gate 4 is independently confirmed only for schema-complete/zero-FK signals and remains incomplete for preservation evidence. The [read-only batch report](NEXT_BATCH_PLAN.md) now awaits two narrow Planner decisions, and every later gate remains sequential, closed, and unauthorized.
 
 ## Deferred
 

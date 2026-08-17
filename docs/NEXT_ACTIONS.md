@@ -6,12 +6,12 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. M6 is locally validated, unsaved, and unpublished.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the completed cycle is preserved and no new intake is allowed before authorization.
-- **Engineer state:** `PAUSED`; the approved local batch is complete and no eligible brief remains.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` to activate the approved P1/P2 read-only batch.
-- **Usage:** Approximately 50% remains. The proposed 8–12 point batch expects 38–42% remaining; 30% is the protected floor, not a consumption target.
+- **Throttle:** `RUN`; no eligible brief remains after P1/P2, so change to `DRAIN` at the next command boundary.
+- **Engineer state:** `STOPPED AT GATE`; P1 is evidence-incomplete and P2 is complete.
+- **Next owner:** `PLANNER` — decide preservation-only save and the separate Gate 4 evidence path.
+- **Usage:** Approximately 50% was last reported before P1/P2; 38–42% was projected afterward but is not a fresh reading. Preserve the 30% floor.
 
-Gate 3 was invoked exactly once. Its immediate response reported Shopping schema completion and zero foreign-key issues. The sequence stopped before Gate 4, so production schema and preservation invariants remain unverified. Gate 3 cannot be retried.
+Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
 
 ## M6 locally complete
 
@@ -25,18 +25,21 @@ Validation passed:
 
 M6 remains in the cumulative dirty local source. Saved and published Site versions remain Version 19. A later Product Owner checkpoint and any preview/save/activation remain separately gated.
 
-## Proposed next batch
+## Completed P1/P2 batch
 
-See [Approved Next Execution Batch](NEXT_BATCH_PLAN.md). Final priority is:
+See [Completed Read-Only Execution Batch](NEXT_BATCH_PLAN.md).
 
-1. P1 M2 Gate 4 read-only production verification: 3–5 points.
-2. P2 read-only Sites checkpoint/preview feasibility plus candidate composition/preservation assessment: 5–7 points.
+1. P1 Gate 4 reached its automatic-stop boundary after coarse schema/FK confirmation; preservation evidence remains incomplete.
+2. P2 established that exact unpublished saved-version preservation is supported after commit/push/package, but no runnable unpublished preview exists.
 
-Shared overhead yields an estimated 8–12 points total. No fallback implementation is proposed. Both briefs are queued but ineligible under `DRAIN`; only explicit `!run` activates intake. P2 follows P1's completion or automatic-stop report unless P1 identifies a cross-cutting safety or identity conflict.
+Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot select independent dirty-worktree features, and splitting the shared schema/API/page/style/migration composition would require manual reconstruction and renewed collision validation.
 
-## Closed production gate
+## Pending decisions and closed gates
 
-Gate 4 verification requires separate explicit Product Owner approval. It is not part of M6 or the active continuation. No verification, correction, retry, Shopping publication, live checklist, smoke test, rollback, restore, or destructive recovery is currently authorized.
+- Decide whether to authorize one bounded private read-only Version 19 bridge export to compare current preservation evidence with Gate 2, or retain Gate 4 as incomplete.
+- Independently decide whether to preserve the exact cumulative source as an unpublished saved version or continue preserving the dirty source only.
+- A saved version is not runnable and does not authorize a checkpoint. No unpublished preview exists in supported tooling.
+- Corrective write, Gate 3 retry, migration, deployment/publication, Shopping publication, live checklist, smoke test, restore, rollback, and destructive recovery remain closed.
 
 ## Other workstreams
 

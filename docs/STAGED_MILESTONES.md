@@ -4,9 +4,9 @@
 
 **Execution budget:** Approximately 50% remains; 30% remaining is the protected reserve and mandatory stopping threshold. The proposed next batch is 8–12 points and should finish around 38–42%. Stop earlier when an estimate overruns, no eligible work remains, or a safe handoff requires it.
 
-**Queue state:** Throttle `DRAIN`; approved local batch complete through M6; Engineer paused; next read-only P1/P2 briefs are queued but ineligible until explicit `!run`; later Site and production gates remain closed
+**Queue state:** Throttle `RUN`; P1 stopped incomplete on evidence capability and P2 completed; no eligible brief remains; `!drain` recommended; later Site and production gates remain closed
 
-**Approved next batch estimate:** 8–12 percentage points total from approximately 50% remaining, for an expected finish at approximately 38–42%. This range includes intake, collision checks, execution, ordinary remediation, full relevant validation, evidence, transport, and clean stopping capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md). No activity is executable before explicit `!run` and individual brief acceptance.
+**Completed read-only batch estimate:** The batch began from approximately 50% with a projected finish around 38–42%; no fresh post-batch reading is available. P1 stopped automatically and P2 completed without Site/source mutation. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -82,7 +82,7 @@ Future parallel milestones should remain independently promotable. Completion in
 - **Stop/escalate:** Missing external-ID contract; Purchase portability ambiguity; pressure to omit required data silently; mutation/restore requirement; sensitive leakage; integrity mismatch; schema migration; or production access.
 - **Completion/handoff:** Future local reports separate format implementation, validation, artifact handling, Site state, and production state. Import remains a later decision and brief.
 
-M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 published only Version 19 administration, and Gate 2 verified the expected pre-upgrade baseline, zero foreign-key issues, and a privately retained structured export without a production write. Gate 3 was invoked exactly once; its immediate response reported completion and the sequence stopped before Gate 4. That response is not verification. Every later gate remains closed. M4's missing formal acceptance transition was factually closed as unverifiable rather than inferred or recreated.
+M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 published only Version 19 administration, and Gate 2 verified the expected pre-upgrade baseline, zero foreign-key issues, and a privately retained structured export without a production write. Gate 3 was invoked exactly once. Gate 4 independently confirmed schema-complete and zero-FK signals, then stopped incomplete because the authorized surface could not expose preservation invariants. Every later gate remains closed. M4's missing formal acceptance transition was factually closed as unverifiable rather than inferred or recreated.
 
 ## Milestone 6 — Local downloadable catalog export UI
 

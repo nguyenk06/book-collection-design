@@ -98,7 +98,7 @@ The first responsibilities to move out of `books` are purchases, alternate ident
 
 ## Verified Saved Implementation
 
-The Shopping persistence/API foundation is implemented, locally validated, and preserved in unpublished Site Version 17. Its additive migration is packaged in that saved version, but saving did not execute the migration. No production database operation or verification was performed; production remains on the Version 16 schema.
+The Shopping persistence/API foundation is implemented, locally validated, and preserved in unpublished Site Version 17. Saving Version 17 did not execute its packaged migration. Gate 3 later invoked the Version 19 bridge activation exactly once; Gate 4 independently confirmed schema-complete and zero-FK signals but could not expose the target-price, count, identity, and preservation comparisons required for full verification.
 
 | Table | Locally implemented change |
 | --- | --- |
