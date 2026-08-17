@@ -2,6 +2,8 @@
 
 This repository is the permanent source of truth for the Book Collection System's design, architecture, roadmap, and major decisions. It is a lightweight, Markdown-first documentation project; it is not the application.
 
+> [📊 View the Project Dashboard](docs/PROJECT_DASHBOARD.md) — concise visual progress, milestone status, and remaining release path.
+
 ## Relationship to the application
 
 The application is maintained in the CYOA Collection ChatGPT Site implementation workspace. This repository describes intended behavior and architectural direction. Implementation-specific details belong here only when they clarify verified current state or constrain future design.
@@ -15,10 +17,11 @@ Site Version 19 is the published owner-authenticated administration surface; Ver
 Planner should read, in order:
 
 1. [Planner Inbox](docs/PLANNER_INBOX.md)
-2. [Current State](docs/CURRENT_STATE.md)
-3. [Next Actions](docs/NEXT_ACTIONS.md)
-4. [Changelog](docs/CHANGELOG.md)
-5. [Roadmap](docs/ROADMAP.md)
+2. [Project Dashboard](docs/PROJECT_DASHBOARD.md)
+3. [Current State](docs/CURRENT_STATE.md)
+4. [Next Actions](docs/NEXT_ACTIONS.md)
+5. [Changelog](docs/CHANGELOG.md)
+6. [Roadmap](docs/ROADMAP.md)
 
 Temporary briefs and handoffs are evidence and transport stored only in the external local workspace; they are never GitHub content. Planner communicates through the Designer-owned Planner Inbox and should not need local transport artifacts.
 
@@ -42,7 +45,7 @@ Implementation changes should be made in the Site implementation workspace. Majo
 | Area | Document |
 | --- | --- |
 | Direction | [Planner Inbox](docs/PLANNER_INBOX.md) · [Project Vision](docs/PROJECT_VISION.md) |
-| Delivery | [Roadmap](docs/ROADMAP.md) · [Staged Milestones](docs/STAGED_MILESTONES.md) · [Next Actions](docs/NEXT_ACTIONS.md) · [Backlog](docs/BACKLOG.md) · [Current State](docs/CURRENT_STATE.md) · [Changelog](docs/CHANGELOG.md) |
+| Delivery | [Project Dashboard](docs/PROJECT_DASHBOARD.md) · [Roadmap](docs/ROADMAP.md) · [Staged Milestones](docs/STAGED_MILESTONES.md) · [Next Actions](docs/NEXT_ACTIONS.md) · [Backlog](docs/BACKLOG.md) · [Current State](docs/CURRENT_STATE.md) · [Changelog](docs/CHANGELOG.md) |
 | Architecture | [Architecture](docs/ARCHITECTURE.md) · [Database](docs/DATABASE.md) |
 | Core workflows | [Shopping Mode](docs/SHOPPING_MODE.md) · [Scanner and Matching](docs/SCANNER_AND_MATCHING.md) · [Bookshelf](docs/BOOKSHELF.md) |
 | Data workflows | [Import and Export](docs/IMPORT_EXPORT.md) · [AI Review](docs/AI_REVIEW.md) · [Asset Management](docs/ASSET_MANAGEMENT.md) · [Tags](docs/TAGS.md) |

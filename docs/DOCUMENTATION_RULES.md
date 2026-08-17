@@ -81,10 +81,13 @@ Generalize operational details whenever practical.
 Planner uses permanent design documentation rather than raw handoffs or implementation chat as the primary project visibility layer:
 
 1. [PLANNER_INBOX.md](PLANNER_INBOX.md) — what requires a decision.
-2. [CURRENT_STATE.md](CURRENT_STATE.md) — what is true now.
-3. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — what should happen next.
-4. [CHANGELOG.md](CHANGELOG.md) — which major milestones and state transitions occurred.
-5. [ROADMAP.md](ROADMAP.md) — where the project is going.
+2. [PROJECT_DASHBOARD.md](PROJECT_DASHBOARD.md) — concise derived visual progress; coarse estimates only.
+3. [CURRENT_STATE.md](CURRENT_STATE.md) — what is true now and the exact operational authority.
+4. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — what should happen next.
+5. [CHANGELOG.md](CHANGELOG.md) — which major milestones and state transitions occurred.
+6. [ROADMAP.md](ROADMAP.md) — where the project is going.
+
+The dashboard never replaces Current State, evidence, briefs, or gate reports. Designer updates it after accepting Engineer completion evidence, changing a milestone state, or changing roadmap scope, without deriving false precision from task counts.
 
 Temporary handoffs are local transport and evidence. They must not be committed to this repository and do not replace these documents.
 

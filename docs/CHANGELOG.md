@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — Visual project dashboard added
+
+- Added a GitHub-native canonical high-level dashboard with separate coarse estimates for core build completion, release readiness, and broader roadmap completion.
+- Added M1–M6 status, a Mermaid release-path view, later-capability status, and maintenance rules while keeping Current State authoritative for exact gates, ownership, blockers, usage, and evidence.
+- Added prominent README and Current State links without JavaScript, automated percentages, external badges, or a new build system.
+- Recorded a richer GitHub Pages KPI view only as an optional future documentation enhancement.
+
 ## 2026-08-16 — Preservation/export corrected to one ordered conditional batch
 
 - Corrected the hard split: one `!run` activates the P1 preservation then P2 private-export sequence, with normal highest-priority completion before the next intake.

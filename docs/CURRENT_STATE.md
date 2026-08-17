@@ -2,6 +2,8 @@
 
 **Last reviewed:** 2026-08-16
 
+For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
+
 ## Authoritative snapshot
 
 - **Published Site:** Version 19, the owner-authenticated administration surface.
