@@ -73,7 +73,7 @@ Keep three independent axes visible and enforceable:
 2. **Global write state:** Locked or Unlocked.
 3. **Temporary test access:** permission to view one unreleased visual variant.
 
-An admin-looking view does not grant mutation authority. Public and administrative layouts may be evaluated while writes remain locked. Show a compact persistent state such as `Read-only testing · New admin view`, with expanded explanation available without dominating content.
+An admin-looking view does not grant mutation authority. Public views never allow adding, editing, or deleting Library data; those controls belong to the authenticated owner. Public and administrative layouts may be evaluated while writes remain locked. Show a compact persistent state such as `Read-only testing · New admin view`, with expanded explanation available without dominating content.
 
 ### Global write lock
 
@@ -92,7 +92,7 @@ The mutation inventory to verify includes at minimum:
 - Schema activation, migrations, repair, maintenance, and other administrative writes.
 - Any API, route action, background job, alternate method, or legacy endpoint capable of the same mutations.
 
-Only the authenticated owner can unlock writes. Unlocking requires deliberate confirmation and must be auditable enough to diagnose state. Validation must enumerate all mutation endpoints/actions, prove locked rejection for owner and non-owner paths, prove reads remain available, check direct HTTP and alternate-method bypasses, verify lock visibility across responsive modes, and confirm restart/concurrency behavior appropriate to the storage design. The lock cannot be a client flag, hidden control, process-local assumption, or route-specific exception list with unknown coverage.
+The global lock is a conditional visual-testing safeguard, especially for administration or other owner-mode flows; it is not a routine reason to shut down normal production writes. Sei must establish and verify the lock before publishing an authorized testing build. That build remains locked across restarts with no timeout or automatic unlock. Removing the lock requires the next separately controlled publication after testing; access to one build must not silently change another. Only the authenticated owner can authorize an unlocked build. Validation must enumerate all mutation endpoints/actions, prove locked rejection for owner and non-owner paths, prove reads remain available, check direct HTTP and alternate-method bypasses, verify lock visibility across responsive modes, and confirm restart/concurrency behavior appropriate to the storage design. The lock cannot be a client flag, hidden control, process-local assumption, or route-specific exception list with unknown coverage. Sei may determine which owner controls are clearer as visible-disabled versus hidden, subject to accessible state communication and no server bypass.
 
 ### Temporary visual-testing access
 
@@ -101,12 +101,14 @@ Owner-generated temporary codes may expose one unreleased presentation variant, 
 Required properties:
 
 - Server-side validation and hashed code storage.
-- Expiration, immediate revocation, rate-limited attempts, and variant-specific scope.
+- A 24-hour expiration window, immediate revocation, rate-limited attempts without a hard total-attempt lockout, and variant-specific scope.
 - Owner-visible active-code inventory without recoverable plaintext codes after creation.
 - No secrets embedded in client bundles, URLs, logs, or documentation.
 - Explicit association with view mode and locked/unlocked state.
 - Documented disablement, data-retention, and removal path after testing.
 - Tests for expired, revoked, wrong-variant, replay/rate-limit, malformed, and privilege-escalation attempts.
+
+The current testers are agents, not invited external people. Before an authorized testing round, Sei hands the generated code to the Product Owner through the approved private channel; the Product Owner controls distribution to the testing agent. Creating or handing off a code does not authorize publication or writes. External-user privacy/onboarding policy is deferred until external testing is actually proposed.
 
 ## Application modes
 
@@ -146,9 +148,11 @@ Desktop may use a broader workspace with scan/search, current decision/detail, r
 
 A session may focus on CYOA, Redwall, the whole Library, or a future multi-collection trip. Launching from CYOA scopes matching, owned/missing state, issue order, alternate numbering, edition relevance, and target price to CYOA. Global launch searches the Library, suggests known collection relationships, and permits general intake where no relationship is known. Library membership, collection assignment, and session focus remain independent.
 
+Recommendation rules have global defaults, with collection-specific rules taking priority. Missing-book recommendations consider the applicable ideal/target cost and the collection's trended average spend per Book. A duplicate scan compares available cover, edition/condition evidence, and notes to determine whether a meaningful upgrade is indicated. `Buy`, `Skip`, and `Upgrade` remain deterministic summaries of the underlying evidence; uncertain or missing evidence must be shown and must not be overstated. Sei must reconcile the exact existing rules and supported inputs before estimating or proposing thresholds.
+
 ## Themes and personalization
 
-Initial themes are the existing warm light direction and a purpose-designed dark theme that feels like the same library under different lighting. Support system preference and saved user choice. Define semantic tokens for navigation, shelves, books, cards, inputs, charts, status indicators, dialogs, administration, and Shopkeeper, including focus, disabled, locked, warning, success, and destructive states.
+Initial themes are the existing warm light direction and a purpose-designed dark theme that feels like the same library under different lighting. Support system preference and saved user choice. For the current single-user product, use the simplest supported editable JSON-backed or equivalent preference store that can change without republishing. A database preference table is a later option if multi-user support justifies it. Define semantic tokens for navigation, shelves, books, cards, inputs, charts, status indicators, dialogs, administration, and Shopkeeper, including focus, disabled, locked, warning, success, and destructive states.
 
 Custom palettes are later work. Advanced personalization inspired by early personal websites may eventually expose controlled color, typography, backgrounds, imagery, and possibly sanitized custom CSS. Arbitrary raw HTML or JavaScript is excluded.
 
@@ -188,12 +192,12 @@ A low-priority optional, dismissible, primarily mobile personality layer may rea
 ## Dependencies and collision boundaries
 
 - **Version 20 cumulative candidate:** shared application page, global styles, schema, API, authentication/runtime, Shopping, Bookshelf, and ordered migration surfaces require exact pre-estimate and pre-implementation composition checks.
-- **Collection relationships:** current collection/series behavior is not blanket authority for many-to-many membership, genres, pins, or session scope persistence.
+- **Collection relationships:** Product Owner expects the current collection model to be sufficient for the initial direction, but Sei must verify that assumption. Current collection/series behavior is not blanket authority for new many-to-many membership, genres, pins, or session-scope persistence if inspection shows missing capability.
 - **Tags:** remain future schema and interaction work; visual filters may not imply persistence.
 - **Authentication:** Public/Tester/Administrator presentation, owner authorization, temporary codes, and write state need separate server models.
 - **Write enforcement:** requires complete server mutation inventory and likely shared enforcement below individual UI actions.
 - **Responsive behavior:** shell, bottom navigation, dialogs/bottom sheets, scan/photo capture, sticky actions, large bookcases, keyboard, touch, and viewport changes require explicit coverage.
-- **Themes/preferences:** semantic tokens can precede saved preference persistence; storage location and anonymous/tester behavior remain decisions.
+- **Themes/preferences:** semantic tokens can precede persistence. Prefer a simple editable JSON-backed/equivalent single-user store without republishing; defer a database table until multi-user needs justify it.
 - **Migration/release gates:** visual design authority does not authorize schema work, saving, previewing, deploying, publishing, or production validation.
 
 ## Estimable implementation phases
@@ -203,29 +207,29 @@ Ranges below are Designer planning estimates in **Engineer effort points**, not 
 | Order | Phase | Scope and safe stop | Dependencies / collisions | Data and security | Responsive validation | Independence | Designer range |
 | ---: | --- | --- | --- | --- | --- | --- | ---: |
 | 1 | **A — IA and responsive shell** | My Library naming, Library-first routing, desktop/mobile header, bottom navigation, contextual row, footer. Stop with routes and shell usable behind current data/actions. | Existing root page, global styles, navigation, Bookshelf/Shopping entry points, Version 20 composition. | Prefer no schema; preserve auth boundaries and do not expose owner tools. | Desktop widths, small/large mobile, keyboard, focus/order, orientation, safe areas. | Foundation for E–G; can precede B–D if current actions remain unchanged. | 5–8 |
-| 2 | **B — Global write lock** | Server lock model, shared enforcement, state treatment, owner-confirmed unlock, exhaustive mutation tests. Stop locked by default in testing with verified reads/no bypass. | Complete mutation inventory, auth helper, APIs/actions, migrations/admin, background paths. | Likely durable state/config decision; highest security risk; no client-only design. | Visible/understandable in every mode; disabled states and direct-request tests. | Technically separable but required before meaningful admin/public visual testing. | 8–13 |
-| 3 | **C — Temporary visual-test access** | Scoped expiring codes, hashed storage, revocation, rate limiting, variant selection/inventory/removal. Stop with one harmless read-only variant end to end. | B lock semantics, auth/session/routing, deployment/platform capability. | New secret-like records likely require schema/storage; threat model and log hygiene required. | Code entry, errors, expiry, revocation, variant state on mobile/desktop. | Independent of visual phases after A/B boundaries; may be deferred if no supported unpublished/testing route exists. | 8–13 |
-| 4 | **D — Theme foundation** | Semantic warm-light/dark tokens, system preference, user choice, all current components. Stop when both themes pass contrast and regression review without redesigning every page. | Global CSS/current colors, charts, dialogs, admin and Shopkeeper states. | Preference storage decision; avoid sensitive/security state encoded only by color. | System changes, persistence, flash prevention, contrast, forced colors, mobile OLED/readability. | Can proceed after A; coordinate with E–H to avoid rework. | 5–8 |
+| 2 | **B — Global write lock** | Server lock model, shared enforcement, state treatment, exhaustive mutation tests. Stop with an authorized testing build locked across restarts and verified reads/no bypass. | Complete mutation inventory, auth helper, APIs/actions, migrations/admin, background paths. | Conditional test-build safeguard; highest security risk; no client-only design. Removal occurs only through a later controlled publication. | Visible/understandable in every mode; Sei selects visible-disabled versus hidden controls; direct-request tests required. | Technically separable but required before meaningful admin visual testing. | 8–13 |
+| 3 | **C — Temporary visual-test access** | Variant-scoped 24-hour codes, hashed storage, revocation, rate limiting without hard attempt cap, inventory/removal, private handoff to Product Owner. Stop with one harmless agent-only read-only variant end to end. | B lock semantics, auth/session/routing, deployment/platform capability. | Secret-like records likely require supported storage; threat model and log hygiene required. No external testers now. | Code entry, errors, expiry, revocation, variant state on mobile/desktop. | Independent of visual phases after A/B boundaries; may be deferred if no supported testing route exists. | 8–13 |
+| 4 | **D — Theme foundation** | Semantic warm-light/dark tokens, system preference, user choice, all current components. Stop when both themes pass contrast and regression review without redesigning every page. | Global CSS/current colors, charts, dialogs, admin and Shopkeeper states. | Use simplest supported editable single-user JSON/equivalent preference storage; database table deferred for multi-user. Avoid security state encoded only by color. | System changes, persistence, flash prevention, contrast, forced colors, mobile OLED/readability. | Can proceed after A; coordinate with E–H to avoid rework. | 5–8 |
 | 5 | **E — Library home and copy** | Personal-library home, pinned/favorite presentation, concise summaries, recent/missing/purchase modules, empty/copy/card cleanup. Stop with existing-data modules only. | A shell, current queries, covers, collection progress definitions, pin persistence decision. | May be read-only if pinning is display-only/static; persisted pins need a later data contract and B enforcement. | Loading/empty/error, narrow cards, touch targets, screen-reader summary order. | Can use existing data independently; defer unsupported pins/relationships. | 5–8 |
-| 6 | **F — Standing collection bookcase** | Complete vertical bookcase, stable gaps/order, explicit collection switching, bottom-sheet detail, Gallery/List alternatives. Stop with one CYOA case and regression-safe alternate views. | Existing M4 page/styles/tests, canonical/alternate numbering, large-list performance, A/D. | No synthetic Books; collection relationship changes are separate schema scope. | 184-item mobile scroll, keyboard/focus, virtualization if needed, resize/return context, reduced motion. | Builds on M4; can precede G after A and order rules are verified. | 8–13 |
-| 7 | **G — Responsive Shopkeeper** | Rename/presentation transition, mobile Buy/Skip/Upgrade decision, capture/search, sticky action, next-item flow, desktop workspace, collection session scope. Stop with one verified deterministic scope and current mutation semantics. | Existing Shopping/M3/scanner/APIs/styles, target price, edition confidence, A/B/D, collection relationships. | Session-scope persistence and general intake need decisions; all purchase/intake writes honor B. | Camera/photo/manual fallbacks, thumb reach, keyboard desktop, rapid repeat, errors, locked states. | UI can start with existing CYOA/global scopes; multi-collection trips remain future. | 8–13 |
+| 6 | **F — Standing collection bookcase** | Complete vertical CYOA bookcase, stable gaps/order, explicit collection controls, bottom-sheet detail, Gallery/List alternatives; retain generic architecture for later collections. Stop with CYOA and regression-safe alternate views. | Existing M4 page/styles/tests, canonical/alternate numbering, large-list performance, A/D. | Assume current model is sufficient only after Sei verifies it; no synthetic Books or unapproved relationship schema. | 184-item mobile scroll, keyboard/focus, virtualization if needed, resize/return context, reduced motion. | Builds on M4; can precede G after A and order/model rules are verified. | 8–13 |
+| 7 | **G — Responsive Shopkeeper** | Rename/presentation transition, deterministic mobile Buy/Skip/Upgrade decision, capture/search, sticky action, next-item flow, desktop workspace, collection session scope. Stop with verified CYOA/global defaults and current mutation semantics. | Existing Shopping/M3/scanner/APIs/styles, target and trended-average cost, duplicate cover/edition/condition/notes evidence, A/B/D, collection relationships. | Collection rules override global defaults; all purchase/intake writes honor B. Sei verifies current model and rule inputs. | Camera/photo/manual fallbacks, thumb reach, keyboard desktop, rapid repeat, errors, locked/uncertain states. | Start with CYOA/global scopes; multi-collection trips remain future. | 8–13 |
 | 8 | **H — Ambient effects** | Tokenized sparse effects and purposeful transitions with preference and reduced-motion fallback. Stop with effects globally disableable and performance budget passing. | Stable A/D/E–G surfaces; avoid collision with bookcase rendering. | Preference storage only; no external tracking/assets by default. | Reduced motion, mobile auto-reduction, battery/performance, focus/readability. | Independent polish after stable UI; first item to park. | 3–5 |
 
 Recommended order is A → B → C or D → E → F → G → H. C may move after D–G if no supported testing access path exists, but public/admin visual evaluation must not proceed under an ambiguous write state. Each phase receives its own later authorization and may be split after Sei's estimate. No phase is currently executable.
 
-## Open Product Owner decisions
+## Resolved Product Owner direction
 
-These choices are deliberately unresolved:
+- Public views are read-only; only the authenticated owner receives Library mutation controls.
+- The server lock is conditional for testing administration/owner-mode visuals. It persists across restarts until a later controlled publication removes it; there is no timeout or routine production lock.
+- Agent-only visual-test codes expire after 24 hours, are rate-limited without a hard attempt cap, and are handed privately by Sei to the Product Owner before the testing round.
+- Single-user preferences use the simplest supported editable JSON-backed/equivalent store that avoids republishing; a database table is reserved for future multi-user needs.
+- Shopkeeper uses global deterministic rules with collection overrides. Target/ideal and trended average collection spend inform missing-book recommendations; duplicate upgrade evaluation uses cover, edition/condition evidence, and notes.
+- Phase F focuses on CYOA while retaining a generic later-collection architecture.
+- The current collection model is presumed sufficient but must be verified by Sei; missing capability does not authorize schema reconstruction.
+- Sei selects visible-disabled versus hidden locked owner controls while retaining accessible state and server enforcement.
+- Testers are agents only. External tester privacy/onboarding is not current scope.
 
-1. Which My Library views are genuinely public versus merely owner-visible presentation variants?
-2. Should the durable global write lock default to locked after deploy/restart, and is an automatic relock timeout required?
-3. What maximum lifetime, attempt limit, and audience model should temporary test codes use?
-4. Where should theme, ambient-effects, pinned collections, and Shopkeeper session preferences persist for owner, tester, and anonymous contexts?
-5. Does first-release Shopkeeper expose only deterministic `Buy/Skip/Upgrade` labels, and what exact rules produce each label?
-6. Is Redwall sufficiently structured for the first collection-switching/bookcase phase, or should F validate only CYOA plus a generic small fixture?
-7. Should pins/favorites and multi-collection membership be separate future schema work, or is an existing relationship model sufficient after Engineer inspection?
-8. Which existing owner actions remain visible-but-disabled during locked testing versus hidden from Public/Tester views?
-9. What privacy/data language is required in the footer, particularly for temporary testers?
+No Product Owner decision from this design-question set remains open. Source inspection may still produce new technical questions before an implementation phase can be scoped.
 
 ## Engineer estimation gate
 
@@ -235,6 +239,8 @@ The copy-ready request below asks only for an estimate and source/collision anal
 ENGINEER — SEI: ESTIMATION REQUEST ONLY
 
 Read docs/VISUAL_EXPERIENCE.md plus CURRENT_STATE.md, ROADMAP.md, ARCHITECTURE.md, BOOKSHELF.md, SHOPPING_MODE.md, TAGS.md, and the applicable ADRs. Inspect the actual continuing Sites/source context, including unpublished Version 20 composition. Do not modify source, generate tests, save, preview, deploy, publish, access production, change data/schema, or accept implementation authority.
+
+Use the resolved Product Owner direction in this document: public views are read-only; the lock is conditional for testing builds and persists until a later controlled publication; agent test codes expire after 24 hours and have rate limiting without a hard attempt cap; current single-user preferences should use the simplest supported editable JSON/equivalent store; CYOA is the first bookcase; and Shopkeeper combines global rules with collection-priority rules using target/trended cost and duplicate upgrade evidence.
 
 Estimate Phases A–H separately. For each phase report:
 - exact likely files/components/runtime surfaces;

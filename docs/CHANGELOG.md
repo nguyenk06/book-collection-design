@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-08-17 — Visual estimation direction resolved
+
+- Resolved all nine Product Owner questions in the My Library visual plan without creating implementation authority.
+- Defined public views as read-only with mutations reserved for the authenticated owner.
+- Limited the global lock to conditional testing builds; it persists across restarts until a later controlled publication removes it.
+- Set agent-only visual-test codes to 24-hour expiry with rate limiting but no hard total-attempt lockout, and private Sei-to-Product-Owner handoff before testing.
+- Selected simple editable JSON-backed/equivalent preferences for the current single-user product, with a database table deferred for multi-user needs.
+- Focused the first standing bookcase on CYOA with generic future architecture; presumed the current collection model sufficient subject to Sei verification.
+- Established global Shopkeeper rules with collection priority, cost/average-spend inputs, and duplicate upgrade comparison using cover, edition/condition evidence, and notes.
+- Updated the analysis-only Sei estimation request; no executable visual brief, source change, Site action, or production authority was created.
+- Reconciled the Roadmap so the visual work now waits on Sei's estimate and later phase authority, not the completed Product Owner question set.
+
 ## 2026-08-16 — My Library visual experience consolidated for estimation
 
 - Established My Library as the future product identity with Library-first navigation, collections below the Library, and Shopkeeper as the user-facing successor to historical Shopping Mode.
