@@ -2,11 +2,11 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Approximately 50% remains; 30% remaining is the protected reserve and mandatory stopping threshold. The proposed next batch is 8–12 points and should finish around 38–42%. Stop earlier when an estimate overruns, no eligible work remains, or a safe handoff requires it.
+**Execution budget:** Fresh reading 44%, resetting August 21; 30% remaining is the protected reserve. P1 preservation-only save is 5–8 points and should finish around 36–39%. P2 private export is deferred until reset/fresh usage because the combined 8–13 point envelope would finish around 31–36%.
 
-**Queue state:** Throttle `DRAIN`; follow-on preservation-only save and private-export briefs are prepared but blocked on fresh usage, Designer estimate, and explicit `!run`; later Site and production gates remain closed
+**Queue state:** Throttle `DRAIN`; P1 preservation-only save is ready for explicit `!run`; P2 private export remains queued but ineligible until the August 21 reset and fresh usage; later Site and production gates remain closed
 
-**Usage state:** The prior batch began from approximately 50% with a projected finish around 38–42%; no fresh post-batch reading is available. Do not estimate or activate the follow-on batch until Product Owner supplies a fresh reading. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** P1 estimate includes intake, manifest/collision checks, full validation, ordinary preservation remediation, commit/push/package/save evidence, handoff, and clean stop. Drain after P1; do not roll into P2 before reset. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 

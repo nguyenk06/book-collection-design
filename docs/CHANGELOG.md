@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — Preservation/export envelope split at 44% usage
+
+- Recorded a fresh 44% remaining reading with usage resetting August 21 and retained the 30% protected floor.
+- Estimated P1 preservation-only save at 5–8 points, projecting 36–39% remaining, including full validation, identity checks, save evidence, handoff, and clean stop.
+- Deferred the 3–5 point P2 private export until the August 21 reset and fresh reading because running the combined 8–13 point envelope now would project 31–36% remaining.
+- Kept throttle `DRAIN`; a pre-reset `!run` activates P1 only and does not make P2 eligible.
+
 ## 2026-08-16 — Preservation and export-evidence preparation authorized under drain
 
 - Product Owner selected preservation-only cumulative save and bounded private Version 19 export evidence (`1: A; 2: A`), then issued `!drain`.

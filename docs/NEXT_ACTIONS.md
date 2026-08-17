@@ -8,8 +8,8 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; no new brief acceptance before fresh usage, Designer estimate, and explicit `!run`.
 - **Engineer state:** `PAUSED`; the cumulative source remains unchanged at a clean workflow checkpoint.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner provides a fresh usage reading.
-- **Usage:** Approximately 50% was last reported before P1/P2; 38–42% was projected afterward but is not a fresh reading. Preserve the 30% floor.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` for P1 preservation only.
+- **Usage:** Fresh reading 44%; reset August 21. P1 estimate 5–8 points, projecting 36–39% remaining. P2 is deferred until reset/fresh reading.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
 
@@ -36,9 +36,9 @@ Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot selec
 
 ## Prepared next batch
 
-- P1: exact cumulative source manifest, full revalidation, exact commit/push/package identity, and one unpublished preservation-only Site save.
-- P2: one bounded private read-only Version 19 bridge export, offline Gate 2 comparison, sanitized evidence, and automatic stop for mismatch or ambiguity.
-- Both briefs are queued but blocked on a fresh usage reading and Designer executable estimate. `!run` remains separately required.
+- P1: exact cumulative source manifest, full revalidation, exact commit/push/package identity, and one unpublished preservation-only Site save. Estimated 5–8 points and ready for explicit `!run`.
+- P2: one bounded private read-only Version 19 bridge export, offline Gate 2 comparison, sanitized evidence, and automatic stop for mismatch or ambiguity. Estimated 3–5 points and deferred until the August 21 reset plus a fresh reading.
+- Running both now would total approximately 8–13 points and leave 31–36%, too close to the 30% reserve. The batch is therefore split.
 - A saved version is not runnable and does not authorize a checkpoint. No unpublished preview exists in supported tooling.
 - Corrective write, Gate 3 retry, migration, deployment/publication, Shopping publication, live checklist, smoke test, restore, rollback, and destructive recovery remain closed.
 

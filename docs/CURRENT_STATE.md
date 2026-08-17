@@ -18,14 +18,14 @@
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the completed read-only batch is closed and no new brief may be accepted before a fresh usage reading, Designer estimate, and explicit `!run`.
 - **Engineer state:** `PAUSED` at the post-P1/P2 decision checkpoint.
-- **Engineer continuation:** Preserve the cumulative M3–M6/Shopping/Bookshelf working source unchanged. Two approved briefs are queued but blocked on usage and execution authorization.
+- **Engineer continuation:** P1 preservation-only save is estimated and ready for explicit `!run`; P2 private export remains queued for after the August 21 usage reset and a fresh reading.
 - **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
-- **Active owner:** `EXTERNAL/WAIT` — Product Owner must provide a fresh usage reading; Designer then returns the executable batch estimate.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` for P1 only. P2 remains deferred.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The last Product Owner reading was approximately 50% before the completed P1/P2 batch. Its estimate projected approximately 38–42% remaining, but no fresh post-batch reading is available. Obtain a fresh reading before another executable batch. The 30% reserve remains a mandatory floor, not a target.
+The fresh Product Owner reading is approximately 44% remaining, with usage resetting August 21. P1 preservation-only save is estimated at 5–8 points, leaving approximately 36–39%. P2 private export is estimated at 3–5 points but is deferred until the reset and a fresh reading. Running both now would project approximately 31–36% and threaten the cushion above the 30% floor.
 
 ## Current workstreams
 
@@ -66,4 +66,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The next preservation/evidence batch is approved for preparation only. P1 will revalidate and preserve the exact cumulative source through one commit/push/package-identical unpublished Site save; P2 will perform one bounded private Version 19 bridge export and offline Gate 2 comparison. Both briefs remain ineligible under `DRAIN` until a fresh usage reading, Designer executable estimate, and explicit `!run`. No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), and [Staged Milestones](STAGED_MILESTONES.md).
+P1 preservation-only save is the sole executable-envelope candidate: exact manifest, full revalidation, identical commit/push/package, one unpublished Site save, and stop before deployment. It still requires explicit `!run` and brief acceptance. P2 private export evidence remains queued until the August 21 reset and fresh usage. No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), and [Staged Milestones](STAGED_MILESTONES.md).

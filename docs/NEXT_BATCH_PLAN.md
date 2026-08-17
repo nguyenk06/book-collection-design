@@ -1,8 +1,9 @@
 # Proposed Next Execution Batch
 
-**Status:** NEXT BATCH PREPARED; AWAITING FRESH USAGE AND EXECUTABLE ESTIMATE
+**Status:** SPLIT EXECUTION ENVELOPE; P1 READY FOR `!run`, P2 DEFERRED TO AUGUST 21 RESET
 **Prepared:** 2026-08-16  
-**Current usage:** Approximately 50% remaining  
+**Current usage:** Approximately 44% remaining  
+**Usage reset:** August 21  
 **Protected reserve:** 30% remaining  
 **Preferred planning cushion:** Finish above 35% remaining
 
@@ -24,7 +25,12 @@ Final prepared order:
 1. **P1 preservation-only save:** Freeze an exact cumulative M3–M6/Shopping/Bookshelf manifest; run full revalidation; create one exact source commit and push; package the identical commit; save exactly one unpublished Site version; verify saved/live separation; stop before deployment or publication.
 2. **P2 private Gate 4 export evidence:** Invoke the existing Version 19 owner bridge export exactly once; retain it privately; compare offline with Gate 2 counts, identities, values, target price, and cover references; report sanitized results; automatically stop for mismatch, ambiguity, or missing evidence.
 
-The queue remains `DRAIN`. Both briefs are blocked until the Product Owner supplies a fresh usage reading and Designer returns a bounded executable estimate that protects the 30% reserve. A later explicit `!run` is also required.
+Fresh usage is 44%, resetting August 21. The combined envelope is estimated at 8–13 points, which would leave approximately 31–36% and threaten the desired cushion above the protected 30% floor. The batch is split:
+
+- **P1 preservation-only save:** 5–8 points, projected 36–39% remaining. Ready for explicit `!run` and individual brief acceptance.
+- **P2 private export evidence:** 3–5 points. Remains queued until the August 21 reset and a fresh reading.
+
+The queue remains `DRAIN` until `!run`. A `!run` issued before the reset activates P1 only and does not make P2 eligible.
 
 No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is included.
 
@@ -36,7 +42,7 @@ No preview, deployment, publication, correction, migration retry, production wri
 - Queue Mode remains enabled with throttle `DRAIN`. Do not replace or reinitialize the continuing Sei chat merely because the cycle ended.
 - Preserve the cumulative source unchanged until a separately authorized operation begins with fresh composition and collision checks.
 
-## Proposed batch
+## Completed prior read-only batch
 
 | Priority | Activity | Dependency | Estimated usage | Result / stop boundary |
 | --- | --- | --- | ---: | --- |
@@ -44,7 +50,7 @@ No preview, deployment, publication, correction, migration retry, production wri
 | P2 | Sites checkpoint/preview feasibility investigation | Separate approval for read-only investigation; cumulative source remains unchanged | 2–4 points | Supported capability and exact next gate identified, or a blocker report if none exists |
 | P3 | Candidate composition and preservation assessment | P2 platform evidence; no save authority | 2–3 points | Exact cumulative manifest, collision assessment, preservation recommendation, and pre-save validation checklist |
 
-The activities share intake, source/context reconciliation, evidence preparation, and clean stopping. Estimated total is **8–12 percentage points**, including ordinary remediation within the read-only scopes, full relevant validation, reports, handoff preparation, and stop cost. From approximately 50%, expected remaining usage is **38–42%**. If any activity trends above its high estimate, drain after its current safe unit and defer the next priority.
+This historical envelope was estimated at **8–12 percentage points** from approximately 50%, including ordinary remediation within the read-only scopes, validation, reports, handoff preparation, and stop cost. P1 stopped automatically and P2 completed; the current fresh reading is 44%.
 
 ## P1 — M2 Gate 4 verification plan
 
@@ -120,9 +126,9 @@ No fallback implementation should be queued. AI Review, assets/covers, tags, imp
 
 ## Required authority sequence
 
-1. Preservation-only save direction is approved, subject to fresh usage, executable estimate, explicit `!run`, and brief acceptance.
-2. One bounded private read-only export direction is approved under the same activation gates.
+1. Preservation-only save direction is approved and estimated at 5–8 points; explicit `!run` and brief acceptance remain required.
+2. One bounded private read-only export direction is approved but deferred until the August 21 reset and fresh usage.
 3. Hands-on validation requires a separately designed live-only sequence because no runnable unpublished preview exists.
 4. No fallback implementation decision is needed because none is proposed.
 
-Two non-executable briefs are queued. Remain at `DRAIN`; Engineer — Sei stays paused without reinitialization or replacement until fresh usage and an explicit batch activation.
+Two briefs are queued. Remain at `DRAIN`; Engineer — Sei stays paused without reinitialization or replacement. Before August 21, explicit `!run` activates P1 only. P2 remains ineligible until reset and fresh usage.
