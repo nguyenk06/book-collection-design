@@ -1,6 +1,6 @@
 # Proposed Next Execution Batch
 
-**Status:** COMPLETED — P1 AUTOMATIC STOP; P2 COMPLETE
+**Status:** NEXT BATCH PREPARED; AWAITING FRESH USAGE AND EXECUTABLE ESTIMATE
 **Prepared:** 2026-08-16  
 **Current usage:** Approximately 50% remaining  
 **Protected reserve:** 30% remaining  
@@ -14,6 +14,19 @@ Planner/Product Owner approved both bounded read-only activities (`1: A; 2: A`) 
 - **P2:** Sites supports exact saved-version preservation through commit/push/package/save without automatic deployment. A saved version is not runnable. Supported tooling exposes no runnable unpublished preview; all deployment paths create a production URL.
 - **Composition:** Preserve Shopping and M3–M6 as one cumulative candidate. Shared schema, API, page, style, authentication/runtime, and ordered migration surfaces make manual splitting a reconstruction risk.
 - **State change:** None. Source remains dirty/unsaved, saved and published versions remain Version 19, and production was unchanged.
+
+## Approved follow-on preparation
+
+Product Owner selected `1: A; 2: A` and issued `!drain` after the completed read-only batch.
+
+Final prepared order:
+
+1. **P1 preservation-only save:** Freeze an exact cumulative M3–M6/Shopping/Bookshelf manifest; run full revalidation; create one exact source commit and push; package the identical commit; save exactly one unpublished Site version; verify saved/live separation; stop before deployment or publication.
+2. **P2 private Gate 4 export evidence:** Invoke the existing Version 19 owner bridge export exactly once; retain it privately; compare offline with Gate 2 counts, identities, values, target price, and cover references; report sanitized results; automatically stop for mismatch, ambiguity, or missing evidence.
+
+The queue remains `DRAIN`. Both briefs are blocked until the Product Owner supplies a fresh usage reading and Designer returns a bounded executable estimate that protects the 30% reserve. A later explicit `!run` is also required.
+
+No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is included.
 
 ## Current stopping state
 
@@ -107,9 +120,9 @@ No fallback implementation should be queued. AI Review, assets/covers, tags, imp
 
 ## Required authority sequence
 
-1. Decide whether to authorize one bounded current private read-only export through Version 19 to complete the missing Gate 4 preservation comparisons, or accept Gate 4 as incomplete.
-2. Independently decide whether to authorize an exact cumulative unpublished save for preservation only, or continue preserving the current dirty source.
+1. Preservation-only save direction is approved, subject to fresh usage, executable estimate, explicit `!run`, and brief acceptance.
+2. One bounded private read-only export direction is approved under the same activation gates.
 3. Hands-on validation requires a separately designed live-only sequence because no runnable unpublished preview exists.
 4. No fallback implementation decision is needed because none is proposed.
 
-No executable brief remains. The active `RUN` batch should now receive `!drain`; Engineer — Sei remains at the decision gate without reinitialization or replacement.
+Two non-executable briefs are queued. Remain at `DRAIN`; Engineer — Sei stays paused without reinitialization or replacement until fresh usage and an explicit batch activation.

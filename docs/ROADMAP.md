@@ -40,7 +40,7 @@ Saving Version 17 does not mark Shopping released or active in production. Versi
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within their bounded evidence layers. Gate 4 is independently confirmed only for schema-complete/zero-FK signals and remains incomplete for preservation evidence. The [read-only batch report](NEXT_BATCH_PLAN.md) now awaits two narrow Planner decisions, and every later gate remains sequential, closed, and unauthorized.
+The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within their bounded evidence layers. Gate 4 is independently confirmed only for schema-complete/zero-FK signals and remains incomplete for preservation evidence. Product Owner approved preparation of cumulative preservation-only save and private-export evidence briefs; both remain drained pending fresh usage, Designer estimate, and explicit `!run`. Every later gate remains sequential, closed, and unauthorized.
 
 ## Deferred
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — Preservation and export-evidence preparation authorized under drain
+
+- Product Owner selected preservation-only cumulative save and bounded private Version 19 export evidence (`1: A; 2: A`), then issued `!drain`.
+- Authorized preparation of two briefs: exact manifest/revalidation/commit-push-package identity/one unpublished Site save, followed by one private read-only bridge export and offline Gate 2 comparison.
+- Kept both briefs non-executable pending a fresh usage reading, Designer batch estimate, explicit `!run`, and individual acceptance.
+- No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation was authorized.
+
 ## 2026-08-16 — Gate 4 stopped evidence-incomplete; preservation path verified
 
 - Accepted Gate 4 evidence that the owner-authenticated Version 19 read-only surface independently reports Shopping schema complete and zero foreign-key issues, agreeing with Gate 3.

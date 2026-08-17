@@ -6,9 +6,9 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. M6 is locally validated, unsaved, and unpublished.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`; no eligible brief remains after P1/P2, so change to `DRAIN` at the next command boundary.
-- **Engineer state:** `STOPPED AT GATE`; P1 is evidence-incomplete and P2 is complete.
-- **Next owner:** `PLANNER` — decide preservation-only save and the separate Gate 4 evidence path.
+- **Throttle:** `DRAIN`; no new brief acceptance before fresh usage, Designer estimate, and explicit `!run`.
+- **Engineer state:** `PAUSED`; the cumulative source remains unchanged at a clean workflow checkpoint.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner provides a fresh usage reading.
 - **Usage:** Approximately 50% was last reported before P1/P2; 38–42% was projected afterward but is not a fresh reading. Preserve the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
@@ -34,10 +34,11 @@ See [Completed Read-Only Execution Batch](NEXT_BATCH_PLAN.md).
 
 Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot select independent dirty-worktree features, and splitting the shared schema/API/page/style/migration composition would require manual reconstruction and renewed collision validation.
 
-## Pending decisions and closed gates
+## Prepared next batch
 
-- Decide whether to authorize one bounded private read-only Version 19 bridge export to compare current preservation evidence with Gate 2, or retain Gate 4 as incomplete.
-- Independently decide whether to preserve the exact cumulative source as an unpublished saved version or continue preserving the dirty source only.
+- P1: exact cumulative source manifest, full revalidation, exact commit/push/package identity, and one unpublished preservation-only Site save.
+- P2: one bounded private read-only Version 19 bridge export, offline Gate 2 comparison, sanitized evidence, and automatic stop for mismatch or ambiguity.
+- Both briefs are queued but blocked on a fresh usage reading and Designer executable estimate. `!run` remains separately required.
 - A saved version is not runnable and does not authorize a checkpoint. No unpublished preview exists in supported tooling.
 - Corrective write, Gate 3 retry, migration, deployment/publication, Shopping publication, live checklist, smoke test, restore, rollback, and destructive recovery remain closed.
 

@@ -4,9 +4,9 @@
 
 **Execution budget:** Approximately 50% remains; 30% remaining is the protected reserve and mandatory stopping threshold. The proposed next batch is 8–12 points and should finish around 38–42%. Stop earlier when an estimate overruns, no eligible work remains, or a safe handoff requires it.
 
-**Queue state:** Throttle `RUN`; P1 stopped incomplete on evidence capability and P2 completed; no eligible brief remains; `!drain` recommended; later Site and production gates remain closed
+**Queue state:** Throttle `DRAIN`; follow-on preservation-only save and private-export briefs are prepared but blocked on fresh usage, Designer estimate, and explicit `!run`; later Site and production gates remain closed
 
-**Completed read-only batch estimate:** The batch began from approximately 50% with a projected finish around 38–42%; no fresh post-batch reading is available. P1 stopped automatically and P2 completed without Site/source mutation. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** The prior batch began from approximately 50% with a projected finish around 38–42%; no fresh post-batch reading is available. Do not estimate or activate the follow-on batch until Product Owner supplies a fresh reading. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 

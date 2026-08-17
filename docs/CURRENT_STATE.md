@@ -16,11 +16,11 @@
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`; the approved P1/P2 read-only batch executed after explicit `!run`. No eligible brief remains, so `!drain` is recommended.
-- **Engineer state:** `STOPPED AT GATE`; P1 stopped incomplete on evidence capability and P2 completed. No independently executable work remains.
-- **Engineer continuation:** Preserve the cumulative M3–M6/Shopping/Bookshelf working source unchanged pending a preservation decision. Do not reconstruct or split it.
-- **Planner decisions:** Two pending: exact preservation-only saved version versus continued dirty-source preservation, and a bounded private read-only export to complete Gate 4 preservation evidence versus accepting the incomplete Gate 4 boundary.
-- **Active owner:** `PLANNER` — decide the two independent next gates.
+- **Throttle:** `DRAIN`; the completed read-only batch is closed and no new brief may be accepted before a fresh usage reading, Designer estimate, and explicit `!run`.
+- **Engineer state:** `PAUSED` at the post-P1/P2 decision checkpoint.
+- **Engineer continuation:** Preserve the cumulative M3–M6/Shopping/Bookshelf working source unchanged. Two approved briefs are queued but blocked on usage and execution authorization.
+- **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner must provide a fresh usage reading; Designer then returns the executable batch estimate.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
@@ -32,12 +32,12 @@ The last Product Owner reading was approximately 50% before the completed P1/P2 
 | Workstream | State | Verified boundary | Next condition |
 | --- | --- | --- | --- |
 | Version 19 administration | Complete/published | Gate 2 status/export and Gate 3 invocation used the owner-authenticated same-origin surface | No further action currently authorized |
-| Production schema activation | Gate 4 incomplete | Read-only Gate 4 independently confirmed schema-complete and zero-FK signals; preservation invariants remain unverified | Separate decision on bounded current private export evidence or continued stop |
+| Production schema activation | Gate 4 incomplete | Read-only Gate 4 independently confirmed schema-complete and zero-FK signals; preservation invariants remain unverified | Prepared private-export evidence brief, blocked on fresh usage/estimate/`!run` |
 | Shopping UI | Complete locally; unsaved/unpublished | Search/scan/status, Purchase history/capture, quality, and accessibility validation passed | Gate 4 and later separately gated release steps |
 | M3 canonical identifiers | Complete locally | Focused/full tests, lint, and build passed | Future promotion remains separately gated |
 | M4 bounded Bookshelf | Complete locally; unsaved/unpublished | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
 | M5 catalog export foundation | Complete locally; unsaved/unpublished | Format v1, stable Book IDs, referential validation, deterministic output, no-write proof, and recovered editable source verified | Consumed by the completed local M6 UI |
-| M6 downloadable export UI | Complete locally; unsaved/unpublished | 8/8 focused and 160/160 full serial tests, task lint, build, owner gating, no-write checks, and collision separation passed | Separate Product Owner checkpoint authority before any Site save or activation |
+| M6 downloadable export UI | Complete locally; unsaved/unpublished | 8/8 focused and 160/160 full serial tests, task lint, build, owner gating, no-write checks, and collision separation passed | Included in prepared cumulative preservation-only save; no checkpoint or activation authority |
 
 ## Data and export status
 
@@ -66,4 +66,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The P1/P2 read-only batch has ended: Gate 4 stopped incomplete on evidence capability, and Sites preservation feasibility completed. Sites can preserve the exact cumulative source as an unpublished saved version after exact commit/push/package, but exposes no runnable unpublished preview. No save, source commit, push, archive, preview, deployment, publication, production write, or hands-on validation occurred. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), [Staged Milestones](STAGED_MILESTONES.md), and [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md).
+The next preservation/evidence batch is approved for preparation only. P1 will revalidate and preserve the exact cumulative source through one commit/push/package-identical unpublished Site save; P2 will perform one bounded private Version 19 bridge export and offline Gate 2 comparison. Both briefs remain ineligible under `DRAIN` until a fresh usage reading, Designer executable estimate, and explicit `!run`. No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), and [Staged Milestones](STAGED_MILESTONES.md).
