@@ -2,8 +2,8 @@
 
 **Status:** SPLIT EXECUTION ENVELOPE; P1 READY FOR `!run`, P2 DEFERRED TO AUGUST 21 RESET
 **Prepared:** 2026-08-16  
-**Current usage:** Approximately 44% remaining  
-**Usage reset:** August 21  
+**Current usage:** Approximately 44% remaining
+**Usage reset:** August 21
 **Protected reserve:** 30% remaining  
 **Preferred planning cushion:** Finish above 35% remaining
 
