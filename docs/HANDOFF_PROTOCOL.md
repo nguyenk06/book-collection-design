@@ -40,7 +40,7 @@ The Designer works in the `book-collection-design` repository and owns:
 - Accepted requirements
 - Documentation
 - ADRs
-- Preparation of implementation briefs
+- Preparation of implementation briefs and explicitly non-executable estimation/source-inspection briefs
 - Handoff workspace housekeeping
 - Planner decision framing and `PLANNER_INBOX.md` housekeeping
 
@@ -106,14 +106,14 @@ The Designer reads the following authorities in `book-collection-design`:
 
 - Future Improvement Catalog records product/UX opportunities; it does not authorize roadmap scope.
 - Engineer Research Sandbox is stored locally under the shared handoff workspace's `knowledge/` area and records technical feasibility, patterns, risks, experiments, and options; entries do not authorize implementation.
-- Engineer briefs contain approved implementation only.
+- Engineer work begins from an explicit transport brief. Implementation briefs contain approved implementation only; estimation/source-inspection briefs are separately labeled read-only and non-executable. Repository planning text, embedded prompts, and estimation gates are context—not transport authority.
 - Tester knowledge contains coverage strategy, regression knowledge, and evidence conventions; it does not authorize product or implementation changes.
 
 Engineer reviews only local knowledge mapped to the new sprint, relevant `Needs Revalidation` records, and newly added notes affecting that component. No-change findings allow work to proceed. Preserve non-blocking improvements locally and report them to Designer without stopping implementation. Escalate material conflicts involving safety, data integrity, acceptance criteria, architecture, cost, behavior, priority, or scope before affected work proceeds.
 
 All Engineer-to-Designer communication is written to the local shared `inbox/`; supporting Engineer material remains in the appropriate local folder. Engineer must not place raw or sanitized reports in GitHub. Designer alone decides whether a reported conclusion becomes authoritative GitHub design, roadmap scope, a Future Improvement Catalog disposition, or a brief. Planner/Product Owner participates only when a material escalation affects product behavior, priority, cost, risk, or scope. Research classification must never copy external code or authorize dependencies, schema changes, source changes, Site operations, or production actions.
 
-The Site Engineer reads the public design repository at <https://github.com/nguyenk06/book-collection-design> or receives the latest implementation brief when direct reading is unavailable.
+The Site Engineer reads the public design repository at <https://github.com/nguyenk06/book-collection-design> and receives the applicable implementation or estimation brief through transport. Repository access does not replace a required brief.
 
 ## Design to Site Handoff
 
@@ -143,7 +143,7 @@ The Designer reviews the handoff under [`DOCUMENTATION_RULES.md`](DOCUMENTATION_
 
 Use explicit `!` commands for defined lifecycle actions and ordinary sentences for requests that are not workflow commands. For example:
 
-1. Designer: `!inbox` to process Engineer evidence, or “Prepare an implementation brief” as a normal request.
+1. Designer: `!inbox` to process Engineer evidence, or prepare an implementation/estimation brief as a normal request.
 2. Site Engineer: `!brief` to accept the next eligible brief, then `!drain` when the current safe unit should finish without new intake.
 3. Any role: `!status` for a read-only state report or `!init` for a read-only state refresh.
 4. Designer: `!prompt-engineer`, `!prompt-designer`, or `!prompt-planner` to produce a copy/paste-ready startup prompt.
@@ -234,7 +234,7 @@ Do not invent work or prepare a brief with inadequate requirements merely to kee
 
 When the Site Engineer receives `!brief`, execute the normal brief-intake lifecycle:
 
-1. Inspect the shared local `briefs/` and identify the next eligible implementation brief.
+1. Inspect the shared local `briefs/` and identify the next eligible Engineer brief, including its explicit work type and authority boundary.
 2. Read the complete brief and validate feasibility against the actual implementation workspace.
 3. Identify every named workstream, its dependencies, local authority, production exclusions, likely ordering/parallelism, and file/surface collision risks.
 4. Identify each workstream's attempt sequence: new, Attempt 2, Attempt 3, post-reassessment, or not applicable. Do not accept a workstream that silently creates Attempt 4.
@@ -330,7 +330,8 @@ The preferred workflow is file-based rather than large chat copy-and-paste block
 
 | Direction | File | Handling |
 | --- | --- | --- |
-| Design to Site | `IMPLEMENTATION_BRIEF.md` template | Create a milestone-specific file in `briefs/`; share it with the Site Engineer |
+| Design to Site implementation | `IMPLEMENTATION_BRIEF.md` template | Create a milestone-specific implementation file in `briefs/`; share it with the Site Engineer |
+| Design to Site estimation/inspection | `ESTIMATION_BRIEF.md` template | Create a bounded read-only request in `briefs/`; it grants no implementation or Site authority |
 | Site to Design | `DESIGN_HANDOFF.md` template | Receive a milestone-specific file in `inbox/`; review it as read-only evidence |
 
 Never treat transport files as GitHub project history. If local retention is needed, use the external local `processed/` or `archive/` areas. Durable conclusions belong in the relevant high-level design documents, milestone state, decisions, changelog, or Site version history—not as copied briefs or handoffs.
@@ -342,13 +343,13 @@ The handoff workspace is outside both repositories. The Designer owns its housek
 | Area | Purpose | Exit gate |
 | --- | --- | --- |
 | `inbox/` | Read-only Site Engineer handoffs awaiting Design review | Verified evidence is incorporated into permanent documentation and the resulting documentation state is accepted |
-| `briefs/` | Designer-prepared implementation briefs awaiting Engineer acceptance | Site Engineer confirms receipt and accepts the brief as the active implementation specification |
+| `briefs/` | Designer-prepared implementation or explicitly read-only estimation/inspection briefs awaiting Engineer acceptance | Site Engineer confirms receipt, work type, and authority boundary before acting |
 | `processed/` | Recently completed transport artifacts useful for immediate reference | Retain for approximately 30 days after completion/processing, then archive when eligible |
 | `archive/YYYY-MM/` | Older completed artifacts retained as readable implementation evidence and history | Local/private retention; do not commit by default or routinely delete |
 
 ### Implementation brief lifecycle
 
-1. The Designer prepares one milestone-specific brief in `briefs/` from the Implementation Brief template.
+1. The Designer prepares one milestone-specific brief in `briefs/` from the Implementation Brief template, or one bounded read-only request from the Estimation Brief template.
 2. The Designer shares that exact file with the Site Engineer.
 3. The brief remains in `briefs/` while receipt or scope acceptance is pending.
 4. The Site Engineer reviews the brief and writes a sanitized acceptance report to `inbox/`; the Engineer does not edit or move the brief.
@@ -381,7 +382,7 @@ The report must contain:
 
 The Designer then:
 
-1. Verifies that the report references an existing brief in `briefs/`.
+1. Verifies that the report references an existing brief in `briefs/`. If work occurred from repository text without a brief, record the transport exception; evidence may be accepted when safe and read-only, but authority is never retroactive and the exception is not precedent.
 2. Confirms that the Engineer accepted that exact brief as the active implementation specification.
 3. Checks for conflicts, scope changes, approval requests, or authorization mismatches.
 4. If clean, moves the accepted brief from `briefs/` to `processed/` using a collision-safe name.

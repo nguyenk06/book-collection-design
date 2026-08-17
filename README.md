@@ -54,6 +54,7 @@ Implementation changes should be made in the Site implementation workspace. Majo
 | Governance | [Decision Log](docs/DECISIONS.md) · [Documentation Rules](docs/DOCUMENTATION_RULES.md) · [Contributing](docs/CONTRIBUTING.md) |
 | Handoffs | [Protocol](docs/HANDOFF_PROTOCOL.md) · [Implementation Brief template](templates/IMPLEMENTATION_BRIEF.md) · [Design Handoff template](templates/DESIGN_HANDOFF.md) |
 | Role startup | [Designer](templates/DESIGNER_STARTUP.md) · [Site Engineer](templates/ENGINEER_STARTUP.md) · [Planner](templates/PLANNER_STARTUP.md) |
+| Engineer handoffs | [Implementation brief](templates/IMPLEMENTATION_BRIEF.md) · [Estimation brief](templates/ESTIMATION_BRIEF.md) |
 
 ## GitHub Pages
 

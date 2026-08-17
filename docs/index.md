@@ -53,4 +53,5 @@ Architecture, planning, and product documentation for the collector-first My Lib
 ## Handoff templates
 
 - [Implementation Brief](../templates/IMPLEMENTATION_BRIEF.md)
+- [Estimation Brief](../templates/ESTIMATION_BRIEF.md)
 - [Design Repository Handoff](../templates/DESIGN_HANDOFF.md)

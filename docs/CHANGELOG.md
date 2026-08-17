@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-17 — Visual estimate accepted and brief transport repaired
+
+- Accepted Sei's read-only source-informed estimate against exact Version 20 source commit `6a2191b1b506d171d576cbb6a6b160964595c051`; no implementation, Site, production, schema, data, dependency, or test change occurred.
+- Replaced Designer planning ranges with Engineer low/likely/high ranges: A 6/8/11, B 9/13/18, C 11/16/22, D 6/9/13, E 6/9/13, F 8/12/17, G 12/18/25, and H 4/6/9 points.
+- Recorded the 56/82/115 point shared-foundation program estimate, B/C security/runtime prerequisites, absent current preference/pin/variant/code infrastructure, singular CYOA collection boundary, and G recommendation-engine expansion.
+- Recorded that the estimation request was incorrectly embedded in repository planning instead of delivered through transport. Accepted safe evidence without making authority retroactive or treating the exception as precedent.
+- Added an explicit non-executable `ESTIMATION_BRIEF.md` template and updated handoff/knowledge rules so every future Engineer estimate, feasibility check, or source inspection requires a prior transport brief.
+- Left the parked Gate 4 production-read brief unchanged and created no visual implementation authority.
+
 ## 2026-08-17 — Visual estimation direction resolved
 
 - Resolved all nine Product Owner questions in the My Library visual plan without creating implementation authority.

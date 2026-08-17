@@ -46,7 +46,7 @@ The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.
 
 ## Deferred
 
-- Phased My Library visual redesign until Sei returns a source-informed estimate under the now-resolved Product Owner direction and a later phase receives explicit authority; see [Visual Experience](VISUAL_EXPERIENCE.md).
+- Phased My Library visual redesign after Sei's accepted source-informed estimate; each phase remains on hold until its prerequisites and later explicit authority are satisfied. B/C require storage/routing security feasibility, and G requires an exact deterministic rule/evidence contract; see [Visual Experience](VISUAL_EXPERIENCE.md).
 - Full edition management and an immediate title/edition/copy hierarchy.
 - Offline operation and generalized media support.
 - Business locations.

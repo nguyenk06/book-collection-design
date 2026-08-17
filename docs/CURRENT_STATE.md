@@ -6,6 +6,8 @@ For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md).
 
 Future Library-first presentation, Shopkeeper naming, responsive shell, testing access, write-lock UX, themes, bookcases, and optional personality layers are documented in [My Library Visual Experience](VISUAL_EXPERIENCE.md). They are planning direction only and do not alter the current queue or Site state.
 
+Sei returned a read-only source-informed A–H estimate against exact Version 20 source. It confirms the program is feasible but identifies B/C as new security/runtime foundations and G as a larger new recommendation/rule capability. The report changed no source or Site state and creates no executable phase authority.
+
 ## Authoritative snapshot
 
 - **Published Site:** Version 19, the owner-authenticated administration surface.
