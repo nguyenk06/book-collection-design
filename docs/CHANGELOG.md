@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-16 — Preservation/export corrected to one ordered conditional batch
+
+- Corrected the hard split: one `!run` activates the P1 preservation then P2 private-export sequence, with normal highest-priority completion before the next intake.
+- Retained the 5–8 point P1 and 3–5 point P2 estimates from the 44% reading, but inserted a mandatory fresh usage checkpoint after P1.
+- P2 proceeds under the same run only if its high estimate finishes at or above the 35% cushion with validation, evidence, and clean-stop capacity; otherwise it parks until the August 21 reset.
+- Preserved blocker continuation for independent work without treating P2 as parallel work or requiring a second `!run` when it becomes eligible.
+
 ## 2026-08-16 — Preservation/export envelope split at 44% usage
 
 - Recorded a fresh 44% remaining reading with usage resetting August 21 and retained the 30% protected floor.

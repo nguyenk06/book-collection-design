@@ -18,14 +18,14 @@
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the completed read-only batch is closed and no new brief may be accepted before a fresh usage reading, Designer estimate, and explicit `!run`.
 - **Engineer state:** `PAUSED` at the post-P1/P2 decision checkpoint.
-- **Engineer continuation:** P1 preservation-only save is estimated and ready for explicit `!run`; P2 private export remains queued for after the August 21 usage reset and a fresh reading.
+- **Engineer continuation:** One ordered P1→P2 batch is ready for explicit `!run`. Complete or safely stop P1 first, then refresh usage; continue to P2 under the same run only if its high estimate preserves the cushion and clean-stop capacity.
 - **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
-- **Active owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` for P1 only. P2 remains deferred.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` for the ordered conditional P1→P2 batch.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The fresh Product Owner reading is approximately 44% remaining, with usage resetting August 21. P1 preservation-only save is estimated at 5–8 points, leaving approximately 36–39%. P2 private export is estimated at 3–5 points but is deferred until the reset and a fresh reading. Running both now would project approximately 31–36% and threaten the cushion above the 30% floor.
+The fresh Product Owner reading is approximately 44% remaining, with usage resetting August 21. P1 preservation-only save is estimated at 5–8 points, leaving approximately 36–39%. P2 private export is estimated at 3–5 points. The combined range is 8–13 points, but execution is serial: after P1, obtain the actual reading and continue to P2 only when its high estimate still finishes at or above the 35% cushion with validation/evidence/clean-stop capacity. Otherwise park P2 until reset.
 
 ## Current workstreams
 
@@ -66,4 +66,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 preservation-only save is the sole executable-envelope candidate: exact manifest, full revalidation, identical commit/push/package, one unpublished Site save, and stop before deployment. It still requires explicit `!run` and brief acceptance. P2 private export evidence remains queued until the August 21 reset and fresh usage. No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), and [Staged Milestones](STAGED_MILESTONES.md).
+The ordered conditional batch begins with P1 exact manifest, full revalidation, identical commit/push/package, one unpublished Site save, and stop before deployment. After the P1 report, refresh usage and consider P2 private export under the same `!run`; park P2 if the high estimate cannot preserve the cushion. No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), and [Staged Milestones](STAGED_MILESTONES.md).

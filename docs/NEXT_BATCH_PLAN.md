@@ -1,6 +1,6 @@
 # Proposed Next Execution Batch
 
-**Status:** SPLIT EXECUTION ENVELOPE; P1 READY FOR `!run`, P2 DEFERRED TO AUGUST 21 RESET
+**Status:** ORDERED CONDITIONAL EXECUTION ENVELOPE; READY FOR `!run`
 **Prepared:** 2026-08-16  
 **Current usage:** Approximately 44% remaining
 **Usage reset:** August 21
@@ -25,12 +25,13 @@ Final prepared order:
 1. **P1 preservation-only save:** Freeze an exact cumulative M3–M6/Shopping/Bookshelf manifest; run full revalidation; create one exact source commit and push; package the identical commit; save exactly one unpublished Site version; verify saved/live separation; stop before deployment or publication.
 2. **P2 private Gate 4 export evidence:** Invoke the existing Version 19 owner bridge export exactly once; retain it privately; compare offline with Gate 2 counts, identities, values, target price, and cover references; report sanitized results; automatically stop for mismatch, ambiguity, or missing evidence.
 
-Fresh usage is 44%, resetting August 21. The combined envelope is estimated at 8–13 points, which would leave approximately 31–36% and threaten the desired cushion above the protected 30% floor. The batch is split:
+Fresh usage is 44%, resetting August 21. The combined envelope is estimated at 8–13 points, which could leave approximately 31–36%. Preserve one ordered batch with a mandatory usage gate:
 
-- **P1 preservation-only save:** 5–8 points, projected 36–39% remaining. Ready for explicit `!run` and individual brief acceptance.
-- **P2 private export evidence:** 3–5 points. Remains queued until the August 21 reset and a fresh reading.
+- **P1 preservation-only save:** 5–8 points, projected 36–39% remaining. Complete or safely stop first.
+- **Transition gate:** Refresh actual usage and remaining evidence/clean-stop capacity after P1.
+- **P2 private export evidence:** 3–5 points. Continue under the same `!run` only if its high estimate finishes at or above 35%; otherwise park until the August 21 reset.
 
-The queue remains `DRAIN` until `!run`. A `!run` issued before the reset activates P1 only and does not make P2 eligible.
+The queue remains `DRAIN` until `!run`. One `!run` activates the ordered batch; it does not bypass P2's post-P1 usage eligibility check. No second `!run` is required if P2 becomes eligible while the ordered run remains active.
 
 No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is included.
 
@@ -127,8 +128,8 @@ No fallback implementation should be queued. AI Review, assets/covers, tags, imp
 ## Required authority sequence
 
 1. Preservation-only save direction is approved and estimated at 5–8 points; explicit `!run` and brief acceptance remain required.
-2. One bounded private read-only export direction is approved but deferred until the August 21 reset and fresh usage.
+2. One bounded private read-only export direction is approved at 3–5 points and follows P1 conditionally under the same run.
 3. Hands-on validation requires a separately designed live-only sequence because no runnable unpublished preview exists.
 4. No fallback implementation decision is needed because none is proposed.
 
-Two briefs are queued. Remain at `DRAIN`; Engineer — Sei stays paused without reinitialization or replacement. Before August 21, explicit `!run` activates P1 only. P2 remains ineligible until reset and fresh usage.
+Two briefs are queued in P1→P2 order. Remain at `DRAIN`; Engineer — Sei stays paused without reinitialization or replacement. Explicit `!run` activates the ordered batch. P2 eligibility is decided from the fresh post-P1 reading; park it until reset only if the cushion test fails.

@@ -2,11 +2,11 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Fresh reading 44%, resetting August 21; 30% remaining is the protected reserve. P1 preservation-only save is 5–8 points and should finish around 36–39%. P2 private export is deferred until reset/fresh usage because the combined 8–13 point envelope would finish around 31–36%.
+**Execution budget:** Fresh reading 44%, resetting August 21; 30% remaining is the protected reserve. P1 preservation-only save is 5–8 points and P2 private export is 3–5 points. Execute serially with a fresh usage gate after P1; P2 may continue under the same run only if its high estimate finishes at or above the 35% cushion with clean-stop capacity.
 
-**Queue state:** Throttle `DRAIN`; P1 preservation-only save is ready for explicit `!run`; P2 private export remains queued but ineligible until the August 21 reset and fresh usage; later Site and production gates remain closed
+**Queue state:** Throttle `DRAIN`; ordered P1→P2 batch is ready for explicit `!run`; P2 remains conditionally eligible after P1 and the usage gate; later Site and production gates remain closed
 
-**Usage state:** P1 estimate includes intake, manifest/collision checks, full validation, ordinary preservation remediation, commit/push/package/save evidence, handoff, and clean stop. Drain after P1; do not roll into P2 before reset. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** P1 estimate includes intake, manifest/collision checks, full validation, ordinary preservation remediation, commit/push/package/save evidence, handoff, and clean stop. Refresh after P1; continue to P2 only when the high estimate preserves the cushion, otherwise park until reset. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
