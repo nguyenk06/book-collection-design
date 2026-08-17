@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-16 — Cumulative candidate preserved as unpublished Version 20
+
+- Accepted Engineer — Sei's preservation-only completion for the exact 24-path Shopping/M3–M6/Bookshelf candidate.
+- Recorded 150/150 focused and 160/160 full serial tests, exact-source lint with zero errors and one known warning, production build, diff/whitespace, migration-order, secret/manifest, and no-write validation.
+- Verified matching commit, remote branch head, package, and saved source identity; exactly one unpublished, undeployed Version 20 was saved while published/live Version 19 remained unchanged.
+- Recorded that saving Version 20 did not execute migrations and created no runnable preview, production access, deployment, publication, or activation.
+- Updated the fresh usage reading to 36%. The approved 3–5 point private Gate 4 export is parked until the August 21 reset because its high estimate would finish below the 35% cushion.
+- Updated the visual dashboard release-readiness estimate from approximately 55% to approximately 60% to reflect completed source preservation; all dashboard percentages remain coarse planning estimates.
+
 ## 2026-08-16 — Visual project dashboard added
 
 - Added a GitHub-native canonical high-level dashboard with separate coarse estimates for core build completion, release readiness, and broader roadmap completion.

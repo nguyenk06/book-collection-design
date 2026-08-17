@@ -2,11 +2,11 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Fresh reading 44%, resetting August 21; 30% remaining is the protected reserve. P1 preservation-only save is 5–8 points and P2 private export is 3–5 points. Execute serially with a fresh usage gate after P1; P2 may continue under the same run only if its high estimate finishes at or above the 35% cushion with clean-stop capacity.
+**Execution budget:** Fresh reading 36%, resetting August 21; 30% remaining is the protected reserve. P1 preservation-only save is complete. P2 private export remains 3–5 points and is parked because its high estimate would finish below the 35% cushion.
 
-**Queue state:** Throttle `DRAIN`; ordered P1→P2 batch is ready for explicit `!run`; P2 remains conditionally eligible after P1 and the usage gate; later Site and production gates remain closed
+**Queue state:** Throttle `DRAIN`; P1 is complete, P2 remains approved but usage-ineligible until a fresh post-reset reading, and later Site and production gates remain closed.
 
-**Usage state:** P1 estimate includes intake, manifest/collision checks, full validation, ordinary preservation remediation, commit/push/package/save evidence, handoff, and clean stop. Refresh after P1; continue to P2 only when the high estimate preserves the cushion, otherwise park until reset. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** Version 20 preserves the exact validated cumulative source. Reassess P2 after reset; accept it only when the full envelope preserves the cushion and clean-stop capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -86,7 +86,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 ## Milestone 6 — Local downloadable catalog export UI
 
-**State:** Complete and validated locally; unsaved/unpublished; Product Owner checkpoint remains separately gated.
+**State:** Complete and validated locally; preserved in unpublished, undeployed Version 20; Product Owner checkpoint remains separately gated.
 
 - **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); [Import/Export accepted export-first boundary and format v1](IMPORT_EXPORT.md#accepted-format-version-1-contract); completed M5 foundation.
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.

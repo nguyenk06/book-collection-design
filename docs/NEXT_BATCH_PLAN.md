@@ -1,22 +1,22 @@
 # Proposed Next Execution Batch
 
-**Status:** ORDERED CONDITIONAL EXECUTION ENVELOPE; READY FOR `!run`
+**Status:** P1 COMPLETE; P2 PARKED BY USAGE GATE
 **Prepared:** 2026-08-16  
-**Current usage:** Approximately 44% remaining
+**Current usage:** Approximately 36% remaining
 **Usage reset:** August 21
 **Protected reserve:** 30% remaining  
 **Preferred planning cushion:** Finish above 35% remaining
 
-Planner/Product Owner approved both bounded read-only activities (`1: A; 2: A`) and later issued explicit `!run`. P1 reached its automatic-stop boundary with partial verification; P2 completed. No Site save, preview, source change, publication, corrective write, migration retry, restore, rollback, or later production-gate authority was used.
+Planner/Product Owner approved the ordered preservation and private-export activities (`1: A; 2: A`) and issued explicit `!run`. The preservation activity completed within its authority. The private-export activity is parked because the post-P1 usage gate did not clear. No preview, deployment, publication, corrective write, migration retry, restore, rollback, or later production-gate authority was used.
 
-## Execution result
+## Prior read-only planning result
 
 - **P1:** The correct Site, owner role, live/saved Version 19, and source boundary were verified. The read-only surface independently reported Shopping schema complete and zero foreign-key issues, agreeing with Gate 3. It could not expose target price, counts, identities, ownership, copies, covers/references, or unchanged-value comparisons, so Gate 4 stopped incomplete without an observed mismatch or write.
 - **P2:** Sites supports exact saved-version preservation through commit/push/package/save without automatic deployment. A saved version is not runnable. Supported tooling exposes no runnable unpublished preview; all deployment paths create a production URL.
 - **Composition:** Preserve Shopping and M3–M6 as one cumulative candidate. Shared schema, API, page, style, authentication/runtime, and ordered migration surfaces make manual splitting a reconstruction risk.
-- **State change:** None. Source remains dirty/unsaved, saved and published versions remain Version 19, and production was unchanged.
+- **State at that completed investigation:** None. Source was then dirty/unsaved, saved and published versions were Version 19, and production was unchanged. The later preservation result below supersedes only that saved-source state.
 
-## Approved follow-on preparation
+## Approved ordered preservation/export batch
 
 Product Owner selected `1: A; 2: A` and issued `!drain` after the completed read-only batch.
 
@@ -25,21 +25,21 @@ Final prepared order:
 1. **P1 preservation-only save:** Freeze an exact cumulative M3–M6/Shopping/Bookshelf manifest; run full revalidation; create one exact source commit and push; package the identical commit; save exactly one unpublished Site version; verify saved/live separation; stop before deployment or publication.
 2. **P2 private Gate 4 export evidence:** Invoke the existing Version 19 owner bridge export exactly once; retain it privately; compare offline with Gate 2 counts, identities, values, target price, and cover references; report sanitized results; automatically stop for mismatch, ambiguity, or missing evidence.
 
-Fresh usage is 44%, resetting August 21. The combined envelope is estimated at 8–13 points, which could leave approximately 31–36%. Preserve one ordered batch with a mandatory usage gate:
+P1 completed and the fresh post-P1 reading is 36%, resetting August 21. The remaining P2 envelope is 3–5 points:
 
-- **P1 preservation-only save:** 5–8 points, projected 36–39% remaining. Complete or safely stop first.
-- **Transition gate:** Refresh actual usage and remaining evidence/clean-stop capacity after P1.
-- **P2 private export evidence:** 3–5 points. Continue under the same `!run` only if its high estimate finishes at or above 35%; otherwise park until the August 21 reset.
+- **P1 preservation-only save:** Complete. The exact 24-path candidate passed 160/160 full serial tests and exact-source lint, build, diff, whitespace, migration-order, secret, and no-write checks. Commit, remote branch, package, and saved source matched; exactly one unpublished, undeployed Version 20 was saved.
+- **Transition gate:** Closed at 36% remaining.
+- **P2 private export evidence:** Parked. Its 3–5 point range would finish at approximately 31–33%, below the 35% cushion at the high estimate.
 
-The queue remains `DRAIN` until `!run`. One `!run` activates the ordered batch; it does not bypass P2's post-P1 usage eligibility check. No second `!run` is required if P2 becomes eligible while the ordered run remains active.
+The queue is `DRAIN`. Retain the approved P2 brief unchanged until the August 21 reset and a fresh usage reading. A later `!run` does not bypass its usage, identity, source, production-read, ambiguity-stop, or evidence restrictions.
 
 No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is included.
 
 ## Current stopping state
 
-- The completed M3–M6, Shopping, and Bookshelf source remains in one recovered cumulative editable working tree based on published Version 19.
-- M6 is complete and validated locally. Saved and published Site versions remain Version 19.
-- Engineer — Sei is paused at a clean stopping point; no eligible implementation brief remains.
+- The completed M3–M6, Shopping, and Bookshelf source is preserved exactly in unpublished, undeployed Version 20; published/live remains Version 19.
+- M6 is complete and validated locally and is included in Version 20. Saving did not run migrations or create a runnable preview.
+- Engineer — Sei is paused at a clean stopping point; the remaining brief is approved but usage-ineligible.
 - Queue Mode remains enabled with throttle `DRAIN`. Do not replace or reinitialize the continuing Sei chat merely because the cycle ended.
 - Preserve the cumulative source unchanged until a separately authorized operation begins with fresh composition and collision checks.
 
@@ -51,7 +51,7 @@ No preview, deployment, publication, correction, migration retry, production wri
 | P2 | Sites checkpoint/preview feasibility investigation | Separate approval for read-only investigation; cumulative source remains unchanged | 2–4 points | Supported capability and exact next gate identified, or a blocker report if none exists |
 | P3 | Candidate composition and preservation assessment | P2 platform evidence; no save authority | 2–3 points | Exact cumulative manifest, collision assessment, preservation recommendation, and pre-save validation checklist |
 
-This historical envelope was estimated at **8–12 percentage points** from approximately 50%, including ordinary remediation within the read-only scopes, validation, reports, handoff preparation, and stop cost. P1 stopped automatically and P2 completed; the current fresh reading is 44%.
+This historical envelope was estimated at **8–12 percentage points** from approximately 50%, including ordinary remediation within the read-only scopes, validation, reports, handoff preparation, and stop cost. Its P1 stopped automatically and P2 completed; the 44% reading recorded at that historical transition has since been superseded by the current 36% reading above.
 
 ## P1 — M2 Gate 4 verification plan
 

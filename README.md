@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 19 is the published owner-authenticated administration surface; Version 18 remains retained in Site history, and Version 17 remains the unpublished Shopping foundation. Gate 2 rendered the administration surface, observed the pre-upgrade baseline, and retained a validated structured export privately. Gate 3 then invoked the guarded additive activation exactly once; its immediate response reported Shopping schema completion and zero foreign-key issues. Gate 4 later independently confirmed those two coarse signals through the read-only Version 19 surface, but automatically stopped incomplete because target-price, count, identity, and preservation evidence was unavailable through that path. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 19 is the published owner-authenticated administration surface. Unpublished, undeployed Version 20 preserves the exact validated cumulative Shopping/M3–M6/Bookshelf source; it is not a runnable preview and saving it did not execute migrations. Gate 3 reported Shopping schema completion and zero foreign-key issues, while Gate 4 independently confirmed only those coarse signals and remains incomplete for preservation evidence. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

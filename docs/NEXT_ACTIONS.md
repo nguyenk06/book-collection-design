@@ -4,12 +4,12 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. M4 transport closure is permanently unverifiable. M6 is locally validated, unsaved, and unpublished.
+- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; no new brief acceptance before fresh usage, Designer estimate, and explicit `!run`.
-- **Engineer state:** `PAUSED`; the cumulative source remains unchanged at a clean workflow checkpoint.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner may issue `!run` for the ordered conditional P1→P2 batch.
-- **Usage:** Fresh reading 44%; reset August 21. P1 is 5–8 points and P2 is 3–5 points. Refresh usage between them; P2 proceeds only if its high estimate preserves at least the 35% cushion and clean-stop capacity.
+- **Throttle:** `DRAIN`; P1 is complete and P2 is parked by its usage gate.
+- **Engineer state:** `PAUSED`; the exact cumulative source is preserved at a clean checkpoint.
+- **Next owner:** `EXTERNAL/WAIT` — provide a fresh usage reading after the August 21 reset.
+- **Usage:** Fresh reading 36%; reset August 21. P2 is 3–5 points and is ineligible because its high estimate would finish near 31%, below the 35% cushion.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
 
@@ -23,7 +23,7 @@ Validation passed:
 - Task lint, production build, and diff/whitespace checks.
 - Anonymous and non-owner API denial, owner page gating, read-only query evidence, duplicate-click protection, safe filenames, and accessible state behavior.
 
-M6 remains in the cumulative dirty local source. Saved and published Site versions remain Version 19. A later Product Owner checkpoint and any preview/save/activation remain separately gated.
+M6 is preserved with the cumulative source in unpublished, undeployed Version 20. Published/live remains Version 19. A saved version is not runnable; any deployment, publication, activation, or hands-on validation remains separately gated.
 
 ## Completed P1/P2 batch
 
@@ -34,18 +34,16 @@ See [Completed Read-Only Execution Batch](NEXT_BATCH_PLAN.md).
 
 Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot select independent dirty-worktree features, and splitting the shared schema/API/page/style/migration composition would require manual reconstruction and renewed collision validation.
 
-## Prepared next batch
+## Current approved queue
 
-- P1: exact cumulative source manifest, full revalidation, exact commit/push/package identity, and one unpublished preservation-only Site save. Estimated 5–8 points; complete first.
-- Mandatory transition: process the P1 completion/stop state and refresh actual usage.
-- P2: one bounded private read-only Version 19 bridge export, offline Gate 2 comparison, sanitized evidence, and automatic stop for mismatch or ambiguity. Estimated 3–5 points; continue under the same `!run` only if the post-P1 high estimate finishes at or above 35% with clean-stop capacity.
-- If that condition fails, park P2 until the August 21 reset. Parallel/blocker continuation remains available, but normal sequencing finishes the highest-priority safe unit first.
+- P1 is complete: exact 24-path manifest, full validation, identity-matched commit/push/package, and exactly one unpublished Version 20 save.
+- P2 remains one bounded private read-only Version 19 bridge export, offline Gate 2 comparison, sanitized evidence, and automatic stop for mismatch or ambiguity. It is parked until the August 21 reset and a fresh usage reading.
 - A saved version is not runnable and does not authorize a checkpoint. No unpublished preview exists in supported tooling.
 - Corrective write, Gate 3 retry, migration, deployment/publication, Shopping publication, live checklist, smoke test, restore, rollback, and destructive recovery remain closed.
 
 ## Other workstreams
 
-- M4 bounded Bookshelf is complete locally, not planned implementation work. It remains unsaved/unpublished and requires a Product Owner checkpoint before activation.
+- M4 bounded Bookshelf is complete locally, not planned implementation work. It is preserved in unpublished Version 20 and requires a Product Owner checkpoint before activation.
 - M5 catalog export foundation is complete locally. The private Gate 2 bridge export and local M5 catalog export are useful but neither is a complete production backup; both exclude R2 bytes.
 - Mutable import, AI Review, reference-cover enrichment, Tags, and dedicated analysis remain behind their accepted dependencies and are not current queue work.
 
