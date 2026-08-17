@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-08-16 — My Library visual experience consolidated for estimation
+
+- Established My Library as the future product identity with Library-first navigation, collections below the Library, and Shopkeeper as the user-facing successor to historical Shopping Mode.
+- Added canonical future direction for responsive shell/header/footer, public/tester/admin presentation, server-enforced global write locking, temporary scoped visual-test access, light/dark themes, Library summaries, standing collection bookcases, Shopkeeper modes, and restrained ambient motion.
+- Kept Catalog Terminal, advanced personalization, and Shopkeeper Buddy explicitly future-only.
+- Separated membership, series/order, genre, tags, pinned collections, and Shopkeeper session scope; tags and unsupported relationships remain future persistence rather than implied current features.
+- Split the direction into non-executable Phases A–H with dependencies, collision/security/data implications, validation needs, Designer effort ranges, and safe stopping points, plus an analysis-only estimation request for Engineer — Sei.
+- Revised the dashboard's coarse broader-roadmap estimate from approximately 70% to approximately 60% to reflect the expanded planned scope; core-build and release-readiness estimates remain unchanged.
+- Made no Site/source/test/schema/production change and created no implementation brief or execution authority.
+
 ## 2026-08-16 — Cumulative candidate preserved as unpublished Version 20
 
 - Accepted Engineer — Sei's preservation-only completion for the exact 24-path Shopping/M3–M6/Bookshelf candidate.

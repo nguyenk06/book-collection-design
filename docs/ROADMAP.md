@@ -2,12 +2,14 @@
 
 The database-first assessment validated the priority order. Enabling foundations are delivered immediately before their consumer; feature requirements remain in their linked documents.
 
+The canonical future product-shell and presentation direction is [My Library Visual Experience](VISUAL_EXPERIENCE.md). It establishes Library-first navigation and the user-facing Shopkeeper name, but does not change current implementation state, release gates, or execution authority.
+
 ## Status
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
 | 0 | Database integrity and Shopping persistence foundation | Partial; Gate 4 independently confirmed schema-complete and zero-FK signals | Complete preservation evidence through a separately approved read-only path | Medium | Target price/counts/identities/preservation remain unverified; export is not a D1 snapshot and excludes R2 bytes |
-| 1 | [Shopping Mode](SHOPPING_MODE.md) | Partial; local UI complete; controlled live sequence stopped at incomplete Gate 4 | Preservation evidence, Shopping publication, live validation/smoke | Medium-large | Gate 4 preservation evidence and every later production gate remain incomplete/unexecuted |
+| 1 | [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md) | Partial; local Shopping UI complete; future Shopkeeper responsive redesign documented; controlled live sequence stopped at incomplete Gate 4 | Preservation evidence, Shopping publication, live validation/smoke; later visual phases separately estimated | Medium-large | Gate 4 preservation evidence and every later production gate remain incomplete/unexecuted |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial; canonical identifier foundation complete locally | Future candidate workflow and user-facing matching | Medium | Production unchanged; fuzzy candidate matching deferred |
 | 3 | [Bookshelf](BOOKSHELF.md) | Bounded first release complete locally and preserved in unpublished Version 20; user checkpoint pending | Safe validation environment and Product Owner outcome before activation | Medium | No runnable unpublished preview; checkpoint environment blocked |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first export foundation and owner-only downloadable UI preserved in unpublished Version 20 | Product Owner checkpoint and separately gated activation | Medium-large | No production catalog export or complete backup; import remains unsafe/immediate |
@@ -44,6 +46,7 @@ The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.
 
 ## Deferred
 
+- Phased My Library visual redesign until Sei returns a source-informed estimate and the Product Owner resolves required choices; see [Visual Experience](VISUAL_EXPERIENCE.md).
 - Full edition management and an immediate title/edition/copy hierarchy.
 - Offline operation and generalized media support.
 - Business locations.

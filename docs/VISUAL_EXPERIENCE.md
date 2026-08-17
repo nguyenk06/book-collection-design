@@ -1,0 +1,254 @@
+# My Library Visual Experience
+
+## Status and authority
+
+This document is the canonical future visual and interaction direction for **My Library**. It defines product-level experience requirements for later estimation and phased implementation. It does not describe current implementation state, authorize Engineer work, or open any Site, source, data, save, preview, deployment, publication, or production gate. [Current State](CURRENT_STATE.md), accepted briefs, tests, and gate evidence remain authoritative for delivery status.
+
+The current cumulative Shopping/M3–M6/Bookshelf source is preserved in unpublished, undeployed Version 20. Future work must begin with composition and collision checks against that exact candidate. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
+
+## Experience principles
+
+- Lead with the collector's library, not a marketing hero or CYOA-specific application shell.
+- Adapt navigation, density, and primary actions to intent and device class; mobile is not compressed desktop.
+- Keep view access, visual-test access, authentication, and write authority visibly separate.
+- Use collection identity, covers, shelves, progress, and concise numbers to make the working application as intentional as the editorial surface.
+- Preserve accessible alternatives, reduced motion, readable states, and server authority beneath every visual treatment.
+- Treat percentages and KPIs as presentation summaries, never validation evidence.
+
+## Product identity and information architecture
+
+The product identity is **My Library**. The primary hierarchy is:
+
+1. **Library** — default home and full personal catalog.
+2. **Collections** — collection discovery and collection-specific Gallery, List, and Bookshelf views.
+3. **Shopkeeper** — focused acquisition companion.
+4. **Owner area** — administration, exports, settings, test controls, and additional tools.
+
+CYOA and Redwall are collections, not separate libraries or permanent primary-navigation destinations. A collection can be pinned or favorited for prominence without changing its membership.
+
+The domain and interface must not conflate:
+
+| Concept | Meaning | Current/future boundary |
+| --- | --- | --- |
+| Library membership | A Book belongs to the owner's overall catalog | Existing core concept |
+| Collection membership | A Book participates in a collector-defined or published collection | Existing bounded collection behavior; future many-to-many needs verification/design |
+| Published series/order | Canonical or collection-specific sequence and numbering | Existing series-position behavior; alternates need explicit treatment |
+| Genre | Bibliographic/category classification | Future relationship design |
+| Personal tags | Owner-defined flexible labels | Future persistence; see [Tags](TAGS.md) |
+| Pinned/favorite collection | Presentation prominence | Future preference; must not mutate membership |
+| Shopkeeper session scope | Temporary matching and recommendation focus | Future session state; independent of membership |
+
+Books may eventually belong to multiple collections, genres, and tags. No visual treatment may imply those relationships are implemented before their data contracts exist.
+
+## Responsive shell, header, and footer
+
+### Desktop
+
+Use a stable header:
+
+- Left: a small identity mark and **My Library**.
+- Primary navigation: **Library**, **Collections**, **Shopkeeper**.
+- Right: global search, light/dark theme control, and owner/profile menu.
+- Owner menu: administration, test controls, exports, settings, and other privileged tools.
+
+Help and About leave permanent primary navigation. A contextual row below the header communicates location, mode, scope, and safety state, for example:
+
+- `Shopkeeper · Shopping for CYOA · Read-only`
+- `Collections / CYOA / Bookshelf`
+- `Read-only testing · New admin view`
+
+### Mobile
+
+Use a compact header showing the current page or collection plus one or two contextual actions. Use persistent bottom navigation for **Library**, **Collections**, **Shopkeeper**, and **More**. Shopkeeper may receive stronger visual emphasis as the mobile field tool. Important navigation must never depend on the footer.
+
+### Footer
+
+Remove language describing “three separate libraries.” Use a minimal My Library identity, Help/About, appropriate privacy/data information, and an owner-visible version/build reference. The footer is supporting information, not the mobile navigation system.
+
+## Modes, access, and safety state
+
+Keep three independent axes visible and enforceable:
+
+1. **View mode:** Public, Tester, or Administrator presentation.
+2. **Global write state:** Locked or Unlocked.
+3. **Temporary test access:** permission to view one unreleased visual variant.
+
+An admin-looking view does not grant mutation authority. Public and administrative layouts may be evaluated while writes remain locked. Show a compact persistent state such as `Read-only testing · New admin view`, with expanded explanation available without dominating content.
+
+### Global write lock
+
+The future write lock is server-enforced. Client-side disabling and read-only labels provide clarity but are never authoritative. When locked, reading, browsing, searching, filtering, exporting already-authorized read-only views, and visual testing may continue. Every mutation must be rejected at the server boundary.
+
+The mutation inventory to verify includes at minimum:
+
+- Book add, edit, delete, ownership, copy-count, and status changes.
+- Collection create/edit/delete, membership, order, pin/favorite, and target-price changes.
+- Purchase and Business creation/edit/delete and purchase recording.
+- Import, restore, bulk action, merge, reconciliation, and staged-change application.
+- Cover upload, replacement, deletion, metadata changes, and other R2/object mutations.
+- Tag/genre assignment and future relationship mutations.
+- Theme or personalization writes where stored server-side.
+- Test-code creation/revocation and variant administration.
+- Schema activation, migrations, repair, maintenance, and other administrative writes.
+- Any API, route action, background job, alternate method, or legacy endpoint capable of the same mutations.
+
+Only the authenticated owner can unlock writes. Unlocking requires deliberate confirmation and must be auditable enough to diagnose state. Validation must enumerate all mutation endpoints/actions, prove locked rejection for owner and non-owner paths, prove reads remain available, check direct HTTP and alternate-method bypasses, verify lock visibility across responsive modes, and confirm restart/concurrency behavior appropriate to the storage design. The lock cannot be a client flag, hidden control, process-local assumption, or route-specific exception list with unknown coverage.
+
+### Temporary visual-testing access
+
+Owner-generated temporary codes may expose one unreleased presentation variant, such as a new public Library view, administration view, mobile navigation experiment, or Shopkeeper experiment. They do not replace permanent owner authentication and grant no write authority by default.
+
+Required properties:
+
+- Server-side validation and hashed code storage.
+- Expiration, immediate revocation, rate-limited attempts, and variant-specific scope.
+- Owner-visible active-code inventory without recoverable plaintext codes after creation.
+- No secrets embedded in client bundles, URLs, logs, or documentation.
+- Explicit association with view mode and locked/unlocked state.
+- Documented disablement, data-retention, and removal path after testing.
+- Tests for expired, revoked, wrong-variant, replay/rate-limit, malformed, and privilege-escalation attempts.
+
+## Application modes
+
+Library, Collection/Bookshelf, Shopkeeper, and Administration share semantic tokens and recognizable identity while adapting information density, controls, and navigation to their jobs.
+
+### Library home
+
+Lead with the personal library. Reduce space before useful content and replace generic promotion with concise collector language. Preferred content includes pinned collections, overall progress, recently added books, missing priorities, purchase activity when useful, covers, shelf cues, and concise KPIs. Empty and partial states must remain useful without fabricated completeness.
+
+### Collections and the standing bookcase
+
+Treat each selected collection as one complete standing bookcase. For CYOA:
+
+- Fill rows left to right and continue vertically down the page.
+- Keep missing numbered titles visible as gaps or placeholder spines without creating synthetic Books.
+- Preserve stable, meaningful collection order.
+- Prevent alternate numbering from silently displacing canonical positions.
+- Let vertical page scrolling traverse the continuing bookcase, including on mobile.
+- Keep collection identity and relevant controls available.
+- Open spine details in an accessible dialog or mobile bottom sheet.
+- Provide explicit collection controls; gestures may supplement but never replace them.
+
+Changing collections replaces the whole bookcase. A restrained slide or rotation can reinforce the transition. Gallery and List remain efficient alternatives. Horizontal shelf carousels are reserved for small subsets such as recently added, next missing, wishlist, upgrade candidates, or compact collection previews—not a 184-book CYOA row.
+
+### Shopkeeper
+
+Shopkeeper is a fast acquisition companion, primarily mobile. The core mobile sequence is:
+
+1. Enter Shopkeeper.
+2. Scan an ISBN/barcode, use a photo, or search manually.
+3. Receive an immediate **Buy**, **Skip**, or **Upgrade** recommendation.
+4. Record the purchase when authorized, or continue to the next Book.
+
+The decision view prioritizes owned/missing/duplicate state, collection and series position, asking price versus collection target, existing copies, edition relevance, condition, personal cover, and one prominent next action. Use large capture controls, a minimal header, thumb-accessible controls, sticky bottom action area, concise summaries, and fast “next item” movement. Deterministic evidence and uncertainty remain visible; the visual label must not overstate match or edition confidence.
+
+Desktop may use a broader workspace with scan/search, current decision/detail, recent scans or comparison queue, purchase and Business context, and keyboard-friendly entry.
+
+A session may focus on CYOA, Redwall, the whole Library, or a future multi-collection trip. Launching from CYOA scopes matching, owned/missing state, issue order, alternate numbering, edition relevance, and target price to CYOA. Global launch searches the Library, suggests known collection relationships, and permits general intake where no relationship is known. Library membership, collection assignment, and session focus remain independent.
+
+## Themes and personalization
+
+Initial themes are the existing warm light direction and a purpose-designed dark theme that feels like the same library under different lighting. Support system preference and saved user choice. Define semantic tokens for navigation, shelves, books, cards, inputs, charts, status indicators, dialogs, administration, and Shopkeeper, including focus, disabled, locked, warning, success, and destructive states.
+
+Custom palettes are later work. Advanced personalization inspired by early personal websites may eventually expose controlled color, typography, backgrounds, imagery, and possibly sanitized custom CSS. Arbitrary raw HTML or JavaScript is excluded.
+
+## Copy and visual summaries
+
+Review hero copy, headings, collection summaries, helper text, empty states, missing-cover states, repetitive Book cards, and KPI presentation. Prefer short text, clear hierarchy, useful counts, covers, shelf cues, status icons, and distinct Shopkeeper decisions. Accessibility names must retain meaning where visible copy is intentionally terse.
+
+KPI percentages are coarse presentation summaries only. Operational briefs, tests, production gates, and [Current State](CURRENT_STATE.md) remain authoritative.
+
+## Motion and ambient effects
+
+Motion establishes atmosphere, confirms actions, or directs attention; it must not keep the whole screen moving. Candidate effects include sparse dust/snow/stars, subtle spine depth, a restrained pulse on a searched gap, Books settling after view changes, Shopkeeper card transitions, collection-bookcase transitions, and future terminal cursor/flicker.
+
+All motion must respect reduced-motion preference, provide an **Ambient Effects** preference, automatically reduce decorative load on mobile, avoid animating every spine in a large collection, and preserve performance, input responsiveness, readability, and focus stability.
+
+## Future-only personality layers
+
+### Catalog Terminal Easter egg
+
+A future optional owner presentation may evoke DOS terminals and early web-computer interfaces without copying protected characters, names, art, sounds, or assets. Read-only commands might include `STATUS`, `COLLECTIONS`, `MISSING CYOA`, `RECENT`, and `HELP`; supported controlled operations might expose `LOCK`, `EXPORT`, `TESTCODES`, or `THEME DARK`.
+
+It is only a presentation over supported application operations. Normal accessible administration remains available; there is no arbitrary OS, SQL, or database execution; existing authorization, confirmation, write lock, and owner authentication remain authoritative; mobile offers usable command suggestions. Harmless personality responses are allowed. This is not current priority or implementation scope.
+
+### Shopkeeper Buddy
+
+A low-priority optional, dismissible, primarily mobile personality layer may react to existing deterministic outcomes such as missing, duplicate, below-target, upgrade, uncertain match, or read-only state. It requires no separate AI service, never replaces the recommendation, and always supplies accessible text. It begins only after matching and purchase workflows are stable.
+
+## Current release versus later enhancement
+
+| Layer | Direction |
+| --- | --- |
+| Current release planning | Phases A–G below may be estimated; each requires later scope and authority. Preserve Version 20 and all existing gates meanwhile. |
+| Optional polish after stable foundations | Phase H ambient animation, controlled by performance/accessibility requirements. |
+| Future only | Catalog Terminal, advanced personalization/custom palettes, and Shopkeeper Buddy. |
+| Separate persistence/product work | Many-to-many collections, genres, tags, saved preferences where not already supported, multi-collection trips, and relationship editing. |
+
+## Dependencies and collision boundaries
+
+- **Version 20 cumulative candidate:** shared application page, global styles, schema, API, authentication/runtime, Shopping, Bookshelf, and ordered migration surfaces require exact pre-estimate and pre-implementation composition checks.
+- **Collection relationships:** current collection/series behavior is not blanket authority for many-to-many membership, genres, pins, or session scope persistence.
+- **Tags:** remain future schema and interaction work; visual filters may not imply persistence.
+- **Authentication:** Public/Tester/Administrator presentation, owner authorization, temporary codes, and write state need separate server models.
+- **Write enforcement:** requires complete server mutation inventory and likely shared enforcement below individual UI actions.
+- **Responsive behavior:** shell, bottom navigation, dialogs/bottom sheets, scan/photo capture, sticky actions, large bookcases, keyboard, touch, and viewport changes require explicit coverage.
+- **Themes/preferences:** semantic tokens can precede saved preference persistence; storage location and anonymous/tester behavior remain decisions.
+- **Migration/release gates:** visual design authority does not authorize schema work, saving, previewing, deploying, publishing, or production validation.
+
+## Estimable implementation phases
+
+Ranges below are Designer planning estimates in **Engineer effort points**, not execution budgets or authority. Sei should replace them with source-informed ranges including intake, collision analysis, implementation, remediation, full validation, evidence, and clean stop.
+
+| Order | Phase | Scope and safe stop | Dependencies / collisions | Data and security | Responsive validation | Independence | Designer range |
+| ---: | --- | --- | --- | --- | --- | --- | ---: |
+| 1 | **A — IA and responsive shell** | My Library naming, Library-first routing, desktop/mobile header, bottom navigation, contextual row, footer. Stop with routes and shell usable behind current data/actions. | Existing root page, global styles, navigation, Bookshelf/Shopping entry points, Version 20 composition. | Prefer no schema; preserve auth boundaries and do not expose owner tools. | Desktop widths, small/large mobile, keyboard, focus/order, orientation, safe areas. | Foundation for E–G; can precede B–D if current actions remain unchanged. | 5–8 |
+| 2 | **B — Global write lock** | Server lock model, shared enforcement, state treatment, owner-confirmed unlock, exhaustive mutation tests. Stop locked by default in testing with verified reads/no bypass. | Complete mutation inventory, auth helper, APIs/actions, migrations/admin, background paths. | Likely durable state/config decision; highest security risk; no client-only design. | Visible/understandable in every mode; disabled states and direct-request tests. | Technically separable but required before meaningful admin/public visual testing. | 8–13 |
+| 3 | **C — Temporary visual-test access** | Scoped expiring codes, hashed storage, revocation, rate limiting, variant selection/inventory/removal. Stop with one harmless read-only variant end to end. | B lock semantics, auth/session/routing, deployment/platform capability. | New secret-like records likely require schema/storage; threat model and log hygiene required. | Code entry, errors, expiry, revocation, variant state on mobile/desktop. | Independent of visual phases after A/B boundaries; may be deferred if no supported unpublished/testing route exists. | 8–13 |
+| 4 | **D — Theme foundation** | Semantic warm-light/dark tokens, system preference, user choice, all current components. Stop when both themes pass contrast and regression review without redesigning every page. | Global CSS/current colors, charts, dialogs, admin and Shopkeeper states. | Preference storage decision; avoid sensitive/security state encoded only by color. | System changes, persistence, flash prevention, contrast, forced colors, mobile OLED/readability. | Can proceed after A; coordinate with E–H to avoid rework. | 5–8 |
+| 5 | **E — Library home and copy** | Personal-library home, pinned/favorite presentation, concise summaries, recent/missing/purchase modules, empty/copy/card cleanup. Stop with existing-data modules only. | A shell, current queries, covers, collection progress definitions, pin persistence decision. | May be read-only if pinning is display-only/static; persisted pins need a later data contract and B enforcement. | Loading/empty/error, narrow cards, touch targets, screen-reader summary order. | Can use existing data independently; defer unsupported pins/relationships. | 5–8 |
+| 6 | **F — Standing collection bookcase** | Complete vertical bookcase, stable gaps/order, explicit collection switching, bottom-sheet detail, Gallery/List alternatives. Stop with one CYOA case and regression-safe alternate views. | Existing M4 page/styles/tests, canonical/alternate numbering, large-list performance, A/D. | No synthetic Books; collection relationship changes are separate schema scope. | 184-item mobile scroll, keyboard/focus, virtualization if needed, resize/return context, reduced motion. | Builds on M4; can precede G after A and order rules are verified. | 8–13 |
+| 7 | **G — Responsive Shopkeeper** | Rename/presentation transition, mobile Buy/Skip/Upgrade decision, capture/search, sticky action, next-item flow, desktop workspace, collection session scope. Stop with one verified deterministic scope and current mutation semantics. | Existing Shopping/M3/scanner/APIs/styles, target price, edition confidence, A/B/D, collection relationships. | Session-scope persistence and general intake need decisions; all purchase/intake writes honor B. | Camera/photo/manual fallbacks, thumb reach, keyboard desktop, rapid repeat, errors, locked states. | UI can start with existing CYOA/global scopes; multi-collection trips remain future. | 8–13 |
+| 8 | **H — Ambient effects** | Tokenized sparse effects and purposeful transitions with preference and reduced-motion fallback. Stop with effects globally disableable and performance budget passing. | Stable A/D/E–G surfaces; avoid collision with bookcase rendering. | Preference storage only; no external tracking/assets by default. | Reduced motion, mobile auto-reduction, battery/performance, focus/readability. | Independent polish after stable UI; first item to park. | 3–5 |
+
+Recommended order is A → B → C or D → E → F → G → H. C may move after D–G if no supported testing access path exists, but public/admin visual evaluation must not proceed under an ambiguous write state. Each phase receives its own later authorization and may be split after Sei's estimate. No phase is currently executable.
+
+## Open Product Owner decisions
+
+These choices are deliberately unresolved:
+
+1. Which My Library views are genuinely public versus merely owner-visible presentation variants?
+2. Should the durable global write lock default to locked after deploy/restart, and is an automatic relock timeout required?
+3. What maximum lifetime, attempt limit, and audience model should temporary test codes use?
+4. Where should theme, ambient-effects, pinned collections, and Shopkeeper session preferences persist for owner, tester, and anonymous contexts?
+5. Does first-release Shopkeeper expose only deterministic `Buy/Skip/Upgrade` labels, and what exact rules produce each label?
+6. Is Redwall sufficiently structured for the first collection-switching/bookcase phase, or should F validate only CYOA plus a generic small fixture?
+7. Should pins/favorites and multi-collection membership be separate future schema work, or is an existing relationship model sufficient after Engineer inspection?
+8. Which existing owner actions remain visible-but-disabled during locked testing versus hidden from Public/Tester views?
+9. What privacy/data language is required in the footer, particularly for temporary testers?
+
+## Engineer estimation gate
+
+The copy-ready request below asks only for an estimate and source/collision analysis. It grants no implementation or operational authority.
+
+```text
+ENGINEER — SEI: ESTIMATION REQUEST ONLY
+
+Read docs/VISUAL_EXPERIENCE.md plus CURRENT_STATE.md, ROADMAP.md, ARCHITECTURE.md, BOOKSHELF.md, SHOPPING_MODE.md, TAGS.md, and the applicable ADRs. Inspect the actual continuing Sites/source context, including unpublished Version 20 composition. Do not modify source, generate tests, save, preview, deploy, publish, access production, change data/schema, or accept implementation authority.
+
+Estimate Phases A–H separately. For each phase report:
+- exact likely files/components/runtime surfaces;
+- dependencies and prerequisite Product Owner decisions;
+- collision risks with the cumulative Version 20 candidate;
+- data/schema and migration implications;
+- authentication, authorization, write-lock, temporary-code, and other security implications;
+- mobile/desktop/accessibility/performance validation required;
+- whether the phase can be developed and validated independently;
+- recommended order or safe split;
+- low/likely/high effort including intake, source checks, implementation, ordinary remediation, full validation, evidence, and clean stop;
+- safe stopping points and conditions that require parking.
+
+Explicitly verify whether current source already supports: many-to-many collection membership, pinned collections, saved theme preferences, durable global operational state, variant routing, and rate-limited hashed temporary codes. Treat absent or ambiguous capability as absent/unknown; do not reconstruct or implement it.
+
+Keep Catalog Terminal, advanced personalization, and Shopkeeper Buddy future-only and outside the executable estimate unless noting dependency impact. Return a sanitized estimation report to Designer through the normal inbox. This request is analysis-only and does not authorize !brief or !run.
+```

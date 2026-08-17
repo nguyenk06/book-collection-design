@@ -4,6 +4,8 @@
 
 Let collectors organize books with flexible, personal labels that do not distort canonical bibliographic data.
 
+Tags remain future persistence work. The My Library shell may reserve visual space for tag-driven organization, but must not present tags as implemented; see [Visual Experience](VISUAL_EXPERIENCE.md).
+
 ## Scope
 
 - Create, rename, assign, unassign, and delete tags.

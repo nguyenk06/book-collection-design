@@ -16,7 +16,7 @@ flowchart LR
 
 ## Application responsibilities
 
-- Present shopping, scanning, bookshelf, and review workflows.
+- Present My Library, Shopkeeper (historically Shopping Mode), scanning, Bookshelf, and review workflows. See [Visual Experience](VISUAL_EXPERIENCE.md) for the future responsive shell and view-mode direction.
 - Apply validation and collection rules consistently.
 - Keep canonical data separate from suggestions and external metadata.
 - Expose provenance and confidence when data is uncertain.
@@ -50,11 +50,11 @@ flowchart LR
 
 Imports and AI output must not bypass validation and review when changes are ambiguous or destructive.
 
-## Shopping workflow
+## Shopkeeper workflow (historical Shopping Mode)
 
 ```mermaid
 flowchart LR
-    Start[Open Shopping Mode] --> Capture[Scan or Search]
+    Start[Open Shopkeeper] --> Capture[Scan or Search]
     Capture --> Match{Confident match?}
     Match -->|Yes| Status[Show ownership and wanted status]
     Match -->|No| Candidates[Show candidates or create review item]
@@ -95,6 +95,7 @@ flowchart LR
 - Imports are repeatable and report validation failures.
 - Exports are documented and usable without the application.
 - Destructive or ambiguous changes require explicit confirmation.
+- Visual mode, temporary test access, owner authentication, and global write state are separate security concepts. A future write lock must be enforced server-side across the complete mutation inventory; UI disabling is advisory.
 
 ## Portability constraint
 

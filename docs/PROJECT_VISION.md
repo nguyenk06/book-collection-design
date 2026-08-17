@@ -4,6 +4,8 @@
 
 Help a book collector understand, maintain, and complete a personal collection with less manual effort and greater confidence while shopping.
 
+The product identity is **My Library**. Library is the default home; collections such as CYOA and Redwall are collection views rather than separate libraries. The canonical future shell and presentation direction is [My Library Visual Experience](VISUAL_EXPERIENCE.md).
+
 ## Scope
 
 - Maintain a reliable record of owned and wanted books.
@@ -44,7 +46,7 @@ Help a book collector understand, maintain, and complete a personal collection w
 ## Current priorities
 
 1. Verify the current database and establish a reliable baseline.
-2. Make Shopping Mode the fastest path to an ownership decision.
+2. Make Shopkeeper (the user-facing successor to historical Shopping Mode) the fastest path to an ownership decision.
 3. Improve scanner matching and review of uncertain results.
 4. Strengthen collection browsing, portability, and data quality.
 

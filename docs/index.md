@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Book Collection System Design
+title: My Library Design
 ---
 
-# Book Collection System Design
+# My Library Design
 
-Architecture, planning, and product documentation for a collector-first Book Collection System.
+Architecture, planning, and product documentation for the collector-first My Library product.
 
 ## Planner view
 
@@ -24,11 +24,12 @@ Architecture, planning, and product documentation for a collector-first Book Col
 - [Next Actions](NEXT_ACTIONS.md)
 - [Backlog](BACKLOG.md)
 - [Architecture](ARCHITECTURE.md)
+- [My Library Visual Experience](VISUAL_EXPERIENCE.md)
 - [Decision Log](DECISIONS.md)
 
 ## Feature design
 
-- [Shopping Mode](SHOPPING_MODE.md)
+- [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md)
 - [Scanner and Matching](SCANNER_AND_MATCHING.md)
 - [Bookshelf](BOOKSHELF.md)
 - [Import and Export](IMPORT_EXPORT.md)

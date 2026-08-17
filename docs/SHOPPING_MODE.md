@@ -1,5 +1,7 @@
 # Shopping Mode
 
+> **Naming transition:** Existing implementation, database, ADR, test, and release evidence uses **Shopping Mode**. The future user-facing product name is **Shopkeeper**. See [My Library Visual Experience](VISUAL_EXPERIENCE.md). Rename work is not currently authorized.
+
 ## Purpose
 
 Help a collector decide quickly whether to buy, skip, or investigate a book while shopping.
@@ -59,7 +61,7 @@ This foundation is saved but has not been published as Shopping UI; Version 19 i
 ## Remaining Milestone Work
 
 - Approve and execute production migration and verification separately from publication.
-- Separately approve preservation of the completed local Shopping source if a Site save is desired.
+- Preserve the completed cumulative source boundary in Version 20; any later candidate change, Site save, deployment, or publication remains separately gated.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
 
 ## Verified Local UI Phase
@@ -75,7 +77,7 @@ This bounded phase is complete and validated against local/disposable data befor
 
 Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
 
-The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. The Shopping source remains unsaved; Version 19 is the latest saved and published administration version, but contains no Shopping UI.
+The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. The completed local Shopping UI is preserved with the cumulative candidate in unpublished, undeployed Version 20. Version 19 remains published and contains no Shopping UI.
 
 ## Product Owner validation checkpoint
 
@@ -109,6 +111,7 @@ Designer records the live result and routes bounded feedback. `REVISE BEFORE REL
 
 ## Future improvements
 
+- Responsive Shopkeeper decision experience, collection-scoped sessions, Library-wide intake, and desktop workspace as defined in [Visual Experience](VISUAL_EXPERIENCE.md).
 - Configurable decision cues and duplicate warnings.
 - Store-session history and batch review.
 - Better degraded-network capture.

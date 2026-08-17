@@ -8,7 +8,7 @@
 | --- | ---: | --- | --- |
 | Core build completion | **~90%** | `██████████████████░░` | Functionality implemented and validated locally |
 | Release readiness | **~60%** | `████████████░░░░░░░░` | Preservation, production verification, publication, and live validation |
-| Broader roadmap completion | **~70%** | `██████████████░░░░░░` | Current release plus later planned product capabilities |
+| Broader roadmap completion | **~60%** | `████████████░░░░░░░░` | Current release plus later planned product capabilities |
 
 These estimates intentionally measure different outcomes. High local completion does not imply that the source is saved, published, production-verified, or live-validated.
 
@@ -55,6 +55,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
+| My Library visual experience | Planned | Phases A–H await source-informed estimation and later authority; optional personality layers remain future-only |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |

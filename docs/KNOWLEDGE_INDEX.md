@@ -4,6 +4,7 @@ This page defines where knowledge belongs. It intentionally does not reproduce E
 
 | Knowledge space | Owner and storage | Authoritative purpose |
 | --- | --- | --- |
+| [My Library Visual Experience](VISUAL_EXPERIENCE.md) | Designer/Product Owner in this GitHub repository | Canonical future visual, responsive, mode, theme, safety-presentation, and phased-estimation direction; not implementation authority |
 | [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md) | Planner/Designer in this GitHub repository | Ranked product and UX candidates; not roadmap commitments |
 | Engineer Research Sandbox | Engineer-local shared handoff workspace under `knowledge/` | Raw technical notes, experiments, feasibility observations, source reviews, revalidation notes, and speculative options |
 | Engineer brief | External local `briefs/` transport only | Approved implementation scope only |

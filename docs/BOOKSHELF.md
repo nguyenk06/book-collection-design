@@ -4,6 +4,8 @@
 
 Provide an understandable, useful view of the collector's books for browsing, finding, and maintaining the collection.
 
+The canonical future standing-bookcase, collection-switching, responsive, theme, and motion direction is [My Library Visual Experience](VISUAL_EXPERIENCE.md). This document retains the accepted bounded M4 behavior and evidence.
+
 ## Scope
 
 - Search, filter, and sort collection records.
@@ -52,14 +54,15 @@ Planner accepted a bounded collection shelf using existing collection and series
 - Preserve the active collection, browsing position, and applicable view context when returning.
 - Do not add physical locations, saved views, tags, bulk actions, or a new identity model in this phase.
 
-This accepted contract now has a local M4 implementation brief under Queue Mode `RUN`. Brief acceptance authorizes only bounded local implementation and validation; user-facing activation remains checkpoint-gated.
+This accepted bounded contract was implemented and validated locally; user-facing activation remains checkpoint-gated. The later standing-bookcase redesign is separate planning work and has no implementation authority.
 
 ## Verified local implementation
 
-The bounded Bookshelf is complete in the unsaved local working copy. It adds a persisted Bookshelf collection view, deterministic series-position ordering, explicit noninteractive missing-position gaps, keyboard-operable real Book spines, an accessible detail dialog with metadata fallbacks, and return behavior that preserves collection/view/scroll context. Focused collection tests pass 16/16; the full suite passes 81/81; build and scoped lint pass apart from one pre-existing scanner hook warning. No schema, Site save, publication, or production state changed. Product Owner hands-on validation remains required before activation.
+The bounded Bookshelf is complete locally and preserved in unpublished, undeployed Version 20. It adds a persisted Bookshelf collection view, deterministic series-position ordering, explicit noninteractive missing-position gaps, keyboard-operable real Book spines, an accessible detail dialog with metadata fallbacks, and return behavior that preserves collection/view/scroll context. Focused collection tests pass 16/16; the then-authoritative full suite passed 81/81, and the later cumulative preservation suite passed 160/160; build and scoped lint pass apart from one pre-existing scanner hook warning. No publication or production activation followed. Product Owner hands-on validation remains required before activation.
 
 ## Future improvements
 
+- One continuing vertical bookcase per collection, explicit switching, mobile bottom-sheet details, and restrained transitions as defined in [Visual Experience](VISUAL_EXPERIENCE.md).
 - Saved views and configurable shelf groupings.
 - Physical location and lending views if later approved.
 - Bulk maintenance actions with clear previews.
