@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-20 — Final pre-reset local batch prepared
+
+- Recorded a fresh 26% usage reading and August 21 3:00 PM reset.
+- Preserved the standing 30% reserve while recording a one-run Product Owner exception down to approximately 5%, with the final 5% reserved for checkpointing, reporting, remediation, and clean stop.
+- Selected Phase A My Library information architecture/responsive shell as the highest-value primary and the static, non-persistent Phase D semantic light/dark theme foundation as an independent fallback.
+- Retained blocker mobility: group questions, park only the affected task, and continue the independent task; stop only when all authorized work is complete/blocked, the temporary boundary is reached, or the system prevents continuation.
+- Kept the Gate 4 private export parked outside this run and left B/C security foundations, E/F/G/H, preference persistence, Site operations, production, schema/data changes, and speculative work closed.
+- Prepared one implementation-ready local brief; explicit `!run` remains required and no implementation, Site action, or production access occurred during preparation.
+
 ## 2026-08-17 — Visual estimate accepted and brief transport repaired
 
 - Accepted Sei's read-only source-informed estimate against exact Version 20 source commit `6a2191b1b506d171d576cbb6a6b160964595c051`; no implementation, Site, production, schema, data, dependency, or test change occurred.

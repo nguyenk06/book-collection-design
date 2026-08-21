@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; P1 is complete and P2 is parked by its usage gate.
-- **Engineer state:** `PAUSED`; the exact cumulative source is preserved at a clean checkpoint.
-- **Next owner:** `EXTERNAL/WAIT` — provide a fresh usage reading after the August 21 reset.
-- **Usage:** Fresh reading 36%; reset August 21. P2 is 3–5 points and is ineligible because its high estimate would finish near 31%, below the 35% cushion.
+- **Throttle:** `DRAIN` until explicit `!run`; one final pre-reset local brief is prepared.
+- **Engineer state:** `PAUSED`; exact Version 20 source is preserved at a clean checkpoint.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner may send `!run` to Sei.
+- **Usage:** Fresh reading 26%; reset August 21 at 3:00 PM. Standing reserve remains 30%, with a one-run Product Owner exception down to approximately 5% and the last 5% reserved for checkpointing, remediation, evidence, and clean stop.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
 
@@ -40,6 +40,13 @@ Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot selec
 - P2 remains one bounded private read-only Version 19 bridge export, offline Gate 2 comparison, sanitized evidence, and automatic stop for mismatch or ambiguity. It is parked until the August 21 reset and a fresh usage reading.
 - A saved version is not runnable and does not authorize a checkpoint. No unpublished preview exists in supported tooling.
 - Corrective write, Gate 3 retry, migration, deployment/publication, Shopping publication, live checklist, smoke test, restore, rollback, and destructive recovery remain closed.
+
+## Final pre-reset local batch
+
+1. **Primary — Phase A responsive shell:** establish My Library naming, Library-first routing/navigation, desktop header, compact mobile header, bottom navigation, contextual state row, and corrected footer while preserving all current route/action/auth behavior.
+2. **Fallback — static Phase D theme foundation:** define semantic warm-light/dark tokens and a non-persistent system/manual theme treatment. Preference persistence is excluded because no supported editable cross-device store exists.
+
+Phase A is estimated at 6/8/11 Engineer points. The complete Phase D estimate is 6/9/13, but this run accepts only clean static-token/theme units that can stop recoverably before persistence. If one task blocks, record the grouped question and continue the other. B/C security foundations, E/F/G/H, Gate 4 production read, Site operations, schema/data changes, and speculative fill-in work are excluded.
 
 ## Other workstreams
 

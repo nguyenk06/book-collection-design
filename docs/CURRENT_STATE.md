@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-16
+**Last reviewed:** 2026-08-20
 
 For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
 
@@ -23,16 +23,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; P1 is accepted complete and P2 is parked by its usage gate.
-- **Engineer state:** `PAUSED` at a clean post-preservation checkpoint.
-- **Engineer continuation:** The approved private Gate 4 export brief remains preserved but ineligible until a fresh post-reset usage reading supports its full 3–5 point envelope and clean stopping cost.
+- **Throttle:** `DRAIN` until the Product Owner sends explicit `!run`; one final pre-reset local implementation brief is prepared, while the private Gate 4 export remains parked and excluded from this run.
+- **Engineer state:** `PAUSED` at a clean Version 20 checkpoint, ready to accept the prepared pre-reset brief after `!run`.
+- **Engineer continuation:** Execute Phase A responsive shell first, then the independent static Phase D theme foundation when safe. Park a blocked task and continue the other; do not enter B, C, E, F, G, H, the Gate 4 production read, or any Site operation.
 - **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
-- **Active owner:** `EXTERNAL/WAIT` — wait for the August 21 usage reset and a fresh Product Owner reading; no new decision is required for the already-approved P2 scope.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner may send `!run` to Sei for the prepared final pre-reset local batch.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The fresh post-P1 Product Owner reading is approximately 36% remaining, with usage resetting August 21. P2 remains estimated at 3–5 points, including evidence and clean stopping cost; its high estimate would finish near 31%, below the preferred 35% cushion. P2 is therefore parked until the reset and a fresh reading. The protected floor remains 30% and is not a target.
+The fresh Product Owner reading is approximately 26% remaining, with usage resetting August 21 at 3:00 PM. The standing protected floor remains 30%. For this final pre-reset run only, the Product Owner overrides that floor and permits implementation work down to approximately 5% remaining; the final approximately 5% is reserved for checkpointing, evidence, remediation, and a recoverable stop. Organize work around clean task boundaries rather than attempting exact token prediction. This exception expires at the reset and does not alter the standing rule.
 
 ## Current workstreams
 
@@ -73,4 +73,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 preservation is complete. P2 private export remains approved but parked because 36% cannot support its 3–5 point envelope while preserving the 35% cushion. Reassess after the August 21 reset; do not issue or accept it before a fresh reading. No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is authorized. See [Next Batch Plan](NEXT_BATCH_PLAN.md), [Next Actions](NEXT_ACTIONS.md), and [Staged Milestones](STAGED_MILESTONES.md).
+The prepared pre-reset local batch contains Phase A responsive shell as primary and the static, non-persistent portion of Phase D themes as fallback. It starts only after explicit `!run` and brief acceptance. The Gate 4 private export remains parked outside this batch. No Site save, preview, deployment, publication, production access, schema/data change, preference persistence, correction, migration, restore, rollback, or hands-on validation is authorized. See [Next Actions](NEXT_ACTIONS.md), [Visual Experience](VISUAL_EXPERIENCE.md), and [Staged Milestones](STAGED_MILESTONES.md).

@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Fresh reading 36%, resetting August 21; 30% remaining is the protected reserve. P1 preservation-only save is complete. P2 private export remains 3–5 points and is parked because its high estimate would finish below the 35% cushion.
+**Execution budget:** Fresh reading 26%, resetting August 21 at 3:00 PM. The standing 30% protected reserve remains authoritative. For the final pre-reset run only, Product Owner permits work down to approximately 5%, reserving the last approximately 5% for checkpointing, reporting, remediation, and clean stop.
 
-**Queue state:** Throttle `DRAIN`; P1 is complete, P2 remains approved but usage-ineligible until a fresh post-reset reading, and later Site and production gates remain closed.
+**Queue state:** Throttle `DRAIN` until explicit `!run`; Phase A primary plus static Phase D fallback are prepared as one local-only batch. P2 remains parked outside the batch; later Site and production gates remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess P2 after reset; accept it only when the full envelope preserves the cushion and clean-stop capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
