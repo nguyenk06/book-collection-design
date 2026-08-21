@@ -6,7 +6,7 @@ For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md).
 
 Future Library-first presentation, Shopkeeper naming, responsive shell, testing access, write-lock UX, themes, bookcases, and optional personality layers are documented in [My Library Visual Experience](VISUAL_EXPERIENCE.md). They are planning direction only and do not alter the current queue or Site state.
 
-Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A is now complete locally at recoverable application checkpoint `875831e`; static Phase D is partial at a clean semantic-token/system/manual-theme slice. B/C remain new security/runtime foundations and G remains a larger new recommendation/rule capability.
+Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A and the authorized static Phase D foundation are complete locally at recoverable application checkpoint `608553f`. Saved preference persistence remains a separate later slice. B/C remain new security/runtime foundations and G remains a larger new recommendation/rule capability.
 
 ## Authoritative snapshot
 
@@ -23,16 +23,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN` for the already-authorized final pre-reset local batch; the private Gate 4 export remains parked and excluded.
-- **Engineer state:** `PAUSED` at checkpoint `875831e` while Designer processes Phase A completion and prepares the bounded Phase D continuation.
-- **Engineer continuation:** Resume only remaining static Phase D color conversion and local visual-accessibility QA from `875831e`. Do not enter B, C, E, F, G, H, the Gate 4 production read, preference persistence, or any Site operation.
+- **Throttle:** `DRAIN`; the final pre-reset local batch is complete and the private Gate 4 export remains parked.
+- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f` with no eligible pre-reset implementation brief.
+- **Engineer continuation:** Wait for the August 21 reset and a fresh usage/batch decision. Do not enter B, C, E, F, G, H, the Gate 4 production read, preference persistence, local schema remediation, or any Site operation without a later brief.
 - **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
-- **Active owner:** `DESIGNER` during `!inbox` convergence, then `ENGINEER` for the prepared Phase D continuation under the existing `!run`.
+- **Active owner:** `EXTERNAL/WAIT` — wait for the August 21 reset and fresh Product Owner usage reading.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The fresh Product Owner reading is approximately 19% remaining, with usage resetting August 21 at 3:00 PM. The standing protected floor remains 30%. For this final pre-reset run only, the Product Owner override permits work down to approximately 5% remaining; the final approximately 5% is reserved for checkpointing, evidence, remediation, and a recoverable stop. Organize work around clean task boundaries rather than attempting exact token prediction. This exception expires at the reset and does not alter the standing rule.
+The fresh Product Owner reading is approximately 14% remaining, with usage resetting August 21 at 3:00 PM. The final pre-reset run has ended cleanly, so its temporary reserve exception is closed. The standing protected floor remains 30% for future planning. Do not queue more pre-reset work; wait for the reset and a fresh reading.
 
 ## Current workstreams
 
@@ -45,8 +45,8 @@ The fresh Product Owner reading is approximately 19% remaining, with usage reset
 | M4 bounded Bookshelf | Complete locally; saved in unpublished Version 20 | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
 | M5 catalog export foundation | Complete locally; saved in unpublished Version 20 | Format v1, stable Book IDs, referential validation, deterministic output, no-write proof, and recovered editable source verified | Consumed by the completed local M6 UI |
 | M6 downloadable export UI | Complete locally; saved in unpublished Version 20 | 8/8 focused and 160/160 full serial tests, task lint, build, owner gating, no-write checks, and collision separation passed | No runnable preview, checkpoint, deployment, publication, or activation authority |
-| My Library Phase A shell | Complete locally; checkpoint `875831e` only | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; local Phase D continuation only |
-| My Library Phase D themes | Partial locally; clean checkpoint `875831e` | Semantic tokens, warm/dark palettes, system preference and session-only manual control validated; legacy hard-coded colors remain | Complete route conversion and local contrast/viewport/forced-colors QA |
+| My Library Phase A shell | Complete locally; checkpoint `608553f` includes it | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; later checkpoint/release separately gated |
+| My Library static Phase D themes | Complete locally; checkpoint `608553f` | Semantic conversion complete; desktop/mobile light/dark/system QA, focus, overflow, and sampled contrast passed | Admin/catalog visual routes blocked locally by sign-in; forced-colors/reduced-motion emulation and preference persistence remain later |
 
 ## Data and export status
 
@@ -75,4 +75,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Phase A is accepted complete locally. The remaining pre-reset work is a bounded Phase D continuation from checkpoint `875831e`: convert legacy hard-coded color declarations in clean route-family slices and perform local contrast, viewport, and forced-colors QA where supported. The Gate 4 private export remains parked. No Site save, preview, deployment, publication, production access, schema/data change, preference persistence, correction, migration, restore, rollback, or live validation is authorized. See [Next Actions](NEXT_ACTIONS.md), [Visual Experience](VISUAL_EXPERIENCE.md), and [Staged Milestones](STAGED_MILESTONES.md).
+The final pre-reset local batch is complete at checkpoint `608553f`. After reset, reassess the parked Gate 4 export, the local D1 schema drift that blocked data-populated Shopkeeper QA, and any later Admin/catalog/forced-colors/reduced-motion theme QA as separate work. No Site save, preview, deployment, publication, production access, schema/data change, preference persistence, correction, migration, restore, rollback, or live validation is authorized. See [Next Actions](NEXT_ACTIONS.md), [Visual Experience](VISUAL_EXPERIENCE.md), and [Staged Milestones](STAGED_MILESTONES.md).

@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Fresh reading 19%, resetting August 21 at 3:00 PM. The standing 30% protected reserve remains authoritative. For the final pre-reset run only, Product Owner permits work down to approximately 5%, reserving the last approximately 5% for checkpointing, reporting, remediation, and clean stop.
+**Execution budget:** Fresh reading 14%, resetting August 21 at 3:00 PM. The final pre-reset run completed cleanly and its temporary reserve exception is closed. The standing 30% protected reserve remains authoritative for future planning.
 
-**Queue state:** Throttle `RUN`; Phase A is complete locally and static Phase D continues from checkpoint `875831e` in bounded conversion/QA slices. P2 remains parked outside the batch; later Site and production gates remain closed.
+**Queue state:** Throttle `DRAIN`; Phase A and static Phase D are complete locally at `608553f`. P2 remains parked until reset; later Site and production gates remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess P2 after reset; accept it only when the full envelope preserves the cushion and clean-stop capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

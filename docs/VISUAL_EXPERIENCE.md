@@ -219,8 +219,9 @@ The simple sum is **62 / 91 / 128** points. Sei estimates approximately **56 / 8
 
 ### Local implementation checkpoint — 2026-08-20
 
-- **A — complete locally:** My Library identity and responsive shell are implemented at application checkpoint `875831e`. Targeted suites and the complete current-source serial suite pass; Site save, preview, publication, and live validation remain absent.
-- **D — partial locally:** semantic tokens, warm/dark palettes, system preference, session-only manual control, focus treatment, and route-family dark overrides are implemented at the same checkpoint. Legacy hard-coded declarations, complete contrast measurement, forced-colors inspection, and visual viewport QA remain.
+- **A — complete locally:** My Library identity and responsive shell are implemented and preserved in application checkpoint `608553f`. Targeted suites and the complete current-source serial suite pass; Site save, preview, publication, and live validation remain absent.
+- **Static D foundation — complete locally:** semantic conversion, warm/dark/system presentation, session-only manual control, focus treatment, route-family styling, desktop/mobile viewport checks, overflow checks, and sampled contrast are complete at `608553f`.
+- **D limits:** Admin/catalog visual navigation was blocked by unavailable local sign-in; forced-colors and reduced-motion emulation were unavailable; saved preference persistence remains a later separately gated slice.
 - This checkpoint does not activate B/C/E/F/G/H or authorize preference persistence, Site operations, or production work.
 
 ### Accepted source findings

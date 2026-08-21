@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN` for the authorized final pre-reset local batch.
-- **Engineer state:** `PAUSED` at recoverable checkpoint `875831e` during Designer convergence.
-- **Next owner:** `ENGINEER` — accept the prepared bounded Phase D continuation under the existing run.
-- **Usage:** Fresh reading 19%; reset August 21 at 3:00 PM. Standing reserve remains 30%, with the one-run Product Owner exception down to approximately 5% and the last 5% reserved for checkpointing, remediation, evidence, and clean stop.
+- **Throttle:** `DRAIN`; the final pre-reset local batch is complete.
+- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f`; no eligible pre-reset implementation brief remains.
+- **Next owner:** `EXTERNAL/WAIT` — provide a fresh usage reading after the August 21 3:00 PM reset.
+- **Usage:** Fresh reading 14%. The one-run reserve exception ended with the completed batch; the standing 30% reserve remains the default after reset.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
 
@@ -43,10 +43,10 @@ Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot selec
 
 ## Final pre-reset local batch
 
-1. **Complete — Phase A responsive shell:** My Library identity/navigation, contextual row, mobile header/bottom navigation, Shopkeeper presentation, collection framing, footer, and owner/public boundaries are locally implemented and validated at `875831e`.
-2. **Partial — static Phase D theme foundation:** semantic tokens, warm/dark palettes, system preference, session-only manual theme control, focus treatment, and route-family dark overrides are locally implemented. Legacy hard-coded declarations and formal visual-accessibility QA remain.
+1. **Complete — Phase A responsive shell:** My Library identity/navigation, contextual row, mobile header/bottom navigation, Shopkeeper presentation, collection framing, footer, and owner/public boundaries are locally implemented and retained in final checkpoint `608553f`.
+2. **Complete locally — static Phase D theme foundation:** semantic color conversion is complete across root/Bookshelf, Shopkeeper, Administration, and catalog-download styles; desktop/mobile theme, focus, overflow, and sampled contrast checks passed.
 
-Continue Phase D only in clean route-family slices from `875831e`. Prioritize exact color inventory/conversion, then local desktop/mobile viewport, contrast, reduced/forced-colors, focus, and readability evidence. If browser-level QA is unavailable, record it unrun and continue safe declaration conversion/tests; do not use a Site preview or add a dependency. B/C security foundations, E/F/G/H, Gate 4 production read, persistence, Site operations, schema/data changes, and speculative fill-in work remain excluded.
+Do not continue pre-reset implementation. After reset, separately assess: the parked Gate 4 production-read brief; local D1 schema drift (`books.stable_id` absent) before data-populated Shopkeeper visual QA; Admin/catalog visual access blocked by local sign-in; and forced-colors/reduced-motion emulation. Preference persistence, B/C/E/F/G/H, Site operations, schema/data changes, and speculative fill-in remain excluded until later authority.
 
 ## Other workstreams
 

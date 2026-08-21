@@ -212,6 +212,8 @@ For export format v1, step 6 is narrowed to an additive immutable Book `stable_i
 
 The narrowed M5 step is complete locally: Book stable-ID backfill, uniqueness, required insertion, and immutability enforcement passed disposable migration/export validation. Production schema and Site versions remain unchanged.
 
+During the 2026-08-20 local theme QA run, the active local D1 environment returned `table books has no column named stable_id` for `/api/books`. Engineer made no schema or data change. This is local-environment drift relative to the validated Version 20 source/migration set, not evidence about production state. Data-populated local Shopkeeper visual QA remains blocked until a separately briefed local schema workflow verifies and remedies the environment safely.
+
 Shopping persistence decisions are recorded in [ADR-0007](decisions/ADR-0007-shopping-persistence-foundation.md); identifier strategy is recorded in [ADR-0008](decisions/ADR-0008-canonical-books-and-identifiers.md).
 
 ### Recommended relationship behavior

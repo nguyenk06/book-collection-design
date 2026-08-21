@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-08-20 — Static Phase D completed; pre-reset run drained
+
+- Accepted Phase D semantic conversion completion at recoverable application checkpoint `608553f`.
+- Recorded 94/94 current-source tests, production build, scoped lint with one pre-existing warning, and diff checks passing.
+- Accepted desktop Library light/dark/system inspection, mobile Bookshelf/Shopkeeper and desktop Shopkeeper viewport checks, visible keyboard focus, no document-level overflow, and sampled contrast ratios above 12.8:1.
+- Recorded limits: Admin/catalog routes redirected to unavailable local sign-in; forced-colors and reduced-motion emulation were unavailable.
+- Recorded local D1 drift (`books.stable_id` absent) as blocking data-populated Shopkeeper visual QA; no schema/data remediation was attempted or authorized.
+- Updated usage to 14%, closed the one-run reserve exception, set throttle to `DRAIN`, and left the Gate 4 production-read brief parked until reset.
+- No Site save/package/preview/deployment/publication, production access, schema/data/API/auth/write change, dependency change, or preference persistence occurred.
+
 ## 2026-08-20 — Phase A accepted complete; Phase D continuation prepared
 
 - Accepted Sei's local Phase A completion at recoverable application checkpoint `875831e` above exact Version 20 source.
