@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-08-20 — Phase A accepted complete; Phase D continuation prepared
+
+- Accepted Sei's local Phase A completion at recoverable application checkpoint `875831e` above exact Version 20 source.
+- Recorded My Library identity/navigation, contextual rows, compact mobile shell and bottom navigation, Shopkeeper presentation, collection framing, corrected footer, and Administration/catalog-export identity updates without changing behavior or authorization.
+- Accepted static Phase D as partial: semantic tokens, warm/dark palettes, system preference, session-only manual control, focus treatment, and dark route-family overrides are present, while legacy hard-coded declarations and formal contrast/forced-colors/viewport QA remain.
+- Recorded passing targeted suites, 94/94 complete current-source serial tests, scoped lint with one pre-existing warning, production build, diff check, and manifest/sensitive-material review.
+- Updated the fresh usage reading to 19% under the unchanged one-run temporary 5% boundary and prepared a narrow Phase D conversion/local-QA continuation.
+- No Site save/package/preview/deployment/publication, production request, schema/data/API/auth/write change, dependency change, or preference persistence occurred.
+
 ## 2026-08-20 — Final pre-reset local batch prepared
 
 - Recorded a fresh 26% usage reading and August 21 3:00 PM reset.

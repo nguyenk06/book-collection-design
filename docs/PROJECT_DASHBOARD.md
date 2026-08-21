@@ -55,7 +55,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Planned | Phases A–H await source-informed estimation and later authority; optional personality layers remain future-only |
+| My Library visual experience | Partial | Phase A shell complete locally at `875831e`; static Phase D themes partial; remaining phases separately gated |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |

@@ -6,7 +6,7 @@ For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md).
 
 Future Library-first presentation, Shopkeeper naming, responsive shell, testing access, write-lock UX, themes, bookcases, and optional personality layers are documented in [My Library Visual Experience](VISUAL_EXPERIENCE.md). They are planning direction only and do not alter the current queue or Site state.
 
-Sei returned a read-only source-informed A–H estimate against exact Version 20 source. It confirms the program is feasible but identifies B/C as new security/runtime foundations and G as a larger new recommendation/rule capability. The report changed no source or Site state and creates no executable phase authority.
+Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A is now complete locally at recoverable application checkpoint `875831e`; static Phase D is partial at a clean semantic-token/system/manual-theme slice. B/C remain new security/runtime foundations and G remains a larger new recommendation/rule capability.
 
 ## Authoritative snapshot
 
@@ -23,16 +23,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until the Product Owner sends explicit `!run`; one final pre-reset local implementation brief is prepared, while the private Gate 4 export remains parked and excluded from this run.
-- **Engineer state:** `PAUSED` at a clean Version 20 checkpoint, ready to accept the prepared pre-reset brief after `!run`.
-- **Engineer continuation:** Execute Phase A responsive shell first, then the independent static Phase D theme foundation when safe. Park a blocked task and continue the other; do not enter B, C, E, F, G, H, the Gate 4 production read, or any Site operation.
+- **Throttle:** `RUN` for the already-authorized final pre-reset local batch; the private Gate 4 export remains parked and excluded.
+- **Engineer state:** `PAUSED` at checkpoint `875831e` while Designer processes Phase A completion and prepares the bounded Phase D continuation.
+- **Engineer continuation:** Resume only remaining static Phase D color conversion and local visual-accessibility QA from `875831e`. Do not enter B, C, E, F, G, H, the Gate 4 production read, preference persistence, or any Site operation.
 - **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
-- **Active owner:** `EXTERNAL/WAIT` — Product Owner may send `!run` to Sei for the prepared final pre-reset local batch.
+- **Active owner:** `DESIGNER` during `!inbox` convergence, then `ENGINEER` for the prepared Phase D continuation under the existing `!run`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The fresh Product Owner reading is approximately 26% remaining, with usage resetting August 21 at 3:00 PM. The standing protected floor remains 30%. For this final pre-reset run only, the Product Owner overrides that floor and permits implementation work down to approximately 5% remaining; the final approximately 5% is reserved for checkpointing, evidence, remediation, and a recoverable stop. Organize work around clean task boundaries rather than attempting exact token prediction. This exception expires at the reset and does not alter the standing rule.
+The fresh Product Owner reading is approximately 19% remaining, with usage resetting August 21 at 3:00 PM. The standing protected floor remains 30%. For this final pre-reset run only, the Product Owner override permits work down to approximately 5% remaining; the final approximately 5% is reserved for checkpointing, evidence, remediation, and a recoverable stop. Organize work around clean task boundaries rather than attempting exact token prediction. This exception expires at the reset and does not alter the standing rule.
 
 ## Current workstreams
 
@@ -45,6 +45,8 @@ The fresh Product Owner reading is approximately 26% remaining, with usage reset
 | M4 bounded Bookshelf | Complete locally; saved in unpublished Version 20 | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
 | M5 catalog export foundation | Complete locally; saved in unpublished Version 20 | Format v1, stable Book IDs, referential validation, deterministic output, no-write proof, and recovered editable source verified | Consumed by the completed local M6 UI |
 | M6 downloadable export UI | Complete locally; saved in unpublished Version 20 | 8/8 focused and 160/160 full serial tests, task lint, build, owner gating, no-write checks, and collision separation passed | No runnable preview, checkpoint, deployment, publication, or activation authority |
+| My Library Phase A shell | Complete locally; checkpoint `875831e` only | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; local Phase D continuation only |
+| My Library Phase D themes | Partial locally; clean checkpoint `875831e` | Semantic tokens, warm/dark palettes, system preference and session-only manual control validated; legacy hard-coded colors remain | Complete route conversion and local contrast/viewport/forced-colors QA |
 
 ## Data and export status
 
@@ -73,4 +75,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The prepared pre-reset local batch contains Phase A responsive shell as primary and the static, non-persistent portion of Phase D themes as fallback. It starts only after explicit `!run` and brief acceptance. The Gate 4 private export remains parked outside this batch. No Site save, preview, deployment, publication, production access, schema/data change, preference persistence, correction, migration, restore, rollback, or hands-on validation is authorized. See [Next Actions](NEXT_ACTIONS.md), [Visual Experience](VISUAL_EXPERIENCE.md), and [Staged Milestones](STAGED_MILESTONES.md).
+Phase A is accepted complete locally. The remaining pre-reset work is a bounded Phase D continuation from checkpoint `875831e`: convert legacy hard-coded color declarations in clean route-family slices and perform local contrast, viewport, and forced-colors QA where supported. The Gate 4 private export remains parked. No Site save, preview, deployment, publication, production access, schema/data change, preference persistence, correction, migration, restore, rollback, or live validation is authorized. See [Next Actions](NEXT_ACTIONS.md), [Visual Experience](VISUAL_EXPERIENCE.md), and [Staged Milestones](STAGED_MILESTONES.md).
