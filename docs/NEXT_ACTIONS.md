@@ -8,8 +8,8 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the P1→P2 batch is complete and no Engineer brief remains.
 - **Engineer state:** `PAUSED` at a clean post-publication boundary.
-- **Next owners:** `ENGINEER — SEI` may accept P1 after explicit `!run`; `DESIGNER — RELENA` must process its report before any P2; Product Owner separately retains held validation items and the final conclusion.
-- **Usage:** Current reading 68%. Provisional complete envelope 12/19/29 points, projecting 56%/49%/39% remaining; P1 must provide source-informed P2 estimates before eligibility.
+- **Next owner:** `ENGINEER — SEI` — accept and execute P2 under the continuing `!run`; Product Owner separately retains held validation items and the final conclusion.
+- **Usage:** Recorded start 68%. Source-informed complete envelope 13/20/30 points, projecting 55%/48%/38% remaining; 30% floor remains mandatory.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -75,13 +75,13 @@ Interim results confirm failures in mobile Shopping discoverability and desktop/
 
 ## Conditional remediation queue
 
-1. **P1 — ready after `!run`:** Read-only assessment of exact Version 20 versus `608553f`.
-2. **Designer intake — mandatory:** Accept the P1 evidence, reconcile baseline/collisions and estimates, then either create P2 or park it with the minimum decision.
-3. **P2 — not yet created:** Local implementation of confirmed failures only: visible mobile Shopping navigation; primary multi-row Bookshelf; horizontal alternate; useful/selectable missing positions from verified available information; selected-book cover presentation with safe fallback where supported.
+1. **P1 — complete:** Read-only assessment of exact Version 20 versus `608553f`.
+2. **Designer intake — complete:** Accepted the evidence and selected exact `608553f` as the clearly safer baseline within delegated authority.
+3. **P2 — ready:** Local implementation of confirmed failures only: visible mobile Shopping navigation; primary multi-row Bookshelf; horizontal alternate; useful/selectable missing positions from verified available information; selected-book cover presentation with safe fallback where supported.
 
 P2 may be created without another Product Owner decision only if P1 establishes one clearly safer baseline that preserves Version 20, avoids unnecessary reconstruction, retains `608553f`, resolves shared-file collisions, and needs no production/schema/data/security/product decision. P2 is local-only and excludes Site save/version, preview/deployment/publication, production access/mutation, schema/data migration, held validation scenarios, broad redesign, retry/republish, rollback, restore, and destructive recovery.
 
-Provisional estimates are P1 3/5/7, Designer intake 1/1/2, and P2 8/13/20 points: **12/19/29 combined**. P1's source-informed estimate supersedes the provisional P2 range for the transition decision.
+Accepted estimates are P1 3/5/7, Designer intake 1/1/2, and source-informed P2 9/14/21 points: **13/20/30 combined**, projecting 55%/48%/38% remaining from 68%.
 
 ## Other workstreams
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-21 — Assessment accepted; conditional P2 released
+
+- Accepted Sei's read-only finding that Version 20 is a direct ancestor of `608553f`, mobile Shopkeeper discovery is already fixed there, Phase A/D are preserved, and Bookshelf remediation remains new no-schema work.
+- Selected exact `608553f` as the clearly safer baseline within delegated authority; rejected Version 20 patching/reconstruction as unnecessary repeated collision work.
+- Recorded available canonical missing-position metadata, existing `imageKey`/cover route, unknown tested-book cover presence, and required accessible no-cover/load-error fallback without private production inspection.
+- Prepared separate local-only P2 for confirmed failures. Source-informed P2 estimate is 9/14/21; total P1/intake/P2 envelope is 13/20/30, projecting 38% remaining at high from the recorded 68% start.
+- Held items 2, 3, 5, and 8 and every Site/save/publication/production/schema/data/recovery action remain excluded.
+
 ## 2026-08-21 — Conditional failed-item remediation queue authorized
 
 - Recorded the 68% usage reading and Product Owner direction for P1 read-only assessment, mandatory Designer intake, then conditional P2 local implementation of confirmed failures only.
