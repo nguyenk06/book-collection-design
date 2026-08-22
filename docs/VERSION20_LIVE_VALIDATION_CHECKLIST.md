@@ -1,6 +1,6 @@
 # Version 20 Product Owner Live Validation Checklist
 
-**Status:** In progress; held identifier/download checks remain, with confirmed UI failures  
+**Status:** In progress; held identifier/download checks remain, with confirmed UI failures
 **Candidate:** Published Version 20, commit `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Live Site:** <https://cyoa-collection.znesfreak.chatgpt.site>  
 **Boundary:** Initial validation is read-only. Checkpoint `608553f` is excluded.
