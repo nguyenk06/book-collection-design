@@ -221,6 +221,7 @@ The simple sum is **62 / 91 / 128** points. Sei estimates approximately **56 / 8
 
 - **A — complete locally:** My Library identity and responsive shell are implemented and preserved in application checkpoint `608553f`. Targeted suites and the complete current-source serial suite pass; Site save, preview, publication, and live validation remain absent.
 - **Static D foundation — complete locally:** semantic conversion, warm/dark/system presentation, session-only manual control, focus treatment, route-family styling, desktop/mobile viewport checks, overflow checks, and sampled contrast are complete at `608553f`.
+- **Confirmed validation remediation — complete locally:** checkpoint `80e4c61` retains Phase A/D and adds primary multi-row Bookcase, horizontal Shelf alternate, selectable informative missing positions, selected-detail cover/fallback presentation, and focus restoration. It is not saved or published; live Version 20 validation findings remain open.
 - **D limits:** Admin/catalog visual navigation was blocked by unavailable local sign-in; forced-colors and reduced-motion emulation were unavailable; saved preference persistence remains a later separately gated slice.
 - This checkpoint does not activate B/C/E/F/G/H or authorize preference persistence, Site operations, or production work.
 

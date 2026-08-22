@@ -6,7 +6,7 @@ For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md).
 
 Future Library-first presentation, Shopkeeper naming, responsive shell, testing access, write-lock UX, themes, bookcases, and optional personality layers are documented in [My Library Visual Experience](VISUAL_EXPERIENCE.md). They are planning direction only and do not alter the current queue or Site state.
 
-Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A and the authorized static Phase D foundation are complete locally at recoverable application checkpoint `608553f`. Saved preference persistence remains a separate later slice. B/C remain new security/runtime foundations and G remains a larger new recommendation/rule capability.
+Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A, the static Phase D foundation, and confirmed validation-failure remediation are complete locally at recoverable application checkpoint `80e4c61`, a direct descendant of `608553f`. Saved preference persistence remains a separate later slice. B/C remain new security/runtime foundations and G remains a larger new recommendation/rule capability.
 
 ## Authoritative snapshot
 
@@ -23,11 +23,11 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`; P1 assessment and Designer intake are complete, and the separately prepared P2 local remediation brief is eligible for `!brief`.
-- **Engineer state:** `WAITING AT DESIGNER GATE`; P1 is complete and P2 is now ready.
-- **Engineer continuation:** Refresh `briefs/`, accept P2 separately, implement confirmed failures locally on exact `608553f`, and stop before every Site/production/schema/data action.
+- **Throttle:** `DRAIN`; P1 assessment, Designer intake, and P2 local remediation are complete; no Engineer brief remains.
+- **Engineer state:** `PAUSED` at clean recoverable checkpoint `80e4c61`.
+- **Engineer continuation:** None authorized. Preserve the local checkpoint; do not save a Site version, preview, deploy, publish, or infer live validation.
 - **Planner decisions:** None pending. Product Owner authorized preparation of the bounded read-only failed-item assessment (`Decision 1:A`).
-- **Active owner:** `ENGINEER — SEI` — accept and execute P2 under the continuing `!run`; Product Owner separately retains held validation checks and final conclusion.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner resumes held validation on or after August 25 and later decides the validation/release path.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
@@ -48,6 +48,7 @@ The recorded starting reading is 68%. Accepted source-informed planning is P1 3/
 | My Library Phase A shell | Complete locally; checkpoint `608553f` includes it | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; later checkpoint/release separately gated |
 | My Library static Phase D themes | Complete locally; checkpoint `608553f` | Semantic conversion complete; desktop/mobile light/dark/system QA, focus, overflow, and sampled contrast passed | Admin/catalog visual routes blocked locally by sign-in; forced-colors/reduced-motion emulation and preference persistence remain later |
 | Local D1 remediation | Complete | Private byte-for-byte backup; disposable-clone proof; unchanged `0004` → `0005` → `0006` applied once; preservation/integrity checks, 101/101 tests, scoped lint, and build passed | Retain backup privately; no restore or additional local write authorized |
+| Confirmed validation-failure remediation | Complete locally; checkpoint `80e4c61` | Mobile Shopkeeper discovery retained; multi-row Bookcase primary; horizontal Shelf alternate; selectable informative gaps; cover/no-cover/error detail states; 31/31 focused and 163/163 full tests plus build passed | Not saved/published or browser-validated; preserve checkpoint pending later gate |
 
 ## Data and export status
 
@@ -76,4 +77,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 and Designer intake are complete. Evidence established exact `608553f` as the clearly safer P2 baseline: Version 20 is its direct ancestor, mobile Shopkeeper discovery already exists, Phase A/D are preserved, and remaining Bookshelf fixes are new no-schema work against known serialized collision surfaces. P2 is ready for local implementation only; held validation items remain outside scope and no Site/save/publication/production action is authorized.
+P1 assessment, Designer intake, and P2 local remediation are complete. Checkpoint `80e4c61` preserves Version 20 ancestry and Phase A/D while adding the confirmed navigation/Bookshelf fixes. Published Version 20 remains unchanged, so checklist failures 4, 6, and 7 remain live-state findings rather than resolved production results. Items 2, 3, 5, and 8 remain follow-up/on hold until August 25. No Site/save/publication/production/schema/data action is authorized.

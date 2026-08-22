@@ -60,6 +60,8 @@ This accepted bounded contract was implemented and validated locally; user-facin
 
 The bounded Bookshelf is complete locally and published in exact cumulative Version 20. It adds a persisted Bookshelf collection view, deterministic series-position ordering, explicit noninteractive missing-position gaps, keyboard-operable real Book spines, an accessible detail dialog with metadata fallbacks, and return behavior that preserves collection/view/scroll context. Focused collection tests pass 16/16; the then-authoritative full suite passed 81/81, and the later cumulative publication suite passed 160/160; build and scoped lint pass apart from one pre-existing scanner hook warning. Publication health did not exercise Bookshelf scenarios. Product Owner hands-on validation remains required.
 
+A later local remediation at checkpoint `80e4c61` changes the future behavior without changing published Version 20: `Bookcase` becomes the primary wrapping multi-row view, `Shelf` retains the prior horizontal presentation as an explicit alternate, missing positions become selectable with canonical number/title and safe existing metadata, selected details render the existing cover route when `imageKey` is present, and absent/load-error covers use an accessible `No cover saved` fallback. Closing details restores focus and scroll context. Focused validation passes 31/31 and the full serial suite passes 163/163 with build and scoped lint. Browser viewport/data-populated visual QA remains unrun; no Site version or publication followed.
+
 ## Future improvements
 
 - One continuing vertical bookcase per collection, explicit switching, mobile bottom-sheet details, and restrained transitions as defined in [Visual Experience](VISUAL_EXPERIENCE.md).

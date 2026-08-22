@@ -8,9 +8,9 @@ At a current 68% usage reading, Product Owner authorized an ordered P1 assessmen
 | --- | --- | --- | ---: |
 | P1 | Complete | Read-only Version 20/`608553f` source, data-contract, collision, baseline, and estimate assessment | 3 / 5 / 7 |
 | Designer intake | Complete | Accepted evidence and selected exact `608553f` as the clearly safer baseline | 1 / 1 / 2 |
-| P2 | Ready | Local-only confirmed navigation/Bookshelf remediation, tests, QA, evidence, clean checkpoint | 9 / 14 / 21 source-informed |
+| P2 | Complete locally | Confirmed navigation/Bookshelf remediation, tests, QA, evidence, clean checkpoint `80e4c61` | 9 / 14 / 21 source-informed |
 
-Combined accepted envelope: **13 / 20 / 30 points**, projecting approximately **55% / 48% / 38% remaining** from 68%. P2 begins only from its separate transport brief and excludes held validation items and every Site/production/schema/data/recovery action.
+The batch completed within its accepted scope. P2 returned 31/31 focused and 163/163 full tests plus build at clean checkpoint `80e4c61`; no fresh actual meter reading was available. Held validation items and every Site/production/schema/data/recovery action remained excluded.
 
 **Status:** BATCH COMPLETE; QUEUE DRAINED
 **Prepared:** 2026-08-16; revalidated 2026-08-21

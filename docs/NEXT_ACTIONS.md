@@ -6,9 +6,9 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the P1→P2 batch is complete and no Engineer brief remains.
-- **Engineer state:** `PAUSED` at a clean post-publication boundary.
-- **Next owner:** `ENGINEER — SEI` — accept and execute P2 under the continuing `!run`; Product Owner separately retains held validation items and the final conclusion.
+- **Throttle:** `DRAIN`; assessment/intake/local-remediation batch is complete and no Engineer brief remains.
+- **Engineer state:** `PAUSED` at clean recoverable checkpoint `80e4c61`.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner resumes held validation on or after August 25; any save/release step remains separately gated.
 - **Usage:** Recorded start 68%. Source-informed complete envelope 13/20/30 points, projecting 55%/48%/38% remaining; 30% floor remains mandatory.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
@@ -77,11 +77,11 @@ Interim results confirm failures in mobile Shopping discoverability and desktop/
 
 1. **P1 — complete:** Read-only assessment of exact Version 20 versus `608553f`.
 2. **Designer intake — complete:** Accepted the evidence and selected exact `608553f` as the clearly safer baseline within delegated authority.
-3. **P2 — ready:** Local implementation of confirmed failures only: visible mobile Shopping navigation; primary multi-row Bookshelf; horizontal alternate; useful/selectable missing positions from verified available information; selected-book cover presentation with safe fallback where supported.
+3. **P2 — complete locally:** Mobile Shopkeeper discovery, primary multi-row Bookcase, horizontal Shelf alternate, useful/selectable missing positions, and selected-book cover/fallback behavior completed at `80e4c61`.
 
 P2 may be created without another Product Owner decision only if P1 establishes one clearly safer baseline that preserves Version 20, avoids unnecessary reconstruction, retains `608553f`, resolves shared-file collisions, and needs no production/schema/data/security/product decision. P2 is local-only and excludes Site save/version, preview/deployment/publication, production access/mutation, schema/data migration, held validation scenarios, broad redesign, retry/republish, rollback, restore, and destructive recovery.
 
-Accepted estimates are P1 3/5/7, Designer intake 1/1/2, and source-informed P2 9/14/21 points: **13/20/30 combined**, projecting 55%/48%/38% remaining from 68%.
+Validation passed 31/31 focused and 163/163 full serial tests, production build, scoped lint with one pre-existing warning, diff checks, and exact three-file scope review. Browser viewport/data-populated visual QA and forced-colors emulation were unrun and are not inferred. Published Version 20 and every Site/production/schema/data state remain unchanged.
 
 ## Other workstreams
 

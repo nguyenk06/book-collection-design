@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-21 — Confirmed validation failures remediated locally
+
+- Accepted P2 completion at clean checkpoint `80e4c617e90f1f4f200fcfdcc1ccedfc6cb2aa4a`, a direct descendant of `608553f` retaining Version 20 ancestry and Phase A/D.
+- Recorded primary wrapping multi-row Bookcase, explicit horizontal Shelf alternate, selectable missing positions with canonical information, conditional existing-cover rendering, accessible no-cover/load-error fallback, and focus/scroll restoration.
+- Validation passed 31/31 focused and 163/163 full serial tests, production build, scoped lint with one pre-existing warning, diff check, and exact three-file review.
+- Browser viewport/data-populated visual QA and forced-colors emulation were unrun and not inferred. Held items 2, 3, 5, and 8 and every Site/save/publication/production/schema/data/recovery operation remained excluded.
+- Drained the queue at a clean local checkpoint; published Version 20 remains unchanged and its live validation failures are not marked resolved.
+
 ## 2026-08-21 — Assessment accepted; conditional P2 released
 
 - Accepted Sei's read-only finding that Version 20 is a direct ancestor of `608553f`, mobile Shopkeeper discovery is already fixed there, Phase A/D are preserved, and Bookshelf remediation remains new no-schema work.
