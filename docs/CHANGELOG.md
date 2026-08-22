@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-22 — Bounded exact-source release resume authorized
+
+- Recorded Product Owner Decision `1:A`: when a supported credential path is available, read the configured Site source branch first and permit one normal push of exact `80e4c61` only if the branch definitively differs and all identities are unambiguous.
+- Required affected identity, collision, package, saved-source, and usage gates before the existing one-save/one-publication sequence may continue; preserved every automatic-stop condition and excluded alternate credentials, force push, second retry, correction, migration, production mutation, held validation, broad smoke, rollback, restore, and destructive recovery.
+- Estimated remaining work at 6/9/13 points and set 43% as the minimum safe fresh starting reading for the 30% floor.
+- Kept throttle at `DRAIN` and Engineer `WAITING FOR USAGE`; authorization does not activate Sei without a fresh Product Owner reading.
+
 ## 2026-08-22 — Exact local remediation release parked before save
 
 - Accepted Sei's release intake at a fresh 60% usage reading with a projected 42% conservative floor.

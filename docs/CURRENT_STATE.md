@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the exact `80e4c61` release is parked at its automatic pre-save source-preservation stop.
-- **Engineer state:** `WAITING FOR ANSWER` at a clean pre-Site-operation boundary.
-- **Engineer continuation:** None until the supported remote credential path is available and Product Owner chooses whether to authorize a fresh remote-state verification plus conditional single push retry. Do not save or publish directly from the blocker.
-- **Planner decisions:** One pending source-preservation retry decision in `PLANNER_INBOX.md`.
-- **Active owner:** `PRODUCT OWNER` — decide whether to authorize the bounded remote verification/conditional push retry.
-- **Blocking owner:** `PRODUCT OWNER / SUPPORTED CREDENTIAL PATH`.
+- **Throttle:** `DRAIN`; bounded resume is authorized but must not start before a fresh Product Owner usage reading.
+- **Engineer state:** `WAITING FOR USAGE` at the clean pre-Site-operation boundary.
+- **Engineer continuation:** After a fresh reading of at least 43% and a supported credential path, read the configured remote head first; push exact `80e4c61` once only if definitively required; revalidate affected gates; then conditionally resume the previously authorized one-save/one-publication sequence.
+- **Planner decisions:** None pending. Product Owner selected Decision `1:A` on 2026-08-22.
+- **Active owner:** `PRODUCT OWNER` — supply a fresh usage reading.
+- **Blocking owner:** `PRODUCT OWNER / FRESH USAGE READING`; the supported credential path must also be available when execution begins.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The fresh acceptance reading was 60%, and the 18-point high estimate projected 42% remaining. No post-blocker reading is available and none is inferred. Any resumed sequence must recheck actual usage and preserve the standing 30% floor.
+The fresh acceptance reading was 60%, but no post-blocker reading is available and none is inferred. Remaining bounded work is estimated at **6/9/13 points** low/likely/high. A fresh reading of at least **43%** is the minimum safe start for the 13-point high estimate while preserving the standing 30% floor; margin above 43% is preferable.
 
 ## Current workstreams
 
@@ -78,4 +78,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` passed the complete pre-save validation and packaging boundary, but the required push to the configured Site source branch timed out through the credential path. Sei terminated the lingering processes and stopped with 0 Site save, publication, or deployment attempts; latest saved/published remains Version 20. The release is parked pending the minimum remote-state/conditional-push decision. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
+Checkpoint `80e4c61` passed the complete pre-save validation and packaging boundary, but the required push to the configured Site source branch timed out through the credential path. Sei terminated the lingering processes and stopped with 0 Site save, publication, or deployment attempts; latest saved/published remains Version 20. Product Owner authorized a bounded resume that reads remote state first and permits one normal push only when definitively required. Execution remains parked until a fresh usage reading is supplied and the supported credential path is available. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
