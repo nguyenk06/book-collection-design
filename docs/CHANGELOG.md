@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-21 — Post-reset Gate 4 brief reactivated
+
+- Recorded the fresh 90% usage reading and restoration of the standing 30% reserve; the temporary pre-reset exception remains closed.
+- Reconciled the retained approved P2 brief with the later-brief requirement and revalidated documented identity, published Version 19, unpublished Version 20 separation, Gate 2 baseline, exact read-only scope, automatic-stop rules, and collision boundary.
+- Kept actual owner-session and Site identity as mandatory Engineer acceptance checks; Designer did not perform a Site operation.
+- Added independent mutation-free diagnosis of local D1 `books.stable_id` drift as fallback if the production-read task parks.
+- Authorized no implementation, source change, migration, local/production write, second export, correction, Site save/preview/deployment/publication, or later production gate during intake.
+
 ## 2026-08-20 — Static Phase D completed; pre-reset run drained
 
 - Accepted Phase D semantic conversion completion at recoverable application checkpoint `608553f`.

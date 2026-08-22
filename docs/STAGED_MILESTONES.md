@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Fresh reading 14%, resetting August 21 at 3:00 PM. The final pre-reset run completed cleanly and its temporary reserve exception is closed. The standing 30% protected reserve remains authoritative for future planning.
+**Execution budget:** Fresh post-reset reading 90%; the temporary pre-reset exception is closed and the standing 30% protected reserve is restored. Primary private-export evidence remains estimated at 3–5 points; fallback local schema diagnosis is bounded and read-only.
 
-**Queue state:** Throttle `DRAIN`; Phase A and static Phase D are complete locally at `608553f`. P2 remains parked until reset; later Site and production gates remain closed.
+**Queue state:** Throttle `DRAIN` until explicit `!run`; the reactivated P2 private-export evidence task is primary and mutation-free local `stable_id` drift diagnosis is the independent fallback. Later Site and production gates remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess P2 after reset; accept it only when the full envelope preserves the cushion and clean-stop capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the final pre-reset local batch is complete.
-- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f`; no eligible pre-reset implementation brief remains.
-- **Next owner:** `EXTERNAL/WAIT` — provide a fresh usage reading after the August 21 3:00 PM reset.
-- **Usage:** Fresh reading 14%. The one-run reserve exception ended with the completed batch; the standing 30% reserve remains the default after reset.
+- **Throttle:** `DRAIN` until explicit `!run`; one post-reset brief is ready.
+- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f` awaiting post-reset intake.
+- **Next owner:** `EXTERNAL/WAIT` — Product Owner may send `!run`.
+- **Usage:** Fresh post-reset reading 90%; normal 30% reserve restored. Primary estimate remains 3–5 points; do not spend toward the reserve.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
 
@@ -46,7 +46,12 @@ Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot selec
 1. **Complete — Phase A responsive shell:** My Library identity/navigation, contextual row, mobile header/bottom navigation, Shopkeeper presentation, collection framing, footer, and owner/public boundaries are locally implemented and retained in final checkpoint `608553f`.
 2. **Complete locally — static Phase D theme foundation:** semantic color conversion is complete across root/Bookshelf, Shopkeeper, Administration, and catalog-download styles; desktop/mobile theme, focus, overflow, and sampled contrast checks passed.
 
-Do not continue pre-reset implementation. After reset, separately assess: the parked Gate 4 production-read brief; local D1 schema drift (`books.stable_id` absent) before data-populated Shopkeeper visual QA; Admin/catalog visual access blocked by local sign-in; and forced-colors/reduced-motion emulation. Preference persistence, B/C/E/F/G/H, Site operations, schema/data changes, and speculative fill-in remain excluded until later authority.
+The reactivated brief orders:
+
+1. **Primary:** exactly one owner-authenticated read-only Version 19 bridge export, private offline Gate 2 preservation comparison, sanitized evidence, and automatic stop for mismatch or ambiguity.
+2. **Independent fallback:** read-only local diagnosis of why the active local D1 schema lacks `books.stable_id`; inspect bindings, schema metadata, migration ledger/configuration, and expected source migration state without changing anything.
+
+Wrong/ambiguous Site, Version, identity, or source context stops the whole brief. Owner-session unavailability or a task-specific production-read blocker parks Task 1 and permits Task 2. No correction, retry, migration, local/production write, source change, Site save/preview/deployment/publication, or speculative work is authorized.
 
 ## Other workstreams
 

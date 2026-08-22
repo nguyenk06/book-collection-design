@@ -23,23 +23,23 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the final pre-reset local batch is complete and the private Gate 4 export remains parked.
-- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f` with no eligible pre-reset implementation brief.
-- **Engineer continuation:** Wait for the August 21 reset and a fresh usage/batch decision. Do not enter B, C, E, F, G, H, the Gate 4 production read, preference persistence, local schema remediation, or any Site operation without a later brief.
+- **Throttle:** `DRAIN` until explicit `!run`; the post-reset Gate 4 export plus read-only local schema diagnosis brief is reactivated and ready.
+- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f`, awaiting the post-reset brief.
+- **Engineer continuation:** After `!run`, attempt the one bounded owner-session Version 19 private export first. If it parks before or at its automatic-stop boundary, proceed only to independent mutation-free diagnosis of local `books.stable_id` drift when context and usage remain safe.
 - **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
-- **Active owner:** `EXTERNAL/WAIT` — wait for the August 21 reset and fresh Product Owner usage reading.
+- **Active owner:** `EXTERNAL/WAIT` — Product Owner may send `!run` for the reactivated post-reset brief.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The fresh Product Owner reading is approximately 14% remaining, with usage resetting August 21 at 3:00 PM. The final pre-reset run has ended cleanly, so its temporary reserve exception is closed. The standing protected floor remains 30% for future planning. Do not queue more pre-reset work; wait for the reset and a fresh reading.
+The post-reset Product Owner reading is approximately 90% remaining. The temporary pre-reset exception is closed and the standing 30% protected reserve is fully restored. The primary read-only export remains estimated at 3–5 points; the fallback is bounded diagnosis only. Preserve capacity for validation, evidence, remediation planning, and a clean stop rather than consuming toward the reserve.
 
 ## Current workstreams
 
 | Workstream | State | Verified boundary | Next condition |
 | --- | --- | --- | --- |
 | Version 19 administration | Complete/published | Gate 2 status/export and Gate 3 invocation used the owner-authenticated same-origin surface | No further action currently authorized |
-| Production schema activation | Gate 4 incomplete | Read-only Gate 4 independently confirmed schema-complete and zero-FK signals; preservation invariants remain unverified | Approved private-export evidence brief parked until the post-reset usage gate clears |
+| Production schema activation | Gate 4 incomplete | Read-only Gate 4 independently confirmed schema-complete and zero-FK signals; preservation invariants remain unverified | Post-reset private-export evidence brief reactivated; owner session/Site identity must pass acceptance |
 | Shopping UI | Complete locally; saved in unpublished Version 20 | Search/scan/status, Purchase history/capture, quality, and accessibility validation passed | Gate 4 and later separately gated release steps |
 | M3 canonical identifiers | Complete locally | Focused/full tests, lint, and build passed | Future promotion remains separately gated |
 | M4 bounded Bookshelf | Complete locally; saved in unpublished Version 20 | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
@@ -75,4 +75,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The final pre-reset local batch is complete at checkpoint `608553f`. After reset, reassess the parked Gate 4 export, the local D1 schema drift that blocked data-populated Shopkeeper QA, and any later Admin/catalog/forced-colors/reduced-motion theme QA as separate work. No Site save, preview, deployment, publication, production access, schema/data change, preference persistence, correction, migration, restore, rollback, or live validation is authorized. See [Next Actions](NEXT_ACTIONS.md), [Visual Experience](VISUAL_EXPERIENCE.md), and [Staged Milestones](STAGED_MILESTONES.md).
+The next batch is one post-reset brief: primary one-time owner-authenticated read-only Version 19 export and offline Gate 2 comparison; fallback mutation-free diagnosis of local D1 `books.stable_id` drift. Identity, correct Site, owner session, live Version 19, saved Version 20 separation, baseline, and no-write boundaries must be revalidated at acceptance. No second export, correction, migration, local schema mutation, source change, Site save/preview/deployment/publication, restore, rollback, or later production gate is authorized. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).

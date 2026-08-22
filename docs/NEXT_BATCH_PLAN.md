@@ -1,13 +1,13 @@
 # Proposed Next Execution Batch
 
-**Status:** P1 COMPLETE; P2 PARKED BY USAGE GATE
-**Prepared:** 2026-08-16  
-**Current usage:** Approximately 36% remaining
-**Usage reset:** August 21
+**Status:** P1 COMPLETE; P2 REACTIVATED POST-RESET
+**Prepared:** 2026-08-16; revalidated 2026-08-21
+**Current usage:** Approximately 90% remaining
+**Usage reset:** Completed August 21
 **Protected reserve:** 30% remaining  
 **Preferred planning cushion:** Finish above 35% remaining
 
-Planner/Product Owner approved the ordered preservation and private-export activities (`1: A; 2: A`) and issued explicit `!run`. The preservation activity completed within its authority. The private-export activity is parked because the post-P1 usage gate did not clear. No preview, deployment, publication, corrective write, migration retry, restore, rollback, or later production-gate authority was used.
+Planner/Product Owner approved the ordered preservation and private-export activities (`1: A; 2: A`). Preservation completed within authority. The private-export task was parked by the pre-reset usage gate and is now reactivated after the 90% post-reset reading, subject to fresh identity/Site/owner-session acceptance and explicit `!run`. No preview, deployment, publication, corrective write, migration retry, restore, rollback, or later production-gate authority follows.
 
 ## Prior read-only planning result
 
@@ -25,13 +25,14 @@ Final prepared order:
 1. **P1 preservation-only save:** Freeze an exact cumulative M3–M6/Shopping/Bookshelf manifest; run full revalidation; create one exact source commit and push; package the identical commit; save exactly one unpublished Site version; verify saved/live separation; stop before deployment or publication.
 2. **P2 private Gate 4 export evidence:** Invoke the existing Version 19 owner bridge export exactly once; retain it privately; compare offline with Gate 2 counts, identities, values, target price, and cover references; report sanitized results; automatically stop for mismatch, ambiguity, or missing evidence.
 
-P1 completed and the fresh post-P1 reading is 36%, resetting August 21. The remaining P2 envelope is 3–5 points:
+P1 completed. The old 36% transition reading parked P2; the new post-reset reading is 90%. The remaining P2 envelope is 3–5 points:
 
 - **P1 preservation-only save:** Complete. The exact 24-path candidate passed 160/160 full serial tests and exact-source lint, build, diff, whitespace, migration-order, secret, and no-write checks. Commit, remote branch, package, and saved source matched; exactly one unpublished, undeployed Version 20 was saved.
-- **Transition gate:** Closed at 36% remaining.
-- **P2 private export evidence:** Parked. Its 3–5 point range would finish at approximately 31–33%, below the 35% cushion at the high estimate.
+- **Transition gate:** Reopened by the completed reset and fresh 90% reading; normal 30% reserve restored.
+- **P2 private export evidence:** Reactivated, pending acceptance-time confirmation of Engineer identity, correct Site, owner session, published Version 19, unpublished Version 20 separation, exact route, and no-write boundary.
+- **Independent fallback:** Mutation-free diagnosis of local D1 `books.stable_id` drift if P2 parks for a task-specific blocker.
 
-The queue is `DRAIN`. Retain the approved P2 brief unchanged until the August 21 reset and a fresh usage reading. A later `!run` does not bypass its usage, identity, source, production-read, ambiguity-stop, or evidence restrictions.
+The queue remains `DRAIN` until explicit `!run`. Reactivation does not bypass identity, Site, owner-session, source, production-read, ambiguity-stop, privacy, or evidence restrictions.
 
 No preview, deployment, publication, correction, migration retry, production write, restore, rollback, or hands-on validation is included.
 
@@ -39,7 +40,7 @@ No preview, deployment, publication, correction, migration retry, production wri
 
 - The completed M3–M6, Shopping, and Bookshelf source is preserved exactly in unpublished, undeployed Version 20; published/live remains Version 19.
 - M6 is complete and validated locally and is included in Version 20. Saving did not run migrations or create a runnable preview.
-- Engineer — Sei is paused at a clean stopping point; the remaining brief is approved but usage-ineligible.
+- Engineer — Sei is paused at clean local checkpoint `608553f`; the revalidated post-reset brief is ready for `!run` and `!brief` acceptance.
 - Queue Mode remains enabled with throttle `DRAIN`. Do not replace or reinitialize the continuing Sei chat merely because the cycle ended.
 - Preserve the cumulative source unchanged until a separately authorized operation begins with fresh composition and collision checks.
 
