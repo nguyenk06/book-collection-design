@@ -58,7 +58,7 @@ This accepted bounded contract was implemented and validated locally; user-facin
 
 ## Verified local implementation
 
-The bounded Bookshelf is complete locally and preserved in unpublished, undeployed Version 20. It adds a persisted Bookshelf collection view, deterministic series-position ordering, explicit noninteractive missing-position gaps, keyboard-operable real Book spines, an accessible detail dialog with metadata fallbacks, and return behavior that preserves collection/view/scroll context. Focused collection tests pass 16/16; the then-authoritative full suite passed 81/81, and the later cumulative preservation suite passed 160/160; build and scoped lint pass apart from one pre-existing scanner hook warning. No publication or production activation followed. Product Owner hands-on validation remains required before activation.
+The bounded Bookshelf is complete locally and published in exact cumulative Version 20. It adds a persisted Bookshelf collection view, deterministic series-position ordering, explicit noninteractive missing-position gaps, keyboard-operable real Book spines, an accessible detail dialog with metadata fallbacks, and return behavior that preserves collection/view/scroll context. Focused collection tests pass 16/16; the then-authoritative full suite passed 81/81, and the later cumulative publication suite passed 160/160; build and scoped lint pass apart from one pre-existing scanner hook warning. Publication health did not exercise Bookshelf scenarios. Product Owner hands-on validation remains required.
 
 ## Future improvements
 

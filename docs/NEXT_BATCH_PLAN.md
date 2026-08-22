@@ -38,7 +38,7 @@ No preview, deployment, publication, correction, migration retry, production wri
 
 ## Current stopping state
 
-- The completed M3–M6, Shopping, and Bookshelf source is preserved exactly in unpublished, undeployed Version 20; published/live remains Version 19.
+- The completed M3–M6, Shopping, and Bookshelf source was preserved exactly in Version 20 and later published successfully; this section otherwise records the earlier preservation/export batch chronology.
 - M6 is complete and validated locally and is included in Version 20. Saving did not run migrations or create a runnable preview.
 - Engineer — Sei is paused at clean local checkpoint `608553f`; the post-reset brief is complete.
 - Queue Mode remains enabled with throttle `DRAIN`. Do not replace or reinitialize the continuing Sei chat merely because the cycle ended.

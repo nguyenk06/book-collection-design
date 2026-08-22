@@ -4,7 +4,7 @@
 
 This document is the canonical future visual and interaction direction for **My Library**. It defines product-level experience requirements for later estimation and phased implementation. It does not describe current implementation state, authorize Engineer work, or open any Site, source, data, save, preview, deployment, publication, or production gate. [Current State](CURRENT_STATE.md), accepted briefs, tests, and gate evidence remain authoritative for delivery status.
 
-The current cumulative Shopping/M3–M6/Bookshelf source is preserved in unpublished, undeployed Version 20. Future work must begin with composition and collision checks against that exact candidate. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
+The cumulative Shopping/M3–M6/Bookshelf source is published as exact Version 20. Later local Phase A/D work remains only at checkpoint `608553f` and was excluded from publication. Future work must begin with composition and collision checks across those distinct states. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
 
 ## Experience principles
 

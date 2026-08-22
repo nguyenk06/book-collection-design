@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 19 is the published owner-authenticated administration surface. Unpublished, undeployed Version 20 preserves the exact validated cumulative Shopping/M3–M6/Bookshelf source; it is not a runnable preview and saving it did not execute migrations. Gate 4 is complete within its bridge-observable verification boundary; this does not establish a D1 snapshot, R2-byte backup, restore readiness, or complete production backup. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 20 is published and contains the exact validated cumulative Shopping/M3–M6/Bookshelf candidate; later local Phase A/D checkpoint `608553f` is excluded. M2 Gates 0–5 are complete within their bounded evidence. Product Owner live validation and later smoke/correction/recovery gates remain separate. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

@@ -4,7 +4,7 @@
 
 **Execution budget:** Last reported reading was 90% before the completed post-reset run. The standing 30% protected reserve is restored; obtain a fresh reading before another batch.
 
-**Queue state:** Throttle `RUN`. P1 local D1 remediation is complete. P2 cumulative Version 20 publication passed separate acceptance and is active; it excludes checkpoint `608553f`. Later validation and production gates remain closed.
+**Queue state:** Throttle `DRAIN`. P1 local D1 remediation and P2 cumulative Version 20 publication are complete; checkpoint `608553f` was excluded. No Engineer brief remains. Later validation and production gates remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
@@ -86,7 +86,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 ## Milestone 6 — Local downloadable catalog export UI
 
-**State:** Complete and validated locally; preserved in unpublished, undeployed Version 20; Product Owner checkpoint remains separately gated.
+**State:** Complete and validated locally; published in exact Version 20; Product Owner checkpoint remains separately gated.
 
 - **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); [Import/Export accepted export-first boundary and format v1](IMPORT_EXPORT.md#accepted-format-version-1-contract); completed M5 foundation.
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.

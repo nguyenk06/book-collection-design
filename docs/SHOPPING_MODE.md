@@ -77,7 +77,7 @@ This bounded phase is complete and validated against local/disposable data befor
 
 Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
 
-The authoritative serial suite passes 50/50, focused Shopping tests pass 6/6, isolated collection regression tests pass 14/14, build passes, and task lint passes. The completed local Shopping UI is preserved with the cumulative candidate in unpublished, undeployed Version 20. Version 19 remains published and contains no Shopping UI.
+The authoritative local suites passed before preservation and publication. Exact saved Version 20 later passed 92/92 saved-source, 160/160 layered, and 150/150 focused tests plus lint/build and published successfully once. Bounded root and Shopping health passed. Product Owner live validation and broad smoke remain separate gates.
 
 ## Product Owner validation checkpoint
 

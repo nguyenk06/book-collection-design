@@ -4,11 +4,11 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–4 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
+- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`; P1 is complete and P2 publication is accepted and active.
-- **Engineer state:** `EXECUTING P2` against exact saved Version 20.
-- **Next owner:** `ENGINEER — SEI` — finish bounded P2 or stop at its automatic boundary.
+- **Throttle:** `DRAIN`; the P1→P2 batch is complete and no Engineer brief remains.
+- **Engineer state:** `PAUSED` at a clean post-publication boundary.
+- **Next owner:** `PLANNER / PRODUCT OWNER` — decide the separately gated live-validation step.
 - **Usage:** P1 began at 78%; conservative full-high transition math leaves 55%. The 30% reserve remains mandatory.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
@@ -23,7 +23,7 @@ Validation passed:
 - Task lint, production build, and diff/whitespace checks.
 - Anonymous and non-owner API denial, owner page gating, read-only query evidence, duplicate-click protection, safe filenames, and accessible state behavior.
 
-M6 is preserved with the cumulative source in unpublished, undeployed Version 20. Published/live remains Version 19. A saved version is not runnable; any deployment, publication, activation, or hands-on validation remains separately gated.
+M6 is included in published Version 20. Its owner-only catalog download was not exercised during bounded publication health checks; Product Owner validation remains separately gated, and no complete-backup or restore claim follows.
 
 ## Completed P1/P2 batch
 
@@ -38,9 +38,9 @@ Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot selec
 
 - P1 is complete: exact 24-path manifest, full validation, identity-matched commit/push/package, and exactly one unpublished Version 20 save.
 - P2 is complete: exactly one bounded private read-only Version 19 bridge export matched Gate 2 within the documented boundary, and sanitized evidence was returned.
-- The independent local diagnosis is complete: active Miniflare D1 is stale at base migrations `0000`–`0003`; ordered `0004`–`0006` were not applied. No mutation occurred.
+- The independent local diagnosis found active Miniflare D1 stale at base migrations `0000`–`0003`; the later separately authorized remediation completed successfully.
 - A saved version is not runnable and does not authorize a checkpoint. No unpublished preview exists in supported tooling.
-- Corrective write, Gate 3 retry, migration, deployment/publication, Shopping publication, live checklist, smoke test, restore, rollback, and destructive recovery remain closed.
+- Corrective write, Gate 3 retry, migration, live checklist, broad smoke test, retry/republish, restore, rollback, and destructive recovery remain closed.
 
 ## Completed local visual batch
 
@@ -54,24 +54,24 @@ The completed post-reset brief ordered:
 
 No correction, retry, migration, local/production write, source change, Site save/preview/deployment/publication, or speculative work occurred in the completed read-only batch. New authority is limited to the local remediation brief below.
 
-## Approved local remediation
+## Completed local remediation and publication
 
 Product Owner selected Decision `1:A`. The prepared Engineer brief authorizes private backup, disposable-clone validation, and one ordered application of the unchanged migrations `0004` → `0005` → `0006` to the exact active local D1 only after all identity, backup, preservation, integrity, and quiescence gates pass. It authorizes no source/configuration change, manual repair, repeat attempt after partial failure, Site operation, or production access.
 
 Product Owner separately selected planning Decision `2:A`, chose the cumulative Version 20 candidate (`1:B`), and authorized its bounded publication execution (`Decision 1:A`). The P2 brief identifies the exact saved-source commit and 24-path delta manifest and excludes later Phase A/D checkpoint `608553f`. It permits full pre-publication revalidation, one publication attempt, bounded application-health verification, sanitized evidence, and clean stop only. It excludes migration, production data/schema mutation, live Product Owner validation, broad smoke testing, correction, retry, republish, rollback, restore, and destructive recovery.
 
-## Ordered queue and usage gate
+## Completed ordered queue and usage gate
 
 1. **P1 — Local D1 remediation:** 6–10 points. Keep the private backup/disposable-clone/conditional active-local write boundary independent from Site publication.
 2. **P2 — Exact cumulative Version 20 publication:** 8–13 points. Begin only after P1 reaches a clean completion or blocker boundary and fresh candidate/Site/session/source/package/migration/schema/data/validation/preservation/production checks pass.
 
 Combined envelope is **14–23 percentage points**, including intake, collision checks, execution, ordinary in-scope remediation, full validation, evidence/handoffs, transition checks, and clean stops. One continuous `!run` is safe only when the fresh starting reading is at least approximately **53% remaining** and no task consumes beyond its high estimate; otherwise complete or park P1, drain, and obtain a new decision/reading before P2. The 30% floor remains mandatory.
 
-P1 completed successfully: exact active local D1 backed up privately, clone proof passed, unchanged migrations `0004`–`0006` applied transactionally once, schema/integrity/preservation checks passed, and 101/101 tests plus lint/build passed. P2 then passed acceptance with exact Version 20/Site/package/manifest identity and conservative 55% remaining capacity. Publication execution is in progress; no completion or publication evidence has yet been accepted.
+P1 completed successfully: exact active local D1 backed up privately, clone proof passed, unchanged migrations `0004`–`0006` applied transactionally once, schema/integrity/preservation checks passed, and 101/101 tests plus lint/build passed. P2 then published exact saved Version 20 once after 92/92 saved-source, 160/160 layered, and 150/150 focused tests, lint, build, manifest, migration-order, secret, and no-write checks passed. Deployment succeeded and bounded public root/Shopping health passed. No retry, correction, migration, production mutation, live validation, broad smoke, rollback, or restore occurred.
 
 ## Other workstreams
 
-- M4 bounded Bookshelf is complete locally, not planned implementation work. It is preserved in unpublished Version 20 and requires a Product Owner checkpoint before activation.
+- M4 bounded Bookshelf is published in Version 20 and requires a Product Owner hands-on checkpoint before acceptance.
 - M5 catalog export foundation is complete locally. The private Gate 2 bridge export and local M5 catalog export are useful but neither is a complete production backup; both exclude R2 bytes.
 - Mutable import, AI Review, reference-cover enrichment, Tags, and dedicated analysis remain behind their accepted dependencies and are not current queue work.
 

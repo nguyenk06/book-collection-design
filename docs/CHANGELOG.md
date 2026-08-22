@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Exact cumulative Version 20 published
+
+- Accepted Sei's completion evidence for exactly one successful publication of saved Version 20 at commit `6a2191b1b506d171d576cbb6a6b160964595c051`, with the identity-matched 47-file Sites package and exact 24-path delta.
+- Recorded passing 92/92 exact saved-source, 160/160 layered, and 150/150 focused tests; lint with one pre-existing warning; production build; diff/whitespace, migration-order, secret, manifest, and no-write checks.
+- Bounded public root and `/shopping` health passed. Checkpoint `608553f`, Phase A/D, the local D1 change, and later work were excluded.
+- No correction, retry/republish, migration, production schema/data mutation, Product Owner live validation, broad smoke, rollback, or restore occurred. Drained the batch and opened the separate live-validation decision.
+
 ## 2026-08-21 — Local remediation completed; Version 20 publication accepted
 
 - Accepted P1 completion: verified private byte-for-byte backup, successful disposable-clone proof, and one transactional active-local application of unchanged migrations `0004` → `0005` → `0006` with preservation/integrity checks.
