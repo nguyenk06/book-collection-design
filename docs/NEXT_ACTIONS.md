@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; assessment/intake/local-remediation batch is complete and no Engineer brief remains.
-- **Engineer state:** `PAUSED` at clean recoverable checkpoint `80e4c61`.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner resumes held validation on or after August 25; any save/release step remains separately gated.
-- **Usage:** Recorded start 68%. Source-informed complete envelope 13/20/30 points, projecting 55%/48%/38% remaining; 30% floor remains mandatory.
+- **Throttle:** `RUN`; an exact-checkpoint save-and-publication brief is prepared under Product Owner authority.
+- **Engineer state:** `AVAILABLE` for separate `!brief` acceptance against checkpoint `80e4c61`.
+- **Next owner:** `ENGINEER — SEI` — verify capacity and identity, save once, publish once, perform bounded read-only health checks, and stop.
+- **Usage:** No fresh post-remediation reading is recorded. The exact-candidate release estimate is 9/13/18 points; acceptance requires fresh capacity sufficient for its high estimate while preserving the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -82,6 +82,10 @@ Interim results confirm failures in mobile Shopping discoverability and desktop/
 P2 may be created without another Product Owner decision only if P1 establishes one clearly safer baseline that preserves Version 20, avoids unnecessary reconstruction, retains `608553f`, resolves shared-file collisions, and needs no production/schema/data/security/product decision. P2 is local-only and excludes Site save/version, preview/deployment/publication, production access/mutation, schema/data migration, held validation scenarios, broad redesign, retry/republish, rollback, restore, and destructive recovery.
 
 Validation passed 31/31 focused and 163/163 full serial tests, production build, scoped lint with one pre-existing warning, diff checks, and exact three-file scope review. Browser viewport/data-populated visual QA and forced-colors emulation were unrun and are not inferred. Published Version 20 and every Site/production/schema/data state remain unchanged.
+
+## Authorized exact-checkpoint release
+
+Product Owner confirmed that checklist item 2 passes at the tested scan/ISBN checker boundary; recommendation accuracy and non-ISBN matching remain non-blocking follow-up. Product Owner then authorized publication of exact checkpoint `80e4c61`. Because that checkpoint has no saved Site version, the bounded release brief permits one identity-matched Site save followed conditionally by one publication attempt after full revalidation and saved-source verification. It permits bounded read-only application-health checks and sanitized evidence only. It does not permit correction, retry/republish, migration, production schema/data mutation, held validation, broad smoke testing, rollback, restore, or destructive recovery.
 
 ## Other workstreams
 

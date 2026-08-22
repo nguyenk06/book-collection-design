@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-21
+**Last reviewed:** 2026-08-22
 
 For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
 
@@ -23,16 +23,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; P1 assessment, Designer intake, and P2 local remediation are complete; no Engineer brief remains.
-- **Engineer state:** `PAUSED` at clean recoverable checkpoint `80e4c61`.
-- **Engineer continuation:** None authorized. Preserve the local checkpoint; do not save a Site version, preview, deploy, publish, or infer live validation.
-- **Planner decisions:** None pending. Product Owner authorized preparation of the bounded read-only failed-item assessment (`Decision 1:A`).
-- **Active owner:** `EXTERNAL/WAIT` — Product Owner resumes held validation on or after August 25 and later decides the validation/release path.
+- **Throttle:** `RUN`; Product Owner authorized a bounded save-and-publication sequence for exact local checkpoint `80e4c61`.
+- **Engineer state:** `AVAILABLE` for the separately prepared exact-candidate release brief.
+- **Engineer continuation:** Accept the release brief, verify exact source/Site/session/collision identity and fresh reserve capacity, fully revalidate, save exactly one new Site version, verify its identity, publish it exactly once, perform bounded read-only health checks, and stop.
+- **Planner decisions:** None pending. Product Owner directly authorized the exact `80e4c61` save-and-publication sequence on 2026-08-22.
+- **Active owner:** `ENGINEER — SEI` — bounded exact-candidate preservation and publication after `!brief` acceptance and explicit `!run`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The recorded starting reading is 68%. Accepted source-informed planning is P1 3/5/7, Designer intake 1/1/2, and P2 9/14/21: **13/20/30 combined**, projecting approximately 55%/48%/38% remaining. The high estimate preserves the 30% floor; Engineer must still reconcile actual capacity at acceptance and unit transitions.
+The last recorded reading was 68% before the now-complete assessment/intake/remediation batch; no fresh post-completion reading is recorded. The authorized exact-candidate release is estimated at **9/13/18 points** low/likely/high. Engineer must obtain a fresh reading at acceptance and proceed only if the complete high estimate plus clean stopping preserves the standing 30% floor.
 
 ## Current workstreams
 
@@ -77,4 +77,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 assessment, Designer intake, and P2 local remediation are complete. Checkpoint `80e4c61` preserves Version 20 ancestry and Phase A/D while adding the confirmed navigation/Bookshelf fixes. Published Version 20 remains unchanged, so checklist failures 4, 6, and 7 remain live-state findings rather than resolved production results. Items 2, 3, 5, and 8 remain follow-up/on hold until August 25. No Site/save/publication/production/schema/data action is authorized.
+P1 assessment, Designer intake, and P2 local remediation are complete. Checkpoint `80e4c61` preserves Version 20 ancestry and Phase A/D while adding the confirmed navigation/Bookshelf fixes. Product Owner authorized one exact-candidate Site save followed conditionally by one publication attempt and bounded read-only health verification. Item 2 passes at the tested scan/ISBN checker boundary; recommendation accuracy and non-ISBN matching remain non-blocking follow-up. Items 3, 5, and 8 remain on hold. No correction, retry/republish, migration, production schema/data mutation, rollback, restore, destructive recovery, or Product Owner hands-on validation is authorized by the release decision.

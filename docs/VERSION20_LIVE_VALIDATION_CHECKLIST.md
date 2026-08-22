@@ -106,7 +106,7 @@ For every `FOLLOW-UP` or `FAIL`, record the item number, device/viewport, short 
 ## Interim Product Owner results
 
 - **1 — PASS:** Basic desktop navigation works; aesthetics are a non-blocking follow-up.
-- **2 — FOLLOW-UP:** Shopping currently appears most useful as a checker. Non-ISBN matching needs more validation because many missing/base-set books lack ISBNs.
+- **2 — PASS WITH FOLLOW-UP:** Scan returns an ISBN and Shopping functions as a checker at the tested boundary. Recommendation accuracy and non-ISBN matching remain follow-up work because many missing/base-set books lack ISBNs; this follow-up is not a publication blocker.
 - **3 — FOLLOW-UP / HOLD:** Equivalent-identifier hands-on testing deferred until August 25 when suitable books/ISBNs are available.
 - **4 — FAIL:** Desktop Bookshelf needs a primary multi-row layout; horizontal shelf may remain an alternate. Missing slots lack useful/selectable detail, and selected-book cover presentation is absent or unverified.
 - **5 — FOLLOW-UP / HOLD:** Owner catalog page is accessible; actual download, filename, and format-metadata validation deferred.

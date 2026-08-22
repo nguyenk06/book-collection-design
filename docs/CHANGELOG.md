@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-22 — Exact local remediation release authorized
+
+- Recorded checklist item 2 as passing at the tested scan/ISBN checker boundary; recommendation accuracy and non-ISBN matching remain non-blocking follow-up.
+- Product Owner authorized publication of exact checkpoint `80e4c617e90f1f4f200fcfdcc1ccedfc6cb2aa4a` so the locally completed navigation/Bookshelf remediation can be hands-on tested.
+- Prepared a bounded sequence for exact identity/collision checks, full revalidation, one identity-matched Site save, saved-source verification, one publication attempt, bounded read-only application-health checks, sanitized evidence, and clean stop.
+- Kept correction, retry/republish, migration, production schema/data mutation, held validation, broad smoke testing, rollback, restore, destructive recovery, and Product Owner hands-on validation outside the release authority.
+
 ## 2026-08-21 — Confirmed validation failures remediated locally
 
 - Accepted P2 completion at clean checkpoint `80e4c617e90f1f4f200fcfdcc1ccedfc6cb2aa4a`, a direct descendant of `608553f` retaining Version 20 ancestry and Phase A/D.
