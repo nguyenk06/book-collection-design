@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-22 — Exact local remediation release parked before save
+
+- Accepted Sei's release intake at a fresh 60% usage reading with a projected 42% conservative floor.
+- Recorded exact `80e4c61` ancestry, its 83-path manifest, the 14-path Version20→`608553f` and three-path `608553f`→`80e4c61` deltas, and successful 31/31 focused, 163/163 full, lint, build, diff, secret, migration-order, no-write, and local packaging checks.
+- The required configured-source push timed out ambiguously through the credential path. Sei terminated lingering processes and stopped before Site save; save/publication/deployment attempts remain zero and Version 20 remains latest saved and published.
+- Parked the active brief and opened one Product Owner decision for supported remote-state verification plus a conditional single push retry. No retry or Site/production operation is inferred or authorized by intake.
+
 ## 2026-08-22 — Exact local remediation release authorized
 
 - Recorded checklist item 2 as passing at the tested scan/ISBN checker boundary; recommendation accuracy and non-ISBN matching remain non-blocking follow-up.

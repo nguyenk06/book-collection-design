@@ -23,16 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`; Product Owner authorized a bounded save-and-publication sequence for exact local checkpoint `80e4c61`.
-- **Engineer state:** `AVAILABLE` for the separately prepared exact-candidate release brief.
-- **Engineer continuation:** Accept the release brief, verify exact source/Site/session/collision identity and fresh reserve capacity, fully revalidate, save exactly one new Site version, verify its identity, publish it exactly once, perform bounded read-only health checks, and stop.
-- **Planner decisions:** None pending. Product Owner directly authorized the exact `80e4c61` save-and-publication sequence on 2026-08-22.
-- **Active owner:** `ENGINEER — SEI` — bounded exact-candidate preservation and publication after `!brief` acceptance and explicit `!run`.
+- **Throttle:** `DRAIN`; the exact `80e4c61` release is parked at its automatic pre-save source-preservation stop.
+- **Engineer state:** `WAITING FOR ANSWER` at a clean pre-Site-operation boundary.
+- **Engineer continuation:** None until the supported remote credential path is available and Product Owner chooses whether to authorize a fresh remote-state verification plus conditional single push retry. Do not save or publish directly from the blocker.
+- **Planner decisions:** One pending source-preservation retry decision in `PLANNER_INBOX.md`.
+- **Active owner:** `PRODUCT OWNER` — decide whether to authorize the bounded remote verification/conditional push retry.
+- **Blocking owner:** `PRODUCT OWNER / SUPPORTED CREDENTIAL PATH`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The last recorded reading was 68% before the now-complete assessment/intake/remediation batch; no fresh post-completion reading is recorded. The authorized exact-candidate release is estimated at **9/13/18 points** low/likely/high. Engineer must obtain a fresh reading at acceptance and proceed only if the complete high estimate plus clean stopping preserves the standing 30% floor.
+The fresh acceptance reading was 60%, and the 18-point high estimate projected 42% remaining. No post-blocker reading is available and none is inferred. Any resumed sequence must recheck actual usage and preserve the standing 30% floor.
 
 ## Current workstreams
 
@@ -48,7 +49,7 @@ The last recorded reading was 68% before the now-complete assessment/intake/reme
 | My Library Phase A shell | Complete locally; checkpoint `608553f` includes it | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; later checkpoint/release separately gated |
 | My Library static Phase D themes | Complete locally; checkpoint `608553f` | Semantic conversion complete; desktop/mobile light/dark/system QA, focus, overflow, and sampled contrast passed | Admin/catalog visual routes blocked locally by sign-in; forced-colors/reduced-motion emulation and preference persistence remain later |
 | Local D1 remediation | Complete | Private byte-for-byte backup; disposable-clone proof; unchanged `0004` → `0005` → `0006` applied once; preservation/integrity checks, 101/101 tests, scoped lint, and build passed | Retain backup privately; no restore or additional local write authorized |
-| Confirmed validation-failure remediation | Complete locally; checkpoint `80e4c61` | Mobile Shopkeeper discovery retained; multi-row Bookcase primary; horizontal Shelf alternate; selectable informative gaps; cover/no-cover/error detail states; 31/31 focused and 163/163 full tests plus build passed | Not saved/published or browser-validated; preserve checkpoint pending later gate |
+| Confirmed validation-failure remediation | Complete locally; release parked before save | Exact `80e4c61`; 31/31 focused, 163/163 full, lint/build/diff/secret/migration/no-write checks passed; exact 83-path package created locally | Required remote push timed out ambiguously; 0 save/publication/deployment attempts; Version 20 unchanged |
 
 ## Data and export status
 
@@ -77,4 +78,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 assessment, Designer intake, and P2 local remediation are complete. Checkpoint `80e4c61` preserves Version 20 ancestry and Phase A/D while adding the confirmed navigation/Bookshelf fixes. Product Owner authorized one exact-candidate Site save followed conditionally by one publication attempt and bounded read-only health verification. Item 2 passes at the tested scan/ISBN checker boundary; recommendation accuracy and non-ISBN matching remain non-blocking follow-up. Items 3, 5, and 8 remain on hold. No correction, retry/republish, migration, production schema/data mutation, rollback, restore, destructive recovery, or Product Owner hands-on validation is authorized by the release decision.
+Checkpoint `80e4c61` passed the complete pre-save validation and packaging boundary, but the required push to the configured Site source branch timed out through the credential path. Sei terminated the lingering processes and stopped with 0 Site save, publication, or deployment attempts; latest saved/published remains Version 20. The release is parked pending the minimum remote-state/conditional-push decision. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.

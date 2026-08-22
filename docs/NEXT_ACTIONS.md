@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `RUN`; an exact-checkpoint save-and-publication brief is prepared under Product Owner authority.
-- **Engineer state:** `AVAILABLE` for separate `!brief` acceptance against checkpoint `80e4c61`.
-- **Next owner:** `ENGINEER — SEI` — verify capacity and identity, save once, publish once, perform bounded read-only health checks, and stop.
-- **Usage:** No fresh post-remediation reading is recorded. The exact-candidate release estimate is 9/13/18 points; acceptance requires fresh capacity sufficient for its high estimate while preserving the 30% floor.
+- **Throttle:** `DRAIN`; the accepted release is parked before Site save after an ambiguous source-push timeout.
+- **Engineer state:** `WAITING FOR ANSWER` at a clean pre-save boundary.
+- **Next owner:** `PRODUCT OWNER` — choose the bounded remote-state/conditional-push retry decision in Planner Inbox after a supported credential path is available.
+- **Usage:** Acceptance began at 60% with a 42% conservative projection. No post-blocker reading is available; any resume must recheck the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -86,6 +86,8 @@ Validation passed 31/31 focused and 163/163 full serial tests, production build,
 ## Authorized exact-checkpoint release
 
 Product Owner confirmed that checklist item 2 passes at the tested scan/ISBN checker boundary; recommendation accuracy and non-ISBN matching remain non-blocking follow-up. Product Owner then authorized publication of exact checkpoint `80e4c61`. Because that checkpoint has no saved Site version, the bounded release brief permits one identity-matched Site save followed conditionally by one publication attempt after full revalidation and saved-source verification. It permits bounded read-only application-health checks and sanitized evidence only. It does not permit correction, retry/republish, migration, production schema/data mutation, held validation, broad smoke testing, rollback, restore, or destructive recovery.
+
+Sei accepted at a fresh 60% reading, verified exact ancestry and the 83-path candidate, and passed 31/31 focused plus 163/163 full tests, lint, build, diff, secret, migration-order, and no-write checks. The required push of exact `80e4c61` to the configured Site source branch then timed out without a success/failure result through the credential path. Sei terminated lingering processes and stopped before Site save. Save, publication, and deployment attempts remain zero; Version 20 remains latest saved and published. The brief is parked, not complete, pending a separately authorized remote-state verification and conditional push retry.
 
 ## Other workstreams
 
