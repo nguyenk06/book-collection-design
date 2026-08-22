@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-21 — Interim Version 20 validation findings routed
+
+- Recorded Product Owner item 1 pass; items 2, 3, 5, and 8 follow-up/hold; and items 4, 6, and 7 failures without inferring a final checkpoint conclusion.
+- Confirmed failures cover missing mobile Shopping navigation and desktop/mobile Bookshelf layout, missing-slot detail, and cover-presentation behavior. Multi-row is the required primary Bookshelf view; horizontal may remain an alternate.
+- Added a Planner decision for read-only comparison of published Version 20 with checkpoint `608553f` so source composition, existing fixes, data availability, collisions, baseline choice, and effort can be established without implementation.
+
 ## 2026-08-21 — Version 20 Product Owner validation authorized
 
 - Recorded Product Owner Decision `1:A` authorizing a bounded, read-only-first desktop/mobile validation checkpoint for published Version 20.

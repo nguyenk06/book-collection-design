@@ -1,6 +1,6 @@
 # Version 20 Product Owner Live Validation Checklist
 
-**Status:** Authorized; awaiting Product Owner results  
+**Status:** In progress; held identifier/download checks remain, with confirmed UI failures  
 **Candidate:** Published Version 20, commit `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Live Site:** <https://cyoa-collection.znesfreak.chatgpt.site>  
 **Boundary:** Initial validation is read-only. Checkpoint `608553f` is excluded.
@@ -102,3 +102,16 @@ Select exactly one after completing or stopping the checklist:
 - [ ] **REVISE BEFORE RELEASE** — a material issue requires separately authorized correction; stop without changing the Site.
 
 For every `FOLLOW-UP` or `FAIL`, record the item number, device/viewport, short observed result, and useful sanitized evidence. Do not implement a fix from this checklist.
+
+## Interim Product Owner results
+
+- **1 — PASS:** Basic desktop navigation works; aesthetics are a non-blocking follow-up.
+- **2 — FOLLOW-UP:** Shopping currently appears most useful as a checker. Non-ISBN matching needs more validation because many missing/base-set books lack ISBNs.
+- **3 — FOLLOW-UP / HOLD:** Equivalent-identifier hands-on testing deferred until August 25 when suitable books/ISBNs are available.
+- **4 — FAIL:** Desktop Bookshelf needs a primary multi-row layout; horizontal shelf may remain an alternate. Missing slots lack useful/selectable detail, and selected-book cover presentation is absent or unverified.
+- **5 — FOLLOW-UP / HOLD:** Owner catalog page is accessible; actual download, filename, and format-metadata validation deferred.
+- **6 — FAIL:** Mobile root/header exposes no discoverable Shopping navigation control.
+- **7 — FAIL:** Mobile Bookshelf needs a primary multi-row vertical option; horizontal may remain alternate. Missing-slot information/selection and selected-book cover presentation also fail.
+- **8 — FOLLOW-UP / HOLD:** Mobile owner catalog page is accessible; download-related validation remains deferred.
+
+No final `ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE` conclusion has been selected.
