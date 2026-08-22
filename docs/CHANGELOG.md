@@ -1,9 +1,10 @@
 # Changelog
 
-## 2026-08-21 — Post-reset Gate 4 brief reactivated
+## 2026-08-21 — Post-reset supplemental Gate 4 evidence brief prepared
 
 - Recorded the fresh 90% usage reading and restoration of the standing 30% reserve; the temporary pre-reset exception remains closed.
 - Reconciled the retained approved P2 brief with the later-brief requirement and revalidated documented identity, published Version 19, unpublished Version 20 separation, Gate 2 baseline, exact read-only scope, automatic-stop rules, and collision boundary.
+- Clarified that the one-time export supplies supplemental preservation evidence within still-incomplete Gate 4; it is not Gate 3 retry/activation, corrective verification, a later production gate, or automatic Gate 4 completion.
 - Kept actual owner-session and Site identity as mandatory Engineer acceptance checks; Designer did not perform a Site operation.
 - Added independent mutation-free diagnosis of local D1 `books.stable_id` drift as fallback if the production-read task parks.
 - Authorized no implementation, source change, migration, local/production write, second export, correction, Site save/preview/deployment/publication, or later production gate during intake.

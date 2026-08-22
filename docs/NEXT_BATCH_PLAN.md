@@ -1,6 +1,6 @@
 # Proposed Next Execution Batch
 
-**Status:** P1 COMPLETE; P2 REACTIVATED POST-RESET
+**Status:** P1 COMPLETE; P2 SUPPLEMENTAL GATE 4 EVIDENCE READY POST-RESET
 **Prepared:** 2026-08-16; revalidated 2026-08-21
 **Current usage:** Approximately 90% remaining
 **Usage reset:** Completed August 21
@@ -29,7 +29,7 @@ P1 completed. The old 36% transition reading parked P2; the new post-reset readi
 
 - **P1 preservation-only save:** Complete. The exact 24-path candidate passed 160/160 full serial tests and exact-source lint, build, diff, whitespace, migration-order, secret, and no-write checks. Commit, remote branch, package, and saved source matched; exactly one unpublished, undeployed Version 20 was saved.
 - **Transition gate:** Reopened by the completed reset and fresh 90% reading; normal 30% reserve restored.
-- **P2 private export evidence:** Reactivated, pending acceptance-time confirmation of Engineer identity, correct Site, owner session, published Version 19, unpublished Version 20 separation, exact route, and no-write boundary.
+- **P2 supplemental private export evidence:** Ready, pending acceptance-time confirmation of Engineer identity, correct Site, owner session, published Version 19, unpublished Version 20 separation, exact route, and no-write boundary. This supplements the incomplete Gate 4 record; it is not activation, retry, correction, or automatic Gate 4 completion.
 - **Independent fallback:** Mutation-free diagnosis of local D1 `books.stable_id` drift if P2 parks for a task-specific blocker.
 
 The queue remains `DRAIN` until explicit `!run`. Reactivation does not bypass identity, Site, owner-session, source, production-read, ambiguity-stop, privacy, or evidence restrictions.

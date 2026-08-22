@@ -23,7 +23,7 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until explicit `!run`; the post-reset Gate 4 export plus read-only local schema diagnosis brief is reactivated and ready.
+- **Throttle:** `DRAIN` until explicit `!run`; the post-reset supplemental Gate 4 preservation-evidence export plus read-only local schema diagnosis brief is ready.
 - **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f`, awaiting the post-reset brief.
 - **Engineer continuation:** After `!run`, attempt the one bounded owner-session Version 19 private export first. If it parks before or at its automatic-stop boundary, proceed only to independent mutation-free diagnosis of local `books.stable_id` drift when context and usage remain safe.
 - **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
@@ -39,7 +39,7 @@ The post-reset Product Owner reading is approximately 90% remaining. The tempora
 | Workstream | State | Verified boundary | Next condition |
 | --- | --- | --- | --- |
 | Version 19 administration | Complete/published | Gate 2 status/export and Gate 3 invocation used the owner-authenticated same-origin surface | No further action currently authorized |
-| Production schema activation | Gate 4 incomplete | Read-only Gate 4 independently confirmed schema-complete and zero-FK signals; preservation invariants remain unverified | Post-reset private-export evidence brief reactivated; owner session/Site identity must pass acceptance |
+| Production schema activation | Gate 4 incomplete | Read-only Gate 4 independently confirmed schema-complete and zero-FK signals; preservation invariants remain unverified | Supplemental private-export evidence brief ready; owner session/Site identity must pass acceptance, and the export does not automatically complete Gate 4 |
 | Shopping UI | Complete locally; saved in unpublished Version 20 | Search/scan/status, Purchase history/capture, quality, and accessibility validation passed | Gate 4 and later separately gated release steps |
 | M3 canonical identifiers | Complete locally | Focused/full tests, lint, and build passed | Future promotion remains separately gated |
 | M4 bounded Bookshelf | Complete locally; saved in unpublished Version 20 | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
@@ -75,4 +75,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The next batch is one post-reset brief: primary one-time owner-authenticated read-only Version 19 export and offline Gate 2 comparison; fallback mutation-free diagnosis of local D1 `books.stable_id` drift. Identity, correct Site, owner session, live Version 19, saved Version 20 separation, baseline, and no-write boundaries must be revalidated at acceptance. No second export, correction, migration, local schema mutation, source change, Site save/preview/deployment/publication, restore, rollback, or later production gate is authorized. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
+The next batch is one post-reset brief: primary one-time owner-authenticated read-only Version 19 export and offline Gate 2 comparison as supplemental preservation evidence within the still-incomplete Gate 4; fallback mutation-free diagnosis of local D1 `books.stable_id` drift. The action is not a Gate 3 retry, activation, corrective verification write, or later gate, and successful artifact handling does not itself complete Gate 4. Identity, correct Site, owner session, live Version 19, saved Version 20 separation, baseline, and no-write boundaries must be revalidated at acceptance. No second export, correction, migration, local schema mutation, source change, Site save/preview/deployment/publication, restore, rollback, or later production gate is authorized. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).

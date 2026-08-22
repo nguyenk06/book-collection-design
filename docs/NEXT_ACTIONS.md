@@ -48,7 +48,7 @@ Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot selec
 
 The reactivated brief orders:
 
-1. **Primary:** exactly one owner-authenticated read-only Version 19 bridge export, private offline Gate 2 preservation comparison, sanitized evidence, and automatic stop for mismatch or ambiguity.
+1. **Primary:** exactly one owner-authenticated read-only Version 19 bridge export, private offline Gate 2 preservation comparison, sanitized supplemental evidence for incomplete Gate 4, and automatic stop for mismatch or ambiguity. The export does not automatically declare Gate 4 complete.
 2. **Independent fallback:** read-only local diagnosis of why the active local D1 schema lacks `books.stable_id`; inspect bindings, schema metadata, migration ledger/configuration, and expected source migration state without changing anything.
 
 Wrong/ambiguous Site, Version, identity, or source context stops the whole brief. Owner-session unavailability or a task-specific production-read blocker parks Task 1 and permits Task 2. No correction, retry, migration, local/production write, source change, Site save/preview/deployment/publication, or speculative work is authorized.
