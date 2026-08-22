@@ -26,8 +26,8 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Throttle:** `DRAIN`; the ordered P1→P2 batch is complete and no Engineer brief remains.
 - **Engineer state:** `PAUSED` at a clean post-publication boundary.
 - **Engineer continuation:** None authorized. Do not enter live validation, broad smoke, correction, retry/republish, rollback, or restore.
-- **Planner decisions:** One pending decision for the separate Product Owner live-validation gate.
-- **Active owner:** `PLANNER / PRODUCT OWNER` — decide whether to authorize bounded hands-on validation.
+- **Planner decisions:** None pending. Product Owner authorized the bounded read-only-first Version 20 live-validation checklist.
+- **Active owner:** `PRODUCT OWNER / EXTERNAL` — perform the checklist and return exactly one checkpoint conclusion.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
@@ -76,4 +76,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 local D1 remediation and P2 controlled publication are complete. Exact saved Version 20 published successfully in one attempt; bounded public root and `/shopping` health passed. Checkpoint `608553f`, Phase A/D, the local D1 change, and later/uncommitted changes were excluded. The next step is a separate Product Owner decision for live desktop/mobile validation; broad smoke and every corrective/recovery action remain closed. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
+P1 local D1 remediation and P2 controlled publication are complete. Exact saved Version 20 published successfully in one attempt; bounded public root and `/shopping` health passed. Checkpoint `608553f`, Phase A/D, the local D1 change, and later/uncommitted changes were excluded. Product Owner live validation is authorized through [Version 20 Live Validation Checklist](VERSION20_LIVE_VALIDATION_CHECKLIST.md), using read-only scenarios wherever possible. Every mutation scenario, broad smoke, correction, retry/republish, and recovery action remains closed.

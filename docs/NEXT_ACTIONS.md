@@ -8,7 +8,7 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the P1→P2 batch is complete and no Engineer brief remains.
 - **Engineer state:** `PAUSED` at a clean post-publication boundary.
-- **Next owner:** `PLANNER / PRODUCT OWNER` — decide the separately gated live-validation step.
+- **Next owner:** `PRODUCT OWNER / EXTERNAL` — run the authorized Version 20 checklist and return one required conclusion.
 - **Usage:** P1 began at 78%; conservative full-high transition math leaves 55%. The 30% reserve remains mandatory.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
@@ -68,6 +68,8 @@ Product Owner separately selected planning Decision `2:A`, chose the cumulative 
 Combined envelope is **14–23 percentage points**, including intake, collision checks, execution, ordinary in-scope remediation, full validation, evidence/handoffs, transition checks, and clean stops. One continuous `!run` is safe only when the fresh starting reading is at least approximately **53% remaining** and no task consumes beyond its high estimate; otherwise complete or park P1, drain, and obtain a new decision/reading before P2. The 30% floor remains mandatory.
 
 P1 completed successfully: exact active local D1 backed up privately, clone proof passed, unchanged migrations `0004`–`0006` applied transactionally once, schema/integrity/preservation checks passed, and 101/101 tests plus lint/build passed. P2 then published exact saved Version 20 once after 92/92 saved-source, 160/160 layered, and 150/150 focused tests, lint, build, manifest, migration-order, secret, and no-write checks passed. Deployment succeeded and bounded public root/Shopping health passed. No retry, correction, migration, production mutation, live validation, broad smoke, rollback, or restore occurred.
+
+Product Owner authorized [Version 20 Live Validation Checklist](VERSION20_LIVE_VALIDATION_CHECKLIST.md). It covers desktop/mobile Shopping, visible M3 identifier behavior, Bookshelf, owner-only catalog download, and basic navigation. The initial checklist is read-only except for the explicitly initiated catalog file download, which does not mutate library data. All data-changing scenarios are listed separately as unauthorized. The checkpoint must conclude `ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE`.
 
 ## Other workstreams
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Version 20 Product Owner validation authorized
+
+- Recorded Product Owner Decision `1:A` authorizing a bounded, read-only-first desktop/mobile validation checkpoint for published Version 20.
+- Added a concise checklist covering Shopping, visible M3 identifier behavior, Bookshelf, owner-only catalog download, and basic cross-surface navigation, with per-item result/evidence fields.
+- Separated every mutation scenario as unauthorized pending another explicit decision. Broad smoke, correction, retry/republish, migration, rollback, restore, and destructive recovery remain closed.
+- Required exactly one conclusion: `ACCEPT`, `ACCEPT WITH FOLLOW-UP`, or `REVISE BEFORE RELEASE`.
+
 ## 2026-08-21 — Exact cumulative Version 20 published
 
 - Accepted Sei's completion evidence for exactly one successful publication of saved Version 20 at commit `6a2191b1b506d171d576cbb6a6b160964595c051`, with the identity-matched 47-file Sites package and exact 24-path delta.
