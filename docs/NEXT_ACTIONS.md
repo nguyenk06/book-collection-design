@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–4 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until explicit `!run`; P1 local remediation and P2 cumulative Version 20 publication are authorized as separate ordered briefs.
-- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f` awaiting brief acceptance.
-- **Next owner:** `ENGINEER — SEI` after explicit `!run`; otherwise `EXTERNAL/WAIT`.
-- **Usage:** Last reported reading was 90% before the completed run; normal 30% reserve remains in force. Obtain a fresh reading before another batch.
+- **Throttle:** `RUN`; P1 is complete and P2 publication is accepted and active.
+- **Engineer state:** `EXECUTING P2` against exact saved Version 20.
+- **Next owner:** `ENGINEER — SEI` — finish bounded P2 or stop at its automatic boundary.
+- **Usage:** P1 began at 78%; conservative full-high transition math leaves 55%. The 30% reserve remains mandatory.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -66,6 +66,8 @@ Product Owner separately selected planning Decision `2:A`, chose the cumulative 
 2. **P2 — Exact cumulative Version 20 publication:** 8–13 points. Begin only after P1 reaches a clean completion or blocker boundary and fresh candidate/Site/session/source/package/migration/schema/data/validation/preservation/production checks pass.
 
 Combined envelope is **14–23 percentage points**, including intake, collision checks, execution, ordinary in-scope remediation, full validation, evidence/handoffs, transition checks, and clean stops. One continuous `!run` is safe only when the fresh starting reading is at least approximately **53% remaining** and no task consumes beyond its high estimate; otherwise complete or park P1, drain, and obtain a new decision/reading before P2. The 30% floor remains mandatory.
+
+P1 completed successfully: exact active local D1 backed up privately, clone proof passed, unchanged migrations `0004`–`0006` applied transactionally once, schema/integrity/preservation checks passed, and 101/101 tests plus lint/build passed. P2 then passed acceptance with exact Version 20/Site/package/manifest identity and conservative 55% remaining capacity. Publication execution is in progress; no completion or publication evidence has yet been accepted.
 
 ## Other workstreams
 

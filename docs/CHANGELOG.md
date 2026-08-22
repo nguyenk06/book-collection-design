@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Local remediation completed; Version 20 publication accepted
+
+- Accepted P1 completion: verified private byte-for-byte backup, successful disposable-clone proof, and one transactional active-local application of unchanged migrations `0004` → `0005` → `0006` with preservation/integrity checks.
+- Recorded 101/101 current-source tests, scoped lint with one pre-existing warning, production build, unchanged application source/configuration/Site/production state, and retained private backup. Local startup smoke was deliberately unrun because it would seed data beyond authority.
+- Accepted P2 intake for exact saved Version 20 commit `6a2191b1b506d171d576cbb6a6b160964595c051`, its identity-matched 47-file package, and exact 24-path delta; checkpoint `608553f` and the local D1 change remain excluded.
+- Recorded 78% at P1 start and conservative 55% capacity after charging both full high estimates. P2 is active; no publication completion is inferred.
+
 ## 2026-08-21 — Cumulative Version 20 publication execution authorized
 
 - Recorded Product Owner Decision `1:A`, authorizing exact candidate/deployment identity checks, full required revalidation, one publication attempt, bounded application-health verification, sanitized evidence, and clean stop for saved Version 20 only.

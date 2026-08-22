@@ -4,7 +4,7 @@
 
 **Execution budget:** Last reported reading was 90% before the completed post-reset run. The standing 30% protected reserve is restored; obtain a fresh reading before another batch.
 
-**Queue state:** Throttle `DRAIN`. P1 local D1 remediation and P2 cumulative Version 20 publication are separately authorized in order, pending explicit `!run` and individual `!brief` acceptance. P2 excludes checkpoint `608553f`; later validation and production gates remain closed.
+**Queue state:** Throttle `RUN`. P1 local D1 remediation is complete. P2 cumulative Version 20 publication passed separate acceptance and is active; it excludes checkpoint `608553f`. Later validation and production gates remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

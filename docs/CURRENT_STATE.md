@@ -23,16 +23,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until explicit `!run`; two separate briefs are authorized in P1→P2 order.
-- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f`, awaiting the local remediation brief.
-- **Engineer continuation:** P1 performs private backup and disposable-clone proof before the conditional active-local `0004` → `0005` → `0006` sequence. At its clean completion or blocker boundary, refresh the queue and accept P2 only if its independent publication gates and usage floor pass.
+- **Throttle:** `RUN`; P1 is complete and P2 exact Version 20 publication is accepted and active.
+- **Engineer state:** `EXECUTING P2` after clean P1 completion and successful P2 acceptance.
+- **Engineer continuation:** Revalidate the isolated exact Version 20 candidate, then make at most one publication attempt if every pre-publication gate passes. Stop after bounded application-health evidence or immediately on ambiguity/failure; no retry or correction.
 - **Planner decisions:** None pending. Product Owner authorized bounded execution of the exact cumulative Version 20 publication brief and excluded checkpoint `608553f`.
 - **Active owner:** `ENGINEER — SEI` after explicit `!run`; until then, `EXTERNAL/WAIT`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The last Product Owner reading was approximately 90% remaining before the completed read-only run. No newer reading is recorded. The temporary pre-reset exception is closed and the standing 30% protected reserve is fully restored. Obtain a fresh reading before estimating or activating another batch.
+P1 began at 78% remaining. At the P1→P2 transition, Engineer conservatively charged both tasks' full high estimates: `78 − 10 − 13 = 55%`, above the mandatory 30% floor. This is a conservative capacity bound, not a fresh exact post-P1 reading. The standing 30% reserve remains mandatory.
 
 ## Current workstreams
 
@@ -47,6 +47,7 @@ The last Product Owner reading was approximately 90% remaining before the comple
 | M6 downloadable export UI | Complete locally; saved in unpublished Version 20 | 8/8 focused and 160/160 full serial tests, task lint, build, owner gating, no-write checks, and collision separation passed | No runnable preview, checkpoint, deployment, publication, or activation authority |
 | My Library Phase A shell | Complete locally; checkpoint `608553f` includes it | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; later checkpoint/release separately gated |
 | My Library static Phase D themes | Complete locally; checkpoint `608553f` | Semantic conversion complete; desktop/mobile light/dark/system QA, focus, overflow, and sampled contrast passed | Admin/catalog visual routes blocked locally by sign-in; forced-colors/reduced-motion emulation and preference persistence remain later |
+| Local D1 remediation | Complete | Private byte-for-byte backup; disposable-clone proof; unchanged `0004` → `0005` → `0006` applied once; preservation/integrity checks, 101/101 tests, scoped lint, and build passed | Retain backup privately; no restore or additional local write authorized |
 
 ## Data and export status
 
@@ -75,4 +76,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The ordered queue is P1 bounded local-only D1 remediation, then P2 exact cumulative Version 20 publication. They remain separate accepted scopes under one possible continuous `!run`: P2 may begin only after P1 reaches a clean completion/blocker boundary and a fresh transition check proves the publication high estimate still preserves the 30% floor. Version 20 identity is commit `6a2191b1b506d171d576cbb6a6b160964595c051` plus its identity-matched 47-file package and accepted 24-path delta; checkpoint `608553f` is excluded. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
+P1 local D1 remediation is complete. P2 is accepted and active for exact saved Version 20: commit `6a2191b1b506d171d576cbb6a6b160964595c051`, its identity-matched 47-file package, and the accepted 24-path Shopping/M3–M6/Bookshelf delta. Checkpoint `608553f`, Phase A/D, the local D1 change, and later/uncommitted changes are excluded. No publication has yet been reported. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
