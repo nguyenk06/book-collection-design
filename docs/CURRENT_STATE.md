@@ -23,16 +23,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until explicit `!run`; one read-only Version 20/`608553f` source-collision assessment brief is ready.
-- **Engineer state:** `PAUSED` at a clean post-publication boundary.
-- **Engineer continuation:** None authorized. Do not enter live validation, broad smoke, correction, retry/republish, rollback, or restore.
+- **Throttle:** `DRAIN` until explicit `!run`; P1 read-only assessment is ready, followed by a mandatory Designer intake gate and conditional P2 only if evidence clears every eligibility condition.
+- **Engineer state:** `PAUSED` at a clean post-publication boundary awaiting P1.
+- **Engineer continuation:** Under `!run`, complete P1 and report to Designer. Do not implement until Relena accepts the report and creates a separate eligible P2 brief.
 - **Planner decisions:** None pending. Product Owner authorized preparation of the bounded read-only failed-item assessment (`Decision 1:A`).
-- **Active owner:** `ENGINEER — SEI` after explicit `!run`; Product Owner separately retains held validation checks and final conclusion.
+- **Active owners:** `ENGINEER — SEI` for P1 after explicit `!run`; `DESIGNER — RELENA` for mandatory P1 intake and conditional P2 preparation; Product Owner separately retains held validation checks and final conclusion.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-P1 began at 78% remaining. At the P1→P2 transition, Engineer conservatively charged both tasks' full high estimates: `78 − 10 − 13 = 55%`, above the mandatory 30% floor. This is a conservative capacity bound, not a fresh exact post-P1 reading. The standing 30% reserve remains mandatory.
+Current Product Owner reading is 68% remaining. The provisional P1→Designer intake→conditional P2 envelope is 12/19/29 points, projecting approximately 56%/49%/39% remaining. P1 must replace the provisional P2 range with source-informed estimates, and Designer must recheck the 30% floor before P2 becomes eligible.
 
 ## Current workstreams
 
@@ -76,4 +76,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 local D1 remediation and P2 controlled publication are complete. Product Owner validation is partially complete: item 1 passed; items 4, 6, and 7 failed; items 2, 3, 5, and 8 remain follow-up/on hold. No final checkpoint conclusion exists. One non-implementation assessment brief is ready to compare exact Version 20 and checkpoint `608553f`, establish source/data/collision evidence, recommend—but not select—a baseline, and return implementation estimates.
+The next ordered queue is P1 read-only comparison of Version 20 and `608553f`, mandatory Designer intake, then conditional local-only P2 for confirmed failures only. Designer may select the baseline without another interruption only when P1 establishes one clearly safer choice meeting every preservation/collision/authority condition. Otherwise P2 parks for the minimum decision. Held validation items remain outside scope.

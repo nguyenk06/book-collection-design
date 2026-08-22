@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Conditional failed-item remediation queue authorized
+
+- Recorded the 68% usage reading and Product Owner direction for P1 read-only assessment, mandatory Designer intake, then conditional P2 local implementation of confirmed failures only.
+- Delegated baseline selection to Designer only when P1 establishes one clearly safer choice preserving Version 20 and `608553f`, resolving collisions, avoiding reconstruction, and requiring no production/schema/data/security/product decision.
+- Kept held validation items 2, 3, 5, and 8 outside failure and implementation scope; retained every Site save/version, preview, deployment, publication, production, migration, retry/republish, rollback, restore, and destructive exclusion.
+- Recorded provisional P1/intake/P2 estimates of 3/5/7, 1/1/2, and 8/13/20 points: 12/19/29 combined, projecting 56%/49%/39% remaining before source-informed reassessment.
+
 ## 2026-08-21 — Failed-item source/collision assessment prepared
 
 - Recorded Product Owner Decision `1:A` authorizing preparation of a bounded read-only assessment comparing exact published Version 20 with checkpoint `608553f`.

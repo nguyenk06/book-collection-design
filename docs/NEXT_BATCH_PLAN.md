@@ -1,5 +1,17 @@
 # Proposed Next Execution Batch
 
+## Current conditional validation-remediation queue
+
+At a current 68% usage reading, Product Owner authorized an ordered P1 assessment → Designer intake → conditional P2 local implementation flow for confirmed Version 20 failures only.
+
+| Order | State | Scope | Low / likely / high |
+| --- | --- | --- | ---: |
+| P1 | Ready after `!run` | Read-only Version 20/`608553f` source, data-contract, collision, baseline, and estimate assessment | 3 / 5 / 7 |
+| Designer intake | Required | Accept evidence, select a clearly safer baseline only if all delegated conditions pass, and prepare or park P2 | 1 / 1 / 2 |
+| P2 | Conditional; not created | Local-only confirmed navigation/Bookshelf remediation, tests, QA, evidence, clean checkpoint | 8 / 13 / 20 provisional |
+
+Combined provisional envelope: **12 / 19 / 29 points**, projecting approximately **56% / 49% / 39% remaining** from 68%. P1 must return source-informed P2 estimates and Designer must recompute the 30% floor. P2 cannot be inferred from P1, begins only from a separate transport brief, and excludes held validation items and every Site/production/schema/data/recovery action.
+
 **Status:** BATCH COMPLETE; QUEUE DRAINED
 **Prepared:** 2026-08-16; revalidated 2026-08-21
 **Current usage:** Last reported approximately 90% before execution; refresh required
