@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-21 — Planner and Engineer inbox terminology clarified
+
+- Clarified that repository `docs/PLANNER_INBOX.md` is Quatre/Product Owner's decision queue, while external local `inbox/` is Engineer-to-Designer transport processed by Relena's `!inbox` command.
+- Updated Planner guidance to answer numbered decisions with ordinary decision text rather than invoking `!inbox`.
+- Corrected README's stale statement that Gate 4 remained incomplete and restored the accepted bridge-observable completion boundary and backup limitations.
+
 ## 2026-08-21 — Cumulative Version 20 publication brief prepared
 
 - Recorded Product Owner candidate choice `1:B`: exact cumulative Version 20 Shopping/M3–M6/Bookshelf, excluding later local Phase A/D checkpoint `608553f`.

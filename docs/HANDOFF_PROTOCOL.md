@@ -143,7 +143,7 @@ The Designer reviews the handoff under [`DOCUMENTATION_RULES.md`](DOCUMENTATION_
 
 Use explicit `!` commands for defined lifecycle actions and ordinary sentences for requests that are not workflow commands. For example:
 
-1. Designer: `!inbox` to process Engineer evidence, or prepare an implementation/estimation brief as a normal request.
+1. Designer: `!inbox` to process Engineer evidence in the external local `inbox/`, or prepare an implementation/estimation brief as a normal request. This is distinct from repository `docs/PLANNER_INBOX.md`, which Quatre reads and answers with ordinary decision text.
 2. Site Engineer: `!brief` to accept the next eligible brief, then `!drain` when the current safe unit should finish without new intake.
 3. Any role: `!status` for a read-only state report or `!init` for a read-only state refresh.
 4. Designer: `!prompt-engineer`, `!prompt-designer`, or `!prompt-planner` to produce a copy/paste-ready startup prompt.
@@ -254,7 +254,7 @@ When Queue Mode is enabled with `!run`, completion of the current milestone trig
 
 `!drain`, `!stop`, an explicit gate, unsafe collision, missing authority, or no eligible work overrides automatic continuation. These checks do not auto-accept a brief or expand its scope.
 
-Planner uses `!init` and `!status`. Unprefixed conversational words such as “inbox,” “status,” and “next” remain normal conversation. Planner reads permanent documentation in this order:
+Planner uses `!init` and `!status`. Planner does not invoke `!inbox`; Quatre reads `docs/PLANNER_INBOX.md` and returns ordinary decision text such as `Decision 1:A`. Unprefixed conversational words such as “inbox,” “status,” and “next” remain normal conversation. Planner reads permanent documentation in this order:
 
 1. [`PLANNER_INBOX.md`](PLANNER_INBOX.md)
 2. [`CURRENT_STATE.md`](CURRENT_STATE.md)

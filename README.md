@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 19 is the published owner-authenticated administration surface. Unpublished, undeployed Version 20 preserves the exact validated cumulative Shopping/M3–M6/Bookshelf source; it is not a runnable preview and saving it did not execute migrations. Gate 3 reported Shopping schema completion and zero foreign-key issues, while Gate 4 independently confirmed only those coarse signals and remains incomplete for preservation evidence. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 19 is the published owner-authenticated administration surface. Unpublished, undeployed Version 20 preserves the exact validated cumulative Shopping/M3–M6/Bookshelf source; it is not a runnable preview and saving it did not execute migrations. Gate 4 is complete within its bridge-observable verification boundary; this does not establish a D1 snapshot, R2-byte backup, restore readiness, or complete production backup. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 
@@ -23,7 +23,7 @@ Planner should read, in order:
 5. [Changelog](docs/CHANGELOG.md)
 6. [Roadmap](docs/ROADMAP.md)
 
-Temporary briefs and handoffs are evidence and transport stored only in the external local workspace; they are never GitHub content. Planner communicates through the Designer-owned Planner Inbox and should not need local transport artifacts.
+Temporary briefs and Engineer reports are stored only in the external local `briefs/` and `inbox/` transport; they are never GitHub content. `docs/PLANNER_INBOX.md` is the separate Quatre/Product Owner decision queue. Planner replies with ordinary decision text such as `Decision 1:A`; `!inbox` is Relena's command for processing Engineer transport and is not a Planner command.
 
 The concise current workstream view in [Current State](docs/CURRENT_STATE.md) shows what is active, blocked, able to continue, and approaching a production gate. Progress estimates are informational; briefs and validation evidence remain authoritative.
 
