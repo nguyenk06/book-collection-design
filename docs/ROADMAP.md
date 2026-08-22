@@ -42,7 +42,7 @@ Saving Version 17 does not mark Shopping released or active in production. Versi
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The next publication gate is documented for review in the [Controlled Shopping Publication Plan](SHOPPING_PUBLICATION_PLAN.md). The plan is non-executable and requires an explicit candidate-composition and publication decision.
+The next publication gate is framed for review in [Planner Inbox](PLANNER_INBOX.md). It is non-executable and requires an explicit candidate-composition decision followed by separate publication authority.
 
 The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–4 are complete within their bounded evidence layers. Unpublished, undeployed Version 20 preserves the exact validated cumulative candidate. Every later gate remains sequential, closed, and unauthorized.
 
