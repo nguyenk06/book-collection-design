@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Cumulative Version 20 publication execution authorized
+
+- Recorded Product Owner Decision `1:A`, authorizing exact candidate/deployment identity checks, full required revalidation, one publication attempt, bounded application-health verification, sanitized evidence, and clean stop for saved Version 20 only.
+- Preserved the exclusion of later local Phase A/D checkpoint `608553f` and kept migration, production mutation, live validation, broad smoke, correction, retry, republish, rollback, restore, and destructive recovery closed.
+- Ordered separate P1 local remediation and P2 publication briefs under a conditional continuous `!run`; estimated 6–10 and 8–13 points respectively, 14–23 combined, with a fresh ≥53% starting reading required to cover the high estimate and 30% floor.
+- Added a targeted command/footer documentation refresh to Sei's next brief so compaction does not drop the canonical response format.
+
 ## 2026-08-21 — Role-specific inbox and compaction-safe footer restored
 
 - Restored Planner `!inbox` for reading/reporting `docs/PLANNER_INBOX.md`; retained Designer `!inbox`/`!ci` for external Engineer transport and no Engineer `!inbox` command.

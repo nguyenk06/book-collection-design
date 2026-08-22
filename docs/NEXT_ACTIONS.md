@@ -6,7 +6,7 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–4 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until explicit `!run`; one local-only remediation brief is ready.
+- **Throttle:** `DRAIN` until explicit `!run`; P1 local remediation and P2 cumulative Version 20 publication are authorized as separate ordered briefs.
 - **Engineer state:** `PAUSED` at recoverable checkpoint `608553f` awaiting brief acceptance.
 - **Next owner:** `ENGINEER — SEI` after explicit `!run`; otherwise `EXTERNAL/WAIT`.
 - **Usage:** Last reported reading was 90% before the completed run; normal 30% reserve remains in force. Obtain a fresh reading before another batch.
@@ -58,7 +58,14 @@ No correction, retry, migration, local/production write, source change, Site sav
 
 Product Owner selected Decision `1:A`. The prepared Engineer brief authorizes private backup, disposable-clone validation, and one ordered application of the unchanged migrations `0004` → `0005` → `0006` to the exact active local D1 only after all identity, backup, preservation, integrity, and quiescence gates pass. It authorizes no source/configuration change, manual repair, repeat attempt after partial failure, Site operation, or production access.
 
-Product Owner separately selected planning Decision `2:A`, then chose the cumulative Version 20 candidate (`1:B`). A held publication brief now identifies the exact saved-source commit and 24-path delta manifest and excludes later Phase A/D checkpoint `608553f`. [Planner Inbox](PLANNER_INBOX.md) contains the independent execution decision. No Site or publication authority follows from brief preparation.
+Product Owner separately selected planning Decision `2:A`, chose the cumulative Version 20 candidate (`1:B`), and authorized its bounded publication execution (`Decision 1:A`). The P2 brief identifies the exact saved-source commit and 24-path delta manifest and excludes later Phase A/D checkpoint `608553f`. It permits full pre-publication revalidation, one publication attempt, bounded application-health verification, sanitized evidence, and clean stop only. It excludes migration, production data/schema mutation, live Product Owner validation, broad smoke testing, correction, retry, republish, rollback, restore, and destructive recovery.
+
+## Ordered queue and usage gate
+
+1. **P1 — Local D1 remediation:** 6–10 points. Keep the private backup/disposable-clone/conditional active-local write boundary independent from Site publication.
+2. **P2 — Exact cumulative Version 20 publication:** 8–13 points. Begin only after P1 reaches a clean completion or blocker boundary and fresh candidate/Site/session/source/package/migration/schema/data/validation/preservation/production checks pass.
+
+Combined envelope is **14–23 percentage points**, including intake, collision checks, execution, ordinary in-scope remediation, full validation, evidence/handoffs, transition checks, and clean stops. One continuous `!run` is safe only when the fresh starting reading is at least approximately **53% remaining** and no task consumes beyond its high estimate; otherwise complete or park P1, drain, and obtain a new decision/reading before P2. The 30% floor remains mandatory.
 
 ## Other workstreams
 
