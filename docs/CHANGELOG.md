@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Local remediation brief and publication plan prepared
+
+- Recorded Product Owner decisions `1:A; 2:A` and cleared Planner Inbox.
+- Prepared one bounded Engineer brief for a private local D1 backup, disposable-clone proof, and conditional one-time ordered application of unchanged migrations `0004` → `0005` → `0006` to the exact active local database.
+- Kept source/configuration changes, manual repair, repeat attempts after partial failure, Sites, production, and publication outside the remediation brief.
+- Added a separate controlled Shopping publication plan for review only. It requires an explicit candidate-composition decision and later publication authority before any Site operation.
+
 ## 2026-08-21 — Gate 4 evidence accepted; local schema drift confirmed
 
 - Accepted Sei's one-time read-only Version 19 bridge export and private offline comparison. Counts, Book/Collection identities, Book values, ownership, copies, and cover references matched Gate 2; the sole semantic difference was the authorized 600-cent CYOA target price.

@@ -6,9 +6,9 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–4 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; no eligible Engineer brief remains.
-- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f` after the completed read-only batch.
-- **Next owner:** `PLANNER / PRODUCT OWNER` — resolve the two independent decisions in Planner Inbox.
+- **Throttle:** `DRAIN` until explicit `!run`; one local-only remediation brief is ready.
+- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f` awaiting brief acceptance.
+- **Next owner:** `ENGINEER — SEI` after explicit `!run`; otherwise `EXTERNAL/WAIT`.
 - **Usage:** Last reported reading was 90% before the completed run; normal 30% reserve remains in force. Obtain a fresh reading before another batch.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
@@ -52,7 +52,13 @@ The completed post-reset brief ordered:
 1. **Primary — complete:** exactly one owner-authenticated read-only Version 19 bridge export, private offline Gate 2 preservation comparison, and sanitized supplemental evidence.
 2. **Independent fallback — complete:** read-only local diagnosis of why the active local D1 schema lacks `books.stable_id`.
 
-No correction, retry, migration, local/production write, source change, Site save/preview/deployment/publication, or speculative work was performed or is currently authorized.
+No correction, retry, migration, local/production write, source change, Site save/preview/deployment/publication, or speculative work occurred in the completed read-only batch. New authority is limited to the local remediation brief below.
+
+## Approved local remediation
+
+Product Owner selected Decision `1:A`. The prepared Engineer brief authorizes private backup, disposable-clone validation, and one ordered application of the unchanged migrations `0004` → `0005` → `0006` to the exact active local D1 only after all identity, backup, preservation, integrity, and quiescence gates pass. It authorizes no source/configuration change, manual repair, repeat attempt after partial failure, Site operation, or production access.
+
+Product Owner separately selected Decision `2:A`. [Controlled Shopping Publication Plan](SHOPPING_PUBLICATION_PLAN.md) is prepared for review only. Candidate composition remains a required decision before any publication brief because Version 20 is cumulative while ADR-0012's release boundary was Shopping-specific. No Site or publication authority follows.
 
 ## Other workstreams
 

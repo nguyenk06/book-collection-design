@@ -23,11 +23,11 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the post-reset read-only batch is complete and no Engineer brief is eligible.
-- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f` after completing both authorized read-only tasks.
-- **Engineer continuation:** No continuation is authorized. A later local remediation or production-release step requires its own decision and brief.
-- **Planner decisions:** Separate decisions are pending for local-only schema remediation and the next controlled Shopping release gate.
-- **Active owner:** `PLANNER / PRODUCT OWNER` — choose whether either separately gated next activity should be prepared.
+- **Throttle:** `DRAIN` until explicit `!run`; one local-only D1 remediation brief is eligible after its acceptance gates pass.
+- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f`, awaiting the local remediation brief.
+- **Engineer continuation:** After `!run` and `!brief`, perform private backup and disposable-clone proof first; apply unchanged `0004` → `0005` → `0006` to the exact active local D1 only if every gate passes. Stop before every other write.
+- **Planner decisions:** None pending. Product Owner selected `1:A; 2:A`: prepare bounded local remediation and prepare the Shopping publication plan for review only.
+- **Active owner:** `ENGINEER — SEI` after explicit `!run`; until then, `EXTERNAL/WAIT`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
@@ -75,4 +75,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The post-reset batch is complete. Gate 4 is closed within its bridge-observable scope, and the local `stable_id` failure is confirmed as a stale base-schema Miniflare D1 whose separate ordered migrations `0004`–`0006` were never applied. No local mutation occurred. The next work requires separate Product Owner choices: whether to authorize a bounded local-only remediation workflow, and whether to prepare the next controlled Shopping publication gate. No implementation, migration, Site operation, publication, or production action is currently authorized. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
+The next eligible work is a bounded local-only remediation brief: verify the exact active D1, create a private recoverable backup, prove unchanged migrations `0004` → `0005` → `0006` on a disposable clone, then apply them once to the active local D1 only if every preservation and integrity gate passes. No source/configuration, Site, or production change is included. The separately prepared [Controlled Shopping Publication Plan](SHOPPING_PUBLICATION_PLAN.md) is review-only and grants no publication authority. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
