@@ -58,7 +58,7 @@ No correction, retry, migration, local/production write, source change, Site sav
 
 Product Owner selected Decision `1:A`. The prepared Engineer brief authorizes private backup, disposable-clone validation, and one ordered application of the unchanged migrations `0004` → `0005` → `0006` to the exact active local D1 only after all identity, backup, preservation, integrity, and quiescence gates pass. It authorizes no source/configuration change, manual repair, repeat attempt after partial failure, Site operation, or production access.
 
-Product Owner separately selected Decision `2:A`, authorizing publication planning only. The controlled Shopping plan and candidate-composition choice are now in [Planner Inbox](PLANNER_INBOX.md), because Version 20 is cumulative while ADR-0012's release boundary was Shopping-specific. No Site or publication authority follows.
+Product Owner separately selected planning Decision `2:A`, then chose the cumulative Version 20 candidate (`1:B`). A held publication brief now identifies the exact saved-source commit and 24-path delta manifest and excludes later Phase A/D checkpoint `608553f`. [Planner Inbox](PLANNER_INBOX.md) contains the independent execution decision. No Site or publication authority follows from brief preparation.
 
 ## Other workstreams
 

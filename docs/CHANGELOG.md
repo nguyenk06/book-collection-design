@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-21 — Cumulative Version 20 publication brief prepared
+
+- Recorded Product Owner candidate choice `1:B`: exact cumulative Version 20 Shopping/M3–M6/Bookshelf, excluding later local Phase A/D checkpoint `608553f`.
+- Prepared a held publication brief against saved-source commit `6a2191b1b506d171d576cbb6a6b160964595c051` and the accepted 24-path delta manifest, with an 8–13 point execution envelope.
+- Added a separate Planner/Product Owner execution decision. Brief preparation grants no publication, deployment, migration, production mutation, live validation, correction, retry, rollback, or restore authority.
+
 ## 2026-08-21 — Local remediation brief and publication plan prepared
 
 - Recorded Product Owner decisions `1:A; 2:A` and cleared Planner Inbox.

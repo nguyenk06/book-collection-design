@@ -26,7 +26,7 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Throttle:** `DRAIN` until explicit `!run`; one local-only D1 remediation brief is eligible after its acceptance gates pass.
 - **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f`, awaiting the local remediation brief.
 - **Engineer continuation:** After `!run` and `!brief`, perform private backup and disposable-clone proof first; apply unchanged `0004` → `0005` → `0006` to the exact active local D1 only if every gate passes. Stop before every other write.
-- **Planner decisions:** One pending candidate decision for the controlled Shopping publication gate. Product Owner selected prior `1:A; 2:A`, authorizing the local-remediation brief and publication planning—not publication.
+- **Planner decisions:** One pending execution decision for the prepared controlled publication brief. Product Owner selected cumulative Version 20 (`1:B`) and excluded checkpoint `608553f`; publication remains unauthorized.
 - **Active owner:** `ENGINEER — SEI` after explicit `!run`; until then, `EXTERNAL/WAIT`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
@@ -75,4 +75,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The next eligible work is a bounded local-only remediation brief: verify the exact active D1, create a private recoverable backup, prove unchanged migrations `0004` → `0005` → `0006` on a disposable clone, then apply them once to the active local D1 only if every preservation and integrity gate passes. No source/configuration, Site, or production change is included. The separate controlled Shopping publication plan and candidate choice are pending in [Planner Inbox](PLANNER_INBOX.md) and grant no publication authority. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
+The next eligible work remains the bounded local-only remediation brief. A second held brief now specifies the exact cumulative Version 20 Shopping/M3–M6/Bookshelf publication candidate and excludes later Phase A/D checkpoint `608553f`; it is non-executable pending the separate decision in [Planner Inbox](PLANNER_INBOX.md). See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).

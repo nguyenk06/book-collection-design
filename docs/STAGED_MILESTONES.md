@@ -4,7 +4,7 @@
 
 **Execution budget:** Last reported reading was 90% before the completed post-reset run. The standing 30% protected reserve is restored; obtain a fresh reading before another batch.
 
-**Queue state:** Throttle `DRAIN`; the supplemental private-export and mutation-free local `stable_id` diagnosis tasks are complete. No Engineer brief is eligible; later Site and production gates remain closed.
+**Queue state:** Throttle `DRAIN`. One local D1 remediation brief is eligible only after explicit `!run`; the cumulative Version 20 publication brief is held pending separate execution authority. Later validation and production gates remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
