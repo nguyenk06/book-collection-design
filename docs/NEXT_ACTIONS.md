@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; bounded resume is authorized but awaits a fresh Product Owner usage reading.
-- **Engineer state:** `WAITING FOR USAGE` at a clean pre-save boundary.
-- **Next owner:** `PRODUCT OWNER` — supply a fresh usage reading; do not resume Sei before it is recorded.
-- **Usage:** Remaining work is estimated at 6/9/13 points. Minimum safe start is 43% to preserve the 30% floor at the high estimate.
+- **Throttle:** `DRAIN`; bounded resume is capacity-cleared and awaits explicit `!run`.
+- **Engineer state:** `READY FOR RESUME` at a clean pre-save boundary.
+- **Next owner:** `PRODUCT OWNER` — send the prepared self-contained `!run` to Sei.
+- **Usage:** Fresh reading 56%. Remaining 6/9/13-point estimate projects 50%/47%/43%, preserving the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 

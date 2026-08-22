@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-22 — Exact-source release resume capacity cleared
+
+- Recorded the Product Owner's fresh 56% usage reading against the accepted 6/9/13-point remaining envelope.
+- Projected 50%/47%/43% remaining and confirmed the high estimate preserves the standing 30% floor by 13 points.
+- Marked Sei ready for the explicit resume `!run`; no remote, source, Site, publication, production, or migration action occurred from recording the reading.
+
 ## 2026-08-22 — Bounded exact-source release resume authorized
 
 - Recorded Product Owner Decision `1:A`: when a supported credential path is available, read the configured Site source branch first and permit one normal push of exact `80e4c61` only if the branch definitively differs and all identities are unambiguous.

@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; bounded resume is authorized but must not start before a fresh Product Owner usage reading.
-- **Engineer state:** `WAITING FOR USAGE` at the clean pre-Site-operation boundary.
-- **Engineer continuation:** After a fresh reading of at least 43% and a supported credential path, read the configured remote head first; push exact `80e4c61` once only if definitively required; revalidate affected gates; then conditionally resume the previously authorized one-save/one-publication sequence.
+- **Throttle:** `DRAIN`; bounded resume is authorized and capacity-cleared, but awaits the Product Owner's explicit `!run` to Sei.
+- **Engineer state:** `READY FOR RESUME` at the clean pre-Site-operation boundary.
+- **Engineer continuation:** Under a fresh explicit `!run` and a supported credential path, read the configured remote head first; push exact `80e4c61` once only if definitively required; revalidate affected gates; then conditionally resume the previously authorized one-save/one-publication sequence.
 - **Planner decisions:** None pending. Product Owner selected Decision `1:A` on 2026-08-22.
-- **Active owner:** `PRODUCT OWNER` — supply a fresh usage reading.
-- **Blocking owner:** `PRODUCT OWNER / FRESH USAGE READING`; the supported credential path must also be available when execution begins.
+- **Active owner:** `PRODUCT OWNER` — send the prepared explicit `!run` to Sei.
+- **Blocking owner:** `PRODUCT OWNER / !run`; the supported credential path must also be available when execution begins.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The fresh acceptance reading was 60%, but no post-blocker reading is available and none is inferred. Remaining bounded work is estimated at **6/9/13 points** low/likely/high. A fresh reading of at least **43%** is the minimum safe start for the 13-point high estimate while preserving the standing 30% floor; margin above 43% is preferable.
+Product Owner supplied a fresh **56%** reading on 2026-08-22. Remaining bounded work is estimated at **6/9/13 points** low/likely/high, projecting approximately **50%/47%/43%** remaining. The high estimate preserves the standing 30% floor by 13 points.
 
 ## Current workstreams
 
