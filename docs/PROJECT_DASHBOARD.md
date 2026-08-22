@@ -7,7 +7,7 @@
 | KPI | Coarse estimate | Progress | What it measures |
 | --- | ---: | --- | --- |
 | Core build completion | **~90%** | `██████████████████░░` | Functionality implemented and validated locally |
-| Release readiness | **~60%** | `████████████░░░░░░░░` | Preservation, production verification, publication, and live validation |
+| Release readiness | **~70%** | `██████████████░░░░░░` | Preservation, production verification, publication, and live validation |
 | Broader roadmap completion | **~60%** | `████████████░░░░░░░░` | Current release plus later planned product capabilities |
 
 These estimates intentionally measure different outcomes. High local completion does not imply that the source is saved, published, production-verified, or live-validated.
@@ -17,7 +17,7 @@ These estimates intentionally measure different outcomes. High local completion 
 | Milestone | Coarse estimate | Status | Release boundary |
 | --- | ---: | --- | --- |
 | M1 — Validation-environment feasibility | **100%** | Complete locally | Investigation completed; no safe runnable unpublished preview was found |
-| M2 — Controlled Shopping release | **~55–60%** | Release-gated | Stopped at incomplete Gate 4; schema-complete/zero-FK signals confirmed, preservation evidence incomplete |
+| M2 — Controlled Shopping release | **~70%** | Release-gated | Gate 4 complete within bridge-observable scope; publication and live validation remain closed |
 | M3 — Canonical identifiers | **100% locally** | Complete locally | Preserved in unpublished Version 20; not independently released |
 | M4 — Bookshelf | **100% locally** | Complete locally | Preserved in unpublished Version 20; Product Owner checkpoint remains gated |
 | M5 — Export foundation | **100% locally** | Complete locally | Preserved in unpublished Version 20; not a complete production backup |
@@ -30,7 +30,7 @@ Every milestone percentage is a coarse planning estimate. “100% locally” mea
 ```mermaid
 flowchart LR
     A["Preserve cumulative candidate<br/>Complete · Version 20 unpublished"]
-    B["Verify Gate 4 preservation<br/>Partial · export evidence queued"]
+    B["Verify Gate 4 preservation<br/>Complete · bounded evidence accepted"]
     C["Publish Shopping<br/>Closed production gate"]
     D["Live validation<br/>Closed validation gate"]
 
@@ -40,12 +40,12 @@ flowchart LR
     classDef partial fill:#ffe8cc,stroke:#b35a00,color:#3a2100
     classDef closed fill:#f2f2f2,stroke:#666,color:#222
     class A complete
-    class B partial
+    class B complete
     class C,D closed
 ```
 
 - **Preserve:** Complete. Exact cumulative Shopping/M3–M6/Bookshelf candidate is saved as unpublished, undeployed Version 20 after full validation and identity checks.
-- **Verify Gate 4:** Existing read-only observation is partial; one private export comparison is queued under separate production-read authority.
+- **Verify Gate 4:** Complete within the bridge-observable boundary; this does not prove D1 snapshot, R2-byte backup, restore readiness, or complete backup.
 - **Publish Shopping:** Not authorized by preservation or verification.
 - **Live validation:** Requires an explicitly authorized live-only sequence because supported tooling exposes no runnable unpublished preview.
 

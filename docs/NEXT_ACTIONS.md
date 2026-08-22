@@ -4,14 +4,14 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
+- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–4 are complete within bounded evidence. The exact cumulative candidate is preserved as unpublished, undeployed Version 20. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until explicit `!run`; one post-reset brief is ready.
-- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f` awaiting post-reset intake.
-- **Next owner:** `EXTERNAL/WAIT` — Product Owner may send `!run`.
-- **Usage:** Fresh post-reset reading 90%; normal 30% reserve restored. Primary estimate remains 3–5 points; do not spend toward the reserve.
+- **Throttle:** `DRAIN`; no eligible Engineer brief remains.
+- **Engineer state:** `PAUSED` at recoverable checkpoint `608553f` after the completed read-only batch.
+- **Next owner:** `PLANNER / PRODUCT OWNER` — resolve the two independent decisions in Planner Inbox.
+- **Usage:** Last reported reading was 90% before the completed run; normal 30% reserve remains in force. Obtain a fresh reading before another batch.
 
-Gate 3 was invoked exactly once and cannot be retried. Gate 4 later independently confirmed schema-complete and zero-FK signals, then automatically stopped because the Version 19 verification surface could not expose target price, current counts, identities, ownership, copies, covers/references, or unchanged-value comparisons. No mismatch or production mutation was observed; those preservation criteria remain unverified.
+Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
 ## M6 locally complete
 
@@ -29,29 +29,30 @@ M6 is preserved with the cumulative source in unpublished, undeployed Version 20
 
 See [Completed Read-Only Execution Batch](NEXT_BATCH_PLAN.md).
 
-1. P1 Gate 4 reached its automatic-stop boundary after coarse schema/FK confirmation; preservation evidence remains incomplete.
+1. P1 Gate 4 initially reached its automatic-stop boundary after coarse schema/FK confirmation; the later separately authorized supplemental export completed the bridge-observable preservation comparison.
 2. P2 established that exact unpublished saved-version preservation is supported after commit/push/package, but no runnable unpublished preview exists.
 
 Preserve one cumulative M3–M6/Shopping/Bookshelf candidate. Sites cannot select independent dirty-worktree features, and splitting the shared schema/API/page/style/migration composition would require manual reconstruction and renewed collision validation.
 
-## Current approved queue
+## Completed post-reset queue
 
 - P1 is complete: exact 24-path manifest, full validation, identity-matched commit/push/package, and exactly one unpublished Version 20 save.
-- P2 remains one bounded private read-only Version 19 bridge export, offline Gate 2 comparison, sanitized evidence, and automatic stop for mismatch or ambiguity. It is parked until the August 21 reset and a fresh usage reading.
+- P2 is complete: exactly one bounded private read-only Version 19 bridge export matched Gate 2 within the documented boundary, and sanitized evidence was returned.
+- The independent local diagnosis is complete: active Miniflare D1 is stale at base migrations `0000`–`0003`; ordered `0004`–`0006` were not applied. No mutation occurred.
 - A saved version is not runnable and does not authorize a checkpoint. No unpublished preview exists in supported tooling.
 - Corrective write, Gate 3 retry, migration, deployment/publication, Shopping publication, live checklist, smoke test, restore, rollback, and destructive recovery remain closed.
 
-## Final pre-reset local batch
+## Completed local visual batch
 
 1. **Complete — Phase A responsive shell:** My Library identity/navigation, contextual row, mobile header/bottom navigation, Shopkeeper presentation, collection framing, footer, and owner/public boundaries are locally implemented and retained in final checkpoint `608553f`.
 2. **Complete locally — static Phase D theme foundation:** semantic color conversion is complete across root/Bookshelf, Shopkeeper, Administration, and catalog-download styles; desktop/mobile theme, focus, overflow, and sampled contrast checks passed.
 
-The reactivated brief orders:
+The completed post-reset brief ordered:
 
-1. **Primary:** exactly one owner-authenticated read-only Version 19 bridge export, private offline Gate 2 preservation comparison, sanitized supplemental evidence for incomplete Gate 4, and automatic stop for mismatch or ambiguity. The export does not automatically declare Gate 4 complete.
-2. **Independent fallback:** read-only local diagnosis of why the active local D1 schema lacks `books.stable_id`; inspect bindings, schema metadata, migration ledger/configuration, and expected source migration state without changing anything.
+1. **Primary — complete:** exactly one owner-authenticated read-only Version 19 bridge export, private offline Gate 2 preservation comparison, and sanitized supplemental evidence.
+2. **Independent fallback — complete:** read-only local diagnosis of why the active local D1 schema lacks `books.stable_id`.
 
-Wrong/ambiguous Site, Version, identity, or source context stops the whole brief. Owner-session unavailability or a task-specific production-read blocker parks Task 1 and permits Task 2. No correction, retry, migration, local/production write, source change, Site save/preview/deployment/publication, or speculative work is authorized.
+No correction, retry, migration, local/production write, source change, Site save/preview/deployment/publication, or speculative work was performed or is currently authorized.
 
 ## Other workstreams
 

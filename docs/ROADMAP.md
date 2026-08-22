@@ -8,8 +8,8 @@ The canonical future product-shell and presentation direction is [My Library Vis
 
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
-| 0 | Database integrity and Shopping persistence foundation | Partial; Gate 4 independently confirmed schema-complete and zero-FK signals | Complete preservation evidence through a separately approved read-only path | Medium | Target price/counts/identities/preservation remain unverified; export is not a D1 snapshot and excludes R2 bytes |
-| 1 | [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md) | Partial; local Shopping UI complete; future Shopkeeper responsive redesign documented; controlled live sequence stopped at incomplete Gate 4 | Preservation evidence, Shopping publication, live validation/smoke; later visual phases separately estimated | Medium-large | Gate 4 preservation evidence and every later production gate remain incomplete/unexecuted |
+| 0 | Database integrity and Shopping persistence foundation | Gate 4 complete within bridge-observable scope | Keep backup/restore guarantees separate; decide local schema remediation only if needed | Medium | Export is not a D1 snapshot, excludes R2 bytes, and does not prove restore readiness |
+| 1 | [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md) | Partial; local Shopping UI complete; Gate 4 complete; future Shopkeeper redesign documented | Separately approved Shopping publication and live validation/smoke | Medium-large | Every later production and validation gate remains closed |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial; canonical identifier foundation complete locally | Future candidate workflow and user-facing matching | Medium | Production unchanged; fuzzy candidate matching deferred |
 | 3 | [Bookshelf](BOOKSHELF.md) | Bounded first release complete locally and preserved in unpublished Version 20; user checkpoint pending | Safe validation environment and Product Owner outcome before activation | Medium | No runnable unpublished preview; checkpoint environment blocked |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first export foundation and owner-only downloadable UI preserved in unpublished Version 20 | Product Owner checkpoint and separately gated activation | Medium-large | No production catalog export or complete backup; import remains unsafe/immediate |
@@ -34,15 +34,15 @@ Continue the controlled live Shopping release sequence in ADR-0012 without a sep
 - Retain the isolated, locally validated Shopping release candidate.
 - Retain published Version 19 as the owner-authenticated administration path.
 - Preserve the private Gate 2 structured export and its documented limitations.
-- Treat the Gate 3 immediate activation response as distinct from Gate 4's later independent but incomplete verification.
+- Treat the Gate 3 immediate activation response as distinct from Gate 4's later independent verification and supplemental export comparison.
 - Keep Gate 4 verification and Shopping publication independently approved and evidenced.
 - Run the desktop/mobile checklist and post-publication smoke review on the live Site.
 
-Saving Version 17 does not mark Shopping released or active in production. Version 19 administration is published, Gate 3 reported activation success, and Gate 4 independently confirmed schema-complete/zero-FK signals but not preservation invariants; final Shopping publication remains a separate closed gate.
+Saving Version 17 does not mark Shopping released or active in production. Version 19 administration is published, Gate 3 reported activation success, and Gate 4 independently confirmed schema-complete/zero-FK status plus bridge-observable preservation invariants; final Shopping publication remains a separate closed gate.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–3 are complete within their bounded evidence layers. Unpublished, undeployed Version 20 preserves the exact validated cumulative candidate. Gate 4 remains incomplete for preservation evidence; its approved private-export brief is parked until a fresh post-reset usage reading clears the reserve gate. Every later gate remains sequential, closed, and unauthorized.
+The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–4 are complete within their bounded evidence layers. Unpublished, undeployed Version 20 preserves the exact validated cumulative candidate. Every later gate remains sequential, closed, and unauthorized.
 
 ## Deferred
 

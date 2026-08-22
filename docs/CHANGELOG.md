@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Gate 4 evidence accepted; local schema drift confirmed
+
+- Accepted Sei's one-time read-only Version 19 bridge export and private offline comparison. Counts, Book/Collection identities, Book values, ownership, copies, and cover references matched Gate 2; the sole semantic difference was the authorized 600-cent CYOA target price.
+- Classified Gate 4 complete within the bridge-export-observable boundary while explicitly retaining the limits: no D1 snapshot, R2 bytes, restore-readiness proof, or complete production-backup claim.
+- Accepted mutation-free diagnosis that the active local Miniflare D1 contains only base migrations `0000`–`0003`; separate ordered Shopping migrations `0004`–`0006` were never applied by the local runtime.
+- Left every corrective write, local remediation, Shopping publication, live validation, smoke, rollback, restore, and destructive operation closed. Drained the queue and added independent Planner decisions for local remediation and preparation of the next release gate.
+
 ## 2026-08-21 — Post-reset supplemental Gate 4 evidence brief prepared
 
 - Recorded the fresh 90% usage reading and restoration of the standing 30% reserve; the temporary pre-reset exception remains closed.

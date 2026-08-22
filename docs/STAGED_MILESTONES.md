@@ -2,11 +2,11 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Fresh post-reset reading 90%; the temporary pre-reset exception is closed and the standing 30% protected reserve is restored. Primary private-export evidence remains estimated at 3–5 points; fallback local schema diagnosis is bounded and read-only.
+**Execution budget:** Last reported reading was 90% before the completed post-reset run. The standing 30% protected reserve is restored; obtain a fresh reading before another batch.
 
-**Queue state:** Throttle `DRAIN` until explicit `!run`; the P2 supplemental private-export evidence task for incomplete Gate 4 is primary and mutation-free local `stable_id` drift diagnosis is the independent fallback. The export does not automatically complete Gate 4; later Site and production gates remain closed.
+**Queue state:** Throttle `DRAIN`; the supplemental private-export and mutation-free local `stable_id` diagnosis tasks are complete. No Engineer brief is eligible; later Site and production gates remain closed.
 
-**Usage state:** Version 20 preserves the exact validated cumulative source. Reassess P2 after reset; accept it only when the full envelope preserves the cushion and clean-stop capacity. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -82,7 +82,7 @@ Future parallel milestones should remain independently promotable. Completion in
 - **Stop/escalate:** Missing external-ID contract; Purchase portability ambiguity; pressure to omit required data silently; mutation/restore requirement; sensitive leakage; integrity mismatch; schema migration; or production access.
 - **Completion/handoff:** Future local reports separate format implementation, validation, artifact handling, Site state, and production state. Import remains a later decision and brief.
 
-M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 published only Version 19 administration, and Gate 2 verified the expected pre-upgrade baseline, zero foreign-key issues, and a privately retained structured export without a production write. Gate 3 was invoked exactly once. Gate 4 independently confirmed schema-complete and zero-FK signals, then stopped incomplete because the authorized surface could not expose preservation invariants. Every later gate remains closed. M4's missing formal acceptance transition was factually closed as unverifiable rather than inferred or recreated.
+M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 published only Version 19 administration, and Gate 2 verified the expected pre-upgrade baseline, zero foreign-key issues, and a privately retained structured export without a production write. Gate 3 was invoked exactly once. Gate 4 independently confirmed schema-complete and zero-FK status; its separately authorized supplemental export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references, with only the authorized 600-cent CYOA target-price change. Gate 4 is complete within that bridge-observable boundary. Every later gate remains closed. M4's missing formal acceptance transition was factually closed as unverifiable rather than inferred or recreated.
 
 ## Milestone 6 — Local downloadable catalog export UI
 

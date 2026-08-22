@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-20
+**Last reviewed:** 2026-08-21
 
 For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
 
@@ -13,9 +13,9 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Published Site:** Version 19, the owner-authenticated administration surface.
 - **Latest saved Site:** Version 20, an unpublished and undeployed preservation-only save of the exact validated cumulative Shopping/M3–M6/Bookshelf candidate.
 - **Other retained Site versions:** Version 18 migration bridge; unpublished Version 17 Shopping persistence/API foundation.
-- **Production gate:** Gate 4 independently observed `Shopping schema complete` and zero foreign-key issues through the read-only Version 19 surface, agreeing with Gate 3's immediate response. Gate 4 automatically stopped incomplete because target-price, count, identity, and preservation evidence was unavailable through that path.
-- **Closed operations:** Additional production export/evidence, corrective writes, Shopping publication, live validation, smoke testing, rollback, restore, and destructive recovery all require later authority. Gate 3 cannot be retried.
-- **Local milestones:** M1, M3, M4, and M5 are complete. M2 Gates 0–3 are complete within their distinct evidence layers. M4's missing formal transport acceptance was closed as unverifiable and was not reconstructed.
+- **Production gate:** Gate 4 is complete within its defined bridge-observable verification boundary. The Version 19 surface independently reported `Shopping schema complete` and zero foreign-key issues; one later authorized read-only export matched the private Gate 2 baseline for counts, identities, Book values, ownership, copies, and cover references. The sole semantic difference was the authorized CYOA target price of 600 cents.
+- **Closed operations:** Corrective writes, Shopping publication, live validation, smoke testing, rollback, restore, and destructive recovery all require later authority. Gate 3 cannot be retried. Gate 4 does not establish a D1 snapshot, R2-byte backup, restore readiness, or a complete production backup.
+- **Local milestones:** M1, M3, M4, and M5 are complete. M2 Gates 0–4 are complete within their distinct evidence layers. M4's missing formal transport acceptance was closed as unverifiable and was not reconstructed.
 - **Completed work:** Engineer — Sei validated the exact 24-path cumulative candidate (160/160 full serial tests), identity-matched its commit, remote branch, package, and saved source, then saved it exactly once as Version 20. No deployment, publication, preview, production access, or migration execution occurred.
 
 ## Queue and ownership
@@ -23,24 +23,24 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN` until explicit `!run`; the post-reset supplemental Gate 4 preservation-evidence export plus read-only local schema diagnosis brief is ready.
-- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f`, awaiting the post-reset brief.
-- **Engineer continuation:** After `!run`, attempt the one bounded owner-session Version 19 private export first. If it parks before or at its automatic-stop boundary, proceed only to independent mutation-free diagnosis of local `books.stable_id` drift when context and usage remain safe.
-- **Planner decisions:** None pending. Product Owner selected preservation-only save and bounded private export evidence (`1: A; 2: A`).
-- **Active owner:** `EXTERNAL/WAIT` — Product Owner may send `!run` for the reactivated post-reset brief.
+- **Throttle:** `DRAIN`; the post-reset read-only batch is complete and no Engineer brief is eligible.
+- **Engineer state:** `PAUSED` at clean recoverable checkpoint `608553f` after completing both authorized read-only tasks.
+- **Engineer continuation:** No continuation is authorized. A later local remediation or production-release step requires its own decision and brief.
+- **Planner decisions:** Separate decisions are pending for local-only schema remediation and the next controlled Shopping release gate.
+- **Active owner:** `PLANNER / PRODUCT OWNER` — choose whether either separately gated next activity should be prepared.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The post-reset Product Owner reading is approximately 90% remaining. The temporary pre-reset exception is closed and the standing 30% protected reserve is fully restored. The primary read-only export remains estimated at 3–5 points; the fallback is bounded diagnosis only. Preserve capacity for validation, evidence, remediation planning, and a clean stop rather than consuming toward the reserve.
+The last Product Owner reading was approximately 90% remaining before the completed read-only run. No newer reading is recorded. The temporary pre-reset exception is closed and the standing 30% protected reserve is fully restored. Obtain a fresh reading before estimating or activating another batch.
 
 ## Current workstreams
 
 | Workstream | State | Verified boundary | Next condition |
 | --- | --- | --- | --- |
 | Version 19 administration | Complete/published | Gate 2 status/export and Gate 3 invocation used the owner-authenticated same-origin surface | No further action currently authorized |
-| Production schema activation | Gate 4 incomplete | Read-only Gate 4 independently confirmed schema-complete and zero-FK signals; preservation invariants remain unverified | Supplemental private-export evidence brief ready; owner session/Site identity must pass acceptance, and the export does not automatically complete Gate 4 |
-| Shopping UI | Complete locally; saved in unpublished Version 20 | Search/scan/status, Purchase history/capture, quality, and accessibility validation passed | Gate 4 and later separately gated release steps |
+| Production schema activation | Gate 4 complete within bridge-observable scope | Schema-complete/zero-FK status plus one private export matched Gate 2 counts, identities, values, ownership, copies, and cover references; CYOA target is the authorized 600 cents | Keep backup/restore claims and every later release gate separate |
+| Shopping UI | Complete locally; saved in unpublished Version 20 | Search/scan/status, Purchase history/capture, quality, and accessibility validation passed | Shopping publication and later separately gated validation steps |
 | M3 canonical identifiers | Complete locally | Focused/full tests, lint, and build passed | Future promotion remains separately gated |
 | M4 bounded Bookshelf | Complete locally; saved in unpublished Version 20 | Focused/full tests, build, and scoped lint passed | Product Owner checkpoint before activation; transport acceptance remains unverifiable |
 | M5 catalog export foundation | Complete locally; saved in unpublished Version 20 | Format v1, stable Book IDs, referential validation, deterministic output, no-write proof, and recovered editable source verified | Consumed by the completed local M6 UI |
@@ -51,7 +51,7 @@ The post-reset Product Owner reading is approximately 90% remaining. The tempora
 ## Data and export status
 
 - Gate 2 retained a private, validated structured bridge export covering 215 Books, 4 Collections, 0 Businesses, 0 Purchases, and 17 cover references, with unique identifiers and no broken references. It is not a D1 snapshot and excludes R2 bytes.
-- Gate 4 independently agrees with Gate 3 on schema-complete and zero-FK signals, but current target price, counts, identities, and preservation invariants remain unverified.
+- Gate 4 independently agrees with Gate 3 on schema-complete and zero-FK signals. Its supplemental private export matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the authorized CYOA target price is now 600 cents.
 - M5 provides a validated catalog format-v1 export foundation with persisted immutable Book stable IDs. M6 adds the validated owner-only downloadable UI. Both are preserved in unpublished Version 20 but have not been deployed, published, run, or validated against production.
 - No complete production backup exists. Direct D1 export and Time Travel controls remain unavailable unless Sites exposes a supported mechanism.
 - Existing mutable import remains immediate and insufficiently safe; no restore or round-trip import workflow is authorized.
@@ -60,7 +60,7 @@ The post-reset Product Owner reading is approximately 90% remaining. The tempora
 
 | Area | Current state |
 | --- | --- |
-| Database | Gate 4 independently confirms schema-complete and zero-FK signals but is incomplete for target-price/count/identity/preservation evidence |
+| Database | Gate 4 complete within bridge-observable verification scope; complete backup and restore readiness remain unproven |
 | Shopping | Bounded UI complete and validated locally; preserved in unpublished Version 20 |
 | Scanner | Existing scanning works; M3 canonical identifier foundation is complete locally |
 | Bookshelf | Bounded first release complete locally; preserved in unpublished Version 20 and checkpoint-gated |
@@ -75,4 +75,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-The next batch is one post-reset brief: primary one-time owner-authenticated read-only Version 19 export and offline Gate 2 comparison as supplemental preservation evidence within the still-incomplete Gate 4; fallback mutation-free diagnosis of local D1 `books.stable_id` drift. The action is not a Gate 3 retry, activation, corrective verification write, or later gate, and successful artifact handling does not itself complete Gate 4. Identity, correct Site, owner session, live Version 19, saved Version 20 separation, baseline, and no-write boundaries must be revalidated at acceptance. No second export, correction, migration, local schema mutation, source change, Site save/preview/deployment/publication, restore, rollback, or later production gate is authorized. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).
+The post-reset batch is complete. Gate 4 is closed within its bridge-observable scope, and the local `stable_id` failure is confirmed as a stale base-schema Miniflare D1 whose separate ordered migrations `0004`–`0006` were never applied. No local mutation occurred. The next work requires separate Product Owner choices: whether to authorize a bounded local-only remediation workflow, and whether to prepare the next controlled Shopping publication gate. No implementation, migration, Site operation, publication, or production action is currently authorized. See [Next Actions](NEXT_ACTIONS.md), [Next Batch Plan](NEXT_BATCH_PLAN.md), and [Database](DATABASE.md).

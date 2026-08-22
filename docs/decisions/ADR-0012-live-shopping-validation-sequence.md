@@ -28,3 +28,7 @@ Do not create a separate validation Site. Validate Shopping only after a control
 - Additive schema activation and code rollback remain distinct. Prefer forward repair; destructive restore remains separately authorized.
 - This decision defines the sequence. It is not evidence that a candidate was saved, the administration surface was published, an export occurred, schema changed, Shopping was published, or validation/smoke testing passed.
 - The need to isolate Shopping from cumulative M3–M5 work is a release-packaging correction, not a preferred future workflow. Future parallel work should remain independently promotable and must not become interconnected merely because it shares a working copy.
+
+## Implementation status
+
+Gates 0–4 are complete within their documented evidence boundaries. Gate 3 was invoked exactly once. Gate 4 independently confirmed schema-complete and zero-foreign-key status, and a separately authorized read-only bridge export matched the Gate 2 baseline for counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized CYOA target price of 600 cents. This status does not convert the export into a D1 snapshot, include R2 bytes, prove restore readiness, or establish a complete production backup. Gate 5 Shopping publication and every later validation, smoke, correction, rollback, or recovery step remain closed pending separate authority.
