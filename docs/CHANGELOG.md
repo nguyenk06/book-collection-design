@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-22 — Release blocked on repeated configured-branch read timeout
+
+- Accepted Sei's bounded resume blocker: exact local `80e4c61`, prior validation, package, ancestry, collision, and 56% capacity gates remained intact.
+- The mandatory configured source-branch read timed out without returning a SHA. Sei terminated lingering Git/credential-helper processes and correctly made no push, Site save, publication, deployment, or alternate credential attempt.
+- Closed the consumed resume addendum, retained the parent release as parked, and classified the supported noninteractive credential path as the blocking condition.
+- Opened one Product Owner disposition: establish and evidence the supported path without release action, or hold Version 20. No further retry is authorized.
+
 ## 2026-08-22 — Exact-source release resume capacity cleared
 
 - Recorded the Product Owner's fresh 56% usage reading against the accepted 6/9/13-point remaining envelope.
