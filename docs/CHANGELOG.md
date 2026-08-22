@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-21 — Role-specific inbox and compaction-safe footer restored
+
+- Restored Planner `!inbox` for reading/reporting `docs/PLANNER_INBOX.md`; retained Designer `!inbox`/`!ci` for external Engineer transport and no Engineer `!inbox` command.
+- Required every meaningful response to lifecycle commands to end with exactly one canonical footer, including after chat compaction without reinitialization, and placed the rule beside each role's command definitions.
+- Required generated copy/paste prompts to name the recipient first, instruct whole-block paste, remain self-contained, and require no Product Owner rewriting.
+
 ## 2026-08-21 — Planner and Engineer inbox terminology clarified
 
 - Clarified that repository `docs/PLANNER_INBOX.md` is Quatre/Product Owner's decision queue, while external local `inbox/` is Engineer-to-Designer transport processed by Relena's `!inbox` command.

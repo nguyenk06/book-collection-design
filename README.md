@@ -23,7 +23,7 @@ Planner should read, in order:
 5. [Changelog](docs/CHANGELOG.md)
 6. [Roadmap](docs/ROADMAP.md)
 
-Temporary briefs and Engineer reports are stored only in the external local `briefs/` and `inbox/` transport; they are never GitHub content. `docs/PLANNER_INBOX.md` is the separate Quatre/Product Owner decision queue. Planner replies with ordinary decision text such as `Decision 1:A`; `!inbox` is Relena's command for processing Engineer transport and is not a Planner command.
+Temporary briefs and Engineer reports are stored only in the external local `briefs/` and `inbox/` transport; they are never GitHub content. `docs/PLANNER_INBOX.md` is the separate Quatre/Product Owner decision queue. Role identity determines the target of `!inbox`: Quatre reads and reports Planner Inbox, Relena processes external Engineer reports, and Sei does not use the command.
 
 The concise current workstream view in [Current State](docs/CURRENT_STATE.md) shows what is active, blocked, able to continue, and approaching a production gate. Progress estimates are informational; briefs and validation evidence remain authoritative.
 

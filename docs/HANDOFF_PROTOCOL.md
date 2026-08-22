@@ -143,10 +143,11 @@ The Designer reviews the handoff under [`DOCUMENTATION_RULES.md`](DOCUMENTATION_
 
 Use explicit `!` commands for defined lifecycle actions and ordinary sentences for requests that are not workflow commands. For example:
 
-1. Designer: `!inbox` to process Engineer evidence in the external local `inbox/`, or prepare an implementation/estimation brief as a normal request. This is distinct from repository `docs/PLANNER_INBOX.md`, which Quatre reads and answers with ordinary decision text.
-2. Site Engineer: `!brief` to accept the next eligible brief, then `!drain` when the current safe unit should finish without new intake.
-3. Any role: `!status` for a read-only state report or `!init` for a read-only state refresh.
-4. Designer: `!prompt-engineer`, `!prompt-designer`, or `!prompt-planner` to produce a copy/paste-ready startup prompt.
+1. Planner: `!inbox` to read and report repository `docs/PLANNER_INBOX.md`.
+2. Designer: `!inbox` to process Engineer evidence in the external local `inbox/`, or prepare an implementation/estimation brief as a normal request.
+3. Site Engineer: `!brief` to accept the next eligible brief, then `!drain` when the current safe unit should finish without new intake. Engineer does not use `!inbox`.
+4. Any role: `!status` for a read-only state report or `!init` for a read-only state refresh.
+5. Designer: `!prompt-engineer`, `!prompt-designer`, or `!prompt-planner` to produce a copy/paste-ready startup prompt.
 
 Never omit `!` when explicit workflow behavior is intended. Plain words and abbreviations remain conversation.
 
@@ -158,7 +159,8 @@ The `!` prefix identifies explicit workflow intent. Commands are case-insensitiv
 | --- | --- | --- |
 | `!init` | All | Read-only role initialization or state refresh |
 | `!status` | All | Read-only current-state report; do not process artifacts or change authority |
-| `!inbox` | Designer | Process the Engineer inbox lifecycle |
+| `!inbox` | Planner | Read and report `docs/PLANNER_INBOX.md`; do not process local Engineer transport |
+| `!inbox` | Designer | Process the external local Engineer `inbox/` lifecycle |
 | `!brief` | Site Engineer | Check and process the next eligible brief |
 | `!prompt-engineer` | Designer | Output the complete Engineer startup prompt |
 | `!prompt-designer` | Designer | Output the complete Designer startup prompt |
@@ -167,7 +169,9 @@ The `!` prefix identifies explicit workflow intent. Commands are case-insensitiv
 | `!drain` | Authorized operator | Finish the current safe unit and accept no further work |
 | `!stop` | Authorized operator | Stop at the nearest safe checkpoint |
 
-Optional compact aliases are `!pe`, `!pd`, `!pp`, `!ci`, and `!cb`, mapping respectively to the five long-form prompt/inbox/brief commands above. Plain `PE`, `PD`, `PP`, `CI`, `CB`, `INIT`, `RUN`, `DRAIN`, or `STOP` tokens are not commands.
+Optional compact aliases are `!pe`, `!pd`, `!pp`, `!ci`, and `!cb`. `!ci` is Designer-only and maps to Designer `!inbox`; `!cb` is Engineer-only and maps to `!brief`. Plain `PE`, `PD`, `PP`, `CI`, `CB`, `INIT`, `RUN`, `DRAIN`, or `STOP` tokens are not commands.
+
+Role identity dispatches `!inbox`: Quatre addresses repository `docs/PLANNER_INBOX.md`; Relena addresses external local Engineer `inbox/`; Sei has no `!inbox` command. The command never crosses those boundaries or gains the other role's authority.
 
 ### All roles: `!init` and `!status`
 
@@ -191,7 +195,7 @@ For a new Designer thread, use: **“Read `templates/DESIGNER_STARTUP.md` and ru
 
 `!prompt-planner` (alias `!pp`) outputs the complete [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md) prompt for a replacement Planner.
 
-Prompt commands are read-only. Do not embed transient milestone state, process transport, expose sensitive/local details, depend on prior role memory, or alter project state.
+Prompt commands are read-only. Every copy-and-paste handoff prompt must name its recipient in the first line, state that the entire block should be pasted into that recipient's chat, be self-contained, and require no pronoun or context rewriting by the Product Owner. Do not embed transient milestone state, process transport, expose sensitive/local details, depend on prior role memory, or alter project state.
 
 ### Designer: `!inbox`
 
@@ -254,7 +258,7 @@ When Queue Mode is enabled with `!run`, completion of the current milestone trig
 
 `!drain`, `!stop`, an explicit gate, unsafe collision, missing authority, or no eligible work overrides automatic continuation. These checks do not auto-accept a brief or expand its scope.
 
-Planner uses `!init` and `!status`. Planner does not invoke `!inbox`; Quatre reads `docs/PLANNER_INBOX.md` and returns ordinary decision text such as `Decision 1:A`. Unprefixed conversational words such as “inbox,” “status,” and “next” remain normal conversation. Planner reads permanent documentation in this order:
+Planner uses `!init`, `!status`, and role-specific `!inbox`. Quatre's `!inbox` reads and reports `docs/PLANNER_INBOX.md`; it does not process external local Engineer reports. Planner returns decisions as ordinary text such as `Decision 1:A`. Unprefixed conversational words such as “inbox,” “status,” and “next” remain normal conversation. Planner reads permanent documentation in this order:
 
 1. [`PLANNER_INBOX.md`](PLANNER_INBOX.md)
 2. [`CURRENT_STATE.md`](CURRENT_STATE.md)
@@ -312,7 +316,7 @@ ACTION:
 
 `TL;DR` and `ACTION` are always present in either form. Use exactly one ownership form: single-owner `NEXT OWNER`, or parallel `ACTIVE OWNERS` plus `BLOCKING OWNER`. Do not mix or omit these labels in meaningful workflow responses.
 
-Use it for `!inbox`, `!brief`, and `!init` reports; brief acceptance; implementation completion; Designer handoff processing; Planner decisions; blocked states; and publication/deployment reports. Short or trivial acknowledgements do not require it.
+Every meaningful response to `!init`, `!status`, role-applicable `!inbox`, `!brief`, `!run`, `!drain`, and `!stop` must use exactly one footer form. The requirement survives chat compaction or summarization and remains mandatory without a full reinitialization. It also applies to brief acceptance, implementation completion, Designer handoff processing, Planner decisions, blocked states, and publication/deployment reports. Short or trivial non-workflow acknowledgements do not require it.
 
 - Keep `TL;DR` concise and mobile-readable.
 - `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.
