@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-21 — Failed-item source/collision assessment prepared
+
+- Recorded Product Owner Decision `1:A` authorizing preparation of a bounded read-only assessment comparing exact published Version 20 with checkpoint `608553f`.
+- Scoped mobile Shopping discoverability, Bookshelf multi-row/alternate-horizontal composition, missing-position data/selection, selected-book cover availability, shared-file collisions, safest-baseline advice, and low/likely/high implementation estimates.
+- Kept validation items 2, 3, 5, and 8 as follow-up/hold and excluded source/data/schema/Site changes, baseline selection, implementation, correction, retry/republish, rollback, restore, and destructive recovery.
+- Estimated assessment intake, inspection, reporting, and clean stop at 3/5/7 usage points.
+
 ## 2026-08-21 — Interim Version 20 validation findings routed
 
 - Recorded Product Owner item 1 pass; items 2, 3, 5, and 8 follow-up/hold; and items 4, 6, and 7 failures without inferring a final checkpoint conclusion.

@@ -23,11 +23,11 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the ordered P1→P2 batch is complete and no Engineer brief remains.
+- **Throttle:** `DRAIN` until explicit `!run`; one read-only Version 20/`608553f` source-collision assessment brief is ready.
 - **Engineer state:** `PAUSED` at a clean post-publication boundary.
 - **Engineer continuation:** None authorized. Do not enter live validation, broad smoke, correction, retry/republish, rollback, or restore.
-- **Planner decisions:** One pending decision on a read-only source/collision assessment for confirmed validation failures while held checks wait.
-- **Active owner:** `PLANNER — QUATRE` for the interim assessment decision; `PRODUCT OWNER / EXTERNAL` retains the held validation checks and final conclusion.
+- **Planner decisions:** None pending. Product Owner authorized preparation of the bounded read-only failed-item assessment (`Decision 1:A`).
+- **Active owner:** `ENGINEER — SEI` after explicit `!run`; Product Owner separately retains held validation checks and final conclusion.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
@@ -76,4 +76,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 local D1 remediation and P2 controlled publication are complete. Product Owner validation is partially complete: item 1 passed; items 4, 6, and 7 failed for Shopping discoverability and Bookshelf presentation/detail behavior; items 2, 3, 5, and 8 remain follow-up/on hold. No final checkpoint conclusion exists. [Planner Inbox](PLANNER_INBOX.md) asks whether Sei may perform a read-only comparison of exact Version 20 and checkpoint `608553f` before any remediation baseline or implementation is chosen.
+P1 local D1 remediation and P2 controlled publication are complete. Product Owner validation is partially complete: item 1 passed; items 4, 6, and 7 failed; items 2, 3, 5, and 8 remain follow-up/on hold. No final checkpoint conclusion exists. One non-implementation assessment brief is ready to compare exact Version 20 and checkpoint `608553f`, establish source/data/collision evidence, recommend—but not select—a baseline, and return implementation estimates.
