@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; a read-only credential-evidence brief is prepared and awaits explicit `!run`.
-- **Engineer state:** `AVAILABLE FOR CREDENTIAL EVIDENCE` at a clean pre-save boundary.
+- **Throttle:** `DRAIN`; the read-only credential-evidence brief is capacity-cleared and awaits explicit `!run`.
+- **Engineer state:** `READY FOR CREDENTIAL EVIDENCE` at a clean pre-save boundary.
 - **Next owner:** `PRODUCT OWNER` — send the prepared evidence-only `!run` to Sei.
-- **Usage:** Evidence-only estimate is 1/2/3 points. Sei must obtain a fresh reading and start only at 33% or higher, preserving the 30% floor.
+- **Usage:** Fresh reading 93%; the 1/2/3-point evidence estimate projects 92%/91%/90%, preserving the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 

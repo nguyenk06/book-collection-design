@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-25 — Credential evidence capacity cleared
+
+- Recorded the Product Owner's fresh 93% usage reading for the separate 1/2/3-point read-only credential-evidence brief.
+- Projected 92%/91%/90% remaining and marked Sei ready for explicit `!run` of that brief only.
+- Kept the parent `80e4c61` release parked; no remote read, push, Site save, publication, deployment, or production operation occurred from recording capacity.
+
 ## 2026-08-25 — Credential path reported ready; evidence brief prepared
 
 - Recorded Product Owner confirmation that the supported noninteractive credential path is ready in Sei's existing source context.

@@ -23,8 +23,8 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; Product Owner reports the supported credential path ready, and a bounded read-only evidence brief is prepared but awaits explicit `!run`.
-- **Engineer state:** `AVAILABLE FOR CREDENTIAL EVIDENCE` at the clean pre-Site-operation boundary.
+- **Throttle:** `DRAIN`; the credential-evidence brief is authorized and capacity-cleared but awaits explicit `!run`.
+- **Engineer state:** `READY FOR CREDENTIAL EVIDENCE` at the clean pre-Site-operation boundary.
 - **Engineer continuation:** Under explicit `!run`, accept the read-only evidence brief, perform one bounded configured-branch head read, report the definitive SHA or stop on timeout/ambiguity, and perform no push or Site operation.
 - **Planner decisions:** None pending. Product Owner selected credential-path Decision `1:A` on 2026-08-25.
 - **Active owner:** `PRODUCT OWNER` — issue the prepared read-only `!run` to Sei.
@@ -33,7 +33,7 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 ## Usage reserve
 
-Product Owner supplied a fresh **56%** reading before the blocked resume. The branch-read operation stopped at its automatic timeout before material release work, but no post-blocker reading is available and none is inferred. Any future sequence requires a new estimate and fresh reading; the standing 30% floor remains unchanged.
+Product Owner supplied a fresh **93%** reading on 2026-08-25 for the credential-evidence step. Its **1/2/3-point** estimate projects approximately **92%/91%/90%** remaining and preserves the standing 30% floor. This reading authorizes only the evidence brief, not the parked release.
 
 ## Current workstreams
 
