@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-25 — Sei II replacement Sites context selected
+
+- Recorded the Product Owner's selection of a fresh Sites editing chat as the materially different execution/network path after established Sei could not reach the configured remote endpoint.
+- Assigned replacement identity `ENGINEER — SEI II` and required a hard initialization/source-recovery gate because unpublished source does not transfer automatically between chats.
+- Prepared a fresh 8/12/18-point replacement brief requiring exact `80e4c61`, its 83-path manifest, retained archive SHA-256, Site/owner/version identity, collision state, and fresh usage to be proven before any operation.
+- Conditionally retained the unused one-read, at-most-one-normal-push, one-save, one-publication authority with all prior automatic stops and exclusions. No action occurred from brief preparation.
+
 ## 2026-08-25 — Credential evidence closed; network path blocked
 
 - Accepted Sei's credential-evidence result: supported short-lived credential issuance succeeded, but one authorized configured `main` branch-head query could not reach the remote endpoint and returned no SHA.

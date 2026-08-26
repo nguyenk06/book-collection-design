@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-22
+**Last reviewed:** 2026-08-25
 
 For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
 
@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; no further identical branch-head query is eligible.
-- **Engineer state:** `BLOCKED` at the supported execution/network path after two bounded reads returned no SHA.
-- **Engineer continuation:** None. Preserve exact `80e4c61` and the parent release; do not repeat the query, push, save, or publish until a materially different supported execution/network path is selected and evidenced.
-- **Planner decisions:** One pending execution/network-path disposition in `PLANNER_INBOX.md`.
-- **Active owner:** `PRODUCT OWNER` — establish a materially different supported path or hold the release.
-- **Blocking owner:** `SUPPORTED REMOTE ENDPOINT EXECUTION/NETWORK PATH`; credential issuance itself succeeded.
+- **Throttle:** `DRAIN`; a materially different replacement Sites editing context is selected, but release execution awaits Sei II initialization, source-recovery proof, fresh usage, and explicit `!run`.
+- **Engineer state:** `SEI BLOCKED / SEI II NOT INITIALIZED`.
+- **Engineer continuation:** Established Sei remains stopped. New Engineer — Sei II must initialize in the fresh Sites editing context, prove exact `80e4c61` source/package availability without reconstruction, and accept only the replacement brief. If every gate passes, the brief permits one remote read, at most one normal push if definitively needed, one Site save, one publication attempt, bounded health evidence, and clean stop.
+- **Planner decisions:** None pending. Product Owner selected the materially different replacement-context path on 2026-08-25.
+- **Active owner:** `PRODUCT OWNER` — create the fresh Sites editing chat and run the replacement initialization prompt.
+- **Blocking owner:** `ENGINEER — SEI II` source/context verification after the new chat exists.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied a fresh **93%** reading before the credential-evidence step. No post-blocker reading is available and none is inferred. Any future materially different evidence or release sequence requires a fresh estimate and reading while preserving the standing 30% floor.
+The last recorded reading was **93%** before the now-complete blocked credential evidence. No current reading is inferred for the replacement chat. The complete Sei II replacement/source-recovery/release envelope is **8/12/18 points** low/likely/high; minimum safe start is **48%**, and a fresh reading is mandatory.
 
 ## Current workstreams
 
@@ -78,4 +78,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` remains locally validated and packaged. Supported short-lived credential issuance succeeded, proving the credential setup boundary, but the authorized configured `main` branch read and a later direct owner-authorized second read could not reach the remote endpoint and returned no SHA. Both stopped cleanly with 0 fetch/pull/push/ref updates and 0 Site save/publication/deployment attempts. The blocker is now the execution/network path, not credentials, source, or tests. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
+Checkpoint `80e4c61` remains preserved in the established Sei evidence with an 83-path manifest and retained archive SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`. Supported credential issuance succeeded, but two reads from that execution path could not reach the endpoint. Product Owner selected a fresh Sites editing chat as the materially different path. Because replacement chats do not inherit unpublished source automatically, Sei II must prove the complete exact source and package exist before any remote or Site operation. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
