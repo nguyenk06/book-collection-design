@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-25 — Manifest derivation and transfer authorized
+
+- Accepted original Sei's safe stop at 73%: retained archive SHA-256 passed, the separate manifest artifact was absent, recovery storage remained empty, and no copy or mutation occurred.
+- Identified the processed 2026-08-22 acceptance report as independent retained Engineer evidence containing the exact observed 83-path candidate list.
+- Recorded Product Owner authority for a 3/5/7-point post-reassessment slice that derives archive source paths read-only and requires exact comparison with that evidence before creating/copying a manifest.
+- Preserved automatic stop for any archive-layout ambiguity or path mismatch and kept extraction/materialization, reconstruction, Git/Site operations, production work, and release continuation excluded.
+
 ## 2026-08-25 — Source-transfer capacity cleared
 
 - Recorded fresh Product Owner displays of 76% five-hour capacity and 79% weekly capacity; the five-hour reading governs the active slice and weekly remains observational.

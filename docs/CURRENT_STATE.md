@@ -23,9 +23,9 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the Sei II release is parked, and an original-Sei preservation-only source-transfer brief is prepared but awaits fresh usage and explicit `!run`.
-- **Engineer state:** `SEI — AVAILABLE FOR SOURCE TRANSFER / SEI II — WAITING FOR SOURCE`.
-- **Engineer continuation:** Original Engineer — Sei may accept only the preservation-transfer brief, prove the retained exact archive and manifest, copy them byte-for-byte into the private shared recovery location, verify the copied hash, report evidence, and stop. Sei II must not resume or materialize source yet.
+- **Throttle:** `DRAIN`; the first transfer stopped untouched, and a post-reassessment manifest-derivation/transfer brief is prepared but awaits fresh usage and explicit `!brief`/`!run`.
+- **Engineer state:** `SEI — AVAILABLE FOR DERIVATION/TRANSFER / SEI II — WAITING FOR SOURCE`.
+- **Engineer continuation:** Original Engineer — Sei may accept only the post-reassessment brief. It must derive a candidate path list read-only from the verified archive, require an exact comparison with the independently retained 83-path acceptance evidence, then write/copy/verify recovery artifacts and stop. Sei II remains parked.
 - **Planner decisions:** None pending. Product Owner selected the materially different replacement-context path on 2026-08-25.
 - **Active owner:** `PRODUCT OWNER` — supply a fresh usage reading and explicitly activate the original-Sei transfer slice.
 - **Blocking owner:** `ORIGINAL ENGINEER — SEI` retained-source availability after brief acceptance.
@@ -33,7 +33,7 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 ## Usage reserve
 
-Product Owner supplied fresh readings of **76% five-hour capacity** and **79% weekly capacity** on 2026-08-25. The five-hour reading governs the active slice; the weekly display is recorded as observation only. The preservation-only transfer estimate of **2/4/6 points** projects **74%/72%/70%** five-hour capacity remaining and safely clears the provisional 30% floor. The later Sei II release remains a separate slice requiring a new fresh reading after transfer intake.
+The stopped transfer recorded **73% five-hour capacity** before `!brief` and `!run`; no ending reading was visible and no current reading is inferred. The post-reassessment derivation/transfer slice is estimated at **3/5/7 points** with a **37%** minimum safe start. The weekly display remains observational. The later Sei II release remains a separate slice requiring a new fresh reading.
 
 Workflow planning now uses five-hour execution slices. The percentage is available capacity, not a fixed token or task conversion. One Engineer project is active per window by default; usage is recorded before `!brief`, before `!run`, and after named checkpoints. The provisional 30% floor remains, and capacity/window exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` remains preserved only in established-Sei evidence with an 83-path manifest and retained archive SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`. Sei II correctly stopped because neither exact editable source nor the retained package was available in the replacement context. Product Owner authorized a preservation-only transfer from original Sei to a private shared recovery location. Transfer completion will not itself authorize Sei II materialization or release. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
+Checkpoint `80e4c61` archive identity passed again at SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`, but the original transfer stopped before copying because no separate manifest artifact remained. The processed 2026-08-22 acceptance report independently retains the exact observed 83-path list. Product Owner authorized a read-only derivation procedure that must reconcile the archive's actual source inventory exactly against that evidence before creating the recovery manifest. Any mismatch stops untouched. Transfer completion will not authorize Sei II materialization or release.

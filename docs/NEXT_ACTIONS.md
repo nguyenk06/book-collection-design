@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; preservation-only source-transfer brief prepared, not activated.
-- **Engineer state:** Original Sei available for transfer intake; Sei II waiting for source.
-- **Next owner:** `PRODUCT OWNER` — supply fresh usage and activate the original-Sei transfer slice.
-- **Usage:** Fresh five-hour 76%, weekly 79% observational. Transfer estimate 2/4/6 projects 74%/72%/70%; the 30% floor is preserved. Sei II release remains a later separate slice.
+- **Throttle:** `DRAIN`; post-reassessment manifest-derivation/transfer brief prepared, not activated.
+- **Engineer state:** Original Sei available for post-reassessment intake; Sei II waiting for source.
+- **Next owner:** `PRODUCT OWNER` — supply fresh usage and activate the original-Sei derivation/transfer slice.
+- **Usage:** Prior stopped attempt recorded 73% before intake/run; current is unknown. New estimate 3/5/7, minimum 37%. Sei II release remains a later separate slice.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -102,6 +102,8 @@ Sei confirmed supported short-lived credential issuance, but the single authoriz
 Product Owner selected a fresh Sites editing chat with replacement identity `ENGINEER — SEI II` as the materially different supported path. The fresh replacement brief makes source recovery a hard gate: exact complete `80e4c61`, its 83-path manifest, and retained archive/package identity must be genuinely accessible and mutually consistent; descriptions are not enough and reconstruction is forbidden. Only after successful initialization, fresh usage, and explicit `!run` may Sei II perform one branch-head read, at most one normal push if definitively required, full affected revalidation, one Site save, one publication attempt, bounded read-only health checks, and sanitized handoff.
 
 Sei II initialized and stopped correctly because exact editable `80e4c61`, its 83-path manifest, and retained package/hash were unavailable in the new context. Product Owner authorized a new original-Sei preservation-only slice. It may copy only the already retained exact archive and manifest into private shared recovery storage, verify byte identity, and stop. It authorizes no reconstruction, extraction/materialization in Sei II, Git remote action, Site operation, or release continuation.
+
+Original Sei reverified the retained archive hash but found no separate manifest artifact, so the first transfer stopped before writing or copying anything. Product Owner authorized a post-reassessment procedure: enumerate the verified archive's actual source payload read-only, compare it exactly to the 83-path list retained in `2026-08-22-exact-80e4c61-save-publication-acceptance.md`, and create the recovery manifest only on an exact match. No documentation-only copy, approximation, source extraction, or mismatch tolerance is allowed.
 
 ## Other workstreams
 
