@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-25 — Credential path reported ready; evidence brief prepared
+
+- Recorded Product Owner confirmation that the supported noninteractive credential path is ready in Sei's existing source context.
+- Prepared a separate bounded read-only brief for one configured source-branch head read, with a 1/2/3-point estimate and 33% minimum safe start.
+- Kept the parent `80e4c61` release parked. The evidence brief authorizes no push, source change, Site save, publication, deployment, migration, production mutation, retry workaround, rollback, restore, or destructive recovery.
+- A definitive remote SHA must return to Designer before any new release-resume estimate or authority is prepared.
+
 ## 2026-08-25 — Supported credential-path establishment selected
 
 - Recorded Product Owner Decision `1:A` for the repeated configured Site source credential blocker.

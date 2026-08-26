@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the release is blocked and no resume command is eligible.
-- **Engineer state:** `BLOCKED` at the configured source-branch read gate.
-- **Next owner:** `PRODUCT OWNER` — Decision `1:A`; establish the supported noninteractive credential path in Sei's existing source context and confirm readiness.
-- **Usage:** The blocked resume began at 56%; no post-blocker reading is inferred. A future sequence needs a fresh estimate/reading and must preserve the 30% floor.
+- **Throttle:** `DRAIN`; a read-only credential-evidence brief is prepared and awaits explicit `!run`.
+- **Engineer state:** `AVAILABLE FOR CREDENTIAL EVIDENCE` at a clean pre-save boundary.
+- **Next owner:** `PRODUCT OWNER` — send the prepared evidence-only `!run` to Sei.
+- **Usage:** Evidence-only estimate is 1/2/3 points. Sei must obtain a fresh reading and start only at 33% or higher, preserving the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -94,6 +94,8 @@ Product Owner selected Decision `1:A`: after a supported credential path is avai
 The authorized resume stopped at its first mandatory operation: the configured branch-head read timed out again through the credential path without returning a SHA. Sei terminated all lingering Git/credential-helper processes. No push, Site save, publication, deployment, alternate credential path, or excluded action occurred. The consumed resume addendum is closed; the parent release remains parked and cannot resume until the credential path itself is established and separately evidenced.
 
 Product Owner selected credential-path Decision `1:A` on 2026-08-25. This authorizes establishing the normal supported noninteractive credential path and returning only evidence that the configured source branch can be read definitively. It does not authorize another release read/push attempt, a push, Site save, publication, deployment, alternate credential workaround, force push, migration, production mutation, rollback, restore, or destructive recovery. After readiness is established, Designer must prepare a fresh estimate and bounded resume authority from the observed remote state.
+
+Product Owner subsequently reported the credential path ready. Designer prepared a separate 1/2/3-point evidence-only brief: confirm exact context and perform one bounded read of the configured source branch head. A definitive SHA is evidence for later Designer reconciliation, not release authority. No push, save, publication, deployment, or parent-brief continuation is permitted.
 
 ## Other workstreams
 

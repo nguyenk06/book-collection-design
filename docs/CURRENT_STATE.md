@@ -23,12 +23,12 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; no further release resume is eligible.
-- **Engineer state:** `BLOCKED` at the configured Site source-branch read gate after a second credential-path timeout.
-- **Engineer continuation:** None. Do not issue another remote read, push, save, or publication attempt until a supported noninteractive credential path is established and separately evidenced.
+- **Throttle:** `DRAIN`; Product Owner reports the supported credential path ready, and a bounded read-only evidence brief is prepared but awaits explicit `!run`.
+- **Engineer state:** `AVAILABLE FOR CREDENTIAL EVIDENCE` at the clean pre-Site-operation boundary.
+- **Engineer continuation:** Under explicit `!run`, accept the read-only evidence brief, perform one bounded configured-branch head read, report the definitive SHA or stop on timeout/ambiguity, and perform no push or Site operation.
 - **Planner decisions:** None pending. Product Owner selected credential-path Decision `1:A` on 2026-08-25.
-- **Active owner:** `PRODUCT OWNER` — establish the supported noninteractive credential path in Sei's existing source context and confirm readiness.
-- **Blocking owner:** `SUPPORTED SITE SOURCE CREDENTIAL PATH`.
+- **Active owner:** `PRODUCT OWNER` — issue the prepared read-only `!run` to Sei.
+- **Blocking owner:** None before brief acceptance; any timeout, ambiguity, identity mismatch, or unsupported credential result parks the task again.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
@@ -78,4 +78,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` remains locally validated and packaged. The initial required push timed out, and the separately authorized mandatory branch-head read also timed out through the configured credential path. Both process trees were terminated cleanly. Across both sequences there were 0 successful or attempted resumed pushes after ambiguity, 0 Site saves, and 0 publication/deployment attempts; latest saved/published remains Version 20. Product Owner selected Decision `1:A`: establish the supported noninteractive credential path and return only definitive branch-read readiness evidence before Designer prepares any new release resume. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
+Checkpoint `80e4c61` remains locally validated and packaged. The initial required push and later mandatory branch-head read timed out through the prior credential path; both stopped cleanly with 0 Site saves and 0 publication/deployment attempts. Product Owner selected Decision `1:A` and on 2026-08-25 reported the supported credential path ready. A new evidence-only brief may now read the configured branch head once; it cannot push, save, publish, or resume the parent release. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
