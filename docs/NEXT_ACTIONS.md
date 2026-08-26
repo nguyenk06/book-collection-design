@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the read-only credential-evidence brief is capacity-cleared and awaits explicit `!run`.
-- **Engineer state:** `READY FOR CREDENTIAL EVIDENCE` at a clean pre-save boundary.
-- **Next owner:** `PRODUCT OWNER` — send the prepared evidence-only `!run` to Sei.
-- **Usage:** Fresh reading 93%; the 1/2/3-point evidence estimate projects 92%/91%/90%, preserving the 30% floor.
+- **Throttle:** `DRAIN`; the evidence brief is closed blocked and no identical retry is eligible.
+- **Engineer state:** `BLOCKED` on supported remote endpoint reachability.
+- **Next owner:** `PRODUCT OWNER` — select a materially different supported execution/network path or hold the release.
+- **Usage:** Evidence began at 93%; no post-blocker reading is inferred. Future work requires a fresh estimate/reading and the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -96,6 +96,8 @@ The authorized resume stopped at its first mandatory operation: the configured b
 Product Owner selected credential-path Decision `1:A` on 2026-08-25. This authorizes establishing the normal supported noninteractive credential path and returning only evidence that the configured source branch can be read definitively. It does not authorize another release read/push attempt, a push, Site save, publication, deployment, alternate credential workaround, force push, migration, production mutation, rollback, restore, or destructive recovery. After readiness is established, Designer must prepare a fresh estimate and bounded resume authority from the observed remote state.
 
 Product Owner subsequently reported the credential path ready. Designer prepared a separate 1/2/3-point evidence-only brief: confirm exact context and perform one bounded read of the configured source branch head. A definitive SHA is evidence for later Designer reconciliation, not release authority. No push, save, publication, deployment, or parent-brief continuation is permitted.
+
+Sei confirmed supported short-lived credential issuance, but the single authorized configured `main` branch-head query could not reach the remote endpoint and returned no SHA. A later direct Product Owner override authorized one additional bounded query; it returned the same blocker. Both left 0 fetch/pull/push/ref updates and 0 Site save/publication/deployment attempts. The evidence brief is closed, and no identical query may be repeated without a materially different supported execution/network path.
 
 ## Other workstreams
 

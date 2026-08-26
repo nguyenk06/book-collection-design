@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-25 — Credential evidence closed; network path blocked
+
+- Accepted Sei's credential-evidence result: supported short-lived credential issuance succeeded, but one authorized configured `main` branch-head query could not reach the remote endpoint and returned no SHA.
+- Recorded a later direct Product Owner override for one additional bounded query; it returned the same endpoint blocker. Both attempts left fetch/pull/push/ref-update and Site save/publication/deployment counts at zero.
+- Closed and archived the evidence brief while retaining the parent `80e4c61` release as parked. The blocker is now the supported execution/network path, not credentials, application source, package, or tests.
+- Opened one Product Owner decision for a materially different supported path or hold. A third identical query is not authorized.
+
 ## 2026-08-25 — Credential evidence capacity cleared
 
 - Recorded the Product Owner's fresh 93% usage reading for the separate 1/2/3-point read-only credential-evidence brief.

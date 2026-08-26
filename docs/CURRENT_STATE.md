@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the credential-evidence brief is authorized and capacity-cleared but awaits explicit `!run`.
-- **Engineer state:** `READY FOR CREDENTIAL EVIDENCE` at the clean pre-Site-operation boundary.
-- **Engineer continuation:** Under explicit `!run`, accept the read-only evidence brief, perform one bounded configured-branch head read, report the definitive SHA or stop on timeout/ambiguity, and perform no push or Site operation.
-- **Planner decisions:** None pending. Product Owner selected credential-path Decision `1:A` on 2026-08-25.
-- **Active owner:** `PRODUCT OWNER` — issue the prepared read-only `!run` to Sei.
-- **Blocking owner:** None before brief acceptance; any timeout, ambiguity, identity mismatch, or unsupported credential result parks the task again.
+- **Throttle:** `DRAIN`; no further identical branch-head query is eligible.
+- **Engineer state:** `BLOCKED` at the supported execution/network path after two bounded reads returned no SHA.
+- **Engineer continuation:** None. Preserve exact `80e4c61` and the parent release; do not repeat the query, push, save, or publish until a materially different supported execution/network path is selected and evidenced.
+- **Planner decisions:** One pending execution/network-path disposition in `PLANNER_INBOX.md`.
+- **Active owner:** `PRODUCT OWNER` — establish a materially different supported path or hold the release.
+- **Blocking owner:** `SUPPORTED REMOTE ENDPOINT EXECUTION/NETWORK PATH`; credential issuance itself succeeded.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied a fresh **93%** reading on 2026-08-25 for the credential-evidence step. Its **1/2/3-point** estimate projects approximately **92%/91%/90%** remaining and preserves the standing 30% floor. This reading authorizes only the evidence brief, not the parked release.
+Product Owner supplied a fresh **93%** reading before the credential-evidence step. No post-blocker reading is available and none is inferred. Any future materially different evidence or release sequence requires a fresh estimate and reading while preserving the standing 30% floor.
 
 ## Current workstreams
 
@@ -78,4 +78,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` remains locally validated and packaged. The initial required push and later mandatory branch-head read timed out through the prior credential path; both stopped cleanly with 0 Site saves and 0 publication/deployment attempts. Product Owner selected Decision `1:A` and on 2026-08-25 reported the supported credential path ready. A new evidence-only brief may now read the configured branch head once; it cannot push, save, publish, or resume the parent release. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
+Checkpoint `80e4c61` remains locally validated and packaged. Supported short-lived credential issuance succeeded, proving the credential setup boundary, but the authorized configured `main` branch read and a later direct owner-authorized second read could not reach the remote endpoint and returned no SHA. Both stopped cleanly with 0 fetch/pull/push/ref updates and 0 Site save/publication/deployment attempts. The blocker is now the execution/network path, not credentials, source, or tests. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
