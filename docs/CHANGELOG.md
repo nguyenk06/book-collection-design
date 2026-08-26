@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-25 — Supported credential-path establishment selected
+
+- Recorded Product Owner Decision `1:A` for the repeated configured Site source credential blocker.
+- Authorized establishing the normal supported noninteractive credential path in Sei's existing source context and returning only definitive branch-read readiness evidence.
+- Kept the parent release parked. No new remote read/push attempt, push, Site save, publication, deployment, alternate credential workaround, force push, migration, production mutation, rollback, restore, or destructive recovery is authorized by this decision.
+- Cleared Planner Inbox; after readiness evidence exists, Designer must prepare a fresh estimate and bounded resume authority from the observed remote state.
+
 ## 2026-08-22 — Release blocked on repeated configured-branch read timeout
 
 - Accepted Sei's bounded resume blocker: exact local `80e4c61`, prior validation, package, ancestry, collision, and 56% capacity gates remained intact.

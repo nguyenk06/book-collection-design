@@ -8,7 +8,7 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the release is blocked and no resume command is eligible.
 - **Engineer state:** `BLOCKED` at the configured source-branch read gate.
-- **Next owner:** `PRODUCT OWNER` — establish a supported noninteractive credential path or choose hold in Planner Inbox.
+- **Next owner:** `PRODUCT OWNER` — Decision `1:A`; establish the supported noninteractive credential path in Sei's existing source context and confirm readiness.
 - **Usage:** The blocked resume began at 56%; no post-blocker reading is inferred. A future sequence needs a fresh estimate/reading and must preserve the 30% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
@@ -92,6 +92,8 @@ Sei accepted at a fresh 60% reading, verified exact ancestry and the 83-path can
 Product Owner selected Decision `1:A`: after a supported credential path is available, read the configured remote branch head first; skip the push if it is already exact `80e4c61`; otherwise permit one normal push only when source, branch, remote, and credential identities are unambiguous. Revalidate affected identity, collision, package, saved-source, and usage gates before continuing the existing one-save/one-publication authority. Stop for another timeout, ambiguity, drift, collision, failed validation, unsupported credentials, or reserve risk. Alternate credentials, force push, second retry, correction, migration, production mutation, held validation, broad smoke, rollback, restore, and destructive recovery remained excluded. Product Owner then supplied the required fresh 56% reading, activating only this bounded resume.
 
 The authorized resume stopped at its first mandatory operation: the configured branch-head read timed out again through the credential path without returning a SHA. Sei terminated all lingering Git/credential-helper processes. No push, Site save, publication, deployment, alternate credential path, or excluded action occurred. The consumed resume addendum is closed; the parent release remains parked and cannot resume until the credential path itself is established and separately evidenced.
+
+Product Owner selected credential-path Decision `1:A` on 2026-08-25. This authorizes establishing the normal supported noninteractive credential path and returning only evidence that the configured source branch can be read definitively. It does not authorize another release read/push attempt, a push, Site save, publication, deployment, alternate credential workaround, force push, migration, production mutation, rollback, restore, or destructive recovery. After readiness is established, Designer must prepare a fresh estimate and bounded resume authority from the observed remote state.
 
 ## Other workstreams
 
