@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-26 — Manifest-transfer intake capacity cleared
+
+- Recorded fresh Product Owner readings of 60% five-hour capacity and 76% weekly capacity.
+- Confirmed that the governing five-hour reading clears the 37% minimum for the 3/5/7-point manifest-derivation/transfer slice while preserving the 30% floor.
+- Made original Sei's `!brief` intake eligible; `!run` remains a separate command after acceptance and fresh pre-run usage confirmation.
+
 ## 2026-08-25 — Manifest derivation and transfer authorized
 
 - Accepted original Sei's safe stop at 73%: retained archive SHA-256 passed, the separate manifest artifact was absent, recovery storage remained empty, and no copy or mutation occurred.

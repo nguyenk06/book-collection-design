@@ -33,7 +33,7 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 ## Usage reserve
 
-The stopped transfer recorded **73% five-hour capacity** before `!brief` and `!run`; no ending reading was visible and no current reading is inferred. The post-reassessment derivation/transfer slice is estimated at **3/5/7 points** with a **37%** minimum safe start. The weekly display remains observational. The later Sei II release remains a separate slice requiring a new fresh reading.
+Product Owner supplied fresh readings of **60% five-hour capacity** and **76% weekly capacity** on 2026-08-26. The five-hour reading governs the slice and clears the post-reassessment derivation/transfer estimate of **3/5/7 points** with its **37%** minimum safe start; the weekly display remains observational. Brief intake is eligible, but execution still requires a separate `!run`. The later Sei II release remains a separate slice requiring a new fresh reading.
 
 Workflow planning now uses five-hour execution slices. The percentage is available capacity, not a fixed token or task conversion. One Engineer project is active per window by default; usage is recorded before `!brief`, before `!run`, and after named checkpoints. The provisional 30% floor remains, and capacity/window exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
