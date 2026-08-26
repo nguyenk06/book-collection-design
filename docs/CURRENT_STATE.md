@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; a materially different replacement Sites editing context is selected, but release execution awaits Sei II initialization, source-recovery proof, fresh usage, and explicit `!run`.
-- **Engineer state:** `SEI BLOCKED / SEI II NOT INITIALIZED`.
-- **Engineer continuation:** Established Sei remains stopped. New Engineer — Sei II must initialize in the fresh Sites editing context, prove exact `80e4c61` source/package availability without reconstruction, and accept only the replacement brief. If every gate passes, the brief permits one remote read, at most one normal push if definitively needed, one Site save, one publication attempt, bounded health evidence, and clean stop.
+- **Throttle:** `DRAIN`; the Sei II release is parked, and an original-Sei preservation-only source-transfer brief is prepared but awaits fresh usage and explicit `!run`.
+- **Engineer state:** `SEI — AVAILABLE FOR SOURCE TRANSFER / SEI II — WAITING FOR SOURCE`.
+- **Engineer continuation:** Original Engineer — Sei may accept only the preservation-transfer brief, prove the retained exact archive and manifest, copy them byte-for-byte into the private shared recovery location, verify the copied hash, report evidence, and stop. Sei II must not resume or materialize source yet.
 - **Planner decisions:** None pending. Product Owner selected the materially different replacement-context path on 2026-08-25.
-- **Active owner:** `PRODUCT OWNER` — create the fresh Sites editing chat and run the replacement initialization prompt.
-- **Blocking owner:** `ENGINEER — SEI II` source/context verification after the new chat exists.
+- **Active owner:** `PRODUCT OWNER` — supply a fresh usage reading and explicitly activate the original-Sei transfer slice.
+- **Blocking owner:** `ORIGINAL ENGINEER — SEI` retained-source availability after brief acceptance.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The last recorded reading was **93%** before the now-complete blocked credential evidence. No current reading is inferred for the replacement chat. The complete Sei II replacement/source-recovery/release envelope is **8/12/18 points** low/likely/high; minimum safe start is **48%**, and a fresh reading is mandatory.
+The last recorded reading was **93%** before the now-complete blocked credential evidence. No current reading is inferred. The preservation-only transfer slice is estimated at **2/4/6 points** low/likely/high with a **36%** minimum safe start. The later Sei II release remains separately estimated and must receive a new fresh reading after transfer intake.
 
 Workflow planning now uses five-hour execution slices. The percentage is available capacity, not a fixed token or task conversion. One Engineer project is active per window by default; usage is recorded before `!brief`, before `!run`, and after named checkpoints. The provisional 30% floor remains, and capacity/window exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` remains preserved in the established Sei evidence with an 83-path manifest and retained archive SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`. Supported credential issuance succeeded, but two reads from that execution path could not reach the endpoint. Product Owner selected a fresh Sites editing chat as the materially different path. Because replacement chats do not inherit unpublished source automatically, Sei II must prove the complete exact source and package exist before any remote or Site operation. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.
+Checkpoint `80e4c61` remains preserved only in established-Sei evidence with an 83-path manifest and retained archive SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`. Sei II correctly stopped because neither exact editable source nor the retained package was available in the replacement context. Product Owner authorized a preservation-only transfer from original Sei to a private shared recovery location. Transfer completion will not itself authorize Sei II materialization or release. Items 3, 5, and 8 remain on hold, and item 2 remains a non-blocking accuracy follow-up.

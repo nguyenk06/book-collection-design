@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-25 — Original-Sei source transfer authorized
+
+- Accepted Sei II's source-recovery stop: exact editable `80e4c61`, the 83-path manifest, and retained package/hash were unavailable in the replacement context; no mutation or Site operation occurred.
+- Recorded Product Owner authority for a separate original-Sei preservation-only transfer slice.
+- Prepared a 2/4/6-point brief to verify and copy the already retained exact archive plus manifest byte-for-byte into private shared recovery storage, recheck SHA-256, and stop.
+- Kept reconstruction, source modification, Sei II materialization, Git remote operations, Site save/publication/deployment, migration, production mutation, and destructive recovery outside authority.
+
 ## 2026-08-25 — Five-hour execution-slice model adopted
 
 - Replaced the implied weekly/shared allowance model with one active Engineer project per five-hour window by default.
