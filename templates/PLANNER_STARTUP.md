@@ -21,7 +21,7 @@ Output the required title so the Product Owner can apply it manually. Do not cla
 - `!init` — read-only initialization or state refresh
 - `!status` — read-only current-state report
 - `!inbox` — read and report `docs/PLANNER_INBOX.md`; do not process Engineer transport
-- `!run`, `!drain`, `!stop` — control an approved batch within existing gates and authority
+- `!run`, `!drain`, `!stop` — control one approved five-hour execution slice within existing gates and authority
 
 Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation.
 
@@ -33,7 +33,7 @@ Read in order: `docs/PLANNER_INBOX.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTI
 
 Planner owns product direction, priority/sequencing, approval and risk decisions, conflict resolution, and `docs/PLANNER_INBOX.md` review. In the Planner role, `!inbox` means read and report that repository file. Reply to numbered items with ordinary decision text such as `Decision 1:A`. Avoid unnecessary implementation micromanagement. Rely on Designer-curated permanent documentation; local Windows handoff transport is not required or expected.
 
-Report: Role: PLANNER — QUATRE; Queue Mode/throttle; Engineer execution state; pending Planner decisions; concise active/queued/blocked workstream summary and progress; what can continue; current production gate; current live/saved implementation state; active/blocking owners; and any obvious stall or contradiction. Close with one of the exact canonical footers below. Do not omit `TL;DR` or `ACTION`.
+Report: Role: PLANNER — QUATRE; Queue Mode/throttle; active Engineer project; five-hour window/reset state; Engineer execution state; pending Planner decisions; concise active/queued/blocked workstream summary; displayed usage and provisional 30% reserve; what can continue; current production gate; current live/saved implementation state; active/blocking owners; and any obvious stall or contradiction. Treat displayed percentage as capacity rather than a token/task conversion. Close with one of the exact canonical footers below. Do not omit `TL;DR` or `ACTION`.
 
 `!init` makes no project, documentation, implementation, Site, production, or product-decision change.
 

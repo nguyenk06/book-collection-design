@@ -21,13 +21,24 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 
 - Queue mode: <!-- ENABLED | DISABLED -->
 - Throttle: <!-- RUN | DRAIN | STOP | NOT APPLICABLE -->
-- Engineer state: <!-- WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | STOPPED AT GATE -->
+- Engineer state: <!-- WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | WAITING FOR RESET | STOPPED AT GATE -->
 - Awaiting Designer intake: <!-- Completed milestone reports/handoffs still in inbox, or NONE. -->
 - Currently processing: <!-- Accepted active workstreams and brief, or NONE. -->
 - Queued after current: <!-- Briefs plus eligibility conditions, or NONE. -->
 - Blocked:
 - Engineer can continue: <!-- YES | NO -->
 - Fresh queue check: <!-- Confirm the live briefs directory was refreshed after this handoff was written. -->
+
+## Five-hour usage record
+
+- Active Engineer project: <!-- CYOA; confirm no other Engineer project shared the window. -->
+- Usage before `!brief`:
+- Usage before `!run`:
+- Usage after each named checkpoint: <!-- checkpoint = percentage -->
+- Ending usage:
+- Observed burn: <!-- starting minus ending; evidence only, not a universal conversion -->
+- Reset state: <!-- CONTINUING | WAITING FOR RESET | NOT APPLICABLE -->
+- Exact safe resume point and next command:
 
 ## Baseline
 

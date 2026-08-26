@@ -35,6 +35,8 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 The last recorded reading was **93%** before the now-complete blocked credential evidence. No current reading is inferred for the replacement chat. The complete Sei II replacement/source-recovery/release envelope is **8/12/18 points** low/likely/high; minimum safe start is **48%**, and a fresh reading is mandatory.
 
+Workflow planning now uses five-hour execution slices. The percentage is available capacity, not a fixed token or task conversion. One Engineer project is active per window by default; usage is recorded before `!brief`, before `!run`, and after named checkpoints. The provisional 30% floor remains, and capacity/window exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
+
 ## Current workstreams
 
 | Workstream | State | Verified boundary | Next condition |

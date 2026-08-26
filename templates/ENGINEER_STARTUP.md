@@ -21,7 +21,7 @@ Output the required title so the Product Owner can rename the ChatGPT conversati
 - `!init` — read-only initialization or state refresh
 - `!status` — read-only current-state report
 - `!brief` (`!cb`) — check and process the next eligible brief
-- `!run`, `!drain`, `!stop` — control an approved batch within existing gates and authority
+- `!run`, `!drain`, `!stop` — control one approved five-hour execution slice within existing gates and authority
 
 Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation.
 
@@ -36,10 +36,10 @@ Every meaningful response to `!init`, `!status`, `!brief`, `!run`, `!drain`, or 
 3. Read the public Design repository as read-only authority: <https://github.com/nguyenk06/book-collection-design>.
 4. Read, at minimum, `docs/HANDOFF_PROTOCOL.md`, `docs/DOCUMENTATION_RULES.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/ROADMAP.md`, and the architecture, ADR, database, and feature documents named by current work.
 5. Inspect the shared local `briefs/` defined by `docs/HANDOFF_PROTOCOL.md`. If it is unavailable, report the limitation and request the current brief; do not invent or reconstruct one.
-6. Reconcile Site identity, published and saved versions, editable-source availability, exposed D1/R2 bindings, build/test access, Queue Mode and throttle, Engineer state, active and queued briefs, accepted workstreams, dependencies, pending answers, safe resume points, collision risks, remaining validation, usage reserve, and local/production authority.
+6. Reconcile Site identity, published and saved versions, editable-source availability, exposed D1/R2 bindings, build/test access, Queue Mode and throttle, Engineer state, active and queued briefs, accepted workstreams, dependencies, pending answers, five-hour window/reset state, safe resume points, collision risks, remaining validation, displayed usage and provisional reserve, and local/production authority.
 7. Treat current Site/source evidence as authority for what is actually saved or deployed. Design documentation governs accepted direction. An accepted brief governs implementation scope. Surface conflicts; never choose the more permissive interpretation merely to continue.
 8. If unpublished work is present, preserve it and report its composition before materializing, replacing, rebuilding, or overwriting anything. If it is absent or inaccessible, report that fact and do not reconstruct without authority.
-9. Report: role identity; Site context status (`YES`, `PARTIAL`, or `NO`); documentation access; published and saved versions; editable-source status; Queue Mode/throttle; Engineer state; active, parked, and queued tasks; authorized and prohibited actions; current production gate; usage/reserve status; active and blocking owners; and conflicts or missing evidence.
+9. Report: role identity; Site context status (`YES`, `PARTIAL`, or `NO`); documentation access; published and saved versions; editable-source status; Queue Mode/throttle; Engineer state; active project and five-hour/reset state; active, parked, and queued tasks; authorized and prohibited actions; current production gate; usage before intake/current usage/reserve status; active and blocking owners; and conflicts or missing evidence.
 10. Close with exactly one canonical workflow footer below.
 
 `!init` is read-only. It does not accept a brief, process or move transport artifacts, implement or modify source, materialize a working copy, run a production request, access or change data, migrate, save a version, deploy, publish, restore, roll back, or perform a destructive action. After `!init`, use `!brief` separately when a brief is eligible.
@@ -52,11 +52,13 @@ Every brief acceptance, blocker, completion, and source-recovery report must ide
 
 When Queue Mode is `ENABLED` and throttle is `RUN` after an authorized `!run` command:
 
-1. Work only inside an accepted brief and the approved batch.
+1. Work only inside an accepted brief, the approved five-hour slice, and one active Engineer project.
 2. After completing or parking a task, write its required sanitized report and refresh the live `briefs/` directory.
-3. Re-read throttle, dependencies, answers, collision boundaries, usage reserve, and remaining authority before accepting another task.
-4. Run `!brief` for the highest-priority independently eligible brief. Do not stop merely because another task is blocked or waiting.
-5. Report `AVAILABLE` only after a fresh queue scan proves that no eligible authorized brief remains.
+3. Record displayed usage immediately before `!brief`, immediately before `!run`, and after every milestone or named safe checkpoint.
+4. Re-read throttle, dependencies, answers, collision boundaries, usage reserve, window/reset state, and remaining authority before accepting another task.
+5. Run `!brief` for the highest-priority independently eligible brief only when it belongs to the same approved project/slice and its high estimate plus the 30% floor fits. Do not stop merely because another task is blocked or waiting.
+6. When the five-hour window or protected floor is reached, preserve the safe checkpoint and report `WAITING FOR RESET`, not `BLOCKED`. After reset use `!status`, then `!brief` or `!run` as applicable; never infer renewed authority.
+7. Report `AVAILABLE` only after a fresh queue scan proves that no eligible authorized brief remains in the active slice.
 
 If a task needs clarification, preserve its state and exact safe resume point, record the minimum question and assumptions deliberately not made, mark it `WAITING FOR ANSWER`, and continue another independently eligible, non-conflicting task. Attach the authoritative answer when received and revalidate affected assumptions, dependencies, shared files, and remaining tests before resuming. Report the impact before substantial rework.
 

@@ -117,7 +117,7 @@ The Site Engineer reads the public design repository at <https://github.com/nguy
 
 ## Design to Site Handoff
 
-The Designer prepares [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) for one coherent milestone. A brief may contain one or several bounded workstreams and remains a concise, share-ready specification containing only what the Site Engineer needs.
+The Designer prepares [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) for one coherent, independently resumable five-hour execution slice within a milestone. A larger milestone may require several sequential briefs. A brief may contain one or several bounded workstreams only when they fit the same safe slice and remains a concise, share-ready specification containing only what the Site Engineer needs.
 
 - Link to authoritative design documents instead of copying them.
 - Distinguish verified current state from accepted requirements.
@@ -165,7 +165,7 @@ The `!` prefix identifies explicit workflow intent. Commands are case-insensitiv
 | `!prompt-engineer` | Designer | Output the complete Engineer startup prompt |
 | `!prompt-designer` | Designer | Output the complete Designer startup prompt |
 | `!prompt-planner` | Designer | Output the complete Planner startup prompt |
-| `!run` | Authorized operator | Activate or continue an approved execution batch |
+| `!run` | Authorized operator | Activate or continue one approved five-hour execution slice |
 | `!drain` | Authorized operator | Finish the current safe unit and accept no further work |
 | `!stop` | Authorized operator | Stop at the nearest safe checkpoint |
 
@@ -514,7 +514,7 @@ After an explicitly approved publication, perform a concise Product Owner smoke 
 
 ### Future engineering queue mode
 
-The existing shared `briefs/` directory may serve as a lightweight future work queue. This capability is dormant unless Planner or Product Owner explicitly records `QUEUE MODE: ENABLED` for a bounded development session or sprint. A new week, `!init`, `!inbox`, `!brief`, or the mere presence of briefs never activates it.
+The existing shared `briefs/` directory may serve as a lightweight future work queue. This capability is dormant unless Planner or Product Owner explicitly records `QUEUE MODE: ENABLED` for a bounded five-hour execution window. A new window, reset, `!init`, `!inbox`, `!brief`, or the mere presence of briefs never activates it.
 
 When Queue Mode is disabled:
 
@@ -529,19 +529,33 @@ When enabled, record an Engineer execution state distinct from workstream states
 - `BLOCKED` — no authorized executable work can currently continue.
 - `DRAINING` — finish the current safe unit or convergence point, then do not accept another queued brief.
 - `PAUSED` — a safe resumable state is preserved; do not consume queued work until resumed.
+- `WAITING FOR RESET` — the five-hour capacity floor or window boundary was reached at a safe checkpoint; this is not an implementation blocker.
 - `STOPPED AT GATE` — an explicit design, approval, or production gate prevents continuation.
 
 Planner/Product Owner controls future automatic queue consumption with:
 
-- `!run` — continue current authorized work and, at a suitable transition point, use `!brief` to consider the highest-priority eligible queued brief within the approved sprint/envelope. It does not accept a brief or expand authority.
+- `!run` — continue current authorized work inside the approved five-hour slice and, at a suitable transition point, use `!brief` only for an eligible continuation already included in that slice. It does not accept a brief, expand authority, or carry across a reset automatically.
 - `!drain` — finish the current safe unit, validation, or convergence point; preserve/report a resumable state; do not start another queued brief.
 - `!stop` — stop at the nearest safe checkpoint, preserve/report resumable state, and do not start another queued brief. It is not an abrupt interruption during an integrity-sensitive write, migration, save, or similar operation unless Product Owner explicitly orders an emergency stop.
 
 `!run`, `!drain`, and `!stop` never authorize production, override exclusions or decisions, bypass dependencies or attempt limits, or cross a design/production gate. After `!drain` or `!stop`, preserve workstream progress, accepted and queued briefs, blockers, attempt counts, decisions, and next eligibility so a future `!init` plus explicit `!run` can resume safely.
 
-Before issuing `!run`, Designer must review the current remaining usage, estimate a coherent prioritized batch that preserves the recorded reserve, identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, and likely blockers, and present that batch and estimate to Planner/Product Owner. Reduce or split the batch when the estimated range does not preserve sufficient capacity for remediation, complete validation, reporting, transport, and a clean stopping point.
+### Five-hour execution slices and usage capacity
 
-After `!run`, Engineer owns practical sequencing within the approved priorities. Within each accepted brief and the approved batch, Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. A blocked stream is preserved and reported, then Engineer moves to another independently eligible, non-conflicting stream. Do not consume usage merely to approach the reserve. Drain or stop when usage approaches the reserve, no eligible work remains, or every path requires new authority. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
+Treat the displayed percentage as available capacity, not as a token count or fixed task conversion. Do not claim that a percentage point equals a stable amount of work until observed evidence supports it.
+
+- One active Engineer project is allowed per five-hour window by default. Do not spend the same window on CYOA and another Engineer project.
+- A brief authorizes one independently resumable slice, even when the product milestone spans several windows.
+- Record displayed usage immediately before `!brief`, immediately before `!run`, and after every milestone or named safe checkpoint.
+- Every brief states its minimum starting percentage, low/likely/high expected usage range, safe checkpoints, automatic stops, and work deferred to the next reset.
+- Retain the provisional 30% floor. Start only when `current usage >= high estimate + 30%`.
+- Reaching the floor or the end of the five-hour window changes Engineer state to `WAITING FOR RESET`, not `BLOCKED`. Preserve the exact checkpoint, remaining scope, validation state, and next command.
+- After reset, run `!status`, then use `!brief` for a new slice or `!run` to resume an already accepted slice from its recorded checkpoint. A reset does not broaden authority.
+- Capture starting, checkpoint, and ending percentages for the next 3–5 briefs. Designer will replace rough ranges only after observed burn evidence is sufficient.
+
+Before issuing `!run`, Designer must review current remaining usage, estimate one coherent prioritized five-hour slice, and identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, likely blockers, and clean stopping cost. Reduce or split work when the high range does not preserve capacity for ordinary remediation, complete validation, evidence, transport, and the 30% floor.
+
+After `!run`, Engineer owns practical sequencing within the approved slice. Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. A blocked stream is preserved and reported, then Engineer may move only to another independently eligible, non-conflicting stream already authorized inside the same project and slice. Do not consume capacity merely to approach the reserve. Enter `WAITING FOR RESET` at the protected boundary; drain or stop when no eligible work remains or every path requires new authority. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
 
 #### Queue priority and eligibility
 
@@ -561,7 +575,7 @@ Filename order is not authoritative. Each queued brief states:
 
 Under enabled `!run`, Engineer may use `!brief` to consider the highest-priority eligible brief only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued brief is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
 
-At milestone completion, “may use `!brief`” becomes a required queue-refresh and intake check before stopping under `!run`. The Engineer must not conclude that the operator is done, infer that no follow-on work exists from silence, or rely on a queue listing taken before the completion handoff was written.
+At milestone or safe-checkpoint completion, record the current usage percentage before the required queue refresh. “May use `!brief`” becomes a required intake check before stopping under `!run`, but Engineer may accept follow-on work only when it remains inside the same approved five-hour project slice and its high estimate plus reserve still fits. Otherwise preserve it for the next reset.
 
 A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
 
@@ -574,7 +588,7 @@ A question or decision affecting one task blocks only that task unless it also a
 1. Preserves the task state and records a precise safe resume point.
 2. Records only the minimum specific question and the assumptions deliberately not made.
 3. Marks the task `WAITING FOR ANSWER` and reports it through local `inbox/`.
-4. Continues with the next independently eligible, non-conflicting task in the approved batch without ending the run or reinitializing solely for the parked task.
+4. Continues with the next independently eligible, non-conflicting task already authorized in the same five-hour project slice without ending the run or reinitializing solely for the parked task.
 5. Attaches the authoritative Planner/Designer answer when received and resumes at the next safe work boundary, including after the alternate task completes or blocks.
 6. Revalidates affected assumptions, dependencies, and shared files before resuming. If the answer materially changes completed work, Engineer reports the impact before substantial rework.
 
@@ -582,7 +596,7 @@ Designer and Planner may review questions, change future priorities, and approve
 
 #### Designer work-ahead and reporting
 
-During enabled `!run`, Designer may process `!inbox` evidence, maintain permanent state, batch decisions, reprioritize unaccepted briefs within Planner direction, and prepare eligible future work while Engineer continues. Stay only one or two meaningful executable briefs ahead. Do not create speculative work merely to keep the queue non-empty.
+During enabled `!run`, Designer may process `!inbox` evidence, maintain permanent state, batch decisions, reprioritize unaccepted briefs within Planner direction, and prepare the next independently resumable slice while Engineer continues. Stay no more than one meaningful executable slice ahead. Do not create speculative work merely to keep the queue non-empty or consume a reset window.
 
 When Queue Mode is enabled, `!inbox` reports Engineer state, active workstreams, queued work, blocked work, pending decisions, whether Engineer can continue, whether replenishment is needed, and whether `!drain` or `!stop` is in effect. Do not ask Planner to act merely because a decision is pending when Engineer can safely continue elsewhere.
 
@@ -590,7 +604,7 @@ Meaningful future Engineer reports include:
 
 ```text
 ENGINEER STATE:
-<WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | STOPPED AT GATE>
+<WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | WAITING FOR RESET | STOPPED AT GATE>
 
 AWAITING DESIGNER INTAKE:
 <completed milestones and handoff filenames, or NONE>

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-25 — Five-hour execution-slice model adopted
+
+- Replaced the implied weekly/shared allowance model with one active Engineer project per five-hour window by default.
+- Defined displayed percentage as available capacity rather than a fixed token/task conversion; retained the provisional 30% floor and the start rule `current usage >= high estimate + 30%`.
+- Required readings before `!brief`, before `!run`, and after named checkpoints; added minimum start, low/likely/high range, safe checkpoint, automatic-stop, and next-reset deferral fields to briefs and handoffs.
+- Added `WAITING FOR RESET` as a resumable capacity state distinct from `BLOCKED`, with post-reset `!status` followed by `!brief` or `!run` from the recorded checkpoint.
+- Limited briefs to independently resumable five-hour slices within larger milestones and requested observed burn capture for the next 3–5 briefs before refining estimates.
+
 ## 2026-08-25 — Sei II replacement Sites context selected
 
 - Recorded the Product Owner's selection of a fresh Sites editing chat as the materially different execution/network path after established Sei could not reach the configured remote endpoint.

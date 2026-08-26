@@ -101,7 +101,10 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 ## Shared controls
 
-- Finish and validate the current milestone before starting another; reserve usage for tests, evidence, and a clean stop.
+- Treat each execution brief as one independently resumable five-hour slice within the milestone. Do not run CYOA and another Engineer project in the same window by default.
+- Record usage before `!brief`, before `!run`, and after each named checkpoint. Treat percentages as capacity evidence, not a token/task conversion.
+- Start only when current usage covers the brief's high estimate plus the provisional 30% floor. Reaching the boundary creates `WAITING FOR RESET`, not `BLOCKED`.
+- Finish and validate the current slice before starting another; reserve usage for tests, evidence, transport, and a clean stop.
 - If one workstream blocks, report it and continue the next independently eligible, non-conflicting workstream. Waiting for a production gate does not idle authorized local work.
 - A task-level question causes `WAITING FOR ANSWER`, not a global stop, unless it affects all eligible work, crosses a risk gate, threatens shared architecture/correctness, leaves no independent task, or usage approaches reserve.
 - New instructions queue behind safe active work unless they explicitly invoke `!stop`, say `HOLD`, or invalidate work in progress.

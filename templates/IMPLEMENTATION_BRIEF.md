@@ -26,11 +26,24 @@ Sei must output the expected title at startup so the Product Owner can apply it 
 - Can run alongside active work: <!-- YES | NO -->
 - Collision/shared-surface concerns: <!-- Concise hotspots or NONE. -->
 - Required Planner decision: <!-- Decision reference or NONE. -->
-- Sprint/envelope association: <!-- Identifier or NOT APPLICABLE. -->
+- Five-hour slice / milestone association: <!-- Slice identifier and parent milestone, or NOT APPLICABLE. -->
+- Active Engineer project: <!-- CYOA; do not share this five-hour window with another Engineer project. -->
+
+## Usage and reset boundary
+
+- Minimum starting percentage: <!-- high estimate + provisional 30% floor -->
+- Expected usage range: <!-- LOW / LIKELY / HIGH percentage-point range; planning estimate, not token conversion -->
+- Usage immediately before `!brief`: <!-- Record at acceptance. -->
+- Usage immediately before `!run`: <!-- Record at activation. -->
+- Named safe checkpoints: <!-- Independently recoverable unit boundaries. -->
+- Automatic stop conditions: <!-- Include reserve/window, authority, source, collision, validation, and risk boundaries. -->
+- Deferred to next reset: <!-- Explicit remaining work that this slice does not authorize. -->
+
+Start only when current usage is at least the high estimate plus the provisional 30% floor. If capacity or the five-hour window ends, preserve the current safe checkpoint and report `WAITING FOR RESET`; do not classify capacity exhaustion as `BLOCKED`.
 
 Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
 
-Queue metadata does not activate Queue Mode, make a brief executable, or replace `!brief` acceptance. When Queue Mode is disabled, Engineer must not consume this as follow-on work without separate authority.
+Queue metadata does not activate Queue Mode, make a brief executable, or replace `!brief` acceptance. A reset does not reactivate the slice automatically. When Queue Mode is disabled, Engineer must not consume this as follow-on work without separate authority.
 
 ## Workstreams
 

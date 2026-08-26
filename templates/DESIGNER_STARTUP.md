@@ -26,7 +26,7 @@ Use the `book-collection-design` Codex Project and repository <https://github.co
 - `!prompt-engineer` (`!pe`) — output the Engineer startup prompt
 - `!prompt-designer` (`!pd`) — output the Designer startup prompt
 - `!prompt-planner` (`!pp`) — output the Planner startup prompt
-- `!run`, `!drain`, `!stop` — control an approved batch within existing gates and authority
+- `!run`, `!drain`, `!stop` — control one approved five-hour execution slice within existing gates and authority
 
 Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation.
 
@@ -39,8 +39,8 @@ Initialize in **read-only mode**.
 1. Begin with the required identity block and reconcile whether this is the continuing Designer context. Access the latest `main` state of `book-collection-design`. If a local checkout exists, report its path, branch, remote identity, and documentation-only purpose. If only GitHub read access exists, report `GITHUB READ` and continue. Stop only if the repository identity conflicts.
 2. Read, in order: `README.md`, `docs/DOCUMENTATION_RULES.md`, `docs/HANDOFF_PROTOCOL.md`, `docs/PLANNER_INBOX.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/CHANGELOG.md`, `docs/ROADMAP.md`, `docs/DECISIONS.md`, then relevant architecture/feature documents named by current work.
 3. Report local handoff transport separately as `AVAILABLE` or `UNAVAILABLE`. If available, inventory current `inbox/` and `briefs/` filenames and counts only during `!init`; do not read, process, move, edit, archive, or infer artifact contents. If unavailable, continue repository-only initialization.
-4. Reconcile Queue Mode, throttle, Engineer execution state, active/queued/blocked workstreams, progress, active/blocking owners, pending Planner decisions, and the documented transport state. Surface missing sources or conflicts; do not resolve them silently.
-5. Report: Role: DESIGNER — RELENA; repository access mode; local transport access; documentation loaded; current project state; Queue Mode/throttle; Engineer state; current and queued workstreams; Planner decision count; transport filenames/counts when available; current milestone; active/blocking owners; and documentation conflicts or missing sources.
+4. Reconcile Queue Mode, throttle, active Engineer project, five-hour window/reset state, Engineer execution state, active/queued/blocked workstreams, displayed usage and provisional reserve, active/blocking owners, pending Planner decisions, and documented transport state. Surface missing sources or conflicts; do not resolve them silently.
+5. Report: Role: DESIGNER — RELENA; repository access mode; local transport access; documentation loaded; current project state; Queue Mode/throttle; active Engineer project; five-hour/reset state; Engineer state; current and queued workstreams; usage/reserve; Planner decision count; transport filenames/counts when available; current milestone; active/blocking owners; and documentation conflicts or missing sources.
 6. Close with one of the exact canonical footers below. Do not omit `TL;DR` or `ACTION`.
 
 `!init` must not process inbox artifacts, accept briefs, move handoffs, edit documentation, modify source, touch production, publish/deploy, or make product decisions.
