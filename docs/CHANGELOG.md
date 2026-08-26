@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-25 — Source-transfer capacity cleared
+
+- Recorded fresh Product Owner displays of 76% five-hour capacity and 79% weekly capacity; the five-hour reading governs the active slice and weekly remains observational.
+- Applied the 2/4/6-point transfer estimate, projecting 74%/72%/70% five-hour capacity remaining and clearing the provisional 30% floor.
+- Marked the original-Sei preservation transfer ready for separate `!brief` acceptance and later explicit `!run`; no transfer or source/Site operation occurred from recording capacity.
+
 ## 2026-08-25 — Original-Sei source transfer authorized
 
 - Accepted Sei II's source-recovery stop: exact editable `80e4c61`, the 83-path manifest, and retained package/hash were unavailable in the replacement context; no mutation or Site operation occurred.

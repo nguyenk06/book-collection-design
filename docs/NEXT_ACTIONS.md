@@ -9,7 +9,7 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Throttle:** `DRAIN`; preservation-only source-transfer brief prepared, not activated.
 - **Engineer state:** Original Sei available for transfer intake; Sei II waiting for source.
 - **Next owner:** `PRODUCT OWNER` — supply fresh usage and activate the original-Sei transfer slice.
-- **Usage:** Transfer estimate 2/4/6 points; minimum safe start 36%. Sei II release remains a later separate slice.
+- **Usage:** Fresh five-hour 76%, weekly 79% observational. Transfer estimate 2/4/6 projects 74%/72%/70%; the 30% floor is preserved. Sei II release remains a later separate slice.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
