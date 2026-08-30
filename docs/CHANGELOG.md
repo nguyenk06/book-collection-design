@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — Version 20 remediation brief authorized
+
+- Recorded Product Owner Decision 1:A and cleared the Planner Inbox.
+- Prepared one local-only Sei II implementation brief for the five confirmed mobile-navigation and Bookshelf failures, rooted strictly at authoritative Version 20.
+- Set the provisional profile to Terra/Medium/Standard, estimate to 8/14/22, minimum start to 70%, and automatic stop to 15%.
+- Kept push, Site save/version, preview, publication/deployment, production/schema/data work, held validation, rollback, restore, and destructive recovery excluded.
+
 ## 2026-08-29 — Exact candidate retired; Version 20 remediation planned
 
 - Recorded Product Owner Decision 1:A retiring exact `80e4c61` as an executable candidate while retaining its reports as historical evidence.

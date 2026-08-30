@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
-- **Engineer state:** `SEI / SEI II — AVAILABLE`; no eligible Engineer brief remains.
-- **Engineer continuation:** Exact `80e4c61` is retired as an executable candidate. A new remediation plan starts only from authoritative Sites-managed Version 20 and covers the five confirmed failures; no source or implementation work is authorized yet.
-- **Planner decisions:** One pending: authorize or revise the new Version 20-based local remediation brief.
-- **Active owner:** `PLANNER — QUATRE` — resolve Planner Inbox Decision 1.
-- **Blocking owner:** `PLANNER — QUATRE`; implementation brief preparation remains gated.
+- **Engineer state:** `SEI II — IMPLEMENTATION BRIEF READY`; original Sei is available with no assigned work.
+- **Engineer continuation:** Product Owner Decision 1:A authorizes one local-only Version 20-based remediation brief covering the five confirmed failures. Intake requires fresh usage of at least 70%; execution requires separate `!run` and must stop at 15%.
+- **Planner decisions:** None pending.
+- **Active owner:** `PRODUCT OWNER` — supply fresh usage and send Sei II `!brief`; retain separate `!run`.
+- **Blocking owner:** `EXTERNAL/WAIT` until fresh usage and exact Version 20 source intake gates pass.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The source locator began at **84% five-hour capacity** and **82% longer-period capacity** on 2026-08-29. No ending reading was exposed and none is inferred. Any later Engineer slice requires fresh readings and a new brief.
+The last Engineer slice began at **84% five-hour capacity** and **82% longer-period capacity**; no ending reading was exposed and none is inferred. The prepared normal-implementation slice requires fresh five-hour capacity of at least **70%**, checks longer-period capacity separately, and stops at **15%**.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
