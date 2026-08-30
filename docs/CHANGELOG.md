@@ -8,6 +8,9 @@
 - Recorded clean checkpoint `7b38423` and prepared a 5/9/14-point continuation with a 29% operational minimum and 15% stop.
 - Processed the continuation acceptance and automatic-stop report: a later isolated attempt emitted the runner banner but returned no test result, left `7b38423` unchanged, and performed no Site, remote, source, schema, data, or production operation.
 - Recorded `!95:69` and prepared a narrower 7/12/18-point continuation that proves project-scoped process ownership before resuming the still-authorized local validation sequence.
+- Accepted the runner-isolation evidence that the exact final responsive-link case now passes in isolation with exit code 0.
+- Recorded the partial focused-suite result—11 passes, two explicit 10-second test timeouts, and no attributable PID/final summary—without inferring a suite pass or source failure.
+- Recorded `!85:68` and prepared a 6/11/17-point owned-runner continuation requiring quiescence evidence, synchronous PID capture, and a bounded 30-second per-test allowance before full validation resumes.
 
 ## 2026-08-29 — Five-hour drain policy revised
 

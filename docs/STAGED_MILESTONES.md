@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** `!95:69` records 95% five-hour and 69% longer-period. The runner-isolation and validation continuation has an 18-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
+**Execution budget:** `!85:68` records 85% five-hour and 68% longer-period. The owned-runner validation continuation has a 17-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
 
-**Queue state:** Throttle `DRAIN`. The only active Engineer project is the Version 20-derived local remediation candidate at `7b38423`; a project-scoped runner-isolation continuation is prepared. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. The only active Engineer project is the Version 20-derived local remediation candidate at `7b38423`; an owned-runner validation continuation is prepared after the isolated responsive-link pass and partial focused-suite evidence. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

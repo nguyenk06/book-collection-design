@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Partial implementation at `7b38423`; runner-isolation continuation eligible at `!95:69`
+**Status:** Partial implementation at `7b38423`; owned-runner validation continuation eligible at `!85:68`
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** partial local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`; it must never be called or represented as `80e4c61`
 
-Sei II advanced the new local candidate to `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The five UI corrections remain in three files; one test-only responsive-link assertion was corrected after a definitive focused failure. A later isolated attempt emitted the runner banner but returned no result within its bounded window. This is ambiguous runner evidence, not a feature failure. The next continuation must prove process ownership and safely isolate only the runner it starts before focused completion, full tests, lint, build, responsive/accessibility QA, and forced cover-error validation. This is not a validated candidate and has no Site or release authority.
+Sei II advanced the new local candidate to `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The five UI corrections remain in three files; one test-only responsive-link assertion was corrected after a definitive focused failure, and that case now passes in isolation. A focused run then produced 11 passes and two explicit 10-second timeouts but no attributable process/final summary. The next continuation must first prove no unresolved candidate-scoped runner remains, then synchronously capture the owned PID before running the two timed-out cases with a bounded 30-second per-test allowance. Focused completion, full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain pending. This is not a validated candidate and has no Site or release authority.
 
 ## Purpose
 

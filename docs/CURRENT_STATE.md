@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — PARTIAL / RUNNER-ISOLATION CONTINUATION ELIGIBLE`; original Sei is available with no assigned work.
-- **Engineer continuation:** Sei II preserved the exact Version 20-derived candidate at clean local checkpoint `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. A second isolated attempt emitted the runner banner but returned no test result within its bounded window. This is an ambiguous runner result, not a feature pass or failure. Full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain incomplete. A narrower project-scoped runner-isolation continuation is ready.
+- **Engineer state:** `SEI II — PARTIAL / OWNED-RUNNER VALIDATION CONTINUATION ELIGIBLE`; original Sei is available with no assigned work.
+- **Engineer continuation:** Sei II preserved the exact Version 20-derived candidate at clean local checkpoint `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The isolated final responsive-link case now passes (`1 passed`, `16 skipped`, exit 0). The focused suite then reported 11 passes and two explicit 10-second test timeouts before its controller failed to retain an attributable PID or final summary. This is partial validation evidence, not a focused-suite pass. Full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain incomplete. A continuation requiring synchronous PID capture and bounded higher per-test timeouts is ready.
 - **Planner decisions:** None pending.
 - **Active owner:** `PRODUCT OWNER` — send Sei II `!brief`; retain separate `!run` after clean acceptance.
-- **Blocking owner:** `NONE` before intake; another ambiguous runner result remains an automatic stop.
+- **Blocking owner:** `NONE` before intake; unowned candidate-scoped processes or another missing final result remain automatic stops.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied `!95:69`: **95% five-hour** and **69% longer-period**. The runner-isolation and validation continuation is estimated at **7/12/18 points**; its operational minimum is **33%** (18 high + 15 floor), so it fits with 62 points of margin and stops at 15%.
+Product Owner supplied `!85:68`: **85% five-hour** and **68% longer-period**. The owned-runner validation continuation is estimated at **6/11/17 points**; its operational minimum is **32%** (17 high + 15 floor), so it fits with 53 points of margin and stops at 15%.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Continue the highest-value eligible work toward the floor without inventing work merely to consume usage.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Checkpoint `7b38423` includes one test-only responsive-link assertion correction. Two bounded attempts have failed to return a definitive result for the final responsive-link case. The next brief first requires a project-scoped, ownership-proven runner strategy; focused completion and all full validation remain pending. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.
+P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Checkpoint `7b38423` includes one test-only responsive-link assertion correction, and that final responsive-link case now passes in isolation. The focused suite remains incomplete after two separate tests exceeded the explicit 10-second limit and the controlling session lost the process/result record. The next brief requires read-only quiescence evidence, synchronous owned-PID capture, and bounded 30-second per-test validation. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.
