@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; P1 is complete and no execution is active.
-- **Engineer state:** `SEI II — IMPLEMENTATION BRIEF READY`; original Sei is available with no assigned work.
-- **Engineer continuation:** Product Owner Decision 1:A authorizes one local-only Version 20-based remediation brief covering the five confirmed failures. Intake requires fresh usage of at least 70%; execution requires separate `!run` and must stop at 15%.
+- **Throttle:** `DRAIN`; the remediation is `WAITING FOR RESET` at a recoverable local checkpoint.
+- **Engineer state:** `SEI II — PARTIAL / WAITING FOR RESET`; original Sei is available with no assigned work.
+- **Engineer continuation:** Sei II materialized exact Version 20 once and implemented the bounded five-failure scope in local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`. Required focused/full tests, lint, build, desktop/mobile QA, accessibility interaction review, and forced cover-error validation remain incomplete. A validation/resume brief is prepared for after reset.
 - **Planner decisions:** None pending.
-- **Active owner:** `PRODUCT OWNER` — supply fresh usage and send Sei II `!brief`; retain separate `!run`.
-- **Blocking owner:** `EXTERNAL/WAIT` until fresh usage and exact Version 20 source intake gates pass.
+- **Active owner:** `EXTERNAL/WAIT` — allow reset, then provide fresh usage and send Sei II `!brief`; retain separate `!run`.
+- **Blocking owner:** `EXTERNAL/WAIT`; the current 48% five-hour reading is below the follow-up slice's 50% minimum.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The last Engineer slice began at **84% five-hour capacity** and **82% longer-period capacity**; no ending reading was exposed and none is inferred. The prepared normal-implementation slice requires fresh five-hour capacity of at least **70%**, checks longer-period capacity separately, and stops at **15%**.
+The implementation brief was accepted at a Product Owner-reported temporary start override of **68% five-hour** and **79% longer-period**. Product Owner now reports **48% five-hour** and **76% longer-period**, an observed 20-point/3-point change across the slice. The validation/resume slice is estimated at **6/10/16 points**, requires **50%** to start, and stops at **15%**; it therefore waits for reset.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed the authoritative CYOA Site, owner session, Sites-managed repository, configured remote/`main`, and supported project-scoped credential. Exactly one read-only query returned published Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`. The follow-up locator proved the later source unavailable. Product Owner retired exact `80e4c61`; [the replacement plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md) requires a new Version 20-based candidate and new validation. Site save/publication and P3 live validation remain separately gated.
+P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II then created new local checkpoint `77464cd` from exact Version 20, changing only `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Type checking and diff/whitespace checks passed; all required runtime/test/build/QA evidence remains pending. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.

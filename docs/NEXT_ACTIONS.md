@@ -7,9 +7,9 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
-- **Engineer state:** One local-only Version 20 remediation brief is ready for Sei II; original Sei has no assigned work.
-- **Next owner:** `PRODUCT OWNER` — supply fresh usage and send Sei II `!brief`; use `!run` separately after clean acceptance.
-- **Usage:** Current readings are unknown. The brief estimates 8/14/22 points, requires at least 70% five-hour capacity, and stops at 15%.
+- **Engineer state:** Sei II has partial local checkpoint `77464cd`; validation/resume work is waiting for reset. Original Sei has no assigned work.
+- **Next owner:** `EXTERNAL/WAIT` — after reset, provide fresh readings and send Sei II `!brief`; use `!run` separately after clean acceptance.
+- **Usage:** Current five-hour 48%, longer-period 76%. The 6/10/16 validation/resume estimate requires 50% to start and stops at 15%.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -114,6 +114,8 @@ That procedure stopped cleanly: archive metadata contains 49 generated files und
 Product Owner Decision 1:A retired exact `80e4c61` and authorized Designer planning. [Version 20 Confirmed-Failure Remediation Plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md) defines a new local-only candidate rooted at exact published Version 20. It covers only mobile Shopping discovery, primary multi-row Bookcase, horizontal Shelf alternate, selectable informative missing positions, and selected-book cover/fallback presentation. Implementation, Site save, publication, and held validation remain unapproved.
 
 Product Owner then selected Decision 1:A on the plan. One implementation brief is prepared for Sei II. It may obtain a supported local working copy of exact remote Version 20, implement and validate only the five confirmed fixes, create a new recoverable local candidate identity, and report. It authorizes no push, Site save/version, preview, deployment, publication, production access/mutation, migration, or held validation.
+
+Sei II accepted at a Product Owner-reported 68% five-hour exception, materialized clean exact Version 20 once, implemented the five UI corrections, and committed local checkpoint `77464cd`. Only type check and diff/whitespace validation completed. The focused runner did not return a result; full tests, lint, build, local responsive/accessibility QA, and forced cover-load-error validation are unrun. A separate validation/resume slice is prepared; the checkpoint is partial and must not be saved or published.
 
 ## Other workstreams
 

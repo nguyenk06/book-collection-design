@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — Version 20 remediation checkpointed pending validation
+
+- Accepted Sei II's implementation acceptance and partial handoff, including the reported Product Owner start exception at 68% five-hour and 79% longer-period capacity.
+- Recorded local checkpoint `77464cd` from exact Version 20 with only the page, global-style, and collection-behavior test files changed for the five approved UI corrections.
+- Recorded type-check and diff/whitespace passes; focused tests returned no completion result, while full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain unrun.
+- Recorded fresh Product Owner readings of 48% five-hour and 76% longer-period and prepared a 6/10/16-point, 50%-minimum validation/resume slice for after reset.
+
 ## 2026-08-29 — Version 20 remediation brief authorized
 
 - Recorded Product Owner Decision 1:A and cleared the Planner Inbox.

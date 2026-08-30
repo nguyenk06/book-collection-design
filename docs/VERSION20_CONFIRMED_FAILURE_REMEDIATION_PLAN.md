@@ -1,8 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Designer plan; implementation not authorized  
+**Status:** Partial implementation at `77464cd`; validation/resume waiting for reset  
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
-**Candidate identity:** new and not yet created; must never be called or represented as `80e4c61`
+**Candidate identity:** partial local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`; it must never be called or represented as `80e4c61`
+
+Sei II has created the new local checkpoint identity `77464cd1fd1d374ae482b1e61cef4839335f33ab` from exact Version 20. The five UI corrections are present in three files, but required focused/full tests, lint, build, responsive/accessibility QA, and forced cover-error validation are incomplete. This checkpoint is not yet a validated candidate and has no Site or release authority.
 
 ## Purpose
 
