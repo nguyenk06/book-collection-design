@@ -6,14 +6,14 @@ It is not a task backlog, technical issue tracker, Engineer progress log, change
 
 ## Current Decisions
 
-### Decision 1 — Release candidate after exhausted source recovery
+### Decision 1 — Authorize the new Version 20-based remediation brief?
 
-Supported remote access proves `main` is published Version 20. Sei II has no editable `80e4c61`, the retained package is deployment-only, and the authorized original-Sei locator found none of `80e4c61`, `608553f`, or Version 20 in all six available repository contexts. Exact recovery is exhausted without reconstruction.
+Product Owner Decision 1:A retired exact `80e4c61` as an executable candidate while preserving its historical evidence. Designer prepared [Version 20 Confirmed-Failure Remediation Plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md), limited to the five confirmed mobile-navigation and Bookshelf failures. The new candidate must start from exact Sites-managed Version 20 source and receive a new identity and full validation.
 
-- **A — Retire exact `80e4c61` (recommended):** preserve its evidence as historical validation, then authorize Designer planning for a new Version 20-based implementation candidate covering only the confirmed mobile navigation and Bookshelf fixes. Implementation, save, and publication remain separately gated.
-- **B — Keep exact-source requirement:** leave P2 parked until the Product Owner supplies a genuine commit-containing clone/object store or independently verified editable-source package.
-- **DEFER:** make no new brief or recovery attempt.
+- **A — Authorize brief preparation (recommended):** Relena may create one local-only implementation brief for Sei II using the documented scope, 8/14/22 estimate, 70% minimum start, and 15% stop floor. Implementation still requires `!brief` then separate `!run`.
+- **B — Revise planning:** keep implementation parked and return the minimum requested change.
+- **DEFER:** keep the plan documented with no executable brief.
 
-This decision does not authorize reconstruction, implementation, source modification, push, Site save, publication, deployment, migration, production mutation, or held validation.
+This decision cannot authorize source work now, Site save/version, preview, publication, deployment, production access/mutation, migration, held validation, retry, rollback, restore, or destructive recovery.
 
 When several decisions are pending, number them and keep each independently understandable. Planner may respond compactly, for example `1: B; 2: A; 3: DEFER`. Do not delay urgent or high-risk decisions for batching.

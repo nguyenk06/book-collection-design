@@ -6,7 +6,7 @@ For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md).
 
 Future Library-first presentation, Shopkeeper naming, responsive shell, testing access, write-lock UX, themes, bookcases, and optional personality layers are documented in [My Library Visual Experience](VISUAL_EXPERIENCE.md). They are planning direction only and do not alter the current queue or Site state.
 
-Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A, the static Phase D foundation, and confirmed validation-failure remediation are complete locally at recoverable application checkpoint `80e4c61`, a direct descendant of `608553f`. Saved preference persistence remains a separate later slice. B/C remain new security/runtime foundations and G remains a larger new recommendation/rule capability.
+Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A, the static Phase D foundation, and confirmed validation-failure remediation were once validated at `608553f`/`80e4c61`, but their editable source is no longer available. Those checkpoints are historical evidence, not recoverable candidates. The next remediation must start from exact Version 20 and receive a new identity and full validation.
 
 ## Authoritative snapshot
 
@@ -25,10 +25,10 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
 - **Engineer state:** `SEI / SEI II — AVAILABLE`; no eligible Engineer brief remains.
-- **Engineer continuation:** The authorized original-Sei locator inspected six available repository contexts read-only and found none containing `80e4c61`, `608553f`, or the Version 20 commit object. Exact editable-source recovery is exhausted within available contexts. No further recovery attempt is authorized.
-- **Planner decisions:** One pending: retire exact `80e4c61` and design a new Version 20-based remediation candidate, or retain the exact-source requirement while waiting for an externally supplied genuine source artifact.
+- **Engineer continuation:** Exact `80e4c61` is retired as an executable candidate. A new remediation plan starts only from authoritative Sites-managed Version 20 and covers the five confirmed failures; no source or implementation work is authorized yet.
+- **Planner decisions:** One pending: authorize or revise the new Version 20-based local remediation brief.
 - **Active owner:** `PLANNER — QUATRE` — resolve Planner Inbox Decision 1.
-- **Blocking owner:** `PLANNER — QUATRE`; P2 cannot proceed without a release-candidate direction.
+- **Blocking owner:** `PLANNER — QUATRE`; implementation brief preparation remains gated.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
@@ -51,7 +51,7 @@ Workflow planning uses five-hour execution slices. One Engineer project is activ
 | My Library Phase A shell | Complete locally; checkpoint `608553f` includes it | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; later checkpoint/release separately gated |
 | My Library static Phase D themes | Complete locally; checkpoint `608553f` | Semantic conversion complete; desktop/mobile light/dark/system QA, focus, overflow, and sampled contrast passed | Admin/catalog visual routes blocked locally by sign-in; forced-colors/reduced-motion emulation and preference persistence remain later |
 | Local D1 remediation | Complete | Private byte-for-byte backup; disposable-clone proof; unchanged `0004` → `0005` → `0006` applied once; preservation/integrity checks, 101/101 tests, scoped lint, and build passed | Retain backup privately; no restore or additional local write authorized |
-| Confirmed validation-failure remediation | Complete locally; release parked before save | Exact `80e4c61`; 31/31 focused, 163/163 full, lint/build/diff/secret/migration/no-write checks passed; exact 83-path package created locally | Required remote push timed out ambiguously; 0 save/publication/deployment attempts; Version 20 unchanged |
+| Confirmed validation-failure remediation | Historical validation evidence; editable source unavailable | `80e4c61` reports recorded 31/31 focused and 163/163 full plus lint/build checks; retained package is deployment-only | Exact candidate retired; new Version 20-based candidate requires new implementation and validation |
 
 ## Data and export status
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed the authoritative CYOA Site, owner session, Sites-managed repository, configured remote/`main`, and supported project-scoped credential. Exactly one read-only query returned published Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`. The follow-up original-Sei locator found no available repository containing the candidate or its ancestors; the retained package remains deployment-only. P2 exact-checkpoint release resumption is blocked pending a Product Owner direction. P3 live validation remains held.
+P1 confirmed the authoritative CYOA Site, owner session, Sites-managed repository, configured remote/`main`, and supported project-scoped credential. Exactly one read-only query returned published Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`. The follow-up locator proved the later source unavailable. Product Owner retired exact `80e4c61`; [the replacement plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md) requires a new Version 20-based candidate and new validation. Site save/publication and P3 live validation remain separately gated.

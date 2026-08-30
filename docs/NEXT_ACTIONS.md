@@ -8,7 +8,7 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
 - **Engineer state:** Original Sei and Sei II are available; no eligible Engineer brief remains.
-- **Next owner:** `PLANNER — QUATRE` — resolve the release-candidate direction in `PLANNER_INBOX.md`.
+- **Next owner:** `PLANNER — QUATRE` — approve or revise the new Version 20-based remediation-brief plan in `PLANNER_INBOX.md`.
 - **Usage:** The source locator began at five-hour 84% and longer-period 82%; ending usage was not exposed. Obtain fresh readings before another slice.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
@@ -73,11 +73,11 @@ Product Owner authorized [Version 20 Live Validation Checklist](VERSION20_LIVE_V
 
 Interim results confirm failures in mobile Shopping discoverability and desktop/mobile Bookshelf layout/detail behavior. Identifier and download checks remain held rather than failed. Product Owner authorized a 3/5/7-point read-only assessment comparing published Version 20 and later checkpoint `608553f`; no remediation baseline, implementation, correction, or Site action is authorized.
 
-## Conditional remediation queue
+## Historical conditional remediation queue
 
 1. **P1 — complete:** Read-only assessment of exact Version 20 versus `608553f`.
 2. **Designer intake — complete:** Accepted the evidence and selected exact `608553f` as the clearly safer baseline within delegated authority.
-3. **P2 — complete locally:** Mobile Shopkeeper discovery, primary multi-row Bookcase, horizontal Shelf alternate, useful/selectable missing positions, and selected-book cover/fallback behavior completed at `80e4c61`.
+3. **P2 — historically validated, source unavailable:** Mobile Shopping discovery, primary multi-row Bookcase, horizontal Shelf alternate, useful/selectable missing positions, and selected-book cover/fallback behavior were reported complete at `80e4c61`; the checkpoint is now retired and cannot supply a new candidate.
 
 P2 may be created without another Product Owner decision only if P1 establishes one clearly safer baseline that preserves Version 20, avoids unnecessary reconstruction, retains `608553f`, resolves shared-file collisions, and needs no production/schema/data/security/product decision. P2 is local-only and excludes Site save/version, preview/deployment/publication, production access/mutation, schema/data migration, held validation scenarios, broad redesign, retry/republish, rollback, restore, and destructive recovery.
 
@@ -108,10 +108,10 @@ Original Sei reverified the retained archive hash but found no separate manifest
 That procedure stopped cleanly: archive metadata contains 49 generated files under `dist/`, not a mechanically identifiable 83-path editable-source payload. The recovery destination remains empty. The active queue is now:
 
 1. **P1 — complete:** the supported Sites-managed context and credential path were confirmed; exactly one read-only query returned remote `main` at exact Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`. No mutation or retry occurred.
-2. **P2 — blocked / Planner decision:** conditional exact-`80e4c61` release resume. Remote state is definitive, but exact editable candidate source is absent from Sei II and all six original-Sei repository contexts inspected. It cannot become an Engineer brief. The Design repository and deployment archive are never substitutes.
+2. **P2 — retired:** exact-`80e4c61` release resume is closed. Preserve its evidence historically; do not present it as accessible source or validation for a new candidate.
 3. **P3 — held:** Product Owner live-validation items remain parked and are neither failures nor implementation requirements.
 
-The Decision 1:A source locator completed with `SOURCE NOT LOCATED`. No available repository contains `80e4c61`, `608553f`, or Version 20; the 83-path tree, ancestry, and collision boundary therefore could not be verified. No mutation occurred. Further work requires either an externally supplied genuine exact source artifact or explicit retirement of the exact candidate followed by a separately designed Version 20-based remediation.
+Product Owner Decision 1:A retired exact `80e4c61` and authorized Designer planning. [Version 20 Confirmed-Failure Remediation Plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md) defines a new local-only candidate rooted at exact published Version 20. It covers only mobile Shopping discovery, primary multi-row Bookcase, horizontal Shelf alternate, selectable informative missing positions, and selected-book cover/fallback presentation. Implementation, Site save, publication, and held validation remain unapproved.
 
 ## Other workstreams
 

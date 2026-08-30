@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — Exact candidate retired; Version 20 remediation planned
+
+- Recorded Product Owner Decision 1:A retiring exact `80e4c61` as an executable candidate while retaining its reports as historical evidence.
+- Added a new local-only plan rooted at authoritative Sites-managed Version 20 for the five confirmed mobile-navigation and Bookshelf failures.
+- Required a new candidate identity and full validation; prohibited inherited `80e4c61` validation claims, Phase A/D restoration, schema/data work, Site operations, and held validation scope.
+- Added a separate Planner gate before any Engineer implementation brief is created.
+
 ## 2026-08-29 — Exact source not located
 
 - Accepted original Sei's matching source-locator acceptance and completion reports.
