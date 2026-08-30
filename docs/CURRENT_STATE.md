@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
-- **Engineer state:** `SEI II — P1 COMPLETE / AVAILABLE`; original Sei's deployment-archive transfer path is closed.
-- **Engineer continuation:** P1 definitively proved the supported credential and configured remote path and returned remote `main` at Version 20. P2 remains outline-only because exact editable `80e4c61` is not present in Sei II. No Engineer brief is currently eligible.
-- **Planner decisions:** One pending: whether to authorize a bounded read-only original-Sei repository/commit availability inspection, retire the exact candidate in favor of a new Version 20-based remediation plan, or keep recovery parked.
-- **Active owner:** `PLANNER — QUATRE` — resolve Planner Inbox Decision 1.
-- **Blocking owner:** `PLANNER — QUATRE`; exact editable-source recovery direction blocks P2.
+- **Engineer state:** `ORIGINAL SEI — SOURCE-LOCATOR BRIEF READY / SEI II — AVAILABLE`.
+- **Engineer continuation:** Product Owner Decision 1:A authorizes one read-only original-Sei source-locator diagnostic. It may inspect the continuing repository/working context for exact `80e4c61` and report a supported preservation path, but may not copy, push, change source, perform a Site operation, or continue P2.
+- **Planner decisions:** None pending. Decision 1:A selected the bounded original-Sei source locator.
+- **Active owner:** `PRODUCT OWNER` — provide fresh usage, then send `!brief` to original Sei; retain separate `!run`.
+- **Blocking owner:** `EXTERNAL/WAIT` until fresh usage is supplied; P2 remains blocked by exact editable-source availability.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-P1 intake/run used fresh readings of **93% five-hour capacity** and **83% longer-period capacity** on 2026-08-29. No ending reading was exposed and none is inferred. The next Engineer slice requires a new reading and authority.
+P1 intake/run used fresh readings of **93% five-hour capacity** and **83% longer-period capacity** on 2026-08-29. No ending reading was exposed and none is inferred. The new diagnostic has a 35% minimum start, a 15% automatic stop, and requires fresh readings before intake.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 

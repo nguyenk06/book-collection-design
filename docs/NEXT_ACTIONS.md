@@ -7,9 +7,9 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
-- **Engineer state:** Sei II is available after definitive P1 completion; no eligible Engineer brief remains.
-- **Next owner:** `PLANNER — QUATRE` — resolve the exact-source recovery direction in `PLANNER_INBOX.md`.
-- **Usage:** P1 began at five-hour 93% and longer-period 83%; ending usage was not exposed. Obtain fresh readings before another Engineer slice.
+- **Engineer state:** Original Sei has one authorized read-only source-locator brief ready; Sei II is available with no eligible release brief.
+- **Next owner:** `PRODUCT OWNER` — provide fresh readings, then send original Sei `!brief`; execution remains behind separate `!run`.
+- **Usage:** P1 began at five-hour 93% and longer-period 83%; ending usage was not exposed. The source locator requires a fresh five-hour reading of at least 35% and stops at 15%.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -110,6 +110,8 @@ That procedure stopped cleanly: archive metadata contains 49 generated files und
 1. **P1 — complete:** the supported Sites-managed context and credential path were confirmed; exactly one read-only query returned remote `main` at exact Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`. No mutation or retry occurred.
 2. **P2 — outline only / source-gated:** conditional exact-`80e4c61` release resume. Remote state is definitive, but exact editable candidate source is absent in Sei II. It cannot become an Engineer brief until the source-recovery direction is decided and the complete candidate is genuinely available. The Design repository is never a substitute.
 3. **P3 — held:** Product Owner live-validation items remain parked and are neither failures nor implementation requirements.
+
+Decision 1:A authorizes a new read-only source-locator slice in the continuing original-Sei context. It verifies whether the actual clean `80e4c61` commit/tree and 83-path editable source remain present and identifies a supported preservation path. It authorizes no checkout change, copy, extraction, push, source modification, Site operation, or P2 continuation.
 
 ## Other workstreams
 

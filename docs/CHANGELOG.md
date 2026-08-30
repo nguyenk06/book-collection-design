@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-29 — Original-Sei source locator selected
+
+- Recorded Product Owner Decision 1:A and cleared the Planner Inbox.
+- Prepared one diagnostic-only original-Sei brief to inspect the existing repository/working context for exact clean `80e4c61`, its 83-path tree, and a supported preservation path.
+- Kept source copying/materialization, checkout change, push, Site operations, release continuation, migration, and production mutation outside authority.
+
 ## 2026-08-29 — P1 credential and branch-head diagnosis complete
 
 - Accepted Sei II's matching P1 acceptance and completion evidence.
