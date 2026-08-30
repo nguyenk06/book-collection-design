@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the five-hour reset is confirmed and no execution is active.
-- **Engineer state:** `SEI — SOURCE TRANSFER CLOSED / SEI II — READY FOR P1 STATUS/INTAKE`.
-- **Engineer continuation:** Original Sei proved the retained exact-hash artifact is deployment-only `dist/` output and cannot mechanically yield the 83-path editable-source manifest. That transfer path is closed. After reset, Sei II may intake only the prepared P1 diagnostic brief; P2 remains a non-executable outline.
-- **Planner decisions:** None pending. Product Owner selected Decision 1:A on 2026-08-29, authorizing P1 intake after reset and a fresh reading of at least 35%, with execution still requiring a separate `!run`.
-- **Active owner:** `PRODUCT OWNER` — send `!status` to Sei II, then `!brief` only after the status confirms the required context.
-- **Blocking owner:** `NONE` before read-only status; P1 execution remains gated by context acceptance and separate `!run`.
+- **Throttle:** `DRAIN`; P1 is complete and no execution is active.
+- **Engineer state:** `SEI II — P1 COMPLETE / AVAILABLE`; original Sei's deployment-archive transfer path is closed.
+- **Engineer continuation:** P1 definitively proved the supported credential and configured remote path and returned remote `main` at Version 20. P2 remains outline-only because exact editable `80e4c61` is not present in Sei II. No Engineer brief is currently eligible.
+- **Planner decisions:** One pending: whether to authorize a bounded read-only original-Sei repository/commit availability inspection, retire the exact candidate in favor of a new Version 20-based remediation plan, or keep recovery parked.
+- **Active owner:** `PLANNER — QUATRE` — resolve Planner Inbox Decision 1.
+- **Blocking owner:** `PLANNER — QUATRE`; exact editable-source recovery direction blocks P2.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied fresh post-reset readings of **95% five-hour capacity** and **84% longer-period capacity** on 2026-08-29. P1 clears its 35% diagnostic minimum. Sei II may run read-only `!status`, followed separately by `!brief` if context matches; execution still requires `!run`.
+P1 intake/run used fresh readings of **93% five-hour capacity** and **83% longer-period capacity** on 2026-08-29. No ending reading was exposed and none is inferred. The next Engineer slice requires a new reading and authority.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` archive identity still passes SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`, but metadata proves it contains 49 generated `dist/` files rather than the 83-path editable source. Recovery stayed empty and reconstruction remains forbidden. P1 will use a supported authoritative Sites-managed context for one diagnostic branch-head read after reset. P2 release resumption cannot become a full brief until P1 returns definitive source, branch, credential, and remote-state evidence.
+P1 confirmed the authoritative CYOA Site, owner session, Sites-managed repository, configured remote/`main`, and supported project-scoped credential. Exactly one read-only query returned `6a2191b1b506d171d576cbb6a6b160964595c051`, the published Version 20 source, not `80e4c61`; no retry or mutation occurred. Exact editable `80e4c61` remains unavailable in Sei II, so P2 release resumption cannot become a full brief. P3 live validation remains held.

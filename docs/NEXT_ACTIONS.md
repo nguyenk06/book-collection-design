@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; no execution is active.
-- **Engineer state:** Original Sei's deployment-archive transfer path is closed; Sei II is ready for P1 read-only status and conditional intake.
-- **Next owner:** `PRODUCT OWNER` — send `!status` to Sei II; use `!brief` separately only after context reconciliation.
-- **Usage:** Fresh post-reset five-hour 95%, longer-period 84%. P1 clears its 35% diagnostic minimum and preserves the 15% stopping floor.
+- **Throttle:** `DRAIN`; P1 is complete and no execution is active.
+- **Engineer state:** Sei II is available after definitive P1 completion; no eligible Engineer brief remains.
+- **Next owner:** `PLANNER — QUATRE` — resolve the exact-source recovery direction in `PLANNER_INBOX.md`.
+- **Usage:** P1 began at five-hour 93% and longer-period 83%; ending usage was not exposed. Obtain fresh readings before another Engineer slice.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -107,8 +107,8 @@ Original Sei reverified the retained archive hash but found no separate manifest
 
 That procedure stopped cleanly: archive metadata contains 49 generated files under `dist/`, not a mechanically identifiable 83-path editable-source payload. The recovery destination remains empty. The active queue is now:
 
-1. **P1 — authorized, status/intake eligible:** Decision 1:A permits intake of the diagnostic-only supported Sites-managed source/credential reconnection and exactly one read-only `refs/heads/main` query. Fresh usage is 95%; execution remains behind a separate `!run`; no push, source change, Site operation, or release continuation.
-2. **P2 — outline only:** conditional exact-`80e4c61` release resume. It cannot become an Engineer brief until P1 returns definitive source, branch, credential, and remote-state evidence. The Design repository is never a substitute for Sites-managed source.
+1. **P1 — complete:** the supported Sites-managed context and credential path were confirmed; exactly one read-only query returned remote `main` at exact Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`. No mutation or retry occurred.
+2. **P2 — outline only / source-gated:** conditional exact-`80e4c61` release resume. Remote state is definitive, but exact editable candidate source is absent in Sei II. It cannot become an Engineer brief until the source-recovery direction is decided and the complete candidate is genuinely available. The Design repository is never a substitute.
 3. **P3 — held:** Product Owner live-validation items remain parked and are neither failures nor implementation requirements.
 
 ## Other workstreams

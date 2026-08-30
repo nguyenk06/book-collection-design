@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — P1 credential and branch-head diagnosis complete
+
+- Accepted Sei II's matching P1 acceptance and completion evidence.
+- Confirmed authoritative Site/session/repository/credential identity and one definitive read-only query: remote `main` is published Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`, not candidate `80e4c61`.
+- Recorded zero fetch, pull, push, ref update, source/Site/release operation, retry, or production mutation.
+- Kept P2 outline-only because exact editable candidate source remains absent in Sei II; added a Planner decision for the next source-recovery direction and retained P3 on hold.
+
 ## 2026-08-29 — P1 post-reset capacity confirmed
 
 - Recorded fresh Product Owner readings of 95% five-hour capacity and 84% longer-period capacity.
