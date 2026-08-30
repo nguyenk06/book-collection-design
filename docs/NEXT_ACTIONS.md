@@ -7,9 +7,9 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; no execution is active.
-- **Engineer state:** Sei II has partial local checkpoint `7b38423`; the isolated responsive-link test passes, while the focused suite returned 11 passes plus two explicit 10-second timeouts without a final summary. An owned-runner validation continuation is eligible now. Original Sei has no assigned work.
-- **Next owner:** `PRODUCT OWNER` — send Sei II `!brief`; use `!run` separately after clean acceptance.
-- **Usage:** `!85:68` records five-hour 85% and longer-period 68%. The 6/11/17 estimate has a 32% operational minimum and stops at 15%, so the slice fits.
+- **Engineer state:** Sei II has partial local checkpoint `7b38423`; the isolated responsive-link test passes, while the focused suite returned 11 passes plus two explicit 10-second timeouts without a final summary. Current permissions deny the process-command-line query required to prove quiescence, so the task is parked. Original Sei has no assigned work.
+- **Next owner:** `PLANNER — QUATRE / PRODUCT OWNER` — resolve Planner Inbox Decision 1. No Engineer brief is active.
+- **Usage:** `!79:67` records five-hour 79% and longer-period 67%. Re-estimate the selected recovery path and preserve the 15% floor before any later `!brief`/`!run`.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 

@@ -11,6 +11,8 @@
 - Accepted the runner-isolation evidence that the exact final responsive-link case now passes in isolation with exit code 0.
 - Recorded the partial focused-suite result—11 passes, two explicit 10-second test timeouts, and no attributable PID/final summary—without inferring a suite pass or source failure.
 - Recorded `!85:68` and prepared a 6/11/17-point owned-runner continuation requiring quiescence evidence, synchronous PID capture, and a bounded 30-second per-test allowance before full validation resumes.
+- Processed the owned-runner acceptance and blocker: the required read-only full-command-line/ancestry query returned `Access denied`, no equivalent visibility was available, and Sei II correctly started or terminated no runner.
+- Recorded `!79:67`, parked the affected task, and opened Planner Inbox Decision 1 between one elevated read-only inspection, an exact-commit isolated validation workspace, or deferral.
 
 ## 2026-08-29 — Five-hour drain policy revised
 
