@@ -22,6 +22,22 @@ Before acceptance, Sei reports context continuity, unpublished work, editable-so
 - Eligibility command or condition:
 - Queue/throttle condition:
 
+## Usage and model profile
+
+- Preferred model: <!-- Default Sei profile: GPT-5.6 Terra. -->
+- Reasoning effort: <!-- Default: Medium. -->
+- Speed mode: <!-- Default: Standard; Fast remains off. -->
+- Current five-hour percentage:
+- Five-hour reset time:
+- Current longer-period Codex percentage:
+- Estimated five-hour consumption: <!-- LOW / LIKELY / HIGH -->
+- Minimum starting percentage: <!-- Diagnostic/status default: 35%. -->
+- Automatic stopping percentage: **15%**
+- Safe checkpoint:
+- Work deferred until the next reset:
+
+The Product Owner selects the actual model. This request cannot change it automatically. Sei may escalate from Terra to Sol only when this accepted request recommends it or a later Planner/Product Owner decision approves it. Model, reasoning, tools, context, and task complexity can change observed usage.
+
 Keep this file in `briefs/` until Designer accepts the corresponding sanitized report. The request must exist in transport before Engineer begins; repository planning text, a copy-ready prompt, or an embedded estimation gate is not a brief and does not authorize work retroactively.
 
 ## Authoritative inputs

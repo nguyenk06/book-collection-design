@@ -32,10 +32,15 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 ## Five-hour usage record
 
 - Active Engineer project: <!-- CYOA; confirm no other Engineer project shared the window. -->
+- Preferred model / reasoning / speed:
+- Actual model / reasoning / speed:
+- Five-hour reset time:
+- Longer-period usage before work:
 - Usage before `!brief`:
 - Usage before `!run`:
 - Usage after each named checkpoint: <!-- checkpoint = percentage -->
 - Ending usage:
+- Automatic stopping percentage: 15%
 - Observed burn: <!-- starting minus ending; evidence only, not a universal conversion -->
 - Reset state: <!-- CONTINUING | WAITING FOR RESET | NOT APPLICABLE -->
 - Exact safe resume point and next command:

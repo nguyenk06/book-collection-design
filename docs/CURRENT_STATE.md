@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-25
+**Last reviewed:** 2026-08-29
 
 For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
 
@@ -23,19 +23,19 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the first transfer stopped untouched, and a post-reassessment manifest-derivation/transfer brief is prepared but awaits fresh usage and explicit `!brief`/`!run`.
-- **Engineer state:** `SEI — AVAILABLE FOR DERIVATION/TRANSFER / SEI II — WAITING FOR SOURCE`.
-- **Engineer continuation:** Original Engineer — Sei may accept only the post-reassessment brief. It must derive a candidate path list read-only from the verified archive, require an exact comparison with the independently retained 83-path acceptance evidence, then write/copy/verify recovery artifacts and stop. Sei II remains parked.
+- **Throttle:** `DRAIN`; engineering is `WAITING FOR RESET` and no execution is active.
+- **Engineer state:** `SEI — SOURCE TRANSFER BLOCKED / SEI II — WAITING FOR RESET`.
+- **Engineer continuation:** Original Sei proved the retained exact-hash artifact is deployment-only `dist/` output and cannot mechanically yield the 83-path editable-source manifest. That transfer path is closed. After reset, Sei II may intake only the prepared P1 diagnostic brief; P2 remains a non-executable outline.
 - **Planner decisions:** None pending. Product Owner selected the materially different replacement-context path on 2026-08-25.
-- **Active owner:** `PRODUCT OWNER` — supply a fresh usage reading and explicitly activate the original-Sei transfer slice.
-- **Blocking owner:** `ORIGINAL ENGINEER — SEI` retained-source availability after brief acceptance.
+- **Active owner:** `EXTERNAL/WAIT` — allow the five-hour window to reset, then provide a fresh reading and send `!status` to Sei II.
+- **Blocking owner:** `EXTERNAL/WAIT` — five-hour capacity reset and authoritative Sites-managed source context.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied fresh readings of **60% five-hour capacity** and **76% weekly capacity** on 2026-08-26. The five-hour reading governs the slice and clears the post-reassessment derivation/transfer estimate of **3/5/7 points** with its **37%** minimum safe start; the weekly display remains observational. Brief intake is eligible, but execution still requires a separate `!run`. The later Sei II release remains a separate slice requiring a new fresh reading.
+Product Owner supplied a fresh reading of **8% five-hour capacity**, approximately **1 hour 44 minutes to reset** at the start of this documentation pass, and **86% longer-period capacity** on 2026-08-29. Engineering is `WAITING FOR RESET`; no brief intake or run may start in this window.
 
-Workflow planning now uses five-hour execution slices. The percentage is available capacity, not a fixed token or task conversion. One Engineer project is active per window by default; usage is recorded before `!brief`, before `!run`, and after named checkpoints. The provisional 30% floor remains, and capacity/window exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
+Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
 ## Current workstreams
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Checkpoint `80e4c61` archive identity passed again at SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`, but the original transfer stopped before copying because no separate manifest artifact remained. The processed 2026-08-22 acceptance report independently retains the exact observed 83-path list. Product Owner authorized a read-only derivation procedure that must reconcile the archive's actual source inventory exactly against that evidence before creating the recovery manifest. Any mismatch stops untouched. Transfer completion will not authorize Sei II materialization or release.
+Checkpoint `80e4c61` archive identity still passes SHA-256 `90BF4CD0421C990655D996DA4CF636FDD7BA8E41A46501A983B5B3AFC2BA4A86`, but metadata proves it contains 49 generated `dist/` files rather than the 83-path editable source. Recovery stayed empty and reconstruction remains forbidden. P1 will use a supported authoritative Sites-managed context for one diagnostic branch-head read after reset. P2 release resumption cannot become a full brief until P1 returns definitive source, branch, credential, and remote-state evidence.

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-29 — Rolling five-hour workflow and recovery queue revised
+
+- Replaced the universal 30% execution reserve with a provisional 15% five-hour automatic stopping floor plus a separate longer-period usage check.
+- Added task-class minimum starts of 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk; retained one active Engineer project per window and resumable `WAITING FOR RESET` behavior.
+- Added required model/reasoning/speed and complete rolling-usage fields to Engineer brief and handoff templates; recorded default Quatre, Relena, and Sei profiles while preserving Product Owner model selection.
+- Accepted Sei's safe manifest-derivation stop: the exact-hash archive contains only 49 generated `dist/` files, no 83-path source inventory could be derived, the recovery destination stayed empty, and no source/Git/Site/release operation occurred.
+- Prepared P1 diagnostic-only credential/branch-head intake for after reset; kept P2 outline-only and P3 validation held.
+
 ## 2026-08-26 — Manifest-transfer intake capacity cleared
 
 - Recorded fresh Product Owner readings of 60% five-hour capacity and 76% weekly capacity.

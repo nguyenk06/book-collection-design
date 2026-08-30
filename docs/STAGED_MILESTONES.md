@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Last reported reading was 90% before the completed post-reset run. The standing 30% protected reserve is restored; obtain a fresh reading before another batch.
+**Execution budget:** Current reading is 8% five-hour and 86% longer-period. Engineering is `WAITING FOR RESET`. The provisional five-hour automatic stopping floor is 15%; obtain fresh readings after reset.
 
-**Queue state:** Throttle `DRAIN`. P1 local D1 remediation and P2 cumulative Version 20 publication are complete; checkpoint `608553f` was excluded. No Engineer brief remains. Later validation and production gates remain closed.
+**Queue state:** Throttle `DRAIN`. New P1 credential/branch-head diagnosis is prepared but cannot start before reset; P2 release resume is outline-only; P3 live validation remains held. Later production gates remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
@@ -103,7 +103,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 - Treat each execution brief as one independently resumable five-hour slice within the milestone. Do not run CYOA and another Engineer project in the same window by default.
 - Record usage before `!brief`, before `!run`, and after each named checkpoint. Treat percentages as capacity evidence, not a token/task conversion.
-- Start only when current usage covers the brief's high estimate plus the provisional 30% floor. Reaching the boundary creates `WAITING FOR RESET`, not `BLOCKED`.
+- Apply task-class minimum starts: 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Stop automatically at 15%; reaching the boundary creates `WAITING FOR RESET`, not `BLOCKED`.
 - Finish and validate the current slice before starting another; reserve usage for tests, evidence, transport, and a clean stop.
 - If one workstream blocks, report it and continue the next independently eligible, non-conflicting workstream. Waiting for a production gate does not idle authorized local work.
 - A task-level question causes `WAITING FOR ANSWER`, not a global stop, unless it affects all eligible work, crosses a risk gate, threatens shared architecture/correctness, leaves no independent task, or usage approaches reserve.

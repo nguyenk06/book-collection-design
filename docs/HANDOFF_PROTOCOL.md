@@ -28,6 +28,8 @@ Designer includes Sei's assignment directly in every Engineer brief: assigned ro
 
 Before `!brief` acceptance, Sei inspects actual message/Sites context for prior unpublished implementation, editable source, dirty or unsaved state, latest saved and published Site versions, context match, source composition, and collision boundaries. If expected and actual context disagree, park only the affected task and report the mismatch. Preserve and inventory unpublished work before materializing, replacing, rebuilding, or overwriting anything. If source is absent or inaccessible, report it and do not reconstruct without authority. Every acceptance, blocker, completion, and source-recovery report identifies Engineer — Sei.
 
+Default role profiles are Planner — Quatre: **GPT-5.6 Sol / Medium / Standard**; Designer — Relena: **GPT-5.6 Sol / High / Standard**; Engineer — Sei: **GPT-5.6 Terra / Medium / Standard**. The Product Owner selects the actual model in each chat. A brief recommends a profile but cannot change it automatically. Fast mode remains off by default. Sei may escalate from Terra to Sol only when the accepted brief recommends it or a later Planner/Product Owner decision approves it.
+
 ## Roles
 
 ### Designer
@@ -547,13 +549,14 @@ Treat the displayed percentage as available capacity, not as a token count or fi
 - One active Engineer project is allowed per five-hour window by default. Do not spend the same window on CYOA and another Engineer project.
 - A brief authorizes one independently resumable slice, even when the product milestone spans several windows.
 - Record displayed usage immediately before `!brief`, immediately before `!run`, and after every milestone or named safe checkpoint.
-- Every brief states its minimum starting percentage, low/likely/high expected usage range, safe checkpoints, automatic stops, and work deferred to the next reset.
-- Retain the provisional 30% floor. Start only when `current usage >= high estimate + 30%`.
+- Every brief records the preferred model, reasoning effort, speed mode, current five-hour percentage, reset time, current longer-period Codex percentage, estimated five-hour consumption, minimum starting percentage, automatic stopping percentage, safe checkpoint, and work deferred to the next reset.
+- Use a provisional **15% five-hour automatic stopping floor**. Check the longer-period allowance separately; it is not an alternative execution reserve and does not make an exhausted five-hour window runnable.
+- Provisional minimum starts are: diagnostic/status only **35%**; small implementation **50%**; normal implementation **70%**; migration, release, or other high-risk work **85%**. Work that cannot fit one window must be split into independently resumable briefs.
 - Reaching the floor or the end of the five-hour window changes Engineer state to `WAITING FOR RESET`, not `BLOCKED`. Preserve the exact checkpoint, remaining scope, validation state, and next command.
 - After reset, run `!status`, then use `!brief` for a new slice or `!run` to resume an already accepted slice from its recorded checkpoint. A reset does not broaden authority.
-- Capture starting, checkpoint, and ending percentages for the next 3–5 briefs. Designer will replace rough ranges only after observed burn evidence is sufficient.
+- Capture starting, checkpoint, and ending percentages for observed runs. Model, reasoning, tools, context, and task complexity can change actual usage; Designer calibrates ranges from evidence rather than treating percentages as fixed work units.
 
-Before issuing `!run`, Designer must review current remaining usage, estimate one coherent prioritized five-hour slice, and identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, likely blockers, and clean stopping cost. Reduce or split work when the high range does not preserve capacity for ordinary remediation, complete validation, evidence, transport, and the 30% floor.
+Before issuing `!run`, Designer must review both usage periods, estimate one coherent prioritized five-hour slice, and identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, likely blockers, and clean stopping cost. Reduce or split work when the task class's minimum start is unmet or the slice cannot preserve the 15% automatic stopping floor.
 
 After `!run`, Engineer owns practical sequencing within the approved slice. Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. A blocked stream is preserved and reported, then Engineer may move only to another independently eligible, non-conflicting stream already authorized inside the same project and slice. Do not consume capacity merely to approach the reserve. Enter `WAITING FOR RESET` at the protected boundary; drain or stop when no eligible work remains or every path requires new authority. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
 
