@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-29 — P1 post-reset diagnostic authorized
+
+- Recorded Product Owner Decision 1:A and removed it from the Planner Inbox.
+- Authorized Sei II to accept P1 only after the five-hour reset and a fresh reading of at least 35%; retained a separate `!run` gate for the single read-only branch-head query.
+- Kept P2 outline-only, P3 held, and all push/source/Site/release operations closed.
+
 ## 2026-08-29 — Rolling five-hour workflow and recovery queue revised
 
 - Replaced the universal 30% execution reserve with a provisional 15% five-hour automatic stopping floor plus a separate longer-period usage check.

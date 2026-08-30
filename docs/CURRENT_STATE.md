@@ -26,8 +26,8 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Throttle:** `DRAIN`; engineering is `WAITING FOR RESET` and no execution is active.
 - **Engineer state:** `SEI — SOURCE TRANSFER BLOCKED / SEI II — WAITING FOR RESET`.
 - **Engineer continuation:** Original Sei proved the retained exact-hash artifact is deployment-only `dist/` output and cannot mechanically yield the 83-path editable-source manifest. That transfer path is closed. After reset, Sei II may intake only the prepared P1 diagnostic brief; P2 remains a non-executable outline.
-- **Planner decisions:** None pending. Product Owner selected the materially different replacement-context path on 2026-08-25.
-- **Active owner:** `EXTERNAL/WAIT` — allow the five-hour window to reset, then provide a fresh reading and send `!status` to Sei II.
+- **Planner decisions:** None pending. Product Owner selected Decision 1:A on 2026-08-29, authorizing P1 intake after reset and a fresh reading of at least 35%, with execution still requiring a separate `!run`.
+- **Active owner:** `EXTERNAL/WAIT` — allow the five-hour window to reset, then provide fresh readings and send `!status` to Sei II before `!brief`.
 - **Blocking owner:** `EXTERNAL/WAIT` — five-hour capacity reset and authoritative Sites-managed source context.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 

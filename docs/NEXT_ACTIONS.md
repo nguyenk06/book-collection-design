@@ -8,7 +8,7 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; engineering is `WAITING FOR RESET`.
 - **Engineer state:** Original Sei's deployment-archive transfer path is closed; Sei II is waiting for the P1 diagnostic slice after reset.
-- **Next owner:** `EXTERNAL/WAIT` — after reset, provide fresh readings and send `!status` to Sei II before `!brief`.
+- **Next owner:** `EXTERNAL/WAIT` — Decision 1:A is recorded; after reset, provide fresh readings and send `!status` to Sei II before `!brief`.
 - **Usage:** Five-hour 8%, approximately 1h44m to reset at capture; longer-period 86%. The 15% stopping floor has already been crossed, so no Engineer intake or execution may begin.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
@@ -107,7 +107,7 @@ Original Sei reverified the retained archive hash but found no separate manifest
 
 That procedure stopped cleanly: archive metadata contains 49 generated files under `dist/`, not a mechanically identifiable 83-path editable-source payload. The recovery destination remains empty. The active queue is now:
 
-1. **P1 — prepared, waiting for reset:** diagnostic-only supported Sites-managed source/credential reconnection and exactly one read-only `refs/heads/main` query. Minimum start 35%; no push, source change, Site operation, or release continuation.
+1. **P1 — authorized, waiting for reset:** Decision 1:A permits later intake of the diagnostic-only supported Sites-managed source/credential reconnection and exactly one read-only `refs/heads/main` query. Minimum start 35%; execution remains behind a separate `!run`; no push, source change, Site operation, or release continuation.
 2. **P2 — outline only:** conditional exact-`80e4c61` release resume. It cannot become an Engineer brief until P1 returns definitive source, branch, credential, and remote-state evidence. The Design repository is never a substitute for Sites-managed source.
 3. **P3 — held:** Product Owner live-validation items remain parked and are neither failures nor implementation requirements.
 
