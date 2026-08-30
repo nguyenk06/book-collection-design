@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-29 — P1 post-reset capacity confirmed
+
+- Recorded fresh Product Owner readings of 95% five-hour capacity and 84% longer-period capacity.
+- Confirmed that P1 clears its 35% diagnostic minimum and 15% stopping floor.
+- Made Sei II read-only `!status` and conditional `!brief` intake eligible; retained separate `!run` activation.
+
 ## 2026-08-29 — P1 post-reset diagnostic authorized
 
 - Recorded Product Owner Decision 1:A and removed it from the Planner Inbox.

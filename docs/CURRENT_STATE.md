@@ -23,17 +23,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; engineering is `WAITING FOR RESET` and no execution is active.
-- **Engineer state:** `SEI — SOURCE TRANSFER BLOCKED / SEI II — WAITING FOR RESET`.
+- **Throttle:** `DRAIN`; the five-hour reset is confirmed and no execution is active.
+- **Engineer state:** `SEI — SOURCE TRANSFER CLOSED / SEI II — READY FOR P1 STATUS/INTAKE`.
 - **Engineer continuation:** Original Sei proved the retained exact-hash artifact is deployment-only `dist/` output and cannot mechanically yield the 83-path editable-source manifest. That transfer path is closed. After reset, Sei II may intake only the prepared P1 diagnostic brief; P2 remains a non-executable outline.
 - **Planner decisions:** None pending. Product Owner selected Decision 1:A on 2026-08-29, authorizing P1 intake after reset and a fresh reading of at least 35%, with execution still requiring a separate `!run`.
-- **Active owner:** `EXTERNAL/WAIT` — allow the five-hour window to reset, then provide fresh readings and send `!status` to Sei II before `!brief`.
-- **Blocking owner:** `EXTERNAL/WAIT` — five-hour capacity reset and authoritative Sites-managed source context.
+- **Active owner:** `PRODUCT OWNER` — send `!status` to Sei II, then `!brief` only after the status confirms the required context.
+- **Blocking owner:** `NONE` before read-only status; P1 execution remains gated by context acceptance and separate `!run`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied a fresh reading of **8% five-hour capacity**, approximately **1 hour 44 minutes to reset** at the start of this documentation pass, and **86% longer-period capacity** on 2026-08-29. Engineering is `WAITING FOR RESET`; no brief intake or run may start in this window.
+Product Owner supplied fresh post-reset readings of **95% five-hour capacity** and **84% longer-period capacity** on 2026-08-29. P1 clears its 35% diagnostic minimum. Sei II may run read-only `!status`, followed separately by `!brief` if context matches; execution still requires `!run`.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
