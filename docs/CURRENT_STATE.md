@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
-- **Engineer state:** `ORIGINAL SEI — SOURCE-LOCATOR BRIEF READY / SEI II — AVAILABLE`.
-- **Engineer continuation:** Product Owner Decision 1:A authorizes one read-only original-Sei source-locator diagnostic. It may inspect the continuing repository/working context for exact `80e4c61` and report a supported preservation path, but may not copy, push, change source, perform a Site operation, or continue P2.
-- **Planner decisions:** None pending. Decision 1:A selected the bounded original-Sei source locator.
-- **Active owner:** `PRODUCT OWNER` — provide fresh usage, then send `!brief` to original Sei; retain separate `!run`.
-- **Blocking owner:** `EXTERNAL/WAIT` until fresh usage is supplied; P2 remains blocked by exact editable-source availability.
+- **Engineer state:** `SEI / SEI II — AVAILABLE`; no eligible Engineer brief remains.
+- **Engineer continuation:** The authorized original-Sei locator inspected six available repository contexts read-only and found none containing `80e4c61`, `608553f`, or the Version 20 commit object. Exact editable-source recovery is exhausted within available contexts. No further recovery attempt is authorized.
+- **Planner decisions:** One pending: retire exact `80e4c61` and design a new Version 20-based remediation candidate, or retain the exact-source requirement while waiting for an externally supplied genuine source artifact.
+- **Active owner:** `PLANNER — QUATRE` — resolve Planner Inbox Decision 1.
+- **Blocking owner:** `PLANNER — QUATRE`; P2 cannot proceed without a release-candidate direction.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-P1 intake/run used fresh readings of **93% five-hour capacity** and **83% longer-period capacity** on 2026-08-29. No ending reading was exposed and none is inferred. The new diagnostic has a 35% minimum start, a 15% automatic stop, and requires fresh readings before intake.
+The source locator began at **84% five-hour capacity** and **82% longer-period capacity** on 2026-08-29. No ending reading was exposed and none is inferred. Any later Engineer slice requires fresh readings and a new brief.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed the authoritative CYOA Site, owner session, Sites-managed repository, configured remote/`main`, and supported project-scoped credential. Exactly one read-only query returned `6a2191b1b506d171d576cbb6a6b160964595c051`, the published Version 20 source, not `80e4c61`; no retry or mutation occurred. Exact editable `80e4c61` remains unavailable in Sei II, so P2 release resumption cannot become a full brief. P3 live validation remains held.
+P1 confirmed the authoritative CYOA Site, owner session, Sites-managed repository, configured remote/`main`, and supported project-scoped credential. Exactly one read-only query returned published Version 20 SHA `6a2191b1b506d171d576cbb6a6b160964595c051`. The follow-up original-Sei locator found no available repository containing the candidate or its ancestors; the retained package remains deployment-only. P2 exact-checkpoint release resumption is blocked pending a Product Owner direction. P3 live validation remains held.

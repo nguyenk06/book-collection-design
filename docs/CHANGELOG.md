@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — Exact source not located
+
+- Accepted original Sei's matching source-locator acceptance and completion reports.
+- Recorded that six available repository contexts contain none of exact candidate `80e4c61`, intermediate `608553f`, or published Version 20; the candidate tree, 83-path inventory, ancestry, and collision boundary therefore could not be verified locally.
+- Confirmed zero checkout/source/Git-remote/Site/release/production mutation and no viable local preservation path from genuine editable source.
+- Closed further automatic recovery and added a Planner decision between retiring the exact candidate for a separately designed Version 20-based remediation or waiting for an externally supplied genuine source artifact.
+
 ## 2026-08-29 — Original-Sei source locator selected
 
 - Recorded Product Owner Decision 1:A and cleared the Planner Inbox.
