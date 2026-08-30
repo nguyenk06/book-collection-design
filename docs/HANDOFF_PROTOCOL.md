@@ -149,7 +149,8 @@ Use explicit `!` commands for defined lifecycle actions and ordinary sentences f
 2. Designer: `!inbox` to process Engineer evidence in the external local `inbox/`, or prepare an implementation/estimation brief as a normal request.
 3. Site Engineer: `!brief` to accept the next eligible brief, then `!drain` when the current safe unit should finish without new intake. Engineer does not use `!inbox`.
 4. Any role: `!status` for a read-only state report or `!init` for a read-only state refresh.
-5. Designer: `!prompt-engineer`, `!prompt-designer`, or `!prompt-planner` to produce a copy/paste-ready startup prompt.
+5. Any role: `!40:75` to record 40% five-hour and 75% longer-period usage without activating work.
+6. Designer: `!prompt-engineer`, `!prompt-designer`, or `!prompt-planner` to produce a copy/paste-ready startup prompt.
 
 Never omit `!` when explicit workflow behavior is intended. Plain words and abbreviations remain conversation.
 
@@ -161,6 +162,7 @@ The `!` prefix identifies explicit workflow intent. Commands are case-insensitiv
 | --- | --- | --- |
 | `!init` | All | Read-only role initialization or state refresh |
 | `!status` | All | Read-only current-state report; do not process artifacts or change authority |
+| `!<five-hour>:<longer-period>` | All | Record the two displayed usage percentages; `!40:75` means 40% five-hour and 75% longer-period |
 | `!inbox` | Planner | Read and report `docs/PLANNER_INBOX.md`; do not process local Engineer transport |
 | `!inbox` | Designer | Process the external local Engineer `inbox/` lifecycle |
 | `!brief` | Site Engineer | Check and process the next eligible brief |
@@ -172,6 +174,8 @@ The `!` prefix identifies explicit workflow intent. Commands are case-insensitiv
 | `!stop` | Authorized operator | Stop at the nearest safe checkpoint |
 
 Optional compact aliases are `!pe`, `!pd`, `!pp`, `!ci`, and `!cb`. `!ci` is Designer-only and maps to Designer `!inbox`; `!cb` is Engineer-only and maps to `!brief`. Plain `PE`, `PD`, `PP`, `CI`, `CB`, `INIT`, `RUN`, `DRAIN`, or `STOP` tokens are not commands.
+
+The numeric usage command accepts exactly two whole-number percentages from 0 through 100 separated by one colon immediately after `!`. The first is always the five-hour window and the second is the longer-period Codex allowance. It may accompany another explicit command; record the reading first and then perform only that command's documented behavior. A usage command never means `!brief` or `!run`, never activates work, and never broadens authority. If either value is missing, malformed, or out of range, do not guess.
 
 Role identity dispatches `!inbox`: Quatre addresses repository `docs/PLANNER_INBOX.md`; Relena addresses external local Engineer `inbox/`; Sei has no `!inbox` command. The command never crosses those boundaries or gains the other role's authority.
 
@@ -318,7 +322,7 @@ ACTION:
 
 `TL;DR` and `ACTION` are always present in either form. Use exactly one ownership form: single-owner `NEXT OWNER`, or parallel `ACTIVE OWNERS` plus `BLOCKING OWNER`. Do not mix or omit these labels in meaningful workflow responses.
 
-Every meaningful response to `!init`, `!status`, role-applicable `!inbox`, `!brief`, `!run`, `!drain`, and `!stop` must use exactly one footer form. The requirement survives chat compaction or summarization and remains mandatory without a full reinitialization. It also applies to brief acceptance, implementation completion, Designer handoff processing, Planner decisions, blocked states, and publication/deployment reports. Short or trivial non-workflow acknowledgements do not require it.
+Every meaningful response to a numeric usage command, `!init`, `!status`, role-applicable `!inbox`, `!brief`, `!run`, `!drain`, or `!stop` must use exactly one footer form. The requirement survives chat compaction or summarization and remains mandatory without a full reinitialization. It also applies to brief acceptance, implementation completion, Designer handoff processing, Planner decisions, blocked states, and publication/deployment reports. Short or trivial non-workflow acknowledgements do not require it.
 
 - Keep `TL;DR` concise and mobile-readable.
 - `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.

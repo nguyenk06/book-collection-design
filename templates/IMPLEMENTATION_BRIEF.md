@@ -31,6 +31,8 @@ Sei must output the expected title at startup so the Product Owner can apply it 
 
 ## Usage and reset boundary
 
+Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. It records usage only and never accepts or activates this brief.
+
 - Preferred model: <!-- Default Sei profile: GPT-5.6 Terra. Recommend Sol only when justified. -->
 - Reasoning effort: <!-- Default: Medium. -->
 - Speed mode: <!-- Default: Standard; Fast remains off. -->

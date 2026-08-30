@@ -24,15 +24,16 @@ Use the `book-collection-design` Codex Project and repository <https://github.co
 
 - `!init` — read-only initialization or state refresh
 - `!status` — read-only current-state report
+- `!<five-hour>:<longer-period>` — record usage; `!40:75` means 40% five-hour and 75% longer-period
 - `!inbox` (`!ci`) — process the Engineer inbox lifecycle
 - `!prompt-engineer` (`!pe`) — output the Engineer startup prompt
 - `!prompt-designer` (`!pd`) — output the Designer startup prompt
 - `!prompt-planner` (`!pp`) — output the Planner startup prompt
 - `!run`, `!drain`, `!stop` — control one approved five-hour execution slice within existing gates and authority
 
-Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation.
+Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation. A numeric usage command records capacity only and creates no authority; it may accompany another command, and malformed values must not be inferred.
 
-Every meaningful response to `!init`, `!status`, `!inbox`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, or handoff validation.
+Every meaningful response to a numeric usage command, `!init`, `!status`, `!inbox`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, or handoff validation.
 
 ## `!init`
 

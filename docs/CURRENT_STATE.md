@@ -24,8 +24,8 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — PARTIAL / VALIDATION RESUME ELIGIBLE`; original Sei is available with no assigned work.
-- **Engineer continuation:** Sei II materialized exact Version 20 once and implemented the bounded five-failure scope in local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`. Required focused/full tests, lint, build, desktop/mobile QA, accessibility interaction review, and forced cover-error validation remain incomplete. A validation/resume brief is prepared for after reset.
+- **Engineer state:** `SEI II — PARTIAL / VALIDATION CONTINUATION ELIGIBLE`; original Sei is available with no assigned work.
+- **Engineer continuation:** Sei II advanced the exact Version 20-derived candidate to clean local checkpoint `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The runner now executes; one responsive-link assertion was corrected test-only, but the bounded rerun timed out at its final case. Full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain incomplete. A new bounded continuation brief is ready.
 - **Planner decisions:** None pending.
 - **Active owner:** `PRODUCT OWNER` — send Sei II `!brief`; retain separate `!run` after clean acceptance.
 - **Blocking owner:** `NONE` before intake; source/collision/test gates remain automatic stops.
@@ -33,7 +33,7 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 ## Usage reserve
 
-The implementation brief was accepted at **68% five-hour** and **79% longer-period**. Product Owner now reports **48% five-hour** and **76% longer-period**, an observed 20-point/3-point change. The validation/resume slice is estimated at **6/10/16 points**; its operational minimum is **31%** (16 high + 15 floor), so it is eligible now and stops at 15%.
+Product Owner supplied `!40:75`: **40% five-hour** and **75% longer-period**. The next validation continuation is estimated at **5/9/14 points**; its operational minimum is **29%** (14 high + 15 floor), so it fits with 11 points of margin and stops at 15%.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Continue the highest-value eligible work toward the floor without inventing work merely to consume usage.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II then created new local checkpoint `77464cd` from exact Version 20, changing only `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Type checking and diff/whitespace checks passed; all required runtime/test/build/QA evidence remains pending. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.
+P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Checkpoint `7b38423` includes one test-only responsive-link assertion correction. Focused completion and all full validation remain pending, so this is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.

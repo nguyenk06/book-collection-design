@@ -24,6 +24,8 @@ Before acceptance, Sei reports context continuity, unpublished work, editable-so
 
 ## Usage and model profile
 
+Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. It records usage only and never accepts or activates this request.
+
 - Preferred model: <!-- Default Sei profile: GPT-5.6 Terra. -->
 - Reasoning effort: <!-- Default: Medium. -->
 - Speed mode: <!-- Default: Standard; Fast remains off. -->

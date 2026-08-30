@@ -2,7 +2,7 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Current reading is 48% five-hour and 76% longer-period. The validation/resume slice has a 16-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
+**Execution budget:** `!40:75` records 40% five-hour and 75% longer-period. The validation continuation has a 14-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
 
 **Queue state:** Throttle `DRAIN`. New P1 credential/branch-head diagnosis is prepared but cannot start before reset; P2 release resume is outline-only; P3 live validation remains held. Later production gates remain closed.
 

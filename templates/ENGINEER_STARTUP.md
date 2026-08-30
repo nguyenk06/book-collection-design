@@ -22,14 +22,15 @@ Output the required title so the Product Owner can rename the ChatGPT conversati
 
 - `!init` — read-only initialization or state refresh
 - `!status` — read-only current-state report
+- `!<five-hour>:<longer-period>` — record usage; `!40:75` means 40% five-hour and 75% longer-period
 - `!brief` (`!cb`) — check and process the next eligible brief
 - `!run`, `!drain`, `!stop` — control one approved five-hour execution slice within existing gates and authority
 
-Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation.
+Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation. A numeric usage command records capacity only and creates no authority; it may accompany another command, and malformed values must not be inferred.
 
 Engineer does not use `!inbox`; Engineer writes reports to the external local `inbox/` and uses `!brief` or `!cb` to process eligible briefs.
 
-Every meaningful response to `!init`, `!status`, `!brief`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, tests, or completion reporting.
+Every meaningful response to a numeric usage command, `!init`, `!status`, `!brief`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, tests, or completion reporting.
 
 ## `!init`
 

@@ -7,9 +7,9 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; P1 is complete and no execution is active.
-- **Engineer state:** Sei II has partial local checkpoint `77464cd`; validation/resume is eligible now. Original Sei has no assigned work.
+- **Engineer state:** Sei II has partial local checkpoint `7b38423`; validation continuation is eligible now. Original Sei has no assigned work.
 - **Next owner:** `PRODUCT OWNER` — send Sei II `!brief`; use `!run` separately after clean acceptance.
-- **Usage:** Current five-hour 48%, longer-period 76%. The 6/10/16 estimate has a 31% operational minimum and stops at 15%, so the slice fits.
+- **Usage:** `!40:75` records five-hour 40% and longer-period 75%. The 5/9/14 estimate has a 29% operational minimum and stops at 15%, so the slice fits.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -115,7 +115,7 @@ Product Owner Decision 1:A retired exact `80e4c61` and authorized Designer plann
 
 Product Owner then selected Decision 1:A on the plan. One implementation brief is prepared for Sei II. It may obtain a supported local working copy of exact remote Version 20, implement and validate only the five confirmed fixes, create a new recoverable local candidate identity, and report. It authorizes no push, Site save/version, preview, deployment, publication, production access/mutation, migration, or held validation.
 
-Sei II accepted at a Product Owner-reported 68% five-hour exception, materialized clean exact Version 20 once, implemented the five UI corrections, and committed local checkpoint `77464cd`. Only type check and diff/whitespace validation completed. The focused runner did not return a result; full tests, lint, build, local responsive/accessibility QA, and forced cover-load-error validation are unrun. A separate validation/resume slice is prepared; the checkpoint is partial and must not be saved or published.
+Sei II accepted at a Product Owner-reported 68% five-hour exception, materialized clean exact Version 20 once, and implemented the five UI corrections. The first validation resume proved the focused runner executes, observed 16 passes and one responsive-link assertion failure, corrected that assertion test-only, and stopped after the bounded rerun timed out at the final case without reporting a new failure. Clean checkpoint `7b38423` remains partial; full validation is still required and no Site operation is allowed.
 
 ## Other workstreams
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-30 — Compact usage command and validation continuation
+
+- Defined all-role `!<five-hour>:<longer-period>` syntax; `!40:75` records 40% five-hour and 75% longer-period without creating authority or replacing `!brief`/`!run`.
+- Added the compact numeric command to all role startup templates and Engineer brief templates.
+- Accepted Sei II's validation-resume intake and partial handoff: the runner completed 16 passes plus one responsive-link assertion failure, that assertion was corrected test-only, and the bounded rerun timed out at its final case without a reported post-fix failure.
+- Recorded clean checkpoint `7b38423` and prepared a 5/9/14-point continuation with a 29% operational minimum and 15% stop.
+
 ## 2026-08-29 — Five-hour drain policy revised
 
 - Recorded Product Owner direction to use each five-hour window productively toward the 15% automatic stopping floor instead of idling below task-class guide percentages.

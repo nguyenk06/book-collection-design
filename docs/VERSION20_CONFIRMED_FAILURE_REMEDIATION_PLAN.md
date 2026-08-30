@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Partial implementation at `77464cd`; validation/resume eligible at 48%
+**Status:** Partial implementation at `7b38423`; validation continuation eligible at `!40:75`
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** partial local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`; it must never be called or represented as `80e4c61`
 
-Sei II has created the new local checkpoint identity `77464cd1fd1d374ae482b1e61cef4839335f33ab` from exact Version 20. The five UI corrections are present in three files, but required focused/full tests, lint, build, responsive/accessibility QA, and forced cover-error validation are incomplete. This checkpoint is not yet a validated candidate and has no Site or release authority.
+Sei II advanced the new local candidate to `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The five UI corrections remain in three files; one test-only responsive-link assertion was corrected after a definitive focused failure. The bounded rerun timed out at the final case, so focused completion, full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain incomplete. This is not a validated candidate and has no Site or release authority.
 
 ## Purpose
 
