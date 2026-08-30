@@ -58,7 +58,7 @@ When Queue Mode is `ENABLED` and throttle is `RUN` after an authorized `!run` co
 2. After completing or parking a task, write its required sanitized report and refresh the live `briefs/` directory.
 3. Record displayed usage immediately before `!brief`, immediately before `!run`, and after every milestone or named safe checkpoint.
 4. Re-read throttle, dependencies, answers, collision boundaries, usage reserve, window/reset state, and remaining authority before accepting another task.
-5. Run `!brief` for the highest-priority independently eligible brief only when it belongs to the same approved project/slice, meets its task-class minimum start, and preserves the 15% stopping floor. Do not stop merely because another task is blocked or waiting.
+5. Run `!brief` for the highest-priority independently eligible brief only when it belongs to the same approved project/slice and its remaining high estimate plus the 15% floor fits. Planning-class thresholds guide sizing but do not force usable capacity to sit idle. Do not stop merely because another task is blocked or waiting.
 6. When the five-hour window or protected floor is reached, preserve the safe checkpoint and report `WAITING FOR RESET`, not `BLOCKED`. After reset use `!status`, then `!brief` or `!run` as applicable; never infer renewed authority.
 7. Report `AVAILABLE` only after a fresh queue scan proves that no eligible authorized brief remains in the active slice.
 

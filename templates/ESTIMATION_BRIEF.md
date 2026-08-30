@@ -31,7 +31,8 @@ Before acceptance, Sei reports context continuity, unpublished work, editable-so
 - Five-hour reset time:
 - Current longer-period Codex percentage:
 - Estimated five-hour consumption: <!-- LOW / LIKELY / HIGH -->
-- Minimum starting percentage: <!-- Diagnostic/status default: 35%. -->
+- Planning-class guide: <!-- Diagnostic/status default: 35%. -->
+- Operational minimum starting percentage: <!-- Remaining HIGH estimate + 15% floor. -->
 - Automatic stopping percentage: **15%**
 - Safe checkpoint:
 - Work deferred until the next reset:

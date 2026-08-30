@@ -23,19 +23,19 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Current role identities:** Planner — Quatre; Designer — Relena; Engineer — Sei.
 
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the remediation is `WAITING FOR RESET` at a recoverable local checkpoint.
-- **Engineer state:** `SEI II — PARTIAL / WAITING FOR RESET`; original Sei is available with no assigned work.
+- **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
+- **Engineer state:** `SEI II — PARTIAL / VALIDATION RESUME ELIGIBLE`; original Sei is available with no assigned work.
 - **Engineer continuation:** Sei II materialized exact Version 20 once and implemented the bounded five-failure scope in local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`. Required focused/full tests, lint, build, desktop/mobile QA, accessibility interaction review, and forced cover-error validation remain incomplete. A validation/resume brief is prepared for after reset.
 - **Planner decisions:** None pending.
-- **Active owner:** `EXTERNAL/WAIT` — allow reset, then provide fresh usage and send Sei II `!brief`; retain separate `!run`.
-- **Blocking owner:** `EXTERNAL/WAIT`; the current 48% five-hour reading is below the follow-up slice's 50% minimum.
+- **Active owner:** `PRODUCT OWNER` — send Sei II `!brief`; retain separate `!run` after clean acceptance.
+- **Blocking owner:** `NONE` before intake; source/collision/test gates remain automatic stops.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-The implementation brief was accepted at a Product Owner-reported temporary start override of **68% five-hour** and **79% longer-period**. Product Owner now reports **48% five-hour** and **76% longer-period**, an observed 20-point/3-point change across the slice. The validation/resume slice is estimated at **6/10/16 points**, requires **50%** to start, and stops at **15%**; it therefore waits for reset.
+The implementation brief was accepted at **68% five-hour** and **79% longer-period**. Product Owner now reports **48% five-hour** and **76% longer-period**, an observed 20-point/3-point change. The validation/resume slice is estimated at **6/10/16 points**; its operational minimum is **31%** (16 high + 15 floor), so it is eligible now and stops at 15%.
 
-Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. Minimum starts are 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Capacity exhaustion is `WAITING FOR RESET`, not `BLOCKED`.
+Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Continue the highest-value eligible work toward the floor without inventing work merely to consume usage.
 
 ## Current workstreams
 

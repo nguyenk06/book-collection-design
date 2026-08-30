@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-29 — Five-hour drain policy revised
+
+- Recorded Product Owner direction to use each five-hour window productively toward the 15% automatic stopping floor instead of idling below task-class guide percentages.
+- Reclassified 35/50/70/85 as planning guides; an approved slice's operational minimum is its remaining high estimate plus the 15% floor.
+- Preserved one active Engineer project, safe checkpoints, separate longer-period checks, explicit gates, and the rule against inventing work merely to consume usage.
+- Made the 6/10/16 validation/resume slice eligible at the current 48% five-hour reading because its operational minimum is 31%.
+
 ## 2026-08-29 — Version 20 remediation checkpointed pending validation
 
 - Accepted Sei II's implementation acceptance and partial handoff, including the reported Product Owner start exception at 68% five-hour and 79% longer-period capacity.

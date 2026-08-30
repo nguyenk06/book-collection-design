@@ -2,7 +2,7 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Current reading is 8% five-hour and 86% longer-period. Engineering is `WAITING FOR RESET`. The provisional five-hour automatic stopping floor is 15%; obtain fresh readings after reset.
+**Execution budget:** Current reading is 48% five-hour and 76% longer-period. The validation/resume slice has a 16-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
 
 **Queue state:** Throttle `DRAIN`. New P1 credential/branch-head diagnosis is prepared but cannot start before reset; P2 release resume is outline-only; P3 live validation remains held. Later production gates remain closed.
 
@@ -103,7 +103,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 - Treat each execution brief as one independently resumable five-hour slice within the milestone. Do not run CYOA and another Engineer project in the same window by default.
 - Record usage before `!brief`, before `!run`, and after each named checkpoint. Treat percentages as capacity evidence, not a token/task conversion.
-- Apply task-class minimum starts: 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk. Stop automatically at 15%; reaching the boundary creates `WAITING FOR RESET`, not `BLOCKED`.
+- Use 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk as sizing guides. An approved slice may run when its remaining high estimate plus the 15% floor fits. Continue useful authorized work toward that floor; never invent work merely to consume usage.
 - Finish and validate the current slice before starting another; reserve usage for tests, evidence, transport, and a clean stop.
 - If one workstream blocks, report it and continue the next independently eligible, non-conflicting workstream. Waiting for a production gate does not idle authorized local work.
 - A task-level question causes `WAITING FOR ANSWER`, not a global stop, unless it affects all eligible work, crosses a risk gate, threatens shared architecture/correctness, leaves no independent task, or usage approaches reserve.

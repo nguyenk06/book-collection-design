@@ -38,7 +38,8 @@ Sei must output the expected title at startup so the Product Owner can apply it 
 - Five-hour reset time: <!-- Displayed reset time or UNKNOWN. -->
 - Current longer-period Codex percentage: <!-- Record separately. -->
 - Estimated five-hour consumption: <!-- LOW / LIKELY / HIGH percentage-point range; planning estimate, not token conversion. -->
-- Minimum starting percentage: <!-- Diagnostic 35%; small 50%; normal 70%; migration/release/high-risk 85%. -->
+- Planning-class guide: <!-- Diagnostic 35%; small 50%; normal 70%; migration/release/high-risk 85%. -->
+- Operational minimum starting percentage: <!-- Remaining HIGH estimate + 15% floor. -->
 - Automatic stopping percentage: **15%**
 - Usage immediately before `!brief`: <!-- Record at acceptance. -->
 - Usage immediately before `!run`: <!-- Record at activation. -->
@@ -46,7 +47,7 @@ Sei must output the expected title at startup so the Product Owner can apply it 
 - Automatic stop conditions: <!-- Include reserve/window, authority, source, collision, validation, and risk boundaries. -->
 - Work deferred until the next reset: <!-- Explicit remaining work that this slice does not authorize. -->
 
-The Product Owner selects the actual chat model; this brief only recommends it and cannot switch models. Fast mode is off by default. Sei may use Sol only when this accepted brief recommends it or a later Planner/Product Owner decision approves it. Start only when the task-class minimum is met and the estimate can preserve the 15% floor. If capacity or the five-hour window ends, preserve the current safe checkpoint and report `WAITING FOR RESET`; do not classify capacity exhaustion as `BLOCKED`.
+The Product Owner selects the actual chat model; this brief only recommends it and cannot switch models. Fast mode is off by default. Sei may use Sol only when this accepted brief recommends it or a later Planner/Product Owner decision approves it. The class guide informs sizing; an approved slice may start or resume when its remaining high estimate plus the 15% floor fits. Productively drain toward the floor using safe authorized units. If no safe unit fits or the window ends, preserve the checkpoint and report `WAITING FOR RESET`, not `BLOCKED`.
 
 Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
 
