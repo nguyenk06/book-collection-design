@@ -1,6 +1,6 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Partial implementation at `77464cd`; validation/resume waiting for reset  
+**Status:** Partial implementation at `77464cd`; validation/resume waiting for reset
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** partial local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`; it must never be called or represented as `80e4c61`
 
