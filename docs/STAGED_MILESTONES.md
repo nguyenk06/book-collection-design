@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** `!40:75` records 40% five-hour and 75% longer-period. The validation continuation has a 14-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
+**Execution budget:** `!95:69` records 95% five-hour and 69% longer-period. The runner-isolation and validation continuation has an 18-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
 
-**Queue state:** Throttle `DRAIN`. New P1 credential/branch-head diagnosis is prepared but cannot start before reset; P2 release resume is outline-only; P3 live validation remains held. Later production gates remain closed.
+**Queue state:** Throttle `DRAIN`. The only active Engineer project is the Version 20-derived local remediation candidate at `7b38423`; a project-scoped runner-isolation continuation is prepared. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
