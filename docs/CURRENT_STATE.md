@@ -24,11 +24,11 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; replacement identity `SEI III` is prepared but not initialized, context-verified, brief-accepted, or active.
+- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; `SEI III — INITIALIZED / CONTEXT VERIFIED / AWAITING !brief`. No brief is accepted and no `!run` is active.
 - **Engineer continuation:** Committed checkpoint `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b` retains definitive 17/17 focused and 93/93 full serial passes. Sei II then consumed three narrow lint-remediation approaches in `app/page.tsx`. The resulting four-addition/four-removal dirty diff reports zero lint errors and two warnings, but it has not received post-change tests, build/type classification, responsive/accessibility QA, forced cover-error validation, or final zero-data-change review. The actual checkout, three-file candidate boundary, dirty-file claim, remote, branch, HEAD, and absence of staged/untracked/stashed source were independently verified during Designer intake. No Site, production, schema/data, dependency, or configuration change occurred.
 - **Planner decisions:** None pending. Product Owner selected Decision 1:A.
-- **Active owner:** `PRODUCT OWNER` — start the prepared `ENGINEER — SEI III` replacement context, then send `!init`.
-- **Blocking owner:** `NONE`; Sei III must pass read-only identity/source/continuity verification before it may receive `!brief`.
+- **Active owner:** `PRODUCT OWNER` — send Sei III `!brief` to accept the queued superseding continuation. A separate later `!run` remains required.
+- **Blocking owner:** `NONE`; process quiescence remains unknown and must be resolved only through the brief-authorized supported read-only gate before execution commands begin.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve

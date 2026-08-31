@@ -4,7 +4,7 @@
 
 **Execution budget:** `!35:90` records 35% five-hour and 90% longer-period. The prepared Sei III validation continuation is estimated at 5/9/15 points, giving a 30% operational minimum with the 15% floor. The reading is sufficient while fresh, subject to read-only replacement initialization and the separate `!brief`/`!run` gates.
 
-**Queue state:** Throttle `DRAIN`. Sei II retired after both replacement artifacts and the actual checkout were verified. Sei III has an eligible superseding continuation brief but remains inactive until read-only `!init`, `!brief`, and separate `!run`. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Sei II retired after both replacement artifacts and the actual checkout were verified. Sei III has passed read-only replacement initialization and has an eligible superseding continuation brief; it remains inactive until `!brief` acceptance and a separate `!run`. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
