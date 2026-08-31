@@ -8,8 +8,8 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; no execution is active.
 - **Engineer state:** Sei II retired after a verified private continuity handoff and sanitized Designer report. Sei III completed read-only replacement initialization; its context/source report was independently verified and processed. The superseding continuation brief is eligible but not accepted, and no `!run` is active.
-- **Next owner:** `PRODUCT OWNER` — send Sei III `!brief`. After clean acceptance, a separate `!run` remains required.
-- **Usage:** `!35:90` records five-hour 35% and longer-period 90%. The remaining continuation estimate is 5/9/15 points, so the operational minimum is 30% including the 15% floor.
+- **Next owner:** `EXTERNAL / WAIT` — after the five-hour reset, provide one fresh usage reading. If at least 30% remains, send Sei III `!brief`; after clean acceptance, a separate `!run` remains required.
+- **Usage:** `!14:87` records five-hour 14% and longer-period 87%. This is below the 15% automatic stopping floor, so the continuation is `WAITING FOR RESET`; the remaining capacity is not available for new intake or execution. The continuation estimate remains 5/9/15 points and requires at least 30% after reset.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 

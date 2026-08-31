@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-30 — Sei III continuation waiting for reset
+
+- Recorded `!14:87` as 14% five-hour and 87% longer-period capacity.
+- Applied the 15% automatic stopping floor: the prepared 5/9/15-point continuation cannot enter `!brief` or `!run` until a fresh post-reset reading restores its 30% operational minimum.
+- Classified the pause as `WAITING FOR RESET`, not a blocker, and reserved residual capacity for essential checkpoint, reporting, or recovery only.
+
 ## 2026-08-30 — Sei III replacement initialization accepted
 
 - Processed Sei III's first mandatory `INITIALIZATION / CONTEXT VERIFICATION` inbox report after the workflow correction.
