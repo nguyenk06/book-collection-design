@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-31 — Sei III continuation reactivated after reset
+
+- Recorded post-reset `!100:86` as 100% five-hour and 86% longer-period capacity.
+- Cleared the normal `WAITING FOR RESET` state and restored eligibility for the 5/9/15-point Sei III validation-continuation brief.
+- Preserved the separate `!brief` acceptance, later `!run`, unknown-process-quiescence, three-consumed-attempt, 15% floor, and all Site/production/schema/data gates.
+
 ## 2026-08-30 — Sei III continuation waiting for reset
 
 - Recorded `!14:87` as 14% five-hour and 87% longer-period capacity.

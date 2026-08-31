@@ -1,6 +1,6 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Sei II safely retired; Sei III replacement initialization verified; `WAITING FOR RESET` under `!14:87` before superseding `!brief` intake
+**Status:** Sei II safely retired; Sei III replacement initialization verified; superseding `!brief` intake eligible under post-reset `!100:86`
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** partial local checkpoint `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`; it must never be called or represented as `80e4c61`
 
