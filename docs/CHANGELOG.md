@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-08-30 — Replacement initialization inbox evidence required
+
+- Closed a workflow gap exposed by Sei III initialization: a successful chat response alone did not reliably create Designer-processable evidence.
+- Required every new or replacement Engineer `!init` to write a concise sanitized `INITIALIZATION / CONTEXT VERIFICATION` report to shared local `inbox/` before its terminal response.
+- Clarified that the report is read-only evidence, the canonical footer is not a substitute, and Designer intake must precede `!brief` acceptance.
+
 ## 2026-08-30 — Sei II retirement accepted and Sei III continuation prepared
 
 - Recorded `!35:90` as 35% five-hour and 90% longer-period capacity.

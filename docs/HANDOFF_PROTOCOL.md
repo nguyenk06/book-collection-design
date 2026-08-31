@@ -190,7 +190,7 @@ Role identity dispatches `!inbox`: Quatre addresses repository `docs/PLANNER_INB
 - **SITE ENGINEER:** after the bootstrap prompt is supplied to the Sites chat, execute [`ENGINEER_STARTUP.md`](../templates/ENGINEER_STARTUP.md).
 - **PLANNER:** execute [`PLANNER_STARTUP.md`](../templates/PLANNER_STARTUP.md) from the public Design repository.
 
-`!init` never accepts a brief, processes inbox artifacts, moves handoffs, updates documentation, modifies source, touches production, publishes/deploys, or makes a product decision automatically. It only reconstructs role state and reports readiness.
+`!init` never accepts a brief, processes or moves existing inbox artifacts, updates documentation, modifies source, touches production, publishes/deploys, or makes a product decision automatically. It only reconstructs role state and reports readiness. A new or replacement Engineer `!init` must create one concise sanitized `INITIALIZATION / CONTEXT VERIFICATION` report in the shared local `inbox/`; writing that evidence is part of reporting, not project execution or brief acceptance.
 
 `!status` reports the same current role, queue, gate, ownership, and blocker state without processing artifacts or changing authority. It is always read-only.
 
@@ -288,8 +288,9 @@ Before replacing an Engineer chat, inspect and report unpublished working state.
 3. Start the new thread in the correct role/workspace context and use the next real suffix; the prepared successor in this cycle is `ENGINEER — SEI III`.
 4. Supply the successor startup prompt and run read-only `!init`. Require the successor to read the [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) and private continuity artifact.
 5. Independently verify actual source path, repository, remote, branch, HEAD, clean/dirty state, candidate identity, active authority, attempt count, process state, dependencies, and remaining validation. Documentation naming a commit is not proof that source transferred.
-6. Only after Designer processes both handoffs and verification succeeds may Designer create a new or explicitly superseding continuation brief. The successor uses `!brief`, then receives a separate `!run`.
-7. Never reset attempt counts merely because the chat changed.
+6. Before returning the terminal `!init` response, write one sanitized `INITIALIZATION / CONTEXT VERIFICATION` report to shared local `inbox/`. It must identify the successor, record each verification result and mismatch without exposing the private source path, state that no brief or `!run` was accepted, and direct `DESIGNER — RELENA` to process the artifact. The chat footer is not a substitute for the artifact.
+7. Only after Designer processes the replacement handoffs and this initialization report may the successor accept a new or explicitly superseding continuation brief with `!brief`, followed by a separate `!run`.
+8. Never reset attempt counts merely because the chat changed.
 
 Do not require a handoff solely because a chat is long or compacted. Retain concise, evidence-focused handoffs for Designer-to-Engineer briefs; Engineer completion, blocker, and validation evidence; production-gate evidence; cross-role decisions/conflicts; and unpublished-source preservation before an actual replacement.
 
@@ -422,6 +423,7 @@ If the report identifies a conflict, scope change, or required approval, keep th
 
 Meaningful cross-workspace state transitions produce small, sanitized reports in `inbox/`. At minimum, report:
 
+- `INITIALIZATION / CONTEXT VERIFICATION` for every new or replacement Engineer chat
 - `BRIEF ACCEPTED`
 - `BLOCKED`
 - `PARTIAL IMPLEMENTATION`
@@ -432,7 +434,7 @@ Meaningful cross-workspace state transitions produce small, sanitized reports in
 
 Reports should identify the milestone, transition, related brief or prior report, verified facts, scope or approval impact, next action, and sanitization confirmation. Use the full Design Handoff template for implementation evidence that should update permanent documentation; a small state report may announce a transition but does not replace the final evidence handoff.
 
-Routine progress, work-started notices, and action-by-action logs do not require inbox reports. The purpose is durable cross-workspace state, not implementation chatter.
+Routine progress, work-started notices, continuing-chat status refreshes, and action-by-action logs do not require inbox reports. The mandatory new/replacement initialization report is durable cross-workspace identity and source evidence, not implementation chatter.
 
 Report workstream transitions at `BLOCKED`, `READY FOR REVIEW`, `COMPLETE`, mandatory reassessment, direction-changing validation failure, coherent milestone convergence, saved Site version, production gate, or publication/deployment change. Do not report every file edit, test run, minor progress increment, or ordinary authorized start.
 

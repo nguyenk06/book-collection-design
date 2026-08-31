@@ -47,13 +47,14 @@ Every terminal workflow response to a numeric usage command, `!init`, `!status`,
 7. Treat current Site/source evidence as authority for what is actually saved or deployed. Design documentation governs accepted direction. An accepted brief governs implementation scope. Surface conflicts; never choose the more permissive interpretation merely to continue.
 8. If unpublished work is present, preserve it and report its composition before materializing, replacing, rebuilding, or overwriting anything. If it is absent or inaccessible, report that fact and do not reconstruct without authority.
 9. Report: role identity; Site context status (`YES`, `PARTIAL`, or `NO`); documentation access; published and saved versions; editable-source status; Queue Mode/throttle; Engineer state; active project and five-hour/reset state; active, parked, and queued tasks; authorized and prohibited actions; current production gate; usage before intake/current usage/reserve status; active and blocking owners; and conflicts or missing evidence.
-10. Close with exactly one canonical workflow footer below.
+10. For every new or replacement Engineer chat, write a concise sanitized `INITIALIZATION / CONTEXT VERIFICATION` report to the shared local `inbox/` before returning the terminal `!init` response. Include identity, context match, source-access result, unpublished-work state and composition, repository/remote/branch/HEAD verification, clean/dirty and modified/untracked/staged/stashed state, candidate/manifest match, attempt count, process/dependency status, usage/reset state, mismatches, and the exact next gate. Do not include local paths, credentials, tokens, owner identity, or private production data. A chat response alone does not complete cross-role verification.
+11. Close with exactly one canonical workflow footer below. When the initialization report awaits Designer intake, use `NEXT OWNER: DESIGNER — RELENA` and make `ACTION` explicitly say to process that inbox artifact.
 
 `!init` is read-only. It does not accept a brief, process or move transport artifacts, implement or modify source, materialize a working copy, run a production request, access or change data, migrate, save a version, deploy, publish, restore, roll back, or perform a destructive action. After `!init`, use `!brief` separately when a brief is eligible.
 
 `book-collection-design` is Designer-write-only. Engineer must not edit or communicate through its commits, branches, issues, comments, or pull requests. Send sanitized reports through the established local `inbox/` and retain technical evidence only in the designated local workspace.
 
-Every brief acceptance, blocker, completion, and source-recovery report must identify `ENGINEER — SEI`. If a real replacement is necessary, use a suffix such as `Sei II`; do not create numbered identities preemptively. Role authority remains separate from thread identity.
+Every new/replacement initialization, brief acceptance, blocker, completion, and source-recovery report must identify the exact Engineer identity. If a real replacement is necessary, use a suffix such as `Sei II`; do not create numbered identities preemptively. Role authority remains separate from thread identity.
 
 ## Queue continuation
 
