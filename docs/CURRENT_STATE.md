@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-08-30
+**Last reviewed:** 2026-08-31
 
 For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
 
@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; `SEI III — INITIALIZED / CONTEXT VERIFIED / AWAITING !brief`. No brief is accepted and no `!run` is active.
-- **Engineer continuation:** Committed checkpoint `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b` retains definitive 17/17 focused and 93/93 full serial passes. Sei II then consumed three narrow lint-remediation approaches in `app/page.tsx`. The resulting four-addition/four-removal dirty diff reports zero lint errors and two warnings, but it has not received post-change tests, build/type classification, responsive/accessibility QA, forced cover-error validation, or final zero-data-change review. The actual checkout, three-file candidate boundary, dirty-file claim, remote, branch, HEAD, and absence of staged/untracked/stashed source were independently verified during Designer intake. No Site, production, schema/data, dependency, or configuration change occurred.
-- **Planner decisions:** None pending. Product Owner selected Decision 1:A.
-- **Active owner:** `PRODUCT OWNER` — send Sei III `!brief` to accept the queued superseding continuation. A separate later `!run` remains required.
-- **Blocking owner:** `NONE`; process quiescence remains unknown and must be resolved only through the brief-authorized supported read-only gate before execution commands begin.
+- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; `SEI III — BRIEF ACCEPTED / PARKED AT GENERATED-ARTIFACT BOUNDARY`. The active run stopped cleanly and cannot resume under its current cleanup exclusions.
+- **Engineer continuation:** At inherited dirty `app/page.tsx`, lint now passes with zero errors and two warnings, focused tests pass 17/17, and the full serial suite passes 93/93. Standalone no-emit type checking reports no candidate-page error but generated untracked `tsconfig.tsbuildinfo` outside the exact three-file boundary. The artifact is preserved untouched. Production build, final boundary/no-data review, desktop/mobile and accessibility QA, forced cover-error validation, checkpointing, and commit remain unrun. The three substantive lint-remediation approaches remain consumed. No tracked source, Site, production, schema/data, dependency, or configuration change occurred.
+- **Planner decisions:** Decision 1 pending: authorize reversible quarantine, exact deletion, or continued parking of the generated untracked TypeScript build artifact.
+- **Active owner:** `PLANNER — QUATRE` — read `docs/PLANNER_INBOX.md` with `!inbox` and return Decision 1.
+- **Blocking owner:** `PRODUCT OWNER / PLANNER` for the generated-artifact handling authority. Other production and held-validation gates remain separately closed.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied the post-reset reading `!100:86`: **100% five-hour** and **86% longer-period**. The prepared Sei III continuation is estimated at 5/9/15 points with a 30% operational minimum including the 15% floor. Capacity is sufficient for `!brief` intake and the later bounded continuation while this reading remains fresh; a separate `!run` remains mandatory.
+Sei III recorded `!99:86`: **99% five-hour** and **86% longer-period** at intake/run. Capacity remains ample, but usage does not bypass the generated-artifact authority boundary. Any approved resume still requires a bounded addendum or superseding brief and a fresh separate `!run`.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. The [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) governs completion-oriented active runs and the mandatory pre-final continuation test.
 

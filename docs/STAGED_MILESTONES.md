@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Post-reset `!100:86` records 100% five-hour and 86% longer-period. The prepared Sei III validation continuation remains estimated at 5/9/15 points with a 30% operational minimum including the 15% floor; it is eligible for `!brief` intake.
+**Execution budget:** Sei III recorded `!99:86` at intake/run. Capacity remains ample, but the accepted continuation is parked at a generated-artifact authority boundary; usage does not bypass it.
 
-**Queue state:** Throttle `DRAIN`. Sei II retired after both replacement artifacts and the actual checkout were verified. Sei III has passed read-only replacement initialization and its superseding continuation brief is eligible, but it remains inactive until `!brief` acceptance and a separate `!run`. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Sei III's superseding brief is accepted but parked after no-emit type checking generated one untracked build-info file outside the exact candidate boundary. Planner Decision 1 controls quarantine, exact deletion, or continued parking. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

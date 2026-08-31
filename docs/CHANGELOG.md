@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-31 — Sei III validation parked at generated-artifact boundary
+
+- Accepted Sei III's continuation intake at `!99:86` and processed definitive local evidence: lint zero errors/two warnings, focused 17/17, and full serial 93/93.
+- Recorded standalone no-emit type checking as exit 2 with existing environment/project gaps and no candidate-page error; it generated untracked `tsconfig.tsbuildinfo` outside the exact three-file boundary.
+- Preserved the generated artifact untouched and kept build, local responsive/accessibility QA, cover-error validation, final boundary review, checkpointing, and commit explicitly unrun.
+- Opened Planner Decision 1 between reversible private quarantine, exact deletion, or continued parking; no tracked source, Site, production, schema/data, dependency, or configuration action occurred.
+
 ## 2026-08-31 — Sei III continuation reactivated after reset
 
 - Recorded post-reset `!100:86` as 100% five-hour and 86% longer-period capacity.
