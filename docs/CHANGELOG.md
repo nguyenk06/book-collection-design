@@ -15,6 +15,10 @@
 - Recorded `!79:67`, parked the affected task, and opened Planner Inbox Decision 1 between one elevated read-only inspection, an exact-commit isolated validation workspace, or deferral.
 - Recorded Product Owner Decision 1:A authorizing exactly one elevated read-only process inspection, with no termination or other system mutation authority.
 - Recorded `!75:66`, cleared the Planner Inbox, and prepared a 6/11/17-point conditional validation continuation that may proceed only after the inspection proves quiescence.
+- Accepted the consumed elevated-inspection evidence: no prior candidate-scoped runner remained and no process was modified.
+- Recorded individual passes for both formerly timed-out tests, owned 17/17 focused and 93/93 full serial passes, lint with two pre-existing warnings, and successful production build before a narrow two-line accessibility-label correction.
+- Recorded clean checkpoint `47073db`; did not inherit pre-fix validation after the post-fix focused rerun returned no attributable result.
+- Recorded `!59:64` and prepared a 5/9/15-point local-only post-fix validation continuation.
 
 ## 2026-08-29 — Five-hour drain policy revised
 

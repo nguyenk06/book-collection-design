@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — PARTIAL / ELEVATED READ-ONLY RECOVERY ELIGIBLE`; original Sei is available with no assigned work.
-- **Engineer continuation:** Sei II preserved the exact Version 20-derived candidate at clean local checkpoint `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The isolated final responsive-link case passes (`1 passed`, `16 skipped`, exit 0). The focused suite reported 11 passes and two explicit 10-second test timeouts before its controller failed to retain an attributable PID or final summary. The required read-only full-command-line/ancestry query then returned `Access denied`, so quiescence cannot be proved and another runner cannot safely start. Full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain incomplete.
+- **Engineer state:** `SEI II — PARTIAL / POST-FIX VALIDATION ELIGIBLE`; original Sei is available with no assigned work.
+- **Engineer continuation:** Decision 1:A's single elevated read-only inspection proved no prior candidate-scoped Vitest runner remained and modified no process. Both formerly timed-out tests then passed individually, followed by owned 17/17 focused and 93/93 full serial suites, lint with two pre-existing warnings, and a successful production build. Standalone type checking exposed two candidate-page use-before-declaration errors plus existing unrelated project typing gaps. Sei II corrected only the two candidate-page references and preserved a clean three-file candidate at `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`. The post-fix focused rerun returned no attributable completion, so post-fix automation, responsive/accessibility QA, forced cover-error validation, and final zero-data-change evidence remain incomplete.
 - **Planner decisions:** None pending. Product Owner selected Decision 1:A.
 - **Active owner:** `PRODUCT OWNER` — send Sei II `!brief`; retain separate `!run` after clean acceptance.
-- **Blocking owner:** `NONE` before intake; denied/ambiguous elevated inspection or an unowned candidate-scoped process remains an automatic stop.
+- **Blocking owner:** `NONE` before intake; another ambiguous owned-runner result or collision remains an automatic stop.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied `!75:66`: **75% five-hour** and **66% longer-period**. The elevated read-only recovery and validation continuation is estimated at **6/11/17 points**; its operational minimum is **32%** (17 high + 15 floor), so it fits with 43 points of margin and stops at 15%.
+Product Owner supplied `!59:64`: **59% five-hour** and **64% longer-period**. The post-fix local validation continuation is estimated at **5/9/15 points**; its operational minimum is **30%** (15 high + 15 floor), so it fits with 29 points of margin and stops at 15%.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Continue the highest-value eligible work toward the floor without inventing work merely to consume usage.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Checkpoint `7b38423` includes one test-only responsive-link assertion correction, and that final responsive-link case passes in isolation. The focused suite remains incomplete after two tests exceeded the explicit 10-second limit and the controlling session lost the process/result record. Product Owner Decision 1:A authorizes exactly one elevated read-only process inspection; if it proves quiescence, validation may resume through synchronously owned processes and bounded 30-second command-line test/hook timeouts. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.
+P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. The single elevated inspection is consumed. Both formerly timed-out tests, 17/17 focused tests, 93/93 full serial tests, lint, and build passed before the narrow two-line accessibility-label correction at `47073db`. Because the post-fix focused rerun returned no attributable completion, those pre-fix suite results do not validate the new checkpoint. Post-fix automation and local QA remain required. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.

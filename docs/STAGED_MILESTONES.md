@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** `!75:66` records 75% five-hour and 66% longer-period. The elevated read-only recovery and validation continuation has a 17-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
+**Execution budget:** `!59:64` records 59% five-hour and 64% longer-period. The post-fix validation continuation has a 15-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
 
-**Queue state:** Throttle `DRAIN`. Product Owner Decision 1:A authorizes exactly one elevated read-only process inspection for the Version 20-derived local remediation candidate at `7b38423`, followed conditionally by the bounded validation continuation. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Decision 1:A's elevated inspection is consumed. The Version 20-derived local remediation candidate is clean at `47073db`; only post-fix automation and local QA are active. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

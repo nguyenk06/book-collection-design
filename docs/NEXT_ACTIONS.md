@@ -7,9 +7,9 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; no execution is active.
-- **Engineer state:** Sei II has partial local checkpoint `7b38423`; the isolated responsive-link test passes, while the focused suite returned 11 passes plus two explicit 10-second timeouts without a final summary. Decision 1:A makes one elevated read-only quiescence inspection and conditional validation continuation eligible. Original Sei has no assigned work.
+- **Engineer state:** Sei II has clean three-file checkpoint `47073db`. The elevated query is consumed; formerly timed-out tests and pre-fix focused/full suites passed, but a later two-line accessibility-label correction requires post-fix automation and local QA. Original Sei has no assigned work.
 - **Next owner:** `PRODUCT OWNER` — send Sei II `!brief`; use `!run` separately after clean acceptance.
-- **Usage:** `!75:66` records five-hour 75% and longer-period 66%. The 6/11/17 estimate has a 32% operational minimum and stops at 15%, so the slice fits.
+- **Usage:** `!59:64` records five-hour 59% and longer-period 64%. The 5/9/15 estimate has a 30% operational minimum and stops at 15%, so the slice fits.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
