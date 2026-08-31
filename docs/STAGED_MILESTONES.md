@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** `!93:99` records 93% five-hour and 99% longer-period. The final static-check and local-QA continuation has a 12-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
+**Execution budget:** `!86:98` records 86% five-hour and 98% longer-period. The lint attribution, conditional remediation, and validation continuation has a 20-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
 
-**Queue state:** Throttle `DRAIN`. Decision 1:A's elevated inspection is consumed. The Version 20-derived local remediation candidate is clean at `47073db` with definitive post-fix focused/full passes; only separate static checks and local responsive/accessibility QA remain active. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Decision 1:A's elevated inspection is consumed. The Version 20-derived local remediation candidate is clean at `47073db` with definitive post-fix focused/full passes, but lint reports three changed-file errors. Attribution and conditional narrow remediation precede the remaining static checks and local QA. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

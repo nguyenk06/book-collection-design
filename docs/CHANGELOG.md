@@ -22,6 +22,9 @@
 - Accepted definitive post-fix owned 17/17 focused and 93/93 full serial passes at unchanged clean checkpoint `47073db`.
 - Rejected the later combined lint/type/build command as evidence because it returned no attributable completion; preserved those checks and local QA as unrun.
 - Recorded `!93:99` and prepared a 4/7/12-point continuation using separate attributable static-check processes followed by responsive/accessibility and cover-fallback QA.
+- Accepted the separately owned lint result at `47073db`: exit 1 with one synchronous-state-update-in-effect error, two manual-memoization-preservation errors, and two previously noted warnings in changed `app/page.tsx`.
+- Preserved the candidate unchanged and kept build, type classification, local QA, cover-error validation, and final evidence unrun after the definitive lint failure.
+- Recorded `!86:98` and prepared a 7/13/20-point lint-command attribution, conditional narrow-remediation, and full validation continuation.
 
 ## 2026-08-29 — Five-hour drain policy revised
 
