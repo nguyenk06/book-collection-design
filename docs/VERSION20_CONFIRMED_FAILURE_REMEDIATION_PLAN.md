@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Partial implementation at `7b38423`; validation parked for Planner Inbox Decision 1 at `!79:67`
+**Status:** Partial implementation at `7b38423`; elevated read-only recovery eligible at `!75:66`
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** partial local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`; it must never be called or represented as `80e4c61`
 
-Sei II advanced the new local candidate to `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The five UI corrections remain in three files; one test-only responsive-link assertion was corrected after a definitive focused failure, and that case now passes in isolation. A focused run then produced 11 passes and two explicit 10-second timeouts but no attributable process/final summary. The required full-command-line/ancestry query returned `Access denied`, so the retained source cannot safely launch another runner until Product Owner selects an elevated read-only inspection, an exact-commit isolated validation workspace, or deferral. Focused completion, full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain pending. This is not a validated candidate and has no Site or release authority.
+Sei II advanced the new local candidate to `7b3842379f01f9fc2cb29e1a7f9aa8dbc5745489`. The five UI corrections remain in three files; one test-only responsive-link assertion was corrected after a definitive focused failure, and that case now passes in isolation. A focused run then produced 11 passes and two explicit 10-second timeouts but no attributable process/final summary. Product Owner Decision 1:A authorizes exactly one elevated read-only full-command-line/ancestry inspection. Only a definitive quiescent result permits validation to resume through synchronously owned processes and bounded 30-second command-line test/hook timeouts. Focused completion, full tests, lint, build, responsive/accessibility QA, and forced cover-error validation remain pending. This is not a validated candidate and has no Site or release authority.
 
 ## Purpose
 

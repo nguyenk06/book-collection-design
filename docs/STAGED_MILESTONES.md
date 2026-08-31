@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** `!79:67` records 79% five-hour and 67% longer-period. No Engineer brief is active while process-visibility Decision 1 is pending. Re-estimate the selected recovery and preserve the 15% floor before execution.
+**Execution budget:** `!75:66` records 75% five-hour and 66% longer-period. The elevated read-only recovery and validation continuation has a 17-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
 
-**Queue state:** Throttle `DRAIN`. The Version 20-derived local remediation candidate at `7b38423` is parked after read-only process inspection returned `Access denied`. Planner Inbox Decision 1 must select an elevated read-only inspection, exact-commit isolated validation workspace, or deferral. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Product Owner Decision 1:A authorizes exactly one elevated read-only process inspection for the Version 20-derived local remediation candidate at `7b38423`, followed conditionally by the bounded validation continuation. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

@@ -13,6 +13,8 @@
 - Recorded `!85:68` and prepared a 6/11/17-point owned-runner continuation requiring quiescence evidence, synchronous PID capture, and a bounded 30-second per-test allowance before full validation resumes.
 - Processed the owned-runner acceptance and blocker: the required read-only full-command-line/ancestry query returned `Access denied`, no equivalent visibility was available, and Sei II correctly started or terminated no runner.
 - Recorded `!79:67`, parked the affected task, and opened Planner Inbox Decision 1 between one elevated read-only inspection, an exact-commit isolated validation workspace, or deferral.
+- Recorded Product Owner Decision 1:A authorizing exactly one elevated read-only process inspection, with no termination or other system mutation authority.
+- Recorded `!75:66`, cleared the Planner Inbox, and prepared a 6/11/17-point conditional validation continuation that may proceed only after the inspection proves quiescence.
 
 ## 2026-08-29 — Five-hour drain policy revised
 
