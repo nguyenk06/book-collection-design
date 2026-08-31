@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-30 — Sei II retirement accepted and Sei III continuation prepared
+
+- Recorded `!35:90` as 35% five-hour and 90% longer-period capacity.
+- Verified Sei II's sanitized replacement report and private continuity handoff against the actual Sites-managed checkout: branch `main`, HEAD `47073db`, the expected remote, only `app/page.tsx` dirty, no staged/untracked/stashed source, and an eight-line lint-remediation diff.
+- Retired Sei II at a safe handoff and prepared an eligible Sei III post-reassessment continuation without granting initialization, brief acceptance, or run authority.
+- Preserved the three consumed lint-remediation approaches, the post-change validation gap, every Site/production/schema/data exclusion, and the separate read-only `!init` → `!brief` → `!run` gates.
+
 ## 2026-08-30 — Compact usage command and validation continuation
 
 - Defined all-role `!<five-hour>:<longer-period>` syntax; `!40:75` records 40% five-hour and 75% longer-period without creating authority or replacing `!brief`/`!run`.

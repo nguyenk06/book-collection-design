@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** `!63:94` records 63% five-hour and 94% longer-period. Documentation and replacement preparation are complete; the next Engineer action is a bounded `!drain` and continuity handoff that must preserve the 15% floor. Refresh only for material estimate growth or credible floor risk.
+**Execution budget:** `!35:90` records 35% five-hour and 90% longer-period. The prepared Sei III validation continuation is estimated at 5/9/15 points, giving a 30% operational minimum with the 15% floor. The reading is sufficient while fresh, subject to read-only replacement initialization and the separate `!brief`/`!run` gates.
 
-**Queue state:** Throttle `DRAIN`. Sei II remains active at clean `47073db`, but Product Owner intends replacement after a verified safe handoff. Sei III is prepared only; no continuation brief may be created or transmitted until Designer processes both replacement artifacts and independently verifies actual source state. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Sei II retired after both replacement artifacts and the actual checkout were verified. Sei III has an eligible superseding continuation brief but remains inactive until read-only `!init`, `!brief`, and separate `!run`. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — ACTIVE / SAFE RETIREMENT HANDOFF PENDING`; replacement identity `SEI III` is prepared but not initialized, verified, briefed, or active.
-- **Engineer continuation:** Exact clean three-file candidate `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b` retains definitive 17/17 focused and 93/93 full serial passes. Three candidate-activated lint errors remain in changed `app/page.tsx`; remaining automation, lint remediation, static checks, responsive/accessibility QA, forced cover-error validation, and final zero-data-change evidence are incomplete. Product Owner intends to retire Sei II after it finishes the current safe unit and produces both the private continuity artifact and separate sanitized Designer handoff. No Site, production, schema/data, dependency, or configuration change has occurred.
+- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; replacement identity `SEI III` is prepared but not initialized, context-verified, brief-accepted, or active.
+- **Engineer continuation:** Committed checkpoint `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b` retains definitive 17/17 focused and 93/93 full serial passes. Sei II then consumed three narrow lint-remediation approaches in `app/page.tsx`. The resulting four-addition/four-removal dirty diff reports zero lint errors and two warnings, but it has not received post-change tests, build/type classification, responsive/accessibility QA, forced cover-error validation, or final zero-data-change review. The actual checkout, three-file candidate boundary, dirty-file claim, remote, branch, HEAD, and absence of staged/untracked/stashed source were independently verified during Designer intake. No Site, production, schema/data, dependency, or configuration change occurred.
 - **Planner decisions:** None pending. Product Owner selected Decision 1:A.
-- **Active owner:** `PRODUCT OWNER` — send Sei II `!drain`; then Designer processes and verifies both replacement artifacts.
-- **Blocking owner:** `ENGINEER — SEI II` after `!drain`, until the private and sanitized handoffs are complete and verifiable.
+- **Active owner:** `PRODUCT OWNER` — start the prepared `ENGINEER — SEI III` replacement context, then send `!init`.
+- **Blocking owner:** `NONE`; Sei III must pass read-only identity/source/continuity verification before it may receive `!brief`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied `!63:94`: **63% five-hour** and **94% longer-period**. This turn authorizes documentation and replacement preparation only. Sei II's safe drain/handoff must preserve the 15% floor; do not request another usage reading unless its remaining handoff estimate materially grows or capacity credibly approaches the floor.
+Product Owner supplied `!35:90`: **35% five-hour** and **90% longer-period**. The prepared Sei III continuation is estimated at 5/9/15 points and therefore has an operational minimum of 30% including the 15% floor. The reading is sufficient for intake and the bounded continuation while fresh, but the replacement must still pass read-only `!init`, separate `!brief`, and separate `!run` gates.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. The [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) governs completion-oriented active runs and the mandatory pre-final continuation test.
 
