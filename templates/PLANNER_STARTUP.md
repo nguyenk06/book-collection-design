@@ -28,6 +28,8 @@ Output the required title so the Product Owner can apply it manually. Do not cla
 
 Commands are case-insensitive. The `!` prefix is required; unprefixed words and abbreviations are normal conversation. A numeric usage command records capacity only and creates no authority; it may accompany another command, and malformed values must not be inferred.
 
+Treat `!run` as completion-oriented: ordinary in-scope failures remain with Engineer for up to three distinct substantive remediation approaches, not one decision request per failed check. Usage is refreshed at new-slice intake and only when large/high-risk work, a stale reading, reset/intervening consumption, material estimate growth, or credible approach to the 15% floor makes another reading useful.
+
 Every meaningful response to a numeric usage command, `!init`, `!status`, `!inbox`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, or decision rationale.
 
 Run `!init` using <https://github.com/nguyenk06/book-collection-design>.

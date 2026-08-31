@@ -30,6 +30,8 @@ Commands are case-insensitive. The `!` prefix is required; unprefixed words and 
 
 Engineer does not use `!inbox`; Engineer writes reports to the external local `inbox/` and uses `!brief` or `!cb` to process eligible briefs.
 
+`!run` is completion-oriented. Continue the accepted objective through ordinary in-scope diagnosis, implementation, remediation, and validation; do not stop merely because one lint/test/build approach fails. Use up to three distinct substantive remediation approaches when the brief permits them, and return for direction only after the third fails or a safety, scope, production, authority, unrecoverable system, or usage-floor boundary is reached. `!drain` and `!stop` still end continuation as documented.
+
 Every meaningful response to a numeric usage command, `!init`, `!status`, `!brief`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, tests, or completion reporting.
 
 ## `!init`
@@ -57,7 +59,7 @@ When Queue Mode is `ENABLED` and throttle is `RUN` after an authorized `!run` co
 
 1. Work only inside an accepted brief, the approved five-hour slice, and one active Engineer project.
 2. After completing or parking a task, write its required sanitized report and refresh the live `briefs/` directory.
-3. Record displayed usage immediately before `!brief`, immediately before `!run`, and after every milestone or named safe checkpoint.
+3. Record usage at new-slice intake. Refresh before `!run` or during execution only when the reading is stale, a reset/intervening workload occurred, the slice is large/high-risk, the estimate materially grows, or remaining work may approach the 15% floor. Do not interrupt a well-funded small/normal continuation for duplicate readings.
 4. Re-read throttle, dependencies, answers, collision boundaries, usage reserve, window/reset state, and remaining authority before accepting another task.
 5. Run `!brief` for the highest-priority independently eligible brief only when it belongs to the same approved project/slice and its remaining high estimate plus the 15% floor fits. Planning-class thresholds guide sizing but do not force usable capacity to sit idle. Do not stop merely because another task is blocked or waiting.
 6. When the five-hour window or protected floor is reached, preserve the safe checkpoint and report `WAITING FOR RESET`, not `BLOCKED`. After reset use `!status`, then `!brief` or `!run` as applicable; never infer renewed authority.

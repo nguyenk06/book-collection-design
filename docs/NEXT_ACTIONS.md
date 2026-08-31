@@ -7,9 +7,9 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; no execution is active.
-- **Engineer state:** Sei II has clean three-file checkpoint `47073db` with definitive post-fix 17/17 focused and 93/93 full serial passes. A separately owned lint run now reports three errors in changed `app/page.tsx`; attribution and conditional narrow remediation are next. Original Sei has no assigned work.
-- **Next owner:** `PRODUCT OWNER` — send Sei II `!brief`; use `!run` separately after clean acceptance.
-- **Usage:** `!86:98` records five-hour 86% and longer-period 98%. The 7/13/20 estimate has a 35% operational minimum and stops at 15%, so the slice fits.
+- **Engineer state:** Sei II is actively remediating three candidate-activated lint errors from clean checkpoint `47073db`; definitive 17/17 focused and 93/93 full serial evidence is retained until source changes require reruns. Original Sei has no assigned work.
+- **Next owner:** `ENGINEER — SEI II` — continue the accepted `!run` through up to three distinct in-scope remediation approaches and complete validation.
+- **Usage:** `!77:97` records five-hour 77% and longer-period 97%. The active 7/13/20 slice remains comfortably above its 35% operational minimum; refresh only for material estimate growth, reset/intervening work, or credible floor risk.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 

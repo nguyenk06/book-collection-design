@@ -24,18 +24,18 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — PARTIAL / LINT ATTRIBUTION-REMEDIATION ELIGIBLE`; original Sei is available with no assigned work.
-- **Engineer continuation:** The clean three-file candidate remains at `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`, with definitive 17/17 focused and 93/93 full serial passes. The first separately owned lint check exited 1 with three errors in changed `app/page.tsx`: one synchronous-state-update-in-effect error and two manual-memoization-preservation errors, plus the two previously noted warnings. No source change followed. Build, type classification, responsive/accessibility QA, forced cover-error validation, and final zero-data-change evidence remain unrun. The next brief first reconciles lint-command identity and attributes each error before permitting narrow three-file remediation.
+- **Engineer state:** `SEI II — ACTIVE / LINT REMEDIATION AND VALIDATION`; original Sei is available with no assigned work.
+- **Engineer continuation:** The clean three-file candidate remains at `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`, with definitive 17/17 focused and 93/93 full serial passes. Lint attribution confirmed that the three errors do not reproduce on exact Version 20 and are candidate-activated within changed `app/page.tsx`. Sei II is authorized to continue the active `!run` through up to three distinct narrow in-scope remediation approaches, then finish the required automation, static checks, responsive/accessibility QA, forced cover-error validation, and final zero-data-change evidence. No Site, production, schema/data, dependency, or configuration change has occurred.
 - **Planner decisions:** None pending. Product Owner selected Decision 1:A.
-- **Active owner:** `PRODUCT OWNER` — send Sei II `!brief`; retain separate `!run` after clean acceptance.
-- **Blocking owner:** `NONE` before intake; another ambiguous owned-runner result or collision remains an automatic stop.
+- **Active owner:** `ENGINEER — SEI II` — continue the accepted active run to completion or a genuine stopping boundary.
+- **Blocking owner:** `NONE`.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied `!86:98`: **86% five-hour** and **98% longer-period**. The lint attribution, conditional remediation, and validation continuation is estimated at **7/13/20 points**; its operational minimum is **35%** (20 high + 15 floor), so it fits with 51 points of margin and stops at 15%.
+Product Owner supplied `!77:97`: **77% five-hour** and **97% longer-period**. The active lint-remediation/validation slice retains a 20-point high estimate and a 35% operational minimum, so it remains comfortably funded above the 15% floor. No further reading is required unless the estimate grows materially, a reset/intervening workload occurs, or remaining capacity may approach the high estimate plus floor.
 
-Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Continue the highest-value eligible work toward the floor without inventing work merely to consume usage.
+Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. Continue the highest-value eligible work toward the floor without inventing work merely to consume usage.
 
 ## Current workstreams
 

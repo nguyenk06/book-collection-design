@@ -169,7 +169,7 @@ The `!` prefix identifies explicit workflow intent. Commands are case-insensitiv
 | `!prompt-engineer` | Designer | Output the complete Engineer startup prompt |
 | `!prompt-designer` | Designer | Output the complete Designer startup prompt |
 | `!prompt-planner` | Designer | Output the complete Planner startup prompt |
-| `!run` | Authorized operator | Activate or continue one approved five-hour execution slice |
+| `!run` | Authorized operator | Activate or continue approved work until its objective completes or a genuine stopping boundary is reached |
 | `!drain` | Authorized operator | Finish the current safe unit and accept no further work |
 | `!stop` | Authorized operator | Stop at the nearest safe checkpoint |
 
@@ -250,7 +250,7 @@ When the Site Engineer receives `!brief`, execute the normal brief-intake lifecy
 4. Identify each workstream's attempt sequence: new, Attempt 2, Attempt 3, post-reassessment, or not applicable. Do not accept a workstream that silently creates Attempt 4.
 5. Accept the brief as the active specification when appropriate and create the required sanitized brief-acceptance report in `inbox/`, including accepted workstreams and their attempt classifications.
 6. Do not move the brief; Designer owns housekeeping.
-7. If the brief is accepted, work is feasible, no material conflict exists, and actions are already authorized, advance eligible workstreams without a new go message.
+7. If the brief is accepted outside an active `!run`, wait for the separate `!run`. If it is an eligible continuation already inside an active `!run`, continue without requesting another go message.
 8. If one workstream blocks, continue independent authorized workstreams that do not share the blocker or an unsafe file/surface collision.
 9. Stop only the affected workstream at its gate. Stop the whole engineering cycle when every eligible stream is blocked, a cross-cutting conflict prevents safe continuation, shared-file conflicts require convergence, production sequencing requires waiting, or no authorized work remains.
 
@@ -540,7 +540,7 @@ When enabled, record an Engineer execution state distinct from workstream states
 
 Planner/Product Owner controls future automatic queue consumption with:
 
-- `!run` — continue current authorized work inside the approved five-hour slice and, at a suitable transition point, use `!brief` only for an eligible continuation already included in that slice. It does not accept a brief, expand authority, or carry across a reset automatically.
+- `!run` — continue current authorized work inside the approved five-hour slice until the accepted objective is complete or a genuine stopping boundary is reached. At a suitable transition point, use `!brief` only for an eligible continuation already included in that slice. It does not accept an initial brief, expand authority, or carry across a reset automatically.
 - `!drain` — finish the current safe unit, validation, or convergence point; preserve/report a resumable state; do not start another queued brief.
 - `!stop` — stop at the nearest safe checkpoint, preserve/report resumable state, and do not start another queued brief. It is not an abrupt interruption during an integrity-sensitive write, migration, save, or similar operation unless Product Owner explicitly orders an emergency stop.
 
@@ -552,17 +552,17 @@ Treat the displayed percentage as available capacity, not as a token count or fi
 
 - One active Engineer project is allowed per five-hour window by default. Do not spend the same window on CYOA and another Engineer project.
 - A brief authorizes one independently resumable slice, even when the product milestone spans several windows.
-- Record displayed usage immediately before `!brief`, immediately before `!run`, and after every milestone or named safe checkpoint.
+- Record a displayed usage reading at new-slice intake. A second reading immediately before `!run` is required only when the intake reading is stale, a reset or other material usage occurred, the slice is large/high-risk, or the remaining high estimate may no longer fit above the floor. Do not request duplicate readings for a small or normal continuation in the same window with ample margin.
 - Every brief records the preferred model, reasoning effort, speed mode, current five-hour percentage, reset time, current longer-period Codex percentage, estimated five-hour consumption, minimum starting percentage, automatic stopping percentage, safe checkpoint, and work deferred to the next reset.
 - Use a provisional **15% five-hour automatic stopping floor**. Check the longer-period allowance separately; it is not an alternative execution reserve and does not make an exhausted five-hour window runnable.
 - Planning-class guides are: diagnostic/status only **35%**; small implementation **50%**; normal implementation **70%**; migration, release, or other high-risk work **85%**. These help size fresh work but are not universal vetoes. The operational minimum for an approved bounded slice is its remaining high estimate plus the 15% floor. Split work into independently resumable safe units when that calculation does not fit.
 - Reaching the floor or the end of the five-hour window changes Engineer state to `WAITING FOR RESET`, not `BLOCKED`. Preserve the exact checkpoint, remaining scope, validation state, and next command.
 - After reset, run `!status`, then use `!brief` for a new slice or `!run` to resume an already accepted slice from its recorded checkpoint. A reset does not broaden authority.
-- Capture starting, checkpoint, and ending percentages for observed runs. Model, reasoning, tools, context, and task complexity can change actual usage; Designer calibrates ranges from evidence rather than treating percentages as fixed work units.
+- During execution, request another reading only for a large/high-risk checkpoint, a reset/window transition, material scope or estimate growth, another project's intervening consumption, or credible approach to the floor. A practical floor-risk trigger is when the current reading may be within roughly ten points of the remaining high estimate plus the 15% floor. Capture an ending reading when readily available, but do not interrupt or block an otherwise complete small/normal run merely to obtain it. Model, reasoning, tools, context, and task complexity can change actual usage; Designer calibrates ranges from evidence rather than treating percentages as fixed work units.
 
 Before issuing `!run`, Designer must review both usage periods, estimate one coherent prioritized five-hour slice, and identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, likely blockers, and clean stopping cost. Keep useful approved work moving toward the 15% floor. Reduce or split work only when the remaining high estimate cannot preserve that floor or no safe checkpoint fits.
 
-After `!run`, Engineer owns practical sequencing within the approved slice. Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. A blocked stream is preserved and reported, then Engineer may move only to another independently eligible, non-conflicting stream already authorized inside the same project and slice. Productively use available five-hour capacity by continuing the highest-value eligible work in the active project; never invent work or generate activity solely to burn usage. Enter `WAITING FOR RESET` at the 15% floor or when no safe authorized unit fits. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
+After `!run`, Engineer owns practical sequencing within the approved slice. Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. The run is completion-oriented: an ordinary in-scope lint error, test failure, build failure, or reversible local defect is evidence for the next authorized remediation attempt, not by itself a reason to stop or request a new brief. Continue through up to three distinct substantive approaches for the same problem when the accepted scope permits them, recording attempts internally and returning only after completion or a genuine stopping boundary. A blocked stream is preserved and reported only when it needs direction or cannot advance; Engineer may then move to another independently eligible, non-conflicting stream already authorized inside the same project and slice. Productively use available five-hour capacity by continuing the highest-value eligible work in the active project; never invent work or generate activity solely to burn usage. Enter `WAITING FOR RESET` at the 15% floor or when no safe authorized unit fits. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
 
 #### Queue priority and eligibility
 
@@ -582,7 +582,7 @@ Filename order is not authoritative. Each queued brief states:
 
 Under enabled `!run`, Engineer may use `!brief` to consider the highest-priority eligible brief only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued brief is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
 
-At milestone or safe-checkpoint completion, record the current usage percentage before the required queue refresh. “May use `!brief`” becomes a required intake check before stopping under `!run`, but Engineer may accept follow-on work only when it remains inside the same approved five-hour project slice and its high estimate plus reserve still fits. Otherwise preserve it for the next reset.
+At milestone completion, refresh the queue. Refresh usage at that point only when the next work is a new large/high-risk slice, the prior reading is stale, a reset/intervening workload occurred, or the next high estimate may approach the floor. “May use `!brief`” becomes a required intake check before stopping under `!run`, but Engineer may accept follow-on work only when it remains inside the same approved five-hour project slice and its high estimate plus reserve still fits. Otherwise preserve it for the next reset.
 
 A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
 
@@ -659,7 +659,7 @@ Within each workstream, a materially similar implementation, integration, deploy
 
 An attempt is a meaningful execution path intended to resolve the same underlying problem. It is not rerunning after a typo, correcting obvious syntax, fixing trivial local setup, or rerunning a flaky test without changing the approach. The rule protects usage, time, momentum, simplicity, and Product Owner attention without discouraging ordinary debugging.
 
-After Attempt 1 or 2 fails, Engineer may continue only when the accepted brief still authorizes the work, new evidence materially informs the next attempt, no new approval gate is crossed, and no material design conflict appears. Record concisely:
+After Attempt 1 or 2 fails, Engineer continues without returning for permission when the accepted brief still authorizes the work, new evidence materially informs the next attempt, no new approval gate is crossed, and no material design conflict appears. Do not issue an intermediate blocker merely because an ordinary authorized approach failed. Record concisely for the eventual completion or reassessment report:
 
 - Attempt number
 - Hypothesis tested

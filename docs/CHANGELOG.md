@@ -25,6 +25,9 @@
 - Accepted the separately owned lint result at `47073db`: exit 1 with one synchronous-state-update-in-effect error, two manual-memoization-preservation errors, and two previously noted warnings in changed `app/page.tsx`.
 - Preserved the candidate unchanged and kept build, type classification, local QA, cover-error validation, and final evidence unrun after the definitive lint failure.
 - Recorded `!86:98` and prepared a 7/13/20-point lint-command attribution, conditional narrow-remediation, and full validation continuation.
+- Recorded Product Owner workflow direction that `!run` is completion-oriented: Engineer continues ordinary in-scope failures through up to three distinct substantive remediation approaches before requesting direction.
+- Reduced usage refreshes to new-slice intake and large/high-risk, stale/reset/intervening, material-estimate-growth, or credible floor-risk checkpoints; duplicate small/normal continuation readings are no longer required.
+- Recorded Sei II's live lint attribution: all three errors are candidate-activated rather than exact-Version-20 baseline errors; the active run continues from `47073db` at `!77:97` with no Site, production, schema/data, dependency, or configuration change.
 
 ## 2026-08-29 — Five-hour drain policy revised
 

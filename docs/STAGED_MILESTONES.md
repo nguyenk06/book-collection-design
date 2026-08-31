@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** `!86:98` records 86% five-hour and 98% longer-period. The lint attribution, conditional remediation, and validation continuation has a 20-point high estimate and therefore fits above the 15% floor. Obtain fresh readings at intake/run and drain productively through safe authorized checkpoints.
+**Execution budget:** `!77:97` records 77% five-hour and 97% longer-period. The active lint-remediation/validation slice retains a 20-point high estimate and remains comfortably above the 15% floor. Refresh usage only for material estimate growth, reset/intervening work, large/high-risk transitions, or credible floor risk.
 
-**Queue state:** Throttle `DRAIN`. Decision 1:A's elevated inspection is consumed. The Version 20-derived local remediation candidate is clean at `47073db` with definitive post-fix focused/full passes, but lint reports three changed-file errors. Attribution and conditional narrow remediation precede the remaining static checks and local QA. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Decision 1:A's elevated inspection is consumed. Sei II is active from clean `47073db`; lint attribution confirms three candidate-activated errors and the accepted run continues through up to three narrow remediation approaches before remaining validation. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
