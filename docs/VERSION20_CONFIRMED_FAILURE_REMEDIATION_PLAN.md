@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Partial implementation at `47073db`; post-fix validation eligible at `!59:64`
+**Status:** Partial implementation at `47073db`; final static/QA validation eligible at `!93:99`
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** partial local checkpoint `77464cd1fd1d374ae482b1e61cef4839335f33ab`; it must never be called or represented as `80e4c61`
 
-Decision 1:A's single elevated read-only inspection proved quiescence. Both formerly timed-out tests passed individually; owned 17/17 focused and 93/93 full serial suites, lint, and production build then completed. Standalone type checking reported two candidate-page use-before-declaration errors plus existing unrelated project typing gaps. Sei II corrected only those two references and created clean checkpoint `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`, still limited to the approved three files. The post-fix focused rerun returned no attributable completion and was not repeated, so post-fix automation, responsive/accessibility QA, forced cover-error validation, and final zero-data-change evidence remain pending. This is not a validated candidate and has no Site or release authority.
+Decision 1:A's single elevated read-only inspection proved quiescence. Both formerly timed-out tests passed individually; an initial owned 17/17 focused and 93/93 full serial run, lint, and production build then completed. Standalone type checking reported two candidate-page use-before-declaration errors plus existing unrelated project typing gaps. Sei II corrected only those two references and created clean checkpoint `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`, still limited to the approved three files. At that exact post-fix checkpoint, owned 17/17 focused and 93/93 full serial suites now pass definitively. A combined lint/type/build command returned no attributable completion, so final separate static checks, responsive/accessibility QA, forced cover-error validation, and zero-data-change evidence remain pending. This is not a validated candidate and has no Site or release authority.
 
 ## Purpose
 

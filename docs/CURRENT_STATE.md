@@ -24,8 +24,8 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — PARTIAL / POST-FIX VALIDATION ELIGIBLE`; original Sei is available with no assigned work.
-- **Engineer continuation:** Decision 1:A's single elevated read-only inspection proved no prior candidate-scoped Vitest runner remained and modified no process. Both formerly timed-out tests then passed individually, followed by owned 17/17 focused and 93/93 full serial suites, lint with two pre-existing warnings, and a successful production build. Standalone type checking exposed two candidate-page use-before-declaration errors plus existing unrelated project typing gaps. Sei II corrected only the two candidate-page references and preserved a clean three-file candidate at `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`. The post-fix focused rerun returned no attributable completion, so post-fix automation, responsive/accessibility QA, forced cover-error validation, and final zero-data-change evidence remain incomplete.
+- **Engineer state:** `SEI II — PARTIAL / FINAL STATIC-QA VALIDATION ELIGIBLE`; original Sei is available with no assigned work.
+- **Engineer continuation:** The clean three-file candidate remains at `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b`. Post-fix owned automation is now definitive: 17/17 focused tests and 93/93 full serial tests passed. A later combined lint/type/build command returned no attributable completion and is not counted. Final lint, build, exact type-check classification, responsive/accessibility interaction QA, forced cover-error validation, and zero-data-change evidence remain incomplete. The passed post-fix suites do not need repetition unless source changes.
 - **Planner decisions:** None pending. Product Owner selected Decision 1:A.
 - **Active owner:** `PRODUCT OWNER` — send Sei II `!brief`; retain separate `!run` after clean acceptance.
 - **Blocking owner:** `NONE` before intake; another ambiguous owned-runner result or collision remains an automatic stop.
@@ -33,7 +33,7 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 ## Usage reserve
 
-Product Owner supplied `!59:64`: **59% five-hour** and **64% longer-period**. The post-fix local validation continuation is estimated at **5/9/15 points**; its operational minimum is **30%** (15 high + 15 floor), so it fits with 29 points of margin and stops at 15%.
+Product Owner supplied `!93:99`: **93% five-hour** and **99% longer-period**. The final static-check and local-QA continuation is estimated at **4/7/12 points**; its operational minimum is **27%** (12 high + 15 floor), so it fits with 66 points of margin and stops at 15%.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Continue the highest-value eligible work toward the floor without inventing work merely to consume usage.
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. The single elevated inspection is consumed. Both formerly timed-out tests, 17/17 focused tests, 93/93 full serial tests, lint, and build passed before the narrow two-line accessibility-label correction at `47073db`. Because the post-fix focused rerun returned no attributable completion, those pre-fix suite results do not validate the new checkpoint. Post-fix automation and local QA remain required. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.
+P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. The single elevated inspection is consumed. At exact post-fix checkpoint `47073db`, owned 17/17 focused and 93/93 full serial suites pass. The next brief runs lint, build, and type checking as separate attributable processes, then completes responsive/accessibility and cover-fallback QA. This is not yet a validated release candidate. Site save/publication and held live validation remain separately gated.

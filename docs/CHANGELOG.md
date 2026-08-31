@@ -19,6 +19,9 @@
 - Recorded individual passes for both formerly timed-out tests, owned 17/17 focused and 93/93 full serial passes, lint with two pre-existing warnings, and successful production build before a narrow two-line accessibility-label correction.
 - Recorded clean checkpoint `47073db`; did not inherit pre-fix validation after the post-fix focused rerun returned no attributable result.
 - Recorded `!59:64` and prepared a 5/9/15-point local-only post-fix validation continuation.
+- Accepted definitive post-fix owned 17/17 focused and 93/93 full serial passes at unchanged clean checkpoint `47073db`.
+- Rejected the later combined lint/type/build command as evidence because it returned no attributable completion; preserved those checks and local QA as unrun.
+- Recorded `!93:99` and prepared a 4/7/12-point continuation using separate attributable static-check processes followed by responsive/accessibility and cover-fallback QA.
 
 ## 2026-08-29 — Five-hour drain policy revised
 
