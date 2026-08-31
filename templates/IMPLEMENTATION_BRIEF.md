@@ -2,6 +2,8 @@
 
 > Temporary Design-to-Site handoff for one milestone. Keep concise, link to design authority, and remove all sensitive or machine-specific information before sharing.
 
+Engineer must read `docs/ENGINEER_EXECUTION_CONTRACT.md` at `!brief`, `!run`, post-compaction recovery, and any replacement initialization. The contract governs continuation and terminal responses; this brief governs scope and authority.
+
 ## Engineer assignment and context
 
 - Assigned role: ENGINEER
@@ -48,10 +50,13 @@ Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five
 - Safe checkpoint: <!-- Independently recoverable unit boundary. -->
 - Automatic stop conditions: <!-- Include reserve/window, authority, source, collision, validation, and risk boundaries. -->
 - Work deferred until the next reset: <!-- Explicit remaining work that this slice does not authorize. -->
+- Prioritized fallback ladder: <!-- Predictable tool/action failures; list brief-authorized fallback approaches in order and identify which require new authority. -->
 
 The Product Owner selects the actual chat model; this brief only recommends it and cannot switch models. Fast mode is off by default. Sei may use Sol only when this accepted brief recommends it or a later Planner/Product Owner decision approves it. The class guide informs sizing; an approved slice may start or resume when its remaining high estimate plus the 15% floor fits. Productively drain toward the floor using safe authorized units. Do not request a duplicate pre-`!run` or checkpoint usage reading when the intake value remains fresh and the remaining high estimate has ample margin. Refresh only for large/high-risk work, reset/intervening usage, material estimate growth, stale readings, or credible floor risk. If no safe unit fits or the window ends, preserve the checkpoint and report `WAITING FOR RESET`, not `BLOCKED`.
 
 Unless this brief sets a stricter attempt boundary, `!run` continues through up to three distinct substantive remediation approaches for the same in-scope problem. Ordinary lint, test, build, and reversible local failures do not end the run after Attempt 1 or 2. Record the evidence, adjust within scope, rerun required validation, and stop only on completion, failed Attempt 3, or a genuine safety/scope/production/authority/system/floor boundary.
+
+Before any terminal `!run` response, apply the contract's seven-question continuation test. If a safe authorized next action or fallback exists, continue and emit only nonterminal progress commentary. A repeated `!run` is not required inside the same active slice.
 
 Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
 

@@ -30,11 +30,13 @@ Commands are case-insensitive. The `!` prefix is required; unprefixed words and 
 
 Treat `!run` as completion-oriented: ordinary in-scope failures remain with Engineer for up to three distinct substantive remediation approaches, not one decision request per failed check. Usage is refreshed at new-slice intake and only when large/high-risk work, a stale reading, reset/intervening consumption, material estimate growth, or credible approach to the 15% floor makes another reading useful.
 
-Every meaningful response to a numeric usage command, `!init`, `!status`, `!inbox`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, or decision rationale.
+Read `docs/ENGINEER_EXECUTION_CONTRACT.md` during `!init` and before interpreting an Engineer terminal response or replacement request. Do not create a Planner decision for ordinary authorized remediation or a tool-specific failure with an approved fallback.
+
+Every terminal workflow response to a numeric usage command, `!init`, `!status`, `!inbox`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Ordinary nonterminal progress commentary does not require the footer. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, or decision rationale.
 
 Run `!init` using <https://github.com/nguyenk06/book-collection-design>.
 
-Read in order: `docs/PLANNER_INBOX.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/CHANGELOG.md`, `docs/ROADMAP.md`, then `docs/HANDOFF_PROTOCOL.md` when workflow interpretation is needed.
+Read in order: `docs/PLANNER_INBOX.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/CHANGELOG.md`, `docs/ROADMAP.md`, `docs/ENGINEER_EXECUTION_CONTRACT.md`, then `docs/HANDOFF_PROTOCOL.md` when workflow interpretation is needed.
 
 Planner owns product direction, priority/sequencing, approval and risk decisions, conflict resolution, and `docs/PLANNER_INBOX.md` review. In the Planner role, `!inbox` means read and report that repository file. Reply to numbered items with ordinary decision text such as `Decision 1:A`. Avoid unnecessary implementation micromanagement. Rely on Designer-curated permanent documentation; local Windows handoff transport is not required or expected.
 

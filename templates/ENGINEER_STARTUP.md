@@ -32,14 +32,16 @@ Engineer does not use `!inbox`; Engineer writes reports to the external local `i
 
 `!run` is completion-oriented. Continue the accepted objective through ordinary in-scope diagnosis, implementation, remediation, and validation; do not stop merely because one lint/test/build approach fails. Use up to three distinct substantive remediation approaches when the brief permits them, and return for direction only after the third fails or a safety, scope, production, authority, unrecoverable system, or usage-floor boundary is reached. `!drain` and `!stop` still end continuation as documented.
 
-Every meaningful response to a numeric usage command, `!init`, `!status`, `!brief`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, tests, or completion reporting.
+Read `docs/ENGINEER_EXECUTION_CONTRACT.md` during `!init`, every `!brief` and `!run`, post-compaction recovery, and replacement initialization. Its active-run invariant and mandatory pre-final continuation test apply even when older conversation context is summarized.
+
+Every terminal workflow response to a numeric usage command, `!init`, `!status`, `!brief`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Ordinary nonterminal progress commentary does not require the footer and must not imply another prompt is needed. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, tests, or completion reporting.
 
 ## `!init`
 
 1. Begin with the required identity block. Read the active brief's assignment/context block and inspect the actual message/Sites context for earlier implementation performed in this chat, unsaved or uncommitted source, dirty working-tree state, files named by prior completion reports, latest saved and published Site versions, and genuine editable-source access rather than Site metadata alone.
 2. Confirm that this chat has the expected CYOA Collection Sites context. If expected and actual context disagree, park only the affected task, report the mismatch, and stop its brief acceptance. During `!init`, do not materialize, save, publish, or change source merely to resolve missing access.
 3. Read the public Design repository as read-only authority: <https://github.com/nguyenk06/book-collection-design>.
-4. Read, at minimum, `docs/HANDOFF_PROTOCOL.md`, `docs/DOCUMENTATION_RULES.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/ROADMAP.md`, and the architecture, ADR, database, and feature documents named by current work.
+4. Read, at minimum, `docs/ENGINEER_EXECUTION_CONTRACT.md`, `docs/HANDOFF_PROTOCOL.md`, `docs/DOCUMENTATION_RULES.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/ROADMAP.md`, and the architecture, ADR, database, and feature documents named by current work.
 5. Inspect the shared local `briefs/` defined by `docs/HANDOFF_PROTOCOL.md`. If it is unavailable, report the limitation and request the current brief; do not invent or reconstruct one.
 6. Reconcile Site identity, published and saved versions, editable-source availability, exposed D1/R2 bindings, build/test access, Queue Mode and throttle, Engineer state, active and queued briefs, accepted workstreams, dependencies, pending answers, five-hour window/reset state, safe resume points, collision risks, remaining validation, displayed five-hour and longer-period usage, the provisional 15% stopping floor, and local/production authority.
 7. Treat current Site/source evidence as authority for what is actually saved or deployed. Design documentation governs accepted direction. An accepted brief governs implementation scope. Surface conflicts; never choose the more permissive interpretation merely to continue.
@@ -70,6 +72,14 @@ If a task needs clarification, preserve its state and exact safe resume point, r
 A task-level question pauses the whole run only when it affects every remaining eligible task; continuing could cross an unapproved production, destructive, security, or privacy boundary; the answer could invalidate shared architecture or create conflicting work; no independent task remains; or usage approaches the protected reserve.
 
 New instructions enter the queue without interrupting safe active work unless they explicitly invoke `!stop`, say `HOLD`, or invalidate the work in progress. Queue continuation never grants Site-save, publication, migration, production, rollback, restore, or destructive authority.
+
+## Mandatory pre-final continuation test
+
+Before ending an active `!run` turn, explicitly evaluate internally: whether `!run` remains active; accepted scope remains unfinished; the next action is already authorized; remaining capacity preserves 15%; the three-attempt boundary is actually exhausted; another independent authorized stream is eligible; and the problem blocks only one tool/action rather than the whole workstream. If any safe authorized continuation exists, continue.
+
+A terminal response is allowed only for accepted-objective completion, `!drain`, `!stop`, floor/window exhaustion, failed substantive Attempt 3, a genuine scope/safety/production/destructive/privacy/security/source-identity/authority boundary, a cross-cutting system limitation with no brief-authorized fallback, or no remaining eligible authorized work.
+
+Use `PROGRESS UPDATE — NONTERMINAL` for concise commentary while tools/work continue; it requires no canonical footer and expects no new Product Owner message. Every terminal workflow response and transport handoff requires exactly one canonical footer. Never end an active run with `NEXT OWNER: ENGINEER` when this chat can continue immediately.
 
 For meaningful queue updates, include:
 

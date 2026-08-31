@@ -2,6 +2,8 @@
 
 > Temporary Site-to-Design report. Include only verified, sanitized evidence needed to update permanent design documentation.
 
+This sanitized handoff is distinct from the private local-only `ENGINEER_CONTINUITY_HANDOFF.md` used for a real Engineer replacement. Never include exact local paths, credentials, tokens, owner identity, secrets, or private production data here. A replacement requires both artifacts; neither proves transfer until independently verified.
+
 ## Transfer metadata
 
 - Milestone: <!-- Short milestone name matching the accepted brief. -->
@@ -36,14 +38,15 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 - Actual model / reasoning / speed:
 - Five-hour reset time:
 - Longer-period usage before work:
-- Usage before `!brief`:
-- Usage before `!run`:
-- Usage after each named checkpoint: <!-- checkpoint = percentage -->
-- Ending usage:
+- Usage at new-slice intake:
+- Refreshed usage before `!run`: <!-- SAME AS INTAKE unless stale, reset/intervening work occurred, work is large/high-risk, estimate grew, or floor risk emerged. -->
+- Usage at materially relevant checkpoints: <!-- Large/high-risk, reset/window, material estimate growth, or credible floor-risk checkpoints only. -->
+- Ending usage: <!-- Record when readily available; do not block an otherwise complete small/normal run solely to obtain it. -->
 - Automatic stopping percentage: 15%
 - Observed burn: <!-- starting minus ending; evidence only, not a universal conversion -->
 - Reset state: <!-- CONTINUING | WAITING FOR RESET | NOT APPLICABLE -->
 - Exact safe resume point and next command:
+- Private continuity artifact created for replacement: <!-- YES | NO | NOT APPLICABLE; give safe filename only, never its local path or machine-specific contents. -->
 
 ## Baseline
 
@@ -147,6 +150,8 @@ Complete each item to confirm that this handoff contains no:
 See [`docs/DOCUMENTATION_RULES.md`](https://github.com/nguyenk06/book-collection-design/blob/main/docs/DOCUMENTATION_RULES.md) for the governing sanitization policy.
 
 ## Workflow footer
+
+This is a terminal transport artifact and must contain exactly one canonical footer. Validate that `TL;DR` and `ACTION` are present, ownership forms are not mixed, and the named owner can perform the action. Never use `NEXT OWNER: ENGINEER` merely to hand work back to the same active Engineer when an authorized continuation remains.
 
 TL;DR:
 <!-- Usually 1-4 short lines summarizing the verified result/state. -->

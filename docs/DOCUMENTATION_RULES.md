@@ -91,6 +91,15 @@ The dashboard never replaces Current State, evidence, briefs, or gate reports. D
 
 Temporary handoffs are local transport and evidence. They must not be committed to this repository and do not replace these documents.
 
+The public [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) is the concise authority for active-run continuation, terminal stopping conditions, progress-versus-terminal responses, and footer validation. Keep detailed lifecycle mechanics in [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md), and require Engineer startup and brief templates to link to both.
+
+Engineer replacement uses two distinct artifacts:
+
+- A sanitized `DESIGN_HANDOFF.md` report in external local `inbox/` for Designer intake.
+- A private local-only `ENGINEER_CONTINUITY_HANDOFF.md` artifact for successor continuity. It may contain the exact local source path and machine-specific state needed for recovery, but must remain outside GitHub and must never contain credentials, tokens, owner identity, secrets, or private production data.
+
+Never copy the private continuity artifact into this repository, a public issue, a public handoff, or permanent documentation. Permanent documents record only sanitized conclusions and authoritative candidate identity.
+
 For each significant Engineer handoff, evaluate whether it records a major milestone transition such as local implementation, local validation, saved Site version, production migration, production verification, publication, rollback, or supersession. Update the changelog when it does, keeping each state independent. Brief acceptance and routine progress reports do not create changelog entries.
 
 ## Planner Decision Queue
@@ -212,8 +221,9 @@ For every future documentation task, read these authorities first:
 2. [PROJECT_VISION.md](PROJECT_VISION.md) — product authority.
 3. [ROADMAP.md](ROADMAP.md) — long-term plan.
 4. [NEXT_ACTIONS.md](NEXT_ACTIONS.md) — active engineering queue.
-5. [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md) — required for implementation handoffs.
-6. [KNOWLEDGE_INDEX.md](KNOWLEDGE_INDEX.md) — research/catalog routing when the task involves external findings or future ideas.
+5. [ENGINEER_EXECUTION_CONTRACT.md](ENGINEER_EXECUTION_CONTRACT.md) — active-run continuation and terminal-response authority.
+6. [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md) — required for implementation handoffs.
+7. [KNOWLEDGE_INDEX.md](KNOWLEDGE_INDEX.md) — research/catalog routing when the task involves external findings or future ideas.
 
 Preserve consistency across the repository, update these documents when appropriate, and prefer cross-links over duplication.
 

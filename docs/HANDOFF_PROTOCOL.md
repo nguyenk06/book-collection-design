@@ -10,13 +10,14 @@ Primary source of design truth:
 
 Priority documents:
 
-1. `docs/PROJECT_VISION.md`
-2. `docs/CURRENT_STATE.md`
-3. `docs/NEXT_ACTIONS.md`
-4. `docs/ROADMAP.md`
-5. `docs/DATABASE.md`
-6. `docs/DOCUMENTATION_RULES.md`
-7. Relevant feature documents and ADRs
+1. `docs/ENGINEER_EXECUTION_CONTRACT.md`
+2. `docs/PROJECT_VISION.md`
+3. `docs/CURRENT_STATE.md`
+4. `docs/NEXT_ACTIONS.md`
+5. `docs/ROADMAP.md`
+6. `docs/DATABASE.md`
+7. `docs/DOCUMENTATION_RULES.md`
+8. Relevant feature documents and ADRs
 
 The Site Engineer treats the public design repository as read-only reference. Engineer has no write role in `book-collection-design`: do not create, edit, move, delete, commit, push, branch, open a pull request, publish a release, or use GitHub issues/comments as an Engineer communication channel. When starting significant implementation work, read or request the relevant current documents. If the Site workspace cannot read GitHub directly, use the latest exported [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) as the handoff package.
 
@@ -25,6 +26,8 @@ The Site Engineer treats the public design repository as read-only reference. En
 The permanent role identities are Planner — Quatre, Designer — Relena, and Engineer — Sei. Required titles are `CYOA — Planner Quatre`, `CYOA — Designer Relena`, and `CYOA — Engineer Sei`. Each role's first `!init` response displays its identity, exact required title, context continuity, unpublished-work state, and editable-source access. The Product Owner applies the title manually; chats must not claim they can rename themselves.
 
 Designer includes Sei's assignment directly in every Engineer brief: assigned role/name, expected chat, expected context, and required source state. Keep this inside the brief and do not create a separate naming workflow or registry. If a real replacement is necessary, use a suffix such as `Sei II`; do not create numbered identities preemptively.
+
+The currently prepared successor identity is `ENGINEER — SEI III`, required title `CYOA — Engineer Sei III`, because Product Owner explicitly requested replacement after Sei II's safe continuity handoff. Preparation does not establish source transfer, complete replacement, accept a brief, or create execution authority.
 
 Before `!brief` acceptance, Sei inspects actual message/Sites context for prior unpublished implementation, editable source, dirty or unsaved state, latest saved and published Site versions, context match, source composition, and collision boundaries. If expected and actual context disagree, park only the affected task and report the mismatch. Preserve and inventory unpublished work before materializing, replacing, rebuilding, or overwriting anything. If source is absent or inaccessible, report it and do not reconstruct without authority. Every acceptance, blocker, completion, and source-recovery report identifies Engineer — Sei.
 
@@ -280,12 +283,21 @@ Replacement is justified only when required workspace, Sites context, editable s
 
 Before replacing an Engineer chat, inspect and report unpublished working state. A new chat does not automatically inherit unsaved source. If replacement is necessary:
 
-1. Preserve concise evidence of unpublished source, active authority, task state, safe resume point, and access requirements.
-2. Start the new thread in the correct role/workspace context and use a suffix such as `Sei II` only for a real Engineer replacement.
-3. Supply the applicable startup template and run read-only `!init`.
-4. Validate identity, context continuity, permanent state, actual source/Site access, active workstreams, and owners before resuming.
+1. Create the private local-only `ENGINEER_CONTINUITY_HANDOFF.md` artifact and a separate sanitized `DESIGN_HANDOFF.md` report. The private artifact may contain only successor-critical machine state and must never contain credentials, tokens, owner identity, secrets, or private production data.
+2. Preserve exact editable-source path, repository/remote, branch/HEAD, clean/dirty and modified/untracked/staged/stashed state, active brief/authority/exclusions, candidate baseline/manifest, consumed attempts, completed/remaining checks, last attributable commands, process state, available dependencies, safe resume point, usage/reset state, and exact successor initialization/resume sequence.
+3. Start the new thread in the correct role/workspace context and use the next real suffix; the prepared successor in this cycle is `ENGINEER — SEI III`.
+4. Supply the successor startup prompt and run read-only `!init`. Require the successor to read the [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) and private continuity artifact.
+5. Independently verify actual source path, repository, remote, branch, HEAD, clean/dirty state, candidate identity, active authority, attempt count, process state, dependencies, and remaining validation. Documentation naming a commit is not proof that source transferred.
+6. Only after Designer processes both handoffs and verification succeeds may Designer create a new or explicitly superseding continuation brief. The successor uses `!brief`, then receives a separate `!run`.
+7. Never reset attempt counts merely because the chat changed.
 
 Do not require a handoff solely because a chat is long or compacted. Retain concise, evidence-focused handoffs for Designer-to-Engineer briefs; Engineer completion, blocker, and validation evidence; production-gate evidence; cross-role decisions/conflicts; and unpublished-source preservation before an actual replacement.
+
+## Engineer execution contract
+
+The concise [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) is mandatory reading during `!init`, `!brief`, `!run`, post-compaction recovery, and replacement initialization. It defines the active-run invariant, mandatory pre-final continuation test, exact terminal stopping conditions, progress/terminal distinction, footer validator, tool-failure scope, and three-approach behavior.
+
+`PROGRESS UPDATE — NONTERMINAL` is commentary emitted while work continues and expects no Product Owner response. `TERMINAL WORKFLOW RESPONSE` ends the current turn because the objective completed or a genuine stopping condition applies. A timeout, truncated output, lost controller result, access denial, failed lint/test/build, or missing PID blocks only that exact action unless evidence proves a cross-cutting hazard. Predictable tool limitations should have a prioritized brief-authorized fallback ladder.
 
 ## Standard Response Footer
 
@@ -322,7 +334,7 @@ ACTION:
 
 `TL;DR` and `ACTION` are always present in either form. Use exactly one ownership form: single-owner `NEXT OWNER`, or parallel `ACTIVE OWNERS` plus `BLOCKING OWNER`. Do not mix or omit these labels in meaningful workflow responses.
 
-Every meaningful response to a numeric usage command, `!init`, `!status`, role-applicable `!inbox`, `!brief`, `!run`, `!drain`, or `!stop` must use exactly one footer form. The requirement survives chat compaction or summarization and remains mandatory without a full reinitialization. It also applies to brief acceptance, implementation completion, Designer handoff processing, Planner decisions, blocked states, and publication/deployment reports. Short or trivial non-workflow acknowledgements do not require it.
+Every terminal workflow response to a numeric usage command, `!init`, `!status`, role-applicable `!inbox`, `!brief`, `!run`, `!drain`, or `!stop` must use exactly one footer form. The requirement survives chat compaction or summarization and remains mandatory without a full reinitialization. It also applies to transport handoffs, brief acceptance, implementation completion, Designer handoff processing, Planner decisions, blocked states, and publication/deployment reports. Ordinary `PROGRESS UPDATE — NONTERMINAL` commentary emitted while work continues does not require the full footer and must not imply another Product Owner prompt is needed.
 
 - Keep `TL;DR` concise and mobile-readable.
 - `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.
@@ -332,6 +344,7 @@ Every meaningful response to a numeric usage command, `!init`, `!status`, role-a
 - Use `PLANNER` for approval gates, `ENGINEER` for an actionable or already-authorized brief, and `DESIGNER` for a completed Engineer handoff awaiting intake.
 - Use `EXTERNAL/WAIT` with the resume condition when blocked outside the three roles.
 - Use `NONE — PROJECT COMPLETE` when no action remains.
+- Before sending a terminal response, validate that exactly one footer form exists; `TL;DR` and `ACTION` exist; ownership forms are not mixed; and the named owner can perform the action. Never use `NEXT OWNER: ENGINEER` to end an active `!run` when Engineer can continue immediately.
 - The footer does not replace evidence, acceptance criteria, handoffs, Planner Inbox entries, or permanent documentation. The full protocol remains authoritative.
 
 ## File Handling
@@ -343,8 +356,11 @@ The preferred workflow is file-based rather than large chat copy-and-paste block
 | Design to Site implementation | `IMPLEMENTATION_BRIEF.md` template | Create a milestone-specific implementation file in `briefs/`; share it with the Site Engineer |
 | Design to Site estimation/inspection | `ESTIMATION_BRIEF.md` template | Create a bounded read-only request in `briefs/`; it grants no implementation or Site authority |
 | Site to Design | `DESIGN_HANDOFF.md` template | Receive a milestone-specific file in `inbox/`; review it as read-only evidence |
+| Engineer to successor Engineer | private local-only `ENGINEER_CONTINUITY_HANDOFF.md` template | Preserve machine-specific continuity outside GitHub; verify independently before a superseding brief |
 
 Never treat transport files as GitHub project history. If local retention is needed, use the external local `processed/` or `archive/` areas. Durable conclusions belong in the relevant high-level design documents, milestone state, decisions, changelog, or Site version history—not as copied briefs or handoffs.
+
+The private continuity artifact is not a substitute for the sanitized Designer handoff. It may include the exact local source path but no credentials, tokens, owner identity, secrets, or private production data. Never commit, quote, or summarize its machine-specific contents into GitHub documentation.
 
 ## Handoff Workspace Lifecycle
 

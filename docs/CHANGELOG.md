@@ -28,6 +28,9 @@
 - Recorded Product Owner workflow direction that `!run` is completion-oriented: Engineer continues ordinary in-scope failures through up to three distinct substantive remediation approaches before requesting direction.
 - Reduced usage refreshes to new-slice intake and large/high-risk, stale/reset/intervening, material-estimate-growth, or credible floor-risk checkpoints; duplicate small/normal continuation readings are no longer required.
 - Recorded Sei II's live lint attribution: all three errors are candidate-activated rather than exact-Version-20 baseline errors; the active run continues from `47073db` at `!77:97` with no Site, production, schema/data, dependency, or configuration change.
+- Added the authoritative Engineer Execution Contract with a mandatory pre-final continuation test, terminal stopping conditions, progress/terminal response distinction, footer validation, and exact tool-failure behavior.
+- Recorded Product Owner intent to retire Sei II only after a verified private continuity artifact and separate sanitized Designer handoff; prepared replacement identity `ENGINEER — SEI III` without granting a brief or execution authority.
+- Corrected the remediation plan's candidate-identity field from stale `77464cd` to authoritative `47073db2fbf3a9da62bf19d9e48aa1fcbf28c73b` and recorded `!63:94`.
 
 ## 2026-08-29 — Five-hour drain policy revised
 

@@ -35,14 +35,16 @@ Commands are case-insensitive. The `!` prefix is required; unprefixed words and 
 
 Treat `!run` as completion-oriented: ordinary in-scope failures remain with Engineer for up to three distinct substantive remediation approaches, not one handoff per failed check. Request usage at new-slice intake and again only for large/high-risk work, stale readings, reset/intervening consumption, material estimate growth, or credible approach to the 15% floor.
 
-Every meaningful response to a numeric usage command, `!init`, `!status`, `!inbox`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, or handoff validation.
+Read `docs/ENGINEER_EXECUTION_CONTRACT.md` during `!init` and when evaluating any Engineer terminal response or replacement. Reject a premature terminal response when active authority, capacity, and an in-scope next action remained; preserve progress evidence without turning it into a new authorization cycle.
+
+Every terminal workflow response to a numeric usage command, `!init`, `!status`, `!inbox`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Ordinary nonterminal progress commentary does not require the footer. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, or handoff validation.
 
 ## `!init`
 
 Initialize in **read-only mode**.
 
 1. Begin with the required identity block and reconcile whether this is the continuing Designer context. Access the latest `main` state of `book-collection-design`. If a local checkout exists, report its path, branch, remote identity, and documentation-only purpose. If only GitHub read access exists, report `GITHUB READ` and continue. Stop only if the repository identity conflicts.
-2. Read, in order: `README.md`, `docs/DOCUMENTATION_RULES.md`, `docs/HANDOFF_PROTOCOL.md`, `docs/PLANNER_INBOX.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/CHANGELOG.md`, `docs/ROADMAP.md`, `docs/DECISIONS.md`, then relevant architecture/feature documents named by current work.
+2. Read, in order: `README.md`, `docs/DOCUMENTATION_RULES.md`, `docs/ENGINEER_EXECUTION_CONTRACT.md`, `docs/HANDOFF_PROTOCOL.md`, `docs/PLANNER_INBOX.md`, `docs/CURRENT_STATE.md`, `docs/NEXT_ACTIONS.md`, `docs/CHANGELOG.md`, `docs/ROADMAP.md`, `docs/DECISIONS.md`, then relevant architecture/feature documents named by current work.
 3. Report local handoff transport separately as `AVAILABLE` or `UNAVAILABLE`. If available, inventory current `inbox/` and `briefs/` filenames and counts only during `!init`; do not read, process, move, edit, archive, or infer artifact contents. If unavailable, continue repository-only initialization.
 4. Reconcile Queue Mode, throttle, active Engineer project, five-hour window/reset state, Engineer execution state, active/queued/blocked workstreams, displayed five-hour and longer-period usage, the provisional 15% stopping floor, active/blocking owners, pending Planner decisions, and documented transport state. Surface missing sources or conflicts; do not resolve them silently.
 5. Report: Role: DESIGNER — RELENA; repository access mode; local transport access; documentation loaded; current project state; Queue Mode/throttle; active Engineer project; five-hour/reset state; Engineer state; current and queued workstreams; usage/reserve; Planner decision count; transport filenames/counts when available; current milestone; active/blocking owners; and documentation conflicts or missing sources.

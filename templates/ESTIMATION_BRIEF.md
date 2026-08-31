@@ -2,6 +2,8 @@
 
 > Designer-to-Engineer transport for bounded read-only estimation, feasibility, or source/collision inspection. This is not an implementation brief and grants no authority to modify application source or Site state.
 
+Engineer must read `docs/ENGINEER_EXECUTION_CONTRACT.md` before acceptance and execution. Read-only tool failures block only the exact action unless evidence proves the whole request unsafe; use only the fallback ladder explicitly authorized here.
+
 ## Chat identity
 
 - Assigned role: ENGINEER
@@ -38,6 +40,7 @@ Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five
 - Automatic stopping percentage: **15%**
 - Safe checkpoint:
 - Work deferred until the next reset:
+- Prioritized read-only fallback ladder: <!-- Predictable access/tool limitations in order; mark any fallback requiring new authority. -->
 
 The Product Owner selects the actual model. This request cannot change it automatically. Sei may escalate from Terra to Sol only when this accepted request recommends it or a later Planner/Product Owner decision approves it. Model, reasoning, tools, context, and task complexity can change observed usage.
 
@@ -74,7 +77,7 @@ For each requested unit, return as applicable:
 
 ## Stop conditions
 
-Stop and report if context/source identity does not match, required evidence is inaccessible, inspection would mutate state, sensitive data would be exposed, scope becomes implementation, or the usage/clean-stop boundary is unsafe.
+Stop and report if context/source identity does not match, required evidence remains inaccessible after the authorized fallback ladder, inspection would mutate state, sensitive data would be exposed, scope becomes implementation, the third substantive read-only approach fails, or the usage/clean-stop boundary is unsafe. Do not stop merely because the first authorized read-only approach failed.
 
 ## Required footer
 
