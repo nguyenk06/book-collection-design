@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; `SEI III — BRIEF ACCEPTED / PARKED AT GENERATED-ARTIFACT BOUNDARY`. The active run stopped cleanly and cannot resume under its current cleanup exclusions.
+- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; `SEI III — BRIEF ACCEPTED / RESUME ELIGIBLE UNDER DECISION 1:A`. The prior run stopped cleanly; a fresh `!run` is required.
 - **Engineer continuation:** At inherited dirty `app/page.tsx`, lint now passes with zero errors and two warnings, focused tests pass 17/17, and the full serial suite passes 93/93. Standalone no-emit type checking reports no candidate-page error but generated untracked `tsconfig.tsbuildinfo` outside the exact three-file boundary. The artifact is preserved untouched. Production build, final boundary/no-data review, desktop/mobile and accessibility QA, forced cover-error validation, checkpointing, and commit remain unrun. The three substantive lint-remediation approaches remain consumed. No tracked source, Site, production, schema/data, dependency, or configuration change occurred.
-- **Planner decisions:** Decision 1 pending: authorize reversible quarantine, exact deletion, or continued parking of the generated untracked TypeScript build artifact.
-- **Active owner:** `PLANNER — QUATRE` — read `docs/PLANNER_INBOX.md` with `!inbox` and return Decision 1.
-- **Blocking owner:** `PRODUCT OWNER / PLANNER` for the generated-artifact handling authority. Other production and held-validation gates remain separately closed.
+- **Planner decisions:** None pending. Product Owner selected Decision 1:A: one identity-checked, no-overwrite move of exact generated `tsconfig.tsbuildinfo` into private quarantine, followed by boundary verification and the remaining local validation.
+- **Active owner:** `PRODUCT OWNER` — send Sei III a fresh `!run` for the accepted brief plus bounded Decision 1:A resume addendum.
+- **Blocking owner:** `NONE`; other production and held-validation gates remain separately closed.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Sei III recorded `!99:86`: **99% five-hour** and **86% longer-period** at intake/run. Capacity remains ample, but usage does not bypass the generated-artifact authority boundary. Any approved resume still requires a bounded addendum or superseding brief and a fresh separate `!run`.
+Sei III recorded `!99:86`: **99% five-hour** and **86% longer-period** at intake/run. Remaining work is estimated at 4/7/12 points with a 27% operational minimum including the 15% floor. Decision 1:A resolves the generated-artifact authority boundary; the accepted continuation may resume under its bounded addendum and a fresh separate `!run` while the reading remains fresh.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. The [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) governs completion-oriented active runs and the mandatory pre-final continuation test.
 

@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Sei III recorded `!99:86` at intake/run. Capacity remains ample, but the accepted continuation is parked at a generated-artifact authority boundary; usage does not bypass it.
+**Execution budget:** Sei III recorded `!99:86` at intake/run. Decision 1:A resolves the artifact boundary. Remaining quarantine, build, local QA, final review, checkpoint, and handoff work is estimated at 4/7/12 points with a 27% operational minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. Sei III's superseding brief is accepted but parked after no-emit type checking generated one untracked build-info file outside the exact candidate boundary. Planner Decision 1 controls quarantine, exact deletion, or continued parking. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Sei III's superseding brief is accepted and resume-eligible under Decision 1:A's reversible private-quarantine addendum; a fresh `!run` is required. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

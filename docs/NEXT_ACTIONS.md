@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; Sei III's accepted continuation is parked at a generated-artifact boundary and no execution is active.
+- **Throttle:** `DRAIN`; Sei III's accepted continuation is resume-eligible under Decision 1:A, but no execution is active until a fresh `!run`.
 - **Engineer state:** Sei III accepted and ran the superseding continuation. Lint passed with zero errors/two warnings, focused tests passed 17/17, and full serial tests passed 93/93. No-emit type checking created untracked `tsconfig.tsbuildinfo`; it was preserved because cleanup is outside current authority. Build, local QA, final boundary review, and checkpointing remain unrun.
-- **Next owner:** `PLANNER — QUATRE` — use `!inbox` to return Decision 1 on reversible quarantine, exact deletion, or continued parking. Designer then prepares only the selected bounded resume path.
-- **Usage:** Sei III recorded `!99:86` at intake/run. Capacity is not the blocker; the generated-artifact workspace decision is.
+- **Next owner:** `PRODUCT OWNER` — send Sei III `!run`. The resume addendum permits only the exact reversible quarantine move, boundary verification, and remaining local validation/checkpoint work.
+- **Usage:** Sei III recorded `!99:86` at intake/run. Remaining work is estimated at 4/7/12 points and requires a 27% minimum including the 15% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 

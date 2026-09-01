@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-31 — Generated artifact quarantine authorized
+
+- Recorded Product Owner Decision 1:A authorizing one identity-checked, no-overwrite move of exact untracked `tsconfig.tsbuildinfo` into private local quarantine.
+- Required source and destination hash preservation plus a post-move check that only inherited `app/page.tsx` remains dirty; no deletion, `.gitignore`, TypeScript configuration, dependency, tracked-source, Site, or production change is authorized.
+- Prepared a bounded resume addendum for the already accepted Sei III brief. A fresh `!run`, not another `!brief`, is required.
+- Estimated the remaining quarantine, build, local QA, final boundary review, checkpoint, and handoff work at 4/7/12 points with a 27% operational minimum.
+
 ## 2026-08-31 — Sei III validation parked at generated-artifact boundary
 
 - Accepted Sei III's continuation intake at `!99:86` and processed definitive local evidence: lint zero errors/two warnings, focused 17/17, and full serial 93/93.
