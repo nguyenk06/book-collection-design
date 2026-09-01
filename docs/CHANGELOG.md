@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-08-31 — Unpublished Version 21 preservation accepted
+
+- Accepted Sei III's corrected completion handoff after verifying its recipient identity and canonical footer; the corrected artifact supersedes the original for formatting only.
+- Recorded exact clean checkpoint `f15ea81`, its three-file Version 20 delta, passed lint/focused/full/build/package gates, and exactly one unpublished Version 21 save with a 47-file archive.
+- Confirmed Version 20 remains published and no preview, deployment, publication, production/schema/data operation, migration, environment change, or save retry occurred.
+- Closed the preservation/save run at a clean stop, recorded `!20:72`, and opened independent Planner decisions for controlled Version 21 publication and conditional Product Owner read-only live validation.
+
+## 2026-08-31 — Engineer handoff footer preflight strengthened
+
+- Required Engineer to place the canonical footer skeleton before drafting every terminal inbox artifact, reopen the saved file, and verify the last non-comment block before sending a terminal chat response.
+- Clarified that a chat footer cannot substitute for a missing transport-artifact footer.
+- Required collision-safe formatting-only superseding reports when a footer is missed; originals remain unchanged and no implementation, validation, Site, or production action may be repeated to correct formatting.
+
 ## 2026-08-31 — Exact correction source preserved
 
 - Accepted Sei III's Stage 1 transport-isolation result at `!50:76`: Sites issued the expected short-lived project-scoped credential with valid sanitized scope/provider/branch/expiration metadata.

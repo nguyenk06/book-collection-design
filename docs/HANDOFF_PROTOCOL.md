@@ -346,6 +346,8 @@ Every terminal workflow response to a numeric usage command, `!init`, `!status`,
 - Use `EXTERNAL/WAIT` with the resume condition when blocked outside the three roles.
 - Use `NONE — PROJECT COMPLETE` when no action remains.
 - Before sending a terminal response, validate that exactly one footer form exists; `TL;DR` and `ACTION` exist; ownership forms are not mixed; and the named owner can perform the action. Never use `NEXT OWNER: ENGINEER` to end an active `!run` when Engineer can continue immediately.
+- For every terminal transport artifact, place the footer skeleton at the file bottom before drafting the report. After saving, reopen and inspect the tail. The last non-comment block must be exactly one canonical footer. A chat footer does not substitute for an artifact footer.
+- Designer classifies a terminal artifact without its own valid footer as incomplete or superseded, not as the final handoff. Engineer corrects it only by creating a collision-safe, uniquely named formatting-only superseding report; preserve the original unchanged and never repeat implementation, validation, save, deployment, publication, or production work merely to repair formatting.
 - The footer does not replace evidence, acceptance criteria, handoffs, Planner Inbox entries, or permanent documentation. The full protocol remains authoritative.
 
 ## File Handling

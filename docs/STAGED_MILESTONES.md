@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Sei III recorded `!50:76` after Stage 1. Remaining Stage 2 pre-save revalidation and single unpublished save is estimated at 3/5/8 points with a 23% operational minimum including the 15% floor.
+**Execution budget:** Sei III recorded `!20:72` after completing the single unpublished Version 21 save. No Engineer work is active; any release execution waits for a fresh reading that preserves the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. Stage 1 transport isolation and exact source preservation passed; remote `main` is exact `f15ea81`. The accepted `!run` continues directly through eligible Stage 2. Product Owner live validation and publication remain closed.
+**Queue state:** Throttle `DRAIN`. Transport isolation, exact source preservation, full pre-save revalidation, and one unpublished Version 21 save passed at exact `f15ea81`. Version 20 remains published. Publication and Product Owner live validation remain independent closed gates pending Planner decisions.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

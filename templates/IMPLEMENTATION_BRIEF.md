@@ -128,7 +128,7 @@ Identify shared hotspots across workstreams and serialize or coordinate conflict
 - Separate implemented, deferred, and not-attempted work.
 - Report tests, local migration validation, saved-version state, and publication state independently.
 - Recommend document updates as `UPDATE`, `NO CHANGE`, or `REVIEW NEEDED`.
-- Close brief acceptance, progress/blocker, completion, saved-version, and publication/deployment reports with the standard `TL;DR` / `NEXT OWNER` / `ACTION` footer defined in `docs/HANDOFF_PROTOCOL.md`.
+- Before writing any terminal transport report, place the canonical footer skeleton at the file bottom. After saving, reopen the file tail and verify its last non-comment block contains exactly one `TL;DR`, exactly one ownership form, and `ACTION`. A chat footer is not a substitute. If correction is needed, create a uniquely named formatting-only superseding report; never overwrite the original or repeat project/Site work.
 
 ## Product Owner validation checkpoint
 

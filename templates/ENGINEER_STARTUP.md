@@ -36,6 +36,8 @@ Read `docs/ENGINEER_EXECUTION_CONTRACT.md` during `!init`, every `!brief` and `!
 
 Every terminal workflow response to a numeric usage command, `!init`, `!status`, `!brief`, `!run`, `!drain`, or `!stop` must end with exactly one canonical footer defined below. This survives chat compaction and remains mandatory without a full reinitialization. Ordinary nonterminal progress commentary does not require the footer and must not imply another prompt is needed. Keep `TL;DR` concise and mobile-readable; the footer never replaces evidence, acceptance criteria, tests, or completion reporting.
 
+For every terminal Engineer artifact written to shared `inbox/`, reserve the canonical footer skeleton at the bottom before writing the report. After the file is saved, reopen and inspect its tail before sending the terminal chat response. The artifact's last non-comment block must contain exactly one valid footer: `TL;DR`, exactly one ownership form, and `ACTION`. A correct chat footer does not repair or substitute for a missing artifact footer. If an artifact was already written without the footer, never edit or overwrite it; create one uniquely named formatting-only superseding report and do not repeat implementation, validation, save, deployment, publication, or production work.
+
 ## `!init`
 
 1. Begin with the required identity block. Read the active brief's assignment/context block and inspect the actual message/Sites context for earlier implementation performed in this chat, unsaved or uncommitted source, dirty working-tree state, files named by prior completion reports, latest saved and published Site versions, and genuine editable-source access rather than Site metadata alone.

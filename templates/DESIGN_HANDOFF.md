@@ -151,7 +151,7 @@ See [`docs/DOCUMENTATION_RULES.md`](https://github.com/nguyenk06/book-collection
 
 ## Workflow footer
 
-This is a terminal transport artifact and must contain exactly one canonical footer. Validate that `TL;DR` and `ACTION` are present, ownership forms are not mixed, and the named owner can perform the action. Never use `NEXT OWNER: ENGINEER` merely to hand work back to the same active Engineer when an authorized continuation remains.
+This is a terminal transport artifact and must contain exactly one canonical footer. Put this footer skeleton in place before writing the report. After saving, reopen the file and verify that its last non-comment block contains `TL;DR`, exactly one ownership form, and `ACTION`; confirm the named owner can perform the action. A correct chat footer is not a substitute for the artifact footer. If a saved artifact lacks the footer, preserve it unchanged and create a uniquely named formatting-only superseding artifact without repeating any implementation, validation, Site, or production action. Never use `NEXT OWNER: ENGINEER` merely to hand work back to the same active Engineer when an authorized continuation remains.
 
 TL;DR:
 <!-- Usually 1-4 short lines summarizing the verified result/state. -->
