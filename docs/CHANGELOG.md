@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-31 — Quarantine pre-move tool failure recovered
+
+- Recorded Product Owner usage `!89:82`.
+- Processed Sei III's verified no-mutation blocker: the directory-creation interface rejected an unsupported literal-path parameter, so the authorized quarantine move never began and the source artifact/destination remained unchanged.
+- Classified the failure as a command-interface limitation rather than a consumed move mutation or new authority decision.
+- Prepared one superseding addendum allowing supported private-directory creation and command correction while preserving exact identity checks, the single actual move limit, no-overwrite behavior, and every source/Site/production exclusion.
+
 ## 2026-08-31 — Generated artifact quarantine authorized
 
 - Recorded Product Owner Decision 1:A authorizing one identity-checked, no-overwrite move of exact untracked `tsconfig.tsbuildinfo` into private local quarantine.

@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Sei III recorded `!99:86` at intake/run. Decision 1:A resolves the artifact boundary. Remaining quarantine, build, local QA, final review, checkpoint, and handoff work is estimated at 4/7/12 points with a 27% operational minimum including the 15% floor.
+**Execution budget:** Product Owner supplied `!89:82`. Decision 1:A remains in force after a pre-move directory-command rejection. Remaining quarantine, build, local QA, final review, checkpoint, and handoff work stays estimated at 4/7/12 points with a 27% operational minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. Sei III's superseding brief is accepted and resume-eligible under Decision 1:A's reversible private-quarantine addendum; a fresh `!run` is required. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Sei III's brief is accepted and resume-eligible under a superseding tool-recovery addendum because the authorized move never began. A fresh `!run` is required. Product Owner live validation remains held, and every Site or production gate remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
