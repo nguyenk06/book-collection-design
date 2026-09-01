@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; local implementation is complete and no Engineer execution is active.
+- **Throttle:** `DRAIN`; the preservation/save brief is queued but not accepted, and no Engineer execution is active.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`. Exact three-file composition, lint, 17/17 focused, 93/93 full serial, production build, desktop/mobile responsive and accessibility QA, focus restoration, cover fallback, boundary, and no-data checks pass. The generated build artifact is privately quarantined. No push or Site operation occurred.
-- **Next owner:** `PLANNER — QUATRE` — use `!inbox` to return Decision 1 on exact source preservation and independent Decision 2 on one conditional unpublished Site save. Publication remains a later gate.
-- **Usage:** Product Owner supplied `!89:82`. Proposed preservation is 2/4/7 points; the separate conditional save adds 3/5/8, for a combined 5/9/15-point envelope and 30% operational minimum. Neither is authorized yet.
+- **Next owner:** `PRODUCT OWNER` — send Sei III `!brief`; after clean acceptance, send a separate `!run`.
+- **Usage:** Product Owner supplied `!89:82`. Authorized preservation is 2/4/7 points; the separate conditional save adds 3/5/8, for a combined 5/9/15-point envelope and 30% operational minimum.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 

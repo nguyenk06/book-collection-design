@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-31 — Correction candidate preservation and unpublished save authorized
+
+- Recorded Product Owner Decisions 1:A and 2:A.
+- Authorized exact source preservation for clean checkpoint `f15ea81` through identity checks, one remote-head read, and at most one normal push; force push, retry, correction, and ambiguous transport remain excluded.
+- Authorized one unpublished Site save only after exact remote/source/package identity and full required revalidation succeed. Preview, deployment, publication, live validation, production access/mutation, correction, retry, rollback, and restore remain closed.
+- Queued one Sei III brief with separate preservation and conditional-save stages, a combined 5/9/15-point envelope, and 30% operational minimum under `!89:82`.
+
 ## 2026-08-31 — Version 20 correction candidate complete locally
 
 - Accepted Sei III's complete local handoff and independently verified clean checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`, four commits ahead of its configured remote, with the exact three-file Version 20 delta.

@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner supplied `!89:82`. The local implementation slice is complete. Proposed source preservation is 2/4/7 points; the separate conditional unpublished Site save adds 3/5/8, producing a combined 5/9/15-point envelope and 30% operational minimum. Neither gate is authorized yet.
+**Execution budget:** Product Owner supplied `!89:82`. Authorized exact source preservation is 2/4/7 points; the separate conditional unpublished Site save adds 3/5/8, producing a combined 5/9/15-point envelope and 30% operational minimum.
 
-**Queue state:** Throttle `DRAIN`. Sei III's local implementation brief and addenda are complete at clean checkpoint `f15ea81`; no Engineer execution is active. Planner Decisions 1 and 2 separately govern source preservation and one unpublished Site save. Product Owner live validation and publication remain closed.
+**Queue state:** Throttle `DRAIN`. Sei III's clean checkpoint `f15ea81` is ready for a queued two-stage preservation/save brief. Stage 1 must converge before Stage 2 becomes eligible. Product Owner live validation and publication remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
