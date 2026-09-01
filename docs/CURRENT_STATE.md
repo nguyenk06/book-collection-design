@@ -24,17 +24,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — RETIRED`; `SEI III — PRESERVATION BRIEF ACCEPTED / TRANSPORT-ISOLATION RESUME ELIGIBLE`. No `!run` is active.
+- **Engineer state:** `SEI II — RETIRED`; `SEI III — ACTIVE !run / STAGE 1 COMPLETE / STAGE 2 ELIGIBLE`.
 - **Engineer completion:** Exact local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8` is clean and four commits ahead of its configured remote-tracking baseline. Relative to Version 20 it contains exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`; the final checkpoint changes only `app/page.tsx`. Lint passes with zero errors/two established warnings, focused tests pass 17/17, full serial tests pass 93/93, production build passes, desktop/mobile responsive and accessibility QA passes, focus restoration and cover-error fallback pass, and final boundary/no-data checks pass. The generated TypeScript artifact was moved once into private quarantine with identity preserved. Standalone type checking remains a known environment/project limitation with no candidate-page error. No push, Site save/version, preview, publication, production, schema/data, dependency, or configuration action occurred.
-- **Preservation blocker:** The first remote-head query returned no definitive SHA after reaching provider detection. Local `f15ea81` remains clean and unchanged; no push or Site action occurred. Product Owner now authorizes one materially different transport-layer isolation run to distinguish credential issuance/metadata, direct Git transport, provider/network behavior, and Codex controller result handling.
-- **Planner decisions:** None pending. Product Owner selected Decision 1:A. If the one direct query fails, every release depending on the same Sites-managed source transport parks; independent local development remains eligible.
-- **Active owner:** `PRODUCT OWNER` — send Sei III a fresh `!run` for the accepted brief plus transport-isolation addendum.
-- **Blocking owner:** `NONE` before the diagnostic run. Stage 2 remains conditionally blocked until Stage 1 establishes exact remote `f15ea81`.
+- **Preservation result:** Sites issued the expected short-lived project-scoped credential with valid sanitized metadata. The one isolated direct query returned remote `main` at exact Version 20 with exit 0; the one authorized normal fast-forward push then completed with exit 0 and advanced configured remote `main` to exact `f15ea81`. No credential was exposed and no Site save or other release action occurred.
+- **Planner decisions:** None pending. Stage 1 source preservation is complete; prior Decision 2:A makes Stage 2 eligible after its full pre-save gates.
+- **Active owner:** `ENGINEER — SEI III` — continue the already active `!run` directly through Stage 2 pre-save revalidation and the single conditional unpublished save. No new `!brief` or `!run` is required.
+- **Blocking owner:** `NONE`; Stage 2 must still stop for any Site/session/source/package/validation ambiguity.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Sei III recorded `!58:77`: **58% five-hour** and **77% longer-period** at Stage 1. The transport isolation, conditional push, and conditional save stay within a conservative 5/9/15-point envelope and 30% operational minimum. Refresh only if this reading becomes stale through reset/intervening work or floor risk.
+Sei III recorded `!50:76`: **50% five-hour** and **76% longer-period** after Stage 1. Remaining Stage 2 work is estimated at 3/5/8 points and requires a 23% operational minimum including the 15% floor. Capacity is sufficient; refresh only for reset/intervening work, material estimate growth, or credible floor risk.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. The [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) governs completion-oriented active runs and the mandatory pre-final continuation test.
 

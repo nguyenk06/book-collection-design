@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Sei III recorded `!58:77` at Stage 1. Remaining materially different query, conditional push, and conditional save work retains a conservative 5/9/15-point envelope and 30% operational minimum.
+**Execution budget:** Sei III recorded `!50:76` after Stage 1. Remaining Stage 2 pre-save revalidation and single unpublished save is estimated at 3/5/8 points with a 23% operational minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. Sei III accepted the two-stage preservation/save brief and may resume Stage 1 once under the transport-isolation addendum. If that direct query fails, all releases using the same Sites-managed source transport park while independent local development remains eligible. Stage 2, Product Owner live validation, and publication remain closed until their gates converge.
+**Queue state:** Throttle `DRAIN`. Stage 1 transport isolation and exact source preservation passed; remote `main` is exact `f15ea81`. The accepted `!run` continues directly through eligible Stage 2. Product Owner live validation and publication remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

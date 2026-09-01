@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-31 — Exact correction source preserved
+
+- Accepted Sei III's Stage 1 transport-isolation result at `!50:76`: Sites issued the expected short-lived project-scoped credential with valid sanitized scope/provider/branch/expiration metadata.
+- Recorded the one direct `refs/heads/main` query as exit 0 with remote exact Version 20, followed by the one authorized normal fast-forward push with exit 0 to exact `f15ea81`.
+- Confirmed no credential exposure, second query/push, package action, Site save, preview, publication, production, schema/data, migration, or source correction occurred.
+- Classified the Stage 1 handoff as a nonterminal checkpoint inside the already active two-stage `!run`; Stage 2 is eligible without another `!brief` or `!run`.
+- Updated the dashboard to distinguish source preservation from Site save/publication.
+
 ## 2026-08-31 — Sites source transport isolation authorized
 
 - Recorded Product Owner Decision 1:A as a materially different transport-layer isolation run rather than a routine query retry.
