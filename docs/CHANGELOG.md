@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-31 — Sites source transport isolation authorized
+
+- Recorded Product Owner Decision 1:A as a materially different transport-layer isolation run rather than a routine query retry.
+- Required separate evidence for Sites credential issuance, project-scoped remote/repository/branch/provider/expiration metadata, one bounded direct `refs/heads/main` result, and exact failure-layer ownership.
+- Required sanitized exit status and evidence suitable for an OpenAI support report without exposing the short-lived credential or private source details.
+- Preserved the prior conditional push/save authority only after a successful definitive SHA. A failed isolation query parks all releases sharing the Sites-managed source transport while keeping independent local development eligible.
+
 ## 2026-08-31 — Source preservation parked on ambiguous remote head
 
 - Processed Sei III's brief acceptance at `!61:78` and Stage 1 blocker at `!58:77`.

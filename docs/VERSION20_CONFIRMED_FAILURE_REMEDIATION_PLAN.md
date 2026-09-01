@@ -1,6 +1,6 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Complete locally at `f15ea8144ec277a737f5e491e0276b60555cafb8`; preservation Stage 1 parked after an ambiguous remote-head read, with conditional Site save still blocked
+**Status:** Complete locally at `f15ea8144ec277a737f5e491e0276b60555cafb8`; one transport-isolation preservation resume authorized, with conditional Site save still gated
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** final local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`; it must never be called or represented as `80e4c61`
 

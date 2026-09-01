@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the preservation/save brief is accepted but Stage 1 is parked, and no Engineer execution is active.
+- **Throttle:** `DRAIN`; the preservation/save brief is accepted and transport-isolation resume-eligible, but no Engineer execution is active.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`. Exact three-file composition, lint, 17/17 focused, 93/93 full serial, production build, desktop/mobile responsive and accessibility QA, focus restoration, cover fallback, boundary, and no-data checks pass. The generated build artifact is privately quarantined. No push or Site operation occurred.
-- **Next owner:** `PLANNER — QUATRE` — use `!inbox` to return Decision 1 on one materially different supported read-only remote-head query or deferral.
-- **Usage:** Sei III recorded `!58:77` at Stage 1. Remaining query/push/save work retains a conservative 5/9/15-point envelope and 30% operational minimum; the remote-state ambiguity, not capacity, is blocking.
+- **Next owner:** `PRODUCT OWNER` — send Sei III `!run`. No new `!brief` is required.
+- **Usage:** Sei III recorded `!58:77` at Stage 1. Transport isolation plus conditional push/save retains a conservative 5/9/15-point envelope and 30% operational minimum.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
