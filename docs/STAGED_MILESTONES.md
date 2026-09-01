@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner supplied `!89:82`. Authorized exact source preservation is 2/4/7 points; the separate conditional unpublished Site save adds 3/5/8, producing a combined 5/9/15-point envelope and 30% operational minimum.
+**Execution budget:** Sei III recorded `!58:77` at Stage 1. Remaining materially different query, conditional push, and conditional save work retains a conservative 5/9/15-point envelope and 30% operational minimum.
 
-**Queue state:** Throttle `DRAIN`. Sei III's clean checkpoint `f15ea81` is ready for a queued two-stage preservation/save brief. Stage 1 must converge before Stage 2 becomes eligible. Product Owner live validation and publication remain closed.
+**Queue state:** Throttle `DRAIN`. Sei III accepted the two-stage preservation/save brief, but Stage 1 is parked because its single remote-head query returned no SHA. Planner Decision 1 controls one materially different read-only method or deferral. Stage 2, Product Owner live validation, and publication remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

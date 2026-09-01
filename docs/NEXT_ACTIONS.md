@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the preservation/save brief is queued but not accepted, and no Engineer execution is active.
+- **Throttle:** `DRAIN`; the preservation/save brief is accepted but Stage 1 is parked, and no Engineer execution is active.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`. Exact three-file composition, lint, 17/17 focused, 93/93 full serial, production build, desktop/mobile responsive and accessibility QA, focus restoration, cover fallback, boundary, and no-data checks pass. The generated build artifact is privately quarantined. No push or Site operation occurred.
-- **Next owner:** `PRODUCT OWNER` — send Sei III `!brief`; after clean acceptance, send a separate `!run`.
-- **Usage:** Product Owner supplied `!89:82`. Authorized preservation is 2/4/7 points; the separate conditional save adds 3/5/8, for a combined 5/9/15-point envelope and 30% operational minimum.
+- **Next owner:** `PLANNER — QUATRE` — use `!inbox` to return Decision 1 on one materially different supported read-only remote-head query or deferral.
+- **Usage:** Sei III recorded `!58:77` at Stage 1. Remaining query/push/save work retains a conservative 5/9/15-point envelope and 30% operational minimum; the remote-state ambiguity, not capacity, is blocking.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -113,7 +113,7 @@ That procedure stopped cleanly: archive metadata contains 49 generated files und
 
 Product Owner Decision 1:A retired exact `80e4c61` and authorized Designer planning. [Version 20 Confirmed-Failure Remediation Plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md) defines a new local-only candidate rooted at exact published Version 20. It covers only mobile Shopping discovery, primary multi-row Bookcase, horizontal Shelf alternate, selectable informative missing positions, and selected-book cover/fallback presentation. Implementation, Site save, publication, and held validation remain unapproved.
 
-Product Owner selected Decision 1:A on the plan, and Sei II/Sei III completed the resulting bounded local implementation sequence. Final clean checkpoint `f15ea81` contains only the approved three-file Version 20 delta and passes the full accepted local validation gate. The implementation brief and all recovery addenda are complete. Push, Site save/version, preview, deployment, publication, production access/mutation, migration, and held validation remain unapproved pending separate gates.
+Product Owner selected Decision 1:A on the plan, and Sei II/Sei III completed the resulting bounded local implementation sequence. Final clean checkpoint `f15ea81` contains only the approved three-file Version 20 delta and passes the full accepted local validation gate. The implementation brief and all recovery addenda are complete. Product Owner later authorized a separate two-stage source-preservation/unpublished-save brief; it is accepted but parked because the first remote-head query returned no SHA. Preview, deployment, publication, production access/mutation, migration, and held validation remain unapproved.
 
 ## Other workstreams
 

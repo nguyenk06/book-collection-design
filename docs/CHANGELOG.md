@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-31 — Source preservation parked on ambiguous remote head
+
+- Processed Sei III's brief acceptance at `!61:78` and Stage 1 blocker at `!58:77`.
+- Recorded that the single authorized configured-branch query reached provider detection but returned no definitive remote SHA; no push, ref update, package action, Site save, or source/Site/production mutation occurred.
+- Reconfirmed local `f15ea81` remains clean with the exact three-file Version 20 delta and cached remote-tracking reference at exact Version 20; the cached reference is not current remote proof.
+- Opened one Planner decision between a materially different supported read-only remote query and deferral. Stage 2 remains blocked and publication closed.
+
 ## 2026-08-31 — Correction candidate preservation and unpublished save authorized
 
 - Recorded Product Owner Decisions 1:A and 2:A.

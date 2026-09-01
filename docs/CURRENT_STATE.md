@@ -24,16 +24,17 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — RETIRED`; `SEI III — LOCAL IMPLEMENTATION COMPLETE / CLEAN STOP`. No Engineer brief or `!run` is active.
+- **Engineer state:** `SEI II — RETIRED`; `SEI III — PRESERVATION BRIEF ACCEPTED / STAGE 1 PARKED`. No `!run` is active.
 - **Engineer completion:** Exact local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8` is clean and four commits ahead of its configured remote-tracking baseline. Relative to Version 20 it contains exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`; the final checkpoint changes only `app/page.tsx`. Lint passes with zero errors/two established warnings, focused tests pass 17/17, full serial tests pass 93/93, production build passes, desktop/mobile responsive and accessibility QA passes, focus restoration and cover-error fallback pass, and final boundary/no-data checks pass. The generated TypeScript artifact was moved once into private quarantine with identity preserved. Standalone type checking remains a known environment/project limitation with no candidate-page error. No push, Site save/version, preview, publication, production, schema/data, dependency, or configuration action occurred.
-- **Planner decisions:** None pending. Product Owner selected Decisions 1:A and 2:A: exact source preservation, then one conditional unpublished Site save as a separate stage. Publication remains closed.
-- **Active owner:** `PRODUCT OWNER` — send Sei III `!brief` for the queued preservation/save brief. A separate `!run` remains required after clean acceptance.
-- **Blocking owner:** `NONE`; the Site save remains conditionally blocked until exact source preservation and package/identity revalidation succeed.
+- **Preservation blocker:** The single authorized remote-head query returned no definitive SHA after reaching provider detection. Local `f15ea81` remains clean and unchanged; no push or Site action occurred. The cached remote-tracking reference is exact Version 20 but is not current remote proof.
+- **Planner decisions:** Decision 1 pending: authorize one materially different supported read-only remote-head query or defer. The prior source-push and conditional-save decisions remain recorded but cannot proceed through ambiguity. Publication remains closed.
+- **Active owner:** `PLANNER — QUATRE` — read `docs/PLANNER_INBOX.md` with `!inbox` and return Decision 1.
+- **Blocking owner:** `PRODUCT OWNER / PLANNER` for a second read-only remote-state method. Stage 2 remains conditionally blocked until Stage 1 converges.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied `!89:82`: **89% five-hour** and **82% longer-period**. Exact source preservation is estimated at 2/4/7 points; the separate conditional unpublished-save stage adds 3/5/8 points. Their combined 5/9/15-point envelope requires a 30% operational minimum including the 15% floor and is authorized for brief intake while this reading remains fresh.
+Sei III recorded `!58:77`: **58% five-hour** and **77% longer-period** at Stage 1. The remaining materially different remote query, conditional push, and conditional save stay within a conservative 5/9/15-point envelope and 30% operational minimum, but usage does not bypass the remote-state decision.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. The [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) governs completion-oriented active runs and the mandatory pre-final continuation test.
 
