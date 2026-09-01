@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-08-31 — Version 20 correction candidate complete locally
+
+- Accepted Sei III's complete local handoff and independently verified clean checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`, four commits ahead of its configured remote, with the exact three-file Version 20 delta.
+- Recorded zero-error lint with two established warnings, 17/17 focused and 93/93 full serial tests, successful production build, desktop/mobile responsive and accessibility QA, focus restoration, cover-load-error fallback, and final boundary/no-data checks.
+- Verified the generated TypeScript artifact is absent from the checkout and retained in private quarantine with matching size/hash.
+- Closed the implementation brief and recovery addenda without push or Site action; opened separate Planner decisions for exact source preservation and one conditional unpublished Site save. Publication remains closed.
+- Updated the project dashboard's My Library visual-experience row to distinguish new local correction checkpoint `f15ea81` from historical Phase A/D checkpoint `608553f`.
+
 ## 2026-08-31 — Quarantine pre-move tool failure recovered
 
 - Recorded Product Owner usage `!89:82`.

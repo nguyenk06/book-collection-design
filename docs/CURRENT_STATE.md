@@ -6,7 +6,7 @@ For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md).
 
 Future Library-first presentation, Shopkeeper naming, responsive shell, testing access, write-lock UX, themes, bookcases, and optional personality layers are documented in [My Library Visual Experience](VISUAL_EXPERIENCE.md). They are planning direction only and do not alter the current queue or Site state.
 
-Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A, the static Phase D foundation, and confirmed validation-failure remediation were once validated at `608553f`/`80e4c61`, but their editable source is no longer available. Those checkpoints are historical evidence, not recoverable candidates. The next remediation must start from exact Version 20 and receive a new identity and full validation.
+Sei returned a read-only source-informed A–H estimate against exact Version 20 source. Phase A and the static Phase D foundation at `608553f`, plus older combined remediation at `80e4c61`, remain historical evidence without recoverable editable source. A new Version 20-based correction candidate is now complete and locally validated at `f15ea8144ec277a737f5e491e0276b60555cafb8`; it is not saved, pushed, or published.
 
 ## Authoritative snapshot
 
@@ -24,16 +24,16 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; use the remaining window productively while preserving the 15% floor.
-- **Engineer state:** `SEI II — RETIRED AT SAFE HANDOFF`; `SEI III — BRIEF ACCEPTED / RESUME ELIGIBLE UNDER TOOL-RECOVERY ADDENDUM`. The prior run stopped after a pre-move directory-command rejection; a fresh `!run` is required.
-- **Engineer continuation:** At inherited dirty `app/page.tsx`, lint passes with zero errors and two warnings, focused tests pass 17/17, and the full serial suite passes 93/93. Standalone no-emit type checking reports no candidate-page error but generated untracked `tsconfig.tsbuildinfo` outside the exact three-file boundary. Decision 1:A's first resume stopped before any move because the directory-creation interface rejected an unsupported literal-path parameter. The artifact remains in place with its verified size/hash; no quarantine directory or destination exists. Production build, final boundary/no-data review, desktop/mobile and accessibility QA, forced cover-error validation, checkpointing, and commit remain unrun. The three substantive lint-remediation approaches remain consumed. No tracked source, Site, production, schema/data, dependency, or configuration change occurred.
-- **Planner decisions:** None pending. Product Owner selected Decision 1:A: one identity-checked, no-overwrite move of exact generated `tsconfig.tsbuildinfo` into private quarantine, followed by boundary verification and the remaining local validation.
-- **Active owner:** `PRODUCT OWNER` — send Sei III a fresh `!run` for the accepted brief plus the superseding quarantine tool-recovery addendum.
-- **Blocking owner:** `NONE`; other production and held-validation gates remain separately closed.
+- **Engineer state:** `SEI II — RETIRED`; `SEI III — LOCAL IMPLEMENTATION COMPLETE / CLEAN STOP`. No Engineer brief or `!run` is active.
+- **Engineer completion:** Exact local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8` is clean and four commits ahead of its configured remote-tracking baseline. Relative to Version 20 it contains exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`; the final checkpoint changes only `app/page.tsx`. Lint passes with zero errors/two established warnings, focused tests pass 17/17, full serial tests pass 93/93, production build passes, desktop/mobile responsive and accessibility QA passes, focus restoration and cover-error fallback pass, and final boundary/no-data checks pass. The generated TypeScript artifact was moved once into private quarantine with identity preserved. Standalone type checking remains a known environment/project limitation with no candidate-page error. No push, Site save/version, preview, publication, production, schema/data, dependency, or configuration action occurred.
+- **Planner decisions:** Decision 1 pending for exact source-branch preservation; Decision 2 pending independently for one unpublished Site save after successful preservation/package verification.
+- **Active owner:** `PLANNER — QUATRE` — read `docs/PLANNER_INBOX.md` with `!inbox` and return Decisions 1 and 2.
+- **Blocking owner:** `PRODUCT OWNER / PLANNER` for the next source-preservation and saved-version gates. Publication and held live validation remain separately closed.
 - **Potential later owner:** Product Owner hands-on validation still requires a separately designed live-only sequence because Sites exposes no runnable unpublished checkpoint.
 
 ## Usage reserve
 
-Product Owner supplied `!89:82`: **89% five-hour** and **82% longer-period**. Remaining work stays estimated at 4/7/12 points with a 27% operational minimum including the 15% floor. Decision 1:A remains in force; the superseding addendum corrects only the failed pre-move tool path and still permits exactly one actual move mutation.
+Product Owner supplied `!89:82`: **89% five-hour** and **82% longer-period**. The local implementation slice is complete. Proposed source preservation is estimated at 2/4/7 points; the separate conditional unpublished-save gate adds 3/5/8 points. Their combined 5/9/15-point envelope would require a 30% operational minimum including the 15% floor, but neither gate is authorized yet.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. The [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) governs completion-oriented active runs and the mandatory pre-final continuation test.
 
@@ -51,7 +51,7 @@ Workflow planning uses five-hour execution slices. One Engineer project is activ
 | My Library Phase A shell | Complete locally; checkpoint `608553f` includes it | 94/94 current-source serial tests, targeted shell/theme suites, scoped lint, build, diff and manifest checks passed | Unsaved as a Site version; later checkpoint/release separately gated |
 | My Library static Phase D themes | Complete locally; checkpoint `608553f` | Semantic conversion complete; desktop/mobile light/dark/system QA, focus, overflow, and sampled contrast passed | Admin/catalog visual routes blocked locally by sign-in; forced-colors/reduced-motion emulation and preference persistence remain later |
 | Local D1 remediation | Complete | Private byte-for-byte backup; disposable-clone proof; unchanged `0004` → `0005` → `0006` applied once; preservation/integrity checks, 101/101 tests, scoped lint, and build passed | Retain backup privately; no restore or additional local write authorized |
-| Confirmed validation-failure remediation | Historical validation evidence; editable source unavailable | `80e4c61` reports recorded 31/31 focused and 163/163 full plus lint/build checks; retained package is deployment-only | Exact candidate retired; new Version 20-based candidate requires new implementation and validation |
+| Confirmed validation-failure remediation | Complete locally at `f15ea81`; unsaved and unpublished | Exact three-file Version 20 delta; lint zero errors/two warnings, 17/17 focused, 93/93 full serial, build, responsive/accessibility QA, focus restoration, cover fallback, clean boundary, and no-data checks pass | Decide source preservation and unpublished save separately; publication remains closed |
 
 ## Data and export status
 
@@ -80,4 +80,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-P1 confirmed authoritative Version 20 and Product Owner retired exact `80e4c61`. Sei II's candidate remains limited to `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. The single elevated inspection is consumed. At exact post-fix checkpoint `47073db`, owned 17/17 focused and 93/93 full serial suites pass, but the separately owned lint check fails with three errors in changed `app/page.tsx`. Lint-command identity and baseline/diff attribution must precede any narrow remediation. This is not a validated release candidate. Site save/publication and held live validation remain separately gated.
+The Version 20-based confirmed-failure correction is complete locally at clean checkpoint `f15ea81`. Its exact three-file composition and full local validation are accepted. It has not been pushed to the configured source branch or saved as a Site version. Planner Decisions 1 and 2 govern those operations independently; publication and held live validation remain closed.

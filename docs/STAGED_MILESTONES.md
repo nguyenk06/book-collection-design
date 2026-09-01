@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner supplied `!89:82`. Decision 1:A remains in force after a pre-move directory-command rejection. Remaining quarantine, build, local QA, final review, checkpoint, and handoff work stays estimated at 4/7/12 points with a 27% operational minimum including the 15% floor.
+**Execution budget:** Product Owner supplied `!89:82`. The local implementation slice is complete. Proposed source preservation is 2/4/7 points; the separate conditional unpublished Site save adds 3/5/8, producing a combined 5/9/15-point envelope and 30% operational minimum. Neither gate is authorized yet.
 
-**Queue state:** Throttle `DRAIN`. Sei III's brief is accepted and resume-eligible under a superseding tool-recovery addendum because the authorized move never began. A fresh `!run` is required. Product Owner live validation remains held, and every Site or production gate remains closed.
+**Queue state:** Throttle `DRAIN`. Sei III's local implementation brief and addenda are complete at clean checkpoint `f15ea81`; no Engineer execution is active. Planner Decisions 1 and 2 separately govern source preservation and one unpublished Site save. Product Owner live validation and publication remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
