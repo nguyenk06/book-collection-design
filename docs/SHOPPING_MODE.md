@@ -45,7 +45,7 @@ Help a collector decide quickly whether to buy, skip, or investigate a book whil
 - Reliable mobile application behavior
 - Collection search and status rules
 
-## Verified Saved Foundation
+## Verified Foundation and Release State
 
 Unpublished Site Version 17 preserves locally validated persistence and owner-authorized APIs for:
 
@@ -56,12 +56,13 @@ Unpublished Site Version 17 preserves locally validated persistence and owner-au
 - Nullable collection target price, with CYOA configured to 600 cents locally.
 - Nullable Book Added Date for new manual/imported records without fabricating historical dates.
 
-This foundation is saved but has not been published as Shopping UI; Version 19 is live as the owner-authenticated administration surface, while Version 18 is retained in Site history. Gate 2 observed the pre-upgrade baseline and retained a validated structured export privately. Gate 3 later invoked the guarded additive activation exactly once. Gate 4 independently confirmed schema-complete and zero-FK status; one separately authorized supplemental export matched Gate 2 counts, identities, Book values, ownership, copies, and cover references, with only the authorized CYOA target price now at 600 cents. Gate 4 is complete within that bridge-observable boundary. Saving Version 17 itself did not execute its packaged migration or add Shopping Mode UI. Purchase creation intentionally does not update Book ownership or copy counts.
+Version 17 remains historical evidence for the saved persistence/API foundation; saving it did not execute its packaged migration or add Shopping Mode UI. Version 19 later supplied the owner-authenticated administration surface for Gates 2–4. Gate 3 invoked the guarded additive activation exactly once, and Gate 4 independently confirmed schema-complete and zero-FK status within its bridge-observable boundary. Exact cumulative Version 20 then published Shopping/M3–M6/Bookshelf successfully. Replacement mobile-navigation and Bookshelf corrections are now saved unpublished as Version 21 at exact `f15ea81`. Purchase creation intentionally does not update Book ownership or copy counts.
 
 ## Remaining Milestone Work
 
-- Keep completed production activation/verification evidence separate from the still-closed publication gate.
-- Preserve the completed cumulative source boundary in Version 20; any later candidate change, Site save, deployment, or publication remains separately gated.
+- Publish exact saved Version 21 only through the authorized bounded brief; no publication attempt has yet occurred.
+- After successful publication, prepare and run only the conditionally authorized read-only remediation checklist. Mutating Shopping scenarios and broad smoke remain separately gated.
+- Preserve Version 20 as the current released baseline until Version 21 publication succeeds definitively.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
 
 ## Verified Local UI Phase
@@ -77,11 +78,11 @@ This bounded phase is complete and validated against local/disposable data befor
 
 Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
 
-The authoritative local suites passed before preservation and publication. Exact saved Version 20 later passed 92/92 saved-source, 160/160 layered, and 150/150 focused tests plus lint/build and published successfully once. Bounded root and Shopping health passed. Product Owner live validation and broad smoke remain separate gates.
+The authoritative local suites passed before preservation and publication. Exact saved Version 20 later passed 92/92 saved-source, 160/160 layered, and 150/150 focused tests plus lint/build and published successfully once. Bounded root and Shopping health passed. Product Owner validation then confirmed a mobile Shopping-discoverability failure alongside Bookshelf failures. Replacement checkpoint `f15ea81` corrects those bounded failures, passes its accepted local and package gates, and is saved unpublished as Version 21. One bounded Version 21 publication is authorized but unrun. A separate read-only remediation checklist is conditionally authorized only after successful publication; broad smoke and all mutating Shopping scenarios remain separate gates.
 
 ## Product Owner validation checkpoint
 
-The separate validation-Site direction is canceled. Shopping hands-on validation will occur on the live Site using existing collection data only after the controlled sequence in [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md) reaches publication successfully.
+The separate validation-Site direction is canceled. Remediation hands-on validation will occur on the live Site only after exact Version 21 publishes successfully under the controlled sequence in [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md). The first Version 21 checklist is read-only wherever possible and does not authorize the purchase-recording scenarios below; those mutating scenarios require another explicit Product Owner decision.
 
 The sequence does not weaken data preservation because the database is lightweight or correctable. Before schema activation, create and privately retain the bridge structured export, record preservation invariants, and acknowledge that the artifact excludes R2 bytes and is not a D1 snapshot. Preserve and verify Book IDs, collection keys/data, covers/references, ownership, copy counts, and existing values. Keep schema activation, verification, Shopping publication, hands-on validation, post-publication smoke testing, code rollback, forward repair, and destructive recovery as separate gates.
 

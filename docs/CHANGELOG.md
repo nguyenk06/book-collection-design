@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-02 — Version 21 publication and conditional validation authorized
+
+- Recorded Product Owner Decisions 1:A and 2:A plus fresh usage `!96:68`.
+- Authorized preparation of one bounded publication brief for exact saved Version 21 at clean checkpoint `f15ea81`, limited to identity/collision gates, full pre-publication revalidation, one publication attempt, bounded application-health verification, sanitized evidence, and clean stop.
+- Kept correction, retry/republish, migration, production schema/data mutation, broad smoke testing, hands-on validation during the Engineer run, rollback, restore, and destructive recovery excluded.
+- Made Version 21 hands-on checklist preparation conditional on successful publication; no unpublished preview or live-validation action is implied.
+- Reconciled Bookshelf, visual-experience, roadmap, dashboard, current-state, and queue language with the saved Version 21 state.
+
 ## 2026-08-31 — Unpublished Version 21 preservation accepted
 
 - Accepted Sei III's corrected completion handoff after verifying its recipient identity and canonical footer; the corrected artifact supersedes the original for formatting only.
