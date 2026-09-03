@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-02 — Version 21 publication stopped at focused validation
+
+- Accepted Sei III's publication-brief intake and terminal blocker reports with compliant recipient identity and canonical footers.
+- Recorded passed Site/session, saved/live version, exact `f15ea81`, 47-file package, clean-state, three-file delta, collision, whitespace, protected-boundary, and lint gates.
+- Recorded fresh focused validation as 14/17: two search timeouts and one ISBN-10 expected-heading failure. Full serial tests and production build remained unrun after the mandatory stop.
+- Confirmed publication attempts remain zero; Version 20 is live, Version 21 remains saved unpublished, and no preview, deployment, save, production/schema/data operation, migration, correction, or retry occurred.
+- Consumed the strict publication brief and opened one independent Planner decision for diagnostic-only classification versus deferral. The earlier live-validation decision remains conditional on successful publication.
+
 ## 2026-09-02 — Version 21 publication and conditional validation authorized
 
 - Recorded Product Owner Decisions 1:A and 2:A plus fresh usage `!96:68`.

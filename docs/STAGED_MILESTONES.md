@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!96:68`. The prepared exact-Version-21 publication slice is estimated at 6/9/14 points and requires a 29% operational minimum including the 15% floor.
+**Execution budget:** The pre-run `!96:68` reading is stale after intervening work. A possible diagnostic-only follow-up is estimated at 4/7/11 points and would require a fresh 26% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. Exact Version 21 publication is authorized through a prepared brief but awaits `!brief` and separate `!run`; Version 20 remains published. Product Owner live validation is conditionally authorized only after successful publication and has not begun.
+**Queue state:** Throttle `DRAIN`. The accepted Version 21 publication brief stopped before publication after focused validation failed 3/17; attempts remain zero and Version 20 remains published. A diagnostic-only follow-up needs Planner authorization. Product Owner live validation remains conditional on successful publication.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
