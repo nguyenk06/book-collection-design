@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-03 — Controlled republish stopped at runtime gate
+
+- Accepted Sei III's controlled-republish acceptance and terminal prepublication-gate reports with compliant identity and canonical footers.
+- Recorded passed exact candidate/Site/session/package/collision Gate 1 and scoped lint with exit 0.
+- Recorded that the focused suite failed before test execution under Node `v18.18.0` because the candidate requires Node `>=22.13.0` and the required `node:util` `styleText` export was unavailable.
+- Confirmed full tests, build, remaining gates, publication, and public fingerprint were unrun; controlled publication Attempt 2 remains unused at 0 invocations and no source/runtime/dependency/configuration/Site/schema/data/production change occurred.
+- Opened one Planner decision between bounded selection of an already available supported runtime and parking.
+
 ## 2026-09-03 — Controlled exact-Version-21 republish authorized
 
 - Recorded Product Owner Decisions `1:A` and `2:B` with fresh usage `!76:57`.

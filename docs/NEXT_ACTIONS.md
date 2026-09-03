@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; one controlled exact-Version-21 republish brief is prepared, but no Engineer run is active.
+- **Throttle:** `DRAIN`; the controlled republish stopped at the runtime gate, no Engineer run is active, and no eligible brief remains.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`, preserved it, and saved Version 21. All final release gates pass, including focused 17/17, isolated 3/3, full serial 93/93, lint, build, package, boundary, and no-write checks. The sole publication invocation returned no deployment identity or success result. An active release exists, but exact live-version identity is unknown; Version 20 is the last confirmed pre-invocation baseline. No preview, correction, retry, production/schema/data operation, migration, environment change, or additional save occurred.
-- **Next owner:** `ENGINEER — SEI III` — accept the controlled-republish brief with `!brief`; wait for separate `!run`.
-- **Usage:** Product Owner recorded `!76:57`. The 8/13/20-point slice requires a 35% minimum including the 15% floor.
+- **Next owner:** `PLANNER — QUATRE` — decide bounded existing-runtime alignment and republish resume, or park.
+- **Usage:** Last recorded `!76:57`; no ending reading was captured. Refresh before any later Engineer brief.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -136,6 +136,8 @@ Product Owner selected Decision 1:A at `!25:55`. One bounded read-only public-co
 Sei III accepted and completed that brief. The public Site matched visible mobile Shopping navigation but retained the legacy Gallery/List/Bookshelf interface with Gallery primary. It did not expose the exact candidate's Bookcase-primary or Shelf-alternate controls, so missing-position selection/details and selected-book cover/fallback behavior could not match. Overall result is `BEHAVIOR FINGERPRINT MISMATCH`; exact deployment/source identity remains unknown. No authentication, mutation, Site action, publication retry, health sweep, or held validation occurred. A controlled exact-candidate republish and the separately reported visible release-marker request now require independent decisions.
 
 Product Owner selected Decision 1:A and Decision 2:B at `!76:57`. One controlled exact-Version-21 republish brief is prepared. It requires exact Site/session/source/saved-package and collision checks, full lint/focused/full/build/package/boundary revalidation, and permits exactly one new supported publication invocation. Only after definitive success may Sei compare the same five public markers. The visible release marker is deferred. Correction, new save/version, preview, a third attempt, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery remain excluded.
+
+Sei III accepted and ran that brief. Exact candidate/Site/session/package/collision Gate 1 passed and scoped lint passed with exit 0. The focused suite failed before test execution because the available Node `v18.18.0` runtime does not satisfy the candidate's declared `>=22.13.0` requirement and lacks the required `node:util` `styleText` export. Full tests, build, remaining gates, publication, and public comparison were unrun. The explicitly authorized new publication invocation remains unused at 0. No runtime, dependency, source, test, configuration, package, environment, Site, schema/data, or production change occurred. Runtime alignment now requires a new bounded decision.
 
 ## Other workstreams
 

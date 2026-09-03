@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; first publication invocation ambiguous; public behavior fingerprint mismatched four of five candidate markers; one controlled exact-candidate republish authorized
+**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; public fingerprint mismatched four markers; controlled republish stopped before tests on unsupported Node 18; new invocation unused
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** final local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`; it must never be called or represented as `80e4c61`
 
-Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. After diagnostic 17/17 and 3/3 passes, the publication-resume run passed full serial 93/93, production build, and every final package/no-write/boundary gate. The first publication invocation returned no deployment identity or success result. A later public fingerprint matched visible mobile Shopping navigation but retained legacy Gallery/List/Bookshelf behavior rather than the candidate Bookcase/Shelf surfaces. Exact live identity remains unknown. Product Owner authorized one controlled unchanged-candidate republish after full revalidation; live validation remains a later gate.
+Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. The first publication invocation returned no deployment identity or success result, and a later public fingerprint retained legacy Gallery/List/Bookshelf behavior rather than the candidate Bookcase/Shelf surfaces. The controlled republish reverified the exact boundary and passed lint, then stopped before focused test execution because Node 18 did not meet the declared Node 22.13+ requirement. Exact live identity remains unknown; the new invocation remains unused and runtime alignment requires a separate decision.
 
 ## Purpose
 

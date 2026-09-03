@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!76:57`. The controlled republish slice is estimated at 8/13/20 points and requires a 35% minimum including the 15% floor.
+**Execution budget:** Last recorded `!76:57`; the republish run stopped before focused test execution and no ending reading was captured. Refresh before any replacement/resume brief.
 
-**Queue state:** Throttle `DRAIN`. One controlled exact-Version-21 republish brief is prepared for `!brief` and separate `!run`. Exact live identity remains unknown; one new publication invocation is explicitly authorized after full gates. Product Owner validation remains closed.
+**Queue state:** Throttle `DRAIN`. The controlled republish brief stopped at a Node 18 versus required Node 22.13+ runtime mismatch. The new publication invocation remains unused; no eligible brief remains pending a runtime-alignment decision. Product Owner validation remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
