@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-03 — Supported-Node republish resume authorized
+
+- Recorded Product Owner Decision 1:A with fresh usage `!95:41`.
+- Prepared one 8/13/20-point resume brief permitting read-only discovery and process-local selection of an already available Node `>=22.13.0`, followed by complete single-runtime revalidation.
+- Retained the unused controlled publication Attempt 2 only after every gate passes and bounded any definitive-success follow-up to the same five public markers.
+- Excluded runtime installation/upgrade, persistent environment change, dependency/configuration/source changes, new save/version, preview, further publication attempts, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery.
+
 ## 2026-09-03 — Controlled republish stopped at runtime gate
 
 - Accepted Sei III's controlled-republish acceptance and terminal prepublication-gate reports with compliant identity and canonical footers.

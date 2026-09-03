@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Last recorded `!76:57`; the republish run stopped before focused test execution and no ending reading was captured. Refresh before any replacement/resume brief.
+**Execution budget:** Product Owner recorded `!95:41`. The supported-Node republish-resume slice is estimated at 8/13/20 points and requires a 35% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. The controlled republish brief stopped at a Node 18 versus required Node 22.13+ runtime mismatch. The new publication invocation remains unused; no eligible brief remains pending a runtime-alignment decision. Product Owner validation remains closed.
+**Queue state:** Throttle `DRAIN`. One supported-Node republish-resume brief is prepared for `!brief` and separate `!run`. Controlled publication Attempt 2 remains unused; Product Owner validation remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

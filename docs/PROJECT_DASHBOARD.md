@@ -56,7 +56,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Version 21 public behavior still mismatches four markers; controlled republish stopped before tests because Node 18 did not meet the required Node 22.13+ runtime |
+| My Library visual experience | Partial | Version 21 public behavior mismatches four markers; supported-Node republish resume is queued with publication Attempt 2 still unused |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |
