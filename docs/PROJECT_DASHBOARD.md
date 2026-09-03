@@ -56,7 +56,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Corrections remain saved unpublished as Version 21 at `f15ea81`; diagnostic reruns passed 17/17 and 3/3, and a bounded publication-resume brief is prepared; live validation remains conditional on success |
+| My Library visual experience | Partial | Version 21 passed all release gates, but its sole publication invocation returned no deployment identity; current live-version identity needs read-only reconciliation before validation |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |

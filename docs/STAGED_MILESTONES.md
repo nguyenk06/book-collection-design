@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!72:62`. The prepared publication-resume slice is estimated at 5/8/13 points and requires a 28% operational minimum including the 15% floor.
+**Execution budget:** The pre-run `!72:62` reading is stale after intervening work. A possible read-only deployment-history verification is estimated at 2/4/7 points and would require a fresh 22% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. A materially separate Version 21 publication-resume brief is authorized and prepared for `!brief`; publication attempts remain zero and Version 20 remains published. Product Owner live validation remains conditional on successful publication.
+**Queue state:** Throttle `DRAIN`. All Version 21 release gates passed, but the sole 1/1 publication invocation returned no deployment identity. An active live release exists, but its exact version is unknown; Version 20 is the last confirmed pre-invocation baseline. Read-only reconciliation needs a Planner decision. Retry and Product Owner live validation remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
