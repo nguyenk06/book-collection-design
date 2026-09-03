@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-02 — Version 21 publication resume authorized
+
+- Recorded Product Owner Decision 1:A and fresh usage `!72:62`.
+- Authorized a materially separate publication-resume brief for exact saved Version 21 at clean `f15ea81`, accepting the recent unchanged focused 17/17 and isolated 3/3 diagnostic evidence.
+- Required exact identity/boundary confirmation plus the remaining full serial, build, package, no-write, and release gates before the still-unused single publication attempt.
+- Preserved automatic stop on any failure or ambiguity and kept correction, source/test/configuration/dependency change, retry/republish, migration, production schema/data mutation, broad smoke, hands-on validation, rollback, restore, and destructive recovery closed.
+
 ## 2026-09-02 — Focused-test diagnosis completed
 
 - Accepted Sei III's diagnostic intake and completion reports with valid identity and canonical footers; recorded current usage `!73:62`.

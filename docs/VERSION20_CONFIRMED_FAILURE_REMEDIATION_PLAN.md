@@ -1,6 +1,6 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Complete, source-preserved, and saved unpublished as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; diagnostic reruns passed 17/17 and 3/3 with no source change; publication resume awaits decision
+**Status:** Complete, source-preserved, and saved unpublished as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; diagnostic reruns passed 17/17 and 3/3; bounded publication-resume brief authorized and prepared
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** final local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`; it must never be called or represented as `80e4c61`
 

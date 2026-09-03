@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the diagnostic-only brief is complete and no Engineer run is active.
+- **Throttle:** `DRAIN`; the publication-resume brief is prepared but no Engineer run is active.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`, preserved it on the configured source branch, revalidated it, and created exactly one unpublished saved Site Version 21. Exact three-file composition, lint, 17/17 focused, 93/93 full serial, production build, responsive/accessibility QA, focus restoration, cover fallback, boundary, no-data, package, and saved-version checks pass. The generated build artifact remains privately quarantined. Version 20 remains published; no preview, deployment, publication, production/schema/data operation, migration, environment change, or save retry occurred.
-- **Next owner:** `PLANNER — QUATRE` — decide whether to authorize a separate publication-resume revalidation brief or defer Version 21.
-- **Usage:** Product Owner recorded `!73:62`. A possible 5/8/13-point publication-resume slice would require a 28% operational minimum including the 15% floor.
+- **Next owner:** `ENGINEER — SEI III` — accept the prepared publication-resume brief with `!brief`; wait for separate `!run` before validation or Site action.
+- **Usage:** Product Owner recorded `!72:62`. The 5/8/13-point publication-resume slice requires a 28% operational minimum including the 15% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -122,6 +122,8 @@ Sei III accepted and ran that brief. All identity, source, saved-package, collis
 Product Owner selected diagnostic Decision 1:A at `!85:64`. One diagnostic-only brief is prepared at exact clean `f15ea81`, permitting targeted read-only source/test inspection and up to three separately attributable non-mutating executions. It must classify each failure as reproducible candidate behavior, execution/test-environment behavior, or unresolved. It cannot modify source/tests/configuration/dependencies or resume any Site/publication operation. Remediation and publication resume remain separate later decisions.
 
 Sei III completed that diagnostic without changing files or generating artifacts. The exact focused file passed 17/17 with exit 0, then the original three cases passed 3/3 in isolation with exit 0; the third allowed execution was unnecessary. The series-number timeout, title timeout, and ISBN-10 heading failure are each classified as execution/test-environment behavior at moderate confidence because the original timing condition was not recreated. Publication attempts remain zero. A fresh Planner decision now controls a narrower publication-resume revalidation brief versus deferral.
+
+Product Owner selected publication-resume Decision 1:A at `!72:62`. One materially separate brief is prepared. It accepts the unchanged diagnostic focused evidence, rechecks exact identities and boundaries, runs the remaining full serial suite, production build, package, no-write, and required release gates, and permits exactly one Version 21 publication attempt followed by bounded read-only health verification only if every gate passes. Correction, rerun after failure, retry/republish, migration, production schema/data mutation, broad smoke, hands-on validation, rollback, restore, and destructive recovery remain excluded.
 
 ## Other workstreams
 
