@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!85:64`. The prepared diagnostic-only slice is estimated at 4/7/11 points and requires a 26% operational minimum including the 15% floor.
+**Execution budget:** Product Owner recorded `!73:62` after diagnosis. A possible publication-resume slice is provisionally estimated at 5/8/13 points and would require a 28% operational minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. A diagnostic-only follow-up is authorized and prepared for `!brief`; it cannot resume publication. Version 20 remains published, Version 21 remains saved unpublished, and Product Owner live validation remains conditional on successful publication.
+**Queue state:** Throttle `DRAIN`. Diagnosis passed focused 17/17 and isolated 3/3 with no source change, classifying the prior failures as execution/test-environment behavior at moderate confidence. Version 20 remains published, Version 21 remains saved unpublished, and publication resume awaits a Planner decision. Product Owner live validation remains conditional on successful publication.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

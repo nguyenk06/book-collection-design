@@ -60,7 +60,7 @@ Version 17 remains historical evidence for the saved persistence/API foundation;
 
 ## Remaining Milestone Work
 
-- Classify the 3/17 focused-test failure through the authorized diagnostic-only brief; source changes and publication resume remain outside it.
+- Decide whether the accepted 17/17 and isolated 3/3 diagnostic passes support a separately authorized publication-resume revalidation brief; no source change is currently supported.
 - After successful publication, prepare and run only the conditionally authorized read-only remediation checklist. Mutating Shopping scenarios and broad smoke remain separately gated.
 - Preserve Version 20 as the current released baseline until Version 21 publication succeeds definitively.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
@@ -78,7 +78,7 @@ This bounded phase is complete and validated against local/disposable data befor
 
 Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
 
-The authoritative local suites passed before preservation and publication. Exact saved Version 20 later passed 92/92 saved-source, 160/160 layered, and 150/150 focused tests plus lint/build and published successfully once. Bounded root and Shopping health passed. Product Owner validation then confirmed a mobile Shopping-discoverability failure alongside Bookshelf failures. Replacement checkpoint `f15ea81` corrects those bounded failures and is saved unpublished as Version 21. Its prior accepted local/package gates remain evidence, but a later fresh pre-publication focused suite failed 3/17 and the strict release brief stopped before full tests, build, or publication. The cause is unclassified and publication attempts remain zero. A separate read-only remediation checklist remains conditional on successful publication; broad smoke and all mutating Shopping scenarios remain separate gates.
+The authoritative local suites passed before preservation and publication. Exact saved Version 20 later passed 92/92 saved-source, 160/160 layered, and 150/150 focused tests plus lint/build and published successfully once. Bounded root and Shopping health passed. Product Owner validation then confirmed a mobile Shopping-discoverability failure alongside Bookshelf failures. Replacement checkpoint `f15ea81` corrects those bounded failures and is saved unpublished as Version 21. Its first publication brief stopped after a fresh focused suite failed 3/17. A separate diagnostic then passed the exact focused file 17/17 and the three affected cases 3/3 with no source or generated-artifact change, classifying the failures as execution/test-environment behavior at moderate confidence. Publication attempts remain zero. Publication resume, a read-only remediation checklist after successful publication, broad smoke, and all mutating Shopping scenarios remain separate gates.
 
 ## Product Owner validation checkpoint
 

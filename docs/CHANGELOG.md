@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-02 — Focused-test diagnosis completed
+
+- Accepted Sei III's diagnostic intake and completion reports with valid identity and canonical footers; recorded current usage `!73:62`.
+- Recorded exact focused-file 17/17 and isolated affected-case 3/3 passes with exit 0; the third allowed execution was unnecessary and unrun.
+- Classified the series-number timeout, title timeout, and ISBN-10 expected-heading failure as execution/test-environment behavior at moderate confidence because the prior timing condition was not recreated.
+- Confirmed exact `f15ea81` remained clean, files changed and generated artifacts were none, Version 21 remained saved unpublished, Version 20 remained live, and publication attempts stayed zero.
+- Closed the diagnostic brief and opened one Planner decision for a separately bounded publication-resume revalidation brief versus deferral.
+
 ## 2026-09-02 — Focused-test diagnosis authorized
 
 - Recorded Product Owner Decision 1:A and fresh usage `!85:64`.
