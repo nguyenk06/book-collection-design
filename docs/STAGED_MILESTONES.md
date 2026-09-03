@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!25:55`. The authorized read-only live-content fingerprint assessment is estimated at 2/4/7 points and requires a 22% minimum including the 15% floor.
+**Execution budget:** Last recorded `!25:55`; the fingerprint completed without a refreshed ending reading. Obtain a new reading and estimate before any later brief.
 
-**Queue state:** Throttle `DRAIN`. One behavior-level public fingerprint brief is prepared for `!brief` and separate `!run`. The live version remains unknown; query count is 0/1, the 1/1 publication attempt is consumed, and retry plus Product Owner validation remain closed.
+**Queue state:** Throttle `DRAIN`. The public fingerprint is complete with `BEHAVIOR FINGERPRINT MISMATCH`; no eligible Engineer brief remains. Exact live identity remains unknown, the prior publication attempt is consumed, and retry plus Product Owner validation remain closed pending Planner decisions.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; sole publication invocation ambiguous; bounded behavior-level public fingerprinting authorized while exact release identity remains unavailable
+**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; sole publication invocation ambiguous; public behavior fingerprint mismatched four of five candidate markers; exact identity and republish decision pending
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** final local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`; it must never be called or represented as `80e4c61`
 
-Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. After diagnostic 17/17 and 3/3 passes, the publication-resume run passed full serial 93/93, production build, and every final package/no-write/boundary gate. The sole 1/1 publication invocation returned no deployment identity or success result. Post-invocation state proved an active live release, Version 21 latest saved, and no preview, but not the live version. Files/artifacts changed were none. Read-only deployment-history reconciliation, retry, and live validation remain separate gates.
+Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. After diagnostic 17/17 and 3/3 passes, the publication-resume run passed full serial 93/93, production build, and every final package/no-write/boundary gate. The sole 1/1 publication invocation returned no deployment identity or success result. A later public fingerprint matched visible mobile Shopping navigation but retained legacy Gallery/List/Bookshelf behavior rather than the candidate Bookcase/Shelf surfaces. Exact live identity remains unknown. Files/artifacts changed were none. Republish and live validation remain separate gates.
 
 ## Purpose
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-02 — Public behavior fingerprint mismatch
+
+- Accepted Sei III's brief acceptance and completion reports for the bounded anonymous public comparison.
+- Recorded `BEHAVIOR FINGERPRINT MISMATCH`: visible mobile Shopping navigation matched, while the live Site retained legacy Gallery/List/Bookshelf controls and did not expose the candidate Bookcase-primary, Shelf-alternate, missing-position, or selected-book cover/fallback surfaces.
+- Kept exact deployment/source identity unknown and confirmed no authentication, owner control, source/Site change, test, publication retry, preview, production-data access, or mutation occurred.
+- Opened independent Planner decisions for one controlled exact-Version-21 republish brief and for the separately reported visible release-marker request.
+
 ## 2026-09-02 — Behavior-level public fingerprint authorized
 
 - Recorded Product Owner Decision 1:A and fresh usage `!25:55`.
