@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-03 — Controlled exact-Version-21 republish authorized
+
+- Recorded Product Owner Decisions `1:A` and `2:B` with fresh usage `!76:57`.
+- Prepared one 8/13/20-point brief for full exact-candidate revalidation, one new supported Version 21 publication invocation, and a five-marker public comparison only after definitive success.
+- Classified the new invocation as explicitly authorized publication Attempt 2, not a silent retry; any failure or ambiguity stops without another invocation.
+- Deferred the visible release marker and kept source changes, new save/version, preview, third attempt, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery closed.
+
 ## 2026-09-02 — Public behavior fingerprint mismatch
 
 - Accepted Sei III's brief acceptance and completion reports for the bounded anonymous public comparison.

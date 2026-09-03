@@ -60,7 +60,7 @@ Version 17 remains historical evidence for the saved persistence/API foundation;
 
 ## Remaining Milestone Work
 
-- Public fingerprinting matched visible mobile Shopping navigation but not the candidate's other four Bookshelf-related markers; decide a separately controlled exact-Version-21 republish or park. Retry and source changes remain unauthorized until that decision.
+- Public fingerprinting matched visible mobile Shopping navigation but not the candidate's other four Bookshelf-related markers. One separately controlled exact-Version-21 republish is authorized after full gates; source changes and every further retry remain unauthorized.
 - After successful publication, prepare and run only the conditionally authorized read-only remediation checklist. Mutating Shopping scenarios and broad smoke remain separately gated.
 - Preserve Version 20 as the current released baseline until Version 21 publication succeeds definitively.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.

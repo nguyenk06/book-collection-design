@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Last recorded `!25:55`; the fingerprint completed without a refreshed ending reading. Obtain a new reading and estimate before any later brief.
+**Execution budget:** Product Owner recorded `!76:57`. The controlled republish slice is estimated at 8/13/20 points and requires a 35% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. The public fingerprint is complete with `BEHAVIOR FINGERPRINT MISMATCH`; no eligible Engineer brief remains. Exact live identity remains unknown, the prior publication attempt is consumed, and retry plus Product Owner validation remain closed pending Planner decisions.
+**Queue state:** Throttle `DRAIN`. One controlled exact-Version-21 republish brief is prepared for `!brief` and separate `!run`. Exact live identity remains unknown; one new publication invocation is explicitly authorized after full gates. Product Owner validation remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
