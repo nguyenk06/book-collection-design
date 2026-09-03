@@ -60,7 +60,7 @@ Version 17 remains historical evidence for the saved persistence/API foundation;
 
 ## Remaining Milestone Work
 
-- Classify the 3/17 focused-test failure that stopped the Version 21 publication brief before any publication attempt; diagnosis requires new authority.
+- Classify the 3/17 focused-test failure through the authorized diagnostic-only brief; source changes and publication resume remain outside it.
 - After successful publication, prepare and run only the conditionally authorized read-only remediation checklist. Mutating Shopping scenarios and broad smoke remain separately gated.
 - Preserve Version 20 as the current released baseline until Version 21 publication succeeds definitively.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.

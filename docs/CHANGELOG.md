@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-02 — Focused-test diagnosis authorized
+
+- Recorded Product Owner Decision 1:A and fresh usage `!85:64`.
+- Authorized preparation of one diagnostic-only brief at exact clean `f15ea81`, limited to targeted read-only source/test inspection and up to three separately attributable non-mutating executions.
+- Required each of the three pre-publication failures to be classified as reproducible candidate behavior, execution/test-environment behavior, or unresolved.
+- Kept source/test/configuration/dependency changes, Site save/preview/deployment/publication, production access/mutation, migration, retry/republish, live validation, rollback, restore, and destructive recovery outside the brief.
+
 ## 2026-09-02 — Version 21 publication stopped at focused validation
 
 - Accepted Sei III's publication-brief intake and terminal blocker reports with compliant recipient identity and canonical footers.

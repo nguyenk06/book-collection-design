@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the Version 21 publication run stopped at pre-publication validation and no Engineer run is active.
+- **Throttle:** `DRAIN`; a diagnostic-only brief is prepared but no Engineer run is active.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`, preserved it on the configured source branch, revalidated it, and created exactly one unpublished saved Site Version 21. Exact three-file composition, lint, 17/17 focused, 93/93 full serial, production build, responsive/accessibility QA, focus restoration, cover fallback, boundary, no-data, package, and saved-version checks pass. The generated build artifact remains privately quarantined. Version 20 remains published; no preview, deployment, publication, production/schema/data operation, migration, environment change, or save retry occurred.
-- **Next owner:** `PLANNER — QUATRE` — decide whether to authorize bounded local diagnostic classification of the three focused-test failures or defer Version 21.
-- **Usage:** `!96:68` was recorded before the intervening intake/run and is now stale. A future 4/7/11-point diagnostic would require a fresh reading of at least 26%, including the 15% floor.
+- **Next owner:** `ENGINEER — SEI III` — accept the prepared diagnostic-only brief with `!brief`; wait for separate `!run` before executing tests.
+- **Usage:** Product Owner recorded `!85:64`. The 4/7/11-point diagnostic slice requires a 26% operational minimum including the 15% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -118,6 +118,8 @@ Product Owner selected Decision 1:A on the plan, and Sei II/Sei III completed th
 On 2026-09-02 Product Owner selected Decisions 1:A and 2:A. The resulting bounded publication brief for exact saved Version 21 required separate `!brief` acceptance and `!run`, identity and collision checks, full pre-publication revalidation, at most one publication attempt, bounded application-health verification, sanitized evidence, and a clean stop. It excluded correction, retry/republish, migration, production schema/data mutation, broad smoke testing, hands-on validation, rollback, restore, and destructive recovery. A concise Version 21 hands-on checklist remains conditional on successful publication; that dependency has not passed.
 
 Sei III accepted and ran that brief. All identity, source, saved-package, collision, whitespace, protected-boundary, and lint gates passed. The focused collection suite failed 3/17: two search cases timed out and one ISBN-10 search case did not find its expected book heading. The strict brief stopped before full serial tests, build, or publication; publication attempts remain zero and Site state is unchanged. The brief is consumed. A new Planner decision now separates bounded local diagnosis from any later remediation or publication-resume authority.
+
+Product Owner selected diagnostic Decision 1:A at `!85:64`. One diagnostic-only brief is prepared at exact clean `f15ea81`, permitting targeted read-only source/test inspection and up to three separately attributable non-mutating executions. It must classify each failure as reproducible candidate behavior, execution/test-environment behavior, or unresolved. It cannot modify source/tests/configuration/dependencies or resume any Site/publication operation. Remediation and publication resume remain separate later decisions.
 
 ## Other workstreams
 
