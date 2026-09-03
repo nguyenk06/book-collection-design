@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-02 — Behavior-level public fingerprint authorized
+
+- Recorded Product Owner Decision 1:A and fresh usage `!25:55`.
+- Cleared the Planner decision and prepared one 2/4/7-point read-only brief comparing the five deterministic Version 21 correction behaviors with the public Site.
+- Kept exact deployment/source identity explicitly unknown; a behavior match cannot prove the deployed commit or Site version and returns for a separate evidence-sufficiency decision.
+- Kept authentication, Product Owner checklist execution, held validation, health sweeping, publication retry, source/Site changes, and every mutation closed.
+
 ## 2026-09-02 — Release-identity query unavailable at intake
 
 - Accepted Sei III's capability-mismatch report with valid identity and canonical footer; the release-identity brief was not accepted or run.

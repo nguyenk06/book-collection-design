@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Last recorded `!52:59`; refresh before any new brief. A possible read-only live-content fingerprint assessment is estimated at 2/4/7 points and would require a 22% minimum including the 15% floor.
+**Execution budget:** Product Owner recorded `!25:55`. The authorized read-only live-content fingerprint assessment is estimated at 2/4/7 points and requires a 22% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. The release-identity brief was not accepted because the supported lookup requires the missing deployment ID and no current-version/history query is exposed. Query count remains 0/1. The live version remains unknown; the 1/1 publication attempt is consumed, and retry plus Product Owner validation remain closed pending a new evidence-standard decision.
+**Queue state:** Throttle `DRAIN`. One behavior-level public fingerprint brief is prepared for `!brief` and separate `!run`. The live version remains unknown; query count is 0/1, the 1/1 publication attempt is consumed, and retry plus Product Owner validation remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
