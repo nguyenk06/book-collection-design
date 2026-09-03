@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!52:59`. The prepared read-only release-identity verification is estimated at 2/4/7 points and requires a 22% minimum including the 15% floor.
+**Execution budget:** Last recorded `!52:59`; refresh before any new brief. A possible read-only live-content fingerprint assessment is estimated at 2/4/7 points and would require a 22% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. One bounded read-only release-identity verification is authorized and prepared for `!brief`. The live version remains unknown pending that query; the 1/1 publication attempt is consumed, and retry plus Product Owner live validation remain closed.
+**Queue state:** Throttle `DRAIN`. The release-identity brief was not accepted because the supported lookup requires the missing deployment ID and no current-version/history query is exposed. Query count remains 0/1. The live version remains unknown; the 1/1 publication attempt is consumed, and retry plus Product Owner validation remain closed pending a new evidence-standard decision.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

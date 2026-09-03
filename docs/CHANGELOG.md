@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-02 — Release-identity query unavailable at intake
+
+- Accepted Sei III's capability-mismatch report with valid identity and canonical footer; the release-identity brief was not accepted or run.
+- Recorded that the supported deployment-status lookup requires the missing opaque deployment ID and the ordinary Site metadata view exposes no current published version/source or release history.
+- Confirmed query count remains 0/1 and no health check, source action, Site mutation, publication retry, preview, production access, schema/data operation, migration, or configuration change occurred.
+- Kept exact live-version identity unknown and opened a Planner decision between explicitly bounded behavior-level public fingerprinting and parking for authoritative metadata.
+
 ## 2026-09-02 — Read-only release-identity verification authorized
 
 - Recorded Product Owner Decision 1:A and fresh usage `!52:59`.
