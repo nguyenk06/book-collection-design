@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-02 — Read-only release-identity verification authorized
+
+- Recorded Product Owner Decision 1:A and fresh usage `!52:59`.
+- Authorized preparation of one bounded read-only Site deployment-history/status brief to establish exact current published version, source checkpoint, deployment identity/status, and the ambiguous invocation outcome.
+- Required exactly one supported metadata query and an automatic stop if the result remains partial or ambiguous.
+- Kept publication/retry/republish, save/preview/deploy, health checks, hands-on validation, source changes, migration, production schema/data access or mutation, rollback, restore, alternate paths, and destructive recovery closed.
+
 ## 2026-09-02 — Version 21 publication result ambiguous
 
 - Accepted Sei III's publication-resume intake and blocker reports with valid identity and canonical footers.

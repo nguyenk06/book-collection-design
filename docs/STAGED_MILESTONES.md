@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** The pre-run `!72:62` reading is stale after intervening work. A possible read-only deployment-history verification is estimated at 2/4/7 points and would require a fresh 22% minimum including the 15% floor.
+**Execution budget:** Product Owner recorded `!52:59`. The prepared read-only release-identity verification is estimated at 2/4/7 points and requires a 22% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. All Version 21 release gates passed, but the sole 1/1 publication invocation returned no deployment identity. An active live release exists, but its exact version is unknown; Version 20 is the last confirmed pre-invocation baseline. Read-only reconciliation needs a Planner decision. Retry and Product Owner live validation remain closed.
+**Queue state:** Throttle `DRAIN`. One bounded read-only release-identity verification is authorized and prepared for `!brief`. The live version remains unknown pending that query; the 1/1 publication attempt is consumed, and retry plus Product Owner live validation remain closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

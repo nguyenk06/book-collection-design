@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the publication-resume brief stopped after its sole ambiguous invocation and no Engineer run is active.
+- **Throttle:** `DRAIN`; a read-only release-identity verification brief is prepared but no Engineer run is active.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`, preserved it, and saved Version 21. All final release gates pass, including focused 17/17, isolated 3/3, full serial 93/93, lint, build, package, boundary, and no-write checks. The sole publication invocation returned no deployment identity or success result. An active release exists, but exact live-version identity is unknown; Version 20 is the last confirmed pre-invocation baseline. No preview, correction, retry, production/schema/data operation, migration, environment change, or additional save occurred.
-- **Next owner:** `PLANNER — QUATRE` — decide whether to authorize one bounded read-only deployment-history/status verification or defer with release identity unknown.
-- **Usage:** `!72:62` was recorded before the intervening resume run and is stale. A possible 2/4/7-point read-only verification would require a fresh reading of at least 22%, including the 15% floor.
+- **Next owner:** `ENGINEER — SEI III` — accept the prepared release-identity verification brief with `!brief`; wait for separate `!run` before the single query.
+- **Usage:** Product Owner recorded `!52:59`. The 2/4/7-point read-only verification requires a 22% operational minimum including the 15% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -126,6 +126,8 @@ Sei III completed that diagnostic without changing files or generating artifacts
 Product Owner selected publication-resume Decision 1:A at `!72:62`. One materially separate brief is prepared. It accepts the unchanged diagnostic focused evidence, rechecks exact identities and boundaries, runs the remaining full serial suite, production build, package, no-write, and required release gates, and permits exactly one Version 21 publication attempt followed by bounded read-only health verification only if every gate passes. Correction, rerun after failure, retry/republish, migration, production schema/data mutation, broad smoke, hands-on validation, rollback, restore, and destructive recovery remain excluded.
 
 Sei III accepted and ran that brief. Reused lint/focused evidence remained attributable; full serial tests passed 93/93, production build passed, and all final package/no-write/boundary gates passed with no file or artifact change. The single 1/1 publication invocation returned a connector error with no deployment identity, URL, status, or success confirmation. Post-invocation read-only state proved only that a live release exists, Version 21 remains latest saved, and no preview is active. Bounded health checks were unrun. The current released version must remain unknown until deployment history is reconciled; retry and live validation are not authorized.
+
+Product Owner selected release-identity Decision 1:A at `!52:59`. One read-only brief is prepared for a single supported Site deployment-history/status query. It must return exact current published version, source checkpoint, deployment identity/status, and the ambiguous invocation outcome—or stop with identity still unknown. It cannot publish, retry, republish, save, preview, deploy, run health checks or hands-on validation, change source, migrate, access/mutate production schema/data, roll back, restore, or use an alternate path.
 
 ## Other workstreams
 

@@ -60,7 +60,7 @@ Version 17 remains historical evidence for the saved persistence/API foundation;
 
 ## Remaining Milestone Work
 
-- Reconcile the exact live deployment identity after the single ambiguous Version 21 publication result; retry and source changes remain unauthorized.
+- Run the authorized one-query read-only release-identity verification after the single ambiguous Version 21 publication result; retry and source changes remain unauthorized.
 - After successful publication, prepare and run only the conditionally authorized read-only remediation checklist. Mutating Shopping scenarios and broad smoke remain separately gated.
 - Preserve Version 20 as the current released baseline until Version 21 publication succeeds definitively.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
