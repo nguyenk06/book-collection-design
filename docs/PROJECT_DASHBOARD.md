@@ -56,7 +56,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Retained full 93/93 evidence is accepted for unchanged Version 21; the remaining build/package/publication brief is prepared but parked, and controlled Attempt 2 remains unused |
+| My Library visual experience | Partial | Retained full 93/93 evidence is accepted for unchanged Version 21; the exact remaining brief is authorized and awaits `!brief` then `!run`, while controlled Attempt 2 remains unused |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |

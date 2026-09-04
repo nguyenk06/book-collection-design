@@ -9,7 +9,7 @@ The canonical future product-shell and presentation direction is [My Library Vis
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
 | 0 | Database integrity and Shopping persistence foundation | Gate 4 complete within bridge-observable scope | Keep backup/restore guarantees separate; decide local schema remediation only if needed | Medium | Export is not a D1 snapshot, excludes R2 bytes, and does not prove restore readiness |
-| 1 | [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md) | Partial; focused 17/17 and retained full 93/93 are accepted for unchanged Version 21 | Decide whether to execute the exact prepared build/package/publication slice or keep it parked | Medium-large | Publication Attempt 2 remains unused; source/dependency/config changes, further retry, live validation, smoke, correction, and recovery remain gated |
+| 1 | [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md) | Partial; focused 17/17 and retained full 93/93 are accepted for unchanged Version 21 | Run the authorized exact build/package/publication slice through ordered `!brief` then `!run` | Medium-large | Publication Attempt 2 remains unused; source/dependency/config changes, further retry, live validation, smoke, correction, and recovery remain gated |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial; canonical identifier foundation complete locally | Future candidate workflow and user-facing matching | Medium | Production unchanged; fuzzy candidate matching deferred |
 | 3 | [Bookshelf](BOOKSHELF.md) | Bounded first release published in Version 20; user checkpoint pending | Product Owner hands-on outcome | Medium | Published but not yet hands-on validated |
 | 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first export foundation and owner-only downloadable UI published in Version 20 | Product Owner checkpoint and safe later import/restore design | Medium-large | Production download untested; no complete backup; import remains unsafe/immediate |
@@ -42,7 +42,7 @@ Saving Version 17 did not mark Shopping released or active in production. Versio
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The remaining Version 21 build/package/publication slice is prepared and parked. [Planner Inbox](PLANNER_INBOX.md) contains the separate execution decision; preparation alone creates no Engineer intake or execution authority.
+The remaining Version 21 build/package/publication slice is authorized. It becomes active only through ordered `!brief` intake and separate `!run` in the Sei III chat; all brief gates and exclusions remain binding.
 
 The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within their bounded evidence layers. Version 20 is now published; every later validation, smoke, correction, and recovery gate remains sequential, closed, and unauthorized.
 

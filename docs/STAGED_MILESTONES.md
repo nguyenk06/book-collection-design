@@ -4,7 +4,7 @@
 
 **Execution budget:** Product Owner recorded `!58:39`. The prepared remaining build/package/publication slice is estimated at 6/10/15 points and requires a 30% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. Retained full 93/93 evidence is accepted for unchanged `f15ea81`. One remaining release brief is prepared but parked without Engineer intake/execution authority. Controlled Attempt 2 remains unused and Product Owner validation remains closed.
+**Queue state:** Throttle `DRAIN`. Retained full 93/93 evidence is accepted for unchanged `f15ea81`. The exact remaining release brief is authorized and awaits `!brief` then separate `!run`. Controlled Attempt 2 remains unused and Product Owner validation remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-04 — Exact Version 21 remaining release slice authorized
+
+- Recorded Product Owner Decision 1:A at `!58:39`, authorizing execution of the exact prepared Version 21 build/package/publication brief.
+- Preserved the 6/10/15-point estimate, 30% minimum, 15% automatic stopping floor, retained-evidence drift invalidation rule, all automatic stops, and every stated exclusion.
+- Made the brief eligible for Sei III through ordered `!brief` intake followed by separate `!run`; this documentation pass did not execute Engineer work or perform any source, Site, publication, or production operation.
+- Closed the Planner decision. Controlled publication Attempt 2 remains unused until every brief gate passes during the separately activated run.
+
 ## 2026-09-04 — Retained full-suite evidence accepted; remaining release slice prepared
 
 - Recorded Product Owner Decision 1:B and fresh usage `!58:39`.
