@@ -60,7 +60,7 @@ Version 17 remains historical evidence for the saved persistence/API foundation;
 
 ## Remaining Milestone Work
 
-- Public fingerprinting matched visible mobile Shopping navigation but not the candidate's other four Bookshelf-related markers. Bundled Node 24 passed the runtime gate and lint, but the focused suite returned no attributable count. A bounded three-execution diagnosis may continue through release on definitive 17/17; controlled Attempt 2 remains unused.
+- Public fingerprinting matched visible mobile Shopping navigation but not the candidate's other four Bookshelf-related markers. Focused diagnosis now definitively passes 17/17 under Node 24, but the fresh full serial run lacked a final attributable count. Controlled publication Attempt 2 remains unused pending a full-suite evidence decision.
 - After successful publication, prepare and run only the conditionally authorized read-only remediation checklist. Mutating Shopping scenarios and broad smoke remain separately gated.
 - Preserve Version 20 as the current released baseline until Version 21 publication succeeds definitively.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.

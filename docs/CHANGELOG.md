@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-04 — Focused attribution passed; full-suite attribution stopped
+
+- Accepted Sei III's combined-brief acceptance and terminal remaining-revalidation reports with compliant identity and canonical footers.
+- Recorded diagnostic Attempt 1 as output/controller behavior and Attempt 2 as a definitive Node 24 focused 17/17 pass with exit 0; Attempt 3 was unnecessary.
+- Recorded reused Node 24 lint evidence and a full serial run that emitted test output but no final attributable summary/count; build, remaining package/boundary gates, publication, and public comparison were unrun.
+- Confirmed controlled publication Attempt 2 remains unused at 0, source/process state remains clean, and no file, Site, schema/data, or production change occurred.
+- Opened a Planner decision among two additional non-mutating full-suite attribution executions, explicit acceptance of retained 93/93 evidence, or parking.
+
 ## 2026-09-04 — Focused diagnosis with conditional republish authorized
 
 - Recorded Product Owner Decision 1:A with fresh usage `!89:44`.

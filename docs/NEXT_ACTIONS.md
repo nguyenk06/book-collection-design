@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; one combined focused-diagnosis/conditional-republish brief is prepared, but no Engineer run is active.
+- **Throttle:** `DRAIN`; focused diagnosis is complete but full-suite attribution stopped the conditional release, so no Engineer run or eligible brief remains.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`, preserved it, and saved Version 21. All final release gates pass, including focused 17/17, isolated 3/3, full serial 93/93, lint, build, package, boundary, and no-write checks. The sole publication invocation returned no deployment identity or success result. An active release exists, but exact live-version identity is unknown; Version 20 is the last confirmed pre-invocation baseline. No preview, correction, retry, production/schema/data operation, migration, environment change, or additional save occurred.
-- **Next owner:** `ENGINEER — SEI III` — accept the combined brief with `!brief`; wait for separate `!run`.
-- **Usage:** Product Owner recorded `!89:44`. The 8/14/22-point slice requires a 37% minimum including the 15% floor.
+- **Next owner:** `PLANNER — QUATRE` — decide fresh full-suite attribution, retained evidence acceptance, or park.
+- **Usage:** Last recorded `!89:44`; no ending reading was captured. Refresh before any later Engineer brief.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -144,6 +144,8 @@ Product Owner selected Decision 1:A at `!95:41`. One supported-Node republish-re
 Sei III accepted and ran that brief. Bundled Node `v24.19.0` was selected process-locally, satisfying the declared runtime without installation or persistent change. Exact identity Gate 1 and scoped lint passed. The focused suite started but returned only the Vitest startup banner with no attributable count, so it stopped as required. Full tests, build, remaining gates, publication, and public comparison were unrun; controlled Attempt 2 remains unused. Source stayed clean, no project-owned process remained, and no Site/production/source/dependency/configuration change occurred. A new decision controls bounded diagnosis and whether definitive success may continue directly through the remaining release sequence.
 
 Product Owner selected Decision 1:A at `!89:44`. One combined brief is prepared for up to three non-mutating Node 24 focused-suite attribution executions. A definitive 17/17 with clean source/process state may continue immediately through full tests, build, package/boundary gates, the unused controlled publication Attempt 2, and—only after definitive publication success—the five public markers. A real test failure, failed Attempt 3, ambiguity, drift, or release boundary stops. Source/test/dependency/configuration changes, runtime installation/persistence, new save/version, preview, further attempt, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery remain excluded.
+
+Sei III accepted and ran that brief. A pre-process setup parameter error consumed no attempt. Attempt 1 reproduced output/controller loss; Attempt 2 definitively passed the exact focused file 17/17 with exit 0 under Node 24; Attempt 3 was not needed. Reused lint remained attributable. The full serial suite then emitted test output without a final attributable summary/count, so 93/93 cannot be claimed. Build, package/boundary gates, publication, and public comparison were unrun. Controlled Attempt 2 remains unused, source/process state remained clean, and no files or Site/production state changed. A new decision controls full-suite evidence and conditional continuation.
 
 ## Other workstreams
 

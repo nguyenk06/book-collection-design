@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; bounded Node 24 focused diagnosis with conditional release continuation authorized; controlled Attempt 2 unused
+**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; focused 17/17 passes under Node 24; fresh full-suite summary unattributable; controlled Attempt 2 unused
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** final local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`; it must never be called or represented as `80e4c61`
 
-Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. The first publication invocation returned no deployment identity or success result, and a later public fingerprint retained legacy Gallery/List/Bookshelf behavior. Bundled Node 24 then passed runtime, identity, and lint gates, but the focused suite produced no attributable count. Product Owner authorized up to three non-mutating attribution executions and conditional release continuation on definitive 17/17; controlled Attempt 2 remains unused.
+Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. The first publication invocation returned no deployment identity or success result, and a later public fingerprint retained legacy Gallery/List/Bookshelf behavior. Node 24 diagnostic Attempt 2 definitively passed focused 17/17, but the subsequent full serial run emitted output without a final attributable count. Build/publication remained unrun and controlled Attempt 2 remains unused pending a full-suite evidence decision.
 
 ## Purpose
 

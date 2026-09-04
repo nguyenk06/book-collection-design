@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!89:44`. The combined diagnosis-to-release slice is estimated at 8/14/22 points and requires a 37% minimum including the 15% floor.
+**Execution budget:** Last recorded `!89:44`; the run stopped at full-suite attribution and no ending reading was captured. Refresh and re-estimate before any replacement/resume brief.
 
-**Queue state:** Throttle `DRAIN`. One focused-diagnosis/conditional-republish brief is prepared for `!brief` and separate `!run`. Controlled publication Attempt 2 remains unused; Product Owner validation remains closed.
+**Queue state:** Throttle `DRAIN`. Focused 17/17 is now definitive, but the fresh full-suite summary is unattributable. No eligible brief remains; controlled publication Attempt 2 stays unused and Product Owner validation remains closed pending an evidence decision.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
