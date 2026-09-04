@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-04 — Exact Version 21 published; five public markers matched
+
+- Accepted Sei III's brief acceptance, usage-wait checkpoint, and final completion handoffs as one ordered run.
+- Recorded successful Node 24 production build, 47-file package/manifest match, clean source, exact three-file Version 20 delta, and passed migration/lockfile/configuration/secret/process/protected-boundary checks.
+- Recorded final prepublication usage `!32:35`, exactly one controlled Attempt 2 publication, returned deployment identity, and definitive `succeeded` status for exact saved Version 21 `f15ea81`.
+- Accepted the fresh post-propagation anonymous match for visible mobile Shopping, Bookcase primary, Shelf alternate, selectable informative missing position, and selected-book cover fallback. The initial cached/propagating render is not final evidence.
+- Confirmed source files changed: none. No retry, alternate path, additional save/version, preview, authentication, held scenario, broad smoke, schema/data action, migration, release marker, rollback, restore, or destructive action occurred.
+- Closed the release brief and opened one Planner decision for a separately gated refreshed Version 21 Product Owner hands-on checklist.
+
 ## 2026-09-04 — Exact Version 21 remaining release slice authorized
 
 - Recorded Product Owner Decision 1:A at `!58:39`, authorizing execution of the exact prepared Version 21 build/package/publication brief.

@@ -56,13 +56,13 @@ Unpublished Site Version 17 preserves locally validated persistence and owner-au
 - Nullable collection target price, with CYOA configured to 600 cents locally.
 - Nullable Book Added Date for new manual/imported records without fabricating historical dates.
 
-Version 17 remains historical evidence for the saved persistence/API foundation; saving it did not execute its packaged migration or add Shopping Mode UI. Version 19 later supplied the owner-authenticated administration surface for Gates 2–4. Gate 3 invoked the guarded additive activation exactly once, and Gate 4 independently confirmed schema-complete and zero-FK status within its bridge-observable boundary. Exact cumulative Version 20 then published Shopping/M3–M6/Bookshelf successfully. Replacement mobile-navigation and Bookshelf corrections are now saved unpublished as Version 21 at exact `f15ea81`. Purchase creation intentionally does not update Book ownership or copy counts.
+Version 17 remains historical evidence for the saved persistence/API foundation; saving it did not execute its packaged migration or add Shopping Mode UI. Version 19 later supplied the owner-authenticated administration surface for Gates 2–4. Gate 3 invoked the guarded additive activation exactly once, and Gate 4 independently confirmed schema-complete and zero-FK status within its bridge-observable boundary. Exact cumulative Version 20 then published Shopping/M3–M6/Bookshelf successfully. Replacement mobile-navigation and Bookshelf corrections are now saved and definitively published as Version 21 at exact `f15ea81`. Purchase creation intentionally does not update Book ownership or copy counts.
 
 ## Remaining Milestone Work
 
-- Public fingerprinting matched visible mobile Shopping navigation but not the candidate's other four Bookshelf-related markers. Focused diagnosis passes 17/17 under Node 24, and the Product Owner accepted retained full 93/93 evidence for exact unchanged Version 21. The exact remaining build/package/publication brief is authorized and awaits `!brief` then `!run`; controlled publication Attempt 2 remains unused.
-- After successful publication, prepare and run only the conditionally authorized read-only remediation checklist. Mutating Shopping scenarios and broad smoke remain separately gated.
-- Preserve Version 20 as the current released baseline until Version 21 publication succeeds definitively.
+- Exact Version 21 is definitively published. After propagation, anonymous checks matched visible mobile Shopping plus all four Bookshelf-related correction markers.
+- Product Owner hands-on validation requires a separate decision. Mutating Shopping scenarios and broad smoke remain separately gated.
+- Preserve exact Version 21 at `f15ea81` as the current released baseline.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
 
 ## Verified Local UI Phase
@@ -78,7 +78,7 @@ This bounded phase is complete and validated against local/disposable data befor
 
 Advanced candidate matching, normalized multi-identifier persistence, offline capture, production migration, publication, and automatic ownership reconciliation remain outside this phase.
 
-The authoritative local suites passed before preservation and publication. Exact saved Version 20 later passed 92/92 saved-source, 160/160 layered, and 150/150 focused tests plus lint/build and published successfully once. Product Owner validation then confirmed a mobile Shopping-discoverability failure alongside Bookshelf failures. Replacement checkpoint `f15ea81` is saved as Version 21. Diagnostic focused tests pass 17/17, and the Product Owner accepted retained full serial 93/93 evidence for the exact unchanged candidate; the exact remaining build/package/publication slice is authorized and awaits `!brief` then `!run`. The sole publication invocation returned no deployment identity or success result. An active live release exists, but its exact version is unverified; Version 20 is only the last confirmed pre-invocation baseline. Controlled Attempt 2 is unused. Read-only deployment-history reconciliation, further retry, the conditional remediation checklist, broad smoke, and all mutating Shopping scenarios remain separate gates.
+The authoritative local suites passed before preservation and publication. Exact saved Version 20 passed 92/92 saved-source, 160/160 layered, and 150/150 focused tests plus lint/build and published successfully once. Product Owner validation then confirmed a mobile Shopping-discoverability failure alongside Bookshelf failures. Replacement checkpoint `f15ea81` was saved as Version 21. Diagnostic focused 17/17 and Product Owner-accepted retained full serial 93/93 evidence remained attributable; production build and package/boundary checks passed. The first publication invocation was ambiguous, but controlled Attempt 2 later returned deployment identity and definitive `succeeded` status. All five authorized anonymous public markers matched after propagation. Product Owner hands-on validation, broad smoke, and all mutating Shopping scenarios remain separate gates.
 
 ## Product Owner validation checkpoint
 

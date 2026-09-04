@@ -4,7 +4,7 @@
 
 This document is the canonical future visual and interaction direction for **My Library**. It defines product-level experience requirements for later estimation and phased implementation. It does not describe current implementation state, authorize Engineer work, or open any Site, source, data, save, preview, deployment, publication, or production gate. [Current State](CURRENT_STATE.md), accepted briefs, tests, and gate evidence remain authoritative for delivery status.
 
-The cumulative Shopping/M3–M6/Bookshelf source is published as exact Version 20. Later local Phase A/D work remains only at checkpoint `608553f` and was excluded from publication. Future work must begin with composition and collision checks across those distinct states. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
+The cumulative Shopping/M3–M6/Bookshelf source plus the bounded five-correction remediation is published as exact Version 21 at `f15ea81`. Later local Phase A/D work remains only at checkpoint `608553f` and was excluded from publication. Future work must begin with composition and collision checks across those distinct states. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
 
 ## Experience principles
 
@@ -184,14 +184,14 @@ A low-priority optional, dismissible, primarily mobile personality layer may rea
 
 | Layer | Direction |
 | --- | --- |
-| Current release planning | Phases A–G below may be estimated; each requires later scope and authority. Preserve Version 20 and all existing gates meanwhile. |
+| Current release planning | Phases A–G below may be estimated; each requires later scope and authority. Preserve exact Version 21 and all existing gates meanwhile. |
 | Optional polish after stable foundations | Phase H ambient animation, controlled by performance/accessibility requirements. |
 | Future only | Catalog Terminal, advanced personalization/custom palettes, and Shopkeeper Buddy. |
 | Separate persistence/product work | Many-to-many collections, genres, tags, saved preferences where not already supported, multi-collection trips, and relationship editing. |
 
 ## Dependencies and collision boundaries
 
-- **Version 20 cumulative candidate:** shared application page, global styles, schema, API, authentication/runtime, Shopping, Bookshelf, and ordered migration surfaces require exact pre-estimate and pre-implementation composition checks.
+- **Version 21 cumulative release:** shared application page, global styles, schema, API, authentication/runtime, Shopping, Bookshelf, and ordered migration surfaces require exact pre-estimate and pre-implementation composition checks. Excluded checkpoint `608553f` remains a separate collision boundary.
 - **Collection relationships:** Product Owner expects the current collection model to be sufficient for the initial direction, but Sei must verify that assumption. Current collection/series behavior is not blanket authority for new many-to-many membership, genres, pins, or session-scope persistence if inspection shows missing capability.
 - **Tags:** remain future schema and interaction work; visual filters may not imply persistence.
 - **Authentication:** Public/Tester/Administrator presentation, owner authorization, temporary codes, and write state need separate server models.
@@ -221,13 +221,13 @@ The simple sum is **62 / 91 / 128** points. Sei estimates approximately **56 / 8
 
 - **A — complete locally:** My Library identity and responsive shell are implemented and preserved in application checkpoint `608553f`. Targeted suites and the complete current-source serial suite pass; Site save, preview, publication, and live validation remain absent.
 - **Static D foundation — complete locally:** semantic conversion, warm/dark/system presentation, session-only manual control, focus treatment, route-family styling, desktop/mobile viewport checks, overflow checks, and sampled contrast are complete at `608553f`.
-- **Confirmed validation remediation — saved / release identity ambiguous:** checkpoint `80e4c61` remains retired as historical evidence. Replacement checkpoint `f15ea81` implements the five bounded corrections and is saved as Version 21. The first publication invocation returned no deployment identity, and public fingerprinting retained the legacy bookshelf UI. Focused 17/17 passes under Node 24, and retained full 93/93 evidence is accepted for this exact unchanged candidate. The exact remaining release brief is authorized and awaits `!brief` then `!run`; Attempt 2 remains unused and hands-on validation remains gated. See the [Version 20 remediation plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md).
+- **Confirmed validation remediation — published / hands-on validation gated:** checkpoint `80e4c61` remains retired as historical evidence. Replacement checkpoint `f15ea81` implements the five bounded corrections and is definitively published as Version 21. Controlled Attempt 2 returned deployment identity and `succeeded` status; all five authorized anonymous markers match after propagation. Hands-on validation remains gated. See the [Version 20 remediation plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md).
 - **D limits:** Admin/catalog visual navigation was blocked by unavailable local sign-in; forced-colors and reduced-motion emulation were unavailable; saved preference persistence remains a later separately gated slice.
 - This checkpoint does not activate B/C/E/F/G/H or authorize preference persistence, Site operations, or production work.
 
 ### Accepted source findings
 
-- Many-to-many collection membership, pinned collections, saved theme preferences, durable global operational state, secure variant routing, and rate-limited hashed temporary-code infrastructure are all absent in Version 20.
+- Many-to-many collection membership, pinned collections, saved theme preferences, durable global operational state, secure variant routing, and rate-limited hashed temporary-code infrastructure are all absent in Version 21.
 - The current singular collection model is sufficient for the initial CYOA bookcase, not future many-to-many membership.
 - B spans 11 current mutation handlers and requires centralized durable enforcement.
 - C is a new security/runtime subsystem; prior platform evidence found no runnable unpublished preview, so feasibility comes before code.

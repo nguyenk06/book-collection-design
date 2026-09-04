@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the exact remaining build/package/publication brief is authorized and awaits ordered `!brief` intake then separate `!run` activation.
-- **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`, preserved it, and saved Version 21. All final release gates pass, including focused 17/17, isolated 3/3, full serial 93/93, lint, build, package, boundary, and no-write checks. The sole publication invocation returned no deployment identity or success result. An active release exists, but exact live-version identity is unknown; Version 20 is the last confirmed pre-invocation baseline. No preview, correction, retry, production/schema/data operation, migration, environment change, or additional save occurred.
-- **Next owner:** `PRODUCT OWNER` — send the exact short controls to `ENGINEER — SEI III`.
-- **Usage:** Product Owner recorded `!58:39` and authorized the exact 6/10/15-point slice. It requires a 30% minimum, preserves the 15% floor, and fits.
+- **Throttle:** `DRAIN`; the Version 21 release brief is complete and no Engineer brief remains eligible.
+- **Engineer state:** Sei III completed the exact Version 21 release at `f15ea81`. Build/package/boundary gates passed, controlled publication Attempt 2 returned definitive success and deployment identity, and all five authorized anonymous markers matched after propagation. Source files changed: none; every excluded operation remained unrun.
+- **Next owner:** `PLANNER — QUATRE` — process the separate Version 21 Product Owner validation decision.
+- **Usage:** Final prepublication reading `!32:35`; ending usage was not refreshed. Require a fresh reading before any later Engineer slice and preserve the 15% floor.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -150,6 +150,8 @@ Sei III accepted and ran that brief. A pre-process setup parameter error consume
 Product Owner selected Decision 1:B at `!58:39`, accepting the earlier attributable full 93/93 evidence only for unchanged exact `f15ea81` and explicitly granting no Engineer execution authority. One 6/10/15-point prepared brief begins at build/package/boundary validation and retains the unused controlled publication Attempt 2 plus the five-marker comparison after definitive success. It is parked pending a separate execution decision. Any drift invalidates the retained-evidence waiver; all source/runtime/dependency/configuration changes, new save/version, preview, further attempt, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery remain excluded.
 
 Product Owner then selected Decision 1:A at the same supplied `!58:39`, authorizing execution of that exact prepared brief while preserving every exclusion and the 15% floor. The brief is eligible for Sei III intake with `!brief` and begins only after separate `!run`; this authorization does not itself execute Engineer work.
+
+Sei III accepted the brief at `!38:36`, began at `!36:35`, completed the remaining build/package/boundary gates, and paused correctly for a fresh irreversible-operation reading. At `!32:35`, controlled publication Attempt 2 ran exactly once and returned a deployment identity and definitive `succeeded` status for existing saved Version 21. After propagation, all five authorized anonymous markers matched. No source file, save/version, preview, retry, authentication, held scenario, broad smoke, schema/data, migration, release-marker, rollback, restore, or destructive action occurred. The brief is complete and a separate Planner decision now controls Product Owner hands-on validation.
 
 ## Other workstreams
 

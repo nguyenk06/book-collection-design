@@ -9,10 +9,10 @@ The canonical future product-shell and presentation direction is [My Library Vis
 | Priority | Workstream | Current status | Dependencies | Estimated effort | Known blockers |
 | ---: | --- | --- | --- | --- | --- |
 | 0 | Database integrity and Shopping persistence foundation | Gate 4 complete within bridge-observable scope | Keep backup/restore guarantees separate; decide local schema remediation only if needed | Medium | Export is not a D1 snapshot, excludes R2 bytes, and does not prove restore readiness |
-| 1 | [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md) | Partial; focused 17/17 and retained full 93/93 are accepted for unchanged Version 21 | Run the authorized exact build/package/publication slice through ordered `!brief` then `!run` | Medium-large | Publication Attempt 2 remains unused; source/dependency/config changes, further retry, live validation, smoke, correction, and recovery remain gated |
+| 1 | [Shopkeeper / historical Shopping Mode](SHOPPING_MODE.md) | Partial; exact Version 21 published and all five anonymous correction markers match | Product Owner hands-on validation decision | Medium | Live validation, smoke, correction, later publication, and recovery remain gated |
 | 2 | [Scanner and Matching](SCANNER_AND_MATCHING.md) | Partial; canonical identifier foundation complete locally | Future candidate workflow and user-facing matching | Medium | Production unchanged; fuzzy candidate matching deferred |
-| 3 | [Bookshelf](BOOKSHELF.md) | Bounded first release published in Version 20; user checkpoint pending | Product Owner hands-on outcome | Medium | Published but not yet hands-on validated |
-| 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first export foundation and owner-only downloadable UI published in Version 20 | Product Owner checkpoint and safe later import/restore design | Medium-large | Production download untested; no complete backup; import remains unsafe/immediate |
+| 3 | [Bookshelf](BOOKSHELF.md) | Corrected Bookcase/Shelf release published in Version 21; anonymous markers match | Product Owner hands-on outcome | Medium | Published but not yet hands-on validated |
+| 4 | [Import and Export](IMPORT_EXPORT.md) | Partial; catalog-first export foundation and owner-only downloadable UI carried into Version 21 | Product Owner checkpoint and safe later import/restore design | Medium-large | Production download untested; no complete backup; import remains unsafe/immediate |
 | 5 | [AI Review](AI_REVIEW.md) | Planned | Versioned interchange, review batches/proposals, field comparison, concurrency protection | Large | Stable interchange and review staging absent |
 | 6 | Reference cover enrichment | Planned | Minimal asset metadata, personal/reference distinction, attribution, safe identifier match | Medium-large | No asset table; identifier confidence weak; personal covers need protection |
 | 7 | [Asset improvements](ASSET_MANAGEMENT.md) | Partial | Asset table, variants, cleanup, broken-object fallback | Medium-large | One image key; missing metadata; orphaned R2 risk |
@@ -42,9 +42,9 @@ Saving Version 17 did not mark Shopping released or active in production. Versio
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-The remaining Version 21 build/package/publication slice is authorized. It becomes active only through ordered `!brief` intake and separate `!run` in the Sei III chat; all brief gates and exclusions remain binding.
+Exact Version 21 at `f15ea81` is definitively published and its five authorized anonymous correction markers match. [Planner Inbox](PLANNER_INBOX.md) now carries the separate Product Owner hands-on validation decision.
 
-The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within their bounded evidence layers. Version 20 is now published; every later validation, smoke, correction, and recovery gate remains sequential, closed, and unauthorized.
+The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within their bounded evidence layers. Version 21 is now published; every later hands-on validation, smoke, correction, and recovery gate remains sequential and separately controlled.
 
 ## Deferred
 

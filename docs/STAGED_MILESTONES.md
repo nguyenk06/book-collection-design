@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Product Owner recorded `!58:39`. The prepared remaining build/package/publication slice is estimated at 6/10/15 points and requires a 30% minimum including the 15% floor.
+**Execution budget:** The Version 21 release slice completed after a final prepublication reading of `!32:35`; ending usage was not refreshed. Require a fresh reading before any later Engineer slice.
 
-**Queue state:** Throttle `DRAIN`. Retained full 93/93 evidence is accepted for unchanged `f15ea81`. The exact remaining release brief is authorized and awaits `!brief` then separate `!run`. Controlled Attempt 2 remains unused and Product Owner validation remains closed.
+**Queue state:** Throttle `DRAIN`. Exact Version 21 at `f15ea81` is definitively published; controlled Attempt 2 succeeded and all five authorized anonymous markers match. No Engineer brief remains eligible. Product Owner hands-on validation remains separately gated through Planner Decision 1.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
@@ -86,7 +86,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 ## Milestone 6 — Local downloadable catalog export UI
 
-**State:** Complete and validated locally; published in exact Version 20; Product Owner checkpoint remains separately gated.
+**State:** Complete and validated locally; first published in exact Version 20 and carried unchanged into exact Version 21; Product Owner checkpoint remains separately gated.
 
 - **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); [Import/Export accepted export-first boundary and format v1](IMPORT_EXPORT.md#accepted-format-version-1-contract); completed M5 foundation.
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.

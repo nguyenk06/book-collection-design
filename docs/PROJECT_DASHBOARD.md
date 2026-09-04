@@ -7,7 +7,7 @@
 | KPI | Coarse estimate | Progress | What it measures |
 | --- | ---: | --- | --- |
 | Core build completion | **~90%** | `██████████████████░░` | Functionality implemented and validated locally |
-| Release readiness | **~85%** | `█████████████████░░░` | Preservation, production verification, publication, and live validation |
+| Release readiness | **~90%** | `██████████████████░░` | Preservation, production verification, publication, and live validation |
 | Broader roadmap completion | **~60%** | `████████████░░░░░░░░` | Current release plus later planned product capabilities |
 
 These estimates intentionally measure different outcomes. High local completion does not imply that the source is saved, published, production-verified, or live-validated.
@@ -17,11 +17,11 @@ These estimates intentionally measure different outcomes. High local completion 
 | Milestone | Coarse estimate | Status | Release boundary |
 | --- | ---: | --- | --- |
 | M1 — Validation-environment feasibility | **100%** | Complete locally | Investigation completed; no safe runnable unpublished preview was found |
-| M2 — Controlled Shopping release | **~85%** | Release-gated | Exact Version 20 published; Product Owner live validation and later smoke remain gated |
-| M3 — Canonical identifiers | **100% locally** | Published; validation-gated | Included in Version 20; not independently hands-on validated |
-| M4 — Bookshelf | **100% locally** | Published; validation-gated | Included in Version 20; Product Owner checkpoint remains gated |
-| M5 — Export foundation | **100% locally** | Published; partial operational evidence | Included in Version 20; not a complete production backup |
-| M6 — Downloadable catalog export | **100% locally** | Published; validation-gated | Included in Version 20; hands-on checkpoint remains separate |
+| M2 — Controlled Shopping release | **~95%** | Release-gated | Exact Version 21 published and anonymous markers match; Product Owner validation and later smoke remain gated |
+| M3 — Canonical identifiers | **100% locally** | Published; validation-gated | Included in Version 21; not independently hands-on validated |
+| M4 — Bookshelf | **100% locally** | Published; validation-gated | Included in Version 21; anonymous correction markers match; Product Owner checkpoint remains gated |
+| M5 — Export foundation | **100% locally** | Published; partial operational evidence | Included in Version 21; not a complete production backup |
+| M6 — Downloadable catalog export | **100% locally** | Published; validation-gated | Included in Version 21; hands-on checkpoint remains separate |
 
 Every milestone percentage is a coarse planning estimate. “100% locally” means the accepted local scope is implemented and validated; it never means saved, published, production-verified, or live-validated.
 
@@ -29,10 +29,10 @@ Every milestone percentage is a coarse planning estimate. “100% locally” mea
 
 ```mermaid
 flowchart LR
-    A["Preserve cumulative candidate<br/>Complete · Version 20"]
+    A["Preserve cumulative candidate<br/>Complete · Version 21"]
     B["Verify Gate 4 preservation<br/>Complete · bounded evidence accepted"]
-    C["Publish Shopping<br/>Complete · Version 20"]
-    D["Live validation<br/>Closed validation gate"]
+    C["Publish Shopping<br/>Complete · Version 21"]
+    D["Live validation<br/>Pending Planner decision"]
 
     A --> B --> C --> D
 
@@ -45,9 +45,9 @@ flowchart LR
     class D closed
 ```
 
-- **Preserve:** Complete. Exact cumulative Shopping/M3–M6/Bookshelf candidate was saved, identity-verified, and later published as Version 20.
+- **Preserve:** Complete. Exact cumulative source was preserved through Version 20 and the bounded correction candidate was saved and published as exact Version 21.
 - **Verify Gate 4:** Complete within the bridge-observable boundary; this does not prove D1 snapshot, R2-byte backup, restore readiness, or complete backup.
-- **Publish Shopping:** Complete. Exact saved Version 20 published successfully once; later checkpoint `608553f` was excluded.
+- **Publish Shopping:** Complete. Exact saved Version 21 at `f15ea81` published with definitive success; later checkpoint `608553f` remains excluded.
 - **Live validation:** Requires an explicitly authorized live-only sequence because supported tooling exposes no runnable unpublished preview.
 
 Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CURRENT_STATE.md) and [Next Actions](NEXT_ACTIONS.md).
@@ -56,7 +56,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Retained full 93/93 evidence is accepted for unchanged Version 21; the exact remaining brief is authorized and awaits `!brief` then `!run`, while controlled Attempt 2 remains unused |
+| My Library visual experience | Partial | Exact Version 21 is published and all five authorized anonymous correction markers match; Product Owner hands-on validation remains gated |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |

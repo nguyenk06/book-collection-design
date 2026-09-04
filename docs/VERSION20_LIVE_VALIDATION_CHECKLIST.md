@@ -1,6 +1,6 @@
 # Version 20 Product Owner Live Validation Checklist
 
-**Status:** In progress; held identifier/download checks remain, with confirmed UI failures
+**Status:** Historical Version 20 checkpoint; confirmed UI failures were remediated and published in Version 21. A refreshed Version 21 checklist requires the separate decision in [Planner Inbox](PLANNER_INBOX.md).
 **Candidate:** Published Version 20, commit `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Live Site:** <https://cyoa-collection.znesfreak.chatgpt.site>  
 **Boundary:** Initial validation is read-only. Checkpoint `608553f` is excluded.
