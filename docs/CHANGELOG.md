@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-04 — Focused diagnosis with conditional republish authorized
+
+- Recorded Product Owner Decision 1:A with fresh usage `!89:44`.
+- Prepared one 8/14/22-point brief permitting up to three distinct non-mutating Node 24 executions to establish an attributable exact focused-suite result.
+- Authorized same-run continuation only after definitive 17/17 through full tests, build, package/boundary gates, the still-unused controlled publication Attempt 2, and the five public markers after definitive publication success.
+- Kept substantive test failure, failed Attempt 3, ambiguity, drift, or release-boundary stops strict and excluded every source/test/snapshot/dependency/configuration change, runtime installation/persistence, new save/version, preview, further publication attempt, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery.
+
 ## 2026-09-04 — Supported-Node resume stopped at focused-suite attribution gate
 
 - Accepted Sei III's supported-Node brief acceptance and terminal revalidation-gate reports with compliant identity and canonical footers.

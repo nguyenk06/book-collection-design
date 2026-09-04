@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Last recorded `!95:41`; the supported-Node resume stopped during the focused suite and no ending reading was captured. Refresh and re-estimate before any diagnostic/resume brief.
+**Execution budget:** Product Owner recorded `!89:44`. The combined diagnosis-to-release slice is estimated at 8/14/22 points and requires a 37% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. The supported-Node resume stopped after the focused suite returned no attributable count. No eligible brief remains; controlled publication Attempt 2 stays unused and Product Owner validation remains closed pending a diagnostic decision.
+**Queue state:** Throttle `DRAIN`. One focused-diagnosis/conditional-republish brief is prepared for `!brief` and separate `!run`. Controlled publication Attempt 2 remains unused; Product Owner validation remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

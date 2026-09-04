@@ -1,10 +1,10 @@
 # Version 20 Confirmed-Failure Remediation Plan
 
-**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; Node 24 passed runtime/identity/lint, focused result was unattributable; controlled Attempt 2 unused
+**Status:** Complete and saved as Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8`; bounded Node 24 focused diagnosis with conditional release continuation authorized; controlled Attempt 2 unused
 **Baseline:** exact authoritative Sites-managed Version 20 source `6a2191b1b506d171d576cbb6a6b160964595c051`  
 **Candidate identity:** final local checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8`; it must never be called or represented as `80e4c61`
 
-Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. The first publication invocation returned no deployment identity or success result, and a later public fingerprint retained legacy Gallery/List/Bookshelf behavior. Bundled Node 24 then passed runtime, identity, and lint gates, but the focused suite produced no attributable count. Exact live identity remains unknown, controlled Attempt 2 remains unused, and bounded diagnosis requires a new decision.
+Sei II and Sei III completed the Version 20-based correction through one preserved replacement handoff and bounded recovery sequence. Final checkpoint `f15ea81` remains clean with exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` relative to Version 20. The first publication invocation returned no deployment identity or success result, and a later public fingerprint retained legacy Gallery/List/Bookshelf behavior. Bundled Node 24 then passed runtime, identity, and lint gates, but the focused suite produced no attributable count. Product Owner authorized up to three non-mutating attribution executions and conditional release continuation on definitive 17/17; controlled Attempt 2 remains unused.
 
 ## Purpose
 

@@ -56,7 +56,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Version 21 public behavior mismatches four markers; Node 24 passed but focused-test output was unattributable, leaving publication Attempt 2 unused |
+| My Library visual experience | Partial | Version 21 public behavior mismatches four markers; bounded Node 24 diagnosis with conditional release continuation is queued, Attempt 2 unused |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |
