@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-04 — Supported-Node resume stopped at focused-suite attribution gate
+
+- Accepted Sei III's supported-Node brief acceptance and terminal revalidation-gate reports with compliant identity and canonical footers.
+- Recorded bundled Node `v24.19.0` selected process-locally with no installation or persistent change; exact identity Gate 1 and scoped lint passed.
+- Recorded that the focused suite started but returned only the Vitest startup banner with no attributable result count; full tests, build, remaining gates, publication, and public comparison were unrun.
+- Confirmed controlled publication Attempt 2 remains unused at 0, source remains clean, no project-owned process remains, and no Site/source/dependency/configuration/schema/data/production change occurred.
+- Opened a Planner decision among combined bounded diagnosis/conditional continuation, diagnosis only, or parking.
+
 ## 2026-09-03 — Supported-Node republish resume authorized
 
 - Recorded Product Owner Decision 1:A with fresh usage `!95:41`.

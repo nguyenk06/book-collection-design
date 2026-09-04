@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; one supported-Node republish-resume brief is prepared, but no Engineer run is active.
+- **Throttle:** `DRAIN`; the supported-Node resume stopped at an unattributable focused-suite result, no Engineer run is active, and no eligible brief remains.
 - **Engineer state:** Sei III completed the Version 20-based five-correction candidate at clean checkpoint `f15ea81`, preserved it, and saved Version 21. All final release gates pass, including focused 17/17, isolated 3/3, full serial 93/93, lint, build, package, boundary, and no-write checks. The sole publication invocation returned no deployment identity or success result. An active release exists, but exact live-version identity is unknown; Version 20 is the last confirmed pre-invocation baseline. No preview, correction, retry, production/schema/data operation, migration, environment change, or additional save occurred.
-- **Next owner:** `ENGINEER — SEI III` — accept the supported-Node resume brief with `!brief`; wait for separate `!run`.
-- **Usage:** Product Owner recorded `!95:41`. The 8/13/20-point slice requires a 35% minimum including the 15% floor.
+- **Next owner:** `PLANNER — QUATRE` — decide combined diagnosis/conditional resume, diagnosis only, or park.
+- **Usage:** Last recorded `!95:41`; no ending reading was captured. Refresh before any later Engineer brief.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -140,6 +140,8 @@ Product Owner selected Decision 1:A and Decision 2:B at `!76:57`. One controlled
 Sei III accepted and ran that brief. Exact candidate/Site/session/package/collision Gate 1 passed and scoped lint passed with exit 0. The focused suite failed before test execution because the available Node `v18.18.0` runtime does not satisfy the candidate's declared `>=22.13.0` requirement and lacks the required `node:util` `styleText` export. Full tests, build, remaining gates, publication, and public comparison were unrun. The explicitly authorized new publication invocation remains unused at 0. No runtime, dependency, source, test, configuration, package, environment, Site, schema/data, or production change occurred. Runtime alignment now requires a new bounded decision.
 
 Product Owner selected Decision 1:A at `!95:41`. One supported-Node republish-resume brief is prepared. It may inspect configured/bundled runtime metadata and process-locally select one already available Node `>=22.13.0`, then rerun all gates consistently and retain the unused controlled publication Attempt 2. It forbids installation, upgrade, persistent environment change, dependency/configuration/source change, new save/version, preview, another attempt, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery.
+
+Sei III accepted and ran that brief. Bundled Node `v24.19.0` was selected process-locally, satisfying the declared runtime without installation or persistent change. Exact identity Gate 1 and scoped lint passed. The focused suite started but returned only the Vitest startup banner with no attributable count, so it stopped as required. Full tests, build, remaining gates, publication, and public comparison were unrun; controlled Attempt 2 remains unused. Source stayed clean, no project-owned process remained, and no Site/production/source/dependency/configuration change occurred. A new decision controls bounded diagnosis and whether definitive success may continue directly through the remaining release sequence.
 
 ## Other workstreams
 
