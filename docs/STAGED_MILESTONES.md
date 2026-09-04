@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Last recorded `!89:44`; the run stopped at full-suite attribution and no ending reading was captured. Refresh and re-estimate before any replacement/resume brief.
+**Execution budget:** Product Owner recorded `!58:39`. The prepared remaining build/package/publication slice is estimated at 6/10/15 points and requires a 30% minimum including the 15% floor.
 
-**Queue state:** Throttle `DRAIN`. Focused 17/17 is now definitive, but the fresh full-suite summary is unattributable. No eligible brief remains; controlled publication Attempt 2 stays unused and Product Owner validation remains closed pending an evidence decision.
+**Queue state:** Throttle `DRAIN`. Retained full 93/93 evidence is accepted for unchanged `f15ea81`. One remaining release brief is prepared but parked without Engineer intake/execution authority. Controlled Attempt 2 remains unused and Product Owner validation remains closed.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

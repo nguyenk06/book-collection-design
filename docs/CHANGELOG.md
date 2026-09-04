@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-04 — Retained full-suite evidence accepted; remaining release slice prepared
+
+- Recorded Product Owner Decision 1:B and fresh usage `!58:39`.
+- Accepted earlier attributable full serial 93/93 together with current Node 24 lint, focused 17/17, exact identity, and clean-state evidence only for unchanged exact `f15ea81`; any drift invalidates the waiver.
+- Sized the remaining build/package/publication/five-marker slice at 6/10/15 points with a 30% minimum and prepared one explicitly parked brief.
+- Recorded that the instruction grants no Engineer intake or execution authority; controlled Attempt 2 remains unused and all source/runtime/dependency/configuration changes, new save/version, preview, further attempts, held validation, broad smoke, migration, production schema/data mutation, rollback, restore, and destructive recovery remain closed.
+
 ## 2026-09-04 — Focused attribution passed; full-suite attribution stopped
 
 - Accepted Sei III's combined-brief acceptance and terminal remaining-revalidation reports with compliant identity and canonical footers.
