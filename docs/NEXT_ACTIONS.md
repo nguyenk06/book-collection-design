@@ -7,11 +7,19 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact Version 21 at `f15ea81` is the authoritative published checkpoint; checkpoint `608553f` is excluded. M4 historical transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the Version 21 release sprint is complete and no Engineer goal is active.
-- **Engineer state:** Sei III's final continuity report is accepted; Sei III is retired with no active or inherited authority. Kira is the designated successor direct Quatre child and is not initialized or authorized.
-- **Next owner:** `PLANNER — QUATRE` — initialize the persistent parent from the final Designer transition checkpoint. Do not initialize Relena or Kira and do not choose new product work during transition initialization.
-- **Usage:** Product Owner recorded `!100:31`. Preserve the 15% five-hour floor; check the 31% longer-period allowance separately. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
+- **Readiness state:** Quatre completed parent handoff/readiness initialization. Relena and Kira were then sequentially initialized as ready direct children, and the Product Owner/Quatre orchestration channel is active.
+- **Engineer state:** Sei III's final continuity report is accepted; Sei III is retired with no active or inherited authority. Kira is initialized and ready but idle, has accepted no goal, inherits no Sei state or authority, and has no Sites rights.
+- **Next owner:** `PLANNER — QUATRE` — keep both ready children idle until one separately authorized completion-oriented goal is selected, scoped, collision-checked, and sized.
+- **Usage:** Current reported capacity is `!77:20`. Preserve the 15% five-hour floor and check the 20% longer-period allowance separately. The older 31% longer-period reading is historical only. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
+
+## Remaining goals and release boundaries
+
+- M1, M3, M4, M5, and M6 and M2 Gates 0–5 are complete within their recorded evidence boundaries. No continuation or corrective release goal is active.
+- Version 21 hands-on validation and later smoke remain parked by Decision 1:B. They are not failures or implied implementation scope.
+- The accepted My Library direction includes an owner-visible version/build reference. A later visible version-number quality-of-life change must be a new, bounded application-source goal that defines the displayed identity and audience, starts from a verified source baseline, preserves authentication and data boundaries, and completes local tests/build plus a Kira release packet and Relena boundary review. It does not reopen Version 21 validation and grants no save, preview, deployment, publication, or production authority; any Site operation remains a separate Product Owner gate owned by Quatre.
+- My Library phases, safe import/restore, AI Review, cover enrichment, asset lifecycle, Tags, and expanded administration/analysis remain roadmap work rather than executable queue items. Quatre must select and authorize one coherent goal before either child proceeds.
 
 ## M6 locally complete
 
@@ -155,12 +163,12 @@ Sei III accepted the brief at `!38:36`, began at `!36:35`, completed the remaini
 
 Product Owner selected Decision 1:B and parked Version 21 hands-on validation. The release sprint is complete. The active workflow now pilots Quatre as persistent parent, Planner, usage governor, and Site owner, with direct non-delegating children Relena and successor Engineer Kira. The Product Owner communicates only with Quatre; internal goals, briefs, reports, and evidence no longer require Product Owner transport. Kira cannot use Sites or credentials. Quatre may perform only explicitly authorized Site operations after a Kira release packet and Relena boundary confirmation.
 
-On 2026-09-05, Sei III's final read-only continuity/retirement report was accepted. It reconfirmed exact clean `f15ea81`, preserved unchanged ignored 47-file build output, no active candidate process, no unpublished source, no remaining accepted work, definitive Version 21 publication, and the five-marker match. All Sei III authority and the old separate-chat workflow are closed. Kira remains uninitialized and receives no continuity or execution authority by implication.
+On 2026-09-05, Sei III's final read-only continuity/retirement report was accepted. It reconfirmed exact clean `f15ea81`, preserved unchanged ignored 47-file build output, no active candidate process, no unpublished source, no remaining accepted work, definitive Version 21 publication, and the five-marker match. All Sei III authority and the old separate-chat workflow are closed. Kira was still uninitialized at that retirement checkpoint and received no continuity or execution authority by implication; her later readiness initialization did not change that boundary.
 
 ## Other workstreams
 
-- M4 bounded Bookshelf is published in Version 20 and requires a Product Owner hands-on checkpoint before acceptance.
-- M5 catalog export foundation is complete locally. The private Gate 2 bridge export and local M5 catalog export are useful but neither is a complete production backup; both exclude R2 bytes.
+- M4 bounded Bookshelf was first published in Version 20 and its bounded corrections are published in Version 21; Product Owner hands-on validation remains parked.
+- M5 catalog export foundation is published in Version 21. The private Gate 2 bridge export and M5 catalog export are useful but neither is a complete production backup; both exclude R2 bytes.
 - Mutable import, AI Review, reference-cover enrichment, Tags, and dedicated analysis remain behind their accepted dependencies and are not current queue work.
 
 ## Resume and stopping rules

@@ -29,16 +29,15 @@ The canonical future product-shell and presentation direction is [My Library Vis
 
 ## Immediate milestone
 
-Continue the controlled live Shopping release sequence in ADR-0012 without a separate validation Site. Candidate isolation, administration publication, status/export, and the one-time Gate 3 invocation are complete within their evidence boundaries:
+The controlled Shopping release sequence in ADR-0012 is complete through exact Version 21 publication and the five authorized anonymous marker matches. No release continuation or corrective implementation goal is active.
 
-- Retain the isolated, locally validated Shopping release candidate.
-- Retain published Version 19 as the owner-authenticated administration path.
-- Preserve the private Gate 2 structured export and its documented limitations.
-- Treat the Gate 3 immediate activation response as distinct from Gate 4's later independent verification and supplemental export comparison.
-- Keep Gate 4 verification and Shopping publication independently approved and evidenced.
-- Run the desktop/mobile checklist and post-publication smoke review on the live Site.
+- Retain exact Version 21 at `f15ea81` as the authoritative saved and published checkpoint.
+- Preserve the private Gate 2 export and Gate 4 bridge-observable evidence with their documented backup and restore limitations.
+- Keep Product Owner hands-on validation and later smoke parked by Decision 1:B.
+- Keep every correction, later publication, production/schema/data operation, migration, rollback, restore, and destructive recovery separately gated.
+- Treat all future roadmap capabilities as non-executable until Quatre selects and transmits one bounded completion-oriented goal.
 
-Saving Version 17 did not mark Shopping released or active in production. Version 19 administration supported Gates 2–4; exact cumulative Version 20 later published successfully once after full revalidation. Product Owner live validation and later smoke/correction/recovery remain separate closed gates.
+Quatre and its direct children Relena and Kira have completed readiness initialization. This activates the Product Owner/Quatre orchestration channel but creates no product, Engineer, Site, or production authority.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 

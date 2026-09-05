@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** The Version 21 release slice completed after a final prepublication reading of `!32:35`; ending usage was not refreshed. Require a fresh reading before any later Engineer slice.
+**Execution budget:** The Version 21 release slice completed after a final prepublication reading of `!32:35`. Current reported capacity is `!77:20`; preserve the 15% five-hour floor and check the 20% longer-period allowance separately before any later Engineer slice. Sites capacity is `UNKNOWN`.
 
-**Queue state:** Throttle `DRAIN`. Exact Version 21 at `f15ea81` is definitively published; controlled Attempt 2 succeeded and all five authorized anonymous markers match. Product Owner hands-on validation is parked by Decision 1:B. Sei III and the old separate-chat workflow are retired. No Engineer goal is active; Quatre parent initialization is the only next transition action.
+**Queue state:** Throttle `DRAIN`. Exact Version 21 at `f15ea81` is definitively published; controlled Attempt 2 succeeded and all five authorized anonymous markers match. Product Owner hands-on validation is parked by Decision 1:B. Sei III and the old separate-chat workflow are retired. Quatre, Relena, and Kira completed readiness initialization; no Engineer goal is active, and the next milestone requires Quatre to select and authorize one capacity-sized goal.
 
 **Usage state:** Version 21 is the authoritative exact published checkpoint; Version 20 remains retained history. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

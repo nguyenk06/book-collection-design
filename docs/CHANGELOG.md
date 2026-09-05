@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-05 — Quatre and direct-child readiness initialized
+
+- Recorded completion of the Quatre parent handoff/readiness initialization and activation of the Product Owner/Quatre orchestration channel.
+- Recorded sequential readiness initialization of direct children Relena and Kira without accepting or activating a product goal. Kira inherits no Sei state or authority and has no Sites rights.
+- Kept throttle `DRAIN`, Version 21 hands-on validation parked by Decision 1:B, and every Site, release, production, schema/data, migration, rollback, restore, destructive-recovery, and external-sharing gate closed.
+- Reconciled the remaining milestone horizon: completed M1/M3/M4/M5/M6 and M2 Gates 0–5 remain accepted within their evidence boundaries; future roadmap work requires a separately selected and authorized completion-oriented goal.
+- Classified the later owner-visible version/build reference as a separate application-source and release-boundary goal, not Version 21 validation or current execution authority.
+- Recorded current capacity `!77:20`, preserved the 15% five-hour floor, and retained Sites capacity as `UNKNOWN`; the older 31% longer-period reading remains historical only.
+
 ## 2026-09-05 — Sei III retired; Quatre parent transition ready
 
 - Accepted Sei III's final read-only continuity/retirement report: exact Version 21 checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8` remains clean on configured `main`; the ignored 47-file build output is preserved unchanged; no candidate-owned process, unpublished source, successor-critical private artifact, accepted brief, or active run remains.

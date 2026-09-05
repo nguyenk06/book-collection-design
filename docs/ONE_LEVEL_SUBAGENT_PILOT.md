@@ -105,5 +105,6 @@ External local `briefs/`, `inbox/`, and `processed/` may remain as durable evide
 - Controlled publication Attempt 2 succeeded and all five anonymous correction markers matched.
 - Product Owner hands-on validation is parked by Decision 1:B.
 - No Engineer goal is active.
-- Sei III and the old separate-chat workflow are retired; Kira is not initialized and has no authority.
+- Quatre completed read-only parent handoff/readiness initialization, and the Product Owner/Quatre orchestration channel is active.
+- Relena and Kira were sequentially initialized as ready direct children. Neither initialization accepted or activated a product goal; Kira inherits no Sei state or authority and has no Sites rights.
 - All later publication, Site, production, schema/data, migration, credential, rollback, restore, destructive recovery, and external-sharing operations remain gated.

@@ -22,11 +22,11 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 ## Queue and ownership
 
-- **Current role identities:** Parent/Planner/Site owner — Quatre; direct Designer child — Relena; successor direct Engineer child — Kira. Engineer — Sei and Sei I–III are retired permanently. The old separate-chat role workflow is closed.
+- **Current role identities:** Initialized parent/Planner/Site owner — Quatre; initialized ready direct Designer child — Relena; initialized ready successor direct Engineer child — Kira. Engineer — Sei and Sei I–III are retired permanently. The old separate-chat role workflow is closed, and the Product Owner/Quatre orchestration channel is active.
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the release sprint is complete and no application goal is active.
-- **Engineer state:** `SEI III — RETIRED / NO AUTHORITY`; `KIRA — SUCCESSOR DESIGNATED / NOT INITIALIZED / NO AUTHORITY`.
+- **Engineer state:** `SEI III — RETIRED / NO AUTHORITY`; `KIRA — INITIALIZED / READY / IDLE / NO ACTIVE GOAL / NO INHERITED AUTHORITY / NO SITES RIGHTS`.
 - **Pilot topology:** Quatre is the only parent. Relena, Kira, and any justified temporary test/review agents are direct children and may not spawn. Only one application-source writer may be active; parallel writers require isolated worktrees and collision review.
 - **Sites ownership:** Quatre only. Kira may inspect, implement, test, build, package, and prepare a release packet but may not invoke Sites tools, obtain Sites credentials, save, preview, deploy, publish, or perform the final Site handoff.
 - **Engineer completion:** Exact checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8` remains clean. Relative to Version 20 it contains exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Lint passes with zero errors/two established warnings, focused tests pass 17/17, full serial tests pass 93/93, production build passes, desktop/mobile responsive and accessibility QA passes, focus restoration and cover-error fallback pass, and final boundary/no-data checks pass. The generated TypeScript artifact remains in private quarantine with identity preserved. Standalone type checking remains a known environment/project limitation with no candidate-page error.
@@ -44,13 +44,13 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Sei III final retirement:** The accepted 2026-09-05 read-only continuity report reconfirmed exact `f15ea8144ec277a737f5e491e0276b60555cafb8` on configured `main`; zero modified, staged, stashed, or ordinary untracked source files; preserved unchanged ignored 47-file build output; no candidate-owned Node/npm/pnpm/Vitest process; no unpublished source or successor-critical private artifact; and no accepted or active work. Version 21 and its five-marker evidence remain authoritative. Sei III has no authority and cannot resume. Kira receives no state or authority by implication.
 - **Held validation decision:** Product Owner selected Decision 1:B. Version 21 hands-on validation remains parked and is not a failure or implementation requirement. The visible release marker remains deferred.
 - **Planner decisions:** None pending.
-- **Active owner:** `PLANNER — QUATRE` — initialize the persistent parent from the final transition checkpoint. Do not initialize children or select new product work merely because the transition is ready.
+- **Active owner:** `PLANNER — QUATRE` — the persistent parent and both direct-child readiness initializations are complete. Keep the ready children idle until Quatre selects and transmits a separately authorized completion-oriented goal.
 - **Blocking owner:** None. No Engineer goal is active.
 - **Potential later owner:** `PRODUCT OWNER` — may explicitly unpark the separately prepared Version 21 hands-on checklist later. It is not active now.
 
 ## Usage reserve
 
-Product Owner recorded `!100:31` for the workflow transition. No Engineer goal is active and no estimate is attached to this documentation pass. Preserve the 15% five-hour floor and check the 31% longer-period allowance separately before the next goal. Sites capacity is `UNKNOWN` unless the account exposes a usable meter; never infer a percentage.
+Current reported capacity is `!77:20`. No Engineer goal is active and no estimate is attached to this documentation pass. Preserve the 15% five-hour floor and check the 20% longer-period allowance separately before the next goal. The older 31% longer-period reading remains transition history and is not current capacity. Sites capacity is `UNKNOWN` unless the account exposes a usable meter; never infer a percentage.
 
 Workflow planning uses five-hour execution slices. One Engineer project is active per window by default. The provisional automatic stopping floor is **15%**, with a separate longer-period allowance check. The 35/50/70/85 task-class values are sizing guides; approved work may start or resume when its remaining high estimate plus the floor fits. Usage is refreshed at slice intake and thereafter only for large/high-risk work, stale/reset/intervening readings, material estimate growth, or credible floor risk. The [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) governs completion-oriented active runs and the mandatory pre-final continuation test.
 
@@ -97,4 +97,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Exact Version 21 at `f15ea81` is definitively published and all five anonymous public markers match. Product Owner hands-on validation is parked by Decision 1:B. Sei III and the old separate-chat workflow are retired. The next step is Quatre parent initialization from the final Designer transition checkpoint; direct children initialize only for a real authorized goal, and every Site/release/production gate remains closed until explicitly authorized.
+Exact Version 21 at `f15ea81` is definitively published and all five anonymous public markers match. Product Owner hands-on validation is parked by Decision 1:B. Sei III and the old separate-chat workflow are retired. Quatre, Relena, and Kira have completed readiness initialization, but no product goal is active. The next milestone is Quatre's selection of one separately authorized, capacity-sized completion-oriented goal; every Site, release, production, held-validation, and destructive gate remains closed until explicitly authorized.
