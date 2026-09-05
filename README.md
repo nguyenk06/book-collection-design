@@ -10,20 +10,21 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 20 is published and contains the exact validated cumulative Shopping/M3–M6/Bookshelf candidate; later local Phase A/D checkpoint `608553f` is excluded. M2 Gates 0–5 are complete within their bounded evidence. Product Owner live validation and later smoke/correction/recovery gates remain separate. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 21 at exact `f15ea81` is definitively published; all five authorized anonymous correction markers matched. Product Owner hands-on validation is parked. Later local Phase A/D checkpoint `608553f` remains excluded. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 
 Planner should read, in order:
 
-1. [Planner Inbox](docs/PLANNER_INBOX.md)
-2. [Project Dashboard](docs/PROJECT_DASHBOARD.md)
-3. [Current State](docs/CURRENT_STATE.md)
-4. [Next Actions](docs/NEXT_ACTIONS.md)
-5. [Changelog](docs/CHANGELOG.md)
-6. [Roadmap](docs/ROADMAP.md)
+1. [CYOA One-Level Subagent Pilot](docs/ONE_LEVEL_SUBAGENT_PILOT.md)
+2. [Planner Inbox](docs/PLANNER_INBOX.md)
+3. [Project Dashboard](docs/PROJECT_DASHBOARD.md)
+4. [Current State](docs/CURRENT_STATE.md)
+5. [Next Actions](docs/NEXT_ACTIONS.md)
+6. [Changelog](docs/CHANGELOG.md)
+7. [Roadmap](docs/ROADMAP.md)
 
-Temporary briefs and Engineer reports are stored only in the external local `briefs/` and `inbox/` transport; they are never GitHub content. `docs/PLANNER_INBOX.md` is the separate Quatre/Product Owner decision queue. Role identity determines the target of `!inbox`: Quatre reads and reports Planner Inbox, Relena processes external Engineer reports, and Sei does not use the command.
+The active pilot uses Quatre as persistent parent, orchestrator, usage governor, and Site owner. Relena and successor Engineer Kira are direct non-delegating Quatre children. The Product Owner communicates only with Quatre and does not carry briefs, reports, `!inbox`, or `!brief` between agents. Temporary artifacts remain internal/local and never become GitHub content. `docs/PLANNER_INBOX.md` is reserved for genuine Product Owner decisions.
 
 The concise current workstream view in [Current State](docs/CURRENT_STATE.md) shows what is active, blocked, able to continue, and approaching a production gate. Progress estimates are informational; briefs and validation evidence remain authoritative.
 
@@ -51,9 +52,9 @@ Implementation changes should be made in the Site implementation workspace. Majo
 | Core workflows | [Shopkeeper / historical Shopping Mode](docs/SHOPPING_MODE.md) · [Scanner and Matching](docs/SCANNER_AND_MATCHING.md) · [Bookshelf](docs/BOOKSHELF.md) |
 | Data workflows | [Import and Export](docs/IMPORT_EXPORT.md) · [AI Review](docs/AI_REVIEW.md) · [Asset Management](docs/ASSET_MANAGEMENT.md) · [Tags](docs/TAGS.md) |
 | Knowledge | [Knowledge Ownership Index](docs/KNOWLEDGE_INDEX.md) · [Future Improvement Catalog](docs/FUTURE_IMPROVEMENT_CATALOG.md) |
-| Governance | [Decision Log](docs/DECISIONS.md) · [Documentation Rules](docs/DOCUMENTATION_RULES.md) · [Engineer Execution Contract](docs/ENGINEER_EXECUTION_CONTRACT.md) · [Contributing](docs/CONTRIBUTING.md) |
+| Governance | [CYOA One-Level Subagent Pilot](docs/ONE_LEVEL_SUBAGENT_PILOT.md) · [Decision Log](docs/DECISIONS.md) · [Documentation Rules](docs/DOCUMENTATION_RULES.md) · [Engineer Execution Contract](docs/ENGINEER_EXECUTION_CONTRACT.md) · [Contributing](docs/CONTRIBUTING.md) |
 | Handoffs | [Protocol](docs/HANDOFF_PROTOCOL.md) · [Engineer Execution Contract](docs/ENGINEER_EXECUTION_CONTRACT.md) · [Implementation Brief template](templates/IMPLEMENTATION_BRIEF.md) · [Design Handoff template](templates/DESIGN_HANDOFF.md) |
-| Role startup | [Designer](templates/DESIGNER_STARTUP.md) · [Site Engineer](templates/ENGINEER_STARTUP.md) · [Planner](templates/PLANNER_STARTUP.md) |
+| Role startup | [Quatre parent](templates/PLANNER_STARTUP.md) · [Relena direct subagent](templates/DESIGNER_STARTUP.md) · [Kira direct subagent](templates/ENGINEER_STARTUP.md) |
 | Engineer handoffs | [Implementation brief](templates/IMPLEMENTATION_BRIEF.md) · [Estimation brief](templates/ESTIMATION_BRIEF.md) |
 
 ## GitHub Pages

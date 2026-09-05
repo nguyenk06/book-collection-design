@@ -2,7 +2,13 @@
 
 This protocol defines the file-based exchange between the Design workspace and the Site implementation workspace. Permanent product state belongs in GitHub design documents and Site version history. All briefs, reports, acceptance records, and handoff files are transport artifacts stored only in the external local handoff workspace; they must never be committed to `book-collection-design`, including for staging or archival.
 
-## Site Engineer Read Location
+## Active Pilot Precedence
+
+The [CYOA One-Level Codex Subagent Pilot](ONE_LEVEL_SUBAGENT_PILOT.md) is the current workflow authority. Quatre is the persistent parent, Planner, usage governor, and Site-owning agent. Relena and Kira are direct Quatre children and must not spawn. The Product Owner communicates only with Quatre and no longer carries briefs, reports, `!inbox`, `!brief`, or role prompts between agents.
+
+External `briefs/`, `inbox/`, and `processed/` remain optional durable evidence stores, but Quatre routes them internally. Older separate-chat command/lifecycle sections below are retained for file-integrity, sanitization, and historical compatibility only; they do not override the pilot topology, Product Owner interface, Kira Site prohibition, or Quatre Site ownership.
+
+## Engineer Read Location
 
 Primary source of design truth:
 
@@ -19,59 +25,57 @@ Priority documents:
 7. `docs/DOCUMENTATION_RULES.md`
 8. Relevant feature documents and ADRs
 
-The Site Engineer treats the public design repository as read-only reference. Engineer has no write role in `book-collection-design`: do not create, edit, move, delete, commit, push, branch, open a pull request, publish a release, or use GitHub issues/comments as an Engineer communication channel. When starting significant implementation work, read or request the relevant current documents. If the Site workspace cannot read GitHub directly, use the latest exported [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) as the handoff package.
+Kira treats the public design repository as read-only reference. Kira has no write role in `book-collection-design`. Quatre transmits the current completion-oriented goal and any durable [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) internally.
 
 ## Role Identity and Chat Continuity
 
-The permanent role identities are Planner — Quatre, Designer — Relena, and Engineer — Sei. Required titles are `CYOA — Planner Quatre`, `CYOA — Designer Relena`, and `CYOA — Engineer Sei`. Each role's first `!init` response displays its identity, exact required title, context continuity, unpublished-work state, and editable-source access. The Product Owner applies the title manually; chats must not claim they can rename themselves.
+Current identities are parent `PLANNER — QUATRE`, direct Designer child `DESIGNER — RELENA`, and direct Engineer child `ENGINEER — KIRA`. `ENGINEER — SEI` and Sei I–III are retired historical identities. Temporary test/review identities, when justified, are also direct Quatre children. No child may spawn.
 
-Designer includes Sei's assignment directly in every Engineer brief: assigned role/name, expected chat, expected context, and required source state. Keep this inside the brief and do not create a separate naming workflow or registry. If a real replacement is necessary, use a suffix such as `Sei II`; do not create numbered identities preemptively.
+Quatre's required title remains `CYOA — Planner Quatre`, applied manually by the Product Owner. Subagents identify their role, Quatre parent, one-level depth, continuity, and source/work state in their first report. Kira never inherits unpublished Sei state or authority by implication.
 
-The currently prepared successor identity is `ENGINEER — SEI III`, required title `CYOA — Engineer Sei III`, because Product Owner explicitly requested replacement after Sei II's safe continuity handoff. Preparation does not establish source transfer, complete replacement, accept a brief, or create execution authority.
-
-Before `!brief` acceptance, Sei inspects actual message/Sites context for prior unpublished implementation, editable source, dirty or unsaved state, latest saved and published Site versions, context match, source composition, and collision boundaries. If expected and actual context disagree, park only the affected task and report the mismatch. Preserve and inventory unpublished work before materializing, replacing, rebuilding, or overwriting anything. If source is absent or inaccessible, report it and do not reconstruct without authority. Every acceptance, blocker, completion, and source-recovery report identifies Engineer — Sei.
-
-Default role profiles are Planner — Quatre: **GPT-5.6 Sol / Medium / Standard**; Designer — Relena: **GPT-5.6 Sol / High / Standard**; Engineer — Sei: **GPT-5.6 Terra / Medium / Standard**. The Product Owner selects the actual model in each chat. A brief recommends a profile but cannot change it automatically. Fast mode remains off by default. Sei may escalate from Terra to Sol only when the accepted brief recommends it or a later Planner/Product Owner decision approves it.
+Default profiles are Quatre: **GPT-5.6 Sol / Medium / Standard**; Relena: **GPT-5.6 Sol / High / Standard**; Kira: **GPT-5.6 Terra / Medium / Standard**. The Product Owner controls actual model selection through Quatre. Fast mode remains off by default. Kira may use Sol only when the accepted goal recommends it or a later Planner/Product Owner decision approves it.
 
 ## Roles
 
 ### Designer
 
-The Designer works in the `book-collection-design` repository and owns:
+Relena is a direct Quatre child working in the `book-collection-design` repository and owns:
 
-- Product direction
+- Product design and accepted requirement documentation within Quatre/Product Owner direction
 - Roadmap
 - Architecture
 - Accepted requirements
 - Documentation
 - ADRs
 - Preparation of implementation briefs and explicitly non-executable estimation/source-inspection briefs
-- Handoff workspace housekeeping
+- Internal handoff evidence reconciliation and housekeeping
 - Planner decision framing and `PLANNER_INBOX.md` housekeeping
 
-GitHub communication is limited to Planner-facing decision items in `PLANNER_INBOX.md`. Designer-to-Engineer and Engineer-to-Designer communication uses only the external local `briefs/` and `inbox/` folders.
+Relena returns results to Quatre. Durable local transport may support the exchange, but the Product Owner never carries it.
 
 The Designer must not:
 
 - Claim implementation occurred without verified Site evidence.
 - Modify production Site state.
+- Spawn subagents or invoke Sites tools.
 
-### Site Engineer
+### Engineer — Kira
 
-The Site Engineer works in the CYOA Collection ChatGPT Site workspace and owns:
+Kira is a direct Quatre child and owns authorized application-source work:
 
 - Site implementation
 - Database, API, and UI changes
 - Tests, build, and lint
 - Local migration validation
-- Site saved-version workflow
-- Verified implementation handoffs
+- Exact candidate packaging and validated release packets for Quatre
 
-The Site Engineer must not:
+Kira must not:
 
 - Modify the design repository directly.
 - Create commits, branches, pull requests, issues, comments, releases, or any other GitHub artifact in `book-collection-design`.
-- Return Engineer reports through GitHub; use only the local shared `inbox/` and other role-appropriate local folders.
+- Spawn subagents or communicate directly with the Product Owner.
+- Invoke Sites tools, obtain Sites credentials, save versions, preview, deploy, publish, or perform the final Site handoff.
+- Return Engineer reports through GitHub; return them internally to Quatre.
 - Invent product direction.
 - Mark roadmap work complete without implementation evidence.
 - Publish without explicit approval.
@@ -79,19 +83,11 @@ The Site Engineer must not:
 - Archive, overwrite, delete, or reorganize shared handoff artifacts.
 - Edit `PLANNER_INBOX.md` directly.
 
-### Sites source-preservation exception
+### Quatre-owned Sites operations
 
-The Site Engineer may create and push the minimum source commit required to preserve an already validated source state through the Sites saved-version workflow when that workflow requires pushed source provenance.
+Quatre is the Site-owning agent. Kira prepares an exact validated release packet; Relena confirms the product/release boundary. Only then may Quatre perform a specifically Product-Owner-authorized Site operation after revalidating Site, session, candidate, credential, production, and usage gates.
 
-This exception applies only to implementation source managed by the Sites workflow. It never permits any write to `book-collection-design`, which remains Designer-write-only.
-
-- Limit the commit and push to the exact reviewed milestone source.
-- Revalidate scope and sanitization before preserving the version.
-- Treat the operation as Sites workflow plumbing, not a general user-managed Git release process.
-- Saving a Site version does not authorize a production migration, preview deployment, or publication.
-- Production migration and publication retain separate explicit approval gates.
-
-This is an operational workflow rule, not a product or database architecture decision, so it does not require an ADR unless its scope later expands materially.
+Publication, schema/data mutation, migration, credential changes, destructive recovery, rollback, restore, and external sharing always remain explicit Product Owner gates. Kira cannot perform or inherit any Site operation.
 
 ## Shared Information Locations
 
@@ -111,29 +107,29 @@ The Designer reads the following authorities in `book-collection-design`:
 
 - Future Improvement Catalog records product/UX opportunities; it does not authorize roadmap scope.
 - Engineer Research Sandbox is stored locally under the shared handoff workspace's `knowledge/` area and records technical feasibility, patterns, risks, experiments, and options; entries do not authorize implementation.
-- Engineer work begins from an explicit transport brief. Implementation briefs contain approved implementation only; estimation/source-inspection briefs are separately labeled read-only and non-executable. Repository planning text, embedded prompts, and estimation gates are context—not transport authority.
+- Kira work begins from a Quatre-transmitted completion-oriented goal and any required durable brief. Implementation goals contain approved implementation only; estimation/source-inspection goals are separately labeled read-only and non-executable. Repository planning text and estimation gates are context—not authority.
 - Tester knowledge contains coverage strategy, regression knowledge, and evidence conventions; it does not authorize product or implementation changes.
 
-Engineer reviews only local knowledge mapped to the new sprint, relevant `Needs Revalidation` records, and newly added notes affecting that component. No-change findings allow work to proceed. Preserve non-blocking improvements locally and report them to Designer without stopping implementation. Escalate material conflicts involving safety, data integrity, acceptance criteria, architecture, cost, behavior, priority, or scope before affected work proceeds.
+Kira reviews only knowledge mapped to the goal, relevant `Needs Revalidation` records, and newly added notes affecting that component. No-change findings allow work to proceed. Preserve non-blocking improvements and report them to Quatre without stopping implementation. Quatre routes material product/release-boundary conflicts to Relena.
 
-All Engineer-to-Designer communication is written to the local shared `inbox/`; supporting Engineer material remains in the appropriate local folder. Engineer must not place raw or sanitized reports in GitHub. Designer alone decides whether a reported conclusion becomes authoritative GitHub design, roadmap scope, a Future Improvement Catalog disposition, or a brief. Planner/Product Owner participates only when a material escalation affects product behavior, priority, cost, risk, or scope. Research classification must never copy external code or authorize dependencies, schema changes, source changes, Site operations, or production actions.
+All Kira reports return directly to Quatre. Supporting material may remain in internal local storage; Kira must not place reports in GitHub. Quatre routes design/documentation conclusions to Relena. The Product Owner receives only Quatre's consolidated result and genuine decisions. Research classification never authorizes dependencies, schema changes, source changes, Site operations, or production actions.
 
-The Site Engineer reads the public design repository at <https://github.com/nguyenk06/book-collection-design> and receives the applicable implementation or estimation brief through transport. Repository access does not replace a required brief.
+Kira reads the public design repository at <https://github.com/nguyenk06/book-collection-design> and receives the applicable goal/brief from Quatre. Repository access does not replace required authority.
 
-## Design to Site Handoff
+## Design to Engineer Goal
 
-The Designer prepares [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) for one coherent, independently resumable five-hour execution slice within a milestone. A larger milestone may require several sequential briefs. A brief may contain one or several bounded workstreams only when they fit the same safe slice and remains a concise, share-ready specification containing only what the Site Engineer needs.
+Relena prepares a completion-oriented goal or durable [`IMPLEMENTATION_BRIEF.md`](../templates/IMPLEMENTATION_BRIEF.md) when Quatre requests design/scope support. Quatre transmits it internally to Kira. A goal covers one coherent outcome and records constraints, verification, usage envelope, safe checkpoint, genuine stop conditions, and deferred work.
 
 - Link to authoritative design documents instead of copying them.
 - Distinguish verified current state from accepted requirements.
 - State acceptance criteria, exclusions, risks, documentation evidence, and the approval boundary.
 - Keep the file short enough to download, share, and review on mobile.
 
-The brief authorizes only the stated implementation and validation work. It does not authorize publishing unless its approval boundary explicitly records separate product-owner approval.
+The goal authorizes only stated Kira implementation and validation work. It never authorizes Kira to use Sites. A later Quatre Site operation requires explicit Product Owner authority plus a Kira release packet and Relena boundary confirmation.
 
-## Site to Design Handoff
+## Kira Return to Quatre
 
-After implementation or a stopped attempt, the Site Engineer prepares [`DESIGN_HANDOFF.md`](../templates/DESIGN_HANDOFF.md). The report must be sanitized and based on observed implementation and validation evidence.
+After implementation or a genuine stop, Kira prepares [`DESIGN_HANDOFF.md`](../templates/DESIGN_HANDOFF.md) or an equivalent validated packet directly for Quatre. The report must be sanitized and based on observed evidence.
 
 - Select exactly one status: `COMPLETE IMPLEMENTATION`, `PARTIAL IMPLEMENTATION`, or `VALIDATION FAILED`.
 - Separate implemented, deferred, and not-attempted scope.
@@ -142,9 +138,11 @@ After implementation or a stopped attempt, the Site Engineer prepares [`DESIGN_H
 - Identify proposed design changes separately from implementation facts.
 - Mark each suggested documentation target `UPDATE`, `NO CHANGE`, or `REVIEW NEEDED`.
 
-The Designer reviews the handoff under [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md) before updating permanent project documents.
+Quatre routes the packet to Relena under [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md) when documentation or product/release-boundary review is required.
 
-## Mobile-Friendly Workflow
+## Legacy Separate-Chat Mobile Workflow (Inactive During Pilot)
+
+The remainder of this section documents the retired Product-Owner-carried workflow. Do not use it during the one-level pilot; use [CYOA One-Level Codex Subagent Pilot](ONE_LEVEL_SUBAGENT_PILOT.md).
 
 Use explicit `!` commands for defined lifecycle actions and ordinary sentences for requests that are not workflow commands. For example:
 
@@ -157,7 +155,9 @@ Use explicit `!` commands for defined lifecycle actions and ordinary sentences f
 
 Never omit `!` when explicit workflow behavior is intended. Plain words and abbreviations remain conversation.
 
-## Workflow Commands
+## Legacy Separate-Chat Workflow Commands (Inactive During Pilot)
+
+The command table below is historical compatibility reference only. The active Product Owner command set is defined in [CYOA One-Level Codex Subagent Pilot](ONE_LEVEL_SUBAGENT_PILOT.md) and `templates/PLANNER_STARTUP.md`.
 
 The `!` prefix identifies explicit workflow intent. Commands are case-insensitive. An unprefixed word or abbreviation is normal conversation and must not trigger workflow behavior. Commands invoke only their documented lifecycle behavior; they do not create authority, replace evidence or required reports, or bypass approval, production, destructive-action, sanitization, lifecycle, or workspace-ownership rules.
 
@@ -182,7 +182,7 @@ The numeric usage command accepts exactly two whole-number percentages from 0 th
 
 Role identity dispatches `!inbox`: Quatre addresses repository `docs/PLANNER_INBOX.md`; Relena addresses external local Engineer `inbox/`; Sei has no `!inbox` command. The command never crosses those boundaries or gains the other role's authority.
 
-### All roles: `!init` and `!status`
+### Legacy all-role `!init` and `!status`
 
 `!init` initializes or reinitializes the current role from authoritative project state. It is always read-only.
 
@@ -196,7 +196,7 @@ Role identity dispatches `!inbox`: Quatre addresses repository `docs/PLANNER_INB
 
 For a new Designer thread, use: **“Read `templates/DESIGNER_STARTUP.md` and run `!init`.”**
 
-### Designer prompt commands
+### Legacy Designer prompt commands
 
 `!prompt-engineer` (alias `!pe`) outputs the current self-contained, copy/paste-ready contents of [`ENGINEER_STARTUP.md`](../templates/ENGINEER_STARTUP.md), including the instruction to run `!init` in the actual CYOA Collection Sites context.
 
@@ -206,7 +206,7 @@ For a new Designer thread, use: **“Read `templates/DESIGNER_STARTUP.md` and ru
 
 Prompt commands are read-only. Every copy-and-paste handoff prompt must name its recipient in the first line, state that the entire block should be pasted into that recipient's chat, be self-contained, and require no pronoun or context rewriting by the Product Owner. Do not embed transient milestone state, process transport, expose sensitive/local details, depend on prior role memory, or alter project state.
 
-### Designer: `!inbox`
+### Legacy Designer `!inbox`
 
 `!inbox` (alias `!ci`) means **Process Engineer Inbox**. It does not merely list `inbox/`.
 
@@ -241,7 +241,7 @@ After processing an Engineer completion handoff, the Designer:
 
 Do not invent work or prepare a brief with inadequate requirements merely to keep the Engineer busy. The invariant ensures continuity of ownership, not continuous activity.
 
-### Site Engineer: `!brief`
+### Legacy Site Engineer `!brief`
 
 `!brief` (alias `!cb`) means **Check and Process Next Brief**. It does not merely list `briefs/`.
 
@@ -277,30 +277,34 @@ Planner uses `!init`, `!status`, and role-specific `!inbox`. Quatre's `!inbox` r
 
 ## Thread Continuity and Necessary Replacement
 
-Permanent documentation and actual implementation/source state remain authoritative, but continuity is preferred. Continue using the same role chat while it remains coherent and retains the correct repository, Sites, source, and transport access. Do not replace a chat merely because the conversation is long, Codex compacts or summarizes older context, a milestone finishes, one task blocks, a new brief appears, or substantial context has been used.
+During the pilot, Quatre is persistent. Relena and Kira are direct children and are reused while coherent. Kira is the current Engineer; Sei III is retired. A child replacement remains a direct Quatre child and never gains authority or unpublished state by implication.
 
-Replacement is justified only when required workspace, Sites context, editable source, or tools are unavailable; `!init` cannot reconcile identity and authoritative state; the chat repeatedly uses stale or contradictory state after reinitialization; the role changes materially; or Product Owner explicitly requests replacement or an independent context.
+Permanent documentation and actual implementation/source state remain authoritative, but continuity is preferred. Continue using the same parent or direct child while it remains coherent and retains the correct repository, source, and tool access. Do not replace it merely because the conversation is long, Codex compacts older context, a milestone finishes, one task blocks, a new goal appears, or substantial context has been used.
 
-Before replacing an Engineer chat, inspect and report unpublished working state. A new chat does not automatically inherit unsaved source. If replacement is necessary:
+Replacement is justified only when required workspace, editable source, or tools are unavailable; initialization cannot reconcile identity and authoritative state; the agent repeatedly uses stale or contradictory state after refresh; the role changes materially; or Quatre/Product Owner explicitly requests replacement or an independent context.
+
+Before replacing Kira, inspect and report unpublished working state to Quatre. A new child does not automatically inherit unsaved source. If replacement is necessary:
 
 1. Create the private local-only `ENGINEER_CONTINUITY_HANDOFF.md` artifact and a separate sanitized `DESIGN_HANDOFF.md` report. The private artifact may contain only successor-critical machine state and must never contain credentials, tokens, owner identity, secrets, or private production data.
 2. Preserve exact editable-source path, repository/remote, branch/HEAD, clean/dirty and modified/untracked/staged/stashed state, active brief/authority/exclusions, candidate baseline/manifest, consumed attempts, completed/remaining checks, last attributable commands, process state, available dependencies, safe resume point, usage/reset state, and exact successor initialization/resume sequence.
-3. Start the new thread in the correct role/workspace context and use the next real suffix; the prepared successor in this cycle is `ENGINEER — SEI III`.
-4. Supply the successor startup prompt and run read-only `!init`. Require the successor to read the [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) and private continuity artifact.
+3. Quatre starts the replacement as a direct child with the correct role/workspace context. Do not reuse a retired identity.
+4. Supply the successor startup prompt and require read-only initialization plus the [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) and private continuity artifact.
 5. Independently verify actual source path, repository, remote, branch, HEAD, clean/dirty state, candidate identity, active authority, attempt count, process state, dependencies, and remaining validation. Documentation naming a commit is not proof that source transferred.
-6. Before returning the terminal `!init` response, write one sanitized `INITIALIZATION / CONTEXT VERIFICATION` report to shared local `inbox/`. It must identify the successor, record each verification result and mismatch without exposing the private source path, state that no brief or `!run` was accepted, and direct `DESIGNER — RELENA` to process the artifact. The chat footer is not a substitute for the artifact.
-7. Only after Designer processes the replacement handoffs and this initialization report may the successor accept a new or explicitly superseding continuation brief with `!brief`, followed by a separate `!run`.
+6. Return one sanitized `INITIALIZATION / CONTEXT VERIFICATION` report directly to Quatre. It identifies the successor, records each verification result and mismatch without exposing private paths, and states that no goal or run was accepted. Quatre routes design review to Relena when needed.
+7. Only after Quatre accepts continuity evidence may the successor accept a new or explicitly superseding completion-oriented goal. Product Owner `!brief` is not used.
 8. Never reset attempt counts merely because the chat changed.
 
-Do not require a handoff solely because a chat is long or compacted. Retain concise, evidence-focused handoffs for Designer-to-Engineer briefs; Engineer completion, blocker, and validation evidence; production-gate evidence; cross-role decisions/conflicts; and unpublished-source preservation before an actual replacement.
+Do not require a handoff solely because a context is long or compacted. Retain concise, evidence-focused records for durable goals, Kira completion/blocker/validation evidence, release packets, production-gate evidence, cross-role decisions/conflicts, and unpublished-source preservation before an actual replacement.
 
 ## Engineer execution contract
 
-The concise [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) is mandatory reading during `!init`, `!brief`, `!run`, post-compaction recovery, and replacement initialization. It defines the active-run invariant, mandatory pre-final continuation test, exact terminal stopping conditions, progress/terminal distinction, footer validator, tool-failure scope, and three-approach behavior.
+The concise [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) is mandatory for Kira during initialization, goal acceptance/activation, post-compaction recovery, and replacement initialization. It defines the active-run invariant, mandatory pre-final continuation test, exact terminal stopping conditions, progress/terminal distinction, tool-failure scope, and three-approach behavior.
 
-`PROGRESS UPDATE — NONTERMINAL` is commentary emitted while work continues and expects no Product Owner response. `TERMINAL WORKFLOW RESPONSE` ends the current turn because the objective completed or a genuine stopping condition applies. A timeout, truncated output, lost controller result, access denial, failed lint/test/build, or missing PID blocks only that exact action unless evidence proves a cross-cutting hazard. Predictable tool limitations should have a prioritized brief-authorized fallback ladder.
+`PROGRESS UPDATE — NONTERMINAL` is commentary returned to Quatre while work continues and expects no Product Owner response. A terminal Kira report ends only because the objective completed or a genuine stopping condition applies. A timeout, truncated output, lost controller result, access denial, failed lint/test/build, or missing PID blocks only that action unless evidence proves a cross-cutting hazard. Predictable tool limitations should have a prioritized goal-authorized fallback ladder.
 
 ## Standard Response Footer
+
+During the pilot, this canonical footer is mandatory for Quatre's consolidated terminal responses. Subagent terminal reports return to Quatre and never instruct the Product Owner to contact another agent; durable Kira packets use `NEXT OWNER: PLANNER — QUATRE`.
 
 All roles use this concise footer for meaningful workflow responses:
 
@@ -335,7 +339,7 @@ ACTION:
 
 `TL;DR` and `ACTION` are always present in either form. Use exactly one ownership form: single-owner `NEXT OWNER`, or parallel `ACTIVE OWNERS` plus `BLOCKING OWNER`. Do not mix or omit these labels in meaningful workflow responses.
 
-Every terminal workflow response to a numeric usage command, `!init`, `!status`, role-applicable `!inbox`, `!brief`, `!run`, `!drain`, or `!stop` must use exactly one footer form. The requirement survives chat compaction or summarization and remains mandatory without a full reinitialization. It also applies to transport handoffs, brief acceptance, implementation completion, Designer handoff processing, Planner decisions, blocked states, and publication/deployment reports. Ordinary `PROGRESS UPDATE — NONTERMINAL` commentary emitted while work continues does not require the full footer and must not imply another Product Owner prompt is needed.
+Every Quatre terminal workflow response to a numeric usage command, `!init`, `!status`, `!run`, `!drain`, or `!stop` must use exactly one footer form. The requirement survives chat compaction or summarization and remains mandatory without a full reinitialization. It also applies to internal subagent terminal packets, implementation completion, Planner decisions, blocked states, and publication/deployment reports; a Kira packet names Quatre as its next owner. Ordinary `PROGRESS UPDATE — NONTERMINAL` commentary emitted while work continues does not require the full footer and must not imply another Product Owner prompt is needed.
 
 - Keep `TL;DR` concise and mobile-readable.
 - `NEXT OWNER` identifies responsibility for advancing the workflow, not merely status.
@@ -350,110 +354,41 @@ Every terminal workflow response to a numeric usage command, `!init`, `!status`,
 - Designer classifies a terminal artifact without its own valid footer as incomplete or superseded, not as the final handoff. Engineer corrects it only by creating a collision-safe, uniquely named formatting-only superseding report; preserve the original unchanged and never repeat implementation, validation, save, deployment, publication, or production work merely to repair formatting.
 - The footer does not replace evidence, acceptance criteria, handoffs, Planner Inbox entries, or permanent documentation. The full protocol remains authoritative.
 
-## File Handling
+## Pilot Internal Goal and Evidence Routing
 
-The preferred workflow is file-based rather than large chat copy-and-paste blocks.
+Quatre routes goals and results inside the parent task. Files remain useful as durable scope and evidence records, but the Product Owner does not carry them and no separate `!inbox` or `!brief` command is required.
 
-| Direction | File | Handling |
+| Direction | Durable record | Pilot handling |
 | --- | --- | --- |
-| Design to Site implementation | `IMPLEMENTATION_BRIEF.md` template | Create a milestone-specific implementation file in `briefs/`; share it with the Site Engineer |
-| Design to Site estimation/inspection | `ESTIMATION_BRIEF.md` template | Create a bounded read-only request in `briefs/`; it grants no implementation or Site authority |
-| Site to Design | `DESIGN_HANDOFF.md` template | Receive a milestone-specific file in `inbox/`; review it as read-only evidence |
-| Engineer to successor Engineer | private local-only `ENGINEER_CONTINUITY_HANDOFF.md` template | Preserve machine-specific continuity outside GitHub; verify independently before a superseding brief |
+| Relena to Kira | `IMPLEMENTATION_BRIEF.md` or `ESTIMATION_BRIEF.md` | Relena returns it to Quatre; Quatre transmits the goal/record internally |
+| Kira to Quatre | `DESIGN_HANDOFF.md` or equivalent validated packet | Kira returns it directly to Quatre; Quatre routes product/release review to Relena |
+| Quatre to Product Owner | Consolidated terminal response | Quatre reports state, decisions, gates, and action without asking the Product Owner to move an artifact |
+| Product Owner decision | `PLANNER_INBOX.md` | Quatre records only genuine Product Owner choices; technical reports and task queues do not belong there |
 
-Never treat transport files as GitHub project history. If local retention is needed, use the external local `processed/` or `archive/` areas. Durable conclusions belong in the relevant high-level design documents, milestone state, decisions, changelog, or Site version history—not as copied briefs or handoffs.
+The external local `briefs/`, `inbox/`, `processed/`, and archive areas may remain as durable evidence storage. Relena may maintain them when Quatre assigns documentation/evidence reconciliation, but their filenames or presence never activate work. Never commit private continuity artifacts, credentials, local paths, owner identity, secrets, or production data to GitHub.
 
-The private continuity artifact is not a substitute for the sanitized Designer handoff. It may include the exact local source path but no credentials, tokens, owner identity, secrets, or private production data. Never commit, quote, or summarize its machine-specific contents into GitHub documentation.
+### Goal acceptance and reports
 
-## Handoff Workspace Lifecycle
+Kira accepts the complete Quatre-transmitted goal directly. Acceptance records identity, parent, exact source/branch/HEAD, working state, unpublished work, context match, source/collision boundary, scope/exclusions, verification, usage envelope, safe checkpoint, genuine stops, and feasibility. A read-only goal must restate that it grants no implementation or Site authority.
 
-The handoff workspace is outside both repositories. The Designer owns its housekeeping and maintains four logical areas:
+Kira reports material transitions and the terminal result directly to Quatre. Routine progress and action-by-action logs need no durable report. Completion, a genuine blocker, a direction-changing validation failure, source or collision ambiguity, a release packet, or a required gate does. Reports remain sanitized and name Quatre—not the Product Owner—as recipient.
 
-| Area | Purpose | Exit gate |
-| --- | --- | --- |
-| `inbox/` | Read-only Site Engineer handoffs awaiting Design review | Verified evidence is incorporated into permanent documentation and the resulting documentation state is accepted |
-| `briefs/` | Designer-prepared implementation or explicitly read-only estimation/inspection briefs awaiting Engineer acceptance | Site Engineer confirms receipt, work type, and authority boundary before acting |
-| `processed/` | Recently completed transport artifacts useful for immediate reference | Retain for approximately 30 days after completion/processing, then archive when eligible |
-| `archive/YYYY-MM/` | Older completed artifacts retained as readable implementation evidence and history | Local/private retention; do not commit by default or routinely delete |
+Quatre routes product/release-boundary review to Relena. Relena updates permanent design documentation only from verified evidence and creates a `PLANNER_INBOX.md` item only for a genuine Product Owner choice. Durable conclusions belong in current state, decisions, roadmap, changelog, or Site-version history rather than copied transport chatter.
 
-### Implementation brief lifecycle
+### Legacy external workspace lifecycle
 
-1. The Designer prepares one milestone-specific brief in `briefs/` from the Implementation Brief template, or one bounded read-only request from the Estimation Brief template.
-2. The Designer shares that exact file with the Site Engineer.
-3. The brief remains in `briefs/` while receipt or scope acceptance is pending.
-4. The Site Engineer reviews the brief and writes a sanitized acceptance report to `inbox/`; the Engineer does not edit or move the brief.
-5. Only after the Site Engineer confirms receipt and accepts it as the active implementation specification may the Designer move the brief to `processed/`.
-6. If the Engineer rejects or requests revision, retain the relevant artifacts without overwriting them and create a newly named revision after the conflict or approval request is resolved.
-
-Moving a brief records transport acceptance only. It does not prove implementation, validation, Site versioning, migration, or publication.
-
-### Brief acceptance report
-
-Brief acceptance is an observable Engineer state transition. Use a short milestone-specific report named:
-
-`YYYY-MM-DD-<milestone>-brief-acceptance.md`
-
-The report must contain:
-
-- Accepted brief filename
-- Status: `ACCEPTED AS ACTIVE SPECIFICATION`
-- Accepted workstream IDs and names
-- Dependencies, planned ordering/parallelism, and likely shared-file/surface collisions
-- Local authority and explicit production exclusions
-- Attempt-sequence classification and underlying-problem reference
-- Feasibility
-- Material conflicts, or `NONE`
-- Authorized scope
-- Explicitly unauthorized actions
-- Material risks or unknowns
-- Next Engineer action
-- Sanitization confirmation
-
-The Designer then:
-
-1. Verifies that the report references an existing brief in `briefs/`. If work occurred from repository text without a brief, record the transport exception; evidence may be accepted when safe and read-only, but authority is never retroactive and the exception is not precedent.
-2. Confirms that the Engineer accepted that exact brief as the active implementation specification.
-3. Checks for conflicts, scope changes, approval requests, or authorization mismatches.
-4. If clean, moves the accepted brief from `briefs/` to `processed/` using a collision-safe name.
-5. Leaves the Engineer report unchanged and read-only during review.
-6. Moves the acceptance report to `processed/` when brief acceptance and movement are recorded and no acceptance issue remains active.
-7. Does not treat acceptance as implementation completion or update product implementation status because of acceptance alone.
-
-If the report identifies a conflict, scope change, or required approval, keep the brief and report active until the issue is resolved.
-
-### Engineer state reports
-
-Meaningful cross-workspace state transitions produce small, sanitized reports in `inbox/`. At minimum, report:
-
-- `INITIALIZATION / CONTEXT VERIFICATION` for every new or replacement Engineer chat
-- `BRIEF ACCEPTED`
-- `BLOCKED`
-- `PARTIAL IMPLEMENTATION`
-- `COMPLETE IMPLEMENTATION`
-- `VALIDATION FAILED`
-- `SAVED SITE VERSION`
-- `PUBLICATION / DEPLOYMENT STATUS CHANGE`
-
-Reports should identify the milestone, transition, related brief or prior report, verified facts, scope or approval impact, next action, and sanitization confirmation. Use the full Design Handoff template for implementation evidence that should update permanent documentation; a small state report may announce a transition but does not replace the final evidence handoff.
-
-Routine progress, work-started notices, continuing-chat status refreshes, and action-by-action logs do not require inbox reports. The mandatory new/replacement initialization report is durable cross-workspace identity and source evidence, not implementation chatter.
-
-Report workstream transitions at `BLOCKED`, `READY FOR REVIEW`, `COMPLETE`, mandatory reassessment, direction-changing validation failure, coherent milestone convergence, saved Site version, production gate, or publication/deployment change. Do not report every file edit, test run, minor progress increment, or ordinary authorized start.
-
-The Designer owns report housekeeping. Keep a report in `inbox/` while it represents an unresolved blocker, approval request, conflict, or unapplied implementation evidence. Move it to `processed/` only after its lifecycle purpose is satisfied, without altering or overwriting it.
-
-When a report contains an unresolved conflict, explicit approval requirement, material product choice, or meaningful risk acceptance, Designer evaluates whether a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item is required. When it is, Designer creates or updates the item automatically during intake without waiting for a separate instruction. Do not create an item merely because Engineer reports an unknown; first determine whether further authorized investigation can resolve it without Planner input.
+The earlier Designer-managed `briefs/` → Engineer `inbox/` → `processed/` command lifecycle is inactive during the pilot. Preserve existing artifacts as evidence, but do not require the Product Owner to transport them or use their movement as a prerequisite for Quatre to route an approved goal internally.
 
 ### Authority and continuation
 
-After accepting a brief, the Site Engineer proceeds without another Planner or product-owner “go” message when all of the following are true:
+After Kira accepts a Quatre-transmitted goal and Quatre activates it under existing authority, Kira proceeds without another Product Owner command when all of the following are true:
 
-- The brief is accepted as the active specification.
+- The completion-oriented goal and any durable brief are accepted as the active specification.
 - The work is feasible.
 - No material conflict exists.
 - The next actions are already authorized by the brief.
 
-The Site Engineer must stop and request approval when:
+Kira must stop and report to Quatre when:
 
 - The brief contains an explicit approval gate for the next action.
 - Scope changes materially.
@@ -461,7 +396,7 @@ The Site Engineer must stop and request approval when:
 - A destructive action becomes necessary.
 - An unresolved design conflict appears.
 
-Acceptance never expands the brief's authorization boundary.
+Acceptance never expands the goal or brief's authorization boundary. Quatre consolidates any genuine Product Owner decision; Kira does not contact the Product Owner directly.
 
 ### Parallel workstreams
 
@@ -532,61 +467,61 @@ Outcome meanings:
 - `ACCEPT WITH FOLLOW-UP` — the milestone is usable for the current boundary; Designer records bounded follow-up work that does not silently expand release authority.
 - `REVISE BEFORE RELEASE` — user-facing issues must return to Designer/Engineer and converge again before release consideration.
 
-Product Owner feedback normally reaches Designer before production activation. Under a specifically documented live-validation exception, it must reach Designer immediately after controlled publication and before release acceptance or further progression. Engineer may receive actionable implementation feedback in parallel, but Designer owns requirement reconciliation and permanent state. Do not expand Queue Mode merely to keep capacity occupied while this gate is unresolved.
+Product Owner feedback reaches Quatre, which routes it to Relena before production activation. Under a specifically documented live-validation exception, Quatre must route it to Relena immediately after controlled publication and before release acceptance or further progression. Kira may receive actionable implementation feedback internally, but Relena owns requirement reconciliation and permanent state. Do not expand Queue Mode merely to keep capacity occupied while this gate is unresolved.
 
 When Product Owner explicitly selects post-publication live validation because no safe preview exists, document that exception in an accepted decision and preserve the same separation of layers. Require backup/export and preservation evidence, schema activation/verification, publication, hands-on validation, and smoke review as sequential gates. The direction does not authorize every gate automatically or make later evidence retroactive. A failed live checkpoint stops further release progression and triggers rollback/repair assessment under existing authority rules.
 
 After an explicitly approved publication, perform a concise Product Owner smoke review of critical workflows in production. Read-only checks are preferred. Any write, cleanup, restore, rollback, or destructive action remains separately authorized; the smoke review does not inherit authority from pre-publication validation.
 
-### Future engineering queue mode
+### Pilot queue and goal mode
 
-The existing shared `briefs/` directory may serve as a lightweight future work queue. This capability is dormant unless Planner or Product Owner explicitly records `QUEUE MODE: ENABLED` for a bounded five-hour execution window. A new window, reset, `!init`, `!inbox`, `!brief`, or the mere presence of briefs never activates it.
+The durable goal/brief set may serve as a lightweight queue visible to Quatre. A new window, reset, `!init`, or the mere presence of a file never activates work. Quatre activates only a completion-oriented goal covered by recorded authority and an applicable Product Owner `!run`.
 
 When Queue Mode is disabled:
 
-- Engineer completes only already accepted work and does not consume another brief automatically.
-- Designer may document or plan future work but must not populate executable follow-on briefs for the current session unless separately authorized.
+- Kira completes only already accepted work and does not consume another goal automatically.
+- Relena may document or plan future work but must not create executable authority without Quatre routing the required approval.
 - Queue throttle is `NOT APPLICABLE`; an earlier `!run` instruction cannot carry across a disabled period.
 
 When enabled, record an Engineer execution state distinct from workstream states:
 
 - `WORKING` — authorized executable work is actively progressing.
-- `AVAILABLE` — current work is complete and Engineer may use `!brief` to accept eligible queued work.
+- `AVAILABLE` — current work is complete and Quatre may route an eligible approved goal.
 - `BLOCKED` — no authorized executable work can currently continue.
 - `DRAINING` — finish the current safe unit or convergence point, then do not accept another queued brief.
 - `PAUSED` — a safe resumable state is preserved; do not consume queued work until resumed.
 - `WAITING FOR RESET` — the five-hour capacity floor or window boundary was reached at a safe checkpoint; this is not an implementation blocker.
 - `STOPPED AT GATE` — an explicit design, approval, or production gate prevents continuation.
 
-Planner/Product Owner controls future automatic queue consumption with:
+The Product Owner controls Quatre's active queue with:
 
-- `!run` — continue current authorized work inside the approved five-hour slice until the accepted objective is complete or a genuine stopping boundary is reached. At a suitable transition point, use `!brief` only for an eligible continuation already included in that slice. It does not accept an initial brief, expand authority, or carry across a reset automatically.
-- `!drain` — finish the current safe unit, validation, or convergence point; preserve/report a resumable state; do not start another queued brief.
-- `!stop` — stop at the nearest safe checkpoint, preserve/report resumable state, and do not start another queued brief. It is not an abrupt interruption during an integrity-sensitive write, migration, save, or similar operation unless Product Owner explicitly orders an emergency stop.
+- `!run` — Quatre activates or continues only approved completion-oriented goals until the outcome completes or a genuine stopping boundary is reached. It does not expand authority or carry across a real stop/reset boundary automatically.
+- `!drain` — Quatre has active children finish the current safe unit, validation, or convergence point; preserve/report a resumable state; do not start another goal.
+- `!stop` — Quatre stops active work at the nearest safe checkpoint, preserves/reports resumable state, and starts no other goal. It is not an abrupt interruption during an integrity-sensitive write, migration, save, or similar operation unless Product Owner explicitly orders an emergency stop.
 
-`!run`, `!drain`, and `!stop` never authorize production, override exclusions or decisions, bypass dependencies or attempt limits, or cross a design/production gate. After `!drain` or `!stop`, preserve workstream progress, accepted and queued briefs, blockers, attempt counts, decisions, and next eligibility so a future `!init` plus explicit `!run` can resume safely.
+`!run`, `!drain`, and `!stop` never authorize production, override exclusions or decisions, bypass dependencies or attempt limits, or cross a design/production gate. After `!drain` or `!stop`, preserve workstream progress, accepted and queued goals/briefs, blockers, attempt counts, decisions, and next eligibility so a future `!init` plus explicit `!run` can resume safely.
 
 ### Five-hour execution slices and usage capacity
 
 Treat the displayed percentage as available capacity, not as a token count or fixed task conversion. Do not claim that a percentage point equals a stable amount of work until observed evidence supports it.
 
 - One active Engineer project is allowed per five-hour window by default. Do not spend the same window on CYOA and another Engineer project.
-- A brief authorizes one independently resumable slice, even when the product milestone spans several windows.
+- A completion-oriented goal may span several windows but must define independently resumable safe checkpoints. A durable brief records scope and authority; it does not require a new micro-brief at every checkpoint.
 - Record a displayed usage reading at new-slice intake. A second reading immediately before `!run` is required only when the intake reading is stale, a reset or other material usage occurred, the slice is large/high-risk, or the remaining high estimate may no longer fit above the floor. Do not request duplicate readings for a small or normal continuation in the same window with ample margin.
-- Every brief records the preferred model, reasoning effort, speed mode, current five-hour percentage, reset time, current longer-period Codex percentage, estimated five-hour consumption, minimum starting percentage, automatic stopping percentage, safe checkpoint, and work deferred to the next reset.
+- Every goal or durable brief records the preferred model, reasoning effort, speed mode, current five-hour percentage, reset time, current longer-period Codex percentage, estimated five-hour consumption, minimum starting percentage, automatic stopping percentage, safe checkpoint, and work deferred to the next reset.
 - Use a provisional **15% five-hour automatic stopping floor**. Check the longer-period allowance separately; it is not an alternative execution reserve and does not make an exhausted five-hour window runnable.
 - Planning-class guides are: diagnostic/status only **35%**; small implementation **50%**; normal implementation **70%**; migration, release, or other high-risk work **85%**. These help size fresh work but are not universal vetoes. The operational minimum for an approved bounded slice is its remaining high estimate plus the 15% floor. Split work into independently resumable safe units when that calculation does not fit.
 - Reaching the floor or the end of the five-hour window changes Engineer state to `WAITING FOR RESET`, not `BLOCKED`. Preserve the exact checkpoint, remaining scope, validation state, and next command.
-- After reset, run `!status`, then use `!brief` for a new slice or `!run` to resume an already accepted slice from its recorded checkpoint. A reset does not broaden authority.
+- After reset, the Product Owner uses `!status`, then `!run` only when the recorded authority still covers resumption. Quatre transmits any new or revised goal internally. A reset does not broaden authority.
 - During execution, request another reading only for a large/high-risk checkpoint, a reset/window transition, material scope or estimate growth, another project's intervening consumption, or credible approach to the floor. A practical floor-risk trigger is when the current reading may be within roughly ten points of the remaining high estimate plus the 15% floor. Capture an ending reading when readily available, but do not interrupt or block an otherwise complete small/normal run merely to obtain it. Model, reasoning, tools, context, and task complexity can change actual usage; Designer calibrates ranges from evidence rather than treating percentages as fixed work units.
 
-Before issuing `!run`, Designer must review both usage periods, estimate one coherent prioritized five-hour slice, and identify dependencies, genuine approval gates, production-risk boundaries, shared hotspots, likely blockers, and clean stopping cost. Keep useful approved work moving toward the 15% floor. Reduce or split work only when the remaining high estimate cannot preserve that floor or no safe checkpoint fits.
+Before activating `!run`, Quatre reviews both usage periods and uses Relena when product/release-boundary sizing is needed. The active goal identifies dependencies, genuine approval gates, production-risk boundaries, shared hotspots, likely blockers, and clean stopping cost. Keep useful approved work moving toward the 15% floor. Reduce or checkpoint work when the remaining high estimate cannot preserve that floor or no safe checkpoint fits.
 
-After `!run`, Engineer owns practical sequencing within the approved slice. Engineer may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare required handoffs without repeated Planner approval. The run is completion-oriented: an ordinary in-scope lint error, test failure, build failure, or reversible local defect is evidence for the next authorized remediation attempt, not by itself a reason to stop or request a new brief. Continue through up to three distinct substantive approaches for the same problem when the accepted scope permits them, recording attempts internally and returning only after completion or a genuine stopping boundary. A blocked stream is preserved and reported only when it needs direction or cannot advance; Engineer may then move to another independently eligible, non-conflicting stream already authorized inside the same project and slice. Productively use available five-hour capacity by continuing the highest-value eligible work in the active project; never invent work or generate activity solely to burn usage. Enter `WAITING FOR RESET` at the 15% floor or when no safe authorized unit fits. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
+After `!run`, Kira owns practical sequencing within the approved goal. Kira may investigate, implement, test, remediate ordinary defects, converge, validate, and prepare the required packet without repeated Product Owner approval. The run is completion-oriented: an ordinary in-scope lint error, test failure, build failure, or reversible local defect is evidence for the next authorized remediation attempt, not by itself a reason to stop or request a new brief. Continue through up to three distinct substantive approaches for the same problem when the accepted scope permits them, recording attempts internally and returning to Quatre only after completion or a genuine stopping boundary. A blocked stream is preserved and reported only when it needs direction or cannot advance; Kira may then move to another independently eligible, non-conflicting stream already authorized inside the same goal. Productively use available five-hour capacity by continuing the highest-value eligible CYOA work; never invent work or generate activity solely to burn usage. Enter `WAITING FOR RESET` at the 15% floor or when no safe authorized unit fits. Production publication, schema/data writes, destructive or difficult-to-reverse operations, rollback/restore, and other recorded gates always retain their separate explicit approvals.
 
 #### Queue priority and eligibility
 
-Filename order is not authoritative. Each queued brief states:
+Filename order is not authoritative. Each queued goal or durable brief states:
 
 - Queue priority: `P1` highest currently useful, `P2` normal upcoming, or `P3` useful fill-in.
 - Eligibility and a precise `Eligible when` condition.
@@ -600,13 +535,13 @@ Filename order is not authoritative. Each queued brief states:
 - Local and production authority.
 - Sprint/envelope association when applicable.
 
-Under enabled `!run`, Engineer may use `!brief` to consider the highest-priority eligible brief only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued brief is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
+Under enabled `!run`, Quatre may route the highest-priority eligible goal only after the current work reaches a suitable transition/convergence point, dependencies and decisions are satisfied, authority already covers the work, and no unsafe collision exists. A queued goal is never automatically accepted. Normal feasibility, conflict, authority, attempt-sequence, and acceptance checks still apply; a silent Attempt 4 must be rejected or held.
 
-At milestone completion, refresh the queue. Refresh usage at that point only when the next work is a new large/high-risk slice, the prior reading is stale, a reset/intervening workload occurred, or the next high estimate may approach the floor. “May use `!brief`” becomes a required intake check before stopping under `!run`, but Engineer may accept follow-on work only when it remains inside the same approved five-hour project slice and its high estimate plus reserve still fits. Otherwise preserve it for the next reset.
+At milestone completion, Quatre refreshes the queue. Refresh usage only when the next work is a new large/high-risk slice, the prior reading is stale, a reset/intervening workload occurred, or the next high estimate may approach the floor. Kira may accept follow-on work only when Quatre routes it, authority already covers it, it remains inside the same approved CYOA slice, and its high estimate plus floor still fits. Otherwise preserve it for the next reset.
 
 A blocked stream does not stop queue consumption while independent authorized work remains eligible. Engineer becomes globally `BLOCKED` only when no authorized executable work remains.
 
-Under `!run`, encountering a milestone blocker is a queue transition, not a reason to end the engineering cycle. Engineer must preserve the affected milestone, write the required sanitized blocker/state report to local `inbox/`, refresh local `briefs/`, and run `!brief` against the next priority. Continue with the next independently authorized brief when its own dependencies, authority, collision checks, and acceptance criteria are satisfied. Never treat moving on as permission to bypass the blocked milestone's gate, weaken its acceptance criteria, or activate its user-facing/production outcome.
+Under `!run`, encountering a milestone blocker is a queue transition, not automatically a reason to end the engineering cycle. Kira preserves the affected milestone and reports the minimum blocker directly to Quatre. Quatre may route the next independently authorized goal when its dependencies, authority, collision checks, and acceptance criteria are satisfied. Never treat moving on as permission to bypass the blocked milestone's gate, weaken its acceptance criteria, or activate its user-facing/production outcome.
 
 #### Park and resume
 
@@ -614,33 +549,33 @@ A question or decision affecting one task blocks only that task unless it also a
 
 1. Preserves the task state and records a precise safe resume point.
 2. Records only the minimum specific question and the assumptions deliberately not made.
-3. Marks the task `WAITING FOR ANSWER` and reports it through local `inbox/`.
+3. Marks the task `WAITING FOR ANSWER` and reports it directly to Quatre.
 4. Continues with the next independently eligible, non-conflicting task already authorized in the same five-hour project slice without ending the run or reinitializing solely for the parked task.
 5. Attaches the authoritative Planner/Designer answer when received and resumes at the next safe work boundary, including after the alternate task completes or blocks.
 6. Revalidates affected assumptions, dependencies, and shared files before resuming. If the answer materially changes completed work, Engineer reports the impact before substantial rework.
 
-Designer and Planner may review questions, change future priorities, and approve gates while Engineer works elsewhere. New instructions enter the queue without interrupting safe active work unless they explicitly invoke `!stop`, say `HOLD`, or invalidate the work in progress. A parked question may pause the entire run only when it affects every remaining eligible task; continued work could cross an unapproved production, destructive, security, or privacy boundary; the answer could invalidate shared architecture or create conflicting work; no independent task remains; or usage approaches the protected remediation reserve.
+Quatre may route questions to Relena, change future priorities within authority, and surface genuine Product Owner gates while Kira works elsewhere. New instructions enter the queue without interrupting safe active work unless they explicitly invoke `!stop`, say `HOLD`, or invalidate the work in progress. A parked question may pause the entire run only when it affects every remaining eligible task; continued work could cross an unapproved production, destructive, security, or privacy boundary; the answer could invalidate shared architecture or create conflicting work; no independent task remains; or usage approaches the protected floor.
 
-#### Designer work-ahead and reporting
+#### Parent routing and reporting
 
-During enabled `!run`, Designer may process `!inbox` evidence, maintain permanent state, batch decisions, reprioritize unaccepted briefs within Planner direction, and prepare the next independently resumable slice while Engineer continues. Stay no more than one meaningful executable slice ahead. Do not create speculative work merely to keep the queue non-empty or consume a reset window.
+During enabled `!run`, Quatre may route verified evidence to Relena, maintain the live parent view, batch genuine Product Owner decisions, reprioritize unaccepted goals within authority, and prepare the next independently resumable slice while Kira continues. Stay no more than one meaningful executable slice ahead. Do not create speculative work merely to keep the queue non-empty or consume a reset window.
 
-When Queue Mode is enabled, `!inbox` reports Engineer state, active workstreams, queued work, blocked work, pending decisions, whether Engineer can continue, whether replenishment is needed, and whether `!drain` or `!stop` is in effect. Do not ask Planner to act merely because a decision is pending when Engineer can safely continue elsewhere.
+Quatre's consolidated status reports Kira state, active workstreams, queued work, blocked work, pending decisions, whether Kira can continue, whether replenishment is needed, and whether `!drain` or `!stop` is in effect. Do not ask the Product Owner to act merely because a decision is pending when Kira can safely continue elsewhere.
 
-Meaningful future Engineer reports include:
+Meaningful Kira-to-Quatre reports include:
 
 ```text
 ENGINEER STATE:
 <WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | WAITING FOR RESET | STOPPED AT GATE>
 
-AWAITING DESIGNER INTAKE:
-<completed milestones and handoff filenames, or NONE>
+AWAITING QUATRE ROUTING:
+<completed milestones, validated packets, or genuine questions; or NONE>
 
 CURRENTLY PROCESSING:
-<active workstreams and accepted brief, or NONE>
+<active workstreams and accepted goal, or NONE>
 
 QUEUED AFTER CURRENT:
-<eligible or waiting briefs/workstreams and unmet conditions, or NONE>
+<eligible or waiting goals/workstreams and unmet conditions, or NONE>
 
 BLOCKED:
 <blocked streams and reason>
@@ -652,26 +587,26 @@ ENGINEER CAN CONTINUE:
 <YES | NO>
 ```
 
-Do not require this expanded block for trivial acknowledgements. Queue state survives thread replacement through permanent `CURRENT_STATE.md`, accepted/queued transport artifacts, and the normal `!init` bootstrap.
+Do not require this expanded block for trivial acknowledgements. Queue state survives child replacement through permanent `CURRENT_STATE.md`, accepted/queued goals or durable records, and Quatre's parent context.
 
-This block is operator-facing live context, not merely handoff metadata. When a completed milestone is waiting in `inbox/` while the next brief is being accepted or executed, show both facts simultaneously. Use the footer's `ACTIVE OWNERS` form so the operator can enable Designer intake or Planner work without interrupting Engineer continuation, for example:
+This block is parent-facing live context. When a completed milestone awaits Relena review while Kira continues another authorized goal, Quatre shows both facts in its consolidated `ACTIVE OWNERS` footer, for example:
 
 ```text
 TL;DR:
-P2 is waiting for Designer intake while Engineer continues P3 under `!run`.
+P2 is waiting for Relena review while Kira continues P3 under `!run`.
 
 ACTIVE OWNERS:
-- DESIGNER — process the completed P2 handoff
-- ENGINEER — accept or execute P3 under `!run`
+- DESIGNER — RELENA — review the completed P2 packet
+- ENGINEER — KIRA — continue P3 under `!run`
 
 BLOCKING OWNER:
 NONE
 
 ACTION:
-Designer may process P2 independently; Engineer may accept or execute P3.
+Quatre may keep Kira moving while Relena reviews P2.
 ```
 
-Do not list Planner as active unless a genuine independent decision is present in `PLANNER_INBOX.md` or the current evidence requires one.
+Quatre is the persistent parent and may be active for orchestration without a Product Owner decision. List the Product Owner as blocking only when a genuine decision or explicit gate is required.
 
 ### Three-attempt reassessment rule
 
@@ -709,17 +644,15 @@ Planner escalation asks whether solving the problem remains worth the added comp
 
 Do not reset the attempt count because another workstream exists, a report was archived, or a new filename/brief exists. Reset only when Designer records that the underlying problem materially changed through a different architecture, different supported platform capability, materially revised requirement, or new authoritative information that changes the premise. State the reset rationale in the new brief.
 
-### Design handoff lifecycle
+### Design evidence lifecycle
 
-1. A Site Engineer handoff enters `inbox/` and remains unchanged during intake review.
-2. The Designer verifies sanitization, evidence boundaries, conflicts, and referenced design authorities.
-3. The Designer incorporates only supported facts into permanent design documentation.
-4. The Designer evaluates whether the evidence is a major milestone state transition and updates [`CHANGELOG.md`](CHANGELOG.md) when required by [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md).
-5. The Designer evaluates unresolved conflicts, approval requirements, product choices, and risk acceptance for a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item.
-6. Resolve and record any required product-owner decisions.
-7. Only after the verified evidence has been incorporated and the resulting documentation state is accepted may the Designer move the handoff to `processed/`.
+1. Kira returns a sanitized validated packet directly to Quatre.
+2. Quatre verifies the engineering boundary and routes product/release implications to Relena.
+3. Relena incorporates only supported facts into permanent design documentation and updates [`CHANGELOG.md`](CHANGELOG.md) for a major transition under [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md).
+4. Quatre records a [`PLANNER_INBOX.md`](PLANNER_INBOX.md) item only when a genuine Product Owner choice remains.
+5. Quatre consolidates the outcome for the Product Owner. The Product Owner does not carry the packet or a follow-up prompt between children.
 
-Partial implementations and failed validations use the same gate: record their verified state before processing the artifact. If evidence is missing, conflicted, rejected, or still under review, leave the handoff in `inbox/`.
+Partial implementations and failed validations use the same evidence gate. Preserve unresolved durable artifacts without overwriting them; storage movement is housekeeping, not authority or acceptance.
 
 ### Naming and collision safety
 
@@ -732,9 +665,9 @@ Use lowercase kebab-case for `<milestone>`, for example `2026-08-08-shopping-per
 
 Before creating, copying, or moving a file, check both the source and destination names. Never overwrite an unrelated or earlier handoff. If a destination filename already exists, compare its milestone and lifecycle context, then select a unique revision or timestamped filename. Do not delete or replace the existing artifact merely to resolve a collision.
 
-If permissions prevent the Designer from moving an artifact, leave it in place and report the housekeeping limitation. Never weaken read-only protection or modify the Site Engineer's source handoff to force a lifecycle transition.
+If permissions prevent Relena from moving an artifact, leave it in place and report the housekeeping limitation to Quatre. Never weaken read-only protection or modify Kira's source packet to force a lifecycle transition.
 
-Only the Designer performs movement into `processed/`. The Site Engineer may read briefs and create new collision-safe reports or handoffs in `inbox/`, but may not move, archive, overwrite, delete, or reorganize shared artifacts.
+Only Relena performs movement into `processed/` when Quatre assigns transport housekeeping. Kira may create collision-safe durable reports but may not move, archive, overwrite, delete, or reorganize shared artifacts.
 
 ### Processed artifact archive
 
@@ -744,7 +677,7 @@ During normal Designer housekeeping, keep approximately the most recent 30 days 
 - Never overwrite, routinely delete, ZIP, or compress normal Markdown artifacts.
 - Never archive an active artifact, unresolved conflict, or item still awaiting approval.
 - Archival means **completed and retained**, not discarded.
-- The Designer alone owns archival housekeeping; the Site Engineer must not reorganize the archive.
+- Relena alone owns archival housekeeping when assigned by Quatre; Kira must not reorganize the archive.
 
 Sanitization overrides retention. If an artifact contains credentials, tokens, secrets, private resource identifiers, sensitive personal information, or inappropriate environment details, do not preserve it merely because it otherwise qualifies for archival. Do not silently rewrite historical evidence. Report the issue and follow [`DOCUMENTATION_RULES.md`](DOCUMENTATION_RULES.md) and the applicable safe-handling procedure.
 

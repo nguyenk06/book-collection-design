@@ -61,7 +61,7 @@ Version 17 remains historical evidence for the saved persistence/API foundation;
 ## Remaining Milestone Work
 
 - Exact Version 21 is definitively published. After propagation, anonymous checks matched visible mobile Shopping plus all four Bookshelf-related correction markers.
-- Product Owner hands-on validation requires a separate decision. Mutating Shopping scenarios and broad smoke remain separately gated.
+- Product Owner hands-on validation is parked by Decision 1:B. Mutating Shopping scenarios and broad smoke remain separately gated.
 - Preserve exact Version 21 at `f15ea81` as the current released baseline.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
 
@@ -82,7 +82,7 @@ The authoritative local suites passed before preservation and publication. Exact
 
 ## Product Owner validation checkpoint
 
-The separate validation-Site direction is canceled. Remediation hands-on validation will occur on the live Site only after exact Version 21 publishes successfully under the controlled sequence in [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md). The first Version 21 checklist is read-only wherever possible and does not authorize the purchase-recording scenarios below; those mutating scenarios require another explicit Product Owner decision.
+The separate validation-Site direction is canceled. Exact Version 21 published successfully under [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md), but Product Owner Decision 1:B parks hands-on validation. Any later checklist starts read-only wherever possible and does not authorize purchase-recording scenarios; those mutating scenarios require another explicit Product Owner decision.
 
 The sequence does not weaken data preservation because the database is lightweight or correctable. Before schema activation, create and privately retain the bridge structured export, record preservation invariants, and acknowledge that the artifact excludes R2 bytes and is not a D1 snapshot. Preserve and verify Book IDs, collection keys/data, covers/references, ownership, copy counts, and existing values. Keep schema activation, verification, Shopping publication, hands-on validation, post-publication smoke testing, code rollback, forward repair, and destructive recovery as separate gates.
 

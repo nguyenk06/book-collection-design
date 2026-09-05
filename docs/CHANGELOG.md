@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-04 — Quatre one-level CYOA subagent pilot authorized
+
+- Recorded `!100:31` and Product Owner Decision 1:B, keeping Version 21 hands-on validation parked without converting held items into failures or implementation scope.
+- Accepted the CYOA-only pilot: Quatre is persistent parent, Planner, orchestrator, usage governor, and Site owner; Relena and successor Engineer Kira are direct children and may not spawn; Sei is retired after its final checkpoint.
+- Removed Product Owner transport of reports, briefs, `!inbox`, and `!brief`; Quatre now routes completion-oriented goals and results internally. `PLANNER_INBOX.md` remains decisions-only.
+- Restricted Kira to source inspection, implementation, tests, build, package, and release-packet preparation. Kira cannot use Sites tools or credentials, save, preview, deploy, publish, or perform the final Site handoff.
+- Preserved one active application-source writer, isolated-worktree/collision requirements for parallel writers, the 15% five-hour floor, separate longer-period check, `UNKNOWN` Sites capacity when unmetered, and every explicit Product Owner production/destructive gate.
+- Added ADR-0013 and the canonical pilot workflow document. No application source, Site, production data, or published release changed.
+
 ## 2026-09-04 — Exact Version 21 published; five public markers matched
 
 - Accepted Sei III's brief acceptance, usage-wait checkpoint, and final completion handoffs as one ordered run.

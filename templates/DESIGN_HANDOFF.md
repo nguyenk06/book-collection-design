@@ -1,6 +1,6 @@
 # Design Repository Handoff
 
-> Temporary Site-to-Design report. Include only verified, sanitized evidence needed to update permanent design documentation.
+> Temporary Kira-to-Quatre implementation report. Include only verified, sanitized evidence needed for Quatre orchestration and Relena product/release-boundary review. The Product Owner does not carry this report.
 
 This sanitized handoff is distinct from the private local-only `ENGINEER_CONTINUITY_HANDOFF.md` used for a real Engineer replacement. Never include exact local paths, credentials, tokens, owner identity, secrets, or private production data here. A replacement requires both artifacts; neither proves transfer until independently verified.
 
@@ -13,7 +13,7 @@ This sanitized handoff is distinct from the private local-only `ENGINEER_CONTINU
 - Recommended filename: <!-- YYYY-MM-DD-<milestone>-design-handoff.md -->
 - Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT | NOT APPLICABLE -->
 
-The Designer keeps this source unchanged in `inbox/` until its verified evidence is incorporated into permanent documentation and accepted. It may then move to `processed/` without overwriting an existing artifact.
+Quatre retains this source unchanged in the internal evidence store and routes it to Relena when design or release-boundary review is required. Relena may incorporate verified facts into permanent documentation. The Product Owner does not transport or rewrite the report.
 
 ## Handoff status
 
@@ -24,12 +24,12 @@ The Designer keeps this source unchanged in `inbox/` until its verified evidence
 - Queue mode: <!-- ENABLED | DISABLED -->
 - Throttle: <!-- RUN | DRAIN | STOP | NOT APPLICABLE -->
 - Engineer state: <!-- WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | WAITING FOR RESET | STOPPED AT GATE -->
-- Awaiting Designer intake: <!-- Completed milestone reports/handoffs still in inbox, or NONE. -->
+- Awaiting Quatre/Relena intake: <!-- Completed reports awaiting parent or design-boundary review, or NONE. -->
 - Currently processing: <!-- Accepted active workstreams and brief, or NONE. -->
 - Queued after current: <!-- Briefs plus eligibility conditions, or NONE. -->
 - Blocked:
 - Engineer can continue: <!-- YES | NO -->
-- Fresh queue check: <!-- Confirm the live briefs directory was refreshed after this handoff was written. -->
+- Fresh parent queue check: <!-- Confirm Quatre's current goal queue was refreshed after this handoff was written. -->
 
 ## Five-hour usage record
 
@@ -151,23 +151,13 @@ See [`docs/DOCUMENTATION_RULES.md`](https://github.com/nguyenk06/book-collection
 
 ## Workflow footer
 
-This is a terminal transport artifact and must contain exactly one canonical footer. Put this footer skeleton in place before writing the report. After saving, reopen the file and verify that its last non-comment block contains `TL;DR`, exactly one ownership form, and `ACTION`; confirm the named owner can perform the action. A correct chat footer is not a substitute for the artifact footer. If a saved artifact lacks the footer, preserve it unchanged and create a uniquely named formatting-only superseding artifact without repeating any implementation, validation, Site, or production action. Never use `NEXT OWNER: ENGINEER` merely to hand work back to the same active Engineer when an authorized continuation remains.
+This is a terminal internal artifact and must contain exactly one concise footer. Put the skeleton in place before writing the report. After saving, verify that the last non-comment block contains `TL;DR`, `NEXT OWNER`, and `ACTION`. During the pilot, the recipient is Quatre; never instruct the Product Owner to contact another agent. If a saved artifact lacks the footer, preserve it unchanged and create a uniquely named formatting-only superseding artifact without repeating implementation, validation, Site, or production work.
 
 TL;DR:
 <!-- Usually 1-4 short lines summarizing the verified result/state. -->
 
 NEXT OWNER:
-<!-- DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT | NONE — PROJECT COMPLETE -->
+PLANNER — QUATRE
 
 ACTION:
 <!-- The single clearest next action, approval, command, or resume condition. -->
-
-<!-- When roles have independent simultaneous actions, replace NEXT OWNER with:
-ACTIVE OWNERS:
-- DESIGNER — <completed handoff intake, when applicable>
-- ENGINEER — <eligible workstreams>
-- PLANNER — <pending decisions>
-
-BLOCKING OWNER:
-<NONE | DESIGNER | ENGINEER | PLANNER | EXTERNAL/WAIT>
--->

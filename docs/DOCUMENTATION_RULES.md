@@ -2,6 +2,8 @@
 
 This document is the standing documentation policy for the repository.
 
+The active [CYOA One-Level Codex Subagent Pilot](ONE_LEVEL_SUBAGENT_PILOT.md) governs role topology and routing. Quatre is the persistent parent and Site owner; Relena and Kira are direct non-delegating children. The Product Owner communicates only with Quatre.
+
 ## Repository Purpose
 
 This repository is the permanent design authority for the Book Collection System. It documents:
@@ -15,7 +17,7 @@ This repository is the permanent design authority for the Book Collection System
 
 It is not the implementation repository.
 
-It is also not a role-to-role transport workspace. GitHub contains durable high-level product documentation, architecture, roadmap/milestones, accepted decisions, workflow run rules, and the Designer-owned Planner Inbox. Engineer briefs, Engineer reports, acceptance records, completion handoffs, and other Designer/Engineer transport artifacts exist only in the external local handoff workspace.
+It is also not a role-to-role transport workspace. GitHub contains durable high-level product documentation, architecture, roadmap/milestones, accepted decisions, workflow run rules, and the Designer-maintained Planner Inbox. Engineer goals, briefs, reports, acceptance records, release packets, and handoffs remain internal/local artifacts routed by Quatre; the Product Owner does not carry them.
 
 ## Documentation Philosophy
 
@@ -78,7 +80,7 @@ Generalize operational details whenever practical.
 
 ## Planner Visibility
 
-Planner uses permanent design documentation rather than raw handoffs or implementation chat as the primary project visibility layer:
+Quatre uses permanent design documentation plus internally routed subagent evidence as the primary project visibility layer:
 
 1. [PLANNER_INBOX.md](PLANNER_INBOX.md) — what requires a decision.
 2. [PROJECT_DASHBOARD.md](PROJECT_DASHBOARD.md) — concise derived visual progress; coarse estimates only.
@@ -91,14 +93,14 @@ The dashboard never replaces Current State, evidence, briefs, or gate reports. D
 
 Temporary handoffs are local transport and evidence. They must not be committed to this repository and do not replace these documents.
 
-The public [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) is the concise authority for active-run continuation, terminal stopping conditions, progress-versus-terminal responses, and footer validation. Keep detailed lifecycle mechanics in [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md), and require Engineer startup and brief templates to link to both.
+The public [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) is the concise authority for Kira's active-goal continuation and terminal stopping conditions. The [pilot](ONE_LEVEL_SUBAGENT_PILOT.md) governs topology and Site ownership. Keep detailed evidence mechanics in [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md), and require Kira startup and goal templates to link to both.
 
-Engineer replacement uses two distinct artifacts:
+Kira replacement uses two distinct internally routed artifacts:
 
-- A sanitized `DESIGN_HANDOFF.md` report in external local `inbox/` for Designer intake.
+- A sanitized `DESIGN_HANDOFF.md` report returned to Quatre for any required Relena review.
 - A private local-only `ENGINEER_CONTINUITY_HANDOFF.md` artifact for successor continuity. It may contain the exact local source path and machine-specific state needed for recovery, but must remain outside GitHub and must never contain credentials, tokens, owner identity, secrets, or private production data.
 
-Never copy the private continuity artifact into this repository, a public issue, a public handoff, or permanent documentation. Permanent documents record only sanitized conclusions and authoritative candidate identity.
+Never copy the private continuity artifact into this repository, a public issue, a public handoff, or permanent documentation. Quatre routes it internally; the Product Owner does not transport it. Permanent documents record only sanitized conclusions and authoritative candidate identity.
 
 For each significant Engineer handoff, evaluate whether it records a major milestone transition such as local implementation, local validation, saved Site version, production migration, production verification, publication, rollback, or supersession. Update the changelog when it does, keeping each state independent. Brief acceptance and routine progress reports do not create changelog entries.
 
@@ -108,7 +110,7 @@ For each significant Engineer handoff, evaluate whether it records a major miles
 
 The queue may contain multiple independently understandable decisions. Batch non-urgent independent decisions when useful, but do not delay an urgent or high-risk gate merely to form a batch. A blocked workstream does not make the whole project blocked while another authorized independent workstream can continue.
 
-Designer owns the queue. Engineer supplies sanitized evidence through handoffs or state reports but does not edit the queue. Planner may directly ask Designer to record a question.
+Relena maintains the queue under Quatre orchestration. Kira supplies sanitized evidence directly to Quatre but does not edit the queue. Quatre routes only genuine Product Owner decisions to Relena for recording.
 
 Create an item only when delegated authority cannot safely resolve a genuine choice involving:
 
@@ -138,10 +140,10 @@ Include only the minimum sanitized technical context required to decide. Link to
 
 Decision lifecycle:
 
-1. Engineer evidence or Designer work identifies a genuine decision.
-2. Designer confirms Planner authority is required and automatically creates or updates the queue item during intake; no separate queueing instruction is required.
-3. Planner responds.
-4. Designer records the accepted decision in the appropriate permanent source of truth and updates requirements, roadmap, or briefs when required.
+1. Kira evidence, Relena work, or Quatre orchestration identifies a genuine Product Owner decision.
+2. Quatre asks Relena to confirm and record the minimum decision item; routine implementation and internal routing never enter the queue.
+3. Quatre presents the decision to the Product Owner and receives the response.
+4. Quatre routes the answer to Relena, which records it in the permanent source of truth and updates requirements, roadmap, or goals when required.
 5. Designer updates the changelog for a material milestone consequence and creates or supersedes an ADR when warranted.
 6. Designer removes the resolved queue item. Git history and permanent design documents retain the durable record.
 
@@ -178,12 +180,12 @@ Use the [Knowledge Index](KNOWLEDGE_INDEX.md) to keep four authority levels dist
 
 - [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md) — Planner/Designer-ranked product and UX opportunities from comparable applications. Entries are candidates, not roadmap commitments.
 - Engineer Research Sandbox — Engineer-local technical feasibility, patterns, risks, experiments, and options stored in the shared handoff workspace's `knowledge/` area. Raw entries do not belong in this repository and do not authorize implementation.
-- Engineer brief — approved implementation scope only.
+- Kira goal/brief — approved implementation scope only, transmitted internally by Quatre.
 - Tester knowledge — coverage strategy, regression knowledge, and evidence conventions only; it does not define product behavior or implementation scope.
 
-Designer owns promotion from research into accepted product direction or an Engineer brief. Planner/Product Owner participates only when a material escalation changes behavior, priority, cost, risk, or scope. Preserve rejected/superseded records briefly so research is not repeatedly rediscovered.
+Relena owns promotion from research into accepted product direction or a Kira goal/brief under Quatre orchestration. Product Owner participation occurs only through Quatre when a material escalation changes behavior, priority, cost, risk, or scope. Preserve rejected/superseded records briefly so research is not repeatedly rediscovered.
 
-Engineer records source URL, review date/status, license warning, revisit trigger, and explicit confirmation that no code was copied in local knowledge. Engineer has read-only access to `book-collection-design` and communicates only through the shared local `inbox/` and role-appropriate local folders; Engineer must not create or modify any repository or GitHub artifact. Designer alone may incorporate an approved conclusion into authoritative GitHub documentation. Do not present observed patterns as verified CYOA implementation facts.
+Kira records source URL, review date/status, license warning, revisit trigger, and explicit confirmation that no code was copied in local knowledge. Kira has read-only access to `book-collection-design`, returns evidence directly to Quatre, and must not create or modify any Design-repository or GitHub artifact. Relena alone may incorporate an approved conclusion into authoritative documentation. Do not present observed patterns as verified CYOA implementation facts.
 
 ## Architecture Principles
 
@@ -227,7 +229,7 @@ For every future documentation task, read these authorities first:
 
 Preserve consistency across the repository, update these documents when appropriate, and prefer cross-links over duplication.
 
-Also read [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md) before preparing or applying an implementation handoff. Use its linked templates for implementation briefs and verified Site-to-Design reports; keep detailed handoff rules there rather than duplicating them in this policy.
+Also read the [pilot](ONE_LEVEL_SUBAGENT_PILOT.md) and [HANDOFF_PROTOCOL.md](HANDOFF_PROTOCOL.md) before preparing or applying a Kira goal, release packet, or evidence handoff. Use the linked templates and keep detailed mechanics there rather than duplicating them in this policy.
 
 ## Review Checklist
 

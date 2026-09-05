@@ -32,7 +32,7 @@ flowchart LR
     A["Preserve cumulative candidate<br/>Complete · Version 21"]
     B["Verify Gate 4 preservation<br/>Complete · bounded evidence accepted"]
     C["Publish Shopping<br/>Complete · Version 21"]
-    D["Live validation<br/>Pending Planner decision"]
+    D["Live validation<br/>Parked by Product Owner"]
 
     A --> B --> C --> D
 
@@ -56,7 +56,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Exact Version 21 is published and all five authorized anonymous correction markers match; Product Owner hands-on validation remains gated |
+| My Library visual experience | Partial | Exact Version 21 is published and all five authorized anonymous correction markers match; Product Owner hands-on validation is parked |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |

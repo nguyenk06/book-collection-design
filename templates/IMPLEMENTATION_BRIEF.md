@@ -1,147 +1,132 @@
-# Implementation Brief
+# Kira Completion-Oriented Engineer Goal
 
-> Temporary Design-to-Site handoff for one milestone. Keep concise, link to design authority, and remove all sensitive or machine-specific information before sharing.
+> Durable scope and authority record transmitted internally by Planner — Quatre to direct Engineer subagent Kira. The Product Owner does not carry this file or issue `!brief` to Kira. Use this template for a coherent outcome, not routine micro-steps.
 
-Engineer must read `docs/ENGINEER_EXECUTION_CONTRACT.md` at `!brief`, `!run`, post-compaction recovery, and any replacement initialization. The contract governs continuation and terminal responses; this brief governs scope and authority.
+Read `docs/ONE_LEVEL_SUBAGENT_PILOT.md` and `docs/ENGINEER_EXECUTION_CONTRACT.md`. The pilot governs topology and Site ownership; this record governs the exact goal and authority.
 
-## Engineer assignment and context
+## Assignment identity
 
+- Parent/orchestrator: PLANNER — QUATRE
 - Assigned role: ENGINEER
-- Assigned name: SEI
-- Expected chat: CYOA — Engineer Sei
+- Assigned name: KIRA
+- Delegation depth: 1 — Kira must not spawn
+- Project: CYOA only
+- Goal ID:
+- Milestone:
+- Date:
 - Expected context: <!-- continuing | new | source recovery -->
-- Required source state: <!-- Describe the required editable, saved, published, clean/dirty, or unpublished source baseline. -->
+- Required source state:
+- Source-writer slot: <!-- KIRA ONLY | READ-ONLY -->
 
-Sei must output the expected title at startup so the Product Owner can apply it manually. Before `!brief` acceptance, inspect the actual Sites/message context and report prior unpublished implementation, editable-source access, dirty or unsaved state, latest known saved and published Site versions, context match, and whether source composition and collision boundaries can be verified. If context or source does not match, park only this task and report the mismatch. Do not reconstruct, overwrite, materialize, save, or publish without authority.
+Kira verifies parent, source/repository/branch/HEAD, unpublished/dirty state, current saved/released Site evidence, package identity, and collision boundaries before acceptance. Kira does not inherit unpublished Sei state or authority.
 
-## Transfer metadata
+## Outcome
 
-- Milestone: <!-- Short milestone name. -->
-- Prepared date: <!-- YYYY-MM-DD -->
-- Recommended filename: <!-- YYYY-MM-DD-<milestone>-implementation-brief.md -->
-- Engineer acceptance: PENDING <!-- Engineer reports acceptance separately; do not edit this brief in place. -->
-- Planner decision: <!-- NONE, or a concise accepted direction with a permanent repository link. Do not copy decision history. -->
-- Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT -->
-- Attempt/reset rationale: <!-- Identify the underlying problem and prior attempt evidence; for a reset, explain the material architecture/capability/requirement/premise change. -->
-- Queue priority: <!-- P1 | P2 | P3 | NOT QUEUED -->
-- Eligible when: <!-- Objective dependency/gate condition. -->
-- Can run alongside active work: <!-- YES | NO -->
-- Collision/shared-surface concerns: <!-- Concise hotspots or NONE. -->
-- Required Planner decision: <!-- Decision reference or NONE. -->
-- Five-hour slice / milestone association: <!-- Slice identifier and parent milestone, or NOT APPLICABLE. -->
-- Active Engineer project: <!-- CYOA; do not share this five-hour window with another Engineer project. -->
+<!-- One completion-oriented user/project outcome. Avoid command-by-command micro-scope. -->
 
-## Usage and reset boundary
+## Constraints and exclusions
 
-Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. It records usage only and never accepts or activates this brief.
+### In scope
 
-- Preferred model: <!-- Default Sei profile: GPT-5.6 Terra. Recommend Sol only when justified. -->
-- Reasoning effort: <!-- Default: Medium. -->
-- Speed mode: <!-- Default: Standard; Fast remains off. -->
-- Current five-hour percentage: <!-- Record at intake/acceptance. -->
-- Five-hour reset time: <!-- Displayed reset time or UNKNOWN. -->
-- Current longer-period Codex percentage: <!-- Record separately. -->
-- Estimated five-hour consumption: <!-- LOW / LIKELY / HIGH percentage-point range; planning estimate, not token conversion. -->
-- Planning-class guide: <!-- Diagnostic 35%; small 50%; normal 70%; migration/release/high-risk 85%. -->
-- Operational minimum starting percentage: <!-- Remaining HIGH estimate + 15% floor. -->
+- <!-- Authorized implementation, diagnosis, validation, and packaging work. -->
+
+### Out of scope
+
+- Sites tools or Sites credentials.
+- Site save/version, preview, deployment, publication, or final Site handoff.
+- Production access or schema/data mutation unless a separate explicit Product Owner gate and Quatre-owned Site operation later authorizes it.
+- Credential changes, destructive recovery, rollback, restore, or external sharing.
+- Product decisions, unrelated refactors, speculative features, and additional projects.
+- Child subagents.
+
+Add task-specific exclusions here:
+
+- <!-- Exact exclusions. -->
+
+## Authoritative inputs
+
+- Design repository commit:
+- Application source baseline:
+- Relevant documents/ADRs:
+- Product Owner decisions:
+- Prior validated evidence or release packet:
+
+## Verification and evidence
+
+- Required tests:
+- Required lint/build/type checks:
+- Mobile/desktop/accessibility checks:
+- Data/schema/preservation checks:
+- Package/manifest checks:
+- Shared-file and collision review:
+- Passed/failed/unrun reporting:
+
+## Usage envelope
+
+- Preferred model: <!-- Default Kira: GPT-5.6 Terra -->
+- Reasoning effort: <!-- Default: Medium -->
+- Speed mode: <!-- Default: Standard; Fast off -->
+- Current five-hour percentage:
+- Five-hour reset time:
+- Current longer-period Codex percentage:
+- Sites capacity: <!-- Reported value or UNKNOWN; never infer -->
+- Estimated five-hour consumption: <!-- LOW / LIKELY / HIGH -->
+- Minimum starting percentage: <!-- Remaining HIGH + 15% floor -->
 - Automatic stopping percentage: **15%**
-- Usage immediately before `!brief`: <!-- Record at acceptance. -->
-- Usage immediately before `!run`: <!-- SAME AS INTAKE when still fresh with ample margin; otherwise record a refreshed value and why it was required. -->
-- Safe checkpoint: <!-- Independently recoverable unit boundary. -->
-- Automatic stop conditions: <!-- Include reserve/window, authority, source, collision, validation, and risk boundaries. -->
-- Work deferred until the next reset: <!-- Explicit remaining work that this slice does not authorize. -->
-- Prioritized fallback ladder: <!-- Predictable tool/action failures; list brief-authorized fallback approaches in order and identify which require new authority. -->
+- Usage refresh trigger: <!-- Large/high-risk, stale/reset/intervening work, estimate growth, credible floor risk -->
 
-The Product Owner selects the actual chat model; this brief only recommends it and cannot switch models. Fast mode is off by default. Sei may use Sol only when this accepted brief recommends it or a later Planner/Product Owner decision approves it. The class guide informs sizing; an approved slice may start or resume when its remaining high estimate plus the 15% floor fits. Productively drain toward the floor using safe authorized units. Do not request a duplicate pre-`!run` or checkpoint usage reading when the intake value remains fresh and the remaining high estimate has ample margin. Refresh only for large/high-risk work, reset/intervening usage, material estimate growth, stale readings, or credible floor risk. If no safe unit fits or the window ends, preserve the checkpoint and report `WAITING FOR RESET`, not `BLOCKED`.
+The longer-period allowance is separate. CYOA is the only active project during the pilot. `WAITING FOR RESET` is resumable and is not a blocker.
 
-Unless this brief sets a stricter attempt boundary, `!run` continues through up to three distinct substantive remediation approaches for the same in-scope problem. Ordinary lint, test, build, and reversible local failures do not end the run after Attempt 1 or 2. Record the evidence, adjust within scope, rerun required validation, and stop only on completion, failed Attempt 3, or a genuine safety/scope/production/authority/system/floor boundary.
+## Safe checkpoint and deferred work
 
-Before any terminal `!run` response, apply the contract's seven-question continuation test. If a safe authorized next action or fallback exists, continue and emit only nonterminal progress commentary. A repeated `!run` is not required inside the same active slice.
+- Safe checkpoint:
+- Recoverable partial-state requirements:
+- Work deferred until next reset:
+- Work deferred to another goal:
 
-Keep this file in `briefs/` until the Engineer creates a sanitized `YYYY-MM-DD-<milestone>-brief-acceptance.md` report in `inbox/`. Acceptance must confirm the attempt-sequence classification and must reject a silent Attempt 4. After validating clean acceptance, the Designer may move the brief and satisfied acceptance report to `processed/` without overwriting existing artifacts. Brief acceptance authorizes work already within this brief; it is not implementation completion.
+## Genuine stop conditions
 
-Queue metadata does not activate Queue Mode, make a brief executable, or replace `!brief` acceptance. A reset does not reactivate the slice automatically. When Queue Mode is disabled, Engineer must not consume this as follow-on work without separate authority.
+- Outcome complete.
+- Quatre relays `!drain` or `!stop`.
+- 15% floor/window boundary.
+- Third authorized substantive approach fails.
+- Source/candidate/package/collision mismatch.
+- New product, Site, production, schema/data, credential, destructive, privacy, or security authority is required.
+- Required evidence cannot be obtained through the authorized fallback ladder.
 
-## Workstreams
+Ordinary lint/test/build failures, recoverable tool failures, progress checkpoints, or an available in-scope next action are not terminal stops.
 
-Use one block per bounded stream. Remove this section only when the brief contains one simple workstream whose fields are fully represented below.
+## Fallback ladder
 
-### <!-- WS-ID — Descriptive name -->
+1. <!-- First authorized approach. -->
+2. <!-- Second materially distinct authorized approach. -->
+3. <!-- Third materially distinct authorized approach. -->
 
-- Objective:
-- Scope:
-- Dependencies:
-- Expected files/surfaces:
-- Allowed actions:
-- Explicit exclusions:
-- Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT | NOT APPLICABLE -->
-- Production authority: <!-- Normally NONE; local authority never implies production authority. -->
-- May continue independently: <!-- YES | NO; identify dependency/collision when NO. -->
-- Convergence gate:
+Do not improvise a fourth substantive approach or an excluded path.
 
-Identify shared hotspots across workstreams and serialize or coordinate conflicting edits. Do not create competing implementations merely to preserve parallel execution.
+## Required Kira return to Quatre
 
-## Objective
+Return one sanitized acceptance and one terminal completion/blocker packet directly to Quatre. Include:
 
-<!-- State the single implementation outcome. -->
+- Kira identity and Quatre parent;
+- exact source/branch/HEAD and clean/dirty state;
+- files changed and package manifest;
+- completed, partial, blocked, and deferred scope;
+- passed, failed, and unrun verification;
+- attempt/fallback evidence;
+- migration/data/security/preservation and collision boundaries;
+- usage and safe checkpoint;
+- explicit confirmation that Kira used no Sites tools or credentials and performed no save/preview/deploy/publish/final Site handoff;
+- the exact next action for Quatre.
 
-## Why this is next
+For a release candidate, include a validated release packet suitable for Relena product/release-boundary review. Only Quatre may perform a separately Product-Owner-authorized Site operation after that review.
 
-<!-- Link the roadmap priority or accepted decision. -->
+## Authority record
 
-## Verified current state
+- Product Owner authority:
+- Quatre transmission/activation:
+- Relena design or release-boundary requirement:
+- Kira source authority:
+- Quatre-only Site operation, if later gated:
 
-<!-- State only observed behavior relevant to this milestone. Identify the evidence baseline. -->
-
-## Requirements
-
-- <!-- Required behavior or constraint. -->
-
-## Data / schema implications
-
-- <!-- Required persistence, migration, integrity, or preservation behavior; use "None" when applicable. -->
-
-## User workflow
-
-1. <!-- Short user flow. -->
-
-## Acceptance criteria
-
-- [ ] <!-- Observable outcome or validation requirement. -->
-
-## Out of scope
-
-- <!-- Explicit exclusion. -->
-
-## Risks / cautions
-
-- <!-- Data, compatibility, migration, security, or product risk. -->
-
-## Relevant design documents
-
-- <!-- Link to the public design repository document; do not duplicate it. -->
-
-## Documentation handoff requirements
-
-- Identify `ENGINEER — SEI` in every acceptance, blocker, completion, and source-recovery report.
-- Return a completed `DESIGN_HANDOFF.md` based on verified evidence.
-- Separate implemented, deferred, and not-attempted work.
-- Report tests, local migration validation, saved-version state, and publication state independently.
-- Recommend document updates as `UPDATE`, `NO CHANGE`, or `REVIEW NEEDED`.
-- Before writing any terminal transport report, place the canonical footer skeleton at the file bottom. After saving, reopen the file tail and verify its last non-comment block contains exactly one `TL;DR`, exactly one ownership form, and `ACTION`. A chat footer is not a substitute. If correction is needed, create a uniquely named formatting-only superseding report; never overwrite the original or repeat project/Site work.
-
-## Product Owner validation checkpoint
-
-- Required for this milestone: <!-- YES | NO; use YES only for a meaningful user-facing boundary. -->
-- Safe validation environment: <!-- Exact preview/saved version/environment, or NOT YET VERIFIED. -->
-- Scenario checklist authority: <!-- Feature document section or concise attached checklist. -->
-- Production separation: <!-- Confirm checkpoint completion does not authorize save, migration, publication, production writes, smoke testing, rollback, or destructive action. -->
-
-## Approval boundary
-
-- **Local authority:** Implement and validate only the named workstreams and scope above.
-- **Production authority:** <!-- NONE unless a separately approved production action is stated explicitly. -->
-- Stop before publishing unless explicit approval is provided separately.
-- Do not modify the design repository.
-
-> Sanitization required: do not include credentials, API keys, temporary repository credentials, tokens, owner emails, environment secrets, private operational data, unsafe D1/R2 resource IDs, local paths, machine usernames, or unnecessary operational identifiers. See [`docs/DOCUMENTATION_RULES.md`](https://github.com/nguyenk06/book-collection-design/blob/main/docs/DOCUMENTATION_RULES.md).
+This goal record does not create authority beyond the entries above.

@@ -6,10 +6,10 @@ This document contains the current execution horizon. Long-term priorities remai
 
 - **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact cumulative Version 20 is published; checkpoint `608553f` is excluded. M4 transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; the Version 21 release brief is complete and no Engineer brief remains eligible.
-- **Engineer state:** Sei III completed the exact Version 21 release at `f15ea81`. Build/package/boundary gates passed, controlled publication Attempt 2 returned definitive success and deployment identity, and all five authorized anonymous markers matched after propagation. Source files changed: none; every excluded operation remained unrun.
-- **Next owner:** `PLANNER — QUATRE` — process the separate Version 21 Product Owner validation decision.
-- **Usage:** Final prepublication reading `!32:35`; ending usage was not refreshed. Require a fresh reading before any later Engineer slice and preserve the 15% floor.
+- **Throttle:** `DRAIN`; the Version 21 release sprint is complete and no Engineer goal is active.
+- **Engineer state:** Sei III completed exact Version 21 at `f15ea81`; final retirement checkpoint remains to be issued. Kira is the designated successor direct Quatre child and is not active.
+- **Next owner:** `PLANNER — QUATRE` — initialize the persistent-parent pilot, receive Sei III's final retirement report internally, and choose the next completion-oriented CYOA goal only when justified.
+- **Usage:** Product Owner recorded `!100:31`. Preserve the 15% five-hour floor; check the 31% longer-period allowance separately. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -152,6 +152,8 @@ Product Owner selected Decision 1:B at `!58:39`, accepting the earlier attributa
 Product Owner then selected Decision 1:A at the same supplied `!58:39`, authorizing execution of that exact prepared brief while preserving every exclusion and the 15% floor. The brief is eligible for Sei III intake with `!brief` and begins only after separate `!run`; this authorization does not itself execute Engineer work.
 
 Sei III accepted the brief at `!38:36`, began at `!36:35`, completed the remaining build/package/boundary gates, and paused correctly for a fresh irreversible-operation reading. At `!32:35`, controlled publication Attempt 2 ran exactly once and returned a deployment identity and definitive `succeeded` status for existing saved Version 21. After propagation, all five authorized anonymous markers matched. No source file, save/version, preview, retry, authentication, held scenario, broad smoke, schema/data, migration, release-marker, rollback, restore, or destructive action occurred. The brief is complete and a separate Planner decision now controls Product Owner hands-on validation.
+
+Product Owner selected Decision 1:B and parked Version 21 hands-on validation. The release sprint is complete. The active workflow now pilots Quatre as persistent parent, Planner, usage governor, and Site owner, with direct non-delegating children Relena and successor Engineer Kira. The Product Owner communicates only with Quatre; internal goals, briefs, reports, and evidence no longer require Product Owner transport. Kira cannot use Sites or credentials. Quatre may perform only explicitly authorized Site operations after a Kira release packet and Relena boundary confirmation.
 
 ## Other workstreams
 

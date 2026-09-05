@@ -4,7 +4,7 @@
 
 **Execution budget:** The Version 21 release slice completed after a final prepublication reading of `!32:35`; ending usage was not refreshed. Require a fresh reading before any later Engineer slice.
 
-**Queue state:** Throttle `DRAIN`. Exact Version 21 at `f15ea81` is definitively published; controlled Attempt 2 succeeded and all five authorized anonymous markers match. No Engineer brief remains eligible. Product Owner hands-on validation remains separately gated through Planner Decision 1.
+**Queue state:** Throttle `DRAIN`. Exact Version 21 at `f15ea81` is definitively published; controlled Attempt 2 succeeded and all five authorized anonymous markers match. Product Owner hands-on validation is parked by Decision 1:B. No Engineer goal is active; Quatre-parent pilot transition is next.
 
 **Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

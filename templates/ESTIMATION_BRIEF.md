@@ -1,18 +1,19 @@
 # Engineer Estimation Brief
 
-> Designer-to-Engineer transport for bounded read-only estimation, feasibility, or source/collision inspection. This is not an implementation brief and grants no authority to modify application source or Site state.
+> Durable read-only estimation, feasibility, or source/collision goal transmitted internally by Planner — Quatre to direct Engineer subagent Kira. The Product Owner does not carry this file. It grants no authority to modify application source or Site state.
 
 Engineer must read `docs/ENGINEER_EXECUTION_CONTRACT.md` before acceptance and execution. Read-only tool failures block only the exact action unless evidence proves the whole request unsafe; use only the fallback ladder explicitly authorized here.
 
 ## Chat identity
 
 - Assigned role: ENGINEER
-- Assigned name: SEI
-- Expected chat: CYOA — Engineer Sei
+- Parent/orchestrator: PLANNER — QUATRE
+- Assigned name: KIRA
+- Delegation depth: 1 — Kira must not spawn
 - Expected context: <!-- continuing | new | source recovery -->
 - Required source state: <!-- Exact source/version and access required for inspection -->
 
-Before acceptance, Sei reports context continuity, unpublished work, editable-source access, working-tree state, latest saved/published versions, and whether actual context matches this request. A mismatch parks the request without reconstruction.
+Before acceptance, Kira reports context continuity, unpublished work, editable-source access, working-tree state, latest saved/published versions, and whether actual context matches this request. A mismatch parks the request without reconstruction. Kira returns directly to Quatre.
 
 ## Request identity and lifecycle
 
@@ -21,14 +22,14 @@ Before acceptance, Sei reports context continuity, unpublished work, editable-so
 - Work type: `ESTIMATION/INSPECTION ONLY`
 - Status: `NON-EXECUTABLE IMPLEMENTATION AUTHORITY`
 - Priority/dependencies:
-- Eligibility command or condition:
+- Quatre transmission/activation condition:
 - Queue/throttle condition:
 
 ## Usage and model profile
 
 Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. It records usage only and never accepts or activates this request.
 
-- Preferred model: <!-- Default Sei profile: GPT-5.6 Terra. -->
+- Preferred model: <!-- Default Kira profile: GPT-5.6 Terra. -->
 - Reasoning effort: <!-- Default: Medium. -->
 - Speed mode: <!-- Default: Standard; Fast remains off. -->
 - Current five-hour percentage:
@@ -42,9 +43,9 @@ Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five
 - Work deferred until the next reset:
 - Prioritized read-only fallback ladder: <!-- Predictable access/tool limitations in order; mark any fallback requiring new authority. -->
 
-The Product Owner selects the actual model. This request cannot change it automatically. Sei may escalate from Terra to Sol only when this accepted request recommends it or a later Planner/Product Owner decision approves it. Model, reasoning, tools, context, and task complexity can change observed usage.
+The Product Owner controls actual model selection through Quatre. This request cannot change it automatically. Kira may use Sol only when this accepted request recommends it or a later Planner/Product Owner decision approves it. Model, reasoning, tools, context, and task complexity can change observed usage.
 
-Keep this file in `briefs/` until Designer accepts the corresponding sanitized report. The request must exist in transport before Engineer begins; repository planning text, a copy-ready prompt, or an embedded estimation gate is not a brief and does not authorize work retroactively.
+Keep this durable record in the designated internal brief store until Quatre accepts Kira's corresponding sanitized report and routes any needed design review to Relena. The Product Owner does not transport it. Repository planning text or an embedded estimation gate is not execution authority.
 
 ## Authoritative inputs
 
@@ -71,8 +72,8 @@ For each requested unit, return as applicable:
 
 ## Authority and exclusions
 
-- Allowed: read authoritative documents and inspect the named existing message/Sites/source context without mutation; prepare one sanitized report in `inbox/`.
-- Not allowed: modify or generate application source/tests/dependencies; materialize or overwrite source; create a commit/package; save or preview a Site version; deploy or publish; access production data; change schema/data; migrate; restore; roll back; or treat the estimate as implementation authority.
+- Allowed: read authoritative documents and inspect the named existing source context without mutation; return one sanitized report directly to Quatre.
+- Not allowed: spawn subagents; invoke Sites tools or obtain Sites credentials; modify or generate application source/tests/dependencies; materialize or overwrite source; create a commit/package; save or preview a Site version; deploy or publish; access production data; change schema/data; migrate; restore; roll back; or treat the estimate as implementation authority.
 - Do not expose secrets, private data, credentials, environment values, private URLs, or unsanitized artifacts.
 
 ## Stop conditions
@@ -81,4 +82,4 @@ Stop and report if context/source identity does not match, required evidence rem
 
 ## Required footer
 
-Close acceptance, blocker, and completion reports using the canonical `TL;DR` / `NEXT OWNER` / `ACTION` footer in `docs/HANDOFF_PROTOCOL.md`.
+Address acceptance, blocker, and completion reports to `PLANNER — QUATRE`. If a durable footer is used, set `NEXT OWNER: PLANNER — QUATRE`; never instruct the Product Owner to contact another agent.
