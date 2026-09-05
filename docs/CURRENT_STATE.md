@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-09-04
+**Last reviewed:** 2026-09-05
 
 For a concise visual summary, see the [Project Dashboard](PROJECT_DASHBOARD.md). This document remains authoritative for exact operational state, gates, ownership, blockers, usage, and validation evidence.
 
@@ -22,11 +22,11 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 
 ## Queue and ownership
 
-- **Current role identities:** Parent/Planner/Site owner — Quatre; direct Designer child — Relena; successor direct Engineer child — Kira. Engineer — Sei and Sei I–III are retired after the final retirement checkpoint.
+- **Current role identities:** Parent/Planner/Site owner — Quatre; direct Designer child — Relena; successor direct Engineer child — Kira. Engineer — Sei and Sei I–III are retired permanently. The old separate-chat role workflow is closed.
 
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the release sprint is complete and no application goal is active.
-- **Engineer state:** `SEI III — RELEASE COMPLETE / FINAL RETIREMENT COMMAND PENDING`; `KIRA — SUCCESSOR DESIGNATED / NOT YET ACTIVE`.
+- **Engineer state:** `SEI III — RETIRED / NO AUTHORITY`; `KIRA — SUCCESSOR DESIGNATED / NOT INITIALIZED / NO AUTHORITY`.
 - **Pilot topology:** Quatre is the only parent. Relena, Kira, and any justified temporary test/review agents are direct children and may not spawn. Only one application-source writer may be active; parallel writers require isolated worktrees and collision review.
 - **Sites ownership:** Quatre only. Kira may inspect, implement, test, build, package, and prepare a release packet but may not invoke Sites tools, obtain Sites credentials, save, preview, deploy, publish, or perform the final Site handoff.
 - **Engineer completion:** Exact checkpoint `f15ea8144ec277a737f5e491e0276b60555cafb8` remains clean. Relative to Version 20 it contains exactly `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx`. Lint passes with zero errors/two established warnings, focused tests pass 17/17, full serial tests pass 93/93, production build passes, desktop/mobile responsive and accessibility QA passes, focus restoration and cover-error fallback pass, and final boundary/no-data checks pass. The generated TypeScript artifact remains in private quarantine with identity preserved. Standalone type checking remains a known environment/project limitation with no candidate-page error.
@@ -41,9 +41,10 @@ Sei returned a read-only source-informed A–H estimate against exact Version 20
 - **Focused diagnosis result:** Gate 0 passed under process-local bundled Node `v24.19.0`. A setup parameter error occurred before any test process and consumed no attempt. Diagnostic Attempt 1 reproduced the missing-result output/controller behavior. Attempt 2 used the supported serial verbose form and definitively passed the exact focused file at 17/17 with exit 0; Attempt 3 was unnecessary. Reused Node 24 lint remained attributable. The subsequent full serial suite emitted test output but no final attributable summary/count, so 93/93 cannot be claimed. Build, remaining package/boundary gates, publication, and public comparison were unrun. Controlled Attempt 2 remains unused at 0 invocations. Source/process state remained clean with no file or generated-artifact change.
 - **Evidence decision:** Product Owner selected Decision 1:B, explicitly accepting retained full serial 93/93 plus current Node 24 lint, focused 17/17, exact identity, and clean-state evidence for unchanged `f15ea81`. This waives only a fresh full-suite count; any drift invalidates the waiver.
 - **Version 21 release completion:** Sei III accepted and ran the exact brief. Gate 0 passed; production build, 47-file package/manifest, clean-state, whitespace, three-file delta, migration/lockfile/configuration, secret, process, and protected-boundary checks passed under process-local Node `v24.19.0`. The final prepublication reading was `!32:35`. Controlled Attempt 2 ran exactly once and returned definitive `succeeded` status plus deployment identity. After one cached/propagating render, a fresh anonymous page matched visible mobile Shopping, Bookcase primary, Shelf alternate, selectable informative missing position, and selected-book cover fallback. Source files changed: none. No retry, alternate path, save/version, preview, authentication, held scenario, broad smoke, schema/data action, migration, release marker, rollback, restore, or destructive action occurred.
+- **Sei III final retirement:** The accepted 2026-09-05 read-only continuity report reconfirmed exact `f15ea8144ec277a737f5e491e0276b60555cafb8` on configured `main`; zero modified, staged, stashed, or ordinary untracked source files; preserved unchanged ignored 47-file build output; no candidate-owned Node/npm/pnpm/Vitest process; no unpublished source or successor-critical private artifact; and no accepted or active work. Version 21 and its five-marker evidence remain authoritative. Sei III has no authority and cannot resume. Kira receives no state or authority by implication.
 - **Held validation decision:** Product Owner selected Decision 1:B. Version 21 hands-on validation remains parked and is not a failure or implementation requirement. The visible release marker remains deferred.
 - **Planner decisions:** None pending.
-- **Active owner:** `PLANNER — QUATRE` — initialize the one-level pilot, issue Sei III's retirement checkpoint, and select the next completion-oriented CYOA goal when warranted.
+- **Active owner:** `PLANNER — QUATRE` — initialize the persistent parent from the final transition checkpoint. Do not initialize children or select new product work merely because the transition is ready.
 - **Blocking owner:** None. No Engineer goal is active.
 - **Potential later owner:** `PRODUCT OWNER` — may explicitly unpark the separately prepared Version 21 hands-on checklist later. It is not active now.
 
@@ -96,4 +97,4 @@ A task-level question preserves the exact safe resume point and enters `WAITING 
 
 ## Next milestone
 
-Exact Version 21 at `f15ea81` is definitively published and all five anonymous public markers match. Product Owner hands-on validation is parked by Decision 1:B. The next milestone is the Quatre-parent pilot transition: retire Sei III at a no-work continuity checkpoint, initialize direct children only when a real goal exists, and keep every Site/release/production gate closed until explicitly authorized.
+Exact Version 21 at `f15ea81` is definitively published and all five anonymous public markers match. Product Owner hands-on validation is parked by Decision 1:B. Sei III and the old separate-chat workflow are retired. The next step is Quatre parent initialization from the final Designer transition checkpoint; direct children initialize only for a real authorized goal, and every Site/release/production gate remains closed until explicitly authorized.

@@ -16,25 +16,13 @@ This document is the authoritative workflow overlay for the CYOA-only one-level 
 | Engineer — Kira | Direct Quatre child | Source inspection, implementation, tests, build, package, and validated release packet | Spawn subagents; invoke Sites tools; obtain Sites credentials; save, deploy, publish, or perform final Site handoff |
 | Temporary test/review agent | Direct Quatre child when justified | One bounded read-only or test/review goal | Spawn subagents; gain implicit implementation, Site, production, or product authority |
 
-`ENGINEER — SEI` is retired after Sei III's final Version 21 continuity and release report. Never reuse Sei as a current Engineer identity. Kira is the successor role context, not a claim that unpublished Sei state transferred automatically.
+`ENGINEER — SEI` was retired permanently after Sei III's accepted final Version 21 continuity report on 2026-09-05. Never reuse Sei as a current Engineer identity. Kira is the successor role context, not a claim that unpublished Sei state or authority transferred automatically.
 
-### One-time Sei III retirement checkpoint
+### Completed Sei III retirement checkpoint
 
-The Product Owner may send the following one final direct command to the pre-pilot Sei III chat. This is a transition exception, not an ongoing communication route:
+Sei III's final read-only continuity report was accepted on 2026-09-05. It verified exact clean Version 21 source at `f15ea8144ec277a737f5e491e0276b60555cafb8`, preserved unchanged ignored 47-file build output, no candidate-owned process, no unpublished source or successor-critical artifact, and no accepted or active work. Version 21 remains definitively published and all five authorized anonymous markers remain matched.
 
-```text
-ENGINEER — SEI III
-
-!stop
-
-This is your final CYOA retirement checkpoint before the one-level subagent pilot.
-
-Perform read-only continuity reporting only. Confirm the exact source identity, branch and clean/dirty/staged/stashed/untracked state; any unpublished, generated, package, or process state; the completed Version 21 publication and five-marker evidence; and whether any accepted work remains unfinished. Preserve anything found unchanged. Do not edit source, run implementation or validation, invoke Sites, obtain credentials, save, deploy, publish, access or mutate production, clean the worktree, or begin new work.
-
-Write one sanitized FINAL CONTINUITY / RETIREMENT report to the shared Engineer inbox addressed to PLANNER — QUATRE. End it with exactly one TL;DR / NEXT OWNER / ACTION footer naming PLANNER — QUATRE. Do not instruct the Product Owner to carry the report or contact another agent. Then mark ENGINEER — SEI III retired and accept no further work.
-```
-
-After this one command, the Product Owner communicates only with Quatre. Quatre reads and reconciles the retirement report internally before activating Kira.
+The one-time direct Product Owner retirement route is closed. The Product Owner now communicates only with Quatre. Sei III cannot resume, and Kira receives no state or authority by implication.
 
 ## One-level topology
 
@@ -117,4 +105,5 @@ External local `briefs/`, `inbox/`, and `processed/` may remain as durable evide
 - Controlled publication Attempt 2 succeeded and all five anonymous correction markers matched.
 - Product Owner hands-on validation is parked by Decision 1:B.
 - No Engineer goal is active.
+- Sei III and the old separate-chat workflow are retired; Kira is not initialized and has no authority.
 - All later publication, Site, production, schema/data, migration, credential, rollback, restore, destructive recovery, and external-sharing operations remain gated.

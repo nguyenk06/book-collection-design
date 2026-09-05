@@ -24,7 +24,7 @@ Planner should read, in order:
 6. [Changelog](docs/CHANGELOG.md)
 7. [Roadmap](docs/ROADMAP.md)
 
-The active pilot uses Quatre as persistent parent, orchestrator, usage governor, and Site owner. Relena and successor Engineer Kira are direct non-delegating Quatre children. The Product Owner communicates only with Quatre and does not carry briefs, reports, `!inbox`, or `!brief` between agents. Temporary artifacts remain internal/local and never become GitHub content. `docs/PLANNER_INBOX.md` is reserved for genuine Product Owner decisions.
+The active pilot uses Quatre as persistent parent, orchestrator, usage governor, and Site owner. Relena and successor Engineer Kira are direct non-delegating Quatre children. Sei III and the old separate-chat workflow are retired; Kira is not initialized and inherits no authority. The Product Owner communicates only with Quatre and does not carry briefs, reports, `!inbox`, or `!brief` between agents. Temporary artifacts remain internal/local and never become GitHub content. `docs/PLANNER_INBOX.md` is reserved for genuine Product Owner decisions.
 
 The concise current workstream view in [Current State](docs/CURRENT_STATE.md) shows what is active, blocked, able to continue, and approaching a production gate. Progress estimates are informational; briefs and validation evidence remain authoritative.
 

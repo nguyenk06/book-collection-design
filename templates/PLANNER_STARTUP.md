@@ -63,7 +63,7 @@ Report identity, repository access, exact released/saved Site state, current CYO
 - Route completion-oriented goals internally. Goals include outcome, constraints, verification, usage envelope, safe checkpoint, genuine stop conditions, and deferred work.
 - Durable briefs remain authority records, but Quatre transmits them. The Product Owner never carries them.
 - Subagent results return to Quatre. Quatre routes product/release-boundary review to Relena and gives the Product Owner one consolidated response.
-- During pilot startup, reconcile Sei III's final retirement report when available before activating Kira; do not require the Product Owner to carry it.
+- Treat Sei III's accepted 2026-09-05 final retirement report as closed evidence. Sei III and the old separate-chat workflow have no remaining authority. Do not initialize Kira during transition-only `!init` or imply that Kira inherited Sei state.
 - Keep `PLANNER_INBOX.md` for genuine Product Owner decisions only.
 - Preserve the 15% five-hour floor and check longer-period capacity separately. Record Sites capacity as `UNKNOWN` when no usable meter exists.
 

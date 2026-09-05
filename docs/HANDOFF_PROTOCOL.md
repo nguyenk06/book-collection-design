@@ -6,7 +6,7 @@ This protocol defines the file-based exchange between the Design workspace and t
 
 The [CYOA One-Level Codex Subagent Pilot](ONE_LEVEL_SUBAGENT_PILOT.md) is the current workflow authority. Quatre is the persistent parent, Planner, usage governor, and Site-owning agent. Relena and Kira are direct Quatre children and must not spawn. The Product Owner communicates only with Quatre and no longer carries briefs, reports, `!inbox`, `!brief`, or role prompts between agents.
 
-External `briefs/`, `inbox/`, and `processed/` remain optional durable evidence stores, but Quatre routes them internally. Older separate-chat command/lifecycle sections below are retained for file-integrity, sanitization, and historical compatibility only; they do not override the pilot topology, Product Owner interface, Kira Site prohibition, or Quatre Site ownership.
+External `briefs/`, `inbox/`, and `processed/` remain optional durable evidence stores, but Quatre routes them internally. The old separate-chat workflow is retired. Its command/lifecycle sections below are retained for file-integrity, sanitization, and historical reference only; they cannot activate work or override the pilot topology, Product Owner interface, Kira Site prohibition, or Quatre Site ownership.
 
 ## Engineer Read Location
 

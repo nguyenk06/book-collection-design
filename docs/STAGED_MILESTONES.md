@@ -4,9 +4,9 @@
 
 **Execution budget:** The Version 21 release slice completed after a final prepublication reading of `!32:35`; ending usage was not refreshed. Require a fresh reading before any later Engineer slice.
 
-**Queue state:** Throttle `DRAIN`. Exact Version 21 at `f15ea81` is definitively published; controlled Attempt 2 succeeded and all five authorized anonymous markers match. Product Owner hands-on validation is parked by Decision 1:B. No Engineer goal is active; Quatre-parent pilot transition is next.
+**Queue state:** Throttle `DRAIN`. Exact Version 21 at `f15ea81` is definitively published; controlled Attempt 2 succeeded and all five authorized anonymous markers match. Product Owner hands-on validation is parked by Decision 1:B. Sei III and the old separate-chat workflow are retired. No Engineer goal is active; Quatre parent initialization is the only next transition action.
 
-**Usage state:** Version 20 preserves the exact validated cumulative source. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** Version 21 is the authoritative exact published checkpoint; Version 20 remains retained history. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
