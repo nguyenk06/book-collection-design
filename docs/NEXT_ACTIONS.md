@@ -4,13 +4,13 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence. Exact Version 21 at `f15ea81` is the authoritative published checkpoint; checkpoint `608553f` is excluded. M4 historical transport closure remains permanently unverifiable.
+- **Workflow state:** M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within bounded evidence and carried unchanged into exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6`. Version 22 is the authoritative saved and published checkpoint; checkpoint `608553f` remains excluded. M4 historical transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; the Version 21 release sprint is complete and no Engineer goal is active.
 - **Readiness state:** Quatre completed parent handoff/readiness initialization. Relena and Kira were then sequentially initialized as ready direct children, and the Product Owner/Quatre orchestration channel is active.
-- **Engineer state:** Sei III's final continuity report is accepted; Sei III is retired with no active or inherited authority. Kira is initialized and ready but idle, has accepted no goal, inherits no Sei state or authority, and has no Sites rights.
+- **Engineer state:** Sei III's final continuity report is accepted; Sei III is retired with no active or inherited authority. Kira completed and reconciled the bounded Version 22 release packet and is now ready but idle with no active goal, inherited Sei authority, or Sites rights.
 - **Next owner:** `PLANNER — QUATRE` — keep both ready children idle until one separately authorized completion-oriented goal is selected, scoped, collision-checked, and sized.
-- **Usage:** Current reported capacity is `!77:20`. Preserve the 15% five-hour floor and check the 20% longer-period allowance separately. The older 31% longer-period reading is historical only. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
+- **Usage:** Current reported capacity is `!100:14`. Preserve the 15% five-hour floor and check the 14% longer-period allowance separately. Earlier longer-period readings are historical only. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -18,7 +18,7 @@ Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently conf
 
 - M1, M3, M4, M5, and M6 and M2 Gates 0–5 are complete within their recorded evidence boundaries. No continuation or corrective release goal is active.
 - Version 21 hands-on validation and later smoke remain parked by Decision 1:B. They are not failures or implied implementation scope.
-- The accepted My Library direction includes an owner-visible version/build reference. A later visible version-number quality-of-life change must be a new, bounded application-source goal that defines the displayed identity and audience, starts from a verified source baseline, preserves authentication and data boundaries, and completes local tests/build plus a Kira release packet and Relena boundary review. It does not reopen Version 21 validation and grants no save, preview, deployment, publication, or production authority; any Site operation remains a separate Product Owner gate owned by Quatre.
+- The separately authorized visible version-number quality-of-life goal is complete as exact saved and published Version 22. Its three-file delta adds public `v22`, accessible `Release version 22`, and focused coverage; Quatre's publication succeeded and bounded public HTTP verification passed. This did not reopen Version 21 validation or authorize another Site operation.
 - My Library phases, safe import/restore, AI Review, cover enrichment, asset lifecycle, Tags, and expanded administration/analysis remain roadmap work rather than executable queue items. Quatre must select and authorize one coherent goal before either child proceeds.
 
 ## M6 locally complete
@@ -167,8 +167,8 @@ On 2026-09-05, Sei III's final read-only continuity/retirement report was accept
 
 ## Other workstreams
 
-- M4 bounded Bookshelf was first published in Version 20 and its bounded corrections are published in Version 21; Product Owner hands-on validation remains parked.
-- M5 catalog export foundation is published in Version 21. The private Gate 2 bridge export and M5 catalog export are useful but neither is a complete production backup; both exclude R2 bytes.
+- M4 bounded Bookshelf was first published in Version 20, corrected in Version 21, and carried unchanged into Version 22; Product Owner hands-on validation remains parked.
+- M5 catalog export foundation is carried unchanged into Version 22. The private Gate 2 bridge export and M5 catalog export are useful but neither is a complete production backup; both exclude R2 bytes.
 - Mutable import, AI Review, reference-cover enrichment, Tags, and dedicated analysis remain behind their accepted dependencies and are not current queue work.
 
 ## Resume and stopping rules

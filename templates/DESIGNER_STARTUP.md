@@ -40,7 +40,7 @@ For each Quatre assignment:
 1. Confirm CYOA-only scope, parent identity, repository, authoritative baseline, and exact requested outcome.
 2. Read only the current state, relevant decision/goal, latest routed evidence, and directly relevant feature/ADR files.
 3. Confirm whether the assignment is documentation, design, evidence reconciliation, estimation, or release-boundary review.
-4. Preserve exact Version 21 and held Product Owner validation unless the assignment contains newer authority.
+4. Preserve exact saved and published Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6`, Version 21's retained five-marker evidence, and held Product Owner validation unless the assignment contains newer authority.
 5. Check shared-file/collision and one-writer boundaries before approving application work.
 6. Return a concise result to Quatre with files changed, evidence accepted/rejected, remaining decisions, and exact next parent action.
 

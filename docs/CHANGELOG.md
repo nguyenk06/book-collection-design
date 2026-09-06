@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-05 — Exact Version 22 published; public version label verified
+
+- Accepted Kira's reconciled three-file quality-of-life release packet over exact Version 21. Exact source `a360c97679a47ce604fa712245fcc3935a649df6` changes only `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` to add public `v22`, accessible `Release version 22`, and focused coverage.
+- Recorded focused 18/18, full 94/94, lint with zero errors/two established warnings, and successful production build, with no manifest, lockfile, hosting, schema, migration, data, API, authentication, or application-state change.
+- Recorded Quatre's explicitly authorized publication of exact saved Version 22. The deployment returned definitive `succeeded` at the existing public CYOA URL.
+- Recorded bounded read-only public HTTP 200 verification of visible `v22`, accessible `Release version 22`, and Shopping navigation.
+- Preserved Version 21's five-marker evidence and parked hands-on validation under Decision 1:B. No broader smoke, production data/schema, migration, authentication, or API-behavior scope was activated.
+- Returned the queue to `DRAIN` with no active Engineer goal. Current capacity is `!100:14`, the 15% five-hour floor remains in force, and Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-05 — Quatre and direct-child readiness initialized
 
 - Recorded completion of the Quatre parent handoff/readiness initialization and activation of the Product Owner/Quatre orchestration channel.

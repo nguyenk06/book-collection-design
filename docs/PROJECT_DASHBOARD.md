@@ -17,11 +17,11 @@ These estimates intentionally measure different outcomes. High local completion 
 | Milestone | Coarse estimate | Status | Release boundary |
 | --- | ---: | --- | --- |
 | M1 — Validation-environment feasibility | **100%** | Complete locally | Investigation completed; no safe runnable unpublished preview was found |
-| M2 — Controlled Shopping release | **~95%** | Release-gated | Exact Version 21 published and anonymous markers match; Product Owner validation and later smoke remain gated |
-| M3 — Canonical identifiers | **100% locally** | Published; validation-gated | Included in Version 21; not independently hands-on validated |
-| M4 — Bookshelf | **100% locally** | Published; validation-gated | Included in Version 21; anonymous correction markers match; Product Owner checkpoint remains gated |
-| M5 — Export foundation | **100% locally** | Published; partial operational evidence | Included in Version 21; not a complete production backup |
-| M6 — Downloadable catalog export | **100% locally** | Published; validation-gated | Included in Version 21; hands-on checkpoint remains separate |
+| M2 — Controlled Shopping release | **~95%** | Release-gated | Carried unchanged into exact Version 22; public Shopping navigation reconfirmed, prior markers retained, and Product Owner validation/later smoke remain gated |
+| M3 — Canonical identifiers | **100% locally** | Published; validation-gated | Carried unchanged into Version 22; not independently hands-on validated |
+| M4 — Bookshelf | **100% locally** | Published; validation-gated | Carried unchanged into Version 22; Version 21 marker evidence retained; Product Owner checkpoint remains gated |
+| M5 — Export foundation | **100% locally** | Published; partial operational evidence | Carried unchanged into Version 22; not a complete production backup |
+| M6 — Downloadable catalog export | **100% locally** | Published; validation-gated | Carried unchanged into Version 22; hands-on checkpoint remains separate |
 
 Every milestone percentage is a coarse planning estimate. “100% locally” means the accepted local scope is implemented and validated; it never means saved, published, production-verified, or live-validated.
 
@@ -29,9 +29,9 @@ Every milestone percentage is a coarse planning estimate. “100% locally” mea
 
 ```mermaid
 flowchart LR
-    A["Preserve cumulative candidate<br/>Complete · Version 21"]
+    A["Preserve cumulative candidate<br/>Complete · Version 22"]
     B["Verify Gate 4 preservation<br/>Complete · bounded evidence accepted"]
-    C["Publish Shopping<br/>Complete · Version 21"]
+    C["Publish Shopping<br/>Complete · Version 22"]
     D["Live validation<br/>Parked by Product Owner"]
 
     A --> B --> C --> D
@@ -45,9 +45,9 @@ flowchart LR
     class D closed
 ```
 
-- **Preserve:** Complete. Exact cumulative source was preserved through Version 20 and the bounded correction candidate was saved and published as exact Version 21.
+- **Preserve:** Complete. Exact cumulative source was preserved through Version 20, the bounded correction candidate was saved and published as Version 21, and the isolated version-label delta was saved and published as exact Version 22.
 - **Verify Gate 4:** Complete within the bridge-observable boundary; this does not prove D1 snapshot, R2-byte backup, restore readiness, or complete backup.
-- **Publish Shopping:** Complete. Exact saved Version 21 at `f15ea81` published with definitive success; later checkpoint `608553f` remains excluded.
+- **Publish Shopping:** Complete. Exact saved Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is published with definitive success; Shopping feature source is unchanged from Version 21, and later checkpoint `608553f` remains excluded.
 - **Live validation:** Requires an explicitly authorized live-only sequence because supported tooling exposes no runnable unpublished preview.
 
 Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CURRENT_STATE.md) and [Next Actions](NEXT_ACTIONS.md).
@@ -56,7 +56,7 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Exact Version 21 is published and all five authorized anonymous correction markers match; Product Owner hands-on validation is parked |
+| My Library visual experience | Partial | Exact Version 22 is published with its public release label verified; Version 21's five-marker evidence remains retained and Product Owner hands-on validation is parked |
 | Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
 | Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |

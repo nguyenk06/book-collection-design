@@ -56,13 +56,13 @@ Unpublished Site Version 17 preserves locally validated persistence and owner-au
 - Nullable collection target price, with CYOA configured to 600 cents locally.
 - Nullable Book Added Date for new manual/imported records without fabricating historical dates.
 
-Version 17 remains historical evidence for the saved persistence/API foundation; saving it did not execute its packaged migration or add Shopping Mode UI. Version 19 later supplied the owner-authenticated administration surface for Gates 2–4. Gate 3 invoked the guarded additive activation exactly once, and Gate 4 independently confirmed schema-complete and zero-FK status within its bridge-observable boundary. Exact cumulative Version 20 then published Shopping/M3–M6/Bookshelf successfully. Replacement mobile-navigation and Bookshelf corrections are now saved and definitively published as Version 21 at exact `f15ea81`. Purchase creation intentionally does not update Book ownership or copy counts.
+Version 17 remains historical evidence for the saved persistence/API foundation; saving it did not execute its packaged migration or add Shopping Mode UI. Version 19 later supplied the owner-authenticated administration surface for Gates 2–4. Gate 3 invoked the guarded additive activation exactly once, and Gate 4 independently confirmed schema-complete and zero-FK status within its bridge-observable boundary. Exact cumulative Version 20 then published Shopping/M3–M6/Bookshelf successfully. Replacement mobile-navigation and Bookshelf corrections were saved and definitively published as Version 21 at exact `f15ea81` and are carried unchanged into exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6`. Purchase creation intentionally does not update Book ownership or copy counts.
 
 ## Remaining Milestone Work
 
-- Exact Version 21 is definitively published. After propagation, anonymous checks matched visible mobile Shopping plus all four Bookshelf-related correction markers.
+- Exact Version 22 is definitively saved and published. Read-only public HTTP verification confirmed Shopping navigation plus the visible and accessible version label; Version 21's five-marker evidence remains retained for unchanged feature source.
 - Product Owner hands-on validation is parked by Decision 1:B. Mutating Shopping scenarios and broad smoke remain separately gated.
-- Preserve exact Version 21 at `f15ea81` as the current released baseline.
+- Preserve exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` as the current released baseline and Version 21 at `f15ea81` as its correction-evidence baseline.
 - Define user-facing reconciliation when Purchase history and editable ownership state disagree.
 
 ## Verified Local UI Phase

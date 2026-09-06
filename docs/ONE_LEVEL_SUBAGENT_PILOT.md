@@ -101,8 +101,8 @@ External local `briefs/`, `inbox/`, and `processed/` may remain as durable evide
 
 ## Pilot baseline
 
-- Exact Version 21 at `f15ea8144ec277a737f5e491e0276b60555cafb8` is definitively published.
-- Controlled publication Attempt 2 succeeded and all five anonymous correction markers matched.
+- Exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is the authoritative saved and published checkpoint. It adds only the public version badge and focused test over exact Version 21.
+- Quatre's authorized Version 22 publication returned definitive `succeeded`; public HTTP verification returned 200 and matched visible `v22`, accessible `Release version 22`, and Shopping navigation. Version 21's controlled Attempt 2 and five anonymous correction-marker matches remain retained evidence for unchanged feature source.
 - Product Owner hands-on validation is parked by Decision 1:B.
 - No Engineer goal is active.
 - Quatre completed read-only parent handoff/readiness initialization, and the Product Owner/Quatre orchestration channel is active.

@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 21 at exact `f15ea81` is definitively published; all five authorized anonymous correction markers matched. Product Owner hands-on validation is parked. Later local Phase A/D checkpoint `608553f` remains excluded. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 22 at exact `a360c97679a47ce604fa712245fcc3935a649df6` is definitively saved and published. It adds only the public `v22` header badge and its focused test over Version 21; public HTTP verification returned 200 and confirmed the visible and accessible release label plus Shopping navigation. Version 21's five-marker evidence remains retained, and Product Owner hands-on validation remains parked. Later local Phase A/D checkpoint `608553f` remains excluded. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

@@ -55,7 +55,7 @@ Quatre transmits one completion-oriented goal and any durable brief internally. 
 4. Confirm the current five-hour reading, 15% floor, separate longer-period allowance, and that Sites capacity is either a real reported value or `UNKNOWN`—never inferred.
 5. Report acceptance or the minimum mismatch directly to Quatre. Do not reconstruct or overwrite unavailable unpublished work without authority.
 
-`ENGINEER — SEI` and its suffixes are retired historical identities. Kira does not inherit Sei's unsaved state or authority by implication. Exact Version 21 release evidence remains authoritative until a later approved goal changes it.
+`ENGINEER — SEI` and its suffixes are retired historical identities. Kira does not inherit Sei's unsaved state or authority by implication. Exact saved and published Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is the current release baseline; Version 21's five-marker evidence remains retained for unchanged feature source until a later approved goal changes it.
 
 ## Active goal behavior
 
