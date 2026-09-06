@@ -56,13 +56,14 @@ Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CU
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
-| My Library visual experience | Partial | Exact Version 22 is published with its public release label verified; Version 21's five-marker evidence remains retained and Product Owner hands-on validation is parked |
-| Safe import and restore | Planned | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
-| AI review | Planned | Needs versioned interchange, proposal/review staging, and concurrency protection |
-| Cover enrichment | Planned | Needs attribution, personal/reference separation, and safe identifier matching |
-| Asset lifecycle | Partial | Upload/serving exists; metadata, variants, cleanup, and complete byte backup remain incomplete |
-| Tags | Planned | Persistence and assignment model are absent |
-| Administration and analytics | Partial | Owner administration exists for bounded operations; dedicated analysis/administration remains later scope |
+| Phase A — IA and responsive shell | Selected next priority after capacity recovery | Mandatory visual review, current Version 22 composition/collision review, fresh estimate, bounded goal, and separate execution authority required |
+| 1 — Reference-cover enrichment | Planned · medium-large | Needs attribution, personal/reference separation, safe identifier matching, and a confirmed cover-click source boundary |
+| 2 — Asset lifecycle and complete cover backup | **NEEDS MORE INFORMATION** · medium-large | Upload/serving exists; metadata, variants, cleanup, complete byte backup, and recovery guarantees need a clarified boundary |
+| 3 — Scanner/matching improvements | Partial · medium | Canonical identifier foundation exists; fuzzy candidate and user-facing matching remain later |
+| 4 — Tags | Planned · medium | Persistence and assignment model are absent |
+| 5 — Safe import/restore | Planned · medium-large | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
+| 6 — AI Review | Planned · large | Needs versioned interchange, proposal/review staging, and concurrency protection |
+| 7 — Expanded administration and analysis | Partial · medium | Owner administration exists for bounded operations; dedicated analysis remains later scope |
 
 These are roadmap capabilities, not fill-in tasks and not executable authority.
 

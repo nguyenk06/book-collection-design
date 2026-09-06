@@ -62,6 +62,10 @@ The bounded Bookshelf is complete locally and published in exact cumulative Vers
 
 Historical checkpoint `80e4c61` remains retired as an executable candidate. Replacement remediation from exact Version 20 is complete at clean checkpoint `f15ea81`, saved, and definitively published as Version 21. Controlled Attempt 2 returned deployment identity and `succeeded` status. After propagation, anonymous checks matched Bookcase primary, Shelf alternate, selectable informative missing positions, and selected-book cover fallback. That feature source is carried unchanged into exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6`; the Version 22 publication changed only the public version label and focused test. Product Owner hands-on validation is parked by Decision 1:B. See the [remediation plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md).
 
+## Product Owner visual-review observations
+
+The latest review found the Bookcase format direction correct while expecting more visible spines, observed that selecting a Book did not load a cover, and requested missing-book details in Shelf mode for at-a-glance review. These are qualitative expectations, not accepted defects, regression evidence, or implementation authority. Exact density, cover-click behavior/source, and missing-book fields remain Product Owner decisions in [Planner Inbox](PLANNER_INBOX.md). The prior Version 21 anonymous marker evidence and parked hands-on-validation boundary remain unchanged.
+
 ## Future improvements
 
 - One continuing vertical bookcase per collection, explicit switching, mobile bottom-sheet details, and restrained transitions as defined in [Visual Experience](VISUAL_EXPERIENCE.md).

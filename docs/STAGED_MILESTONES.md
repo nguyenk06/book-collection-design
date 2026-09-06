@@ -2,9 +2,9 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** The Version 22 quality-of-life release is complete. Current reported capacity is `!100:14`; preserve the 15% five-hour floor and check the 14% longer-period allowance separately before any later Engineer slice. Sites capacity is `UNKNOWN`.
+**Execution budget:** The Version 22 quality-of-life release is complete. Current reported capacity is `!85:12`; preserve the 15% five-hour floor and check the 12% longer-period allowance separately before any later Engineer slice. Sites capacity is `UNKNOWN`.
 
-**Queue state:** Throttle `DRAIN`. Exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is definitively saved and published; the public version label and Shopping navigation are verified. Version 21's five-marker evidence remains retained, and Product Owner hands-on validation remains parked by Decision 1:B. Sei III and the old separate-chat workflow are retired. Quatre, Relena, and Kira completed readiness initialization; no Engineer goal is active, and the next milestone requires Quatre to select and authorize one capacity-sized goal.
+**Queue state:** Throttle `DRAIN`. Exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is definitively saved and published. Product Owner Decision 1:A selects Phase A — IA and responsive shell as the next implementation priority after capacity recovery, but four visual/asset choices, visual criteria, and goal authorization must precede any source change. Version 21 hands-on validation remains parked. No Engineer goal is active.
 
 **Usage state:** Version 22 is the authoritative exact saved and published checkpoint; Versions 20 and 21 remain retained history and evidence. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 

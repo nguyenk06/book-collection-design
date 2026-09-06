@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-05 — Phase A priority selected; visual review decisions opened
+
+- Recorded Product Owner Decision 1:A selecting Phase A — IA and responsive shell as the next implementation priority after capacity recovery. This priority choice grants no implementation, validation, release, Site, or production authority.
+- Made visual review mandatory before any Phase A visual source change and preserved exact Version 22 as the required current composition baseline; excluded checkpoint `608553f` remains historical evidence only.
+- Recorded neutral Product Owner review findings for later convergence: Bookcase format is correct but should present more spines; book selection did not load a cover during review; Shelf should expose missing-book details for at-a-glance review. These observations are not defect findings or implementation scope.
+- Reordered the additional roadmap exactly: Reference-cover enrichment; asset lifecycle and complete cover backup (`NEEDS MORE INFORMATION`); Scanner/matching improvements; Tags; safe import/restore; AI Review; expanded administration and analysis.
+- Opened four concise Product Owner decisions for Bookcase density, cover-click behavior/source, missing-book fields, and the asset-lifecycle/backup boundary.
+- Recorded current capacity `!85:12`, preserved the 15% five-hour floor, and retained Sites capacity as `UNKNOWN`. No Engineer goal is active.
+
 ## 2026-09-05 — Exact Version 22 published; public version label verified
 
 - Accepted Kira's reconciled three-file quality-of-life release packet over exact Version 21. Exact source `a360c97679a47ce604fa712245fcc3935a649df6` changes only `app/page.tsx`, `app/globals.css`, and `tests/collection-behavior.test.tsx` to add public `v22`, accessible `Release version 22`, and focused coverage.
