@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-07 — Exact Phase A checkpoint published as Version 24
+
+- Saved and publicly deployed exact Phase A checkpoint `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` as Sites Version 24 at `https://cyoa-collection.znesfreak.chatgpt.site`; deployment returned definitive `succeeded` and preserved the existing public audience.
+- Preserved the accepted six-path Phase A boundary and matching visible/accessibility `v24` labels. The previously recorded focused 60/60, full 112/112, lint with zero errors/two established warnings, production build, protected-boundary checks, and Relena `PASS` remain the release evidence.
+- Product Owner visual review on the published Site is now the active acceptance gate. Local visual review is neither required nor feasible as representative acceptance because the local D1 schema lacks `books.stable_id` and triggers fallback behavior; this is pre-existing local environment/schema drift and was not remediated.
+- No production access or data mutation, credential change or disclosure, runtime-variable change, scanner-resolver/API/authentication/admin/schema/migration/dependency/lockfile change, Phase F work, or held Version 21 validation occurred. No later Site or release action is authorized by this closure.
+
 ## 2026-09-07 — Phase A Library-first shell completed locally
 
 - Implemented exact local checkpoint `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` from published Version 23. Library is the clean-root home; Library and Shopkeeper share Library/Shopkeeper/How it works destinations; the header exposes My Library, current collection, interactive view, applicable owner/admin state, and matching visible/accessibility `v24`; search remains collection-scoped.

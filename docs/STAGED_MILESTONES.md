@@ -2,11 +2,11 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** Phase 0, Version 23 scanner release, and Phase A local implementation are complete. The Phase A completion meter was 25% five-hour / 73% weekly; after the natural five-hour reset, the current authoritative meter is 99% / 68%. All three reset credits remain unused. Preserve the five-hour 10% clean-stop target/5% hard boundary and the default 15% weekly floor. Capacity does not authorize release or another goal; Sites capacity is `UNKNOWN`.
+**Execution budget:** Phase 0, Version 23 scanner release, and the Version 24 Phase A release are complete. The Phase A completion meter was 25% five-hour / 73% weekly; after the natural five-hour reset, the current authoritative meter is 99% / 68%. All three reset credits remain unused. Preserve the five-hour 10% clean-stop target/5% hard boundary and the default 15% weekly floor. Capacity does not authorize another goal; Sites capacity is `UNKNOWN`.
 
-**Queue state:** Throttle `DRAIN`. Exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` remains definitively saved and published. Phase A is complete locally at exact `4cd6eecd22e1512a87d503a2b5ceb61fdd276269`, one commit ahead of `origin/main`, with full validation and Relena `PASS`. Product Owner review is next. Version 21 hands-on validation remains parked. No application writer or Site operation is active.
+**Queue state:** Throttle `DRAIN`. Exact Phase A checkpoint `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` is definitively saved and publicly deployed as Version 24 with the existing public audience preserved. Product Owner visual review on the published Site is next. Version 21 hands-on validation remains parked. No application writer or Site operation is active.
 
-**Usage state:** Version 23 is the authoritative saved and published checkpoint; local Phase A carries matching visible/accessibility `v24` labels but is not a Site version. Reassess usage, authority, exact identity, and collision risk before any push/save/publication or later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** Version 24 is the authoritative saved and published checkpoint and carries matching visible/accessibility `v24` labels. Reassess usage, authority, exact identity, and collision risk before any remediation, later release, or later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -86,7 +86,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 ## Milestone 6 — Local downloadable catalog export UI
 
-**State:** Complete and validated locally; first published in exact Version 20 and carried unchanged into exact Version 23; Product Owner checkpoint remains separately gated.
+**State:** Complete and validated locally; first published in exact Version 20 and carried unchanged into exact Version 24; Product Owner checkpoint remains separately gated.
 
 - **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); [Import/Export accepted export-first boundary and format v1](IMPORT_EXPORT.md#accepted-format-version-1-contract); completed M5 foundation.
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.
