@@ -6,13 +6,13 @@ The canonical future product-shell and presentation direction is [My Library Vis
 
 ## Selected next implementation priority
 
-Product Owner Decision 1:A selects **Phase A — IA and responsive shell** as the next implementation priority. This records priority only. Phase 0 is fully closed: exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` is saved and published with the shared scanner restoration complete. Kira's current-source inspection verified the exact clean baseline and established a 9/13/18-point low/expected/high estimate. The Product Owner's visual/asset questions are resolved, with the Bookcase/detail choices deferred to Phase F. A bounded goal, mandatory visual review, activation-time source/usage checks, and separate execution authority must still precede any visual source change.
+Product Owner Decision 1:A selected **Phase A — IA and responsive shell**. It is now implemented, fully validated, and Designer-accepted as exact local checkpoint `4cd6eecd22e1512a87d503a2b5ceb61fdd276269`, composed from published Version 23 without importing historical `608553f`. The checkpoint is not pushed, saved, deployed, or published. Product Owner review is next; release authority remains separate. Bookcase/detail choices remain deferred to Phase F.
 
 ## Phase 0 closure and Phase A entry
 
 1. **Complete — source and comparison:** exact Version 22 source was located and compared with retained historical `608553f1c4d18c191582a3c418fc88a482b97045`; the historical shell/theme/Shopkeeper implementation remains superseded, non-transferable design evidence.
 2. **Complete — scanner restoration and release:** the shared local-first Library/Shopkeeper scanner workflow passed its bounded acceptance gates and was saved and published as exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647`.
-3. **Selected, not authorized — Phase A:** prepare a separately estimated goal from exact Version 23. Library is the base/home; mobile preserves the desktop navigation destinations while adapting to the viewport; the header exposes title, current collection, view mode, admin controls, and version; search remains in the current collection area. Phase F density/detail/missing-summary decisions and historical `608553f` implementation are excluded.
+3. **Complete locally — Phase A:** exact `4cd6eec` makes Library the base/home, preserves the same primary destinations across Library/Shopkeeper and responsive layouts, exposes title/current collection/view/admin/version context, and keeps search in the collection area. Focused 60/60, full 112/112, lint/build/boundary checks, and Designer acceptance pass. Phase F choices and historical `608553f` remain excluded; release is not authorized.
 
 ## Ordered additional roadmap
 
@@ -55,25 +55,25 @@ The sequence numbers below are retained historical delivery positions; the selec
 
 ## Immediate milestone
 
-The controlled Shopping release sequence in ADR-0012, the public version-label quality-of-life goal, and the bounded shared scanner restoration are complete through exact saved and published Version 23. Phase 0 is fully closed. Phase A is the selected next priority with mandatory visual review, but no implementation goal is active.
+The controlled Shopping release sequence, public version-label quality-of-life goal, and shared scanner restoration are complete through exact saved and published Version 23. Phase 0 is closed. Phase A is complete locally at exact `4cd6eec` and awaits Product Owner review; no implementation or Site goal is active.
 
 - Retain exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` as the authoritative saved and published checkpoint; Versions 22 and 21 remain retained release/evidence history.
 - Preserve the private Gate 2 export and Gate 4 bridge-observable evidence with their documented backup and restore limitations.
 - Keep Product Owner hands-on validation and later smoke parked by Decision 1:B.
 - Keep every correction, later publication, production/schema/data operation, migration, rollback, restore, and destructive recovery separately gated.
-- Treat Phase A and all additional roadmap capabilities as non-executable until phase-specific composition and visual review conclude, capacity permits, and Quatre transmits one bounded completion-oriented goal with separate authority. The next release packet must update the visible and accessible version labels; Decision B accepts the retained `v22` label only for Version 23.
+- Treat all later phases and roadmap capabilities as non-executable until phase-specific composition, review, capacity checks, and separate authority. Treat Phase A push/save/publication as a separate release goal; the local candidate carries matching visible/accessibility `v24` labels.
 
 Quatre and its direct children Relena and Kira have completed readiness initialization. This activates the Product Owner/Quatre orchestration channel but creates no product, Engineer, Site, or production authority.
 
 Details and migration order are maintained in [Database](DATABASE.md). Accepted choices are recorded in the [Decision Log](DECISIONS.md).
 
-Exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` is definitively saved and published from matching clean editable source in Quatre's managed Site checkout. The shared scanner workflow is restored; Version 21's authorized anonymous correction-marker matches remain retained evidence for unchanged feature source. Product Owner Decision 1:B keeps hands-on validation parked, and Decision B accepts Version 23's retained `v22` label while requiring the next release packet to correct both visible and accessible labels. The later visual/asset choices are resolved in their canonical owners; [Planner Inbox](PLANNER_INBOX.md) has no current decision.
+Exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` remains definitively saved and published and is configured `origin/main`; Quatre's clean local checkout is one unpushed Phase A commit ahead. The shared scanner workflow is restored; Version 21's authorized anonymous correction-marker matches remain retained evidence for unchanged feature source. Product Owner Decision 1:B keeps hands-on validation parked, and Decision B accepts Version 23's retained `v22` label while requiring the next release packet to correct both visible and accessible labels. The later visual/asset choices are resolved in their canonical owners; [Planner Inbox](PLANNER_INBOX.md) has no current decision.
 
 The completed continuation is recorded in [Staged Milestones](STAGED_MILESTONES.md). M1/M3/M4/M5/M6 and M2 Gates 0–5 are complete within their bounded evidence layers and carried into Version 23; the scanner-only Version 23 delta changes M3/entry-point continuity without reopening other milestones. Every later hands-on validation, smoke, correction, release, and recovery gate remains sequential and separately controlled.
 
 ## Deferred
 
-- Phase A is selected but remains unapproved for execution pending visual review, exact-Version-23 composition, and fresh estimation. All other My Library phases remain on hold until their prerequisites and explicit authority are satisfied. B/C require storage/routing security feasibility, and G requires an exact deterministic rule/evidence contract; see [Visual Experience](VISUAL_EXPERIENCE.md).
+- Phase A implementation is complete locally but unreleased pending Product Owner review and separate release authority. All other My Library phases remain on hold until their prerequisites and explicit authority are satisfied. B/C require storage/routing security feasibility, and G requires an exact deterministic rule/evidence contract; see [Visual Experience](VISUAL_EXPERIENCE.md).
 - Full edition management and an immediate title/edition/copy hierarchy.
 - Offline operation and generalized media support.
 - Business locations.

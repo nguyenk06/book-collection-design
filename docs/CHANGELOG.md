@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-07 — Phase A Library-first shell completed locally
+
+- Implemented exact local checkpoint `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` from published Version 23. Library is the clean-root home; Library and Shopkeeper share Library/Shopkeeper/How it works destinations; the header exposes My Library, current collection, interactive view, applicable owner/admin state, and matching visible/accessibility `v24`; search remains collection-scoped.
+- Resolved Relena's first review failure by making the Library destination semantic rather than an anchor-only label, adding clean-root/malformed-parameter coverage, eliminating the intermediate-width sticky overlap risk, aligning Shopkeeper navigation, and removing stale footer identity copy. Relena's second review returned `PASS`.
+- Passed 60/60 focused tests, 112/112 full tests, lint with zero errors/two established warnings, production build, diff/whitespace, and protected-boundary checks across the exact six-path application/test delta. Scanner resolver, APIs, authentication, schema, migrations, dependencies, lockfile, hosting, data actions, and Phase F presentation remain unchanged.
+- The candidate is local only and one commit ahead of published/configured remote Version 23. No push, Site credential, save, deployment, publication, production access, held validation, rollback, restore, or destructive action occurred. Product Owner review is the next gate; Sites capacity remains `UNKNOWN`.
+- The Phase A completion meter reported 25% five-hour and 73% weekly remaining; all three reset credits remained unused.
+- After the natural five-hour reset, the current meter reported 99% five-hour and 68% weekly remaining; all three reset credits remain unused. Capacity changes no review or release authority, and Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-07 — Shared scanner workflow published as Version 23
 
 - Completed the Product Owner-authorized bounded scanner restoration from exact Version 22 and established checkpoint `75075e1e69735ac38c5afdbb7c9b7c55c12a2647`.
