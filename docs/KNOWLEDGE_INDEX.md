@@ -6,6 +6,7 @@ This page defines where knowledge belongs. It intentionally does not reproduce E
 | --- | --- | --- |
 | [My Library Visual Experience](VISUAL_EXPERIENCE.md) | Designer/Product Owner in this GitHub repository | Canonical future visual, responsive, mode, theme, safety-presentation, and phased-estimation direction; not implementation authority |
 | [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md) | Planner/Designer in this GitHub repository | Ranked product and UX candidates; not roadmap commitments |
+| [One-Level Subagent Pilot — Usage governance](ONE_LEVEL_SUBAGENT_PILOT.md#usage-governance) | Planner — Quatre in this GitHub repository | Authoritative meter hierarchy, project/milestone reading gates, five-hour floor, longer-period evaluation, Sites-capacity handling, and reset authorization |
 | Engineer Research Sandbox | Engineer-local shared handoff workspace under `knowledge/` | Raw technical notes, experiments, feasibility observations, source reviews, revalidation notes, and speculative options |
 | Kira goal/brief | Internal durable brief storage routed by Quatre | Explicit bounded Kira authority: completion-oriented implementation through `IMPLEMENTATION_BRIEF.md`, or read-only estimation/source inspection through `ESTIMATION_BRIEF.md` |
 | Kira report/release packet | Returned directly to Quatre; optional internal local evidence storage | Sanitized conclusions, validation, collision boundaries, release identity, material conflicts, and next-parent action |
@@ -14,6 +15,7 @@ This page defines where knowledge belongs. It intentionally does not reproduce E
 ## Coordination rules
 
 - Before a goal, Kira reviews only knowledge mapped to that goal, relevant `Needs Revalidation` items, and newly added notes affecting that component.
+- Before any project or large milestone starts, Quatre retrieves and records the authoritative Codex account usage reading when available; the Product Owner does not need to transport this information.
 - No-change findings allow the sprint to proceed.
 - Non-blocking findings remain local and are summarized to Quatre without stopping implementation; Quatre routes design implications to Relena.
 - Material findings involving safety, data integrity, acceptance criteria, architecture, cost, behavior, priority, or scope must be reported before affected work proceeds.

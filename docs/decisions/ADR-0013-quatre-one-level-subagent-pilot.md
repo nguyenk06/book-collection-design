@@ -17,7 +17,7 @@ The Product Owner communicates only with Quatre. Quatre routes completion-orient
 
 Only one application-source writer may be active at a time. Kira may inspect, implement, test, build, package, and prepare a release packet, but cannot invoke Sites tools, obtain Sites credentials, save, preview, deploy, publish, or perform the final Site handoff. Quatre may perform an explicitly authorized Site operation only after Kira supplies a validated release packet and Relena confirms the product/release boundary.
 
-Preserve the 15% five-hour floor, separate longer-period capacity check, `UNKNOWN` Sites capacity when no meter exists, CYOA-only project scope, and explicit Product Owner gates for publication, production/schema/data mutation, migration, credentials, destructive recovery, rollback, restore, and external sharing.
+As amended by Product Owner direction on 2026-09-05, use a five-hour clean-stop target of 10% remaining with 5% as the hard lower boundary. Preserve 15% weekly capacity unless the Product Owner explicitly authorizes a bounded exception, normally near the weekly reset. Keep `UNKNOWN` Sites capacity when no meter exists, CYOA-only project scope, and explicit Product Owner gates for publication, production/schema/data mutation, migration, credentials, destructive recovery, rollback, restore, and external sharing.
 
 ## Consequences
 

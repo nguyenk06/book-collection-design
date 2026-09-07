@@ -66,14 +66,18 @@ Add task-specific exclusions here:
 - Preferred model: <!-- Default Kira: GPT-5.6 Terra -->
 - Reasoning effort: <!-- Default: Medium -->
 - Speed mode: <!-- Default: Standard; Fast off -->
+- Usage source: <!-- Authoritative Codex account meter preferred; Product Owner reading only as fallback/additional observation -->
+- Usage observed at:
 - Current five-hour percentage:
 - Five-hour reset time:
 - Current longer-period Codex percentage:
 - Sites capacity: <!-- Reported value or UNKNOWN; never infer -->
 - Estimated five-hour consumption: <!-- LOW / LIKELY / HIGH -->
-- Minimum starting percentage: <!-- Remaining HIGH + 15% floor -->
-- Automatic stopping percentage: **15%**
-- Usage refresh trigger: <!-- Large/high-risk, stale/reset/intervening work, estimate growth, credible floor risk -->
+- Minimum starting percentage: <!-- Remaining HIGH + 10% five-hour clean-stop target; also preserve 15% weekly unless explicitly overridden -->
+- Five-hour clean-stop target: **10%**
+- Five-hour hard lower boundary: **5%**
+- Weekly stopping floor: **15% unless explicitly overridden by the Product Owner**
+- Usage refresh trigger: <!-- Always before a new project or large milestone; otherwise stale/reset/intervening work, estimate growth, credible floor risk -->
 
 The longer-period allowance is separate. CYOA is the only active project during the pilot. `WAITING FOR RESET` is resumable and is not a blocker.
 
@@ -88,7 +92,7 @@ The longer-period allowance is separate. CYOA is the only active project during 
 
 - Outcome complete.
 - Quatre relays `!drain` or `!stop`.
-- 15% floor/window boundary.
+- Five-hour 10% clean-stop target/5% hard boundary or weekly 15% floor/window boundary.
 - Third authorized substantive approach fails.
 - Source/candidate/package/collision mismatch.
 - New product, Site, production, schema/data, credential, destructive, privacy, or security authority is required.
@@ -119,7 +123,7 @@ Return one sanitized acceptance and one terminal completion/blocker packet direc
 - explicit confirmation that Kira used no Sites tools or credentials and performed no save/preview/deploy/publish/final Site handoff;
 - the exact next action for Quatre.
 
-For a release candidate, include a validated release packet suitable for Relena product/release-boundary review. Only Quatre may perform a separately Product-Owner-authorized Site operation after that review.
+For a release candidate, include a validated release packet suitable for Relena product/release-boundary review. The packet must state the intended product version and verify that every visible and accessible release label matches it before publication. Only Quatre may perform a separately Product-Owner-authorized Site operation after that review.
 
 ## Authority record
 

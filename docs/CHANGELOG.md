@@ -1,5 +1,40 @@
 # Changelog
 
+## 2026-09-07 — Shared scanner workflow published as Version 23
+
+- Completed the Product Owner-authorized bounded scanner restoration from exact Version 22 and established checkpoint `75075e1e69735ac38c5afdbb7c9b7c55c12a2647`.
+- Added one shared Library-wide ISBN resolver used by Library and Shopkeeper: exact/equivalent local matching precedes optional metadata lookup; tracked, conflict, unmatched, metadata-empty, and metadata-failure outcomes are explicit; reviewed creation remains Library-owned and duplicate-checked.
+- Preserved unresolved Shopkeeper ISBN/title/author context through authenticated and unauthenticated Library handoff. Scanning and lookup do not create Books, change identifiers or ownership, or mutate Purchases.
+- Passed 57/57 focused tests, 109/109 uncontended full-suite tests, lint with zero errors/two established warnings, production build, whitespace/diff, mutation, and protected-boundary checks. Relena returned final local acceptance `PASS`.
+- After separate Product Owner approval, pushed exact `75075e1`, packaged the validated 47-file build archive, saved Version 23, and published it once to the existing public audience. Deployment returned definitive `succeeded` at the existing CYOA URL.
+- No schema/data action, migration execution, provider redesign, dependency change, held Version 21 validation, retry, rollback, or restore occurred. Sites capacity remains `UNKNOWN`.
+- The post-publication account meter reported 77% five-hour and 81% weekly remaining; all three reset credits remained unused.
+- Closing source inspection found that the scanner-only Version 23 delta retained the visible `v22` / `Release version 22` marker. No silent correction or second publication was attempted because the next saved release would be Version 24; that choice is now a genuine Product Owner decision.
+- Product Owner selected Decision B, accepting the retained `v22` product label for Sites Version 23. No corrective release is required; future release packets must state the intended product version and verify matching visible and accessible labels before publication.
+- Closed Phase 0 after scanner publication and established exact Version 23 as the Phase A composition baseline. Phase A remains planning-only: Library is the base/home, mobile preserves desktop navigation while adapting to the viewport, the header carries title/current collection/view mode/admin controls/version, search stays in the current collection area, Phase F presentation choices stay deferred, and historical `608553f` must not be imported.
+- Kira verified clean matching Version 23 source and produced a read-only Phase A implementation estimate of 9/13/18 percentage points through a local Relena-ready release packet. Likely scope is root page/global styles/root tests plus Shopkeeper header parity only if required; scanner/auth/API/schema/migration/dependency/hosting/Sites boundaries remain excluded. The closeout meter reported 48% five-hour and 76% weekly remaining, so the 18-point high case projects 30% and 58% remaining. No implementation authority follows.
+
+## 2026-09-06 — Phase 0D scanner and source boundaries reconciled
+
+- Refreshed the authoritative account meter after the Phase 0 audit at 22:04 PDT: 60% five-hour and 94% weekly remained. Both windows clear their floors for fresh estimation, but the reading grants no implementation authority.
+- Reconciled Kira's current-source estimate with the Product Owner's reported regression and Relena's acceptance review. The prepared 10/15/22-point goal must restore Library-wide exact/equivalent checking, existing-API metadata fallback, and reviewed add/manual continuation for both scanner entry points, with Shopkeeper using the same resolution flow through a compact handoff rather than a second mutable form.
+- Defined the shared exact-local scanner contract with distinct full Library and simplified Shopkeeper outcomes, qualified all scanner evidence as historical until exact current source is recovered, and excluded unproven persistence, fuzzy/provider/device, mutation, Site, and production scope.
+- Located exact clean canonical Version 22 source at matching `main`/`HEAD` `a360c97679a47ce604fa712245fcc3935a649df6` in Quatre's managed Site checkout. Read-only comparison with retained historical `608553f1c4d18c191582a3c418fc88a482b97045` found 81 versus 83 paths, 69 identical, no additions, two historical-only theme-control removals, and 12 changed shared paths while APIs/authentication/schema/migrations/data/package/lockfile/hosting remain unchanged.
+- Recorded the historical UI as superseded design evidence, the direct Version 22 scanner trace as divergent handlers plus a current test gap, and scanner restoration as technically briefable but unimplemented and unauthorized pending a fresh estimate and bounded goal. No cleanup candidate exists.
+- Closed Product Owner decisions 1:A–4:A in their canonical visual, Bookshelf, and asset owners; the first three remain deferred Phase F direction, and complete-cover-backup work begins with separate read-only feasibility evidence.
+
+## 2026-09-05 — Five-hour and weekly stopping boundaries revised
+
+- Replaced the former 15% five-hour floor with a 10% clean-stop target and 5% hard lower boundary; work may stop earlier when no safe checkpoint fits and must never be invented merely to consume the 5–10% band.
+- Established a separate default 15% weekly floor. Only explicit Product Owner direction may authorize a bounded weekly-floor exception, normally near the weekly reset; such an exception does not waive the five-hour hard boundary or any authority, production, safety, or Site gate.
+- Recorded the authoritative 19:20 PDT account reading of 53% five-hour and 7% weekly remaining. With weekly capacity below its default floor, project and large-milestone execution waits for reset absent an explicit exception.
+
+## 2026-09-05 — Authoritative usage-meter retrieval adopted
+
+- Directed Quatre to retrieve the authoritative Codex account meter before starting any project, activating a new large milestone, or resuming after a reset; the Product Owner no longer needs to supply screenshots or percentages when that meter is available.
+- Made Product Owner `!<five-hour>:<longer-period>` readings a fallback or additional observation, required meter source and observation time in goal templates, and classified local session-log overlays/caches as advisory because they may lag.
+- Preserved separate five-hour and longer-period evaluation, the 15% five-hour floor, `UNKNOWN` Sites capacity when unmetered, and the rule that usage-reset credits require explicit Product Owner authorization.
+
 ## 2026-09-05 — Phase A priority selected; visual review decisions opened
 
 - Recorded Product Owner Decision 1:A selecting Phase A — IA and responsive shell as the next implementation priority after capacity recovery. This priority choice grants no implementation, validation, release, Site, or production authority.

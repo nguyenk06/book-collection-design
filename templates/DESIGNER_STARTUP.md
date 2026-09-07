@@ -56,4 +56,4 @@ Kira is the current Engineer identity. `ENGINEER — SEI` is retired. Relena mus
 
 Subagent progress and terminal reports are addressed to `PLANNER — QUATRE`. They need not instruct the Product Owner. When a durable report format requires a canonical footer, use `NEXT OWNER: PLANNER — QUATRE` and name the internal action Quatre should take.
 
-Relena's work ends when the assigned result is complete, a genuine Product Owner decision must be recorded in `docs/PLANNER_INBOX.md`, the 15% floor/window boundary is reached, or a scope/safety/authority/collision blocker prevents useful work. `WAITING FOR RESET` is resumable, not blocked.
+Relena's work ends when the assigned result is complete, a genuine Product Owner decision must be recorded in `docs/PLANNER_INBOX.md`, the five-hour 10% clean-stop target/5% hard boundary or weekly 15% floor/window boundary is reached, or a scope/safety/authority/collision blocker prevents useful work. `WAITING FOR RESET` is resumable, not blocked.

@@ -4,12 +4,12 @@
 
 This document is the canonical future visual and interaction direction for **My Library**. It defines product-level experience requirements for later estimation and phased implementation. It does not describe current implementation state, authorize Engineer work, or open any Site, source, data, save, preview, deployment, publication, or production gate. [Current State](CURRENT_STATE.md), accepted briefs, tests, and gate evidence remain authoritative for delivery status.
 
-The cumulative Shopping/M3–M6/Bookshelf source plus the bounded five-correction remediation was published as exact Version 21 at `f15ea81`. The later three-file public version-label delta is published as exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6`. Local Phase A/D work remains only at checkpoint `608553f` and was excluded from publication. Future work must begin with composition and collision checks across those distinct states. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
+The current saved and published baseline is exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647`, including the completed shared scanner restoration. Phase A/D work exists only at excluded historical checkpoint `608553f1c4d18c191582a3c418fc88a482b97045`. Exact cross-tree comparison is complete, but the old Bookshelf/theme/Shopkeeper implementation is superseded; its responsive Library-first shell, safe-area/bottom navigation, theme direction, and Shopkeeper discoverability are design evidence only and must not be imported. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
 
 ## Experience principles
 
 - Lead with the collector's library, not a marketing hero or CYOA-specific application shell.
-- Adapt navigation, density, and primary actions to intent and device class; mobile is not compressed desktop.
+- Preserve the same navigation hierarchy and destinations across desktop and mobile while adapting layout, density, and primary actions to intent and viewport; mobile is not compressed desktop.
 - Keep view access, visual-test access, authentication, and write authority visibly separate.
 - Use collection identity, covers, shelves, progress, and concise numbers to make the working application as intentional as the editorial surface.
 - Preserve accessible alternatives, reduced motion, readable states, and server authority beneath every visual treatment.
@@ -44,12 +44,15 @@ Books may eventually belong to multiple collections, genres, and tags. No visual
 
 ### Desktop
 
-Use a stable header:
+For Phase A, use a stable header whose information remains available across responsive layouts:
 
-- Left: a small identity mark and **My Library**.
-- Primary navigation: **Library**, **Collections**, **Shopkeeper**.
-- Right: global search, light/dark theme control, and owner/profile menu.
-- Owner menu: administration, test controls, exports, settings, and other privileged tools.
+- Product title/identity: **My Library**.
+- Current collection context.
+- Current view mode.
+- Applicable authenticated administration controls without exposing owner authority publicly.
+- Current product version.
+- Primary navigation: **Library**, **Collections**, **Shopkeeper**; **Library** is the base/home.
+- Search remains in the current collection area rather than moving into the global header.
 
 Help and About leave permanent primary navigation. A contextual row below the header communicates location, mode, scope, and safety state, for example:
 
@@ -59,7 +62,7 @@ Help and About leave permanent primary navigation. A contextual row below the he
 
 ### Mobile
 
-Use a compact header showing the current page or collection plus one or two contextual actions. Use persistent bottom navigation for **Library**, **Collections**, **Shopkeeper**, and **More**. Shopkeeper may receive stronger visual emphasis as the mobile field tool. Important navigation must never depend on the footer.
+Adapt the header and controls to the viewport while preserving the desktop navigation hierarchy, destinations, context, access boundaries, and the required title/current-collection/view-mode/admin/version information. Persistent bottom navigation may present **Library**, **Collections**, **Shopkeeper**, and **More** when it preserves that same route model; Shopkeeper may receive stronger visual emphasis as the mobile field tool. Important navigation must never depend on the footer, and search remains with the current collection area.
 
 ### Footer
 
@@ -92,7 +95,7 @@ The mutation inventory to verify includes at minimum:
 - Schema activation, migrations, repair, maintenance, and other administrative writes.
 - Any API, route action, background job, alternate method, or legacy endpoint capable of the same mutations.
 
-The global lock is a conditional visual-testing safeguard, especially for administration or other owner-mode flows; it is not a routine reason to shut down normal production writes. Sei must establish and verify the lock before publishing an authorized testing build. That build remains locked across restarts with no timeout or automatic unlock. Removing the lock requires the next separately controlled publication after testing; access to one build must not silently change another. Only the authenticated owner can authorize an unlocked build. Validation must enumerate all mutation endpoints/actions, prove locked rejection for owner and non-owner paths, prove reads remain available, check direct HTTP and alternate-method bypasses, verify lock visibility across responsive modes, and confirm restart/concurrency behavior appropriate to the storage design. The lock cannot be a client flag, hidden control, process-local assumption, or route-specific exception list with unknown coverage. Sei may determine which owner controls are clearer as visible-disabled versus hidden, subject to accessible state communication and no server bypass.
+The global lock is a conditional visual-testing safeguard, especially for administration or other owner-mode flows; it is not a routine reason to shut down normal production writes. The assigned successor Engineer must establish and verify the lock before publishing an authorized testing build. That build remains locked across restarts with no timeout or automatic unlock. Removing the lock requires the next separately controlled publication after testing; access to one build must not silently change another. Only the authenticated owner can authorize an unlocked build. Validation must enumerate all mutation endpoints/actions, prove locked rejection for owner and non-owner paths, prove reads remain available, check direct HTTP and alternate-method bypasses, verify lock visibility across responsive modes, and confirm restart/concurrency behavior appropriate to the storage design. The lock cannot be a client flag, hidden control, process-local assumption, or route-specific exception list with unknown coverage. The assigned successor Engineer may determine which owner controls are clearer as visible-disabled versus hidden, subject to accessible state communication and no server bypass.
 
 ### Temporary visual-testing access
 
@@ -108,7 +111,7 @@ Required properties:
 - Documented disablement, data-retention, and removal path after testing.
 - Tests for expired, revoked, wrong-variant, replay/rate-limit, malformed, and privilege-escalation attempts.
 
-The current testers are agents, not invited external people. Before an authorized testing round, Sei hands the generated code to the Product Owner through the approved private channel; the Product Owner controls distribution to the testing agent. Creating or handing off a code does not authorize publication or writes. External-user privacy/onboarding policy is deferred until external testing is actually proposed.
+The current testers are agents, not invited external people. Before an authorized testing round, the assigned Engineer hands the generated code to the Product Owner through the approved private channel; the Product Owner controls distribution to the testing agent. Creating or handing off a code does not authorize publication or writes. External-user privacy/onboarding policy is deferred until external testing is actually proposed.
 
 ## Application modes
 
@@ -148,7 +151,7 @@ Desktop may use a broader workspace with scan/search, current decision/detail, r
 
 A session may focus on CYOA, Redwall, the whole Library, or a future multi-collection trip. Launching from CYOA scopes matching, owned/missing state, issue order, alternate numbering, edition relevance, and target price to CYOA. Global launch searches the Library, suggests known collection relationships, and permits general intake where no relationship is known. Library membership, collection assignment, and session focus remain independent.
 
-Recommendation rules have global defaults, with collection-specific rules taking priority. Missing-book recommendations consider the applicable ideal/target cost and the collection's trended average spend per Book. A duplicate scan compares available cover, edition/condition evidence, and notes to determine whether a meaningful upgrade is indicated. `Buy`, `Skip`, and `Upgrade` remain deterministic summaries of the underlying evidence; uncertain or missing evidence must be shown and must not be overstated. Sei must reconcile the exact existing rules and supported inputs before estimating or proposing thresholds.
+Recommendation rules have global defaults, with collection-specific rules taking priority. Missing-book recommendations consider the applicable ideal/target cost and the collection's trended average spend per Book. A duplicate scan compares available cover, edition/condition evidence, and notes to determine whether a meaningful upgrade is indicated. `Buy`, `Skip`, and `Upgrade` remain deterministic summaries of the underlying evidence; uncertain or missing evidence must be shown and must not be overstated. The assigned successor Engineer must reconcile the exact existing rules and supported inputs before estimating or proposing thresholds.
 
 ## Themes and personalization
 
@@ -184,27 +187,37 @@ A low-priority optional, dismissible, primarily mobile personality layer may rea
 
 | Layer | Direction |
 | --- | --- |
-| Current release planning | Phases A–G below may be estimated; each requires later scope and authority. Preserve exact Version 22 and all existing gates meanwhile. |
+| Current release planning | Phase 0 is closed and exact Version 23 is the baseline. Phase A is selected next but requires a bounded goal, mandatory visual review, and separate authority; Phases B–G retain their later gates. |
 | Optional polish after stable foundations | Phase H ambient animation, controlled by performance/accessibility requirements. |
 | Future only | Catalog Terminal, advanced personalization/custom palettes, and Shopkeeper Buddy. |
 | Separate persistence/product work | Many-to-many collections, genres, tags, saved preferences where not already supported, multi-collection trips, and relationship editing. |
 
 ## Current priority and required visual review
 
-Product Owner Decision 1:A selects **Phase A — IA and responsive shell** as the next implementation priority after capacity recovery. This is a priority decision only. No visual change may begin until the Product Owner visual review is reconciled into accepted criteria, exact Version 22 composition and collisions are inspected, a fresh estimate and bounded goal are prepared, and Quatre supplies separate execution authority.
+Product Owner Decision 1:A selects **Phase A — IA and responsive shell** as the next implementation priority. This is a priority decision only. Exact Version 23 composition/collision inspection and the current 9/13/18-point estimate are complete. No visual change may begin until the Product Owner completes the required visual review against the criteria below and Quatre prepares and separately activates a bounded goal after fresh usage/source checks.
 
-Current Product Owner observations are qualitative review findings, not verified defects or implementation scope:
+Phase A acceptance boundary:
 
-- The Bookcase mode format is correct, but the Product Owner expected more spines to be visible. The desired density mechanism or viewport target remains undecided.
-- Clicking a Book did not load a cover during the review. The intended click outcome and permitted cover source/fallback must be confirmed without silently combining reference-cover enrichment.
-- Shelf mode should expose missing-book details for at-a-glance review. The exact fields and existing-data boundary remain undecided.
+- Library is the base/home and the shell preserves current route reachability and access boundaries.
+- Desktop and mobile expose the same primary navigation hierarchy and destinations; mobile may change placement and density to fit the viewport.
+- The responsive header makes the My Library title, current collection, current view mode, applicable administration controls, and current version available without granting or implying owner access.
+- Search remains in the current collection area and is not promoted to a global header control.
+- Representative desktop and mobile layouts preserve readable states, keyboard/focus order, touch targets, safe-area handling, and freedom from unintended horizontal overflow.
+- Existing data/actions, authentication, scanner behavior, and navigation remain intact; schema, provider/API redesign, persistence expansion, Phase F presentation decisions, and Site/release work are excluded.
+- Historical `608553f` is comparison evidence only and must not be imported. Any eventual release packet must update visible and accessible version labels from the Decision B exception retained by Version 23.
 
-The Bookcase, cover-detail, and Shelf observations primarily affect the existing M4 surface and later Phase F. They may inform Phase A shell review, but they do not enter Phase A implementation scope unless the later authorized goal says so explicitly. The recommended review order is: inspect exact Version 22 at representative desktop and mobile widths without editing; resolve the Product Owner questions in [Planner Inbox](PLANNER_INBOX.md); convert the answers into visual acceptance criteria; inspect current source composition and collisions; obtain a fresh estimate; then prepare one bounded Phase A goal after capacity recovery.
+The Product Owner resolved the qualitative review findings as deferred Phase F direction, not verified defects, current Phase A scope, or implementation authority:
+
+- **Decision 1:A — responsive density-first:** increase naturally visible spines by reducing spine width/gaps only within readable, keyboard-operable, and touch-safe responsive limits; do not impose fixed viewport counts.
+- **Decision 2:A — existing-cover detail:** Book detail may show only the already stored personal cover when available and the safe fallback otherwise. Reference-cover lookup/enrichment remains separate roadmap work.
+- **Decision 3:A — compact existing-data missing summary:** Shelf missing positions may show expected position/number, known title, missing status, and an already available acquisition cue; unavailable fields remain omitted and no synthetic Book is created.
+
+The Bookcase, cover-detail, and Shelf decisions primarily affect the existing M4 surface and later Phase F. They may inform Phase A shell review, but they do not enter Phase A implementation scope unless a later authorized goal says so explicitly. Source recovery, historical comparison, scanner restoration/publication, exact Version 23 composition inspection, and current-source estimation are complete. The remaining order is: complete the mandatory visual review, then prepare one bounded Phase A execution goal with fresh activation-time usage/source checks.
 
 ## Dependencies and collision boundaries
 
-- **Version 22 cumulative release:** shared application page, global styles, schema, API, authentication/runtime, Shopping, Bookshelf, and ordered migration surfaces require exact pre-estimate and pre-implementation composition checks. Version 22 changes the shared page/styles plus focused test only for the public release label; excluded checkpoint `608553f` remains a separate collision boundary.
-- **Collection relationships:** Product Owner expects the current collection model to be sufficient for the initial direction, but Sei must verify that assumption. Current collection/series behavior is not blanket authority for new many-to-many membership, genres, pins, or session-scope persistence if inspection shows missing capability.
+- **Version 23 cumulative release:** exact Version 23 is the current saved/published baseline. Its scanner-only delta follows the completed Version 22-to-`608553f` historical comparison and does not make that historical UI transferable. Each future phase requires its own exact pre-estimate collision manifest against Version 23.
+- **Collection relationships:** Product Owner expects the current collection model to be sufficient for the initial direction, but the assigned successor Engineer must verify that assumption. Current collection/series behavior is not blanket authority for new many-to-many membership, genres, pins, or session-scope persistence if inspection shows missing capability.
 - **Tags:** remain future schema and interaction work; visual filters may not imply persistence.
 - **Authentication:** Public/Tester/Administrator presentation, owner authorization, temporary codes, and write state need separate server models.
 - **Write enforcement:** requires complete server mutation inventory and likely shared enforcement below individual UI actions.
@@ -218,7 +231,7 @@ The ranges below are Sei's accepted source-informed **low / likely / high Engine
 
 | Order | Phase | Scope and safe stop | Dependencies / collisions | Data and security | Responsive validation | Independence | Engineer range |
 | ---: | --- | --- | --- | --- | --- | --- | ---: |
-| 1 | **A — IA and responsive shell** | My Library naming, Library-first routing, desktop/mobile header, bottom navigation, contextual row, footer. Stop with routes and shell usable behind current data/actions. | Exact Version 22 root page, global styles, navigation, Bookshelf/Shopping entry points; excluded `608553f` is historical comparison evidence, not transferable source. | Prefer no schema; preserve auth boundaries and do not expose owner tools. | Desktop widths, small/large mobile, keyboard, focus/order, orientation, safe areas. | Foundation for E–G; can precede B–D if current actions remain unchanged. | Historical 6 / 8 / 11; refresh before goal |
+| 1 | **A — IA and responsive shell** | Library base/home; responsive navigation parity; header title/current collection/view mode/admin controls/version; search retained in the current collection area. Stop with routes and shell usable behind current data/actions. | Exact Version 23 root/page/styles/navigation and Bookshelf/Shopkeeper entry points; excluded `608553f` is historical comparison evidence, not transferable source. | Prefer no schema; preserve auth boundaries and do not expose owner tools. | Desktop widths, small/large mobile, keyboard, focus/order, orientation, safe areas, no unintended horizontal overflow. | Foundation for E–G; Phase F presentation decisions stay excluded. | Current V23 estimate 9 / 13 / 18 |
 | 2 | **B — Global write lock** | Server lock model, shared enforcement, state treatment, exhaustive mutation tests. Stop with an authorized testing build locked across restarts and verified reads/no bypass. | Complete mutation inventory, auth helper, APIs/actions, migrations/admin, background paths. | Conditional test-build safeguard; highest security risk; no client-only design. Removal occurs only through a later controlled publication. | Visible/understandable in every mode; Sei selects visible-disabled versus hidden controls; direct-request tests required. | Technically separable but required before meaningful admin visual testing. | 9 / 13 / 18 |
 | 3 | **C — Temporary visual-test access** | Variant-scoped 24-hour codes, hashed storage, revocation, rate limiting without hard attempt cap, inventory/removal, private handoff to Product Owner. Stop with one harmless agent-only read-only variant end to end. | B lock semantics, auth/session/routing, deployment/platform capability. | Secret-like records likely require supported storage; threat model and log hygiene required. No external testers now. | Code entry, errors, expiry, revocation, variant state on mobile/desktop. | Feasibility must precede implementation; park if Sites lacks a private runnable variant or durable state. | 11 / 16 / 22 |
 | 4 | **D — Theme foundation** | Semantic warm-light/dark tokens, system preference, user choice, all current components. Stop when both themes pass contrast and regression review without redesigning every page. | Global CSS/current colors, charts, dialogs, admin and Shopkeeper states. | Use simplest supported editable single-user JSON/equivalent preference storage; database table deferred for multi-user. Avoid security state encoded only by color. | System changes, persistence, flash prevention, contrast, forced colors, mobile OLED/readability. | Split static tokens/themes from saved preference if storage remains unsupported. | 6 / 9 / 13 |
@@ -231,15 +244,15 @@ The simple sum was **62 / 91 / 128** points against the historical Version 20 ba
 
 ### Historical local implementation checkpoint — 2026-08-20
 
-- **A — historically complete locally:** My Library identity and responsive shell were implemented and preserved in excluded application checkpoint `608553f`. Targeted suites and the then-current-source serial suite passed; the editable source is not transferred into Version 22, and fresh composition and validation are required for any new Phase A goal.
-- **Static D foundation — complete locally:** semantic conversion, warm/dark/system presentation, session-only manual control, focus treatment, route-family styling, desktop/mobile viewport checks, overflow checks, and sampled contrast are complete at `608553f`.
-- **Confirmed validation remediation — published / hands-on validation parked:** checkpoint `80e4c61` remains retired as historical evidence. Replacement checkpoint `f15ea81` implements the five bounded corrections and was definitively published as Version 21. Controlled Attempt 2 returned deployment identity and `succeeded` status; all five authorized anonymous markers matched after propagation. The unchanged feature source is carried into Version 22. Product Owner Decision 1:B parks hands-on validation. See the [Version 20 remediation plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md).
+- **A — historical design evidence:** My Library identity and responsive shell were implemented in excluded historical checkpoint `608553f`. That object remains only in a retained historical checkout; its shell is superseded and is not transferable into Version 23. Targeted and then-current-source suite results remain historical evidence, and fresh implementation and validation are required for any new Phase A goal.
+- **Static D foundation — historical local evidence:** semantic conversion, warm/dark/system presentation, session-only manual control, focus treatment, route-family styling, desktop/mobile viewport checks, overflow checks, and sampled contrast were reported at unavailable `608553f`; no editable source or current validation is present here.
+- **Confirmed validation remediation — published / hands-on validation parked:** checkpoint `80e4c61` remains retired as historical evidence. Replacement checkpoint `f15ea81` implements the five bounded corrections and was definitively published as Version 21. Controlled Attempt 2 returned deployment identity and `succeeded` status; all five authorized anonymous markers matched after propagation. The unchanged feature source is carried into Version 23. Product Owner Decision 1:B parks hands-on validation. See the [Version 20 remediation plan](VERSION20_CONFIRMED_FAILURE_REMEDIATION_PLAN.md).
 - **D limits:** Admin/catalog visual navigation was blocked by unavailable local sign-in; forced-colors and reduced-motion emulation were unavailable; saved preference persistence remains a later separately gated slice.
 - This checkpoint does not activate B/C/E/F/G/H or authorize preference persistence, Site operations, or production work.
 
 ### Accepted source findings
 
-- Many-to-many collection membership, pinned collections, saved theme preferences, durable global operational state, secure variant routing, and rate-limited hashed temporary-code infrastructure are all absent in Version 22.
+- Many-to-many collection membership, pinned collections, saved theme preferences, durable global operational state, secure variant routing, and rate-limited hashed temporary-code infrastructure are all absent in Version 23.
 - The current singular collection model is sufficient for the initial CYOA bookcase, not future many-to-many membership.
 - B spans 11 current mutation handlers and requires centralized durable enforcement.
 - C is a new security/runtime subsystem; prior platform evidence found no runnable unpublished preview, so feasibility comes before code.
@@ -250,12 +263,12 @@ The simple sum was **62 / 91 / 128** points against the historical Version 20 ba
 
 - Public views are read-only; only the authenticated owner receives Library mutation controls.
 - The server lock is conditional for testing administration/owner-mode visuals. It persists across restarts until a later controlled publication removes it; there is no timeout or routine production lock.
-- Agent-only visual-test codes expire after 24 hours, are rate-limited without a hard attempt cap, and are handed privately by Sei to the Product Owner before the testing round.
+- Agent-only visual-test codes expire after 24 hours, are rate-limited without a hard attempt cap, and are handed privately by the assigned Engineer to the Product Owner before the testing round.
 - Single-user preferences use the simplest supported editable JSON-backed/equivalent store that avoids republishing; a database table is reserved for future multi-user needs.
 - Shopkeeper uses global deterministic rules with collection overrides. Target/ideal and trended average collection spend inform missing-book recommendations; duplicate upgrade evaluation uses cover, edition/condition evidence, and notes.
 - Phase F focuses on CYOA while retaining a generic later-collection architecture.
-- The current collection model is presumed sufficient but must be verified by Sei; missing capability does not authorize schema reconstruction.
-- Sei selects visible-disabled versus hidden locked owner controls while retaining accessible state and server enforcement.
+- The current collection model is presumed sufficient but must be verified by the assigned successor Engineer; missing capability does not authorize schema reconstruction.
+- The assigned successor Engineer selects visible-disabled versus hidden locked owner controls while retaining accessible state and server enforcement.
 - Testers are agents only. External tester privacy/onboarding is not current scope.
 
 No Product Owner decision from this design-question set remains open. Source inspection may still produce new technical questions before an implementation phase can be scoped.

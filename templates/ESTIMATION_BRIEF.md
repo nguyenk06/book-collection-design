@@ -27,18 +27,22 @@ Before acceptance, Kira reports context continuity, unpublished work, editable-s
 
 ## Usage and model profile
 
-Usage may be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. It records usage only and never accepts or activates this request.
+Quatre retrieves the authoritative Codex account meter before a new project or large milestone when available. Usage may also be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. A supplied reading is a fallback or additional observation and never accepts or activates this request.
 
 - Preferred model: <!-- Default Kira profile: GPT-5.6 Terra. -->
 - Reasoning effort: <!-- Default: Medium. -->
 - Speed mode: <!-- Default: Standard; Fast remains off. -->
+- Usage source: <!-- Authoritative Codex account meter preferred; Product Owner reading only as fallback/additional observation. -->
+- Usage observed at:
 - Current five-hour percentage:
 - Five-hour reset time:
 - Current longer-period Codex percentage:
 - Estimated five-hour consumption: <!-- LOW / LIKELY / HIGH -->
 - Planning-class guide: <!-- Diagnostic/status default: 35%. -->
-- Operational minimum starting percentage: <!-- Remaining HIGH estimate + 15% floor. -->
-- Automatic stopping percentage: **15%**
+- Operational minimum starting percentage: <!-- Remaining HIGH estimate + 10% five-hour clean-stop target; also preserve 15% weekly unless explicitly overridden. -->
+- Five-hour clean-stop target: **10%**
+- Five-hour hard lower boundary: **5%**
+- Weekly stopping floor: **15% unless explicitly overridden by the Product Owner**
 - Safe checkpoint:
 - Work deferred until the next reset:
 - Prioritized read-only fallback ladder: <!-- Predictable access/tool limitations in order; mark any fallback requiring new authority. -->

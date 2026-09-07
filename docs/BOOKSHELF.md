@@ -64,7 +64,13 @@ Historical checkpoint `80e4c61` remains retired as an executable candidate. Repl
 
 ## Product Owner visual-review observations
 
-The latest review found the Bookcase format direction correct while expecting more visible spines, observed that selecting a Book did not load a cover, and requested missing-book details in Shelf mode for at-a-glance review. These are qualitative expectations, not accepted defects, regression evidence, or implementation authority. Exact density, cover-click behavior/source, and missing-book fields remain Product Owner decisions in [Planner Inbox](PLANNER_INBOX.md). The prior Version 21 anonymous marker evidence and parked hands-on-validation boundary remain unchanged.
+The latest review found the Bookcase format direction correct while expecting more visible spines, observed that selecting a Book did not load a cover, and requested missing-book details in Shelf mode for at-a-glance review. These remain qualitative expectations, not accepted defects, regression evidence, or implementation authority. Product Owner Decisions 1:A–3:A establish deferred Phase F direction:
+
+- Use responsive density-first spine sizing and gaps within readable, keyboard-operable, and touch-safe limits; do not impose fixed viewport counts.
+- Book detail may show only an already stored personal cover or the safe fallback. Reference-cover enrichment remains separate roadmap work.
+- Missing Shelf positions may show a compact existing-data summary: expected position/number, known title, missing status, and any already available acquisition cue. Omit unavailable fields and do not create synthetic Books.
+
+These decisions do not enter Phase A scope or activate visual source changes. The prior Version 21 anonymous marker evidence and parked hands-on-validation boundary remain unchanged.
 
 ## Future improvements
 

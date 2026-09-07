@@ -26,7 +26,7 @@ Use <https://github.com/nguyenk06/book-collection-design> as the authoritative D
 
 - `!init` — read-only parent initialization or state refresh.
 - `!status` — consolidated read-only state, subagent, queue, usage, and gate report.
-- `!<five-hour>:<longer-period>` — record Codex capacity; `!40:75` means 40% five-hour and 75% longer-period.
+- `!<five-hour>:<longer-period>` — manually record Codex capacity when the authoritative account meter is unavailable or as an additional Product Owner observation; `!40:75` means 40% five-hour and 75% longer-period.
 - `!run` — activate or continue already approved completion-oriented goals.
 - `!drain` — finish the current safe unit and accept no new goal.
 - `!stop` — stop at the nearest safe checkpoint.
@@ -51,7 +51,7 @@ Read in order:
 7. `docs/ENGINEER_EXECUTION_CONTRACT.md`
 8. `docs/HANDOFF_PROTOCOL.md` only when workflow detail is needed
 
-Report identity, repository access, exact released/saved Site state, current CYOA goal, direct-child status, one-writer status, queue/throttle, five-hour and longer-period usage, 15% floor, Sites capacity or `UNKNOWN`, pending Product Owner decisions, production gates, active/blocking owners, and contradictions.
+Report identity, repository access, exact released/saved Site state, current CYOA goal, direct-child status, one-writer status, queue/throttle, five-hour and longer-period usage, the five-hour 10% clean-stop target/5% hard boundary, the 15% weekly floor, Sites capacity or `UNKNOWN`, pending Product Owner decisions, production gates, active/blocking owners, and contradictions.
 
 ## Parent orchestration
 
@@ -65,7 +65,10 @@ Report identity, repository access, exact released/saved Site state, current CYO
 - Subagent results return to Quatre. Quatre routes product/release-boundary review to Relena and gives the Product Owner one consolidated response.
 - Treat Sei III's accepted 2026-09-05 final retirement report as closed evidence. Sei III and the old separate-chat workflow have no remaining authority. Do not initialize Kira during transition-only `!init` or imply that Kira inherited Sei state.
 - Keep `PLANNER_INBOX.md` for genuine Product Owner decisions only.
-- Preserve the 15% five-hour floor and check longer-period capacity separately. Record Sites capacity as `UNKNOWN` when no usable meter exists.
+- Before starting any project, activating a new large milestone, or resuming after a reset, retrieve the authoritative Codex account usage meter when available. Record its source and observation time; do not require the Product Owner to provide a screenshot or percentage.
+- Treat local session-log caches and overlays as advisory because they may lag. Use Product Owner usage readings only as a fallback or additional observation when the authoritative meter is unavailable.
+- For five-hour capacity, target a clean stop near 10% remaining and never intentionally plan below the 5% hard boundary. Preserve 15% weekly capacity unless the Product Owner explicitly authorizes a bounded exception, normally near the weekly reset. Record Sites capacity as `UNKNOWN` when no usable meter exists.
+- Never redeem a usage-reset credit without explicit Product Owner authorization.
 
 Kira may inspect, implement, test, build, package, and prepare a validated release packet. Kira must not invoke Sites tools, obtain Sites credentials, save, preview, deploy, publish, or perform the final Site handoff.
 

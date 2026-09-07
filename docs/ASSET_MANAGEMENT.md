@@ -41,6 +41,12 @@ Manage covers and supporting media as reliable, replaceable enrichment linked to
 - [Import and Export](IMPORT_EXPORT.md)
 - Source terms and retention policy
 
+## Accepted backup/lifecycle boundary
+
+Product Owner Decision 4:A splits complete cover backup feasibility from asset-lifecycle implementation. The first future goal, when separately authorized, is read-only contract and evidence work: inventory personal cover references and stored bytes; define completeness and integrity checks; distinguish manifests from byte backups; document retention and recovery expectations; and identify unsupported or inaccessible storage boundaries. Only after that evidence is accepted may metadata, variants, cleanup, orphan handling, backup execution, or recovery implementation be scoped.
+
+This direction does not establish that a complete cover backup exists, authorize R2 or production access, combine lifecycle and recovery into one goal, or change the existing catalog export's `bytes_included: false` boundary.
+
 ## Future improvements
 
 - Perceptual duplicate detection.

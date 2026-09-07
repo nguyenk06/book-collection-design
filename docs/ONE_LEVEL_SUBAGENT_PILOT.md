@@ -36,7 +36,7 @@ The Product Owner communicates only with Quatre. Routine Product Owner controls 
 
 - `!init` — read-only parent initialization or state refresh.
 - `!status` — consolidated read-only state, queue, usage, subagent, and gate report.
-- `!<five-hour>:<longer-period>` — record Codex capacity, for example `!40:75`.
+- `!<five-hour>:<longer-period>` — manually record Codex capacity when the authoritative account meter is unavailable or when the Product Owner wants to preserve an independently observed display, for example `!40:75`.
 - `!run` — activate or continue only already approved completion-oriented goals.
 - `!drain` — finish the current safe unit and accept no new goal.
 - `!stop` — stop active work at the nearest safe checkpoint.
@@ -83,13 +83,17 @@ Production publication, schema/data mutation, migration, credential changes, des
 
 ## Usage governance
 
-- Preserve the provisional 15% five-hour automatic stopping floor.
-- Check the longer-period allowance separately.
+- Before starting any project, activating a new large milestone, or resuming one after a reset, Quatre must retrieve the authoritative Codex account usage meter when that capability is available. The Product Owner does not need to supply a screenshot or percentage.
+- Record the meter source and observation time with the five-hour and longer-period readings. A Product Owner `!<five-hour>:<longer-period>` reading is a fallback or additional observation, not a prerequisite when Quatre can retrieve the authoritative meter directly.
+- A local session-log cache or overlay is advisory and may lag. It must not replace an available authoritative account reading for a project-start or large-milestone gate.
+- For the five-hour window, plan to reach a clean checkpoint at approximately 10% remaining and never intentionally plan below the 5% hard lower boundary. The 5–10% band is the five-hour stopping range, not extra work that must be consumed.
+- Check the longer-period/weekly allowance separately and preserve 15% remaining by default. Only explicit Product Owner direction may override the weekly floor, normally for a bounded finish close to the weekly reset; the exception does not waive the five-hour hard boundary or any other gate.
 - Record Sites capacity as `UNKNOWN` when the account exposes no usable meter; never infer a percentage.
 - Keep CYOA as the only active project during the pilot.
 - Quatre decides whether a goal fits before spawning or resuming Kira.
 - `WAITING FOR RESET` is a normal resumable state, not a blocker.
 - Request a fresh reading for a new large/high-risk goal, stale/reset/intervening usage, material estimate growth, or credible approach to the floor; avoid routine micro-checks.
+- Reading usage never authorizes Quatre to redeem a usage-reset credit. Reset redemption requires explicit Product Owner authorization.
 
 ## Reporting and durable evidence
 

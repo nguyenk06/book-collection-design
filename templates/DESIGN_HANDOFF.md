@@ -42,7 +42,9 @@ Quatre retains this source unchanged in the internal evidence store and routes i
 - Refreshed usage before `!run`: <!-- SAME AS INTAKE unless stale, reset/intervening work occurred, work is large/high-risk, estimate grew, or floor risk emerged. -->
 - Usage at materially relevant checkpoints: <!-- Large/high-risk, reset/window, material estimate growth, or credible floor-risk checkpoints only. -->
 - Ending usage: <!-- Record when readily available; do not block an otherwise complete small/normal run solely to obtain it. -->
-- Automatic stopping percentage: 15%
+- Five-hour clean-stop target: 10%
+- Five-hour hard lower boundary: 5%
+- Weekly stopping floor: 15% unless explicitly overridden by the Product Owner
 - Observed burn: <!-- starting minus ending; evidence only, not a universal conversion -->
 - Reset state: <!-- CONTINUING | WAITING FOR RESET | NOT APPLICABLE -->
 - Exact safe resume point and next command:

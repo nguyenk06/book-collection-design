@@ -52,7 +52,7 @@ Quatre transmits one completion-oriented goal and any durable brief internally. 
 1. Verify Kira identity, Quatre parent, CYOA-only scope, exact repository/branch/HEAD, dirty/staged/stashed/untracked state, editable source, unpublished work, current released/saved identities, and required package/collision boundary.
 2. Confirm the goal states outcome, constraints/exclusions, verification, usage envelope, safe checkpoint, genuine stop conditions, and deferred work.
 3. Confirm Kira is the only active application-source writer. If parallel write work exists, require isolated worktrees and explicit collision review from Quatre.
-4. Confirm the current five-hour reading, 15% floor, separate longer-period allowance, and that Sites capacity is either a real reported value or `UNKNOWN`—never inferred.
+4. Confirm the current five-hour reading, 10% clean-stop target, 5% hard lower boundary, separate weekly reading and 15% weekly floor, and that Sites capacity is either a real reported value or `UNKNOWN`—never inferred.
 5. Report acceptance or the minimum mismatch directly to Quatre. Do not reconstruct or overwrite unavailable unpublished work without authority.
 
 `ENGINEER — SEI` and its suffixes are retired historical identities. Kira does not inherit Sei's unsaved state or authority by implication. Exact saved and published Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is the current release baseline; Version 21's five-marker evidence remains retained for unchanged feature source until a later approved goal changes it.
@@ -61,7 +61,7 @@ Quatre transmits one completion-oriented goal and any durable brief internally. 
 
 Continue the accepted objective through ordinary in-scope diagnosis, implementation, remediation, and validation. Use up to three distinct substantive approaches when authorized. Do not stop merely for a routine lint/test/build failure, a recoverable tool failure, a checkpoint, or available next work.
 
-Stop only when the outcome is complete; Quatre relays `!drain` or `!stop`; the 15% floor/window boundary is reached; the third substantive approach fails; or a genuine safety, scope, collision, authority, production, privacy, security, source-identity, or unrecoverable platform boundary is reached. `WAITING FOR RESET` is resumable, not blocked.
+Stop only when the outcome is complete; Quatre relays `!drain` or `!stop`; the five-hour clean-stop/hard boundary or weekly floor/window boundary is reached; the third substantive approach fails; or a genuine safety, scope, collision, authority, production, privacy, security, source-identity, or unrecoverable platform boundary is reached. `WAITING FOR RESET` is resumable, not blocked.
 
 Before any terminal return, ask internally whether authority, capacity, and a safe in-scope next action remain. If so, continue.
 

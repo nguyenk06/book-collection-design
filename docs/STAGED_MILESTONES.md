@@ -2,11 +2,11 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** The Version 22 quality-of-life release is complete. Current reported capacity is `!85:12`; preserve the 15% five-hour floor and check the 12% longer-period allowance separately before any later Engineer slice. Sites capacity is `UNKNOWN`.
+**Execution budget:** Phase 0 and the Version 23 scanner release are complete. The authoritative closeout account meter observed 2026-09-07 reported 48% five-hour remaining and 76% weekly remaining. Kira's 9/13/18-point Phase A estimate projects 30%/58% remaining in the high case. Preserve the five-hour 10% clean-stop target/5% hard boundary and the default 15% weekly floor. Capacity does not itself authorize another goal; Sites capacity is `UNKNOWN`.
 
-**Queue state:** Throttle `DRAIN`. Exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is definitively saved and published. Product Owner Decision 1:A selects Phase A — IA and responsive shell as the next implementation priority after capacity recovery, but four visual/asset choices, visual criteria, and goal authorization must precede any source change. Version 21 hands-on validation remains parked. No Engineer goal is active.
+**Queue state:** Throttle `DRAIN`. Exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` is definitively saved and published, including the completed shared scanner restoration. Product Owner Decision 1:A selects Phase A — IA and responsive shell as the next implementation priority. Exact-source composition and estimation are complete; mandatory Product Owner visual review, bounded goal authorization, activation-time usage/source checks, and normal validation gates must precede any source change. Version 21 hands-on validation remains parked. No Engineer goal is active.
 
-**Usage state:** Version 22 is the authoritative exact saved and published checkpoint; Versions 20 and 21 remain retained history and evidence. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** Version 23 is the authoritative exact saved and published checkpoint; Versions 20–22 remain retained history and evidence. Product Owner Decision B accepts its retained visible/accessibility `v22` labeling, but the next release packet must update both labels to the intended release version. Reassess usage, authority, and collision risk before any later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 
@@ -86,7 +86,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 ## Milestone 6 — Local downloadable catalog export UI
 
-**State:** Complete and validated locally; first published in exact Version 20 and carried unchanged into exact Version 22; Product Owner checkpoint remains separately gated.
+**State:** Complete and validated locally; first published in exact Version 20 and carried unchanged into exact Version 23; Product Owner checkpoint remains separately gated.
 
 - **Roadmap authority:** [Roadmap priority 4](ROADMAP.md); [Import/Export accepted export-first boundary and format v1](IMPORT_EXPORT.md#accepted-format-version-1-contract); completed M5 foundation.
 - **Objective/user outcome:** An owner can locally request and download the approved catalog format-v1 export with understandable scope and limitations.
@@ -103,7 +103,7 @@ M4 and M5 are complete locally. M2 Gate 0 isolated the exact candidate, Gate 1 p
 
 - Treat each execution brief as one independently resumable five-hour slice within the milestone. Do not run CYOA and another Engineer project in the same window by default.
 - Record usage before `!brief`, before `!run`, and after each named checkpoint. Treat percentages as capacity evidence, not a token/task conversion.
-- Use 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk as sizing guides. An approved slice may run when its remaining high estimate plus the 15% floor fits. Continue useful authorized work toward that floor; never invent work merely to consume usage.
+- Use 35% diagnostic/status, 50% small implementation, 70% normal implementation, and 85% migration/release/high-risk as sizing guides. An approved slice may run when its remaining high estimate plus the 10% five-hour clean-stop target fits without crossing the 5% hard boundary or default 15% weekly floor. Continue useful authorized work toward a clean checkpoint; never invent work merely to consume usage.
 - Finish and validate the current slice before starting another; reserve usage for tests, evidence, transport, and a clean stop.
 - If one workstream blocks, report it and continue the next independently eligible, non-conflicting workstream. Waiting for a production gate does not idle authorized local work.
 - A task-level question causes `WAITING FOR ANSWER`, not a global stop, unless it affects all eligible work, crosses a risk gate, threatens shared architecture/correctness, leaves no independent task, or usage approaches reserve.

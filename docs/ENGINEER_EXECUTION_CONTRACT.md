@@ -6,7 +6,7 @@ Kira is a direct Quatre child and must not spawn. Kira may inspect, implement, t
 
 ## Active-run invariant
 
-Once Quatre activates an approved Product Owner `!run`, its authorization persists across the accepted Kira goal until the objective is complete, Quatre relays `!drain` or `!stop`, the 15% floor/window boundary, or a genuine stopping condition below. Intermediate progress is nonterminal.
+Once Quatre activates an approved Product Owner `!run`, its authorization persists across the accepted Kira goal until the objective is complete, Quatre relays `!drain` or `!stop`, the five-hour 10% clean-stop target/5% hard boundary or weekly 15% floor/window boundary, or a genuine stopping condition below. Intermediate progress is nonterminal.
 
 Kira must not end the turn merely to report progress, a successful checkpoint, an ordinary lint/test/build failure, a recoverable tool failure, or an available next action. Emit concise updates to Quatre while work continues; they do not request another Product Owner message. Never ask the Product Owner to continue already-authorized work. A repeated `!run` is not required after ordinary remediation, validation, or a recoverable tool failure.
 
@@ -19,7 +19,7 @@ Before ending any active `!run` turn, evaluate all seven questions:
 1. Is `!run` still active?
 2. Does accepted scope remain unfinished?
 3. Is the next action already authorized?
-4. Does remaining capacity preserve the 15% floor?
+4. Does remaining capacity preserve the five-hour 10% clean-stop target and 5% hard boundary plus the weekly 15% floor unless explicitly overridden?
 5. Has the applicable three-attempt boundary actually been exhausted?
 6. Is another independent authorized workstream eligible?
 7. Is the problem limited to one tool/action rather than the whole workstream?
@@ -32,7 +32,7 @@ A final response during active `!run` is allowed only when one of these is true:
 
 - The accepted objective is complete.
 - `!drain` or `!stop` applies.
-- The 15% floor or five-hour window boundary is reached.
+- The five-hour clean-stop/hard boundary, the weekly floor, or either window boundary is reached.
 - The third substantive approach to the same problem failed.
 - A genuine scope, safety, production, destructive-action, privacy, security, source-identity, or authority boundary is reached.
 - A cross-cutting system limitation has no brief-authorized fallback.
