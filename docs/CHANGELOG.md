@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-07 — Version 24 review recorded; scanner corrective contract established
+
+- Recorded the Product Owner's published Version 24 review: desktop/mobile shell, navigation, header, and view behavior are accepted; My Library aggregate semantics are deferred to corrective Step 4; book-cover loading remains a later-phase diagnosis/remediation candidate outside Steps 1–3.
+- Corrected prior scanner-completion language. Version 23 implementation, automated-test, build, and publication evidence remains valid, but Product Owner hands-on acceptance failed because Library and Shopkeeper stopped after ISBN decode/display instead of continuing through duplicate identification, metadata outcome, review/add/manual continuation, or comparison.
+- Established the bounded Version 25 Steps 2–3 contract for source/runtime handoff diagnosis without production-data access and one shared camera/manual Library/Shopkeeper resolver with whole-Library ISBN equivalence, explicit outcomes, local-first metadata ordering, reviewed Library creation, compact Shopkeeper handoff, no scan/lookup mutation, duplicate recheck, and repeat-scan reset.
+- Kept My Library Step 4, cover work, Phase F, Sites/credentials, deployment/publication, production, schema/migration/authentication/API/provider/dependency changes, and held Version 21 validation outside the contract. Any necessary protected change stops for Product Owner decision.
+
 ## 2026-09-07 — Exact Phase A checkpoint published as Version 24
 
 - Saved and publicly deployed exact Phase A checkpoint `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` as Sites Version 24 at `https://cyoa-collection.znesfreak.chatgpt.site`; deployment returned definitive `succeeded` and preserved the existing public audience.

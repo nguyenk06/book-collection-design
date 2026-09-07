@@ -6,4 +6,4 @@ It is not a task backlog, technical issue tracker, Engineer progress log, change
 
 ## Current Decisions
 
-No Planner or Product Owner decisions are currently pending. Product Owner Decision B accepts `v22` as the product-version label retained by Sites Version 23. The next planned release must update its visible and accessible product-version labels before final acceptance and publication.
+No Planner or Product Owner decisions are currently pending.
