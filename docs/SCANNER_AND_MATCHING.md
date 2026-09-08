@@ -45,13 +45,17 @@ Current validation at `75075e1` passed 57/57 focused tests and 109/109 full test
 
 The checkpoint was pushed, saved, and published as Version 23 after explicit Product Owner authorization. The single deployment returned definitive `succeeded` at the existing public CYOA URL. Those implementation, automated-test, build, and publication results remain valid evidence, but they do not establish public hands-on acceptance.
 
-On published Version 24, the Product Owner observed that both Library and Shopkeeper decode and display an ISBN but do not continue through Library-wide duplicate identification, metadata lookup outcome, review/add or manual continuation, or comparison. Scanner restoration therefore failed Product Owner public hands-on acceptance despite the earlier local and automated evidence. Step 2 must diagnose the source/runtime handoff without production-data access; Step 3 must restore the contract above and provide new bounded evidence before another acceptance claim.
+On published Version 24, the Product Owner observed that both Library and Shopkeeper decode and display an ISBN but do not continue through Library-wide duplicate identification, metadata lookup outcome, review/add or manual continuation, or comparison. Scanner restoration therefore failed Product Owner public hands-on acceptance despite the earlier local and automated evidence.
 
 The historical evidence does not prove a shared persistent candidate/reviewer workflow, cross-session decision storage, fuzzy scoring, physical-device behavior beyond the reported decode, provider behavior, or correct downstream runtime handoff on Version 24. Those capabilities must not be inferred.
 
-## Corrective status
+## Version 25 local corrective result
 
-Exact checkpoint `75075e1` remains published Version 23 implementation/test evidence, and Version 24 remains the public baseline, but scanner restoration is not hands-on accepted. Kira may receive a separately authorized Steps 2–3 brief against the contract above. Diagnosis and restoration must not access production data or use Sites/credentials, and no later save, deployment, publication, or public acceptance is implied.
+Public Version 24 remains exact `4cd6eecd22e1512a87d503a2b5ceb61fdd276269`. Kira's scanner commit `41ca4fc` plus aggregate/corrections HEAD `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2` locally satisfies the corrective contract above. Library and Shopkeeper share reactive scan submission/resolution, late or replaced results cannot reopen the flow, and aggregate My Library semantics no longer narrow matching or presentation to the add-target collection.
+
+The exact baseline-to-HEAD boundary is eight UI/test paths: `app/globals.css`, `app/page.tsx`, `app/shopping/shopping-client.tsx`, `app/shopping/shopping.css`, `app/use-isbn-scanner-submission.ts`, `tests/collection-behavior.test.tsx`, `tests/scanner-identifier.test.tsx`, and `tests/shopping-mode.test.tsx`. Focused affected suites passed 61/61, the full serial suite passed 118/118, production build passed, lint reported zero errors and one established `no-img-element` warning, diff-check was clean, and Relena's final read-only release-boundary review returned `PASS`.
+
+The candidate is release-ready but remains local, unpushed, unsaved, undeployed, and unpublished. Product Owner approval is required before any publication preparation or public hands-on acceptance. A canceled pending Library lookup can leave its `Checking ISBN…` notice visible until another action clears it; this is a non-blocking next-release follow-up if this area is touched and does not reopen the flow or mutate data.
 
 ## Out of scope
 
@@ -60,12 +64,12 @@ Exact checkpoint `75075e1` remains published Version 23 implementation/test evid
 - Provider redesign, new metadata or cover providers, lookup for already-exact local matches, caching, or permanent new provider dependence.
 - Physical-camera/photo support claims not re-established against current source and devices.
 - Automatic Book creation, automatic ISBN persistence, canonical merge, ownership/Purchase mutation, or Shopkeeper Buy/Skip/Upgrade scoring.
-- My Library aggregate-semantics correction, cover loading/remediation or reference-cover enrichment, Phase F presentation, and later publication.
+- My Library aggregate semantics are outside the scanner contract and were completed separately in aggregate/corrections commit `44a853f`; cover loading/remediation or reference-cover enrichment, Phase F presentation, and later publication remain out of scope.
 - Production data access, Sites or credentials, deployment, schema/migration/authentication/API/provider/dependency/lockfile change, or data activation. If diagnosis shows that any protected change is necessary, stop and return for a Product Owner decision rather than expanding the corrective slice.
 
 ## Dependencies
 
-- Exact current editable Version 24 source and a goal-specific collision manifest
+- Exact local `44a853f` candidate identity and its eight-path collision manifest
 - [Database](DATABASE.md)
 - [Asset Management](ASSET_MANAGEMENT.md)
 - Canonical identity rules and an accessible review interface

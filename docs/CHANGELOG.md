@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-07 — Version 25 corrective phase locally complete
+
+- Recorded public Version 24 `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` as unchanged and exact local release-ready candidate `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2` as scanner commit `41ca4fc` plus aggregate/corrections.
+- Accepted the exact eight-path UI/test boundary with focused 61/61, full serial 118/118, production build pass, lint zero errors/one established `no-img-element` warning, clean diff-check, and Relena final `PASS`.
+- Closed the bounded scanner and aggregate-Library corrective phase locally. Publication is the next separate Product Owner approval boundary; no app push, Site save/deployment/publication, version bump, production/schema/authentication/provider/hosting change, cover/Phase F work, collection reordering, or Version 21 validation activation occurred.
+- Retained one non-blocking follow-up: canceling a pending Library lookup can leave its `Checking ISBN…` notice visible until another action clears it; clear this in the next release if the area is touched.
+- Recorded closing usage at 69% five-hour and 48% weekly remaining with all three reset credits unused, above the five-hour 5–10% and weekly 15% floors; Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-07 — Version 24 review recorded; scanner corrective contract established
 
 - Recorded the Product Owner's published Version 24 review: desktop/mobile shell, navigation, header, and view behavior are accepted; My Library aggregate semantics are deferred to corrective Step 4; book-cover loading remains a later-phase diagnosis/remediation candidate outside Steps 1–3.
