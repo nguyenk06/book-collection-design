@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-08 — Scanner restoration candidate accepted locally
+
+- Recorded exact local unpublished scanner candidate `a0c545dba6f27e86487733a05871fe642aceb271` over published production Version 25 `738acc07f3093bc74434dba2a32d62b94e6cfe06` as the current priority. Broader visual-design acceptance is explicitly held by the Product Owner.
+- Recorded Quatre validation of 120/120 tests, production build `PASS`, and lint with zero errors/one unchanged image advisory, plus Relena's bounded scanner release review `PASS`.
+- Retained the minor non-blocking evidence note: timeout recovery is directly unit-tested through the shared resolver and reaches the existing metadata-unavailable integration path, but no separate UI test waits through the real eight-second timeout.
+- No application or Site action occurred from this documentation update. Any publication/version change requires separate Product Owner authorization; Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-07 — Exact corrective checkpoint published as Version 25
 
 - Recorded exact source `738acc07f3093bc74434dba2a32d62b94e6cfe06`—corrective HEAD `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2` plus the Version 25 identity commit—as saved Site Version 25 and successfully deployed at `https://cyoa-collection.znesfreak.chatgpt.site` with the existing public audience preserved.
