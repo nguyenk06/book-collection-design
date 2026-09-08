@@ -2,11 +2,11 @@
 
 **Prepared:** 2026-08-12
 
-**Execution budget:** The bounded Version 25 scanner and aggregate-Library corrective phase is locally complete at exact `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2`. The closing authoritative meter is 69% five-hour / 48% weekly remaining; all three reset credits remain unused. Both windows remain above the five-hour 5–10% and weekly 15% floors, but capacity does not authorize publication or another goal. Sites capacity is `UNKNOWN`.
+**Execution budget:** The bounded Version 25 scanner and aggregate-Library corrective phase is published at exact `738acc07f3093bc74434dba2a32d62b94e6cfe06`. The last recorded authoritative meter is 69% five-hour / 48% weekly remaining; all three reset credits remain unused. Both windows were above the five-hour 5–10% and weekly 15% floors, but capacity does not authorize another goal. Sites capacity is `UNKNOWN`.
 
-**Queue state:** Throttle `DRAIN`. Exact `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` remains the saved/public Version 24 baseline. Exact local candidate `44a853f` comprises scanner `41ca4fc` plus aggregate/corrections, passed Relena's release boundary, and remains unpushed/unsaved/unpublished. Product Owner publication approval is next. Covers, Phase F, collection reordering, and Version 21 validation remain parked; no application writer or Site operation is active.
+**Queue state:** Throttle `DRAIN`. Exact `738acc07f3093bc74434dba2a32d62b94e6cfe06` is the saved/public Version 25 baseline; deployment succeeded with the public audience preserved. Its corrective source at `44a853f` comprises scanner `41ca4fc` plus aggregate/corrections and passed Relena's release boundary. Product Owner public hands-on review is next. Cover loading, Shelf missing-title presentation, Phase F, collection reordering, and Version 21 validation remain parked; no application writer or Site operation is active.
 
-**Usage state:** Version 24 is the authoritative saved and published checkpoint and carries matching visible/accessibility `v24` labels. Reassess usage, authority, exact identity, and collision risk before any remediation, later release, or later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
+**Usage state:** Version 25 is the authoritative saved and published checkpoint. Confirm its visible/accessibility `v25` identity through the [Version 25 Product Owner Review](VERSION_25_OWNER_REVIEW.md). Reassess usage, authority, exact identity, and collision risk before any remediation, later release, or later batch. See [Next Batch Plan](NEXT_BATCH_PLAN.md).
 
 This sequence stages only work supported by the approved roadmap and permanent decisions. Engineer Research Sandbox review, engineering-knowledge validation, external-project research, Future Improvement Catalog review/ranking, and new ideas are excluded.
 

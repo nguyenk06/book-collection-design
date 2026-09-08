@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-07 — Exact corrective checkpoint published as Version 25
+
+- Recorded exact source `738acc07f3093bc74434dba2a32d62b94e6cfe06`—corrective HEAD `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2` plus the Version 25 identity commit—as saved Site Version 25 and successfully deployed at `https://cyoa-collection.znesfreak.chatgpt.site` with the existing public audience preserved.
+- Closed the publication decision and made Product Owner hands-on review of the published Site the active acceptance gate. Added the [Version 25 Product Owner Review](VERSION_25_OWNER_REVIEW.md) checklist for release identity, aggregate My Library, shared scanner outcomes and late-result safety, and desktop/mobile parity.
+- Kept cover loading and Shelf missing-title presentation deferred and explicitly outside Version 25 acceptance. This documentation closure performed no application, Site, production, credential, schema/data, authentication, provider, hosting, migration, recovery, or held Version 21 validation action.
+
 ## 2026-09-07 — Version 25 corrective phase locally complete
 
 - Recorded public Version 24 `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` as unchanged and exact local release-ready candidate `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2` as scanner commit `41ca4fc` plus aggregate/corrections.

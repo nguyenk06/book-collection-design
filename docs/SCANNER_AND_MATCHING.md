@@ -49,13 +49,13 @@ On published Version 24, the Product Owner observed that both Library and Shopke
 
 The historical evidence does not prove a shared persistent candidate/reviewer workflow, cross-session decision storage, fuzzy scoring, physical-device behavior beyond the reported decode, provider behavior, or correct downstream runtime handoff on Version 24. Those capabilities must not be inferred.
 
-## Version 25 local corrective result
+## Version 25 corrective result
 
-Public Version 24 remains exact `4cd6eecd22e1512a87d503a2b5ceb61fdd276269`. Kira's scanner commit `41ca4fc` plus aggregate/corrections HEAD `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2` locally satisfies the corrective contract above. Library and Shopkeeper share reactive scan submission/resolution, late or replaced results cannot reopen the flow, and aggregate My Library semantics no longer narrow matching or presentation to the add-target collection.
+Exact Version 25 source `738acc07f3093bc74434dba2a32d62b94e6cfe06` publishes Kira's scanner commit `41ca4fc` plus aggregate/corrections HEAD `44a853f7430f92da37bf1c9cdef37bdfe2a6c7b2` and the Version 25 identity commit. Library and Shopkeeper share reactive scan submission/resolution, late or replaced results cannot reopen the flow, and aggregate My Library semantics no longer narrow matching or presentation to the add-target collection.
 
 The exact baseline-to-HEAD boundary is eight UI/test paths: `app/globals.css`, `app/page.tsx`, `app/shopping/shopping-client.tsx`, `app/shopping/shopping.css`, `app/use-isbn-scanner-submission.ts`, `tests/collection-behavior.test.tsx`, `tests/scanner-identifier.test.tsx`, and `tests/shopping-mode.test.tsx`. Focused affected suites passed 61/61, the full serial suite passed 118/118, production build passed, lint reported zero errors and one established `no-img-element` warning, diff-check was clean, and Relena's final read-only release-boundary review returned `PASS`.
 
-The candidate is release-ready but remains local, unpushed, unsaved, undeployed, and unpublished. Product Owner approval is required before any publication preparation or public hands-on acceptance. A canceled pending Library lookup can leave its `Checking ISBN…` notice visible until another action clears it; this is a non-blocking next-release follow-up if this area is touched and does not reopen the flow or mutate data.
+Version 25 was saved and successfully deployed at the existing public URL with the public audience preserved. Product Owner hands-on acceptance remains pending through the [Version 25 Product Owner Review](VERSION_25_OWNER_REVIEW.md). A canceled pending Library lookup can leave its `Checking ISBN…` notice visible until another action clears it; this is a non-blocking next-release follow-up if this area is touched and does not reopen the flow or mutate data.
 
 ## Out of scope
 
@@ -64,12 +64,12 @@ The candidate is release-ready but remains local, unpushed, unsaved, undeployed,
 - Provider redesign, new metadata or cover providers, lookup for already-exact local matches, caching, or permanent new provider dependence.
 - Physical-camera/photo support claims not re-established against current source and devices.
 - Automatic Book creation, automatic ISBN persistence, canonical merge, ownership/Purchase mutation, or Shopkeeper Buy/Skip/Upgrade scoring.
-- My Library aggregate semantics are outside the scanner contract and were completed separately in aggregate/corrections commit `44a853f`; cover loading/remediation or reference-cover enrichment, Phase F presentation, and later publication remain out of scope.
+- My Library aggregate semantics are outside the scanner contract and were completed separately in aggregate/corrections commit `44a853f`; cover loading/remediation or reference-cover enrichment, Shelf missing-title presentation, Phase F, and later releases remain out of scope and do not fail Version 25 acceptance.
 - Production data access, Sites or credentials, deployment, schema/migration/authentication/API/provider/dependency/lockfile change, or data activation. If diagnosis shows that any protected change is necessary, stop and return for a Product Owner decision rather than expanding the corrective slice.
 
 ## Dependencies
 
-- Exact local `44a853f` candidate identity and its eight-path collision manifest
+- Exact Version 25 `738acc07` release identity, corrective `44a853f` source, and its eight-path collision manifest
 - [Database](DATABASE.md)
 - [Asset Management](ASSET_MANAGEMENT.md)
 - Canonical identity rules and an accessible review interface
