@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-09 — Version 26 scanner review rejected; local correction accepted
+
+- Recorded the Product Owner's scanner-only rejection of published Version 26: accepted main-page capture closed without an explicit prompt reporting result data. Shopkeeper was ignored and broader visual-design acceptance remains held.
+- Recorded exact local unpublished main-page-only correction `115b1a57ad92e96a0ff41b9c2660f6a757e037e1`. Relative to Version 26 it changes only `app/page.tsx` and `tests/scanner-identifier.test.tsx`; authoritative tests pass 124/124, the prior production build remains `PASS`, lint remains zero errors/one unchanged image advisory, and Relena's final bounded review is `PASS`.
+- Updated the Version 26 scanner checklist to require explicit modal results, duplicate details and record navigation, metadata/manual review actions, retry, no pre-add mutation, and collection/search preservation. Publication/version change remains separately authorized; Sites capacity is `UNKNOWN`.
+
 ## 2026-09-08 — Scanner restoration published as Version 26
 
 - Recorded exact source `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6` as pushed, saved Site Version 26, and successfully deployed at `https://cyoa-collection.znesfreak.chatgpt.site` with the existing public audience preserved.
