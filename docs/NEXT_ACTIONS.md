@@ -4,34 +4,34 @@ This document contains the current execution horizon. Long-term priorities remai
 
 ## Current sprint
 
-- **Workflow state:** Phase 0 remains closed. Exact corrective checkpoint `738acc07f3093bc74434dba2a32d62b94e6cfe06` is saved and publicly deployed as Version 25, now the authoritative baseline. Historical checkpoint `608553f` remains excluded and non-transferable; Phase F remains deferred. M4 historical transport closure remains permanently unverifiable.
+- **Workflow state:** Phase 0 remains closed. Exact scanner checkpoint `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6` is saved and publicly deployed as Version 26, now the authoritative baseline. Historical checkpoint `608553f` remains excluded and non-transferable; Phase F remains deferred. M4 historical transport closure remains permanently unverifiable.
 - **Queue Mode:** `ENABLED`.
-- **Throttle:** `DRAIN`; exact scanner candidate `a0c545dba6f27e86487733a05871fe642aceb271` is locally validated and review-complete, and no application writer or Site operation is active.
-- **Priority:** Scanner restoration is the current priority. Published production remains exact Version 25 `738acc07f3093bc74434dba2a32d62b94e6cfe06`; broader visual-design acceptance is explicitly held.
+- **Throttle:** `DRAIN`; Version 26 scanner publication is complete, and no application writer or Site operation is active.
+- **Priority:** Product Owner scanner-only public review of exact Version 26. Broader visual-design acceptance remains explicitly held.
 - **Readiness state:** Quatre completed parent handoff/readiness initialization. Relena and Kira were then sequentially initialized as ready direct children, and the Product Owner/Quatre orchestration channel is active.
 - **Engineer state:** Sei III's final continuity report is accepted; Sei III is retired with no active or inherited authority. Kira supported the bounded Version 23 scanner packet and is now ready but idle with no active goal, inherited Sei authority, or Sites rights.
-- **Next owner:** `PLANNER — QUATRE` — preserve the exact unpublished candidate and evidence. Any publication/version change requires a separate Product Owner authorization; no such decision is assumed by this documentation update.
-- **Usage:** The latest authoritative account meter on 2026-09-08 reported 99% five-hour remaining and 100% weekly remaining; all three reset credits remain unused. Both windows are above the five-hour 5–10% and weekly 15% floors. Capacity does not authorize publication or another phase. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
+- **Next owner:** `PRODUCT OWNER` through `PLANNER — QUATRE` — complete the [Version 26 Scanner Product Owner Review](VERSION_26_SCANNER_OWNER_REVIEW.md) and report `PASS` or `FAIL` with concise notes. This grants no implementation or protected-system authority.
+- **Usage:** The pre-publication authoritative account meter on 2026-09-08 reported 99% five-hour remaining and 96% weekly remaining; all three reset credits remain unused. Both windows were above the five-hour 5–10% and weekly 15% floors. Capacity does not authorize another phase. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
 ## Remaining goals and release boundaries
 
-- M1, M4, M5, and M6 and M2 Gates 0–5 are complete within their recorded evidence boundaries. The bounded scanner and aggregate-Library correction at `44a853f` is published as exact Version 25 source `738acc07f3093bc74434dba2a32d62b94e6cfe06`; Product Owner public hands-on acceptance remains open.
-- Exact local unpublished scanner candidate `a0c545dba6f27e86487733a05871fe642aceb271` adds authoritative-Library readiness, shared timeout recovery for stalled metadata, and visible anchored Library result/retry behavior. Quatre validation reports 120/120 tests, production build `PASS`, and lint with zero errors/one unchanged image advisory; Relena's bounded scanner release review is `PASS`.
+- M1, M4, M5, and M6 and M2 Gates 0–5 are complete within their recorded evidence boundaries. The aggregate-Library correction remains published in Version 25 history, and the latest scanner restoration is published as exact Version 26 `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6`; Product Owner scanner-only public acceptance remains open.
+- Exact source `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6` publishes the scanner restoration as Site Version 26 with successful deployment and the existing public audience preserved. It adds authoritative-Library readiness, shared timeout recovery for stalled metadata, and visible anchored Library result/retry behavior. Pre-release evidence is 120/120 tests, production build `PASS`, lint with zero errors/one unchanged image advisory, and Relena bounded scanner release review `PASS`.
 - Minor evidence note: timeout recovery is directly unit-tested through the shared resolver and feeds the existing integration-tested metadata-unavailable UI state, but no separate UI test waits through the real eight-second timeout. This is non-blocking.
 - Version 21 hands-on validation and later smoke remain parked by Decision 1:B. They are not failures or implied implementation scope.
 - The separately authorized visible version-number quality-of-life goal is complete as exact saved and published Version 22. Its three-file delta adds public `v22`, accessible `Release version 22`, and focused coverage; Quatre's publication succeeded and bounded public HTTP verification passed. This did not reopen Version 21 validation or authorize another Site operation.
-- Phase A shell/navigation/header/view presentation remains historical accepted evidence from Version 24, but broader visual-design acceptance is now explicitly held and must not be reopened by the scanner priority. Cover loading, Shelf missing-title presentation, Phase F, and collection reordering remain later work.
+- Phase A shell/navigation/header/view presentation remains historical accepted evidence from Version 24, but broader visual-design acceptance is explicitly held and must not be reopened by the Version 26 scanner review. Cover loading, Shelf missing-title presentation, Phase F, and collection reordering remain later work.
 - Additional roadmap order is: 1 Reference-cover enrichment; 2 Asset lifecycle and complete cover backup (`NEEDS MORE INFORMATION`); 3 Scanner/matching improvements; 4 Tags; 5 Safe import/restore; 6 AI Review; 7 Expanded administration and analysis. None is an executable queue item.
 
 ## Phase 0 — fully closed
 
-Exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` is the retained Phase 0 baseline. Exact Phase A checkpoint `4cd6eecd22e1512a87d503a2b5ceb61fdd276269` remains saved/published Version 24 history, and exact corrective checkpoint `738acc07f3093bc74434dba2a32d62b94e6cfe06` supersedes it as saved and published Version 25. Historical `608553f1c4d18c191582a3c418fc88a482b97045` exists only in a retained historical checkout and remains comparison/design evidence, not a restoration or Phase A source.
+Exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647` is the retained Phase 0 baseline. Versions 24–25 remain saved/published history, and exact scanner checkpoint `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6` supersedes them as saved and published Version 26. Historical `608553f1c4d18c191582a3c418fc88a482b97045` exists only in a retained historical checkout and remains comparison/design evidence, not a restoration or Phase A source.
 
 The source-location and historical-comparison gates completed against Version 22 before scanner restoration. The old Bookshelf/theme/Shopkeeper implementation is superseded; its responsive shell, safe-area/bottom navigation, theme direction, and Shopkeeper discoverability remain design evidence only. The subsequent seven-path scanner delta established exact Version 23 implementation/test evidence without importing that implementation, but Product Owner public hands-on acceptance later failed.
 
-### Scanner restoration — Version 25 correction locally complete
+### Scanner restoration history — Version 25 correction
 
 Version 23 evidence and the failed Version 24 Product Owner hands-on result remain historical inputs. Kira completed the bounded corrective implementation locally as commit `41ca4fc`; aggregate/corrections commit `44a853f` closes the race and hidden-tab findings without expanding protected scope.
 
@@ -45,7 +45,7 @@ The exact checkpoint was pushed to configured `main`, packaged into a validated 
 
 Closing source inspection confirmed that the visible header still says `v22` / `Release version 22`. Product Owner Decision B accepts this as Version 23's product label and authorizes no immediate correction. The next planned release must update the visible and accessible product-version labels before acceptance and publication.
 
-### Phase A / Version 25 correction — published, owner review gated
+### Phase A / Version 25 correction — published; visual acceptance held
 
 - **Base and navigation:** Library is the base/home. Mobile preserves the same primary navigation destinations and hierarchy as desktop while adapting layout, density, and controls to the viewport.
 - **Header and search:** The header exposes the My Library title, current collection, view mode, applicable administration controls, and version. Search remains in the current collection area rather than becoming a global header control.
@@ -60,7 +60,7 @@ Closing source inspection confirmed that the visible header still says `v22` / `
 - **Aggregate acceptance:** My Library is the aggregate base home, keeps the My Library header, includes every Book grouped in current collection order, sorts series/index null-last then author/title, places unknown collection keys under `Unassigned` last, and labels collection selection as the add target.
 - **Validation:** Focused affected suites 61/61; full serial 118/118; production build pass; lint zero errors/one established `no-img-element` warning; clean diff-check; Relena final `PASS`.
 - **Non-blocking follow-up:** Canceling a pending Library lookup can leave its `Checking ISBN…` notice visible until another action clears it. Clear that notice in the next release if this area is touched; it does not reopen flow or mutate data.
-- **Remaining gate:** Product Owner completes the [Version 25 Product Owner Review](VERSION_25_OWNER_REVIEW.md). Cover loading and Shelf missing-title presentation are deferred and do not fail this review. No later version bump, application/Site action, production/schema/authentication/provider/hosting change, cover/Phase F work, collection reordering, or Version 21 validation activation is authorized.
+- **Current gate:** Broader Version 25 visual acceptance is held. The active bounded gate is the scanner-only [Version 26 Product Owner Review](VERSION_26_SCANNER_OWNER_REVIEW.md). No later version bump, application/Site action, production/schema/authentication/provider/hosting change, cover/Phase F work, collection reordering, or Version 21 validation activation is authorized.
 
 ## M6 locally complete
 

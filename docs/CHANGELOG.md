@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-08 — Scanner restoration published as Version 26
+
+- Recorded exact source `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6` as pushed, saved Site Version 26, and successfully deployed at `https://cyoa-collection.znesfreak.chatgpt.site` with the existing public audience preserved.
+- Retained pre-release evidence of 120/120 tests, production build `PASS`, lint with zero errors/one unchanged image advisory, and Relena's bounded scanner release review `PASS`, including its minor non-blocking real-timeout UI-test coverage note.
+- Made the scanner-only [Version 26 Product Owner Review](VERSION_26_SCANNER_OWNER_REVIEW.md) the next gate. Broader visual-design acceptance remains explicitly held; publication does not authorize further implementation or production data/schema/authentication/provider changes.
+- Recorded pre-publication usage at 99% five-hour and 96% weekly remaining with all three reset credits unused. Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-08 — Scanner restoration candidate accepted locally
 
 - Recorded exact local unpublished scanner candidate `a0c545dba6f27e86487733a05871fe642aceb271` over published production Version 25 `738acc07f3093bc74434dba2a32d62b94e6cfe06` as the current priority. Broader visual-design acceptance is explicitly held by the Product Owner.
