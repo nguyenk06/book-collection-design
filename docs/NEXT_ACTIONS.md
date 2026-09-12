@@ -8,10 +8,10 @@ This document contains the current execution horizon. Long-term priorities remai
 - **Queue Mode:** `ENABLED`.
 - **Throttle:** `DRAIN`; exact main-page-only correction `115b1a57ad92e96a0ff41b9c2660f6a757e037e1` is locally validated and review-complete, and no application writer or Site operation is active.
 - **Priority:** Preserve the unpublished correction after Product Owner `REJECTED` Version 26's main-page scanner behavior. Shopkeeper is ignored and broader visual-design acceptance remains explicitly held.
-- **Readiness state:** Quatre completed parent handoff/readiness initialization. Relena and Kira were then sequentially initialized as ready direct children, and the Product Owner/Quatre orchestration channel is active.
+- **Readiness state:** Quatre completed parent handoff/readiness initialization. Relena and Kira remain ready direct children; Cagalli, Lacus, and Athrun are ready/idle standing direct advisory children. The Product Owner/Quatre orchestration channel is active.
 - **Engineer state:** Sei III's final continuity report is accepted; Sei III is retired with no active or inherited authority. Kira supported the bounded Version 23 scanner packet and is now ready but idle with no active goal, inherited Sei authority, or Sites rights.
 - **Next owner:** `PLANNER — QUATRE` — retain exact `115b1a57` and its evidence pending separate Product Owner publication/version authorization. No publication is currently authorized.
-- **Usage:** The pre-publication authoritative account meter on 2026-09-08 reported 99% five-hour remaining and 96% weekly remaining; all three reset credits remain unused. Both windows were above the five-hour 5–10% and weekly 15% floors. Capacity does not authorize another phase. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
+- **Usage:** The authoritative scanner-QA intake reading on 2026-09-11 reported 72% five-hour remaining and 80% weekly remaining; all three reset credits remain unused. Both windows were above the five-hour 5–10% and weekly 15% floors. Capacity does not authorize another phase. Sites capacity is `UNKNOWN` unless a meter is actually exposed.
 
 Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently confirmed schema-complete and zero-FK status. A separately authorized one-time Version 19 bridge export then matched Gate 2 counts, identities, Book values, ownership, copies, and cover references; the sole semantic difference was the authorized 600-cent CYOA target price. Gate 4 is complete within this bridge-observable boundary, not as a D1 snapshot, R2-byte backup, restore-readiness proof, or complete backup.
 
@@ -19,12 +19,20 @@ Gate 3 was invoked exactly once and cannot be retried. Gate 4 independently conf
 
 - M1, M4, M5, and M6 and M2 Gates 0–5 are complete within their recorded evidence boundaries. The aggregate-Library correction remains published in Version 25 history, and the latest scanner restoration is published as exact Version 26 `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6`; Product Owner scanner-only public acceptance remains open.
 - Published exact Version 26 `c0fdd65efa1eaf97c3840cb0ff351b97fb16b2d6` is Product Owner `REJECTED` for scanner acceptance: accepted main-page capture closed without an explicit prompt reporting result data.
-- Exact local unpublished main-page-only correction `115b1a57ad92e96a0ff41b9c2660f6a757e037e1` changes only `app/page.tsx` and `tests/scanner-identifier.test.tsx`. Authoritative tests pass 124/124; prior production build `PASS` and lint with zero errors/one unchanged image advisory remain valid because only tests changed after the accepted application commit; Relena final bounded review is `PASS`.
+- Exact clean local unpublished main-page-only correction `115b1a57ad92e96a0ff41b9c2660f6a757e037e1` changes only `app/page.tsx` and `tests/scanner-identifier.test.tsx`. Relena's bounded review is `PASS`. Athrun independently validated resolver 6/6, selected main-page scanner 26 tests passed, bounded collection/identifier 33/33, and full serial 11/11 files and 124/124 tests under Node `24.19.0` in 148.37 seconds; lint reported zero errors/one existing image advisory, production build passed, and the diff was clean.
 - The correction requires every accepted main-page scan to terminate in an explicit modal unless canceled/replaced, with duplicate details and navigation, metadata/manual review, retry, no pre-add mutation, and collection/search lookup preservation. Shopkeeper is excluded.
+- Public camera, live metadata, and operator validation remain unproven; they are acceptance evidence to collect after an authorized publication, not a basis to infer current public behavior.
 - Version 21 hands-on validation and later smoke remain parked by Decision 1:B. They are not failures or implied implementation scope.
 - The separately authorized visible version-number quality-of-life goal is complete as exact saved and published Version 22. Its three-file delta adds public `v22`, accessible `Release version 22`, and focused coverage; Quatre's publication succeeded and bounded public HTTP verification passed. This did not reopen Version 21 validation or authorize another Site operation.
 - Phase A shell/navigation/header/view presentation remains historical accepted evidence from Version 24, but broader visual-design acceptance is explicitly held and must not be reopened by the main-page scanner correction or any later scanner review. Cover loading, Shelf missing-title presentation, Phase F, and collection reordering remain later work.
 - Additional roadmap order is: 1 Reference-cover enrichment; 2 Asset lifecycle and complete cover backup (`NEEDS MORE INFORMATION`); 3 Scanner/matching improvements; 4 Tags; 5 Safe import/restore; 6 AI Review; 7 Expanded administration and analysis. None is an executable queue item.
+
+## Ranked scanner release actions
+
+1. **Kira — only when explicitly authorized:** make the tiny visible/accessibility release-identity update and rerun the full attributable validation boundary. This does not include publication or Site authority.
+2. **Quatre — only after separate Product Owner authorization:** verify the exact release packet, publish through the owned Site context, then route the public main-page operator review. Shopkeeper remains outside this acceptance round.
+3. **Later hardening:** add focus/close and signed-out coverage in a separately bounded test goal; these are not blockers for exact `115b1a57`.
+4. **Later evidence hygiene:** establish a sanitized fixture registry for reproducible duplicate/equivalence, metadata, and fallback review without recording private production data.
 
 ## Phase 0 — fully closed
 

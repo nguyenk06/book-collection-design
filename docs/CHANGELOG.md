@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-11 — Athrun validates unpublished scanner correction
+
+- Recorded QA & Operator Test Planner Athrun's validation of exact clean unpublished `115b1a57ad92e96a0ff41b9c2660f6a757e037e1`: resolver 6/6, selected main-page scanner 26 tests passed, bounded collection/identifier 33/33, and full serial 11/11 files plus 124/124 tests passed under Node `24.19.0` in 148.37 seconds; lint reported zero errors/one existing image advisory, production build passed, and the diff was clean.
+- Recorded the scanner-QA intake meter at 72% five-hour and 80% weekly remaining with all three reset credits unused; Sites capacity remains `UNKNOWN`.
+- Expanded the public operator checklist with an attributable review record, ISBN-10/13 equivalence, retry, metadata review/cancel no-mutation, post-data-load offline/manual fallback, optional pending-lookup timing, and sanitized failure evidence. Public camera, live metadata, and operator validation remain unproven.
+- Ranked the gated next actions: authorized Kira release-identity update/full revalidation; separately authorized Quatre publication followed by operator review; later focus/close/signed-out hardening; and a sanitized fixture registry. Shopkeeper remains outside Product Owner acceptance, broader visual acceptance remains held, and no publication is authorized.
+
 ## 2026-09-11 — Standing advisory roles initialized and ownership reconciled
 
 - Added ready/idle standing direct Quatre children Visual Designer — Cagalli, UX/UI Specialist — Lacus, and QA & Operator Test Planner — Athrun as non-delegating advisory/documentation roles with explicit visual, usability, and operator-test/evidence ownership.
