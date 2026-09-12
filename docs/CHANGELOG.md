@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-11 — Public Version 26 scanner photo/manual review remains release-blocking
+
+- Recorded sanitized public main-page evidence from desktop-class in-app-browser automation, not Product Owner desktop testing: Bellmaker Photo 1 decoded retail UPC `072742006992`, but manual `044100315X` retrieved *Bellmaker* / Brian Jacques without reconciling ISBN-less Redwall #7; Subtle Art Photo 4 failed decode while manual `9781250425409` correctly found one owned My Books record; Hurricane Photo 5 failed decode, and manual `0553273566` retrieved *Hurricane!* / Richard Brightfield without reconciling ISBN-less owned CYOA #82. Both Add item flows were canceled; no add was confirmed and no mutation was observed.
+- Recorded a separate Product Owner mobile operator `FAIL`: scanner testing did not react. The exact trigger/result is not yet attributable, so no camera-callback, upload, lookup, or result-rendering cause is inferred; the Product Owner did not test desktop.
+- Recorded Athrun's classification of the Product Owner result as `S2 MAJOR / RELEASE-BLOCKING`. Public remains Version 26, so unpublished `115b1a57` does not correct the public behavior and is only partial evidence against the expanded boundary.
+- Defined, without activation, the planned acceptance boundary: conservative metadata-following probable-existing reconciliation for ISBN-less records; explicit conflicts for ambiguity; representative real-image fixtures and bounded preprocessing; distinct UPC-versus-no-decode outcomes; explicit result before Add item; release-identity update/full revalidation; and separately authorized public photo/manual/camera retest. Mobile retest must be instrumented with exact step, browser/device/permission state, last visible state, and attributable layer evidence. Shopkeeper and broader visual review remain excluded, and no implementation or publication is authorized.
+
 ## 2026-09-11 — Athrun validates unpublished scanner correction
 
 - Recorded QA & Operator Test Planner Athrun's validation of exact clean unpublished `115b1a57ad92e96a0ff41b9c2660f6a757e037e1`: resolver 6/6, selected main-page scanner 26 tests passed, bounded collection/identifier 33/33, and full serial 11/11 files plus 124/124 tests passed under Node `24.19.0` in 148.37 seconds; lint reported zero errors/one existing image advisory, production build passed, and the diff was clean.
