@@ -3,6 +3,7 @@
 **Status:** Active workflow pilot
 **Project boundary:** CYOA only
 **Effective:** 2026-09-04
+**Role topology reconciled:** 2026-09-11
 
 This document is the authoritative workflow overlay for the CYOA-only one-level Codex subagent pilot. Where older command, startup, transport, or handoff language assumes that the Product Owner manually carries work between separate role chats, this pilot takes precedence.
 
@@ -11,9 +12,12 @@ This document is the authoritative workflow overlay for the CYOA-only one-level 
 | Actor | Position | Owns | Must not do |
 | --- | --- | --- | --- |
 | Product Owner | External authority | Product decisions and explicit high-risk gates | Communicate directly with Relena, Kira, or temporary agents; carry briefs/reports between agents |
-| Planner — Quatre | Persistent parent, orchestrator, usage governor, and Site-owning agent | Product Owner interface, direct subagent creation, goal routing, queue/convergence, usage, final Site handoff, authorized Sites operations | Infer Product Owner authority; delegate Site ownership; create deeper agent nesting |
-| Designer — Relena | Direct Quatre child | Product design, documentation, release-boundary review, durable brief/goal preparation, evidence reconciliation | Spawn subagents; modify application source; invoke Sites operations |
-| Engineer — Kira | Direct Quatre child | Source inspection, implementation, tests, build, package, and validated release packet | Spawn subagents; invoke Sites tools; obtain Sites credentials; save, deploy, publish, or perform final Site handoff |
+| Planner — Quatre | Persistent parent, orchestrator, usage governor, and Site-owning agent | Sole Product Owner interface; direct-child initialization and assignments; goal routing; queue/convergence; usage; final Site handoff; authorized Sites operations | Infer Product Owner authority; delegate Site ownership or the Product Owner interface; create deeper agent nesting |
+| Designer — Relena | Direct Quatre child | Product requirements; product architecture and interpretation; durable acceptance criteria; documentation integration; release-boundary reconciliation and final review | Spawn subagents; modify application source; invoke Sites operations; replace Quatre as Product Owner interface |
+| Visual Designer — Cagalli | Standing direct Quatre child; ready/idle | Visual language, hierarchy, typography, color, imagery, responsive composition, visual consistency, and visual-review recommendations | Spawn subagents; modify application source; use Sites or credentials; access production data; approve publication; contact the Product Owner |
+| UX/UI Specialist — Lacus | Standing direct Quatre child; ready/idle | User flow, information architecture, discoverability, interaction feedback, accessibility/usability heuristics, and responsive-usability recommendations | Spawn subagents; modify application source; use Sites or credentials; access production data; approve publication; contact the Product Owner |
+| QA & Operator Test Planner — Athrun | Standing direct Quatre child; ready/idle | Risk-based test strategy; operator-executable plans/checklists; fixtures and preconditions; expected results; regression/evidence matrices; automated-versus-hands-on coverage reconciliation | Spawn subagents; modify application source; use Sites or credentials; access production data; approve publication; contact the Product Owner |
+| Engineer — Kira | Direct Quatre child; exclusive application writer when activated | Source inspection, implementation, tests, build, package, and validated release packet | Spawn subagents; share application writing; invoke Sites tools; obtain Sites credentials; save, deploy, publish, or perform final Site handoff |
 | Temporary test/review agent | Direct Quatre child when justified | One bounded read-only or test/review goal | Spawn subagents; gain implicit implementation, Site, production, or product authority |
 
 `ENGINEER — SEI` was retired permanently after Sei III's accepted final Version 21 continuity report on 2026-09-05. Never reuse Sei as a current Engineer identity. Kira is the successor role context, not a claim that unpublished Sei state or authority transferred automatically.
@@ -26,9 +30,11 @@ The one-time direct Product Owner retirement route is closed. The Product Owner 
 
 ## One-level topology
 
-Quatre is the only parent. Relena, Kira, and any justified temporary test/review agent are direct children of Quatre. No child may spawn another child. Do not create an agent solely because work is large, a chat compacted, or a task changed. Quatre may keep a child alive across related goals while its context remains coherent.
+Quatre is the only parent. Relena, Kira, Cagalli, Lacus, Athrun, and any justified temporary test/review agent are direct children of Quatre. No child may spawn another child. Do not create an agent solely because work is large, a chat compacted, or a task changed. Quatre may keep a child alive across related goals while its context remains coherent.
 
-Only one application-source writer may be active at a time. Parallel write work requires separate worktrees, explicit file/surface collision review, and Quatre confirmation that release composition remains separable. Documentation-only Relena work may proceed beside Kira only when it does not edit application source or consume the source-writer slot.
+Kira is the sole application-source writer when explicitly activated. Cagalli, Lacus, and Athrun are advisory/documentation-only unless Quatre gives them a bounded assignment, and even then they do not gain application-source, Site, production, publication, or Product Owner-contact authority. Documentation-only work may proceed beside Kira only when it does not edit application source or consume the source-writer slot.
+
+Role overlap resolves by output type: Cagalli recommends visual treatment; Lacus recommends interaction and usability; Athrun defines operator and evidence coverage; Relena reconciles those inputs against product requirements and durable acceptance criteria and performs final product/release-boundary review. Kira implements only the explicitly assigned boundary. Quatre assigns, converges, governs usage, communicates with the Product Owner, and owns every Site action. Advisory findings do not independently become requirements, implementation authority, acceptance, or publication approval.
 
 ## Product Owner interface
 
@@ -58,7 +64,7 @@ Routine micro-briefs are replaced by one completion-oriented goal for a coherent
 6. Genuine stop conditions.
 7. Deferred work.
 
-Quatre transmits the full goal and any durable brief internally. Kira returns acceptance, progress, blocker, completion, and release-packet evidence directly to Quatre. Quatre routes product/release-boundary questions to Relena and records only genuine Product Owner decisions in `PLANNER_INBOX.md`.
+Quatre transmits the full goal and any durable brief internally. Kira returns acceptance, progress, blocker, completion, and release-packet evidence directly to Quatre. Quatre may route visual questions to Cagalli, UX/usability questions to Lacus, test-planning and evidence-coverage questions to Athrun, and product/release-boundary questions to Relena. Every child reports to Quatre, and only genuine Product Owner decisions are recorded in `PLANNER_INBOX.md`.
 
 An active goal continues through ordinary in-scope diagnosis, remediation, tests, and build. Do not create a new brief or Product Owner interruption for routine failures with authorized fallbacks. Stop only for completion, `!drain`, `!stop`, usage floor/window exhaustion, exhausted substantive approaches, or a genuine safety, scope, collision, authority, production, security, privacy, or unrecoverable platform boundary.
 
@@ -105,10 +111,10 @@ External local `briefs/`, `inbox/`, and `processed/` may remain as durable evide
 
 ## Pilot baseline
 
-- Exact Version 22 at `a360c97679a47ce604fa712245fcc3935a649df6` is the authoritative saved and published checkpoint. It adds only the public version badge and focused test over exact Version 21.
-- Quatre's authorized Version 22 publication returned definitive `succeeded`; public HTTP verification returned 200 and matched visible `v22`, accessible `Release version 22`, and Shopping navigation. Version 21's controlled Attempt 2 and five anonymous correction-marker matches remain retained evidence for unchanged feature source.
-- Product Owner hands-on validation is parked by Decision 1:B.
-- No Engineer goal is active.
-- Quatre completed read-only parent handoff/readiness initialization, and the Product Owner/Quatre orchestration channel is active.
-- Relena and Kira were sequentially initialized as ready direct children. Neither initialization accepted or activated a product goal; Kira inherits no Sei state or authority and has no Sites rights.
-- All later publication, Site, production, schema/data, migration, credential, rollback, restore, destructive recovery, and external-sharing operations remain gated.
+- [Current State](CURRENT_STATE.md) is authoritative for the exact saved/published release, local candidate, active gate, and validation evidence; this workflow overlay does not duplicate a release checkpoint.
+- Product Owner hands-on Version 21 validation remains parked by Decision 1:B, and broader visual-design acceptance is held.
+- No Engineer or advisory implementation goal is active. Kira remains the exclusive application writer when explicitly activated.
+- Quatre completed parent handoff/readiness initialization, and the Product Owner/Quatre orchestration channel is active.
+- Relena and Kira remain ready direct children. Cagalli, Lacus, and Athrun were initialized on 2026-09-11 as ready/idle standing direct children under the advisory boundaries above. Initialization did not accept or activate product or implementation work; Kira inherits no Sei state or authority and has no Sites rights.
+- Initialization capacity was 99% five-hour and 84% weekly remaining, with all three reset credits unused. Sites capacity is `UNKNOWN` and must not be inferred.
+- All publication, Site, production, schema/data, migration, credential, rollback, restore, destructive-recovery, and external-sharing operations remain gated.

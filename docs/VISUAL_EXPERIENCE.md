@@ -4,7 +4,7 @@
 
 This document is the canonical future visual and interaction direction for **My Library**. It defines product-level experience requirements for later estimation and phased implementation. It does not describe current implementation state, authorize Engineer work, or open any Site, source, data, save, preview, deployment, publication, or production gate. [Current State](CURRENT_STATE.md), accepted briefs, tests, and gate evidence remain authoritative for delivery status.
 
-The current saved and published baseline is exact Version 23 at `75075e1e69735ac38c5afdbb7c9b7c55c12a2647`, including the completed shared scanner restoration. Phase A/D work exists only at excluded historical checkpoint `608553f1c4d18c191582a3c418fc88a482b97045`. Exact cross-tree comparison is complete, but the old Bookshelf/theme/Shopkeeper implementation is superseded; its responsive Library-first shell, safe-area/bottom navigation, theme direction, and Shopkeeper discoverability are design evidence only and must not be imported. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology.
+The exact current saved/published baseline, local candidate, and active acceptance gate are maintained in [Current State](CURRENT_STATE.md); broader visual-design acceptance is explicitly held. Historical checkpoint `608553f1c4d18c191582a3c418fc88a482b97045` remains superseded design evidence and must not be imported. User-facing **Shopkeeper** is the successor name for the historically documented **Shopping Mode**; existing code, ADRs, migrations, and evidence may retain the historical name where renaming would obscure chronology. Visual Designer Cagalli owns visual-language and visual-review recommendations, UX/UI Specialist Lacus owns interaction/usability recommendations, and Designer Relena retains product requirements, durable acceptance criteria, and final release-boundary reconciliation; none of those advisory roles independently authorizes visual implementation.
 
 ## Experience principles
 
@@ -187,14 +187,14 @@ A low-priority optional, dismissible, primarily mobile personality layer may rea
 
 | Layer | Direction |
 | --- | --- |
-| Current release planning | Phase 0 is closed and exact Version 23 is the baseline. Phase A is selected next but requires a bounded goal, mandatory visual review, and separate authority; Phases B–G retain their later gates. |
+| Current release planning | See [Current State](CURRENT_STATE.md) for the exact baseline and active scanner gate. Broader visual-design acceptance is held; no visual phase or design change is active. Phases B–G retain their later gates. |
 | Optional polish after stable foundations | Phase H ambient animation, controlled by performance/accessibility requirements. |
 | Future only | Catalog Terminal, advanced personalization/custom palettes, and Shopkeeper Buddy. |
 | Separate persistence/product work | Many-to-many collections, genres, tags, saved preferences where not already supported, multi-collection trips, and relationship editing. |
 
 ## Current priority and required visual review
 
-Product Owner Decision 1:A selects **Phase A — IA and responsive shell** as the next implementation priority. This is a priority decision only. Exact Version 23 composition/collision inspection and the current 9/13/18-point estimate are complete. No visual change may begin until the Product Owner completes the required visual review against the criteria below and Quatre prepares and separately activates a bounded goal after fresh usage/source checks.
+Product Owner Decision 1:A historically selected **Phase A — IA and responsive shell**; its delivered shell presentation was later accepted. Broader visual-design acceptance is now held, so no new visual change or phase is active. The criteria below remain durable product direction only. Any later visual goal requires Quatre assignment, current-source/collision and usage checks, relevant Cagalli/Lacus recommendations, Relena acceptance-boundary reconciliation, and separate implementation authority.
 
 Phase A acceptance boundary:
 
@@ -212,11 +212,11 @@ The Product Owner resolved the qualitative review findings as deferred Phase F d
 - **Decision 2:A — existing-cover detail:** Book detail may show only the already stored personal cover when available and the safe fallback otherwise. Reference-cover lookup/enrichment remains separate roadmap work.
 - **Decision 3:A — compact existing-data missing summary:** Shelf missing positions may show expected position/number, known title, missing status, and an already available acquisition cue; unavailable fields remain omitted and no synthetic Book is created.
 
-The Bookcase, cover-detail, and Shelf decisions primarily affect the existing M4 surface and later Phase F. They may inform Phase A shell review, but they do not enter Phase A implementation scope unless a later authorized goal says so explicitly. Source recovery, historical comparison, scanner restoration/publication, exact Version 23 composition inspection, and current-source estimation are complete. The remaining order is: complete the mandatory visual review, then prepare one bounded Phase A execution goal with fresh activation-time usage/source checks.
+The Bookcase, cover-detail, and Shelf decisions primarily affect the existing M4 surface and later Phase F. They do not enter current scope unless a later authorized goal says so explicitly. Broader visual-design acceptance remains held, and [Current State](CURRENT_STATE.md) controls the operational order; this document does not activate visual review or implementation.
 
 ## Dependencies and collision boundaries
 
-- **Version 23 cumulative release:** exact Version 23 is the current saved/published baseline. Its scanner-only delta follows the completed Version 22-to-`608553f` historical comparison and does not make that historical UI transferable. Each future phase requires its own exact pre-estimate collision manifest against Version 23.
+- **Current release source:** [Current State](CURRENT_STATE.md) controls the exact saved/published and local source identities. The completed Version 22-to-`608553f` historical comparison does not make the historical UI transferable. Each future phase requires its own exact pre-estimate collision manifest against its then-current baseline.
 - **Collection relationships:** Product Owner expects the current collection model to be sufficient for the initial direction, but the assigned successor Engineer must verify that assumption. Current collection/series behavior is not blanket authority for new many-to-many membership, genres, pins, or session-scope persistence if inspection shows missing capability.
 - **Tags:** remain future schema and interaction work; visual filters may not imply persistence.
 - **Authentication:** Public/Tester/Administrator presentation, owner authorization, temporary codes, and write state need separate server models.

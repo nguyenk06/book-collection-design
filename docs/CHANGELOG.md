@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-11 — Standing advisory roles initialized and ownership reconciled
+
+- Added ready/idle standing direct Quatre children Visual Designer — Cagalli, UX/UI Specialist — Lacus, and QA & Operator Test Planner — Athrun as non-delegating advisory/documentation roles with explicit visual, usability, and operator-test/evidence ownership.
+- Preserved Relena's product requirements, architecture/interpretation, durable acceptance, and final release-boundary role; Kira's exclusive application implementation/test/build/package writer role; and Quatre's sole Product Owner interface, assignment/usage coordination, and Site ownership.
+- Recorded initialization capacity at 99% five-hour and 84% weekly remaining with all three reset credits unused; Sites capacity remains `UNKNOWN`. Broader visual-design acceptance remains held, and no product, application, Site, production, or publication authority was activated.
+
 ## 2026-09-09 — Version 26 scanner review rejected; local correction accepted
 
 - Recorded the Product Owner's scanner-only rejection of published Version 26: accepted main-page capture closed without an explicit prompt reporting result data. Shopkeeper was ignored and broader visual-design acceptance remains held.
