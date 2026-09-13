@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-09-12
+**Last reviewed:** 2026-09-13
 
 This document is the concise operational source of truth. Release history and superseded investigations remain in the [Changelog](CHANGELOG.md).
 
@@ -8,11 +8,10 @@ This document is the concise operational source of truth. Release history and su
 
 - **Active project:** CYOA Collection only.
 - **Public Site:** [CYOA Collection](https://cyoa-collection.znesfreak.chatgpt.site).
-- **Current saved and public release:** Version 30.
-- **Exact release source:** `67cd49da54f55d5e03a3a3b75b55f58e8eba3fd6`.
-- **Current application source:** Test-only checkpoint `d3a39e346065a866271a12682f66941ce863d144`, pushed but not saved or deployed; application behavior is unchanged from Version 30.
+- **Current saved and public release:** Version 31.
+- **Exact release and application source:** `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 - **Sites capacity:** `UNKNOWN`; no authoritative Sites meter is available.
-- **Publication state:** No release, save, deployment, or production operation is currently active or implied.
+- **Publication state:** Version 31 deployment succeeded; Product Owner review is open. No further release or production operation is implied.
 
 ## Accepted product state
 
@@ -21,7 +20,7 @@ This document is the concise operational source of truth. Release history and su
 - The main-page scanner now reaches explicit tracked, probable-existing, new-book, unavailable-metadata, and retry outcomes. The Product Owner accepts Version 30 scanner behavior and has closed the blocking restoration cycle.
 - Photo upload is currently more reliable than live camera capture. Live capture can require more than one attempt; this is retained as a stability issue rather than a release blocker.
 - A valid captured ISBN can still return no title or author when the current metadata source has no record or cannot be reached. The manual-details path is the safe fallback.
-- Shopkeeper is not part of the accepted scanner review and receives no priority over the main Library scanner.
+- Shopkeeper now uses the same resolution outcomes as Library and adds live UPC printed-text retry plus photo barcode/OCR fallback. It remains a non-mutating quick-check surface; adding or editing a Book continues in Library. Version 31 visual and mobile acceptance is pending Product Owner review.
 
 ## Open product boundaries
 
@@ -43,8 +42,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 22% at the 2026-09-12 foundation close.
-- **Weekly remaining:** 59% at the same check.
+- **Five-hour remaining:** 69% after Version 31 publication and documentation reconciliation.
+- **Weekly remaining:** 51% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
@@ -53,8 +52,9 @@ This document is the concise operational source of truth. Release history and su
 | Workstream | State | Next boundary |
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
-| Documentation cleanup | Complete | Current state, roadmap, staged milestones, and scanner record are reconciled through Version 30 |
-| Endpoint contract tests | Complete and pushed at `d3a39e3` | Focused 7/7 and full 159/159 pass; no provider expansion or behavior change |
+| Documentation cleanup | Reconciled through Version 31 | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
+| Endpoint contract tests | Complete and included in Version 31 lineage | Focused 7/7 foundation coverage remains; no provider expansion was added |
+| Shopkeeper parity | Published in Version 31; owner review pending | Verify mobile/desktop scan, photo, retry, duplicate/new/manual-review, and Library handoff behavior |
 | Reference-cover enrichment | Planned next | Define attribution, confidence, fallback, storage, and personal-cover protection |
 | ISBN metadata enrichment | Planned next, parallel design lane | Compare no-cost sources, normalize evidence, preserve partial-failure/manual fallback |
 | Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |
@@ -64,4 +64,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-The next implementation milestone should define one shared read-only enrichment boundary with independently reviewable ISBN and reference-cover consumers. Tags may be investigated against the same responses, but tag persistence is not included automatically. This foundation changed no application behavior and created no Site version or publication.
+Complete the bounded Version 31 owner review first. If accepted, the next implementation milestone should define one shared read-only enrichment boundary with independently reviewable ISBN and reference-cover consumers. Tags may be investigated against the same responses, but tag persistence is not included automatically.

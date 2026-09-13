@@ -2,7 +2,23 @@
 
 This document contains the current execution horizon. Long-term ordering is in the [Roadmap](ROADMAP.md); exact operational truth is in [Current State](CURRENT_STATE.md).
 
-## Completed foundation pass
+## Immediate Product Owner review — public Version 31
+
+1. Open Shopkeeper on mobile first, then desktop, and confirm the compact scan/search surface is visually usable.
+2. Scan a known Library ISBN and confirm the duplicate/ownership result is explicit.
+3. Present a retail UPC, confirm printed-ISBN recognition starts, and use **Retry text scan** when needed.
+4. Upload a barcode photo and confirm either a recognized ISBN for confirmation or a clear manual fallback.
+5. Check one new ISBN and one metadata-unavailable ISBN; confirm both hand off to Library without adding or changing a record automatically.
+6. Confirm **Scan another ISBN**, cancel, and Library navigation reset the workflow cleanly.
+
+Record only failures, unclear wording, or visual problems that require correction. Acceptance closes the Shopkeeper parity release.
+
+## Release-maintenance follow-up
+
+- Choose the repository's canonical package manager and remove the redundant tracked lockfile in a dedicated cleanup change.
+- Re-run the standard Site build wrapper after cleanup. Until then, the direct Vinext production build is the verified release path.
+
+## Completed foundation and Shopkeeper pass
 
 1. Reconcile the durable documentation from the rejected Version 26 state through accepted public Version 30.
 2. Preserve the scanner stability note: photo upload is more reliable, while live capture may require retries.
@@ -10,9 +26,11 @@ This document contains the current execution horizon. Long-term ordering is in t
 4. Record ISBN and reference-cover enrichment as parallel design/test lanes over shared provider boundaries.
 5. Record tags as a possible consumer of provider categories while keeping canonical tag persistence and owner decisions separate.
 
-The endpoint-focused suite passed 7/7 and the full application suite passed 159/159. This pass changed no application behavior, production data, schema, authentication, dependency, Site version, or public deployment.
+The endpoint-focused suite passed 7/7. The Shopkeeper parity candidate passed 15/15 focused checks and the full application suite passed 161/161; the Version 31 identity passed 37/37 focused checks and a production build. Version 31 is public at exact source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 
 ## Next implementation milestone — enrichment boundary
+
+Begin only after Version 31 owner review is accepted or its bounded corrections are closed.
 
 The safest next implementation milestone is a provider-neutral, read-only enrichment boundary. It should be divided into independently reviewable slices:
 
@@ -62,3 +80,8 @@ Do not implement denser spines, cover-detail presentation, Shelf missing-title p
 - Preserve one active application-source writer.
 - Stop for a genuine Product Owner decision, release/publication gate, capacity problem, material scope expansion, or validation failure.
 - Keep `PLANNER_INBOX.md` empty unless an unresolved Product Owner decision genuinely blocks the next safe step.
+
+## Repository hygiene before the next release
+
+- Resolve which package manager is canonical. Both `package-lock.json` and `pnpm-lock.yaml` are currently tracked, so the standard Site build wrapper refuses to choose one even though the direct production build succeeds.
+- Treat removal of either lockfile as a deliberate, tested cleanup rather than incidental deletion during feature work.

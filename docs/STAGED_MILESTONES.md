@@ -1,6 +1,6 @@
 # Staged Milestone Sequence
 
-**Reviewed:** 2026-09-12
+**Reviewed:** 2026-09-13
 
 Milestones are independently reviewable and do not bundle implementation, Site save, publication, production access, or recovery authority.
 
@@ -12,6 +12,7 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | Phase A — Library-first responsive shell | Accepted from public Version 24 |
 | Aggregate My Library correction | Published from Version 25 |
 | Main-page scanner restoration | Accepted in public Version 30; live retry stability note retained |
+| Shopkeeper scanner parity and visual cleanup | Published in Version 31; Product Owner review pending |
 | M1 — Shopping validation feasibility | Complete within recorded boundary |
 | M2 — controlled Shopping release and schema gates | Complete within recorded bridge-observable boundary |
 | M3 — canonical Book identifiers | Complete for exact/equivalent ISBN resolution |
@@ -32,6 +33,18 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 - Treat tags only as a possible future consumer of provider suggestions.
 
 Focused endpoint tests pass 7/7 and the full application suite passes 159/159. Test-only source checkpoint `d3a39e346065a866271a12682f66941ce863d144` is pushed. Documentation links are reconciled, and no Site version or production state changed.
+
+## Milestone 7A — Shopkeeper parity release
+
+**State:** Published as Version 31; Product Owner review pending.
+
+- Preserve Shopkeeper as a compact, non-mutating quick-check surface.
+- Match Library scanner outcomes for duplicates, probable ISBN-less matches, conflicts, new metadata, unavailable metadata, and manual review.
+- Add live retail-UPC printed-text recognition and explicit retry.
+- Add uploaded-photo barcode preprocessing and OCR fallback.
+- Keep all Book creation and editing in Library.
+
+The implementation passed 15/15 focused Shopkeeper checks, 161/161 full application checks, 37/37 focused release-identity checks, lint, and a production build. Exact public source is `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 
 ## Milestone 8A — reference-cover enrichment
 

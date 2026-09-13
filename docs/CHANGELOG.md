@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-09-13 — Shopkeeper parity published as Version 31
+
+- Published exact source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` as Site Version 31 with the existing public audience preserved and definitive deployment success at `https://cyoa-collection.znesfreak.chatgpt.site`.
+- Restored Shopkeeper as a compact, non-mutating quick-check companion to Library. It now adds live retail-UPC printed-ISBN recognition and retry, uploaded-photo barcode preprocessing and OCR fallback, and the shared duplicate, probable, conflict, metadata, unavailable, and Library-review outcomes.
+- Retained Library as the only Book add/edit surface; Shopkeeper scanning and metadata lookup do not mutate records.
+- Recorded validation: 15/15 focused Shopkeeper checks, 161/161 full application checks, lint pass, 37/37 focused Version 31 identity checks, and production build pass.
+- Reconciled README, current state, dashboard, staged milestones, and next actions. Restored the canonical terminal `TL;DR / NEXT OWNER / ACTION` handoff behavior and made Product Owner review the immediate next action.
+- Recorded the pre-publication repository hygiene note: both npm and pnpm lockfiles are tracked, so the standard Site build wrapper cannot choose a package manager; the direct Vinext production build succeeds. Canonical lockfile cleanup remains deliberate future work.
+- No production data, schema, authentication, provider, cover, tag, import/restore, AI Review, or held Phase F visual change was made. Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-12 — Version 30 accepted; enrichment foundation opened
 
 - Reconciled the concise current state, next actions, roadmap, staged milestones, and scanner contract from the rejected Version 26 record through accepted public Version 30 at exact source `67cd49da54f55d5e03a3a3b75b55f58e8eba3fd6`.
