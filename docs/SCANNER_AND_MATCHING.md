@@ -76,6 +76,7 @@ Version 25 was saved and successfully deployed at the existing public URL with t
 
 ## Future improvements
 
+- Add a separately reviewed enrichment step that can try additional no-cost metadata sources after a valid ISBN is captured but the current lookup returns no title or author. Keep captured ISBN evidence distinct from provider-supplied metadata and require owner review before changing a Library record.
 - Explainable composite scoring across identifier, title, author, and cover evidence.
 - Explicitly designed persistent review and audit workflow if later approved.
 - Feedback-driven threshold tuning.
