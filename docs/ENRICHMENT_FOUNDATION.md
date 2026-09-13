@@ -39,7 +39,7 @@ The current source suite covers:
 - stored-cover not-found behavior when a Book lacks a reference or an R2 object is absent; and
 - stored-cover media metadata and public cache behavior.
 
-The focused enrichment suite passes 7/7, and the full application suite passes 159/159 against the accepted Version 30 source plus this source-only test addition.
+The focused enrichment suite passes 7/7, and the full application suite passes 159/159 at pushed test-only checkpoint `d3a39e346065a866271a12682f66941ce863d144`. This checkpoint changes no application behavior from accepted Version 30.
 
 Future provider work must add deterministic fixtures for success, empty, malformed, timeout, partial failure, conflicting evidence, and source attribution before it is eligible for release review.
 

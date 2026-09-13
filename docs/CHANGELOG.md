@@ -6,7 +6,7 @@
 - Recorded the Product Owner's acceptance: manual entry and photo upload reach usable scanner outcomes; live capture can require retries but succeeded after the explicit text-scan retry; photo upload is currently more reliable; and valid ISBNs with unavailable metadata retain a manual-details fallback.
 - Opened a source-only enrichment foundation. ISBN metadata and reference-cover enrichment may share a provider-neutral read-only evidence boundary and proceed in parallel for design, fixtures, and review, while application-source writing remains one writer at a time.
 - Kept provider subjects/categories separate from canonical tags and retained asset lifecycle/complete cover backup as `NEEDS MORE INFORMATION`.
-- Added focused unit coverage for the known ISBN metadata, stored-cover retrieval, and personal-cover authorization/input endpoint contracts. The focused suite passed 7/7 and the full application suite passed 159/159. No application behavior, Site version, deployment, publication, production data, schema, authentication, or provider was changed.
+- Added focused unit coverage for the known ISBN metadata, stored-cover retrieval, and personal-cover authorization/input endpoint contracts at pushed test-only source `d3a39e346065a866271a12682f66941ce863d144`. The focused suite passed 7/7 and the full application suite passed 159/159. No application behavior, Site version, deployment, publication, production data, schema, authentication, or provider was changed.
 - Recorded the intake meter at 43% five-hour and 62% weekly remaining with all three reset credits unused. Sites capacity remains `UNKNOWN`.
 
 ## 2026-09-11 — Public Version 26 scanner photo/manual review remains release-blocking

@@ -10,6 +10,7 @@ This document is the concise operational source of truth. Release history and su
 - **Public Site:** [CYOA Collection](https://cyoa-collection.znesfreak.chatgpt.site).
 - **Current saved and public release:** Version 30.
 - **Exact release source:** `67cd49da54f55d5e03a3a3b75b55f58e8eba3fd6`.
+- **Current application source:** Test-only checkpoint `d3a39e346065a866271a12682f66941ce863d144`, pushed but not saved or deployed; application behavior is unchanged from Version 30.
 - **Sites capacity:** `UNKNOWN`; no authoritative Sites meter is available.
 - **Publication state:** No release, save, deployment, or production operation is currently active or implied.
 
@@ -53,7 +54,7 @@ This document is the concise operational source of truth. Release history and su
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
 | Documentation cleanup | Complete | Current state, roadmap, staged milestones, and scanner record are reconciled through Version 30 |
-| Endpoint contract tests | Complete locally | Focused 7/7 and full 159/159 pass; no provider expansion or behavior change |
+| Endpoint contract tests | Complete and pushed at `d3a39e3` | Focused 7/7 and full 159/159 pass; no provider expansion or behavior change |
 | Reference-cover enrichment | Planned next | Define attribution, confidence, fallback, storage, and personal-cover protection |
 | ISBN metadata enrichment | Planned next, parallel design lane | Compare no-cost sources, normalize evidence, preserve partial-failure/manual fallback |
 | Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |

@@ -31,7 +31,7 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 - Preserve personal covers, local canonical identity, no-result/manual fallback, source attribution, and no-mutation behavior.
 - Treat tags only as a possible future consumer of provider suggestions.
 
-Focused endpoint tests pass 7/7 and the full application suite passes 159/159. Documentation links are reconciled, and no Site version or production state changed.
+Focused endpoint tests pass 7/7 and the full application suite passes 159/159. Test-only source checkpoint `d3a39e346065a866271a12682f66941ce863d144` is pushed. Documentation links are reconciled, and no Site version or production state changed.
 
 ## Milestone 8A — reference-cover enrichment
 
