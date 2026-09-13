@@ -42,8 +42,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 69% after Version 31 publication and documentation reconciliation.
-- **Weekly remaining:** 51% at the same check.
+- **Five-hour remaining:** 65% after Version 31 publication and documentation reconciliation.
+- **Weekly remaining:** 50% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
