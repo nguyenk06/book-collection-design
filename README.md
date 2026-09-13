@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` is saved and publicly deployed. It restores Shopkeeper as the compact quick-check companion to Library: live UPC scans can retry printed-ISBN recognition, uploaded photos receive barcode preprocessing and OCR fallback, and resolved results use the shared duplicate/probable/conflict/new/manual-review paths without mutating Library data. Product Owner visual and mobile review is next. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` remains the saved public release. Product Owner visual/mobile review is parked by request while nonvisual enrichment work continues. Unpublished source `36f6b828317502eff65e45cbd7508ccaf96fbad3` includes canonical pnpm cleanup and expands the existing Open Library ISBN response with bounded, attributed metadata and reference-cover evidence; it passed 163/163 tests, focused lint, and a production build. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

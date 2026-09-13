@@ -7,7 +7,7 @@
 | KPI | Coarse estimate | Progress | What it measures |
 | --- | ---: | --- | --- |
 | Core build completion | **~92%** | `██████████████████░░` | Current Library and Shopkeeper foundation implemented and validated |
-| Release readiness | **~95%** | `███████████████████░` | Version 31 is public; Product Owner review remains |
+| Release readiness | **~95%** | `███████████████████░` | Version 31 is public; Product Owner review is parked |
 | Broader roadmap completion | **~62%** | `████████████░░░░░░░░` | Current release plus later enrichment, portability, and analysis work |
 
 These estimates intentionally measure different outcomes. High local completion does not imply that the source is saved, published, production-verified, or live-validated.
@@ -17,7 +17,7 @@ These estimates intentionally measure different outcomes. High local completion 
 | Milestone | Coarse estimate | Status | Release boundary |
 | --- | ---: | --- | --- |
 | M1 — Validation-environment feasibility | **100%** | Complete locally | Investigation completed; no safe runnable unpublished preview was found |
-| M2 — Controlled Shopping release | **100% locally** | Published in Version 31; owner review pending | Shopkeeper parity, compact presentation, shared resolution outcomes, and scanner recovery are deployed |
+| M2 — Controlled Shopping release | **100% locally** | Published in Version 31; owner review parked | Shopkeeper parity, compact presentation, shared resolution outcomes, and scanner recovery are deployed |
 | M3 — Canonical identifiers | **100% locally** | Published | Exact/equivalent ISBN resolution remains the local-first boundary |
 | M4 — Bookshelf | **100% locally** | Published; later visual work held | Category shelves remain; denser spines and missing-title presentation await visual review |
 | M5 — Export foundation | **100% locally** | Published; partial operational evidence | Catalog export exists but is not a complete production backup |
@@ -32,7 +32,7 @@ flowchart LR
     A["Shopkeeper parity source<br/>Complete · Version 31"]
     B["Automated validation<br/>Complete · 161/161"]
     C["Public deployment<br/>Complete · Version 31"]
-    D["Owner visual/mobile review<br/>Open"]
+    D["Owner visual/mobile review<br/>Parked"]
 
     A --> B --> C --> D
 
@@ -48,7 +48,7 @@ flowchart LR
 - **Shopkeeper parity:** Complete in exact public Version 31 source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 - **Automated validation:** Complete for the release boundary: focused scanner/OCR, full application, release identity, lint, and production build checks passed.
 - **Publication:** Complete with the existing public audience preserved.
-- **Owner review:** Open for the compact presentation and real mobile/desktop scanner workflow.
+- **Owner review:** Parked for the compact presentation and real mobile/desktop scanner workflow.
 
 Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CURRENT_STATE.md) and [Next Actions](NEXT_ACTIONS.md).
 

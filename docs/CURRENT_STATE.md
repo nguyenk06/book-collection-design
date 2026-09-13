@@ -11,7 +11,7 @@ This document is the concise operational source of truth. Release history and su
 - **Current saved and public release:** Version 31.
 - **Exact release and application source:** `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 - **Sites capacity:** `UNKNOWN`; no authoritative Sites meter is available.
-- **Publication state:** Version 31 deployment succeeded; Product Owner review is open. No further release or production operation is implied.
+- **Publication state:** Version 31 deployment succeeded. Product Owner review is parked by request while nonvisual work continues. No later source checkpoint has been saved, deployed, or published.
 
 ## Accepted product state
 
@@ -20,7 +20,7 @@ This document is the concise operational source of truth. Release history and su
 - The main-page scanner now reaches explicit tracked, probable-existing, new-book, unavailable-metadata, and retry outcomes. The Product Owner accepts Version 30 scanner behavior and has closed the blocking restoration cycle.
 - Photo upload is currently more reliable than live camera capture. Live capture can require more than one attempt; this is retained as a stability issue rather than a release blocker.
 - A valid captured ISBN can still return no title or author when the current metadata source has no record or cannot be reached. The manual-details path is the safe fallback.
-- Shopkeeper now uses the same resolution outcomes as Library and adds live UPC printed-text retry plus photo barcode/OCR fallback. It remains a non-mutating quick-check surface; adding or editing a Book continues in Library. Version 31 visual and mobile acceptance is pending Product Owner review.
+- Shopkeeper now uses the same resolution outcomes as Library and adds live UPC printed-text retry plus photo barcode/OCR fallback. It remains a non-mutating quick-check surface; adding or editing a Book continues in Library. Version 31 visual and mobile acceptance is parked, not accepted or rejected.
 
 ## Open product boundaries
 
@@ -42,8 +42,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 65% after Version 31 publication and documentation reconciliation.
-- **Weekly remaining:** 50% at the same check.
+- **Five-hour remaining:** 77% after the unpublished enrichment checkpoint and validation.
+- **Weekly remaining:** 46% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
@@ -53,10 +53,11 @@ This document is the concise operational source of truth. Release history and su
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
 | Documentation cleanup | Reconciled through Version 31 | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
-| Endpoint contract tests | Complete and included in Version 31 lineage | Focused 7/7 foundation coverage remains; no provider expansion was added |
-| Shopkeeper parity | Published in Version 31; owner review pending | Verify mobile/desktop scan, photo, retry, duplicate/new/manual-review, and Library handoff behavior |
-| Reference-cover enrichment | Planned next | Define attribution, confidence, fallback, storage, and personal-cover protection |
-| ISBN metadata enrichment | Planned next, parallel design lane | Compare no-cost sources, normalize evidence, preserve partial-failure/manual fallback |
+| Endpoint contract tests | Expanded in pushed unpublished source | 9/9 enrichment checks and 163/163 full checks pass |
+| Shopkeeper parity | Published in Version 31; owner review parked | Resume mobile/desktop review only when the Product Owner is ready |
+| Repository maintenance | Complete in unpublished `4763cb1026911d4829b2dcb426e342d6f66dfa79` | pnpm is canonical; configured Node 24 build passes; standard wrapper remains host-blocked by its launcher/system Node 18 path |
+| Reference-cover enrichment | Read-only evidence foundation in unpublished `36f6b828317502eff65e45cbd7508ccaf96fbad3` | Define the reviewed consumer and personal/reference presentation before any UI or persistence change |
+| ISBN metadata enrichment | Existing Open Library boundary expanded in unpublished `36f6b828317502eff65e45cbd7508ccaf96fbad3` | Decide which normalized fields the review/add workflow may consume; keep additional providers out until justified |
 | Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |
 | Complete cover backup | Needs more information | Define inventory, byte coverage, integrity, retention, and recovery claims before implementation |
 | Safe import/restore | Planned later | Require dry-run, validation, conflict handling, and recovery contract |
@@ -64,4 +65,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Complete the bounded Version 31 owner review first. If accepted, the next implementation milestone should define one shared read-only enrichment boundary with independently reviewable ISBN and reference-cover consumers. Tags may be investigated against the same responses, but tag persistence is not included automatically.
+Keep Version 31 owner review parked. The next safe milestone is design acceptance for independently reviewable consumers of the now-tested ISBN/reference-cover evidence boundary. It may expose attributed evidence for owner review, but must not persist a provider cover, silently change a Book, or convert provider subjects into canonical tags.

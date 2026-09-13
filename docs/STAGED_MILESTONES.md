@@ -12,7 +12,7 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | Phase A — Library-first responsive shell | Accepted from public Version 24 |
 | Aggregate My Library correction | Published from Version 25 |
 | Main-page scanner restoration | Accepted in public Version 30; live retry stability note retained |
-| Shopkeeper scanner parity and visual cleanup | Published in Version 31; Product Owner review pending |
+| Shopkeeper scanner parity and visual cleanup | Published in Version 31; Product Owner review parked |
 | M1 — Shopping validation feasibility | Complete within recorded boundary |
 | M2 — controlled Shopping release and schema gates | Complete within recorded bridge-observable boundary |
 | M3 — canonical Book identifiers | Complete for exact/equivalent ISBN resolution |
@@ -24,7 +24,7 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 
 ## Milestone 7 — enrichment foundation
 
-**State:** Complete locally; no product behavior change.
+**State:** Complete and pushed; no visible product behavior change.
 
 - Reconcile current documentation through accepted Version 30.
 - Test the known ISBN metadata and stored-cover retrieval contracts.
@@ -32,11 +32,11 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 - Preserve personal covers, local canonical identity, no-result/manual fallback, source attribution, and no-mutation behavior.
 - Treat tags only as a possible future consumer of provider suggestions.
 
-Focused endpoint tests pass 7/7 and the full application suite passes 159/159. Test-only source checkpoint `d3a39e346065a866271a12682f66941ce863d144` is pushed. Documentation links are reconciled, and no Site version or production state changed.
+The initial test-only checkpoint remains in history. Unpublished `36f6b828317502eff65e45cbd7508ccaf96fbad3` now expands the existing Open Library boundary with bounded attributed metadata and CoverID candidates. Focused endpoint tests pass 9/9, the full application suite passes 163/163, focused lint passes, and the configured Node 24 production build passes. No Site version or production state changed.
 
 ## Milestone 7A — Shopkeeper parity release
 
-**State:** Published as Version 31; Product Owner review pending.
+**State:** Published as Version 31; Product Owner review parked.
 
 - Preserve Shopkeeper as a compact, non-mutating quick-check surface.
 - Match Library scanner outcomes for duplicates, probable ISBN-less matches, conflicts, new metadata, unavailable metadata, and manual review.
@@ -48,7 +48,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8A — reference-cover enrichment
 
-**State:** Planned; first ordered feature workstream.
+**State:** Read-only provider evidence available; consumer design pending.
 
 - Select approved no-cost sources.
 - Define candidate confidence, attribution, personal/reference distinction, fallback, and storage/caching limits.
@@ -57,7 +57,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8B — ISBN metadata enrichment
 
-**State:** Planned; may run alongside 8A in design, fixture, and review work.
+**State:** Provider response expanded; reviewed consumer design pending.
 
 - Add approved fallback evidence for valid ISBNs that lack useful current metadata.
 - Normalize but do not silently merge conflicting titles, authors, editions, dates, or subjects.

@@ -8,7 +8,7 @@ Create one understandable read-only evidence boundary that can support better IS
 
 | Surface | Current purpose | Foundation expectation |
 | --- | --- | --- |
-| `/api/isbn/[isbn]` | Validate and normalize an ISBN, then request bounded title/author evidence | Keep invalid input local; expose no-result and provider failure distinctly; preserve source evidence when expanded |
+| `/api/isbn/[isbn]` | Validate and normalize an ISBN, then request bounded attributed Open Library evidence | Keep invalid input local; expose no-result and provider failure distinctly; preserve source and cover-candidate evidence |
 | `/api/covers/[id]` | Retrieve the stored personal cover for a Book | Return a safe not-found result for missing references or bytes; preserve media metadata and bounded caching |
 | `/api/books/[id]/cover` | Owner-only personal-cover upload/removal | Remains separate from reference-cover discovery and is not changed by enrichment planning |
 
@@ -32,20 +32,28 @@ Parallel research or review does not relax the one-writer rule for application s
 
 ## Test foundation
 
-The current source suite covers:
+Unpublished source checkpoint `36f6b828317502eff65e45cbd7508ccaf96fbad3` covers:
 
-- normalized ISBN request construction against the known metadata endpoint;
-- bounded empty results and multiple candidate normalization;
+- normalized ISBN request construction against the existing Open Library Search endpoint;
+- bounded empty results, multiple candidates, publisher/date/subject/language/identifier normalization, record attribution, and CoverID reference candidates;
+- stable unavailable behavior for provider transport and malformed JSON failures;
 - stored-cover not-found behavior when a Book lacks a reference or an R2 object is absent; and
 - stored-cover media metadata and public cache behavior.
 
-The focused enrichment suite passes 7/7, and the full application suite passes 159/159 at pushed test-only checkpoint `d3a39e346065a866271a12682f66941ce863d144`. This checkpoint changes no application behavior from accepted Version 30.
+The focused enrichment suite passes 9/9, and the full application suite passes 163/163 at pushed unpublished checkpoint `36f6b828317502eff65e45cbd7508ccaf96fbad3`. Focused lint and the configured Node 24 production build also pass. The response expansion is additive and changes no scanner decision, Book mutation, cover persistence, tag persistence, schema, or visible UI behavior from public Version 31.
+
+## Provider decision record
+
+- Use the existing [Open Library Search API](https://openlibrary.org/dev/docs/api/search) as the first no-cost metadata boundary and request only bounded fields.
+- Build remote candidates with the [Open Library Covers API](https://openlibrary.org/dev/docs/api/covers) by CoverID and `default=false`; link back to the Open Library record for attribution. No cover bytes are stored by this slice.
+- Do not make [Google Books](https://developers.google.com/books/docs/v1/using) the default fallback: its public-data calls require an API key or OAuth identifier. Reconsider only if measured coverage gaps justify credentials and quota management.
+- Do not use Open Library's legacy Books API; its own documentation identifies it as legacy and directs new work toward Search.
 
 Future provider work must add deterministic fixtures for success, empty, malformed, timeout, partial failure, conflicting evidence, and source attribution before it is eligible for release review.
 
 ## Not yet authorized
 
-- A new metadata or cover provider.
+- A new metadata or cover provider beyond the already-used Open Library service.
 - Provider-result persistence or caching.
 - Automatic Book, cover, or tag mutation.
 - Schema, migration, authentication, dependency, or production changes.

@@ -2,7 +2,7 @@
 
 This document contains the current execution horizon. Long-term ordering is in the [Roadmap](ROADMAP.md); exact operational truth is in [Current State](CURRENT_STATE.md).
 
-## Immediate Product Owner review — public Version 31
+## Parked Product Owner review — public Version 31
 
 1. Open Shopkeeper on mobile first, then desktop, and confirm the compact scan/search surface is visually usable.
 2. Scan a known Library ISBN and confirm the duplicate/ownership result is explicit.
@@ -11,12 +11,12 @@ This document contains the current execution horizon. Long-term ordering is in t
 5. Check one new ISBN and one metadata-unavailable ISBN; confirm both hand off to Library without adding or changing a record automatically.
 6. Confirm **Scan another ISBN**, cancel, and Library navigation reset the workflow cleanly.
 
-Record only failures, unclear wording, or visual problems that require correction. Acceptance closes the Shopkeeper parity release.
+Resume this checklist only when the Product Owner is ready. Parking it neither accepts nor rejects Version 31.
 
-## Release-maintenance follow-up
+## Completed release maintenance
 
-- Choose the repository's canonical package manager and remove the redundant tracked lockfile in a dedicated cleanup change.
-- Re-run the standard Site build wrapper after cleanup. Until then, the direct Vinext production build is the verified release path.
+- Unpublished `4763cb1026911d4829b2dcb426e342d6f66dfa79` makes pnpm canonical, removes the stale npm lockfile, and makes the package scripts portable.
+- The configured Node 24 direct Vinext build passes. The standard Site wrapper still fails on this host because its launcher reaches the system Node 18 path; that host/tooling limitation is separate from application correctness.
 
 ## Completed foundation and Shopkeeper pass
 
@@ -26,31 +26,32 @@ Record only failures, unclear wording, or visual problems that require correctio
 4. Record ISBN and reference-cover enrichment as parallel design/test lanes over shared provider boundaries.
 5. Record tags as a possible consumer of provider categories while keeping canonical tag persistence and owner decisions separate.
 
-The endpoint-focused suite passed 7/7. The Shopkeeper parity candidate passed 15/15 focused checks and the full application suite passed 161/161; the Version 31 identity passed 37/37 focused checks and a production build. Version 31 is public at exact source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
+The original endpoint foundation passed 7/7 in Version 31 lineage. Unpublished enrichment source `36f6b828317502eff65e45cbd7508ccaf96fbad3` now passes 9/9 focused enrichment checks, 163/163 full checks, focused lint, and a production build. Version 31 remains public at exact source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 
 ## Next implementation milestone — enrichment boundary
 
-Begin only after Version 31 owner review is accepted or its bounded corrections are closed.
+Continue nonvisual contract and test work while Version 31 owner review is parked. Any visible presentation, Site version, deployment, or publication remains a separate gate.
 
 The safest next implementation milestone is a provider-neutral, read-only enrichment boundary. It should be divided into independently reviewable slices:
 
-### Slice A — provider and evidence contract
+### Slice A — provider and evidence contract — complete in unpublished source
 
-- Inventory current ISBN and cover endpoints and their unit-test coverage.
-- Define normalized response fields, source attribution, timeouts, partial failure, no-result behavior, and manual fallback.
-- Prefer no-cost services that fit the hosted runtime and limited Site storage.
-- Keep captured ISBN, local Library evidence, provider metadata, and provider image candidates distinguishable.
+- Existing Open Library lookup now returns bounded title, author, publisher, publication-date, first-year, subject, language, identifier, record-link, and CoverID evidence with explicit provider attribution.
+- Transport and malformed-response failures return the existing stable unavailable outcome; empty results remain valid and manual fallback remains intact.
+- Reference covers use CoverID URLs with `default=false`, remain remote candidates only, and do not consume Site storage.
+- No additional provider, key, schema, persistence, tag, or UI behavior was added.
 
-### Slice B — ISBN enrichment
+### Slice B — ISBN enrichment consumer — next contract
 
-- Try additional approved no-cost metadata evidence only after a valid ISBN lacks sufficient current results.
+- First decide which existing Open Library fields may populate the reviewed add form and how conflicts are shown.
+- Consider another no-cost source only after measured Open Library gaps justify it; Google Books is not the default because public-data calls require an API key or OAuth identifier.
 - Preserve exact/equivalent local matching before external lookup.
 - Return reviewable title, author, edition/date, and source evidence when available.
 - Never create, merge, overwrite, or relabel a Book without explicit owner confirmation.
 
-### Slice C — reference-cover enrichment
+### Slice C — reference-cover consumer — next contract
 
-- Find reference-cover candidates from approved sources using canonical ISBN evidence.
+- Consume the Open Library CoverID candidate already returned by the shared endpoint; prefer record/CoverID attribution over ISBN cover routing.
 - Preserve uploaded personal covers and always distinguish personal from reference images.
 - Define attribution, caching/storage limits, broken-link fallback, and replacement rules before enabling persistence.
 
@@ -83,5 +84,6 @@ Do not implement denser spines, cover-detail presentation, Shelf missing-title p
 
 ## Repository hygiene before the next release
 
-- Resolve which package manager is canonical. Both `package-lock.json` and `pnpm-lock.yaml` are currently tracked, so the standard Site build wrapper refuses to choose one even though the direct production build succeeds.
-- Treat removal of either lockfile as a deliberate, tested cleanup rather than incidental deletion during feature work.
+- Keep pnpm as the sole lockfile workflow.
+- Use the configured Node 24 runtime for validation until the standard Site wrapper's Windows launcher/runtime selection is corrected.
+- Do not mix that host-tooling repair into the next visible feature release unless it is independently verified.
