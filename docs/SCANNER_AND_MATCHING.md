@@ -57,6 +57,16 @@ The exact baseline-to-HEAD boundary is eight UI/test paths: `app/globals.css`, `
 
 Version 25 was saved and successfully deployed at the existing public URL with the public audience preserved. Product Owner hands-on acceptance remains pending through the [Version 25 Product Owner Review](VERSION_25_OWNER_REVIEW.md). A canceled pending Library lookup can leave its `Checking ISBN…` notice visible until another action clears it; this is a non-blocking next-release follow-up if this area is touched and does not reopen the flow or mutate data.
 
+## Version 30 accepted scanner state
+
+Versions 26–30 completed the main-page scanner restoration cycle. The public Version 30 baseline is exact source `67cd49da54f55d5e03a3a3b75b55f58e8eba3fd6`.
+
+The Product Owner confirmed that photo upload and manual ISBN entry now reach usable duplicate, probable-existing, new-book, metadata-unavailable, and reviewed-add outcomes. A live Outcast of Redwall scan required multiple attempts but succeeded after the explicit text-scan retry was added. Photo upload is currently more reliable than live capture, so intermittent live retry is retained as a stability issue rather than a release blocker.
+
+The Bellmaker demonstrated a separate metadata limitation: valid ISBN `044100315X` was captured, but the current provider returned no useful title or author in that attempt. The manual-details path is the accepted fallback. Broader no-cost ISBN metadata enrichment is the next scanner/matching improvement and must preserve captured-identifier evidence separately from provider results.
+
+Shopkeeper was not part of this acceptance round. Broader visual changes remain held for Product Owner review.
+
 ## Out of scope
 
 - Persistent candidate, reviewer, diagnostic-image, or cross-session evidence storage.
@@ -77,6 +87,8 @@ Version 25 was saved and successfully deployed at the existing public URL with t
 ## Future improvements
 
 - Add a separately reviewed enrichment step that can try additional no-cost metadata sources after a valid ISBN is captured but the current lookup returns no title or author. Keep captured ISBN evidence distinct from provider-supplied metadata and require owner review before changing a Library record.
+- Coordinate that lookup boundary with reference-cover enrichment so shared provider responses and fixtures can be reused without coupling Book metadata, personal covers, reference covers, or tags.
+- Treat provider subjects/categories only as possible future tag suggestions; do not persist them as canonical tags without the separate tag contract.
 - Explainable composite scoring across identifier, title, author, and cover evidence.
 - Explicitly designed persistent review and audit workflow if later approved.
 - Feedback-driven threshold tuning.

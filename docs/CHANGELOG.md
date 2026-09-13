@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-12 — Version 30 accepted; enrichment foundation opened
+
+- Reconciled the concise current state, next actions, roadmap, staged milestones, and scanner contract from the rejected Version 26 record through accepted public Version 30 at exact source `67cd49da54f55d5e03a3a3b75b55f58e8eba3fd6`.
+- Recorded the Product Owner's acceptance: manual entry and photo upload reach usable scanner outcomes; live capture can require retries but succeeded after the explicit text-scan retry; photo upload is currently more reliable; and valid ISBNs with unavailable metadata retain a manual-details fallback.
+- Opened a source-only enrichment foundation. ISBN metadata and reference-cover enrichment may share a provider-neutral read-only evidence boundary and proceed in parallel for design, fixtures, and review, while application-source writing remains one writer at a time.
+- Kept provider subjects/categories separate from canonical tags and retained asset lifecycle/complete cover backup as `NEEDS MORE INFORMATION`.
+- Added focused unit coverage for the known ISBN metadata, stored-cover retrieval, and personal-cover authorization/input endpoint contracts. The focused suite passed 7/7 and the full application suite passed 159/159. No application behavior, Site version, deployment, publication, production data, schema, authentication, or provider was changed.
+- Recorded the intake meter at 43% five-hour and 62% weekly remaining with all three reset credits unused. Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-11 — Public Version 26 scanner photo/manual review remains release-blocking
 
 - Recorded sanitized public main-page evidence from desktop-class in-app-browser automation, not Product Owner desktop testing: Bellmaker Photo 1 decoded retail UPC `072742006992`, but manual `044100315X` retrieved *Bellmaker* / Brian Jacques without reconciling ISBN-less Redwall #7; Subtle Art Photo 4 failed decode while manual `9781250425409` correctly found one owned My Books record; Hurricane Photo 5 failed decode, and manual `0553273566` retrieved *Hurricane!* / Richard Brightfield without reconciling ISBN-less owned CYOA #82. Both Add item flows were canceled; no add was confirmed and no mutation was observed.
