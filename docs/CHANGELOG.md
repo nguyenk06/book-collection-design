@@ -8,6 +8,7 @@
 - Kept provider subjects/categories separate from canonical tags and retained asset lifecycle/complete cover backup as `NEEDS MORE INFORMATION`.
 - Added focused unit coverage for the known ISBN metadata, stored-cover retrieval, and personal-cover authorization/input endpoint contracts at pushed test-only source `d3a39e346065a866271a12682f66941ce863d144`. The focused suite passed 7/7 and the full application suite passed 159/159. No application behavior, Site version, deployment, publication, production data, schema, authentication, or provider was changed.
 - Recorded the intake meter at 43% five-hour and 62% weekly remaining with all three reset credits unused. Sites capacity remains `UNKNOWN`.
+- Recorded the closing meter at 22% five-hour and 59% weekly remaining with all three reset credits still unused. Both windows remain above their protected floors.
 
 ## 2026-09-11 — Public Version 26 scanner photo/manual review remains release-blocking
 

@@ -43,8 +43,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 43% at the 2026-09-12 foundation-pass check.
-- **Weekly remaining:** 62% at the same check.
+- **Five-hour remaining:** 22% at the 2026-09-12 foundation close.
+- **Weekly remaining:** 59% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
