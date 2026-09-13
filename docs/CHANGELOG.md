@@ -7,7 +7,7 @@
 - Pushed unpublished enrichment checkpoint `36f6b828317502eff65e45cbd7508ccaf96fbad3`: the existing Open Library ISBN endpoint now returns bounded attributed publisher, publication-date, first-year, subject, language, identifier, record-link, and CoverID reference-cover evidence, with a six-second timeout and stable provider-failure behavior.
 - Kept local ISBN matching first and preserved existing scanner outcomes, manual fallback, and non-mutation behavior. No new provider, credential, schema, persistence, stored cover, canonical tag, or visible UI change was added.
 - Validation passed: enrichment endpoint 9/9, full application 163/163, focused lint, production build, and clean diff check.
-- Public remains Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`; neither unpublished checkpoint was saved, deployed, or published. Closing account capacity is 77% five-hour and 46% weekly with all three reset credits unused; Sites capacity remains `UNKNOWN`.
+- Public remains Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`; neither unpublished checkpoint was saved, deployed, or published. Closing account capacity is 73% five-hour and 46% weekly with all three reset credits unused; Sites capacity remains `UNKNOWN`.
 
 ## 2026-09-13 — Shopkeeper parity published as Version 31
 

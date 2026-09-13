@@ -42,7 +42,7 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 77% after the unpublished enrichment checkpoint and validation.
+- **Five-hour remaining:** 73% after the unpublished enrichment checkpoint, validation, source synchronization, and documentation reconciliation.
 - **Weekly remaining:** 46% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
