@@ -11,7 +11,7 @@ This document is the concise operational source of truth. Release history and su
 - **Current saved and public release:** Version 31.
 - **Exact release and application source:** `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 - **Sites capacity:** `UNKNOWN`; no authoritative Sites meter is available.
-- **Publication state:** Version 31 deployment succeeded. Product Owner review is parked by request while nonvisual work continues. No later source checkpoint has been saved, deployed, or published.
+- **Publication state:** Version 31 deployment succeeded. Product Owner review is parked by request. Approved enrichment presentation source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` is pushed but has not been saved, deployed, or published.
 
 ## Accepted product state
 
@@ -24,7 +24,7 @@ This document is the concise operational source of truth. Release history and su
 
 ## Open product boundaries
 
-- Selecting a Book does not yet reliably load a useful cover. Reference-cover enrichment is the next ordered product workstream.
+- Approved reference-cover enrichment is implemented in unpublished source: a personal cover always wins, otherwise a valid ISBN may supply a clearly labeled remote Open Library reference cover, with a nonblocking fallback.
 - ISBN metadata enrichment should broaden no-cost lookup evidence without changing the rule that a captured identifier and provider-supplied metadata are separate evidence.
 - Cover enrichment and ISBN enrichment may be designed and validated in parallel because both consume read-only metadata, but application-source writing remains one writer at a time.
 - Tags may reuse metadata-provider responses where useful, but tag persistence, user assignment, and acceptance remain a separate product model. Provider categories must never silently become canonical user tags.
@@ -42,8 +42,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 85% after the natural reset and resolver-evidence checkpoint.
-- **Weekly remaining:** 43% at the same check.
+- **Five-hour remaining:** 42% after the approved enrichment implementation and validation.
+- **Weekly remaining:** 36% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
@@ -53,11 +53,11 @@ This document is the concise operational source of truth. Release history and su
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
 | Documentation cleanup | Reconciled through Version 31 | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
-| Endpoint contract tests | Expanded in pushed unpublished source | Resolver/enrichment checks and 164/164 full checks pass |
+| Endpoint contract tests | Expanded in pushed unpublished source | Enrichment presentation checks and 167/167 full checks pass |
 | Shopkeeper parity | Published in Version 31; owner review parked | Resume mobile/desktop review only when the Product Owner is ready |
 | Repository maintenance | Complete in unpublished `4763cb1026911d4829b2dcb426e342d6f66dfa79` | pnpm is canonical; configured Node 24 build passes; standard wrapper remains host-blocked by its launcher/system Node 18 path |
-| Reference-cover enrichment | Read-only evidence reaches the scanner resolver in unpublished `339c3bf74960171be2373f6c99d78c459bc12a2e` | Review the proposed personal-first reference-cover fallback before visible implementation |
-| ISBN metadata enrichment | Attributed evidence reaches the scanner resolver in unpublished `339c3bf74960171be2373f6c99d78c459bc12a2e` | Review the proposed compact evidence block before visible implementation |
+| Reference-cover enrichment | Approved presentation implemented and pushed in unpublished `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` | Include in a later explicitly authorized release, then complete owner visual review |
+| ISBN metadata enrichment | Approved compact evidence block implemented and pushed in unpublished `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` | Include in a later explicitly authorized release, then complete owner workflow review |
 | Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |
 | Complete cover backup | Needs more information | Define inventory, byte coverage, integrity, retention, and recovery claims before implementation |
 | Safe import/restore | Planned later | Require dry-run, validation, conflict handling, and recovery contract |
@@ -65,4 +65,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Keep Version 31 owner review parked. Review the [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md) before visible implementation. The proposed slice uses the existing Add dialog and a personal-cover-first Book detail fallback; it must not persist a provider cover, silently change a Book, or convert provider subjects into canonical tags.
+Keep Version 31 owner review parked. The [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md) is approved and implemented in pushed unpublished source. The next gate is a separately authorized release identity/version update and publication; only then can the Product Owner perform the required visual and workflow review on the public Site.

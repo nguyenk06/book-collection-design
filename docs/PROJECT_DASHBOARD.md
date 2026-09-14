@@ -6,9 +6,9 @@
 
 | KPI | Coarse estimate | Progress | What it measures |
 | --- | ---: | --- | --- |
-| Core build completion | **~92%** | `██████████████████░░` | Current Library and Shopkeeper foundation implemented and validated |
-| Release readiness | **~95%** | `███████████████████░` | Version 31 is public; Product Owner review is parked |
-| Broader roadmap completion | **~62%** | `████████████░░░░░░░░` | Current release plus later enrichment, portability, and analysis work |
+| Core build completion | **~93%** | `██████████████████░░` | Current Library, Shopkeeper, and bounded enrichment presentation implemented and validated |
+| Release readiness | **~95%** | `███████████████████░` | Version 31 is public; approved enrichment source is pushed but unpublished |
+| Broader roadmap completion | **~64%** | `█████████████░░░░░░░` | Current release plus later enrichment, portability, and analysis work |
 
 These estimates intentionally measure different outcomes. High local completion does not imply that the source is saved, published, production-verified, or live-validated.
 
@@ -52,12 +52,14 @@ flowchart LR
 
 Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CURRENT_STATE.md) and [Next Actions](NEXT_ACTIONS.md).
 
+The next release candidate is pushed unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`: approved compact ISBN evidence and a personal-cover-first reference fallback, validated by 167/167 tests, lint, and production build. Release identity, Site save, publication, and owner review remain separate gates.
+
 ## Future work
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
 | Phase A — IA and responsive shell | Accepted from Version 24 | Preserve Library-first navigation and mobile parity |
-| 1 — Reference-cover enrichment | Planned · medium-large | Needs attribution, personal/reference separation, safe identifier matching, and a confirmed cover-click source boundary |
+| 1 — Reference-cover enrichment | First bounded consumer implemented · medium-large | Approved personal-first remote fallback is pushed but unpublished; persistence, selection, and lifecycle remain later scope |
 | 2 — Asset lifecycle and complete cover backup | **NEEDS MORE INFORMATION** · medium-large | Upload/serving exists; metadata, variants, cleanup, complete byte backup, and recovery guarantees need a clarified boundary |
 | 3 — Scanner/matching improvements | Substantially complete · medium | Main Library and Shopkeeper share explicit outcomes; live capture stability and future metadata breadth remain |
 | 4 — Tags | Planned · medium | Persistence and assignment model are absent |

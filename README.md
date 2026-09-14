@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` remains the saved public release. Product Owner visual/mobile review is parked by request while nonvisual enrichment work continues. Unpublished source `339c3bf74960171be2373f6c99d78c459bc12a2e` includes canonical pnpm cleanup, expands the existing Open Library ISBN response, and carries bounded attributed metadata and reference-cover evidence through the shared scanner resolver; it passed 164/164 tests, focused lint, and a production build. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` remains the saved public release. Product Owner review is parked by request. Approved unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` adds compact attributed ISBN evidence to the existing Add item dialog and a personal-cover-first remote reference-cover fallback; it passed 167/167 tests, lint with zero errors, and a production build. It is pushed but not saved, deployed, or published. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

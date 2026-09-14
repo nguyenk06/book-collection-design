@@ -28,9 +28,9 @@ Resume this checklist only when the Product Owner is ready. Parking it neither a
 
 The original endpoint foundation passed 7/7 in Version 31 lineage. Unpublished source `339c3bf74960171be2373f6c99d78c459bc12a2e` now carries bounded enrichment evidence through the shared scanner resolver, rejects unsafe candidate links, and passes 164/164 full checks, focused lint, and a production build. Version 31 remains public at exact source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 
-## Next implementation milestone — enrichment boundary
+## Completed implementation milestone — enrichment presentation
 
-Continue nonvisual contract and test work while Version 31 owner review is parked. Any visible presentation, Site version, deployment, or publication remains a separate gate.
+The Product Owner approved the four recommended presentation choices. Exact source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` implements and pushes the bounded visible consumer while Version 31 owner review remains parked. No Site version, deployment, or publication followed from that approval.
 
 The safest next implementation milestone is a provider-neutral, read-only enrichment boundary. It should be divided into independently reviewable slices:
 
@@ -41,18 +41,18 @@ The safest next implementation milestone is a provider-neutral, read-only enrich
 - Reference covers use CoverID URLs with `default=false`, remain remote candidates only, and do not consume Site storage.
 - No additional provider, key, schema, persistence, tag, or UI behavior was added.
 
-### Slice B — ISBN enrichment consumer — proposed for review
+### Slice B — ISBN enrichment consumer — implemented, unpublished
 
-- First decide which existing Open Library fields may populate the reviewed add form and how conflicts are shown.
+- The existing Add item dialog now shows a secondary read-only evidence block with publisher, publication date/year, language, attributed source link, and one reference thumbnail when available.
 - Consider another no-cost source only after measured Open Library gaps justify it; Google Books is not the default because public-data calls require an API key or OAuth identifier.
 - Preserve exact/equivalent local matching before external lookup.
 - Return reviewable title, author, edition/date, and source evidence when available.
 - Never create, merge, overwrite, or relabel a Book without explicit owner confirmation.
 
-### Slice C — reference-cover consumer — proposed for review
+### Slice C — reference-cover consumer — implemented, unpublished
 
 - Consume the Open Library CoverID candidate already returned by the shared endpoint; prefer record/CoverID attribution over ISBN cover routing.
-- Preserve uploaded personal covers and always distinguish personal from reference images.
+- Uploaded personal covers retain precedence; a reference image appears only when no personal cover exists and is explicitly labeled as Open Library evidence.
 - Define attribution, caching/storage limits, broken-link fallback, and replacement rules before enabling persistence.
 
 ### Slice D — tag discovery only
@@ -62,7 +62,14 @@ The safest next implementation milestone is a provider-neutral, read-only enrich
 
 Slices B and C may be researched, specified, and tested in parallel. Application-source edits remain sequential under the one-writer rule, and each slice must remain independently promotable.
 
-The combined smallest visible proposal is in the [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md). It keeps one Add dialog, shows a compact read-only evidence block, uses a personal-cover-first reference fallback, and holds provider subjects out of the UI. Product Owner visual/UX approval is required before implementation.
+The approved bounded slice is recorded in the [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md). Validation passed 71/71 focused checks, 167/167 full checks, lint with zero errors, a production build, and diff integrity. Changing the reviewed ISBN clears evidence from the previous scan. Subjects remain hidden and no provider data or remote cover is persisted automatically.
+
+## Next release gate — not yet authorized
+
+1. When the Product Owner is ready, explicitly authorize a release identity/version update and publication of exact source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` plus only the required release-identity change.
+2. Revalidate the exact release candidate and confirm the pushed commit before saving a Site version.
+3. Quatre alone performs the Site save and publication, preserving the current audience.
+4. Product Owner reviews the public Site on mobile and desktop: evidence hierarchy, editable fields, personal-cover precedence, reference-cover fallback/failure, source attribution, subject absence, and no mutation before Add.
 
 ## Later ordered work
 

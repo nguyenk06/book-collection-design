@@ -1,6 +1,15 @@
 # Enrichment Review Contract
 
-**State:** Proposed for Product Owner visual/UX review; not implementation authority.
+**State:** Product Owner approved `1:A; 2:A; 3:A; 4:A`; implemented and pushed in unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`.
+
+## Product Owner decision
+
+- Use the existing **Add item** dialog for retrieved evidence.
+- Show a reference cover only when no personal cover exists.
+- Limit the compact evidence set to publisher, date/year, language, source link, and one thumbnail.
+- Keep provider subjects hidden until the separate Tags milestone.
+
+This approval authorized the bounded presentation implementation. It did not authorize a Site save, version, deployment, publication, production mutation, or tag model.
 
 ## Goal
 
@@ -90,3 +99,4 @@ The first visible slice passes only when:
 3. Should publisher, date/year, language, source link, and one cover thumbnail be the entire first visible evidence set?
 4. Should provider subjects remain hidden until the separate Tags milestone?
 
+All four questions were accepted as option A on 2026-09-13. The resulting source passed 71/71 focused checks, 167/167 full checks, lint with zero errors and three expected dynamic-image advisories, a production build, and `git diff --check` before commit and source-only push. Publication and hands-on visual acceptance remain separate gates.

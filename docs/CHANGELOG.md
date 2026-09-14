@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-13 — Enrichment presentation choices implemented and pushed
+
+- Recorded Product Owner approval of `1:A; 2:A; 3:A; 4:A`: reuse the existing Add item dialog, show reference covers only when no personal cover exists, limit the visible evidence set to publisher/date/language/source/one thumbnail, and hold provider subjects until the Tags milestone.
+- Implemented exact source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`. Retrieved evidence remains read-only until explicit Add, personal covers retain precedence, remote-cover failure is nonblocking, and changing the reviewed ISBN clears evidence tied to the previous scan.
+- Validation passed: scanner/collection focus 71/71, full application 167/167, lint with zero errors and three expected dynamic-image advisories, production build, and clean diff check.
+- Pushed the source to the existing Sites repository. Automatic publication was not accepted; no Site version was saved, deployed, or published, and public Version 31 remains unchanged.
+- Recorded closing capacity at 42% five-hour and 36% weekly remaining with all three reset credits unused. Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-13 — Enrichment evidence propagated; visible consumer proposed
 
 - Pushed unpublished nonvisual checkpoint `339c3bf74960171be2373f6c99d78c459bc12a2e`, which carries bounded publisher, date, subject, language, identifier, source, and reference-cover evidence through the shared scanner resolver instead of discarding everything after title/author.

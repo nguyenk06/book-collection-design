@@ -48,7 +48,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8A — reference-cover enrichment
 
-**State:** Read-only provider evidence available; consumer proposed for Product Owner visual/UX review.
+**State:** Product Owner approved; consumer implemented and pushed in unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`.
 
 - Select approved no-cost sources.
 - Define candidate confidence, attribution, personal/reference distinction, fallback, and storage/caching limits.
@@ -57,7 +57,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8B — ISBN metadata enrichment
 
-**State:** Provider evidence reaches the resolver; consumer proposed for Product Owner visual/UX review.
+**State:** Product Owner approved; compact attributed evidence implemented and pushed in unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`.
 
 - Add approved fallback evidence for valid ISBNs that lack useful current metadata.
 - Normalize but do not silently merge conflicting titles, authors, editions, dates, or subjects.
