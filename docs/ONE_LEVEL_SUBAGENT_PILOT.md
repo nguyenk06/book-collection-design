@@ -50,6 +50,8 @@ The Product Owner communicates only with Quatre. Routine Product Owner controls 
 
 The Product Owner no longer carries `!inbox`, `!brief`, briefs, reports, or role-to-role prompts between agents. Quatre monitors and routes internal assignments/results. `PLANNER_INBOX.md` remains reserved for genuine Product Owner decisions; Quatre presents those decisions in a consolidated response without requiring the Product Owner to open another role chat.
 
+Whenever Quatre asks the Product Owner to make a decision, Quatre must show the available choices directly in the response. Each choice includes its practical impact or tradeoff, and Quatre identifies the recommended choice with a short reason. Use a compact response format such as `1:A; 2:A` when useful. Never ask for a bare approval or undefined decision when the actual alternatives can be stated. If only one safe option exists, state that option and why the alternatives are unavailable.
+
 Commands remain case-insensitive and require `!`. Numeric usage records capacity only and creates no authority. `!run`, `!drain`, and `!stop` retain all safety and gate limits.
 
 ## Completion-oriented goals

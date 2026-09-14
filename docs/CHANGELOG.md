@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-14 — Product Owner decision presentation rule clarified
+
+- Added a standing Quatre interaction rule: every genuine Product Owner decision must show the available choices, practical impacts or tradeoffs, Quatre's recommendation and reason, and a compact response format when useful.
+- Prohibited bare approval requests and decision prompts that require the Product Owner to reconstruct alternatives from linked documentation. When only one safe option exists, Quatre must state it and explain why.
+- Updated the one-level pilot, documentation decision lifecycle, and Planner startup contract. No application, Site, production, asset, or release state changed.
+
 ## 2026-09-14 — Version 32 roadmap reconciled; Milestone 9 backup contract drafted
 
 - Reconciled the roadmap and staged/current milestone horizon to exact saved and public Version 32 source `802db5fd9c54c79e4897cc12de86b875163f6c07`. Library remains canonical; Shopkeeper remains available but is shelved as an active workstream.

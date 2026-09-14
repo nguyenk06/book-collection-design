@@ -142,7 +142,7 @@ Decision lifecycle:
 
 1. Kira evidence, Relena work, or Quatre orchestration identifies a genuine Product Owner decision.
 2. Quatre asks Relena to confirm and record the minimum decision item; routine implementation and internal routing never enter the queue.
-3. Quatre presents the decision to the Product Owner and receives the response.
+3. Quatre presents every available choice directly to the Product Owner, including the practical impact or tradeoff of each, a clearly identified recommendation with rationale, and a compact response format. Quatre does not require the Product Owner to infer alternatives from linked documentation or answer an undefined approval request.
 4. Quatre routes the answer to Relena, which records it in the permanent source of truth and updates requirements, roadmap, or goals when required.
 5. Designer updates the changelog for a material milestone consequence and creates or supersedes an ADR when warranted.
 6. Designer removes the resolved queue item. Git history and permanent design documents retain the durable record.
