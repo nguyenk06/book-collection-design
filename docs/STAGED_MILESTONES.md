@@ -1,6 +1,6 @@
 # Staged Milestone Sequence
 
-**Reviewed:** 2026-09-13
+**Reviewed:** 2026-09-14
 
 Milestones are independently reviewable and do not bundle implementation, Site save, publication, production access, or recovery authority.
 
@@ -24,7 +24,7 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 
 ## Milestone 7 — enrichment foundation
 
-**State:** Complete and pushed; no visible product behavior change.
+**State:** Foundation complete; first visible consumers published in Version 32.
 
 - Reconcile current documentation through accepted Version 30.
 - Test the known ISBN metadata and stored-cover retrieval contracts.
@@ -32,7 +32,7 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 - Preserve personal covers, local canonical identity, no-result/manual fallback, source attribution, and no-mutation behavior.
 - Treat tags only as a possible future consumer of provider suggestions.
 
-The initial test-only checkpoint remains in history. Unpublished `339c3bf74960171be2373f6c99d78c459bc12a2e` expands the existing Open Library boundary and carries its bounded attributed metadata and CoverID candidates through the shared scanner resolver. The full application suite passes 164/164, focused lint passes, and the configured Node 24 production build passes. No Site version or production state changed.
+The initial test-only checkpoint remains in history. Its provider/evidence boundary now underpins the bounded ISBN and reference-cover presentation published in exact Version 32 source `802db5fd9c54c79e4897cc12de86b875163f6c07`. The public consumer preserves local-first matching, attribution, personal-cover precedence, manual fallback, and no automatic persistence.
 
 ## Milestone 7A — Shopkeeper parity release
 
@@ -74,9 +74,11 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 9 — asset lifecycle and complete cover backup
 
-**State:** `NEEDS MORE INFORMATION`.
+**State:** Requirements contract drafted; two Product Owner decisions remain pending. No implementation is active.
 
-Before implementation, define inventory scope, R2 byte inclusion, integrity verification, personal/reference retention, orphan cleanup, restore order, failure handling, and the exact recovery claim.
+The durable contract is [Asset Management — Milestone 9 requirements contract](ASSET_MANAGEMENT.md#milestone-9-requirements-contract). The recommended package is a downloadable versioned ZIP containing a manifest and the selected scope of personal stored-cover bytes. It records hashes, media types, byte sizes, and stable Book associations; reports missing, orphaned, and duplicate objects; never deletes source objects; and requires a read-only dry run plus independent archive verification. Remote Open Library images remain replaceable references, not backed-up personal assets. Restore is a separate later milestone and authority gate.
+
+Entry requires Product Owner resolution of the exact personal-byte scope and backup-retention model, a fresh capacity check, and a bounded read-only feasibility goal. Stop if required objects cannot be enumerated safely, stable associations cannot be proven, the ZIP exceeds supported runtime limits, or any production write, cleanup, schema change, restore, or destructive action appears necessary.
 
 ## Later milestones
 

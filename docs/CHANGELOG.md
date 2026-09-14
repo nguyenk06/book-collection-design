@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-14 — Version 32 roadmap reconciled; Milestone 9 backup contract drafted
+
+- Reconciled the roadmap and staged/current milestone horizon to exact saved and public Version 32 source `802db5fd9c54c79e4897cc12de86b875163f6c07`. Library remains canonical; Shopkeeper remains available but is shelved as an active workstream.
+- Drafted the durable M9 asset-lifecycle/complete-cover-backup contract around a downloadable versioned ZIP manifest and personal stored-cover bytes, with stable Book associations, SHA-256 hashes, media types, sizes, missing/orphan/duplicate reporting, read-only dry run, independent verification, and no automatic source-object deletion.
+- Kept remote Open Library images as replaceable references rather than personal backup bytes and retained restore, cleanup, production access, implementation, held visual work, and every Site/release action as separate later gates.
+- Opened only the two genuine Product Owner decisions: whether the package includes accessible orphaned personal bytes, and whether retention is owner-download-only or server-side snapshots. No application, test, worktree, Site, credential, production, backup, restore, commit, or push action occurred.
+
 ## 2026-09-13 — Enrichment published as Version 32; Shopkeeper workstream shelved
 
 - Published exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` as Site Version 32 with the existing public audience preserved and definitive deployment success at `https://cyoa-collection.znesfreak.chatgpt.site`.

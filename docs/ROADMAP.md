@@ -4,19 +4,17 @@ The roadmap is ordered by Product Owner priority. A roadmap position is planning
 
 ## Current baseline
 
-Version 30 at `67cd49da54f55d5e03a3a3b75b55f58e8eba3fd6` is the accepted saved and public baseline. Phase 0 is closed, the Library-first Phase A shell is accepted, and the main-page scanner restoration cycle is complete with a retained live-capture stability note.
+Version 32 at `802db5fd9c54c79e4897cc12de86b875163f6c07` is the exact saved and public baseline. Phase 0 is closed, the Library-first shell and main-page scanner are accepted, and the first bounded ISBN/reference-cover enrichment consumer is public. Library is canonical for scan, review, add, and edit. Shopkeeper remains available but is shelved as an active workstream unless the Product Owner explicitly reopens it.
 
-## Ordered additional roadmap
+## Ordered remaining roadmap
 
 | Order | Workstream | Effort | Entry condition |
 | ---: | --- | --- | --- |
-| 1 | Reference-cover enrichment | Medium-large | Protect personal covers; define source, attribution, identifier confidence, fallback, and storage behavior |
-| 2 | Asset lifecycle and complete cover backup | Medium-large | **NEEDS MORE INFORMATION** — define byte coverage, integrity, retention, orphan cleanup, and recovery guarantees |
-| 3 | [Scanner and matching improvements](SCANNER_AND_MATCHING.md) | Medium | Begin with ISBN metadata enrichment; keep local exact/equivalent matching authoritative and provider evidence reviewable |
-| 4 | [Tags](TAGS.md) | Medium | Define tag vocabulary, provenance, assignment, removal, and persistence; provider categories are suggestions only |
-| 5 | [Safe import and restore](IMPORT_EXPORT.md) | Medium-large | Add dry-run, validation, conflict handling, rollback/recovery, and explicit confirmation |
-| 6 | [AI Review](AI_REVIEW.md) | Large | Requires stable interchange, proposals, comparison, approval, and concurrency protection |
-| 7 | Expanded administration and analysis | Medium | Extend owner tools only after the underlying records and evidence are stable |
+| 1 | [M9 — asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) | Medium-large | Resolve package-scope and retention decisions, then prove read-only inventory and ZIP feasibility; restore remains separate |
+| 2 | [Tags](TAGS.md) | Medium | Define tag vocabulary, provenance, assignment, removal, and persistence; provider categories are suggestions only |
+| 3 | [Safe import and restore](IMPORT_EXPORT.md) | Medium-large | Add dry-run, validation, conflict handling, rollback/recovery, and explicit confirmation after a verified backup format exists |
+| 4 | [AI Review](AI_REVIEW.md) | Large | Requires stable interchange, proposals, comparison, approval, and concurrency protection |
+| 5 | Expanded administration and analysis | Medium | Extend owner tools only after the underlying records and evidence are stable |
 
 ## Enrichment composition
 
@@ -29,6 +27,8 @@ Reference-cover enrichment and ISBN metadata enrichment may proceed as parallel 
 - A provider must be no-cost for the approved use, fit Sites runtime/space limits, degrade safely, and avoid making the application dependent on a single response.
 
 See [Enrichment Foundation](ENRICHMENT_FOUNDATION.md) for the first bounded contract.
+
+Reference-cover and ISBN enrichment are complete through their first public Version 32 consumer. Scanner/matching changes are maintenance-only unless new Library evidence opens a bounded correction. Neither completed enrichment nor shelved Shopkeeper work consumes a current roadmap position.
 
 ## Phase F visual backlog
 
@@ -49,6 +49,7 @@ Category-based shelves and bookcases are retained. The intended aggregate view i
 - Library-first responsive shell, aggregate My Library behavior, Bookcase/Shelf views, and public release identity.
 - Versioned catalog export foundation and owner-only download surface.
 - Main-page photo/manual/live scanner restoration accepted in Version 30.
+- First bounded ISBN metadata and remote Open Library reference-cover enrichment published in Version 32.
 
 ## Release rule
 

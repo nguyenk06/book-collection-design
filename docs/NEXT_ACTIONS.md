@@ -14,10 +14,10 @@ Shopkeeper review is removed from the active queue. The route remains available,
 
 ## Completed release maintenance
 
-- Unpublished `4763cb1026911d4829b2dcb426e342d6f66dfa79` makes pnpm canonical, removes the stale npm lockfile, and makes the package scripts portable.
+- Checkpoint `4763cb1026911d4829b2dcb426e342d6f66dfa79`, now incorporated into the public Version 32 source lineage, made pnpm canonical, removed the stale npm lockfile, and made the package scripts portable.
 - The configured Node 24 direct Vinext build passes. The standard Site wrapper still fails on this host because its launcher reaches the system Node 18 path; that host/tooling limitation is separate from application correctness.
 
-## Completed foundation and Shopkeeper pass
+## Completed foundation and shelved Shopkeeper pass
 
 1. Reconcile the durable documentation from the rejected Version 26 state through accepted public Version 30.
 2. Preserve the scanner stability note: photo upload is more reliable, while live capture may require retries.
@@ -31,7 +31,7 @@ The original endpoint foundation passed 7/7 in Version 31 lineage. Its bounded e
 
 The Product Owner approved the four recommended presentation choices. Their bounded visible consumer is now included in public Version 32 exact source `802db5fd9c54c79e4897cc12de86b875163f6c07`.
 
-The safest next implementation milestone is a provider-neutral, read-only enrichment boundary. It should be divided into independently reviewable slices:
+The delivered enrichment milestone used a provider-neutral, read-only boundary divided into independently reviewable slices:
 
 ### Slice A — provider and evidence contract — public in Version 32
 
@@ -67,9 +67,15 @@ The approved bounded slice is recorded in the [Enrichment Review Contract](ENRIC
 
 Exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` was validated, saved as Site Version 32, and deployed with the existing public audience. Product Owner review is optional and uses the checklist above.
 
+## Next planning gate — Milestone 9 cover backup
+
+The durable [M9 requirements contract](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) proposes a downloadable versioned ZIP manifest plus personal stored-cover bytes. It requires stable Book associations, SHA-256 hashes, byte sizes, media types, missing/orphan/duplicate reporting, no automatic source-object deletion, a read-only dry run, and independent archive verification. Open Library reference images are excluded as replaceable remote evidence, and restore remains a separate later gate.
+
+Before any goal is activated, the Product Owner must choose the personal-byte scope and retention model in [Planner Inbox](PLANNER_INBOX.md). After those choices and a fresh capacity check, the safest next goal is read-only feasibility only: inventory the selected scope, reconcile associations/counts, measure total bytes/projected ZIP size, and identify platform limits. Stop before implementation if enumeration, byte access, stable identity, or runtime limits are unresolved; stop immediately if a production write, cleanup, schema change, restore, or destructive action appears necessary.
+
 ## Later ordered work
 
-1. Resolve the information gap for asset lifecycle and complete cover backup.
+1. Resolve the two M9 Product Owner decisions, then run a separately authorized read-only cover inventory and ZIP-feasibility goal.
 2. Design and implement tags.
 3. Design safe import/restore.
 4. Design AI Review over stable interchange and review proposals.
