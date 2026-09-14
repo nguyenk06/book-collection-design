@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` remains the saved public release. Product Owner visual/mobile review is parked by request while nonvisual enrichment work continues. Unpublished source `36f6b828317502eff65e45cbd7508ccaf96fbad3` includes canonical pnpm cleanup and expands the existing Open Library ISBN response with bounded, attributed metadata and reference-cover evidence; it passed 163/163 tests, focused lint, and a production build. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` remains the saved public release. Product Owner visual/mobile review is parked by request while nonvisual enrichment work continues. Unpublished source `339c3bf74960171be2373f6c99d78c459bc12a2e` includes canonical pnpm cleanup, expands the existing Open Library ISBN response, and carries bounded attributed metadata and reference-cover evidence through the shared scanner resolver; it passed 164/164 tests, focused lint, and a production build. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 
@@ -50,7 +50,7 @@ Implementation changes should be made in the Site implementation workspace. Majo
 | Architecture | [Architecture](docs/ARCHITECTURE.md) · [Database](docs/DATABASE.md) |
 | Visual experience | [My Library Visual Experience](docs/VISUAL_EXPERIENCE.md) |
 | Core workflows | [Shopkeeper / historical Shopping Mode](docs/SHOPPING_MODE.md) · [Scanner and Matching](docs/SCANNER_AND_MATCHING.md) · [Bookshelf](docs/BOOKSHELF.md) |
-| Data workflows | [Import and Export](docs/IMPORT_EXPORT.md) · [AI Review](docs/AI_REVIEW.md) · [Asset Management](docs/ASSET_MANAGEMENT.md) · [Tags](docs/TAGS.md) |
+| Data workflows | [Enrichment Foundation](docs/ENRICHMENT_FOUNDATION.md) · [Enrichment Review Contract](docs/ENRICHMENT_REVIEW_CONTRACT.md) · [Import and Export](docs/IMPORT_EXPORT.md) · [AI Review](docs/AI_REVIEW.md) · [Asset Management](docs/ASSET_MANAGEMENT.md) · [Tags](docs/TAGS.md) |
 | Knowledge | [Knowledge Ownership Index](docs/KNOWLEDGE_INDEX.md) · [Future Improvement Catalog](docs/FUTURE_IMPROVEMENT_CATALOG.md) |
 | Governance | [CYOA One-Level Subagent Pilot](docs/ONE_LEVEL_SUBAGENT_PILOT.md) · [Decision Log](docs/DECISIONS.md) · [Documentation Rules](docs/DOCUMENTATION_RULES.md) · [Engineer Execution Contract](docs/ENGINEER_EXECUTION_CONTRACT.md) · [Contributing](docs/CONTRIBUTING.md) |
 | Handoffs | [Protocol](docs/HANDOFF_PROTOCOL.md) · [Engineer Execution Contract](docs/ENGINEER_EXECUTION_CONTRACT.md) · [Implementation Brief template](templates/IMPLEMENTATION_BRIEF.md) · [Design Handoff template](templates/DESIGN_HANDOFF.md) |

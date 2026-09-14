@@ -32,7 +32,7 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 - Preserve personal covers, local canonical identity, no-result/manual fallback, source attribution, and no-mutation behavior.
 - Treat tags only as a possible future consumer of provider suggestions.
 
-The initial test-only checkpoint remains in history. Unpublished `36f6b828317502eff65e45cbd7508ccaf96fbad3` now expands the existing Open Library boundary with bounded attributed metadata and CoverID candidates. Focused endpoint tests pass 9/9, the full application suite passes 163/163, focused lint passes, and the configured Node 24 production build passes. No Site version or production state changed.
+The initial test-only checkpoint remains in history. Unpublished `339c3bf74960171be2373f6c99d78c459bc12a2e` expands the existing Open Library boundary and carries its bounded attributed metadata and CoverID candidates through the shared scanner resolver. The full application suite passes 164/164, focused lint passes, and the configured Node 24 production build passes. No Site version or production state changed.
 
 ## Milestone 7A — Shopkeeper parity release
 
@@ -48,7 +48,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8A — reference-cover enrichment
 
-**State:** Read-only provider evidence available; consumer design pending.
+**State:** Read-only provider evidence available; consumer proposed for Product Owner visual/UX review.
 
 - Select approved no-cost sources.
 - Define candidate confidence, attribution, personal/reference distinction, fallback, and storage/caching limits.
@@ -57,7 +57,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8B — ISBN metadata enrichment
 
-**State:** Provider response expanded; reviewed consumer design pending.
+**State:** Provider evidence reaches the resolver; consumer proposed for Product Owner visual/UX review.
 
 - Add approved fallback evidence for valid ISBNs that lack useful current metadata.
 - Normalize but do not silently merge conflicting titles, authors, editions, dates, or subjects.

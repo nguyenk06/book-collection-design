@@ -40,7 +40,9 @@ Unpublished source checkpoint `36f6b828317502eff65e45cbd7508ccaf96fbad3` covers:
 - stored-cover not-found behavior when a Book lacks a reference or an R2 object is absent; and
 - stored-cover media metadata and public cache behavior.
 
-The focused enrichment suite passes 9/9, and the full application suite passes 163/163 at pushed unpublished checkpoint `36f6b828317502eff65e45cbd7508ccaf96fbad3`. Focused lint and the configured Node 24 production build also pass. The response expansion is additive and changes no scanner decision, Book mutation, cover persistence, tag persistence, schema, or visible UI behavior from public Version 31.
+The endpoint enrichment suite passes 9/9, and the full application suite passes 164/164 at pushed unpublished checkpoint `339c3bf74960171be2373f6c99d78c459bc12a2e`. That checkpoint carries bounded evidence through the shared scanner resolver and rejects unsafe candidate links. Focused lint and the configured Node 24 production build also pass. The work changes no scanner decision, Book mutation, cover persistence, tag persistence, schema, or visible UI behavior from public Version 31.
+
+The smallest visible consumer is proposed in the [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md) and requires Product Owner visual/UX approval before implementation.
 
 ## Provider decision record
 

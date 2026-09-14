@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-09-13 — Enrichment evidence propagated; visible consumer proposed
+
+- Pushed unpublished nonvisual checkpoint `339c3bf74960171be2373f6c99d78c459bc12a2e`, which carries bounded publisher, date, subject, language, identifier, source, and reference-cover evidence through the shared scanner resolver instead of discarding everything after title/author.
+- Added client-side normalization limits and rejected non-HTTPS source/cover candidates. Scanner decisions still use title/author, and no add, edit, persistence, schema, tag, cover-storage, or visible UI behavior changed.
+- Validation passed: focused resolver/enrichment 18/18, full application 164/164, focused lint, production build, and clean diff check.
+- Added the source-informed [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md): preserve one Add dialog, add a compact read-only evidence block, use a personal-cover-first reference fallback in Book detail, and keep provider subjects hidden until Tags has its own model.
+- Public remains Version 31. Product Owner Version 31 review remains parked; the new visible consumer is proposed only and requires Product Owner visual/UX approval before implementation. No Site save, deployment, or publication occurred.
+- Recorded closing capacity at 85% five-hour and 43% weekly remaining after the natural five-hour reset, with all three reset credits unused. Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-13 — Nonvisual enrichment foundation advanced; owner review parked
 
 - Parked the public Version 31 Product Owner review without accepting or rejecting it, and continued only nonvisual source work.

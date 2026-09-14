@@ -42,8 +42,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 73% after the unpublished enrichment checkpoint, validation, source synchronization, and documentation reconciliation.
-- **Weekly remaining:** 46% at the same check.
+- **Five-hour remaining:** 85% after the natural reset and resolver-evidence checkpoint.
+- **Weekly remaining:** 43% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
@@ -53,11 +53,11 @@ This document is the concise operational source of truth. Release history and su
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
 | Documentation cleanup | Reconciled through Version 31 | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
-| Endpoint contract tests | Expanded in pushed unpublished source | 9/9 enrichment checks and 163/163 full checks pass |
+| Endpoint contract tests | Expanded in pushed unpublished source | Resolver/enrichment checks and 164/164 full checks pass |
 | Shopkeeper parity | Published in Version 31; owner review parked | Resume mobile/desktop review only when the Product Owner is ready |
 | Repository maintenance | Complete in unpublished `4763cb1026911d4829b2dcb426e342d6f66dfa79` | pnpm is canonical; configured Node 24 build passes; standard wrapper remains host-blocked by its launcher/system Node 18 path |
-| Reference-cover enrichment | Read-only evidence foundation in unpublished `36f6b828317502eff65e45cbd7508ccaf96fbad3` | Define the reviewed consumer and personal/reference presentation before any UI or persistence change |
-| ISBN metadata enrichment | Existing Open Library boundary expanded in unpublished `36f6b828317502eff65e45cbd7508ccaf96fbad3` | Decide which normalized fields the review/add workflow may consume; keep additional providers out until justified |
+| Reference-cover enrichment | Read-only evidence reaches the scanner resolver in unpublished `339c3bf74960171be2373f6c99d78c459bc12a2e` | Review the proposed personal-first reference-cover fallback before visible implementation |
+| ISBN metadata enrichment | Attributed evidence reaches the scanner resolver in unpublished `339c3bf74960171be2373f6c99d78c459bc12a2e` | Review the proposed compact evidence block before visible implementation |
 | Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |
 | Complete cover backup | Needs more information | Define inventory, byte coverage, integrity, retention, and recovery claims before implementation |
 | Safe import/restore | Planned later | Require dry-run, validation, conflict handling, and recovery contract |
@@ -65,4 +65,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Keep Version 31 owner review parked. The next safe milestone is design acceptance for independently reviewable consumers of the now-tested ISBN/reference-cover evidence boundary. It may expose attributed evidence for owner review, but must not persist a provider cover, silently change a Book, or convert provider subjects into canonical tags.
+Keep Version 31 owner review parked. Review the [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md) before visible implementation. The proposed slice uses the existing Add dialog and a personal-cover-first Book detail fallback; it must not persist a provider cover, silently change a Book, or convert provider subjects into canonical tags.

@@ -26,7 +26,7 @@ Resume this checklist only when the Product Owner is ready. Parking it neither a
 4. Record ISBN and reference-cover enrichment as parallel design/test lanes over shared provider boundaries.
 5. Record tags as a possible consumer of provider categories while keeping canonical tag persistence and owner decisions separate.
 
-The original endpoint foundation passed 7/7 in Version 31 lineage. Unpublished enrichment source `36f6b828317502eff65e45cbd7508ccaf96fbad3` now passes 9/9 focused enrichment checks, 163/163 full checks, focused lint, and a production build. Version 31 remains public at exact source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
+The original endpoint foundation passed 7/7 in Version 31 lineage. Unpublished source `339c3bf74960171be2373f6c99d78c459bc12a2e` now carries bounded enrichment evidence through the shared scanner resolver, rejects unsafe candidate links, and passes 164/164 full checks, focused lint, and a production build. Version 31 remains public at exact source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
 
 ## Next implementation milestone — enrichment boundary
 
@@ -41,7 +41,7 @@ The safest next implementation milestone is a provider-neutral, read-only enrich
 - Reference covers use CoverID URLs with `default=false`, remain remote candidates only, and do not consume Site storage.
 - No additional provider, key, schema, persistence, tag, or UI behavior was added.
 
-### Slice B — ISBN enrichment consumer — next contract
+### Slice B — ISBN enrichment consumer — proposed for review
 
 - First decide which existing Open Library fields may populate the reviewed add form and how conflicts are shown.
 - Consider another no-cost source only after measured Open Library gaps justify it; Google Books is not the default because public-data calls require an API key or OAuth identifier.
@@ -49,7 +49,7 @@ The safest next implementation milestone is a provider-neutral, read-only enrich
 - Return reviewable title, author, edition/date, and source evidence when available.
 - Never create, merge, overwrite, or relabel a Book without explicit owner confirmation.
 
-### Slice C — reference-cover consumer — next contract
+### Slice C — reference-cover consumer — proposed for review
 
 - Consume the Open Library CoverID candidate already returned by the shared endpoint; prefer record/CoverID attribution over ISBN cover routing.
 - Preserve uploaded personal covers and always distinguish personal from reference images.
@@ -61,6 +61,8 @@ The safest next implementation milestone is a provider-neutral, read-only enrich
 - Do not create a tag table, import provider categories, or alter Books until the tag vocabulary and assignment workflow are separately approved.
 
 Slices B and C may be researched, specified, and tested in parallel. Application-source edits remain sequential under the one-writer rule, and each slice must remain independently promotable.
+
+The combined smallest visible proposal is in the [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md). It keeps one Add dialog, shows a compact read-only evidence block, uses a personal-cover-first reference fallback, and holds provider subjects out of the UI. Product Owner visual/UX approval is required before implementation.
 
 ## Later ordered work
 
