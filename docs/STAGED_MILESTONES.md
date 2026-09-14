@@ -12,7 +12,7 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | Phase A — Library-first responsive shell | Accepted from public Version 24 |
 | Aggregate My Library correction | Published from Version 25 |
 | Main-page scanner restoration | Accepted in public Version 30; live retry stability note retained |
-| Shopkeeper scanner parity and visual cleanup | Published in Version 31; Product Owner review parked |
+| Shopkeeper scanner parity and visual cleanup | Published in Version 31; further work shelved by Product Owner |
 | M1 — Shopping validation feasibility | Complete within recorded boundary |
 | M2 — controlled Shopping release and schema gates | Complete within recorded bridge-observable boundary |
 | M3 — canonical Book identifiers | Complete for exact/equivalent ISBN resolution |
@@ -36,7 +36,7 @@ The initial test-only checkpoint remains in history. Unpublished `339c3bf7496017
 
 ## Milestone 7A — Shopkeeper parity release
 
-**State:** Published as Version 31; Product Owner review parked.
+**State:** Published as Version 31; further parity and visual review shelved by Product Owner.
 
 - Preserve Shopkeeper as a compact, non-mutating quick-check surface.
 - Match Library scanner outcomes for duplicates, probable ISBN-less matches, conflicts, new metadata, unavailable metadata, and manual review.
@@ -48,7 +48,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8A — reference-cover enrichment
 
-**State:** Product Owner approved; consumer implemented and pushed in unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`.
+**State:** First bounded consumer published in Version 32.
 
 - Select approved no-cost sources.
 - Define candidate confidence, attribution, personal/reference distinction, fallback, and storage/caching limits.
@@ -57,7 +57,7 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8B — ISBN metadata enrichment
 
-**State:** Product Owner approved; compact attributed evidence implemented and pushed in unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`.
+**State:** First bounded consumer published in Version 32.
 
 - Add approved fallback evidence for valid ISBNs that lack useful current metadata.
 - Normalize but do not silently merge conflicting titles, authors, editions, dates, or subjects.

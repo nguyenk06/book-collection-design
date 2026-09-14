@@ -10,7 +10,7 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 31 at exact `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792` remains the saved public release. Product Owner review is parked by request. Approved unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` adds compact attributed ISBN evidence to the existing Add item dialog and a personal-cover-first remote reference-cover fallback; it passed 167/167 tests, lint with zero errors, and a production build. It is pushed but not saved, deployed, or published. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 32 at exact `802db5fd9c54c79e4897cc12de86b875163f6c07` is the saved public release. It adds compact attributed ISBN evidence to the existing Add item dialog and a personal-cover-first remote Open Library reference-cover fallback; it passed 167/167 tests, lint with zero errors, and a production build. Shopkeeper remains available but is shelved as an active workstream because the Library homepage owns the canonical scan, review, and add flow. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
 
 ## Start here
 

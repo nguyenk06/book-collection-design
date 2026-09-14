@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-09-13 — Enrichment published as Version 32; Shopkeeper workstream shelved
+
+- Published exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` as Site Version 32 with the existing public audience preserved and definitive deployment success at `https://cyoa-collection.znesfreak.chatgpt.site`.
+- Released the approved compact ISBN evidence block and personal-cover-first, labeled Open Library reference-cover fallback. Provider subjects remain hidden; no provider evidence or remote cover is persisted before explicit Add.
+- Recorded release validation: 167/167 tests, source lint with zero errors and three known dynamic-image advisories, clean diff check, and all five production-build stages.
+- Shelved Shopkeeper as an active workstream by Product Owner decision. The route remains available, but Library is the canonical scan, review, add, and edit flow; no Shopkeeper removal or new remediation was included in Version 32.
+- No production data, schema, authentication, credential, provider, stored-cover, tag, import/restore, AI Review, or held Phase F visual change was made. Closing capacity is 14% five-hour and 32% weekly with all three reset credits unused; Sites capacity remains `UNKNOWN`.
+
 ## 2026-09-13 — Enrichment presentation choices implemented and pushed
 
 - Recorded Product Owner approval of `1:A; 2:A; 3:A; 4:A`: reuse the existing Add item dialog, show reference covers only when no personal cover exists, limit the visible evidence set to publisher/date/language/source/one thumbnail, and hold provider subjects until the Tags milestone.

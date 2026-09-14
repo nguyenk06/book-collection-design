@@ -7,7 +7,7 @@
 | KPI | Coarse estimate | Progress | What it measures |
 | --- | ---: | --- | --- |
 | Core build completion | **~93%** | `██████████████████░░` | Current Library, Shopkeeper, and bounded enrichment presentation implemented and validated |
-| Release readiness | **~95%** | `███████████████████░` | Version 31 is public; approved enrichment source is pushed but unpublished |
+| Release readiness | **~97%** | `███████████████████░` | Version 32 enrichment release is public and ready for optional owner review |
 | Broader roadmap completion | **~64%** | `█████████████░░░░░░░` | Current release plus later enrichment, portability, and analysis work |
 
 These estimates intentionally measure different outcomes. High local completion does not imply that the source is saved, published, production-verified, or live-validated.
@@ -17,7 +17,7 @@ These estimates intentionally measure different outcomes. High local completion 
 | Milestone | Coarse estimate | Status | Release boundary |
 | --- | ---: | --- | --- |
 | M1 — Validation-environment feasibility | **100%** | Complete locally | Investigation completed; no safe runnable unpublished preview was found |
-| M2 — Controlled Shopping release | **100% locally** | Published in Version 31; owner review parked | Shopkeeper parity, compact presentation, shared resolution outcomes, and scanner recovery are deployed |
+| M2 — Controlled Shopping release | **100% locally** | Published in Version 31; further work shelved | Shopkeeper remains available, but Library is the canonical scanner and add workflow |
 | M3 — Canonical identifiers | **100% locally** | Published | Exact/equivalent ISBN resolution remains the local-first boundary |
 | M4 — Bookshelf | **100% locally** | Published; later visual work held | Category shelves remain; denser spines and missing-title presentation await visual review |
 | M5 — Export foundation | **100% locally** | Published; partial operational evidence | Catalog export exists but is not a complete production backup |
@@ -45,21 +45,21 @@ flowchart LR
     class D closed
 ```
 
-- **Shopkeeper parity:** Complete in exact public Version 31 source `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
+- **Shopkeeper parity:** Published in Version 31, then shelved as an active workstream by Product Owner decision.
 - **Automated validation:** Complete for the release boundary: focused scanner/OCR, full application, release identity, lint, and production build checks passed.
 - **Publication:** Complete with the existing public audience preserved.
 - **Owner review:** Parked for the compact presentation and real mobile/desktop scanner workflow.
 
 Exact queue, usage, blocker, owner, and gate state belongs in [Current State](CURRENT_STATE.md) and [Next Actions](NEXT_ACTIONS.md).
 
-The next release candidate is pushed unpublished source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff`: approved compact ISBN evidence and a personal-cover-first reference fallback, validated by 167/167 tests, lint, and production build. Release identity, Site save, publication, and owner review remain separate gates.
+Version 32 exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` is public with approved compact ISBN evidence and a personal-cover-first reference fallback, validated by 167/167 tests, lint, and production build. Owner review is optional; the next design boundary is the unresolved asset-lifecycle and complete-cover-backup definition.
 
 ## Future work
 
 | Capability | Status | Current boundary |
 | --- | --- | --- |
 | Phase A — IA and responsive shell | Accepted from Version 24 | Preserve Library-first navigation and mobile parity |
-| 1 — Reference-cover enrichment | First bounded consumer implemented · medium-large | Approved personal-first remote fallback is pushed but unpublished; persistence, selection, and lifecycle remain later scope |
+| 1 — Reference-cover enrichment | First bounded consumer published · medium-large | Personal-first remote fallback is public; persistence, selection, and lifecycle remain later scope |
 | 2 — Asset lifecycle and complete cover backup | **NEEDS MORE INFORMATION** · medium-large | Upload/serving exists; metadata, variants, cleanup, complete byte backup, and recovery guarantees need a clarified boundary |
 | 3 — Scanner/matching improvements | Substantially complete · medium | Main Library and Shopkeeper share explicit outcomes; live capture stability and future metadata breadth remain |
 | 4 — Tags | Planned · medium | Persistence and assignment model are absent |

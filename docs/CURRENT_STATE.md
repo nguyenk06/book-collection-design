@@ -8,10 +8,10 @@ This document is the concise operational source of truth. Release history and su
 
 - **Active project:** CYOA Collection only.
 - **Public Site:** [CYOA Collection](https://cyoa-collection.znesfreak.chatgpt.site).
-- **Current saved and public release:** Version 31.
-- **Exact release and application source:** `d9d83bb4c964c2de9af8c0affdcb1a44ed5e6792`.
+- **Current saved and public release:** Version 32.
+- **Exact release and application source:** `802db5fd9c54c79e4897cc12de86b875163f6c07`.
 - **Sites capacity:** `UNKNOWN`; no authoritative Sites meter is available.
-- **Publication state:** Version 31 deployment succeeded. Product Owner review is parked by request. Approved enrichment presentation source `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` is pushed but has not been saved, deployed, or published.
+- **Publication state:** Version 32 deployment succeeded with the existing public audience. Product Owner review of the enrichment presentation is available on the public Site.
 
 ## Accepted product state
 
@@ -20,11 +20,11 @@ This document is the concise operational source of truth. Release history and su
 - The main-page scanner now reaches explicit tracked, probable-existing, new-book, unavailable-metadata, and retry outcomes. The Product Owner accepts Version 30 scanner behavior and has closed the blocking restoration cycle.
 - Photo upload is currently more reliable than live camera capture. Live capture can require more than one attempt; this is retained as a stability issue rather than a release blocker.
 - A valid captured ISBN can still return no title or author when the current metadata source has no record or cannot be reached. The manual-details path is the safe fallback.
-- Shopkeeper now uses the same resolution outcomes as Library and adds live UPC printed-text retry plus photo barcode/OCR fallback. It remains a non-mutating quick-check surface; adding or editing a Book continues in Library. Version 31 visual and mobile acceptance is parked, not accepted or rejected.
+- Shopkeeper remains available as a non-mutating quick-check surface, but the Product Owner has shelved it as an active workstream. Library is the canonical scan, review, add, and edit surface; do not spend milestone capacity on Shopkeeper parity or visual review unless the Product Owner reopens it.
 
 ## Open product boundaries
 
-- Approved reference-cover enrichment is implemented in unpublished source: a personal cover always wins, otherwise a valid ISBN may supply a clearly labeled remote Open Library reference cover, with a nonblocking fallback.
+- Approved reference-cover enrichment is public in Version 32: a personal cover always wins, otherwise a valid ISBN may supply a clearly labeled remote Open Library reference cover, with a nonblocking fallback.
 - ISBN metadata enrichment should broaden no-cost lookup evidence without changing the rule that a captured identifier and provider-supplied metadata are separate evidence.
 - Cover enrichment and ISBN enrichment may be designed and validated in parallel because both consume read-only metadata, but application-source writing remains one writer at a time.
 - Tags may reuse metadata-provider responses where useful, but tag persistence, user assignment, and acceptance remain a separate product model. Provider categories must never silently become canonical user tags.
@@ -42,8 +42,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 42% after the approved enrichment implementation and validation.
-- **Weekly remaining:** 36% at the same check.
+- **Five-hour remaining:** 14% after Version 32 publication and release reconciliation.
+- **Weekly remaining:** 32% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
@@ -53,11 +53,11 @@ This document is the concise operational source of truth. Release history and su
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
 | Documentation cleanup | Reconciled through Version 31 | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
-| Endpoint contract tests | Expanded in pushed unpublished source | Enrichment presentation checks and 167/167 full checks pass |
-| Shopkeeper parity | Published in Version 31; owner review parked | Resume mobile/desktop review only when the Product Owner is ready |
+| Endpoint contract tests | Included in public Version 32 | Enrichment presentation checks and 167/167 full checks pass |
+| Shopkeeper parity | Published in Version 31; active workstream shelved | Retain the route but spend no further milestone capacity unless the Product Owner reopens it |
 | Repository maintenance | Complete in unpublished `4763cb1026911d4829b2dcb426e342d6f66dfa79` | pnpm is canonical; configured Node 24 build passes; standard wrapper remains host-blocked by its launcher/system Node 18 path |
-| Reference-cover enrichment | Approved presentation implemented and pushed in unpublished `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` | Include in a later explicitly authorized release, then complete owner visual review |
-| ISBN metadata enrichment | Approved compact evidence block implemented and pushed in unpublished `893faa8a6b6e0282c788cdc6e1c7dc6fd8fe7bff` | Include in a later explicitly authorized release, then complete owner workflow review |
+| Reference-cover enrichment | Public in Version 32 | Product Owner may review personal-cover precedence, reference fallback, and failure handling |
+| ISBN metadata enrichment | Public in Version 32 | Product Owner may review evidence hierarchy, attribution, and no-mutation behavior |
 | Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |
 | Complete cover backup | Needs more information | Define inventory, byte coverage, integrity, retention, and recovery claims before implementation |
 | Safe import/restore | Planned later | Require dry-run, validation, conflict handling, and recovery contract |
@@ -65,4 +65,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Keep Version 31 owner review parked. The [Enrichment Review Contract](ENRICHMENT_REVIEW_CONTRACT.md) is approved and implemented in pushed unpublished source. The next gate is a separately authorized release identity/version update and publication; only then can the Product Owner perform the required visual and workflow review on the public Site.
+Hold new implementation near the five-hour clean-stop floor. Version 32 is public and ready for optional Product Owner enrichment review. Shopkeeper is shelved; the next planned design boundary is asset lifecycle and complete cover backup, which remains `NEEDS MORE INFORMATION` and requires clarification before implementation.
