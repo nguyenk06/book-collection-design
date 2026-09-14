@@ -71,11 +71,11 @@ Exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` was validated, saved as 
 
 The durable [M9 requirements contract](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) proposes a downloadable versioned ZIP manifest plus personal stored-cover bytes. It requires stable Book associations, SHA-256 hashes, byte sizes, media types, missing/orphan/duplicate reporting, no automatic source-object deletion, a read-only dry run, and independent archive verification. Open Library reference images are excluded as replaceable remote evidence, and restore remains a separate later gate.
 
-Before any goal is activated, the Product Owner must choose the personal-byte scope and retention model in [Planner Inbox](PLANNER_INBOX.md). After those choices and a fresh capacity check, the safest next goal is read-only feasibility only: inventory the selected scope, reconcile associations/counts, measure total bytes/projected ZIP size, and identify platform limits. Stop before implementation if enumeration, byte access, stable identity, or runtime limits are unresolved; stop immediately if a production write, cleanup, schema change, restore, or destructive action appears necessary.
+The Product Owner selected **1:A + 2:A**: all accessible personal cover objects, including separately classified orphans, with owner-download-only delivery and no server-retained backup history. After a fresh capacity check and separate goal authorization, the safest next goal is read-only feasibility only: inventory the selected scope, reconcile associations/counts, measure total bytes/projected ZIP size, and identify platform limits. Stop before implementation if enumeration, byte access, stable identity, or runtime limits are unresolved; stop immediately if a production write, cleanup, schema change, restore, or destructive action appears necessary.
 
 ## Later ordered work
 
-1. Resolve the two M9 Product Owner decisions, then run a separately authorized read-only cover inventory and ZIP-feasibility goal.
+1. When separately authorized, run a read-only cover inventory and ZIP-feasibility goal for accepted boundary 1:A + 2:A.
 2. Design and implement tags.
 3. Design safe import/restore.
 4. Design AI Review over stable interchange and review proposals.

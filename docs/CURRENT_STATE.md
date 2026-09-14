@@ -28,7 +28,7 @@ This document is the concise operational source of truth. Release history and su
 - The bounded ISBN metadata consumer is public in Version 32. Any later broadening of no-cost lookup evidence must preserve the rule that a captured identifier and provider-supplied metadata are separate evidence and requires a new bounded goal.
 - Cover enrichment and ISBN enrichment were designed as separate consumers of shared read-only metadata and delivered under the one-application-writer rule.
 - Tags may reuse metadata-provider responses where useful, but tag persistence, user assignment, and acceptance remain a separate product model. Provider categories must never silently become canonical user tags.
-- [Milestone 9 asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) now has a durable requirements contract. The recommended default is a downloadable versioned ZIP manifest plus personal stored-cover bytes with hashes, types, sizes, stable Book associations, and missing/orphan/duplicate reporting. Remote Open Library images remain replaceable references rather than personal backup bytes. Package scope and retention remain pending Product Owner decisions; restore is a separate later gate.
+- [Milestone 9 asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) has an accepted requirements boundary: include all accessible personal stored-cover bytes, including separately classified orphans, in an owner-download-only versioned ZIP with no server-retained backup history. The manifest records hashes, types, sizes, stable Book associations, and missing/orphan/duplicate reporting. Remote Open Library images remain replaceable references rather than personal backup bytes; restore is a separate later gate.
 - Phase F visual items remain held for owner review before implementation: denser Bookcase spines, useful cover detail loading, and titles on missing Shelf positions.
 
 ## Orchestration and ownership
@@ -59,10 +59,10 @@ This document is the concise operational source of truth. Release history and su
 | Reference-cover enrichment | Public in Version 32 | Product Owner may review personal-cover precedence, reference fallback, and failure handling |
 | ISBN metadata enrichment | Public in Version 32 | Product Owner may review evidence hierarchy, attribution, and no-mutation behavior |
 | Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |
-| M9 complete cover backup | Requirements drafted; decisions pending | Resolve personal-byte scope and retention, then authorize a bounded read-only inventory/ZIP feasibility goal; no cleanup or restore |
+| M9 complete cover backup | Requirements accepted as 1:A + 2:A | Separately authorize a bounded read-only inventory/ZIP feasibility goal; no implementation, cleanup, or restore |
 | Safe import/restore | Planned later | Require dry-run, validation, conflict handling, and recovery contract |
 | AI Review | Planned later | Requires stable interchange and proposal/review staging |
 
 ## Next milestone
 
-Hold new implementation near the last recorded five-hour clean-stop floor. Version 32 is public and ready for optional Product Owner enrichment review. Shopkeeper is shelved and Library is canonical. The next planning gate is Product Owner resolution of M9 personal-byte scope and retention; only then may Quatre consider a fresh-capacity, read-only feasibility goal. No backup, cleanup, restore, or held visual work is active.
+Version 32 is public and ready for optional Product Owner enrichment review. Shopkeeper is shelved and Library is canonical. M9 scope and retention are accepted as 1:A + 2:A; the next separate gate is authorization for a fresh-capacity, read-only feasibility goal. No backup, implementation, cleanup, restore, or held visual work is active.

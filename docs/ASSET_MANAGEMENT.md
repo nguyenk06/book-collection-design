@@ -116,12 +116,14 @@ Stop and return evidence to Quatre when pagination is unavailable or non-termina
 - A future restore contract must define dry run, target identity, conflict handling, missing Book behavior, hash verification, owner confirmation, rollback, and partial-failure recovery before any write is authorized.
 - Source personal-cover deletion, orphan cleanup, duplicate consolidation, format conversion, and retention automation are not part of backup generation and require separate Product Owner authority.
 
-### Pending Product Owner decisions
+### Accepted Product Owner boundary
 
-1. **Personal-byte scope:** Recommended default is every accessible personal stored-cover object, including orphans in a clearly separated manifest/archive class, while treating the currently stored bytes as the recoverable unit rather than claiming unavailable pre-processing originals. The narrower alternative includes only objects referenced by current Books.
-2. **Retention model:** Recommended default is on-demand owner download with no retained server-side backup history; any temporary package is bounded and removed without deleting source cover objects. The alternative is versioned server-retained snapshots with a separately chosen retention duration, storage limit, access model, and deletion policy.
+The Product Owner selected **1:A + 2:A** on 2026-09-14:
 
-Until both decisions are resolved, M9 is requirements-ready but not implementation-ready. Archive encryption, splitting, or alternate delivery becomes a Product Owner question only if read-only feasibility evidence shows it is necessary.
+- Include every accessible personal stored-cover object. Book-referenced objects and orphaned objects remain separate manifest/archive classes. Treat the bytes currently stored by the application as the recoverable unit; do not claim unavailable pre-processing originals. Exclude Open Library reference-image bytes.
+- Deliver the completed package as an authenticated owner download with no retained server-side backup history. Any temporary package must be bounded and removed without deleting source cover objects.
+
+This decision makes M9 requirements-ready for a separately authorized read-only feasibility goal; it does not activate that goal or authorize implementation, production access, archive generation, cleanup, restore, or Site operations. If complete enumeration cannot be proven, stop and return a new explicit scope choice rather than silently falling back to referenced objects only. Archive encryption, splitting, or alternate delivery becomes a Product Owner question only if feasibility evidence shows it is necessary.
 
 ## Future improvements
 

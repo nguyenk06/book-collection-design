@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-14 — Milestone 9 scope and retention accepted
+
+- Recorded Product Owner selections `1:A; 2:A`: include all accessible personal stored-cover objects, with Book-referenced and orphaned objects separately classified, and deliver completed backups as owner-download-only ZIPs with no retained server history.
+- Added ADR-0014 and cleared both resolved items from the Planner Inbox.
+- Preserved a separately authorized read-only feasibility run as the next gate. If complete enumeration cannot be proven, the work stops for a new explicit scope decision rather than silently falling back to referenced objects only.
+- No application, test, production, storage, archive, cleanup, restore, Site, or publication action occurred.
+
 ## 2026-09-14 — Product Owner decision presentation rule clarified
 
 - Added a standing Quatre interaction rule: every genuine Product Owner decision must show the available choices, practical impacts or tradeoffs, Quatre's recommendation and reason, and a compact response format when useful.

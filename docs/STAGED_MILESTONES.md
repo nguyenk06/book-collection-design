@@ -74,11 +74,11 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 9 — asset lifecycle and complete cover backup
 
-**State:** Requirements contract drafted; two Product Owner decisions remain pending. No implementation is active.
+**State:** Requirements boundary accepted as 1:A + 2:A; no feasibility run or implementation is active.
 
 The durable contract is [Asset Management — Milestone 9 requirements contract](ASSET_MANAGEMENT.md#milestone-9-requirements-contract). The recommended package is a downloadable versioned ZIP containing a manifest and the selected scope of personal stored-cover bytes. It records hashes, media types, byte sizes, and stable Book associations; reports missing, orphaned, and duplicate objects; never deletes source objects; and requires a read-only dry run plus independent archive verification. Remote Open Library images remain replaceable references, not backed-up personal assets. Restore is a separate later milestone and authority gate.
 
-Entry requires Product Owner resolution of the exact personal-byte scope and backup-retention model, a fresh capacity check, and a bounded read-only feasibility goal. Stop if required objects cannot be enumerated safely, stable associations cannot be proven, the ZIP exceeds supported runtime limits, or any production write, cleanup, schema change, restore, or destructive action appears necessary.
+The accepted scope includes all accessible personal cover objects, including separately classified orphans, and uses owner-download-only delivery with no server-retained backup history. Entry to the next step requires a fresh capacity check and separate authorization of a bounded read-only feasibility goal. Stop if required objects cannot be enumerated safely, stable associations cannot be proven, the ZIP exceeds supported runtime limits, or any production write, cleanup, schema change, restore, or destructive action appears necessary.
 
 ## Later milestones
 
