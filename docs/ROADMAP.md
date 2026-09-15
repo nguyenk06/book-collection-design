@@ -10,7 +10,7 @@ Version 32 at `802db5fd9c54c79e4897cc12de86b875163f6c07` is the exact saved and 
 
 | Order | Workstream | Effort | Entry condition |
 | ---: | --- | --- | --- |
-| 1 | [M9 — asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) | Medium-large | Resolve package-scope and retention decisions, then prove read-only inventory and ZIP feasibility; restore remains separate |
+| 1 | [M9 — asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) | Medium-large | Scope is accepted as all accessible personal covers plus owner-download-only delivery; next prove read-only inventory and ZIP feasibility; restore remains separate |
 | 2 | [Tags](TAGS.md) | Medium | Define tag vocabulary, provenance, assignment, removal, and persistence; provider categories are suggestions only |
 | 3 | [Safe import and restore](IMPORT_EXPORT.md) | Medium-large | Add dry-run, validation, conflict handling, rollback/recovery, and explicit confirmation after a verified backup format exists |
 | 4 | [AI Review](AI_REVIEW.md) | Large | Requires stable interchange, proposals, comparison, approval, and concurrency protection |
@@ -29,6 +29,10 @@ Reference-cover enrichment and ISBN metadata enrichment may proceed as parallel 
 See [Enrichment Foundation](ENRICHMENT_FOUNDATION.md) for the first bounded contract.
 
 Reference-cover and ISBN enrichment are complete through their first public Version 32 consumer. Scanner/matching changes are maintenance-only unless new Library evidence opens a bounded correction. Neither completed enrichment nor shelved Shopkeeper work consumes a current roadmap position.
+
+## Advance decision forecast
+
+The independent choices that can be resolved before implementation are maintained in [Planner Inbox](PLANNER_INBOX.md): initial tag intake, first tag attachment scope, initial safe-import format, AI Review submission boundary, and first expanded-administration focus. Decisions that require M9 runtime evidence or Phase F visual proposals remain intentionally deferred until those inputs exist.
 
 ## Phase F visual backlog
 

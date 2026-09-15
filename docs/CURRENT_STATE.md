@@ -18,7 +18,7 @@ This document is the concise operational source of truth. Release history and su
 - The Library-first shell, responsive navigation, header contents, and desktop/mobile presentation are accepted.
 - My Library is the aggregate base. It keeps the category-based shelves and bookcases while also supporting the intended all-books organization by collection and then within each collection by series/index and author/title.
 - The main-page scanner now reaches explicit tracked, probable-existing, new-book, unavailable-metadata, and retry outcomes. The Product Owner accepts Version 30 scanner behavior and has closed the blocking restoration cycle.
-- Version 32 mobile review reopened one bounded scanner completion issue: probable ISBN-less matches correctly identify existing `Need` records but provide no direct way to confirm the match, save the ISBN, or mark the Book owned. The Product Owner selected an explicit confirm-and-update-existing-record review; implementation is not yet active.
+- Version 32 mobile review reopened one bounded scanner completion issue: probable ISBN-less matches correctly identify existing `Need` records but provide no direct way to confirm the match, save the ISBN, or mark the Book owned. The Product Owner selected an explicit confirm-and-update-existing-record review; that correction is now implemented and validated locally at exact unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`.
 - Photo upload is currently more reliable than live camera capture. Live capture can require more than one attempt; this is retained as a stability issue rather than a release blocker.
 - A valid captured ISBN can still return no title or author when the current metadata source has no record or cannot be reached. The manual-details path is the safe fallback.
 - Shopkeeper remains available as a non-mutating quick-check surface, but the Product Owner has shelved it as an active workstream. Library is the canonical scan, review, add, and edit surface; do not spend milestone capacity on Shopkeeper parity or visual review unless the Product Owner reopens it.
@@ -43,8 +43,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 14% after Version 32 publication and release reconciliation.
-- **Weekly remaining:** 32% at the same check.
+- **Five-hour remaining:** 63% at the latest 2026-09-14 check.
+- **Weekly remaining:** 21% at the same check.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
 
@@ -53,7 +53,7 @@ This document is the concise operational source of truth. Release history and su
 | Workstream | State | Next boundary |
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
-| Probable-match completion | Product requirement accepted; not implemented | Prepare a bounded implementation goal for explicit ISBN/status/copies review with no default duplicate creation |
+| Probable-match completion | Implemented and validated locally at `837b36a328a69cefa38435aa9553f77b81bf870b` | Obtain release-boundary review; Site push, versioning, and publication remain separate gates |
 | Documentation cleanup | Reconciled through Version 32 and M9 requirements planning | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
 | Endpoint contract tests | Included in public Version 32 | Enrichment presentation checks and 167/167 full checks pass |
 | Shopkeeper parity | Published in Version 31; active workstream shelved | Retain the route but spend no further milestone capacity unless the Product Owner reopens it |
@@ -67,4 +67,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Version 32 remains public. Shopkeeper is shelved and Library is canonical. The newly accepted probable-match completion is the smallest user-facing correction to prepare before broader roadmap implementation. M9 scope and retention remain accepted as 1:A + 2:A, but its read-only feasibility goal is a separate later gate. No application implementation, backup, cleanup, restore, or held visual work is active.
+Version 32 remains public. Shopkeeper is shelved and Library is canonical. The probable-match completion is locally validated at exact unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`; no Site push, version change, save, or publication is authorized. The Planner Inbox contains advance roadmap choices that can be resolved without production evidence. M9 runtime feasibility and held visual work remain separate later gates.

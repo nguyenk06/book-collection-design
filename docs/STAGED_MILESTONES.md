@@ -25,9 +25,11 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 
 ## Scanner maintenance — probable-match completion
 
-**State:** Product behavior selected; awaiting a separately authorized bounded implementation goal.
+**State:** Implemented and validated locally at exact unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`; release-boundary and publication gates remain closed.
 
 For a unique probable ISBN-less match, provide an explicit existing-record review with Save ISBN only, Mark owned, Not the same book, and Cancel. Final confirmation rechecks conflicts and updates only the existing record. No default duplicate creation, pre-confirmation mutation, schema change, Shopkeeper work, or publication is included.
+
+Focused scanner validation passed 59/59, the authoritative serial application suite passed 170/170, source lint reported zero errors and three existing image advisories, and the production build completed all five stages. The earlier parallel full-suite run had one unchanged mobile-search timeout; that test passed immediately in isolation and the serial full suite passed completely.
 
 ## Milestone 7 — enrichment foundation
 

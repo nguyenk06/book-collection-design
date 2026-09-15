@@ -16,7 +16,11 @@ Shopkeeper review is removed from the active queue. The route remains available,
 
 Version 32 mobile evidence confirms that Outcast of Redwall and The Bellmaker reach the correct ISBN-less `Need` records, but the result offers only **View Library record** and no usable edit surface. The Product Owner selected **Option A — confirm and update the existing record**.
 
-The next bounded implementation proposal must add a probable-match review with **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. It must recheck ISBN conflicts at confirmation, update the existing Book rather than create a duplicate, preserve values after failure, support sign-in-and-return, and prove no mutation before explicit confirmation. This accepted design decision does not activate implementation or authorize publication.
+Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implements **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. It rechecks ISBN conflicts at confirmation, updates the existing Book rather than creating a duplicate, and preserves no-mutation behavior before explicit confirmation. Focused scanner validation passed 59/59; the authoritative serial suite passed 170/170; source lint has zero errors and three existing image advisories; and all five production-build stages passed. Release-boundary review, Site source push, versioning, save, publication, and owner testing remain separate gates.
+
+## Advance roadmap decisions
+
+The Product Owner may resolve the five independent choices in [Planner Inbox](PLANNER_INBOX.md) before their milestones begin. They cover tag intake, tag attachment scope, initial import format, AI data submission, and administration-analysis priority. Resolving them sets product direction only; it does not activate implementation or override later feasibility, visual, privacy, cost, release, or production gates.
 
 ## Completed release maintenance
 

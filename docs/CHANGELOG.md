@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-14 — Probable-match correction validated; advance roadmap choices opened
+
+- Implemented exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`: unique probable ISBN-less matches now offer Save ISBN only, Mark owned, Not the same book, and Cancel; final confirmation rechecks local ISBN conflicts and updates the existing Book rather than creating a duplicate by default.
+- Recorded validation: focused scanner 59/59, authoritative serial application 170/170, source lint with zero errors and three existing image advisories, production build through all five stages, and clean diff check. One unchanged mobile-search test timed out in a parallel run, then passed in isolation and in the serial suite.
+- Opened five advance Product Owner choices for tags, import, AI Review privacy, and administration-analysis priority. M9 runtime-dependent choices and Phase F visual choices remain deferred until their evidence exists.
+- No Site credential, source push, version change, save, deployment, publication, production access, schema/data mutation, backup, restore, or Shopkeeper work occurred.
+
 ## 2026-09-14 — Probable-match completion behavior selected
 
 - Recorded Product Owner mobile evidence that Outcast of Redwall and The Bellmaker reach their correct ISBN-less `Need` records in public Version 32, but the result provides no direct add/status path because **View Library record** only filters the Library and Bookcase/Shelf details are non-editable.

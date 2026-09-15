@@ -60,8 +60,8 @@ Version 32 exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` is public wit
 | --- | --- | --- |
 | Phase A — IA and responsive shell | Accepted from Version 24 | Preserve Library-first navigation and mobile parity |
 | 1 — Reference-cover enrichment | First bounded consumer published · medium-large | Personal-first remote fallback is public; persistence, selection, and lifecycle remain later scope |
-| 2 — Asset lifecycle and complete cover backup | **NEEDS MORE INFORMATION** · medium-large | Upload/serving exists; metadata, variants, cleanup, complete byte backup, and recovery guarantees need a clarified boundary |
-| 3 — Scanner/matching improvements | Substantially complete · medium | Main Library and Shopkeeper share explicit outcomes; live capture stability and future metadata breadth remain |
+| 2 — Asset lifecycle and complete cover backup | Requirements accepted · medium-large | All accessible personal covers plus owner-download-only delivery selected; read-only inventory/ZIP feasibility remains separately gated |
+| 3 — Scanner/matching improvements | Substantially complete · medium | Probable-match update workflow is validated locally and unpublished; live capture stability remains |
 | 4 — Tags | Planned · medium | Persistence and assignment model are absent |
 | 5 — Safe import/restore | Planned · medium-large | Existing mutable import is insufficiently safe; no restore or round-trip workflow is authorized |
 | 6 — AI Review | Planned · large | Needs versioned interchange, proposal/review staging, and concurrency protection |
