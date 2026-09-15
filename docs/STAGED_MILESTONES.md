@@ -12,6 +12,7 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | Phase A — Library-first responsive shell | Accepted from public Version 24 |
 | Aggregate My Library correction | Published from Version 25 |
 | Main-page scanner restoration | Accepted in public Version 30; live retry stability note retained |
+| Probable-match completion | Product requirement accepted from Version 32 mobile review; implementation not active |
 | Shopkeeper scanner parity and visual cleanup | Published in Version 31; further work shelved by Product Owner |
 | M1 — Shopping validation feasibility | Complete within recorded boundary |
 | M2 — controlled Shopping release and schema gates | Complete within recorded bridge-observable boundary |
@@ -21,6 +22,12 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | M6 — downloadable catalog export UI | Complete and published; broader restore is not established |
 
 Historical evidence and exact prior release details remain in the [Changelog](CHANGELOG.md).
+
+## Scanner maintenance — probable-match completion
+
+**State:** Product behavior selected; awaiting a separately authorized bounded implementation goal.
+
+For a unique probable ISBN-less match, provide an explicit existing-record review with Save ISBN only, Mark owned, Not the same book, and Cancel. Final confirmation rechecks conflicts and updates only the existing record. No default duplicate creation, pre-confirmation mutation, schema change, Shopkeeper work, or publication is included.
 
 ## Milestone 7 — enrichment foundation
 

@@ -12,6 +12,12 @@ This document contains the current execution horizon. Long-term ordering is in t
 
 Shopkeeper review is removed from the active queue. The route remains available, but Library is the canonical scanner and add workflow.
 
+## Accepted correction awaiting implementation authority — probable matches
+
+Version 32 mobile evidence confirms that Outcast of Redwall and The Bellmaker reach the correct ISBN-less `Need` records, but the result offers only **View Library record** and no usable edit surface. The Product Owner selected **Option A — confirm and update the existing record**.
+
+The next bounded implementation proposal must add a probable-match review with **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. It must recheck ISBN conflicts at confirmation, update the existing Book rather than create a duplicate, preserve values after failure, support sign-in-and-return, and prove no mutation before explicit confirmation. This accepted design decision does not activate implementation or authorize publication.
+
 ## Completed release maintenance
 
 - Checkpoint `4763cb1026911d4829b2dcb426e342d6f66dfa79`, now incorporated into the public Version 32 source lineage, made pnpm canonical, removed the stale npm lockfile, and made the package scripts portable.

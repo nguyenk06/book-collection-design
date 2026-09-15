@@ -65,6 +65,19 @@ The Product Owner confirmed that photo upload and manual ISBN entry now reach us
 
 The Bellmaker demonstrated a separate metadata limitation: valid ISBN `044100315X` was captured, but the current provider returned no useful title or author in that attempt. The manual-details path is the accepted fallback. Broader no-cost ISBN metadata enrichment is the next scanner/matching improvement and must preserve captured-identifier evidence separately from provider results.
 
+## Version 32 probable-match completion requirement
+
+Product Owner mobile review confirmed that Outcast of Redwall and The Bellmaker can reach the correct ISBN-less `Need` records, but the probable-match result is a workflow dead end: **View Library record** only filters the Library and does not open an editable status/identifier review. Bookcase and Shelf details likewise provide no ownership action.
+
+The Product Owner selected **Option A — confirm and update the existing record**. A probable match must therefore offer one explicit review surface showing the matched Book, scanned ISBN, current status, and copies. Owner actions are:
+
+- **Save ISBN only** — attach the scanned ISBN to the existing Book after duplicate recheck.
+- **Mark owned** — attach the ISBN, change status/ownership to Owned, and set copies to at least 1 through one explicit confirmed update.
+- **Not the same book** — reject the proposed reconciliation and continue to the existing new-book review without silently creating anything.
+- **Cancel** — close with no Book, identifier, status, copy, or cover change.
+
+The result must never create a second Book by default. Signed-out users receive a sign-in-and-return path rather than editable controls. A stale or conflicting ISBN discovered during final confirmation stops the update and returns an explicit conflict. Failed saves preserve the review values and state that no change was completed. This accepted product choice does not itself authorize implementation, production writes, Site publication, or schema changes.
+
 Shopkeeper was not part of this acceptance round. Broader visual changes remain held for Product Owner review.
 
 ## Out of scope

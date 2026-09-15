@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-14 — Probable-match completion behavior selected
+
+- Recorded Product Owner mobile evidence that Outcast of Redwall and The Bellmaker reach their correct ISBN-less `Need` records in public Version 32, but the result provides no direct add/status path because **View Library record** only filters the Library and Bookcase/Shelf details are non-editable.
+- Accepted Option A: an explicit review updates the existing Book rather than creating a duplicate. Required actions are Save ISBN only, Mark owned, Not the same book, and Cancel, with final conflict recheck, failure persistence, sign-in return, and no mutation before confirmation.
+- Reopened only this bounded scanner-completion requirement. Shopkeeper remains shelved, M9 remains separately gated, and no application, test, Site, production, schema, data, credential, or publication action occurred.
+
 ## 2026-09-14 — Milestone 9 scope and retention accepted
 
 - Recorded Product Owner selections `1:A; 2:A`: include all accessible personal stored-cover objects, with Book-referenced and orphaned objects separately classified, and deliver completed backups as owner-download-only ZIPs with no retained server history.
