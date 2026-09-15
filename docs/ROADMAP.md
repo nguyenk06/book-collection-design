@@ -12,7 +12,7 @@ Version 32 at `802db5fd9c54c79e4897cc12de86b875163f6c07` is the exact saved and 
 | ---: | --- | --- | --- |
 | 1 | [Tags](TAGS.md) | Medium | Begin with Books only; provider subjects/categories may seed reviewable suggestions but never silently become canonical |
 | 2 | [Safe import](IMPORT_EXPORT.md#accepted-initial-safe-import-boundary) | Medium-large | Begin with non-mutating dry-run import of catalog-v1 JSON only; exclude cover-byte mutation and keep restore separate |
-| 3 | [Manual AI Review](AI_REVIEW.md) | Large | Product Owner manually supplies explicitly selected exported data to an external agent/chat, then reviews proposals through safe import |
+| 3 | [Manual AI Review](AI_REVIEW.md) | Small-medium after Safe Import | Product Owner manually supplies explicitly selected exported data to an external agent/chat, then reviews proposals through safe import |
 | 4 | [M9 — asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) | Medium-large | Retain all-accessible-personal-cover and owner-download-only scope; encryption is not required; defer feasibility until after manual AI Review |
 | 5 | Expanded administration and analysis | Medium | Begin with data-quality and backup-health reporting after the underlying evidence is stable |
 

@@ -3,7 +3,7 @@
 ## 2026-09-14 — Roadmap reordered; AI Review defined as manual portability
 
 - Recorded the revised Product Owner order: Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration. The accepted M9 scope remains all accessible personal stored-cover objects with separately classified orphans and owner-download-only delivery; encryption is not required.
-- Defined AI Review as an owner-operated portability workflow: export, explicitly choose what to share with an external agent/chat, receive proposed filled-in data, inspect it through safe-import dry run, and confirm only accepted changes. No embedded provider, background/recurring agent, automatic transmission, or autonomous mutation is part of the product direction.
+- Defined AI Review as an owner-operated portability workflow: export, explicitly choose what to share with an external agent/chat, receive proposed filled-in data, inspect it through safe-import dry run, and confirm only accepted changes. No embedded provider, background/recurring agent, automatic transmission, or autonomous mutation is part of the product direction. With Safe Import carrying the main engineering risk, the remaining manual AI Review layer is estimated small-medium rather than large.
 - Kept the first safe import catalog-v1-only and excluded cover-byte mutation, allowing it to precede complete cover backup without weakening the later M9 contract. No implementation, external data transfer, test, Site, production, or publication action occurred; Planner Inbox remains empty.
 
 ## 2026-09-14 — Advance roadmap package accepted
