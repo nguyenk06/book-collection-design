@@ -75,11 +75,11 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 
 ## Milestone 8C — tag discovery
 
-**State:** Planned discovery only.
+**State:** Initial Product Owner direction accepted; implementation is not active.
 
-- Evaluate provider subjects/categories for usefulness and noise.
-- Define canonical tag vocabulary, provenance, assignment, removal, and owner control separately.
-- Do not turn provider categories into stored tags by default.
+- Provider subjects/categories may seed reviewable, uncommitted default suggestions; they never silently become canonical tags or assignments.
+- Attach tags to Books only in the first release while preserving an extension path that does not block possible later Collection-level tags.
+- Define canonical vocabulary, provenance, assignment, removal, import/export, and owner-confirmation behavior before implementation.
 
 ## Milestone 9 — asset lifecycle and complete cover backup
 
@@ -91,10 +91,10 @@ The accepted scope includes all accessible personal cover objects, including sep
 
 ## Later milestones
 
-1. Tags implementation.
-2. Safe import and restore.
-3. AI Review.
-4. Expanded administration and analysis.
+1. Books-only tag implementation with reviewable provider suggestions.
+2. Catalog-v1-JSON-only safe import; restore remains separately gated.
+3. AI Review for explicitly selected records only.
+4. Expanded administration beginning with data quality and backup health.
 5. Phase F visual refinements after Product Owner review.
 
 ## Shared controls

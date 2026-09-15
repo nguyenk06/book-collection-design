@@ -28,7 +28,7 @@ This document is the concise operational source of truth. Release history and su
 - Approved reference-cover enrichment is public in Version 32: a personal cover always wins, otherwise a valid ISBN may supply a clearly labeled remote Open Library reference cover, with a nonblocking fallback.
 - The bounded ISBN metadata consumer is public in Version 32. Any later broadening of no-cost lookup evidence must preserve the rule that a captured identifier and provider-supplied metadata are separate evidence and requires a new bounded goal.
 - Cover enrichment and ISBN enrichment were designed as separate consumers of shared read-only metadata and delivered under the one-application-writer rule.
-- Tags may reuse metadata-provider responses where useful, but tag persistence, user assignment, and acceptance remain a separate product model. Provider categories must never silently become canonical user tags.
+- Tags may use provider subjects/categories only as reviewable, uncommitted default suggestions; they never silently become canonical. The first attachment target is Books only, with an extensible design that does not block possible later Collection-level tags.
 - [Milestone 9 asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) has an accepted requirements boundary: include all accessible personal stored-cover bytes, including separately classified orphans, in an owner-download-only versioned ZIP with no server-retained backup history. The manifest records hashes, types, sizes, stable Book associations, and missing/orphan/duplicate reporting. Remote Open Library images remain replaceable references rather than personal backup bytes; restore is a separate later gate.
 - Phase F visual items remain held for owner review before implementation: denser Bookcase spines, useful cover detail loading, and titles on missing Shelf positions.
 
@@ -60,11 +60,12 @@ This document is the concise operational source of truth. Release history and su
 | Repository maintenance | Incorporated into the Version 32 source lineage | pnpm is canonical; configured Node 24 build passes; standard wrapper remains host-blocked by its launcher/system Node 18 path |
 | Reference-cover enrichment | Public in Version 32 | Product Owner may review personal-cover precedence, reference fallback, and failure handling |
 | ISBN metadata enrichment | Public in Version 32 | Product Owner may review evidence hierarchy, attribution, and no-mutation behavior |
-| Tags | Planned discovery | Determine which provider fields are useful; keep canonical tag decisions separate |
+| Tags | Initial direction accepted; implementation not active | Books only; provider-seeded suggestions require review and confirmation, with later Collection extensibility preserved |
 | M9 complete cover backup | Requirements accepted as 1:A + 2:A | Separately authorize a bounded read-only inventory/ZIP feasibility goal; no implementation, cleanup, or restore |
-| Safe import/restore | Planned later | Require dry-run, validation, conflict handling, and recovery contract |
-| AI Review | Planned later | Requires stable interchange and proposal/review staging |
+| Safe import/restore | Initial import direction accepted; implementation not active | Catalog-v1 JSON only, with non-mutating validation/dry run; restore remains separate |
+| AI Review | Initial privacy direction accepted; implementation not active | Submit only explicitly selected records with disclosed fields and confirmation |
+| Expanded administration | Initial focus accepted; implementation not active | Prioritize data quality and backup health before collection or spending analytics |
 
 ## Next milestone
 
-Version 32 remains public. Shopkeeper is shelved and Library is canonical. The probable-match completion is locally validated at exact unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`; no Site push, version change, save, or publication is authorized. The Planner Inbox contains advance roadmap choices that can be resolved without production evidence. M9 runtime feasibility and held visual work remain separate later gates.
+Version 32 remains public. Shopkeeper is shelved and Library is canonical. The probable-match completion is locally validated at exact unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`; no Site push, version change, save, or publication is authorized. The five advance roadmap choices are accepted product direction only. M9 runtime feasibility and held visual work remain separate later gates.

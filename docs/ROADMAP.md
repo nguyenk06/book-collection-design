@@ -11,10 +11,10 @@ Version 32 at `802db5fd9c54c79e4897cc12de86b875163f6c07` is the exact saved and 
 | Order | Workstream | Effort | Entry condition |
 | ---: | --- | --- | --- |
 | 1 | [M9 — asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) | Medium-large | Scope is accepted as all accessible personal covers plus owner-download-only delivery; next prove read-only inventory and ZIP feasibility; restore remains separate |
-| 2 | [Tags](TAGS.md) | Medium | Define tag vocabulary, provenance, assignment, removal, and persistence; provider categories are suggestions only |
-| 3 | [Safe import and restore](IMPORT_EXPORT.md) | Medium-large | Add dry-run, validation, conflict handling, rollback/recovery, and explicit confirmation after a verified backup format exists |
-| 4 | [AI Review](AI_REVIEW.md) | Large | Requires stable interchange, proposals, comparison, approval, and concurrency protection |
-| 5 | Expanded administration and analysis | Medium | Extend owner tools only after the underlying records and evidence are stable |
+| 2 | [Tags](TAGS.md) | Medium | Begin with Books only; provider subjects/categories may seed reviewable suggestions but never silently become canonical |
+| 3 | [Safe import and restore](IMPORT_EXPORT.md) | Medium-large | Begin with non-mutating dry-run import of catalog-v1 JSON only; restore remains a later gate |
+| 4 | [AI Review](AI_REVIEW.md) | Large | Submit only explicitly selected records; preserve disclosed fields, proposals, comparison, approval, privacy, and cost controls |
+| 5 | Expanded administration and analysis | Medium | Begin with data-quality and backup-health reporting after the underlying evidence is stable |
 
 ## Enrichment composition
 
@@ -30,9 +30,9 @@ See [Enrichment Foundation](ENRICHMENT_FOUNDATION.md) for the first bounded cont
 
 Reference-cover and ISBN enrichment are complete through their first public Version 32 consumer. Scanner/matching changes are maintenance-only unless new Library evidence opens a bounded correction. Neither completed enrichment nor shelved Shopkeeper work consumes a current roadmap position.
 
-## Advance decision forecast
+## Accepted advance direction
 
-The independent choices that can be resolved before implementation are maintained in [Planner Inbox](PLANNER_INBOX.md): initial tag intake, first tag attachment scope, initial safe-import format, AI Review submission boundary, and first expanded-administration focus. Decisions that require M9 runtime evidence or Phase F visual proposals remain intentionally deferred until those inputs exist.
+The Product Owner accepted the initial boundaries for the remaining roadmap: reviewable provider-seeded tag suggestions with canonical owner control; Book-only first tag attachment with an extensible later Collection path; catalog-v1 JSON as the only first safe-import format; explicitly selected records only for AI Review; and data quality plus backup health as the first expanded-administration focus. These choices reduce future ambiguity but do not authorize implementation, schema/provider work, production access, or publication. Decisions that require M9 runtime evidence or Phase F visual proposals remain intentionally deferred until those inputs exist.
 
 ## Phase F visual backlog
 

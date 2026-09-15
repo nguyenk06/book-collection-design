@@ -18,9 +18,9 @@ Version 32 mobile evidence confirms that Outcast of Redwall and The Bellmaker re
 
 Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implements **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. It rechecks ISBN conflicts at confirmation, updates the existing Book rather than creating a duplicate, and preserves no-mutation behavior before explicit confirmation. Focused scanner validation passed 59/59; the authoritative serial suite passed 170/170; source lint has zero errors and three existing image advisories; and all five production-build stages passed. Release-boundary review, Site source push, versioning, save, publication, and owner testing remain separate gates.
 
-## Advance roadmap decisions
+## Accepted advance roadmap package
 
-The Product Owner may resolve the five independent choices in [Planner Inbox](PLANNER_INBOX.md) before their milestones begin. They cover tag intake, tag attachment scope, initial import format, AI data submission, and administration-analysis priority. Resolving them sets product direction only; it does not activate implementation or override later feasibility, visual, privacy, cost, release, or production gates.
+The Product Owner selected reviewable provider-seeded tag suggestions with canonical owner control, Book-only first tag attachment with an extensible later Collection path, catalog-v1 JSON as the only first safe-import format, explicitly selected records only for AI Review, and data quality plus backup health as the first expanded-administration focus. These are durable direction choices only; they do not activate implementation or override later feasibility, privacy, cost, release, production, or held visual gates.
 
 ## Completed release maintenance
 
@@ -66,8 +66,8 @@ The delivered enrichment milestone used a provider-neutral, read-only boundary d
 
 ### Slice D — tag discovery only
 
-- Identify which approved provider fields might suggest tags.
-- Do not create a tag table, import provider categories, or alter Books until the tag vocabulary and assignment workflow are separately approved.
+- Provider subjects/categories may seed reviewable, uncommitted default suggestions, but never silently create canonical tags or assignments.
+- The first tag attachment target is Books only. Preserve a future extension path for Collection-level tags without presenting that scope as implemented.
 
 Slices B and C may be researched, specified, and tested in parallel. Application-source edits remain sequential under the one-writer rule, and each slice must remain independently promotable.
 
@@ -86,10 +86,10 @@ The Product Owner selected **1:A + 2:A**: all accessible personal cover objects,
 ## Later ordered work
 
 1. When separately authorized, run a read-only cover inventory and ZIP-feasibility goal for accepted boundary 1:A + 2:A.
-2. Design and implement tags.
-3. Design safe import/restore.
-4. Design AI Review over stable interchange and review proposals.
-5. Expand administration and analysis.
+2. Design Books-only tags with reviewable provider suggestions and later Collection extensibility.
+3. Design catalog-v1-JSON-only safe import; keep restore separate.
+4. Design AI Review around explicitly selected records and disclosed fields.
+5. Expand administration first around data quality and backup health.
 
 ## Held visual work
 

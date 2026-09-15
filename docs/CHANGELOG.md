@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-14 — Advance roadmap package accepted
+
+- Recorded Product Owner selections `1:A` through `5:A`: reviewable provider-seeded tag suggestions that never silently become canonical; Books as the first tag attachment target with later Collection extensibility preserved; catalog-v1 JSON as the only first safe-import format; explicitly selected records only for AI Review; and data quality plus backup health as the first expanded-administration focus.
+- Updated the durable Tags, Import/Export, AI Review, roadmap, current-state, next-action, and staged-milestone boundaries without activating implementation, schema/provider work, production access, publication, or held visual work.
+- Removed the five resolved choices from Planner Inbox. No application or Site action occurred.
+
 ## 2026-09-14 — Probable-match correction validated; advance roadmap choices opened
 
 - Implemented exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`: unique probable ISBN-less matches now offer Save ISBN only, Mark owned, Not the same book, and Cancel; final confirmation rechecks local ISBN conflicts and updates the existing Book rather than creating a duplicate by default.

@@ -41,6 +41,16 @@ Assist the collector in finding and resolving incomplete, inconsistent, or uncer
 - Provenance and audit model
 - Provider privacy, cost, and failure policies
 
+## Accepted initial submission boundary
+
+- AI Review may send only records the collector explicitly selects for that review session.
+- Before submission, the collector must see the selected record count and the fields that will leave the application, and must explicitly confirm the request.
+- Selection does not silently expand to the whole Library, related Books, Collections, Purchases, covers, or notes outside the disclosed field set.
+- Canceling or changing the selection before submission sends nothing. Suggestions returned afterward remain proposals and cannot mutate canonical records without separate review and confirmation.
+- Whole-Library background analysis, automatic recurring submission, provider choice, retention, cost limits, and production activation remain outside the initial boundary.
+
+This privacy direction does not authorize an AI provider, credential, implementation, data transfer, or release.
+
 ## Future improvements
 
 - Calibrated confidence by issue type.

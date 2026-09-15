@@ -82,6 +82,16 @@ The bounded local phase exposes the existing catalog format-v1 service through a
 
 This phase did not replace the operational bridge export, alter Version 19 administration or the isolated Shopping candidate, add schema/import/restore behavior, access production, save or publish a Site version, or claim backup completeness. Local completion requires a later separately authorized user checkpoint before any activation.
 
+## Accepted initial safe-import boundary
+
+- The first supported import source is My Library catalog-format-v1 JSON only. Generic CSV, third-party catalog mappings, database dumps, cover bytes, Businesses, and Purchases remain outside the first import.
+- Validation must reject an unsupported contract/version or malformed structure and must report missing identity, invalid references, duplicates, and conflicts without mutating Library data.
+- A non-mutating dry run must show proposed creates, updates, unchanged records, conflicts, exclusions, and failures before any separately authorized confirmation step.
+- Stable Book identity and current catalog-v1 inclusion/exclusion semantics remain authoritative; absence from the file never implies deletion.
+- Import is not restore. Restore ordering, media-byte recovery, rollback, destructive replacement, and production execution remain separate later contracts and authority gates.
+
+This accepted format choice is product direction only and does not authorize implementation, schema work, production access, or file execution.
+
 ## Future improvements
 
 - Mapping profiles for common collection tools.
