@@ -81,21 +81,39 @@ The implementation passed 15/15 focused Shopkeeper checks, 161/161 full applicat
 - Attach tags to Books only in the first release while preserving an extension path that does not block possible later Collection-level tags.
 - Define canonical vocabulary, provenance, assignment, removal, import/export, and owner-confirmation behavior before implementation.
 
+## Safe import — catalog-v1 JSON
+
+**State:** Priority follows Tags; product boundary accepted and implementation is not active.
+
+- Accept only catalog-v1 JSON in the first import workflow.
+- Require a non-mutating validation and dry-run comparison before any separately authorized confirmation.
+- Do not fetch, replace, relink, or delete cover bytes from the image manifest; complete cover backup is not an entry dependency.
+- Keep generic CSV, third-party mappings, restore, rollback, production execution, and destructive replacement outside this milestone.
+
+## Manual AI Review — portability workflow
+
+**State:** Priority follows Safe Import; product workflow accepted and implementation is not active.
+
+- The Product Owner exports and explicitly chooses which records and fields to supply manually to an external agent or chat.
+- The application has no embedded provider, background agent, recurring process, automatic transmission, or autonomous mutation path.
+- External proposals return as untrusted catalog-v1-compatible data and pass through the same safe-import dry run, owner review, and confirmation boundary.
+
 ## Milestone 9 — asset lifecycle and complete cover backup
 
-**State:** Requirements boundary accepted as 1:A + 2:A; no feasibility run or implementation is active.
+**State:** Lower priority after Tags, Safe Import, and manual AI Review; requirements boundary accepted as 1:A + 2:A; no feasibility run or implementation is active.
 
 The durable contract is [Asset Management — Milestone 9 requirements contract](ASSET_MANAGEMENT.md#milestone-9-requirements-contract). The recommended package is a downloadable versioned ZIP containing a manifest and the selected scope of personal stored-cover bytes. It records hashes, media types, byte sizes, and stable Book associations; reports missing, orphaned, and duplicate objects; never deletes source objects; and requires a read-only dry run plus independent archive verification. Remote Open Library images remain replaceable references, not backed-up personal assets. Restore is a separate later milestone and authority gate.
 
-The accepted scope includes all accessible personal cover objects, including separately classified orphans, and uses owner-download-only delivery with no server-retained backup history. Entry to the next step requires a fresh capacity check and separate authorization of a bounded read-only feasibility goal. Stop if required objects cannot be enumerated safely, stable associations cannot be proven, the ZIP exceeds supported runtime limits, or any production write, cleanup, schema change, restore, or destructive action appears necessary.
+The accepted scope includes all accessible personal cover objects, including separately classified orphans, and uses owner-download-only delivery with no server-retained backup history. Encryption is not required. After the three preceding product milestones, entry to M9 still requires a fresh capacity check and separate authorization of a bounded read-only feasibility goal. Stop if required objects cannot be enumerated safely, stable associations cannot be proven, the ZIP exceeds supported runtime limits, or any production write, cleanup, schema change, restore, or destructive action appears necessary.
 
 ## Later milestones
 
-1. Books-only tag implementation with reviewable provider suggestions.
+1. Books-only tags with reviewable provider suggestions.
 2. Catalog-v1-JSON-only safe import; restore remains separately gated.
-3. AI Review for explicitly selected records only.
-4. Expanded administration beginning with data quality and backup health.
-5. Phase F visual refinements after Product Owner review.
+3. Manual AI Review through owner-controlled export, external proposal, and safe reimport.
+4. M9 complete cover backup under accepted 1:A + 2:A scope, without an encryption requirement.
+5. Expanded administration beginning with data quality and backup health.
+6. Phase F visual refinements after Product Owner review.
 
 ## Shared controls
 

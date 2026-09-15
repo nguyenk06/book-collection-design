@@ -88,6 +88,8 @@ This phase did not replace the operational bridge export, alter Version 19 admin
 - Validation must reject an unsupported contract/version or malformed structure and must report missing identity, invalid references, duplicates, and conflicts without mutating Library data.
 - A non-mutating dry run must show proposed creates, updates, unchanged records, conflicts, exclusions, and failures before any separately authorized confirmation step.
 - Stable Book identity and current catalog-v1 inclusion/exclusion semantics remain authoritative; absence from the file never implies deletion.
+- The image manifest is validation context only in the first import. Safe import must not fetch, create, replace, relink, or delete personal cover bytes or remote reference covers, so complete cover backup is not an entry dependency for this catalog-only milestone.
+- Proposed catalog-v1 data returned through the [manual AI Review workflow](AI_REVIEW.md) receives exactly the same untrusted-input validation, dry-run comparison, conflict handling, and explicit Product Owner confirmation as any other supported file; it has no privileged mutation path.
 - Import is not restore. Restore ordering, media-byte recovery, rollback, destructive replacement, and production execution remain separate later contracts and authority gates.
 
 This accepted format choice is product direction only and does not authorize implementation, schema work, production access, or file execution.

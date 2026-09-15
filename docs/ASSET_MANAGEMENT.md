@@ -1,6 +1,6 @@
 # Asset Management
 
-**Current milestone:** M9 requirements planning; no implementation or production access is authorized.
+**Current milestone:** M9 requirements are accepted but lower priority after Tags, Safe Import, and manual AI Review; no feasibility run, implementation, or production access is authorized.
 
 ## Purpose
 
@@ -45,7 +45,7 @@ Manage covers and supporting media as reliable, replaceable enrichment linked to
 
 ## Accepted backup/lifecycle boundary
 
-Product Owner Decision 4:A splits complete cover backup feasibility from asset-lifecycle implementation. The first future goal, when separately authorized, is read-only contract and evidence work: inventory personal cover references and stored bytes; define completeness and integrity checks; distinguish manifests from byte backups; document retention and recovery expectations; and identify unsupported or inaccessible storage boundaries. Only after that evidence is accepted may metadata, variants, cleanup, orphan handling, backup execution, or recovery implementation be scoped.
+Product Owner Decision 4:A splits complete cover backup feasibility from asset-lifecycle implementation. The eventual first M9 goal, after the higher-priority roadmap work and when separately authorized, is read-only contract and evidence work: inventory personal cover references and stored bytes; define completeness and integrity checks; distinguish manifests from byte backups; document retention and recovery expectations; and identify unsupported or inaccessible storage boundaries. Only after that evidence is accepted may metadata, variants, cleanup, orphan handling, backup execution, or recovery implementation be scoped.
 
 This direction does not establish that a complete cover backup exists, authorize R2 or production access, combine lifecycle and recovery into one goal, or change the existing catalog export's `bytes_included: false` boundary.
 
@@ -58,6 +58,7 @@ Provide an owner-downloadable, independently verifiable backup of personal store
 ### Recommended package
 
 - One ZIP per completed export, named with a format version and generation timestamp.
+- Archive encryption is not required for the accepted owner-download-only package and must not block feasibility or acceptance.
 - A versioned `manifest.json` plus personal cover files under safe archive-relative paths.
 - Manifest-level format version, generation time, exact application/release identity when available, scope declaration, totals, and verification result.
 - One entry per personal cover object with stable Book ID when associated, non-secret storage/object identity, archive path, SHA-256 hash, byte size, detected media type, and optional dimensions.
@@ -123,7 +124,7 @@ The Product Owner selected **1:A + 2:A** on 2026-09-14:
 - Include every accessible personal stored-cover object. Book-referenced objects and orphaned objects remain separate manifest/archive classes. Treat the bytes currently stored by the application as the recoverable unit; do not claim unavailable pre-processing originals. Exclude Open Library reference-image bytes.
 - Deliver the completed package as an authenticated owner download with no retained server-side backup history. Any temporary package must be bounded and removed without deleting source cover objects.
 
-This decision makes M9 requirements-ready for a separately authorized read-only feasibility goal; it does not activate that goal or authorize implementation, production access, archive generation, cleanup, restore, or Site operations. If complete enumeration cannot be proven, stop and return a new explicit scope choice rather than silently falling back to referenced objects only. Archive encryption, splitting, or alternate delivery becomes a Product Owner question only if feasibility evidence shows it is necessary.
+This decision keeps M9 requirements-ready for a later separately authorized read-only feasibility goal after Tags, Safe Import, and manual AI Review; it does not activate that goal or authorize implementation, production access, archive generation, cleanup, restore, or Site operations. If complete enumeration cannot be proven, stop and return a new explicit scope choice rather than silently falling back to referenced objects only. Encryption is not required; archive splitting or alternate delivery becomes a Product Owner question only if later feasibility evidence shows it is necessary.
 
 ## Future improvements
 

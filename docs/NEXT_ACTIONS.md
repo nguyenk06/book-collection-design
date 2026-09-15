@@ -20,7 +20,7 @@ Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implem
 
 ## Accepted advance roadmap package
 
-The Product Owner selected reviewable provider-seeded tag suggestions with canonical owner control, Book-only first tag attachment with an extensible later Collection path, catalog-v1 JSON as the only first safe-import format, explicitly selected records only for AI Review, and data quality plus backup health as the first expanded-administration focus. These are durable direction choices only; they do not activate implementation or override later feasibility, privacy, cost, release, production, or held visual gates.
+The Product Owner selected reviewable provider-seeded tag suggestions with canonical owner control, Book-only first tag attachment with an extensible later Collection path, catalog-v1 JSON as the only first safe-import format, manual external-agent review of explicitly selected exported data followed by safe reimport, and data quality plus backup health as the first expanded-administration focus. These are durable direction choices only; they do not activate implementation, external data transfer, or override later feasibility, privacy, cost, release, production, or held visual gates.
 
 ## Completed release maintenance
 
@@ -77,18 +77,18 @@ The approved bounded slice is recorded in the [Enrichment Review Contract](ENRIC
 
 Exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` was validated, saved as Site Version 32, and deployed with the existing public audience. Product Owner review is optional and uses the checklist above.
 
-## Next planning gate — Milestone 9 cover backup
+## Deferred lower-priority boundary — Milestone 9 cover backup
 
 The durable [M9 requirements contract](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) proposes a downloadable versioned ZIP manifest plus personal stored-cover bytes. It requires stable Book associations, SHA-256 hashes, byte sizes, media types, missing/orphan/duplicate reporting, no automatic source-object deletion, a read-only dry run, and independent archive verification. Open Library reference images are excluded as replaceable remote evidence, and restore remains a separate later gate.
 
-The Product Owner selected **1:A + 2:A**: all accessible personal cover objects, including separately classified orphans, with owner-download-only delivery and no server-retained backup history. After a fresh capacity check and separate goal authorization, the safest next goal is read-only feasibility only: inventory the selected scope, reconcile associations/counts, measure total bytes/projected ZIP size, and identify platform limits. Stop before implementation if enumeration, byte access, stable identity, or runtime limits are unresolved; stop immediately if a production write, cleanup, schema change, restore, or destructive action appears necessary.
+The Product Owner selected **1:A + 2:A**: all accessible personal cover objects, including separately classified orphans, with owner-download-only delivery and no server-retained backup history. Encryption is not required. This milestone now follows Tags, Safe Import, and manual AI Review. When it eventually reaches its own fresh-capacity and separate-goal gate, begin with read-only feasibility only: inventory the selected scope, reconcile associations/counts, measure total bytes/projected ZIP size, and identify platform limits. Stop before implementation if enumeration, byte access, stable identity, or runtime limits are unresolved; stop immediately if a production write, cleanup, schema change, restore, or destructive action appears necessary.
 
 ## Later ordered work
 
-1. When separately authorized, run a read-only cover inventory and ZIP-feasibility goal for accepted boundary 1:A + 2:A.
-2. Design Books-only tags with reviewable provider suggestions and later Collection extensibility.
-3. Design catalog-v1-JSON-only safe import; keep restore separate.
-4. Design AI Review around explicitly selected records and disclosed fields.
+1. Design Books-only tags with reviewable provider suggestions and later Collection extensibility.
+2. Design catalog-v1-JSON-only safe import with no cover-byte mutation; keep restore separate.
+3. Define the manual AI Review portability flow: owner-controlled export sharing, external proposals, review, and safe reimport.
+4. Later, separately authorize read-only cover inventory and ZIP feasibility for accepted boundary 1:A + 2:A; encryption is not required.
 5. Expand administration first around data quality and backup health.
 
 ## Held visual work

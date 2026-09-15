@@ -10,10 +10,10 @@ Version 32 at `802db5fd9c54c79e4897cc12de86b875163f6c07` is the exact saved and 
 
 | Order | Workstream | Effort | Entry condition |
 | ---: | --- | --- | --- |
-| 1 | [M9 — asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) | Medium-large | Scope is accepted as all accessible personal covers plus owner-download-only delivery; next prove read-only inventory and ZIP feasibility; restore remains separate |
-| 2 | [Tags](TAGS.md) | Medium | Begin with Books only; provider subjects/categories may seed reviewable suggestions but never silently become canonical |
-| 3 | [Safe import and restore](IMPORT_EXPORT.md) | Medium-large | Begin with non-mutating dry-run import of catalog-v1 JSON only; restore remains a later gate |
-| 4 | [AI Review](AI_REVIEW.md) | Large | Submit only explicitly selected records; preserve disclosed fields, proposals, comparison, approval, privacy, and cost controls |
+| 1 | [Tags](TAGS.md) | Medium | Begin with Books only; provider subjects/categories may seed reviewable suggestions but never silently become canonical |
+| 2 | [Safe import](IMPORT_EXPORT.md#accepted-initial-safe-import-boundary) | Medium-large | Begin with non-mutating dry-run import of catalog-v1 JSON only; exclude cover-byte mutation and keep restore separate |
+| 3 | [Manual AI Review](AI_REVIEW.md) | Large | Product Owner manually supplies explicitly selected exported data to an external agent/chat, then reviews proposals through safe import |
+| 4 | [M9 — asset lifecycle and complete cover backup](ASSET_MANAGEMENT.md#milestone-9-requirements-contract) | Medium-large | Retain all-accessible-personal-cover and owner-download-only scope; encryption is not required; defer feasibility until after manual AI Review |
 | 5 | Expanded administration and analysis | Medium | Begin with data-quality and backup-health reporting after the underlying evidence is stable |
 
 ## Enrichment composition
@@ -32,7 +32,7 @@ Reference-cover and ISBN enrichment are complete through their first public Vers
 
 ## Accepted advance direction
 
-The Product Owner accepted the initial boundaries for the remaining roadmap: reviewable provider-seeded tag suggestions with canonical owner control; Book-only first tag attachment with an extensible later Collection path; catalog-v1 JSON as the only first safe-import format; explicitly selected records only for AI Review; and data quality plus backup health as the first expanded-administration focus. These choices reduce future ambiguity but do not authorize implementation, schema/provider work, production access, or publication. Decisions that require M9 runtime evidence or Phase F visual proposals remain intentionally deferred until those inputs exist.
+The Product Owner accepted the initial boundaries for the remaining roadmap: reviewable provider-seeded tag suggestions with canonical owner control; Book-only first tag attachment with an extensible later Collection path; catalog-v1 JSON as the only first safe-import format; manual external-agent review of explicitly selected exported data followed by Product Owner review and safe reimport; and data quality plus backup health as the first expanded-administration focus. Complete cover backup is deliberately lower priority and follows those first three product milestones; its accepted all-accessible-personal-cover and owner-download-only scope remains intact, and encryption is not required. These choices reduce future ambiguity but do not authorize implementation, schema/provider work, external data transfer, production access, or publication.
 
 ## Phase F visual backlog
 
