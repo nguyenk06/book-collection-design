@@ -12,11 +12,13 @@ This document contains the current execution horizon. Long-term ordering is in t
 
 Shopkeeper review is removed from the active queue. The route remains available, but Library is the canonical scanner and add workflow.
 
-## Accepted correction awaiting implementation authority — probable matches
+## Probable-match release review — decision required
 
 Version 32 mobile evidence confirms that Outcast of Redwall and The Bellmaker reach the correct ISBN-less `Need` records, but the result offers only **View Library record** and no usable edit surface. The Product Owner selected **Option A — confirm and update the existing record**.
 
-Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implements **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. It rechecks ISBN conflicts at confirmation, updates the existing Book rather than creating a duplicate, and preserves no-mutation behavior before explicit confirmation. Focused scanner validation passed 59/59; the authoritative serial suite passed 170/170; source lint has zero errors and three existing image advisories; and all five production-build stages passed. Release-boundary review, Site source push, versioning, save, publication, and owner testing remain separate gates.
+Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implements **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. Focused scanner validation passed 59/59; the authoritative serial suite passed 170/170; source lint has zero errors and three existing image advisories; and all five production-build stages passed. Release review nevertheless returned `REVISE`: the durable scanner contract requires signed-out probable context to survive sign-in, while every current main-page scanner entry control is owner-only.
+
+The Product Owner must choose [Decision 1](PLANNER_INBOX.md): **A** retain the owner-only scanner and clarify the contract, then add bounded safety coverage and a repeated-submit guard; or **B** broaden the product with signed-out scanning and full sign-in restoration. Preliminary post-reset estimates are 4–7 versus 8–13 weekly points. Weekly capacity is 18%, the floor is 15%, and reset is 2026-09-19 at 10:24 AM PDT, so no implementation begins now. Publication remains a separate later gate.
 
 ## Accepted advance roadmap package
 

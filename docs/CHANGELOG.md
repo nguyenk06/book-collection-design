@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-17 — Probable-match release review opened owner-only boundary decision
+
+- Recorded Relena's `REVISE` review of exact local candidate `837b36a328a69cefa38435aa9553f77b81bf870b`: the owner actions and no-preconfirmation-mutation behavior are bounded, but the accepted scanner contract requires signed-out sign-in-and-return while all current main-page scanner entry controls are owner-only.
+- Opened one Product Owner decision: clarify the contract and retain owner-only scanning with auth-expiry safety plus focused conflict/failure/cancel/repeated-submit coverage (recommended, preliminary 4–7 weekly points), or broaden to signed-out scanning with full context restoration plus the same safety work (preliminary 8–13 points).
+- Recorded 18% weekly capacity remaining against the 15% floor and the 2026-09-19 10:24 AM PDT reset. No implementation begins before reset; publication remains separate. No application, test, Site, or production action occurred.
+
 ## 2026-09-14 — Roadmap reordered; AI Review defined as manual portability
 
 - Recorded the revised Product Owner order: Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration. The accepted M9 scope remains all accessible personal stored-cover objects with separately classified orphans and owner-download-only delivery; encryption is not required.
