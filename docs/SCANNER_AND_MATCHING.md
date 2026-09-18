@@ -76,7 +76,21 @@ The Product Owner selected **Option A — confirm and update the existing record
 - **Not the same book** — reject the proposed reconciliation and continue to the existing new-book review without silently creating anything.
 - **Cancel** — close with no Book, identifier, status, copy, or cover change.
 
-The result must never create a second Book by default. Signed-out users receive a sign-in-and-return path rather than editable controls. A stale or conflicting ISBN discovered during final confirmation stops the update and returns an explicit conflict. Failed saves preserve the review values and state that no change was completed. This accepted product choice does not itself authorize implementation, production writes, Site publication, or schema changes.
+The result must never create a second Book by default. A stale or conflicting ISBN discovered during final confirmation stops the update and returns an explicit conflict. Failed saves preserve the review values and state that no change was completed.
+
+### Public scan and authenticated mutation boundary
+
+The Product Owner selected a refined public-scan boundary on 2026-09-17:
+
+- Signed-out users may open the Library scanner, submit camera or manual identifiers, complete local lookup and permitted metadata lookup, and see duplicate, probable, new, metadata-unavailable, and conflict results.
+- Detection, lookup, and result display remain non-mutating. Public results never create a Book, attach an ISBN, change status/ownership/copies, or edit another Library field.
+- **Save ISBN**, **Mark owned**, final **Add**, and any other Book edit require authentication. When a signed-out user chooses one, the application preserves the normalized ISBN, result kind, matched Book identity and displayed evidence when applicable, intended action, and safe return context through sign-in.
+- Returning from sign-in restores an explicit review rather than executing the stored intention. The application must refresh authoritative Library state, re-resolve the ISBN and matched Book, recheck conflicts, and require authenticated confirmation before the mutation.
+- If authorization expires during review or save, preserve the pending result and entered review values, report that no change was completed, and offer sign-in/resume. Do not discard context, silently retry a write, or downgrade into automatic creation.
+- **Not the same book**, **Cancel**, and **Scan another** remain non-mutating. Continuing from **Not the same book** may prepare new-book review, but final Add still requires sign-in and authenticated confirmation.
+- Final mutation handling also requires failed-save state preservation, cancel/no-mutation proof, and a synchronous repeated-submit guard.
+
+This accepted boundary does not itself authorize implementation, public data access beyond the stated scanner results, production writes, Site publication, schema changes, or authentication-provider redesign.
 
 Shopkeeper was not part of this acceptance round. Broader visual changes remain held for Product Owner review.
 
@@ -88,7 +102,7 @@ Shopkeeper was not part of this acceptance round. Broader visual changes remain 
 - Physical-camera/photo support claims not re-established against current source and devices.
 - Automatic Book creation, automatic ISBN persistence, canonical merge, ownership/Purchase mutation, or Shopkeeper Buy/Skip/Upgrade scoring.
 - My Library aggregate semantics are outside the scanner contract and were completed separately in aggregate/corrections commit `44a853f`; cover loading/remediation or reference-cover enrichment, Shelf missing-title presentation, Phase F, and later releases remain out of scope and do not fail Version 25 acceptance.
-- Production data access, Sites or credentials, deployment, schema/migration/authentication/API/provider/dependency/lockfile change, or data activation. If diagnosis shows that any protected change is necessary, stop and return for a Product Owner decision rather than expanding the corrective slice.
+- Production data access, Sites or credentials, deployment, schema/migration/authentication-provider/API/provider/dependency/lockfile change, or data activation. The accepted flow may reuse the existing sign-in mechanism and safe return routing; if a protected mechanism change is necessary, stop and return for a Product Owner decision rather than expanding the corrective slice.
 
 ## Dependencies
 

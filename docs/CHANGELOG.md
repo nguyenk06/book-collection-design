@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-17 — Public scanner and authenticated mutation boundary accepted
+
+- Recorded the Product Owner's refined Decision 1:B: Library scanner capture, local/metadata lookup, and duplicate/probable/new/unavailable/conflict results may be public; Save ISBN, Mark owned, final Add, and other Book mutations require sign-in and authenticated confirmation.
+- Required the normalized ISBN, result and matched-Book context, intended action, and safe return location to survive sign-in or mid-review authorization expiry. Resume restores review without writing, refreshes authoritative Library state, re-resolves conflicts, and requires confirmation; no automatic retry or mutation is permitted.
+- Retained focused conflict, failed-save preservation, cancel/no-mutation, and synchronous repeated-submit coverage plus full revalidation for the future correction. Cleared Planner Inbox. Capacity is 99% five-hour and 16% weekly against the 15% floor, with reset on 2026-09-19 at 10:24 AM PDT; no implementation begins before reset and publication remains separate. No application, test, Site, or production action occurred.
+
 ## 2026-09-17 — Probable-match release review opened owner-only boundary decision
 
 - Recorded Relena's `REVISE` review of exact local candidate `837b36a328a69cefa38435aa9553f77b81bf870b`: the owner actions and no-preconfirmation-mutation behavior are bounded, but the accepted scanner contract requires signed-out sign-in-and-return while all current main-page scanner entry controls are owner-only.

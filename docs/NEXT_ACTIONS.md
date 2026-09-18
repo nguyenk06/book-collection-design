@@ -12,13 +12,13 @@ This document contains the current execution horizon. Long-term ordering is in t
 
 Shopkeeper review is removed from the active queue. The route remains available, but Library is the canonical scanner and add workflow.
 
-## Probable-match release review — decision required
+## Probable-match release revision — boundary accepted, wait for reset
 
 Version 32 mobile evidence confirms that Outcast of Redwall and The Bellmaker reach the correct ISBN-less `Need` records, but the result offers only **View Library record** and no usable edit surface. The Product Owner selected **Option A — confirm and update the existing record**.
 
-Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implements **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. Focused scanner validation passed 59/59; the authoritative serial suite passed 170/170; source lint has zero errors and three existing image advisories; and all five production-build stages passed. Release review nevertheless returned `REVISE`: the durable scanner contract requires signed-out probable context to survive sign-in, while every current main-page scanner entry control is owner-only.
+Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implements **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. Focused scanner validation passed 59/59; the authoritative serial suite passed 170/170; source lint has zero errors and three existing image advisories; and all five production-build stages passed. Release review returned `REVISE` because the candidate does not yet preserve a signed-out probable result through sign-in.
 
-The Product Owner must choose [Decision 1](PLANNER_INBOX.md): **A** retain the owner-only scanner and clarify the contract, then add bounded safety coverage and a repeated-submit guard; or **B** broaden the product with signed-out scanning and full sign-in restoration. Preliminary post-reset estimates are 4–7 versus 8–13 weekly points. Weekly capacity is 18%, the floor is 15%, and reset is 2026-09-19 at 10:24 AM PDT, so no implementation begins now. Publication remains a separate later gate.
+The Product Owner accepted refined **B**: Library scanner capture, lookup, and duplicate/probable/new/unavailable/conflict results may be public. Save ISBN, Mark owned, final Add, and every Book edit require sign-in. The correction must preserve the ISBN, matched result/Book, intended action, and safe return context through sign-in or mid-review auth expiry; restore review without writing; refresh and re-resolve authoritative state; then require authenticated confirmation. Add focused final-conflict, failed-save preservation, cancel/no-mutation, and synchronous repeated-submit coverage. Capacity is 99% five-hour and 16% weekly against the 15% floor; wait for the 2026-09-19 10:24 AM PDT reset. Publication remains separate.
 
 ## Accepted advance roadmap package
 

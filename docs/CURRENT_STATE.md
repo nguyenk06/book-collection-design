@@ -18,7 +18,7 @@ This document is the concise operational source of truth. Release history and su
 - The Library-first shell, responsive navigation, header contents, and desktop/mobile presentation are accepted.
 - My Library is the aggregate base. It keeps the category-based shelves and bookcases while also supporting the intended all-books organization by collection and then within each collection by series/index and author/title.
 - The main-page scanner now reaches explicit tracked, probable-existing, new-book, unavailable-metadata, and retry outcomes. The Product Owner accepts Version 30 scanner behavior and has closed the blocking restoration cycle.
-- Version 32 mobile review reopened one bounded scanner completion issue: probable ISBN-less matches correctly identify existing `Need` records but provide no direct way to confirm the match, save the ISBN, or mark the Book owned. The explicit confirm-and-update correction is implemented and validated locally at exact unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`, but release review returned `REVISE` because the durable contract requires a signed-out sign-in-and-return path while current main-page scanner entry controls are owner-only. Product Owner direction is pending in [Planner Inbox](PLANNER_INBOX.md).
+- Version 32 mobile review reopened one bounded scanner completion issue: probable ISBN-less matches correctly identify existing `Need` records but provide no direct way to confirm the match, save the ISBN, or mark the Book owned. Exact unpublished candidate `837b36a328a69cefa38435aa9553f77b81bf870b` added the owner actions but received `REVISE`. The Product Owner has now accepted the refined boundary: scanner capture, lookup, and results may be public; Add/edit mutations require sign-in, restored review context, fresh resolution/conflict checks, and authenticated confirmation. Implementation remains pending until after the weekly reset.
 - Photo upload is currently more reliable than live camera capture. Live capture can require more than one attempt; this is retained as a stability issue rather than a release blocker.
 - A valid captured ISBN can still return no title or author when the current metadata source has no record or cannot be reached. The manual-details path is the safe fallback.
 - Shopkeeper remains available as a non-mutating quick-check surface, but the Product Owner has shelved it as an active workstream. Library is the canonical scan, review, add, and edit surface; do not spend milestone capacity on Shopkeeper parity or visual review unless the Product Owner reopens it.
@@ -44,8 +44,8 @@ This document is the concise operational source of truth. Release history and su
 
 ## Current capacity
 
-- **Five-hour remaining:** 100% at the latest 2026-09-17 check.
-- **Weekly remaining:** 18% at the latest 2026-09-17 check.
+- **Five-hour remaining:** 99% at the latest 2026-09-17 check.
+- **Weekly remaining:** 16% at the latest 2026-09-17 check.
 - **Weekly reset:** 2026-09-19 at 10:24 AM PDT.
 - **Reset credits:** 3 available and unused.
 - **Floors:** target a clean stop by 10% five-hour remaining, never cross 5%; preserve 15% weekly unless the Product Owner explicitly authorizes a bounded exception.
@@ -55,7 +55,7 @@ This document is the concise operational source of truth. Release history and su
 | Workstream | State | Next boundary |
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
-| Probable-match completion | Local candidate `837b36a328a69cefa38435aa9553f77b81bf870b`; release review `REVISE` | Resolve owner-only versus signed-out scope; no implementation before weekly reset; publication remains separate |
+| Probable-match completion | Refined public-scan/authenticated-mutation boundary accepted after `REVISE` | After weekly reset, preserve result and intended action through sign-in/auth expiry, add safety coverage, and revalidate; publication remains separate |
 | Documentation cleanup | Reconciled through Version 32 and M9 requirements planning | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
 | Endpoint contract tests | Included in public Version 32 | Enrichment presentation checks and 167/167 full checks pass |
 | Shopkeeper parity | Published in Version 31; active workstream shelved | Retain the route but spend no further milestone capacity unless the Product Owner reopens it |
@@ -70,4 +70,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Version 32 remains public. Shopkeeper is shelved and Library is canonical. Resolve the probable-match signed-out boundary in Planner Inbox, then wait for the weekly reset before any correction. At 18% weekly remaining, the 15% floor prevents implementation now. No Site push, version change, save, or publication is authorized. The advance roadmap order remains Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration.
+Version 32 remains public. Shopkeeper is shelved and Library is canonical. The refined public-scan/authenticated-mutation boundary is accepted, but implementation waits for the 2026-09-19 10:24 AM PDT weekly reset. At 16% weekly remaining against the 15% floor, no implementation begins now. No Site push, version change, save, or publication is authorized. The advance roadmap order remains Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration.

@@ -25,11 +25,11 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 
 ## Scanner maintenance — probable-match completion
 
-**State:** Implemented and validated locally at exact unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b`; release-boundary and publication gates remain closed.
+**State:** Initial owner-action candidate `837b36a328a69cefa38435aa9553f77b81bf870b` received `REVISE`; refined public-scan/authenticated-mutation boundary is accepted, but implementation waits for the weekly reset and publication remains closed.
 
-For a unique probable ISBN-less match, provide an explicit existing-record review with Save ISBN only, Mark owned, Not the same book, and Cancel. Final confirmation rechecks conflicts and updates only the existing record. No default duplicate creation, pre-confirmation mutation, schema change, Shopkeeper work, or publication is included.
+For a unique probable ISBN-less match, provide an explicit existing-record review with Save ISBN only, Mark owned, Not the same book, and Cancel. Signed-out users may scan and inspect every result, but mutation actions require sign-in. Preserve ISBN, result, matched Book, intended action, and safe return context; restore review without writing; then refresh, re-resolve, recheck conflicts, and require authenticated confirmation. Auth expiry follows the same preserve-and-resume behavior. No default duplicate creation, pre-confirmation mutation, schema change, Shopkeeper work, or publication is included.
 
-Focused scanner validation passed 59/59, the authoritative serial application suite passed 170/170, source lint reported zero errors and three existing image advisories, and the production build completed all five stages. The earlier parallel full-suite run had one unchanged mobile-search timeout; that test passed immediately in isolation and the serial full suite passed completely.
+The initial candidate's focused scanner validation passed 59/59, the authoritative serial application suite passed 170/170, source lint reported zero errors and three existing image advisories, and the production build completed all five stages. Those results remain regression evidence but do not satisfy the revised sign-in/resume contract; the next candidate also requires focused final-conflict, failed-save, cancel/no-mutation, and repeated-submit coverage plus full revalidation.
 
 ## Milestone 7 — enrichment foundation
 
