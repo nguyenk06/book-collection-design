@@ -12,13 +12,13 @@ This document contains the current execution horizon. Long-term ordering is in t
 
 Shopkeeper review is removed from the active queue. The route remains available, but Library is the canonical scanner and add workflow.
 
-## Probable-match release revision — boundary accepted, wait for reset
+## Probable-match release candidate — local PASS, publication decision pending
 
 Version 32 mobile evidence confirms that Outcast of Redwall and The Bellmaker reach the correct ISBN-less `Need` records, but the result offers only **View Library record** and no usable edit surface. The Product Owner selected **Option A — confirm and update the existing record**.
 
-Exact local unpublished source `837b36a328a69cefa38435aa9553f77b81bf870b` implements **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel**. Focused scanner validation passed 59/59; the authoritative serial suite passed 170/170; source lint has zero errors and three existing image advisories; and all five production-build stages passed. Release review returned `REVISE` because the candidate does not yet preserve a signed-out probable result through sign-in.
+Exact clean local unpublished source `b5ba8f251e37ae42474089f769f95683e2e14429` completes the accepted public-scan/authenticated-mutation boundary. Public scanner capture, lookup, and explicit results remain non-mutating. **Save ISBN**, **Mark owned**, final **Add**, and every other Book edit require authentication. Sign-in and authorization-expiry flows preserve resumable review context, refresh and re-resolve authoritative Library state, and require confirmation before writing. After an Add receives 403, the active modal preserves the edited values, replaces **Add item** with **Sign in and resume review**, and cannot repeat the POST.
 
-The Product Owner accepted refined **B**: Library scanner capture, lookup, and duplicate/probable/new/unavailable/conflict results may be public. Save ISBN, Mark owned, final Add, and every Book edit require sign-in. The correction must preserve the ISBN, matched result/Book, intended action, and safe return context through sign-in or mid-review auth expiry; restore review without writing; refresh and re-resolve authoritative state; then require authenticated confirmation. Add focused final-conflict, failed-save preservation, cancel/no-mutation, and synchronous repeated-submit coverage. Capacity is 99% five-hour and 16% weekly against the 15% floor; wait for the 2026-09-19 10:24 AM PDT reset. Publication remains separate.
+Final validation on the exact checkpoint passed the Node 24 serial suite at 14 files/181 tests, lint with zero errors and three established image warnings, the production build, diff check, and clean-worktree check. Relena's final read-only release-boundary review returned `PASS`. Public production remains Version 32 at exact source `802db5fd9c54c79e4897cc12de86b875163f6c07`; release preparation and publication remain separately gated by Product Owner authorization.
 
 ## Accepted advance roadmap package
 

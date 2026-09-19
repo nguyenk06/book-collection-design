@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-19 — Scanner authorization candidate accepted locally
+
+- Recorded exact clean local checkpoint `b5ba8f251e37ae42474089f769f95683e2e14429` as the completed public-scan/authenticated-mutation release candidate. Public scan and result review remain non-mutating; every Add/edit action requires authentication; sign-in and authorization-expiry context is resumable; authoritative Library state is freshly re-resolved before confirmation; and an expired Add review offers in-modal sign-in/resume without allowing a repeated POST.
+- Recorded final evidence: Node 24 serial suite 14 files/181 tests passed, lint with zero errors and three established image warnings, production build passed, diff check clean, worktree clean, and Relena release-boundary `PASS`.
+- Public production remains Version 32 at exact source `802db5fd9c54c79e4897cc12de86b875163f6c07`. Opened one genuine Product Owner publication decision; no Site push, version change, save, deployment, publication, production access, or application change occurred from this documentation update.
+
 ## 2026-09-17 — Public scanner and authenticated mutation boundary accepted
 
 - Recorded the Product Owner's refined Decision 1:B: Library scanner capture, local/metadata lookup, and duplicate/probable/new/unavailable/conflict results may be public; Save ISBN, Mark owned, final Add, and other Book mutations require sign-in and authenticated confirmation.

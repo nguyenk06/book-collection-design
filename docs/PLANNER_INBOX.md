@@ -8,4 +8,13 @@ Every item must state the available choices, the practical impact of each, the r
 
 ## Current Decisions
 
-No Planner decisions currently pending.
+### Decision 1 — Publish the accepted scanner authorization correction?
+
+Exact clean local checkpoint `b5ba8f251e37ae42474089f769f95683e2e14429` passed the final release boundary and validation. Public production remains Version 32 at `802db5fd9c54c79e4897cc12de86b875163f6c07`.
+
+- **A — Authorize release preparation and publication (recommended):** permit the bounded next release identity/preparation step, required final revalidation, and Quatre-owned Site save/deploy/publication of this accepted correction. This makes public scanning available while retaining authentication for every Add/edit mutation.
+- **B — Hold Version 32:** keep the accepted candidate local and make no application or Site change. The public scanner retains the Version 32 probable-match dead end until a later authorization.
+
+**Recommended:** A, because the candidate closes the Product Owner-reported workflow gap within the accepted boundary and has complete local release evidence. Publication remains unstarted until this decision is answered.
+
+**Response:** `1:A` or `1:B`.

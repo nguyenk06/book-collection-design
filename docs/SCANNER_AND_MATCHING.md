@@ -94,6 +94,12 @@ This accepted boundary does not itself authorize implementation, public data acc
 
 Shopkeeper was not part of this acceptance round. Broader visual changes remain held for Product Owner review.
 
+### Local accepted release candidate
+
+Exact clean local checkpoint `b5ba8f251e37ae42474089f769f95683e2e14429` implements this boundary and received Relena's final release-boundary `PASS`. Public scanning and result review remain non-mutating; every Add/edit action requires authentication; sign-in and authorization-expiry context remains resumable; return refreshes and re-resolves authoritative Library state before confirmation; and an Add rejected with 403 preserves its editable review while replacing the modal Add control with an in-modal sign-in/resume action that cannot repeat the POST.
+
+Final evidence is 14 files/181 tests passed in the Node 24 serial suite, lint with zero errors and three established image warnings, production build passed, diff check clean, and worktree clean. Public production remains Version 32 at exact source `802db5fd9c54c79e4897cc12de86b875163f6c07`; release preparation and publication require separate Product Owner authorization.
+
 ## Out of scope
 
 - Persistent candidate, reviewer, diagnostic-image, or cross-session evidence storage.

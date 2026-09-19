@@ -1,6 +1,6 @@
 # Staged Milestone Sequence
 
-**Reviewed:** 2026-09-14
+**Reviewed:** 2026-09-19
 
 Milestones are independently reviewable and do not bundle implementation, Site save, publication, production access, or recovery authority.
 
@@ -12,7 +12,7 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | Phase A — Library-first responsive shell | Accepted from public Version 24 |
 | Aggregate My Library correction | Published from Version 25 |
 | Main-page scanner restoration | Accepted in public Version 30; live retry stability note retained |
-| Probable-match completion | Product requirement accepted from Version 32 mobile review; implementation not active |
+| Probable-match completion | Local release candidate accepted; publication pending Product Owner authorization |
 | Shopkeeper scanner parity and visual cleanup | Published in Version 31; further work shelved by Product Owner |
 | M1 — Shopping validation feasibility | Complete within recorded boundary |
 | M2 — controlled Shopping release and schema gates | Complete within recorded bridge-observable boundary |
@@ -25,11 +25,11 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 
 ## Scanner maintenance — probable-match completion
 
-**State:** Initial owner-action candidate `837b36a328a69cefa38435aa9553f77b81bf870b` received `REVISE`; refined public-scan/authenticated-mutation boundary is accepted, but implementation waits for the weekly reset and publication remains closed.
+**State:** Exact clean local candidate `b5ba8f251e37ae42474089f769f95683e2e14429` received final release-boundary `PASS`; public Version 32 remains unchanged and publication remains closed pending Product Owner authorization.
 
 For a unique probable ISBN-less match, provide an explicit existing-record review with Save ISBN only, Mark owned, Not the same book, and Cancel. Signed-out users may scan and inspect every result, but mutation actions require sign-in. Preserve ISBN, result, matched Book, intended action, and safe return context; restore review without writing; then refresh, re-resolve, recheck conflicts, and require authenticated confirmation. Auth expiry follows the same preserve-and-resume behavior. No default duplicate creation, pre-confirmation mutation, schema change, Shopkeeper work, or publication is included.
 
-The initial candidate's focused scanner validation passed 59/59, the authoritative serial application suite passed 170/170, source lint reported zero errors and three existing image advisories, and the production build completed all five stages. Those results remain regression evidence but do not satisfy the revised sign-in/resume contract; the next candidate also requires focused final-conflict, failed-save, cancel/no-mutation, and repeated-submit coverage plus full revalidation.
+The accepted candidate preserves resumable context through sign-in and authorization expiry, freshly re-resolves authoritative state before confirmation, and prevents repeat Add submission after authorization expires by replacing the modal mutation control with sign-in/resume. Final evidence is 14 files/181 tests passed in the Node 24 serial suite, lint with zero errors and three established image warnings, production build passed, diff check clean, and worktree clean. No Site save, deployment, or publication is implied.
 
 ## Milestone 7 — enrichment foundation
 
