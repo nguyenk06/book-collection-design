@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-19 — Scanner authorization correction published as Version 33
+
+- Recorded release-only commit `013db3b5d747870723362ae430ffe923e32d8ba6` as the exact saved and public Version 33 source. Final validation passed 14 files/181 tests, focused version checks 2/2, lint with zero errors and three established image warnings, production build, diff check, and clean-worktree check.
+- Sites saved Version 33 as `appgprj_6a6ea2132b088191b913b376640c2e36~appgver_be0a7397aa50819186997c3a2c31c359`; deployment `appgdep_6aaf2701c8588191825b96a1e4fd8ddd` succeeded at `https://cyoa-collection.znesfreak.chatgpt.site`. The Site reports Version 33 as latest, active, and public.
+- Closed the publication decision and made Product Owner hands-on scanner testing the next gate. No further implementation, production access or mutation, schema/authentication/provider change, or additional Site action is authorized by this closure.
+
 ## 2026-09-19 — Scanner authorization candidate accepted locally
 
 - Recorded exact clean local checkpoint `b5ba8f251e37ae42474089f769f95683e2e14429` as the completed public-scan/authenticated-mutation release candidate. Public scan and result review remain non-mutating; every Add/edit action requires authentication; sign-in and authorization-expiry context is resumable; authoritative Library state is freshly re-resolved before confirmation; and an expired Add review offers in-modal sign-in/resume without allowing a repeated POST.

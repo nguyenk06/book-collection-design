@@ -4,7 +4,7 @@ The roadmap is ordered by Product Owner priority. A roadmap position is planning
 
 ## Current baseline
 
-Version 32 at `802db5fd9c54c79e4897cc12de86b875163f6c07` is the exact saved and public baseline. Phase 0 is closed, the Library-first shell and main-page scanner are accepted, and the first bounded ISBN/reference-cover enrichment consumer is public. Library is canonical for scan, review, add, and edit. Shopkeeper remains available but is shelved as an active workstream unless the Product Owner explicitly reopens it.
+Version 33 at `013db3b5d747870723362ae430ffe923e32d8ba6` is the exact saved and public baseline. Phase 0 is closed, the Library-first shell and main-page scanner are accepted, the public-scan/authenticated-mutation correction is published for Product Owner testing, and the first bounded ISBN/reference-cover enrichment consumer remains public. Library is canonical for scan, review, add, and edit. Shopkeeper remains available but is shelved as an active workstream unless the Product Owner explicitly reopens it.
 
 ## Ordered remaining roadmap
 

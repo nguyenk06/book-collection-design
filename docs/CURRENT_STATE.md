@@ -8,17 +8,17 @@ This document is the concise operational source of truth. Release history and su
 
 - **Active project:** CYOA Collection only.
 - **Public Site:** [CYOA Collection](https://cyoa-collection.znesfreak.chatgpt.site).
-- **Current saved and public release:** Version 32.
-- **Exact release and application source:** `802db5fd9c54c79e4897cc12de86b875163f6c07`.
+- **Current saved and public release:** Version 33.
+- **Exact release and application source:** `013db3b5d747870723362ae430ffe923e32d8ba6`.
 - **Sites capacity:** `UNKNOWN`; no authoritative Sites meter is available.
-- **Publication state:** Version 32 deployment succeeded with the existing public audience. Product Owner review of the enrichment presentation is available on the public Site.
+- **Publication state:** Version 33 is active and public. The save and deployment succeeded at the existing public Site; Product Owner scanner testing is the next gate.
 
 ## Accepted product state
 
 - The Library-first shell, responsive navigation, header contents, and desktop/mobile presentation are accepted.
 - My Library is the aggregate base. It keeps the category-based shelves and bookcases while also supporting the intended all-books organization by collection and then within each collection by series/index and author/title.
 - The main-page scanner now reaches explicit tracked, probable-existing, new-book, unavailable-metadata, and retry outcomes. The Product Owner accepts Version 30 scanner behavior and has closed the blocking restoration cycle.
-- Version 32 mobile review reopened one bounded scanner completion issue: probable ISBN-less matches correctly identify existing `Need` records but provide no direct way to confirm the match, save the ISBN, or mark the Book owned. Exact clean local candidate `b5ba8f251e37ae42474089f769f95683e2e14429` now satisfies the accepted correction: scanner capture, lookup, and results may be public; all Add/edit mutations require sign-in; sign-in and authorization-expiry context is resumable; authoritative Library state is freshly re-resolved before confirmation; and an expired Add review replaces its mutation control with an in-modal sign-in/resume action that cannot repeat the POST. Relena's final release-boundary review returned `PASS`. This candidate is not public.
+- Version 32 mobile review reopened one bounded scanner completion issue: probable ISBN-less matches correctly identify existing `Need` records but provide no direct way to confirm the match, save the ISBN, or mark the Book owned. Version 33 now publishes the accepted correction: scanner capture, lookup, and results may be public; all Add/edit mutations require sign-in; sign-in and authorization-expiry context is resumable; authoritative Library state is freshly re-resolved before confirmation; and an expired Add review replaces its mutation control with an in-modal sign-in/resume action that cannot repeat the POST. Product Owner public testing remains outstanding.
 - Photo upload is currently more reliable than live camera capture. Live capture can require more than one attempt; this is retained as a stability issue rather than a release blocker.
 - A valid captured ISBN can still return no title or author when the current metadata source has no record or cannot be reached. The manual-details path is the safe fallback.
 - Shopkeeper remains available as a non-mutating quick-check surface, but the Product Owner has shelved it as an active workstream. Library is the canonical scan, review, add, and edit surface; do not spend milestone capacity on Shopkeeper parity or visual review unless the Product Owner reopens it.
@@ -53,7 +53,7 @@ This document is the concise operational source of truth. Release history and su
 | Workstream | State | Next boundary |
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
-| Probable-match completion | Exact local candidate `b5ba8f251e37ae42474089f769f95683e2e14429`; release-boundary `PASS` | Await explicit Product Owner publication authorization; Version 32 remains public |
+| Probable-match completion | Published in Version 33 from exact source `013db3b5d747870723362ae430ffe923e32d8ba6` | Product Owner public scanner testing |
 | Documentation cleanup | Reconciled through Version 32 and M9 requirements planning | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
 | Endpoint contract tests | Included in public Version 32 | Enrichment presentation checks and 167/167 full checks pass |
 | Shopkeeper parity | Published in Version 31; active workstream shelved | Retain the route but spend no further milestone capacity unless the Product Owner reopens it |
@@ -68,4 +68,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Version 32 at exact source `802db5fd9c54c79e4897cc12de86b875163f6c07` remains saved and public. Shopkeeper is shelved and Library is canonical. The local scanner authorization candidate `b5ba8f251e37ae42474089f769f95683e2e14429` is validated and release-boundary accepted, but no Site push, version change, save, deployment, or publication is authorized until the Product Owner resolves the publication decision. The advance roadmap order remains Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration.
+Version 33 at exact source `013db3b5d747870723362ae430ffe923e32d8ba6` is saved, deployed, active, and public. Shopkeeper is shelved and Library is canonical. Product Owner hands-on testing of the published scanner authorization flow is the next gate; no further implementation, Site operation, or production change is implied. The advance roadmap order remains Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration.

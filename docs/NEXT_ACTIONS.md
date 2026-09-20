@@ -2,23 +2,25 @@
 
 This document contains the current execution horizon. Long-term ordering is in the [Roadmap](ROADMAP.md); exact operational truth is in [Current State](CURRENT_STATE.md).
 
-## Optional Product Owner review — public Version 32
+## Product Owner scanner review — public Version 33
 
-1. Confirm the Library header shows `v32`.
-2. Scan or enter a new ISBN and confirm the existing Add item dialog opens.
-3. Confirm retrieved publisher, publication date/year, language, source, and at most one reference thumbnail remain secondary to editable Book fields.
-4. Confirm a personal uploaded cover wins; when none exists, a working Open Library image is labeled as a reference, and a broken/missing image does not block the workflow.
-5. Confirm provider subjects are absent and no Book, tag, identifier, or cover is persisted before explicit **Add**.
+1. Confirm the Library header shows `v33` and signed-out users can scan or manually enter an ISBN and see an explicit duplicate, probable, new, unavailable, or conflict result without changing the Library.
+2. Confirm **Save ISBN**, **Mark owned**, and final **Add** require sign-in while **Cancel**, **Scan another**, and result inspection remain non-mutating.
+3. Follow one sign-in continuation and confirm the ISBN, matched result, and intended action return to an explicit review; no action runs automatically, and the current Library is re-resolved before confirmation.
+4. For a probable ISBN-less match, confirm **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel** behave as labeled and never create a duplicate by default.
+5. If an authenticated Add review encounters authorization expiry, confirm the edited values remain and the modal offers **Sign in and resume review** instead of another Add submission.
+
+Report `PASS` or `FAIL` with browser/device, scan method, ISBN, last visible state, and whether any mutation was explicitly confirmed.
 
 Shopkeeper review is removed from the active queue. The route remains available, but Library is the canonical scanner and add workflow.
 
-## Probable-match release candidate — local PASS, publication decision pending
+## Probable-match release — published in Version 33
 
 Version 32 mobile evidence confirms that Outcast of Redwall and The Bellmaker reach the correct ISBN-less `Need` records, but the result offers only **View Library record** and no usable edit surface. The Product Owner selected **Option A — confirm and update the existing record**.
 
-Exact clean local unpublished source `b5ba8f251e37ae42474089f769f95683e2e14429` completes the accepted public-scan/authenticated-mutation boundary. Public scanner capture, lookup, and explicit results remain non-mutating. **Save ISBN**, **Mark owned**, final **Add**, and every other Book edit require authentication. Sign-in and authorization-expiry flows preserve resumable review context, refresh and re-resolve authoritative Library state, and require confirmation before writing. After an Add receives 403, the active modal preserves the edited values, replaces **Add item** with **Sign in and resume review**, and cannot repeat the POST.
+Exact release source `013db3b5d747870723362ae430ffe923e32d8ba6` publishes the accepted public-scan/authenticated-mutation boundary. Public scanner capture, lookup, and explicit results remain non-mutating. **Save ISBN**, **Mark owned**, final **Add**, and every other Book edit require authentication. Sign-in and authorization-expiry flows preserve resumable review context, refresh and re-resolve authoritative Library state, and require confirmation before writing. After an Add receives 403, the active modal preserves the edited values, replaces **Add item** with **Sign in and resume review**, and cannot repeat the POST.
 
-Final validation on the exact checkpoint passed the Node 24 serial suite at 14 files/181 tests, lint with zero errors and three established image warnings, the production build, diff check, and clean-worktree check. Relena's final read-only release-boundary review returned `PASS`. Public production remains Version 32 at exact source `802db5fd9c54c79e4897cc12de86b875163f6c07`; release preparation and publication remain separately gated by Product Owner authorization.
+Final validation on the exact source passed the Node 24 serial suite at 14 files/181 tests, focused version checks at 2/2, lint with zero errors and three established image warnings, the production build, diff check, and clean-worktree check. Relena's final read-only release-boundary review returned `PASS`. Version 33 was saved and deployed successfully with the existing public audience; Product Owner testing is now the next gate.
 
 ## Accepted advance roadmap package
 

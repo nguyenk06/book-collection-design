@@ -12,7 +12,7 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | Phase A — Library-first responsive shell | Accepted from public Version 24 |
 | Aggregate My Library correction | Published from Version 25 |
 | Main-page scanner restoration | Accepted in public Version 30; live retry stability note retained |
-| Probable-match completion | Local release candidate accepted; publication pending Product Owner authorization |
+| Probable-match completion | Published in Version 33; Product Owner public testing pending |
 | Shopkeeper scanner parity and visual cleanup | Published in Version 31; further work shelved by Product Owner |
 | M1 — Shopping validation feasibility | Complete within recorded boundary |
 | M2 — controlled Shopping release and schema gates | Complete within recorded bridge-observable boundary |
@@ -25,11 +25,11 @@ Historical evidence and exact prior release details remain in the [Changelog](CH
 
 ## Scanner maintenance — probable-match completion
 
-**State:** Exact clean local candidate `b5ba8f251e37ae42474089f769f95683e2e14429` received final release-boundary `PASS`; public Version 32 remains unchanged and publication remains closed pending Product Owner authorization.
+**State:** Published as Version 33 from exact source `013db3b5d747870723362ae430ffe923e32d8ba6` after final release-boundary `PASS`; Product Owner public scanner testing is the next gate.
 
 For a unique probable ISBN-less match, provide an explicit existing-record review with Save ISBN only, Mark owned, Not the same book, and Cancel. Signed-out users may scan and inspect every result, but mutation actions require sign-in. Preserve ISBN, result, matched Book, intended action, and safe return context; restore review without writing; then refresh, re-resolve, recheck conflicts, and require authenticated confirmation. Auth expiry follows the same preserve-and-resume behavior. No default duplicate creation, pre-confirmation mutation, schema change, Shopkeeper work, or publication is included.
 
-The accepted candidate preserves resumable context through sign-in and authorization expiry, freshly re-resolves authoritative state before confirmation, and prevents repeat Add submission after authorization expires by replacing the modal mutation control with sign-in/resume. Final evidence is 14 files/181 tests passed in the Node 24 serial suite, lint with zero errors and three established image warnings, production build passed, diff check clean, and worktree clean. No Site save, deployment, or publication is implied.
+The published release preserves resumable context through sign-in and authorization expiry, freshly re-resolves authoritative state before confirmation, and prevents repeat Add submission after authorization expires by replacing the modal mutation control with sign-in/resume. Final evidence is 14 files/181 tests passed in the Node 24 serial suite, focused version checks 2/2, lint with zero errors and three established image warnings, production build passed, diff check clean, and worktree clean. Publication does not imply hands-on acceptance or authorize further work.
 
 ## Milestone 7 — enrichment foundation
 
