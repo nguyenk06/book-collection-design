@@ -2,6 +2,14 @@
 
 This document contains the current execution horizon. Long-term ordering is in the [Roadmap](ROADMAP.md); exact operational truth is in [Current State](CURRENT_STATE.md).
 
+## Scanner-entry and navigation cleanup — local release candidate
+
+Exact clean checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31` is locally complete and unpublished. It provides one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall; removes the duplicate collection-toolbar scanner controls and discoverable Shopkeeper navigation links; retains Library and How it works; and keeps `/shopping` only as an unlinked shelved compatibility route with its mode label. Scanner resolution and public-scan/authenticated-mutation behavior are unchanged.
+
+The seven-file code/test organization boundary removes dead `.scan-actions` and `.mobile-shopping-link` CSS without broader refactoring. Final evidence is release-boundary `PASS`, 14 files/182 tests passed, production build passed, lint reported zero errors and three established warnings, and diff/worktree checks were clean.
+
+The next gate is the Product Owner publication choice in [Planner Inbox](PLANNER_INBOX.md). If publication is authorized, Kira prepares release identity and performs exact-source revalidation before Quatre's separately authorized public operation. Later Product Owner visual review should inspect the hero action's spacing and hierarchy on desktop and mobile; that review does not reopen broader held visual work.
+
 ## Product Owner scanner review — public Version 33
 
 1. Confirm the Library header shows `v33` and signed-out users can scan or manually enter an ISBN and see an explicit duplicate, probable, new, unavailable, or conflict result without changing the Library.
@@ -12,7 +20,7 @@ This document contains the current execution horizon. Long-term ordering is in t
 
 Report `PASS` or `FAIL` with browser/device, scan method, ISBN, last visible state, and whether any mutation was explicitly confirmed.
 
-Shopkeeper review is removed from the active queue. The route remains available, but Library is the canonical scanner and add workflow.
+Shopkeeper review is removed from the active queue. Public Version 33 still exposes its historical route behavior; the accepted local candidate removes discoverable navigation and retains `/shopping` only as an unlinked compatibility route. Library is the canonical scanner and add workflow.
 
 ## Probable-match release — published in Version 33
 

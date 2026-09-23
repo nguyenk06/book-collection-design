@@ -1,6 +1,6 @@
 # Staged Milestone Sequence
 
-**Reviewed:** 2026-09-19
+**Reviewed:** 2026-09-23
 
 Milestones are independently reviewable and do not bundle implementation, Site save, publication, production access, or recovery authority.
 
@@ -13,6 +13,7 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | Aggregate My Library correction | Published from Version 25 |
 | Main-page scanner restoration | Accepted in public Version 30; live retry stability note retained |
 | Probable-match completion | Published in Version 33; Product Owner public testing pending |
+| Canonical scanner-entry/navigation cleanup | Accepted locally at `d251980c15afae93663adc53a405c42c5d4b6f31`; publication separately gated |
 | Shopkeeper scanner parity and visual cleanup | Published in Version 31; further work shelved by Product Owner |
 | M1 — Shopping validation feasibility | Complete within recorded boundary |
 | M2 — controlled Shopping release and schema gates | Complete within recorded bridge-observable boundary |
@@ -22,6 +23,12 @@ Milestones are independently reviewable and do not bundle implementation, Site s
 | M6 — downloadable catalog export UI | Complete and published; broader restore is not established |
 
 Historical evidence and exact prior release details remain in the [Changelog](CHANGELOG.md).
+
+## Canonical scanner-entry/navigation cleanup
+
+**State:** Exact clean local checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31` received final release-boundary `PASS`; public production remains Version 33 pending a separate Product Owner publication decision.
+
+The candidate presents one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall, removes collection-toolbar duplicates, removes discoverable Shopkeeper links, retains Library and How it works, and keeps `/shopping` only as an unlinked shelved compatibility route. Scanner/auth behavior is unchanged. The seven-file bounded cleanup also removes dead `.scan-actions` and `.mobile-shopping-link` CSS. Evidence is 14 files/182 tests passed, production build passed, lint with zero errors and three established warnings, and clean diff/worktree checks. If published, owner review should inspect hero spacing and hierarchy on desktop/mobile without reopening broader visual acceptance.
 
 ## Scanner maintenance — probable-match completion
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-23 — Canonical Library scanner entry accepted locally
+
+- Recorded exact clean local checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31` as release-boundary `PASS`. It provides one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall; removes duplicate collection-toolbar scanner controls and discoverable Shopkeeper navigation; retains Library, How it works, and the unlinked `/shopping` compatibility route; and leaves scanner/auth behavior unchanged.
+- Recorded the bounded seven-file code/test organization and removal of dead `.scan-actions` and `.mobile-shopping-link` CSS. Final evidence is 14 files/182 tests passed, production build passed, lint with zero errors and three established warnings, and clean diff/worktree checks.
+- Public production remains Version 33 at exact source `013db3b5d747870723362ae430ffe923e32d8ba6`. Opened one genuine Product Owner publication choice; any release identity, revalidation, or public Site operation remains separately gated. If published, owner review should inspect hero spacing and hierarchy on desktop/mobile without reopening broader held visual work.
+
 ## 2026-09-19 — Scanner authorization correction published as Version 33
 
 - Recorded release-only commit `013db3b5d747870723362ae430ffe923e32d8ba6` as the exact saved and public Version 33 source. Final validation passed 14 files/181 tests, focused version checks 2/2, lint with zero errors and three established image warnings, production build, diff check, and clean-worktree check.

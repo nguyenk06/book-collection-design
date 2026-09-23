@@ -21,8 +21,10 @@ The product identity is **My Library**. The primary hierarchy is:
 
 1. **Library** — default home and full personal catalog.
 2. **Collections** — collection discovery and collection-specific Gallery, List, and Bookshelf views.
-3. **Shopkeeper** — focused acquisition companion.
+3. **How it works** — public explanation and guidance.
 4. **Owner area** — administration, exports, settings, test controls, and additional tools.
+
+Shopkeeper is shelved as an active workstream and is not a discoverable primary-navigation destination. The retained `/shopping` compatibility route is unlinked unless the Product Owner explicitly reopens the mode.
 
 CYOA and Redwall are collections, not separate libraries or permanent primary-navigation destinations. A collection can be pinned or favorited for prominence without changing its membership.
 
@@ -51,7 +53,7 @@ For Phase A, use a stable header whose information remains available across resp
 - Current view mode.
 - Applicable authenticated administration controls without exposing owner authority publicly.
 - Current product version.
-- Primary navigation: **Library**, **Collections**, **Shopkeeper**; **Library** is the base/home.
+- Primary navigation retains **Library** and **How it works**; collection access remains within the Library experience. **Library** is the base/home, and Shopkeeper is not a discoverable primary-navigation destination.
 - Search remains in the current collection area rather than moving into the global header.
 
 Help and About leave permanent primary navigation. A contextual row below the header communicates location, mode, scope, and safety state, for example:
@@ -62,7 +64,9 @@ Help and About leave permanent primary navigation. A contextual row below the he
 
 ### Mobile
 
-Adapt the header and controls to the viewport while preserving the desktop navigation hierarchy, destinations, context, access boundaries, and the required title/current-collection/view-mode/admin/version information. Persistent bottom navigation may present **Library**, **Collections**, **Shopkeeper**, and **More** when it preserves that same route model; Shopkeeper may receive stronger visual emphasis as the mobile field tool. Important navigation must never depend on the footer, and search remains with the current collection area.
+Adapt the header and controls to the viewport while preserving the desktop navigation hierarchy, destinations, context, access boundaries, and the required title/current-collection/view-mode/admin/version information. Any persistent bottom navigation must preserve the same active route model and must not reintroduce shelved Shopkeeper discovery. Important navigation must never depend on the footer, and search remains with the current collection area.
+
+The accepted local cleanup establishes one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall rather than collection-toolbar variants. Later owner visual review should inspect its spacing and hierarchy at desktop and mobile widths; this bounded review does not authorize broader visual changes.
 
 ### Footer
 

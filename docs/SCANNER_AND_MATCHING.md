@@ -100,6 +100,12 @@ Exact release source `013db3b5d747870723362ae430ffe923e32d8ba6`, built from acce
 
 Final evidence is 14 files/181 tests passed in the Node 24 serial suite, focused version checks 2/2, lint with zero errors and three established image warnings, production build passed, diff check clean, and worktree clean. Version 33 was saved and deployed successfully at the existing public URL with the public audience preserved. Product Owner hands-on testing is the next acceptance gate.
 
+### Canonical Library entry cleanup — accepted locally
+
+Exact clean local checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31` presents one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall and removes the duplicate collection-toolbar scanner controls. It removes discoverable Shopkeeper navigation while retaining `/shopping` only as an unlinked shelved compatibility route with its mode label. Library and How it works remain available. Scanner resolution, public result access, authentication requirements, and mutation safeguards are unchanged.
+
+The bounded seven-file code/test organization removes dead `.scan-actions` and `.mobile-shopping-link` CSS. Relena's release-boundary review returned `PASS`; the exact candidate passed 14 files/182 tests, production build, lint with zero errors and three established warnings, diff check, and clean-worktree check. Public production remains Version 33, and publication requires a separate Product Owner decision. If published, owner review should inspect hero spacing and hierarchy on desktop/mobile.
+
 ## Out of scope
 
 - Persistent candidate, reviewer, diagnostic-image, or cross-session evidence storage.
