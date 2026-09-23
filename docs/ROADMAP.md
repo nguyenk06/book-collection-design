@@ -4,7 +4,7 @@ The roadmap is ordered by Product Owner priority. A roadmap position is planning
 
 ## Current baseline
 
-Version 33 at `013db3b5d747870723362ae430ffe923e32d8ba6` is the exact saved and public baseline. Phase 0 is closed, the Library-first shell and main-page scanner are accepted, the public-scan/authenticated-mutation correction is published for Product Owner testing, and the first bounded ISBN/reference-cover enrichment consumer remains public. Library is canonical for scan, review, add, and edit. Exact local candidate `d251980c15afae93663adc53a405c42c5d4b6f31` consolidates scanner entry into one public Library hero action, removes discoverable Shopkeeper navigation, and retains `/shopping` only as an unlinked shelved compatibility route; it is accepted locally but not published.
+Version 34 at `14775b498dedcf71d54c4641ee457b0d64395f49` is the exact saved and public baseline. Phase 0 is closed, the Library-first shell and main-page scanner are accepted, and the public-scan/authenticated-mutation correction plus the first bounded ISBN/reference-cover enrichment consumer remain public. Library is canonical for scan, review, add, and edit. Version 34 consolidates scanner entry into one public Library hero action, removes discoverable Shopkeeper navigation, and retains `/shopping` only as an unlinked shelved compatibility route. Bounded owner review of the responsive hero hierarchy is pending.
 
 ## Ordered remaining roadmap
 
@@ -28,7 +28,7 @@ Reference-cover enrichment and ISBN metadata enrichment may proceed as parallel 
 
 See [Enrichment Foundation](ENRICHMENT_FOUNDATION.md) for the first bounded contract.
 
-Reference-cover and ISBN enrichment are complete through their first public Version 32 consumer. Scanner/matching changes are maintenance-only unless new Library evidence opens a bounded correction. The accepted scanner-entry/navigation cleanup is release maintenance rather than a new roadmap position; publication remains separately gated. Neither completed enrichment nor shelved Shopkeeper work consumes a current roadmap position.
+Reference-cover and ISBN enrichment are complete through their first public Version 32 consumer. Scanner/matching changes are maintenance-only unless new Library evidence opens a bounded correction. The published Version 34 scanner-entry/navigation cleanup is release maintenance rather than a new roadmap position. Neither completed enrichment nor shelved Shopkeeper work consumes a current roadmap position.
 
 ## Accepted advance direction
 

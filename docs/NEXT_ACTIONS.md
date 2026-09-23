@@ -2,25 +2,21 @@
 
 This document contains the current execution horizon. Long-term ordering is in the [Roadmap](ROADMAP.md); exact operational truth is in [Current State](CURRENT_STATE.md).
 
-## Scanner-entry and navigation cleanup — local release candidate
+## Product Owner review — public Version 34
 
-Exact clean checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31` is locally complete and unpublished. It provides one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall; removes the duplicate collection-toolbar scanner controls and discoverable Shopkeeper navigation links; retains Library and How it works; and keeps `/shopping` only as an unlinked shelved compatibility route with its mode label. Scanner resolution and public-scan/authenticated-mutation behavior are unchanged.
+Exact source `14775b498dedcf71d54c4641ee457b0d64395f49` is saved and publicly deployed as Version 34. It provides one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall; removes the duplicate collection-toolbar scanner controls and discoverable Shopkeeper navigation links; retains Library and How it works; and keeps `/shopping` only as an unlinked shelved compatibility route with its mode label. Scanner resolution and public-scan/authenticated-mutation behavior are unchanged.
 
-The seven-file code/test organization boundary removes dead `.scan-actions` and `.mobile-shopping-link` CSS without broader refactoring. Final evidence is release-boundary `PASS`, 14 files/182 tests passed, production build passed, lint reported zero errors and three established warnings, and diff/worktree checks were clean.
+Exact-source evidence is release-boundary `PASS`, 14 files/182 tests passed, production build passed, lint reported zero errors and three established warnings, and diff/worktree checks were clean. Sites saved Version 34 and its deployment succeeded with the existing public audience.
 
-The next gate is the Product Owner publication choice in [Planner Inbox](PLANNER_INBOX.md). If publication is authorized, Kira prepares release identity and performs exact-source revalidation before Quatre's separately authorized public operation. Later Product Owner visual review should inspect the hero action's spacing and hierarchy on desktop and mobile; that review does not reopen broader held visual work.
+Review and report `PASS` or `FAIL` with browser/device, viewport, Library state, and the last visible issue:
 
-## Product Owner scanner review — public Version 33
+1. Inspect hero scanner spacing and hierarchy at desktop width.
+2. Inspect the responsive shell and hero at the `<=1100px` wrap boundary.
+3. Inspect the hero action at `<=720px` and representative mobile widths, including touch readability.
+4. Check My Library, CYOA, and Redwall across their available Library states and confirm exactly one hero-level **Scan ISBN** action with no toolbar duplicate.
+5. Confirm Library and How it works remain discoverable and no Shopkeeper link appears in header, primary navigation, mobile navigation, or other routine Library discovery.
 
-1. Confirm the Library header shows `v33` and signed-out users can scan or manually enter an ISBN and see an explicit duplicate, probable, new, unavailable, or conflict result without changing the Library.
-2. Confirm **Save ISBN**, **Mark owned**, and final **Add** require sign-in while **Cancel**, **Scan another**, and result inspection remain non-mutating.
-3. Follow one sign-in continuation and confirm the ISBN, matched result, and intended action return to an explicit review; no action runs automatically, and the current Library is re-resolved before confirmation.
-4. For a probable ISBN-less match, confirm **Save ISBN only**, **Mark owned**, **Not the same book**, and **Cancel** behave as labeled and never create a duplicate by default.
-5. If an authenticated Add review encounters authorization expiry, confirm the edited values remain and the modal offers **Sign in and resume review** instead of another Add submission.
-
-Report `PASS` or `FAIL` with browser/device, scan method, ISBN, last visible state, and whether any mutation was explicitly confirmed.
-
-Shopkeeper review is removed from the active queue. Public Version 33 still exposes its historical route behavior; the accepted local candidate removes discoverable navigation and retains `/shopping` only as an unlinked compatibility route. Library is the canonical scanner and add workflow.
+This bounded review does not reopen broader held visual work or Shopkeeper as an active workstream.
 
 ## Probable-match release — published in Version 33
 

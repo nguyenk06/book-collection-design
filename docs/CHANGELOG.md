@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-23 — Canonical Library scanner entry published as Version 34
+
+- Recorded exact source `14775b498dedcf71d54c4641ee457b0d64395f49` as pushed cleanly, saved, deployed, active, and public Version 34. Exact-source validation passed 14 files/182 tests, production build, lint with zero errors and three established warnings, diff check, and clean-worktree check.
+- Sites saved Version 34 as `appgprj_6a6ea2132b088191b913b376640c2e36~appgver_c1a50b278e548191b3ddecb92b2020ce`; deployment `appgdep_6ab3dc9489888191b166953fd47cd2a2` succeeded at `https://cyoa-collection.znesfreak.chatgpt.site`. The Site reports Version 34 as latest, active, and public.
+- Closed the publication decision. Product Owner review is now bounded to hero scanner spacing/hierarchy at desktop, the `<=1100px` wrap, `<=720px`/mobile, every Library state, and confirmation that no Shopkeeper discovery remains. Broader visual acceptance stays held.
+
 ## 2026-09-23 — Canonical Library scanner entry accepted locally
 
 - Recorded exact clean local checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31` as release-boundary `PASS`. It provides one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall; removes duplicate collection-toolbar scanner controls and discoverable Shopkeeper navigation; retains Library, How it works, and the unlinked `/shopping` compatibility route; and leaves scanner/auth behavior unchanged.

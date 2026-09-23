@@ -66,7 +66,7 @@ Help and About leave permanent primary navigation. A contextual row below the he
 
 Adapt the header and controls to the viewport while preserving the desktop navigation hierarchy, destinations, context, access boundaries, and the required title/current-collection/view-mode/admin/version information. Any persistent bottom navigation must preserve the same active route model and must not reintroduce shelved Shopkeeper discovery. Important navigation must never depend on the footer, and search remains with the current collection area.
 
-The accepted local cleanup establishes one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall rather than collection-toolbar variants. Later owner visual review should inspect its spacing and hierarchy at desktop and mobile widths; this bounded review does not authorize broader visual changes.
+Published Version 34 establishes one public hero-level **Scan ISBN** action across My Library, CYOA, and Redwall rather than collection-toolbar variants. Product Owner review should inspect its spacing and hierarchy at desktop, the `<=1100px` wrap, `<=720px`/mobile, and every Library state, and confirm that routine navigation exposes no Shopkeeper discovery. This bounded review does not authorize broader visual changes.
 
 ### Footer
 

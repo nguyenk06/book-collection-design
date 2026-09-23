@@ -8,11 +8,10 @@ This document is the concise operational source of truth. Release history and su
 
 - **Active project:** CYOA Collection only.
 - **Public Site:** [CYOA Collection](https://cyoa-collection.znesfreak.chatgpt.site).
-- **Current saved and public release:** Version 33.
-- **Exact release and application source:** `013db3b5d747870723362ae430ffe923e32d8ba6`.
+- **Current saved and public release:** Version 34.
+- **Exact release and application source:** `14775b498dedcf71d54c4641ee457b0d64395f49`.
 - **Sites capacity:** `UNKNOWN`; no authoritative Sites meter is available.
-- **Publication state:** Version 33 is active and public. The save and deployment succeeded at the existing public Site; Product Owner scanner testing is the next gate.
-- **Local release candidate:** Exact clean checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31` is accepted locally and remains unpublished. Publication is separately gated.
+- **Publication state:** Version 34 is active and public. The save and deployment succeeded at the existing public Site; bounded Product Owner visual review is the next gate.
 
 ## Accepted product state
 
@@ -22,8 +21,8 @@ This document is the concise operational source of truth. Release history and su
 - Version 32 mobile review reopened one bounded scanner completion issue: probable ISBN-less matches correctly identify existing `Need` records but provide no direct way to confirm the match, save the ISBN, or mark the Book owned. Version 33 now publishes the accepted correction: scanner capture, lookup, and results may be public; all Add/edit mutations require sign-in; sign-in and authorization-expiry context is resumable; authoritative Library state is freshly re-resolved before confirmation; and an expired Add review replaces its mutation control with an in-modal sign-in/resume action that cannot repeat the POST. Product Owner public testing remains outstanding.
 - Photo upload is currently more reliable than live camera capture. Live capture can require more than one attempt; this is retained as a stability issue rather than a release blocker.
 - A valid captured ISBN can still return no title or author when the current metadata source has no record or cannot be reached. The manual-details path is the safe fallback.
-- Library now has one canonical public hero-level **Scan ISBN** entry across My Library, CYOA, and Redwall in the accepted local candidate. The duplicate collection-toolbar scanner controls are removed; scanner and authentication behavior are unchanged.
-- Shopkeeper is shelved as an active workstream. The accepted local candidate removes discoverable Shopkeeper navigation while retaining `/shopping` only as an unlinked compatibility route with its mode label. Library is the canonical scan, review, add, and edit surface; do not spend milestone capacity on Shopkeeper parity or visual review unless the Product Owner reopens it.
+- Version 34 has one canonical public hero-level **Scan ISBN** entry across My Library, CYOA, and Redwall. The duplicate collection-toolbar scanner controls are removed; scanner and authentication behavior are unchanged.
+- Shopkeeper is shelved as an active workstream. Version 34 removes discoverable Shopkeeper navigation while retaining `/shopping` only as an unlinked compatibility route with its mode label. Library is the canonical scan, review, add, and edit surface; do not spend milestone capacity on Shopkeeper parity or broader visual review unless the Product Owner reopens it.
 
 ## Open product boundaries
 
@@ -56,10 +55,10 @@ This document is the concise operational source of truth. Release history and su
 | --- | --- | --- |
 | Scanner restoration | Accepted in public Version 30 | Retain the live-capture stability note; do not reopen restoration without new evidence |
 | Probable-match completion | Published in Version 33 from exact source `013db3b5d747870723362ae430ffe923e32d8ba6` | Product Owner public scanner testing |
-| Scanner-entry/navigation cleanup | Accepted locally at exact checkpoint `d251980c15afae93663adc53a405c42c5d4b6f31`; unpublished | Product Owner publication decision; if published, inspect hero spacing and hierarchy on desktop/mobile |
+| Scanner-entry/navigation cleanup | Published as Version 34 from exact source `14775b498dedcf71d54c4641ee457b0d64395f49` | Product Owner review of hero spacing/hierarchy across desktop, responsive wrap, mobile, and Library states |
 | Documentation cleanup | Reconciled through Version 32 and M9 requirements planning | Keep the TL;DR ownership footer and explicit next-action handoff in terminal workflow responses |
 | Endpoint contract tests | Included in public Version 32 | Enrichment presentation checks and 167/167 full checks pass |
-| Shopkeeper parity | Published in Version 31; active workstream shelved | Retain `/shopping` only as an unlinked compatibility route in the local candidate; spend no further milestone capacity unless reopened |
+| Shopkeeper parity | Published in Version 31; active workstream shelved | Confirm Version 34 exposes no Shopkeeper discovery; retain `/shopping` only as an unlinked compatibility route unless reopened |
 | Repository maintenance | Incorporated into the Version 32 source lineage | pnpm is canonical; configured Node 24 build passes; standard wrapper remains host-blocked by its launcher/system Node 18 path |
 | Reference-cover enrichment | Public in Version 32 | Product Owner may review personal-cover precedence, reference fallback, and failure handling |
 | ISBN metadata enrichment | Public in Version 32 | Product Owner may review evidence hierarchy, attribution, and no-mutation behavior |
@@ -71,4 +70,4 @@ This document is the concise operational source of truth. Release history and su
 
 ## Next milestone
 
-Version 33 at exact source `013db3b5d747870723362ae430ffe923e32d8ba6` remains saved, deployed, active, and public. Exact local candidate `d251980c15afae93663adc53a405c42c5d4b6f31` is release-boundary `PASS`: it establishes one Library hero scanner, removes duplicate toolbar entries and discoverable Shopkeeper links, retains `/shopping` only as an unlinked compatibility route, and preserves Library/How it works plus scanner/auth behavior. Its bounded seven-file scope passed 14 files/182 tests, production build, lint with zero errors and three established warnings, diff check, and clean-worktree check. Publication requires a separate Product Owner decision; later owner review should inspect hero spacing and hierarchy on desktop/mobile. The advance roadmap order remains Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration.
+Version 34 at exact source `14775b498dedcf71d54c4641ee457b0d64395f49` is saved, deployed, active, and public. It establishes one Library hero scanner, removes duplicate toolbar entries and discoverable Shopkeeper links, retains `/shopping` only as an unlinked compatibility route, and preserves Library/How it works plus scanner/auth behavior. Exact-source validation passed 14 files/182 tests, production build, lint with zero errors and three established warnings, diff check, and clean-worktree check. Product Owner review should inspect hero spacing and hierarchy at desktop, the `<=1100px` wrap, `<=720px`/mobile, every Library state, and confirm no Shopkeeper discovery. The advance roadmap order remains Tags, catalog-v1 Safe Import, manual AI Review, complete cover backup, then expanded administration.
