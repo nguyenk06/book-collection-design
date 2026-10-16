@@ -1,12 +1,12 @@
 # Kira Completion-Oriented Engineer Goal
 
-> Durable scope and authority record transmitted internally by Planner — Quatre to direct Engineer subagent Kira. The Product Owner does not carry this file or issue `!brief` to Kira. Use this template for a coherent outcome, not routine micro-steps.
+> Durable scope and authority record transmitted internally by Delivery Coordinator — Argama to direct Engineer child Kira. The Product Owner does not carry this file or issue `!brief` to Kira. Use this template for a coherent outcome, not routine micro-steps.
 
 Read `docs/ONE_LEVEL_SUBAGENT_PILOT.md` and `docs/ENGINEER_EXECUTION_CONTRACT.md`. The pilot governs topology and Site ownership; this record governs the exact goal and authority.
 
 ## Assignment identity
 
-- Parent/orchestrator: PLANNER — QUATRE
+- Parent/orchestrator: DELIVERY COORDINATOR — ARGAMA
 - Assigned role: ENGINEER
 - Assigned name: KIRA
 - Delegation depth: 1 — Kira must not spawn
@@ -34,7 +34,7 @@ Kira verifies parent, source/repository/branch/HEAD, unpublished/dirty state, cu
 
 - Sites tools or Sites credentials.
 - Site save/version, preview, deployment, publication, or final Site handoff.
-- Production access or schema/data mutation unless a separate explicit Product Owner gate and Quatre-owned Site operation later authorizes it.
+- Production access or schema/data mutation unless a separate explicit Product Owner gate and Argama-owned Site operation later authorizes it.
 - Credential changes, destructive recovery, rollback, restore, or external sharing.
 - Product decisions, unrelated refactors, speculative features, and additional projects.
 - Child subagents.
@@ -91,7 +91,7 @@ The longer-period allowance is separate. CYOA is the only active project during 
 ## Genuine stop conditions
 
 - Outcome complete.
-- Quatre relays `!drain` or `!stop`.
+- Argama relays `!drain` or `!stop`.
 - Five-hour 10% clean-stop target/5% hard boundary or weekly 15% floor/window boundary.
 - Third authorized substantive approach fails.
 - Source/candidate/package/collision mismatch.
@@ -108,11 +108,11 @@ Ordinary lint/test/build failures, recoverable tool failures, progress checkpoin
 
 Do not improvise a fourth substantive approach or an excluded path.
 
-## Required Kira return to Quatre
+## Required Kira return to Argama
 
-Return one sanitized acceptance and one terminal completion/blocker packet directly to Quatre. Include:
+Return one sanitized acceptance and one terminal completion/blocker packet directly to Argama. Include:
 
-- Kira identity and Quatre parent;
+- Kira identity and Argama parent;
 - exact source/branch/HEAD and clean/dirty state;
 - files changed and package manifest;
 - completed, partial, blocked, and deferred scope;
@@ -121,16 +121,16 @@ Return one sanitized acceptance and one terminal completion/blocker packet direc
 - migration/data/security/preservation and collision boundaries;
 - usage and safe checkpoint;
 - explicit confirmation that Kira used no Sites tools or credentials and performed no save/preview/deploy/publish/final Site handoff;
-- the exact next action for Quatre.
+- the exact next action for Argama.
 
-For a release candidate, include a validated release packet suitable for Relena product/release-boundary review. The packet must state the intended product version and verify that every visible and accessible release label matches it before publication. Only Quatre may perform a separately Product-Owner-authorized Site operation after that review.
+For a release candidate, include a validated release packet suitable for Relena product/release-boundary review. The packet must state the intended product version and verify that every visible and accessible release label matches it before publication. Only Argama may perform a separately Product-Owner-authorized Site operation after that review.
 
 ## Authority record
 
 - Product Owner authority:
-- Quatre transmission/activation:
+- Argama transmission/activation:
 - Relena design or release-boundary requirement:
 - Kira source authority:
-- Quatre-only Site operation, if later gated:
+- Argama-only Site operation, if later gated:
 
 This goal record does not create authority beyond the entries above.

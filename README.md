@@ -10,11 +10,11 @@ The application is maintained in the CYOA Collection ChatGPT Site implementation
 
 ## Status
 
-Site Version 32 at exact `802db5fd9c54c79e4897cc12de86b875163f6c07` is the saved public release. It adds compact attributed ISBN evidence to the existing Add item dialog and a personal-cover-first remote Open Library reference-cover fallback; it passed 167/167 tests, lint with zero errors, and a production build. Shopkeeper remains available but is shelved as an active workstream because the Library homepage owns the canonical scan, review, and add flow. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md).
+Site Version 34 at exact `14775b498dedcf71d54c4641ee457b0d64395f49` is the saved public release and is pending bounded Product Owner review. It provides one canonical hero-level **Scan ISBN** entry across My Library, CYOA, and Redwall, removes duplicate collection-toolbar scanner controls, and removes discoverable Shopkeeper navigation while retaining its unlinked compatibility route. See [Current State](docs/CURRENT_STATE.md) and [Next Actions](docs/NEXT_ACTIONS.md) for the authoritative release and review state.
 
 ## Start here
 
-Planner should read, in order:
+Delivery Coordinator should read, in order:
 
 1. [CYOA One-Level Subagent Pilot](docs/ONE_LEVEL_SUBAGENT_PILOT.md)
 2. [Planner Inbox](docs/PLANNER_INBOX.md)
@@ -24,7 +24,7 @@ Planner should read, in order:
 6. [Changelog](docs/CHANGELOG.md)
 7. [Roadmap](docs/ROADMAP.md)
 
-The active pilot is operational: Quatre is the initialized persistent parent, orchestrator, usage governor, and Site owner, and the Product Owner/Quatre channel is active. Relena and successor Engineer Kira were sequentially initialized as ready direct non-delegating children; neither has an active product goal. Sei III and the old separate-chat workflow are retired, and Kira inherits no Sei state or authority and has no Sites rights. The Product Owner communicates only with Quatre and does not carry briefs, reports, `!inbox`, or `!brief` between agents. Temporary artifacts remain internal/local and never become GitHub content. `docs/PLANNER_INBOX.md` is reserved for genuine Product Owner decisions.
+The active pilot is operational: ChatGPT Product Planner Quatre owns external product planning, while Delivery Coordinator Argama is the initialized persistent Codex parent, usage governor, evidence reconciler, and Site owner. Relena, Kira, Athrun, Lacus, and Cagalli remain ready direct non-delegating Argama children; no implementation goal is active. Sei III and the old separate-chat workflow are retired, and Kira inherits no Sei state or authority and has no Sites rights. The Product Owner carries only approved goals into Argama and consolidated results back to Quatre when further planning is needed—not routine briefs, reports, `!inbox`, or `!brief` among Codex children. Temporary artifacts remain internal/local and never become GitHub content. `docs/PLANNER_INBOX.md` is reserved for genuine Product Owner decisions.
 
 The concise current workstream view in [Current State](docs/CURRENT_STATE.md) shows what is active, blocked, able to continue, and approaching a production gate. Progress estimates are informational; briefs and validation evidence remain authoritative.
 
@@ -54,7 +54,7 @@ Implementation changes should be made in the Site implementation workspace. Majo
 | Knowledge | [Knowledge Ownership Index](docs/KNOWLEDGE_INDEX.md) · [Future Improvement Catalog](docs/FUTURE_IMPROVEMENT_CATALOG.md) |
 | Governance | [CYOA One-Level Subagent Pilot](docs/ONE_LEVEL_SUBAGENT_PILOT.md) · [Decision Log](docs/DECISIONS.md) · [Documentation Rules](docs/DOCUMENTATION_RULES.md) · [Engineer Execution Contract](docs/ENGINEER_EXECUTION_CONTRACT.md) · [Contributing](docs/CONTRIBUTING.md) |
 | Handoffs | [Protocol](docs/HANDOFF_PROTOCOL.md) · [Engineer Execution Contract](docs/ENGINEER_EXECUTION_CONTRACT.md) · [Implementation Brief template](templates/IMPLEMENTATION_BRIEF.md) · [Design Handoff template](templates/DESIGN_HANDOFF.md) |
-| Role startup | [Quatre parent](templates/PLANNER_STARTUP.md) · [Relena direct subagent](templates/DESIGNER_STARTUP.md) · [Kira direct subagent](templates/ENGINEER_STARTUP.md) |
+| Role startup | [Argama Delivery Coordinator](templates/DELIVERY_COORDINATOR_STARTUP.md) · [deprecated former parent path](templates/PLANNER_STARTUP.md) · [Relena direct child](templates/DESIGNER_STARTUP.md) · [Kira direct child](templates/ENGINEER_STARTUP.md) |
 | Engineer handoffs | [Implementation brief](templates/IMPLEMENTATION_BRIEF.md) · [Estimation brief](templates/ESTIMATION_BRIEF.md) |
 
 ## GitHub Pages

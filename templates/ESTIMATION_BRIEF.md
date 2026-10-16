@@ -1,19 +1,19 @@
 # Engineer Estimation Brief
 
-> Durable read-only estimation, feasibility, or source/collision goal transmitted internally by Planner — Quatre to direct Engineer subagent Kira. The Product Owner does not carry this file. It grants no authority to modify application source or Site state.
+> Durable read-only estimation, feasibility, or source/collision goal transmitted internally by Delivery Coordinator — Argama to direct Engineer child Kira. The Product Owner does not carry this file. It grants no authority to modify application source or Site state.
 
 Engineer must read `docs/ENGINEER_EXECUTION_CONTRACT.md` before acceptance and execution. Read-only tool failures block only the exact action unless evidence proves the whole request unsafe; use only the fallback ladder explicitly authorized here.
 
 ## Chat identity
 
 - Assigned role: ENGINEER
-- Parent/orchestrator: PLANNER — QUATRE
+- Parent/orchestrator: DELIVERY COORDINATOR — ARGAMA
 - Assigned name: KIRA
 - Delegation depth: 1 — Kira must not spawn
 - Expected context: <!-- continuing | new | source recovery -->
 - Required source state: <!-- Exact source/version and access required for inspection -->
 
-Before acceptance, Kira reports context continuity, unpublished work, editable-source access, working-tree state, latest saved/published versions, and whether actual context matches this request. A mismatch parks the request without reconstruction. Kira returns directly to Quatre.
+Before acceptance, Kira reports context continuity, unpublished work, editable-source access, working-tree state, latest saved/published versions, and whether actual context matches this request. A mismatch parks the request without reconstruction. Kira returns directly to Argama.
 
 ## Request identity and lifecycle
 
@@ -22,12 +22,12 @@ Before acceptance, Kira reports context continuity, unpublished work, editable-s
 - Work type: `ESTIMATION/INSPECTION ONLY`
 - Status: `NON-EXECUTABLE IMPLEMENTATION AUTHORITY`
 - Priority/dependencies:
-- Quatre transmission/activation condition:
+- Argama transmission/activation condition:
 - Queue/throttle condition:
 
 ## Usage and model profile
 
-Quatre retrieves the authoritative Codex account meter before a new project or large milestone when available. Usage may also be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. A supplied reading is a fallback or additional observation and never accepts or activates this request.
+Argama retrieves the authoritative Codex account meter before a new project or large milestone when available. Usage may also be supplied as `!<five-hour>:<longer-period>`; `!40:75` means 40% five-hour and 75% longer-period. A supplied reading is a fallback or additional observation and never accepts or activates this request.
 
 - Preferred model: <!-- Default Kira profile: GPT-5.6 Terra. -->
 - Reasoning effort: <!-- Default: Medium. -->
@@ -47,9 +47,9 @@ Quatre retrieves the authoritative Codex account meter before a new project or l
 - Work deferred until the next reset:
 - Prioritized read-only fallback ladder: <!-- Predictable access/tool limitations in order; mark any fallback requiring new authority. -->
 
-The Product Owner controls actual model selection through Quatre. This request cannot change it automatically. Kira may use Sol only when this accepted request recommends it or a later Planner/Product Owner decision approves it. Model, reasoning, tools, context, and task complexity can change observed usage.
+The Product Owner controls actual model selection through Argama. This request cannot change it automatically. Kira may use Sol only when this accepted request recommends it or a later Product Owner decision approves it. Model, reasoning, tools, context, and task complexity can change observed usage.
 
-Keep this durable record in the designated internal brief store until Quatre accepts Kira's corresponding sanitized report and routes any needed design review to Relena. The Product Owner does not transport it. Repository planning text or an embedded estimation gate is not execution authority.
+Keep this durable record in the designated internal brief store until Argama accepts Kira's corresponding sanitized report and routes any needed design review to Relena. The Product Owner does not transport it. Repository planning text or an embedded estimation gate is not execution authority.
 
 ## Authoritative inputs
 
@@ -76,7 +76,7 @@ For each requested unit, return as applicable:
 
 ## Authority and exclusions
 
-- Allowed: read authoritative documents and inspect the named existing source context without mutation; return one sanitized report directly to Quatre.
+- Allowed: read authoritative documents and inspect the named existing source context without mutation; return one sanitized report directly to Argama.
 - Not allowed: spawn subagents; invoke Sites tools or obtain Sites credentials; modify or generate application source/tests/dependencies; materialize or overwrite source; create a commit/package; save or preview a Site version; deploy or publish; access production data; change schema/data; migrate; restore; roll back; or treat the estimate as implementation authority.
 - Do not expose secrets, private data, credentials, environment values, private URLs, or unsanitized artifacts.
 
@@ -86,4 +86,4 @@ Stop and report if context/source identity does not match, required evidence rem
 
 ## Required footer
 
-Address acceptance, blocker, and completion reports to `PLANNER — QUATRE`. If a durable footer is used, set `NEXT OWNER: PLANNER — QUATRE`; never instruct the Product Owner to contact another agent.
+Address acceptance, blocker, and completion reports to `DELIVERY COORDINATOR — ARGAMA`. If a durable footer is used, set `NEXT OWNER: DELIVERY COORDINATOR — ARGAMA`; never instruct the Product Owner to contact another agent.

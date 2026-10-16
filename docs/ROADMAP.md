@@ -57,4 +57,4 @@ Category-based shelves and bookcases are retained. The intended aggregate view i
 
 ## Release rule
 
-Implementation, Site save, publication, production access, migration, recovery, and destructive actions remain separate gates. Quatre alone performs Site operations after explicit Product Owner authorization and validated Kira/Relena release evidence.
+Implementation, Site save, publication, production access, migration, recovery, and destructive actions remain separate gates. Argama alone performs Codex-side Site operations after explicit Product Owner authorization and validated Kira/Relena release evidence. ChatGPT Product Planner Quatre does not operate Sites.

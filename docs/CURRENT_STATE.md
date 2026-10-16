@@ -1,6 +1,6 @@
 # Current State
 
-**Last reviewed:** 2026-09-23
+**Last reviewed:** 2026-10-15
 
 This document is the concise operational source of truth. Release history and superseded investigations remain in the [Changelog](CHANGELOG.md).
 
@@ -36,11 +36,13 @@ This document is the concise operational source of truth. Release history and su
 
 ## Orchestration and ownership
 
-- **Planner / Product Owner interface / Site owner:** Quatre.
+- **ChatGPT Product Planner:** Quatre — external to the Codex hierarchy; owns product strategy, roadmap interpretation, decision framing, scope refinement, release-closure recommendations, and preparation of Product Owner-approved delivery goals.
+- **Codex Delivery Coordinator / Product Owner execution interface / Site owner:** Argama — persistent Codex parent, usage governor, goal and queue manager, evidence reconciler, and final release-handoff coordinator.
 - **Designer:** Relena — requirements, architecture, product interpretation, acceptance criteria, durable design documentation, and release-boundary review.
 - **Engineer:** Kira — inspection, implementation, remediation, tests, builds, packages, and release preparation. Kira has no Sites, credential, save, deployment, publication, or final-handoff authority.
 - **Advisory roles:** Cagalli for visual design, Lacus for UX/UI usability, and Athrun for operator testing and test plans.
-- All roles are direct children of Quatre and may not create subagents. Quatre assigns and reconciles work directly.
+- Relena, Kira, Athrun, Lacus, and Cagalli are direct children of Argama and may not create subagents. Argama assigns and reconciles delivery work directly.
+- Quatre and Argama are complementary peers serving the Product Owner at different layers. Quatre is not Argama's parent, child, or Codex subagent.
 - Preserve one application-source writer at a time. `PLANNER_INBOX.md` is only for unresolved Product Owner decisions; briefs are internal durable contracts, not Product Owner transport.
 
 ## Current capacity

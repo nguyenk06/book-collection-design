@@ -124,7 +124,7 @@ The accepted scope includes all accessible personal cover objects, including sep
 
 ## Shared controls
 
-- Quatre is the sole Product Owner interface and Site owner.
+- Argama is the Codex delivery interface and Site owner. ChatGPT Product Planner Quatre remains external to the Codex hierarchy.
 - Relena owns product contract and release-boundary review; Kira is the sole application writer when activated.
 - Planning, fixtures, and review may run in parallel; application-source writing does not.
 - Validate each slice independently and name its included/excluded boundaries.

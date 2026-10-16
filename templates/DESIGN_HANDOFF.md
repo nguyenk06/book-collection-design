@@ -1,6 +1,6 @@
 # Design Repository Handoff
 
-> Temporary Kira-to-Quatre implementation report. Include only verified, sanitized evidence needed for Quatre orchestration and Relena product/release-boundary review. The Product Owner does not carry this report.
+> Temporary Kira-to-Argama implementation report. Include only verified, sanitized evidence needed for Argama coordination and Relena product/release-boundary review. The Product Owner does not carry this report.
 
 This sanitized handoff is distinct from the private local-only `ENGINEER_CONTINUITY_HANDOFF.md` used for a real Engineer replacement. Never include exact local paths, credentials, tokens, owner identity, secrets, or private production data here. A replacement requires both artifacts; neither proves transfer until independently verified.
 
@@ -13,7 +13,7 @@ This sanitized handoff is distinct from the private local-only `ENGINEER_CONTINU
 - Recommended filename: <!-- YYYY-MM-DD-<milestone>-design-handoff.md -->
 - Attempt sequence: <!-- NEW SEQUENCE | ATTEMPT 2 | ATTEMPT 3 | POST-REASSESSMENT | NOT APPLICABLE -->
 
-Quatre retains this source unchanged in the internal evidence store and routes it to Relena when design or release-boundary review is required. Relena may incorporate verified facts into permanent documentation. The Product Owner does not transport or rewrite the report.
+Argama retains this source unchanged in the internal evidence store and routes it to Relena when design or release-boundary review is required. Relena may incorporate verified facts into permanent documentation. The Product Owner does not transport or rewrite the report.
 
 ## Handoff status
 
@@ -24,12 +24,12 @@ Quatre retains this source unchanged in the internal evidence store and routes i
 - Queue mode: <!-- ENABLED | DISABLED -->
 - Throttle: <!-- RUN | DRAIN | STOP | NOT APPLICABLE -->
 - Engineer state: <!-- WORKING | AVAILABLE | BLOCKED | DRAINING | PAUSED | WAITING FOR RESET | STOPPED AT GATE -->
-- Awaiting Quatre/Relena intake: <!-- Completed reports awaiting parent or design-boundary review, or NONE. -->
+- Awaiting Argama/Relena intake: <!-- Completed reports awaiting parent or design-boundary review, or NONE. -->
 - Currently processing: <!-- Accepted active workstreams and brief, or NONE. -->
 - Queued after current: <!-- Briefs plus eligibility conditions, or NONE. -->
 - Blocked:
 - Engineer can continue: <!-- YES | NO -->
-- Fresh parent queue check: <!-- Confirm Quatre's current goal queue was refreshed after this handoff was written. -->
+- Fresh parent queue check: <!-- Confirm Argama's current goal queue was refreshed after this handoff was written. -->
 
 ## Five-hour usage record
 
@@ -153,13 +153,13 @@ See [`docs/DOCUMENTATION_RULES.md`](https://github.com/nguyenk06/book-collection
 
 ## Workflow footer
 
-This is a terminal internal artifact and must contain exactly one concise footer. Put the skeleton in place before writing the report. After saving, verify that the last non-comment block contains `TL;DR`, `NEXT OWNER`, and `ACTION`. During the pilot, the recipient is Quatre; never instruct the Product Owner to contact another agent. If a saved artifact lacks the footer, preserve it unchanged and create a uniquely named formatting-only superseding artifact without repeating implementation, validation, Site, or production work.
+This is a terminal internal artifact and must contain exactly one concise footer. Put the skeleton in place before writing the report. After saving, verify that the last non-comment block contains `TL;DR`, `NEXT OWNER`, and `ACTION`. During the pilot, the recipient is Argama; never instruct the Product Owner to contact another agent. If a saved artifact lacks the footer, preserve it unchanged and create a uniquely named formatting-only superseding artifact without repeating implementation, validation, Site, or production work.
 
 TL;DR:
 <!-- Usually 1-4 short lines summarizing the verified result/state. -->
 
 NEXT OWNER:
-PLANNER — QUATRE
+DELIVERY COORDINATOR — ARGAMA
 
 ACTION:
 <!-- The single clearest next action, approval, command, or resume condition. -->

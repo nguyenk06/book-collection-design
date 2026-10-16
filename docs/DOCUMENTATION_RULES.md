@@ -2,7 +2,7 @@
 
 This document is the standing documentation policy for the repository.
 
-The active [CYOA One-Level Codex Subagent Pilot](ONE_LEVEL_SUBAGENT_PILOT.md) governs role topology and routing. Quatre is the persistent parent and Site owner; Relena and Kira are direct non-delegating children. The Product Owner communicates only with Quatre.
+The active [CYOA One-Level Codex Subagent Pilot](ONE_LEVEL_SUBAGENT_PILOT.md) governs Codex role topology and routing. Argama is the persistent Codex parent and Site owner; Relena, Kira, Athrun, Lacus, and Cagalli are direct non-delegating children. ChatGPT Product Planner Quatre is external to the Codex hierarchy. The Product Owner is the boundary between Quatre product planning and Argama delivery coordination.
 
 ## Repository Purpose
 
@@ -17,7 +17,7 @@ This repository is the permanent design authority for the Book Collection System
 
 It is not the implementation repository.
 
-It is also not a role-to-role transport workspace. GitHub contains durable high-level product documentation, architecture, roadmap/milestones, accepted decisions, workflow run rules, and the Designer-maintained Planner Inbox. Engineer goals, briefs, reports, acceptance records, release packets, and handoffs remain internal/local artifacts routed by Quatre; the Product Owner does not carry them.
+It is also not a role-to-role transport workspace. GitHub contains durable high-level product documentation, architecture, roadmap/milestones, accepted decisions, workflow run rules, and the Designer-maintained Planner Inbox. Engineer goals, briefs, reports, acceptance records, release packets, and handoffs remain internal/local artifacts routed by Argama; the Product Owner does not carry them among Codex children.
 
 ## Documentation Philosophy
 
@@ -78,9 +78,9 @@ Generalize operational details whenever practical.
 - Keep completed milestones visible.
 - Keep immediately actionable work in [NEXT_ACTIONS.md](NEXT_ACTIONS.md).
 
-## Planner Visibility
+## Delivery Visibility
 
-Quatre uses permanent design documentation plus internally routed subagent evidence as the primary project visibility layer:
+Argama uses permanent design documentation plus internally routed child evidence as the primary Codex delivery visibility layer:
 
 1. [PLANNER_INBOX.md](PLANNER_INBOX.md) — what requires a decision.
 2. [PROJECT_DASHBOARD.md](PROJECT_DASHBOARD.md) — concise derived visual progress; coarse estimates only.
@@ -97,20 +97,20 @@ The public [Engineer Execution Contract](ENGINEER_EXECUTION_CONTRACT.md) is the 
 
 Kira replacement uses two distinct internally routed artifacts:
 
-- A sanitized `DESIGN_HANDOFF.md` report returned to Quatre for any required Relena review.
+- A sanitized `DESIGN_HANDOFF.md` report returned to Argama for any required Relena review.
 - A private local-only `ENGINEER_CONTINUITY_HANDOFF.md` artifact for successor continuity. It may contain the exact local source path and machine-specific state needed for recovery, but must remain outside GitHub and must never contain credentials, tokens, owner identity, secrets, or private production data.
 
-Never copy the private continuity artifact into this repository, a public issue, a public handoff, or permanent documentation. Quatre routes it internally; the Product Owner does not transport it. Permanent documents record only sanitized conclusions and authoritative candidate identity.
+Never copy the private continuity artifact into this repository, a public issue, a public handoff, or permanent documentation. Argama routes it internally; the Product Owner does not transport it. Permanent documents record only sanitized conclusions and authoritative candidate identity.
 
 For each significant Engineer handoff, evaluate whether it records a major milestone transition such as local implementation, local validation, saved Site version, production migration, production verification, publication, rollback, or supersession. Update the changelog when it does, keeping each state independent. Brief acceptance and routine progress reports do not create changelog entries.
 
-## Planner Decision Queue
+## Product Owner Decision Queue
 
-[PLANNER_INBOX.md](PLANNER_INBOX.md) is the current queue for unresolved decisions that require Planner or product-owner authority. It contains no resolved history and must not duplicate the backlog, roadmap, changelog, current state, next actions, ADRs, or technical handoffs.
+[PLANNER_INBOX.md](PLANNER_INBOX.md) is the current queue for unresolved decisions that require Product Owner authority. It contains no resolved history and must not duplicate the backlog, roadmap, changelog, current state, next actions, ADRs, or technical handoffs.
 
 The queue may contain multiple independently understandable decisions. Batch non-urgent independent decisions when useful, but do not delay an urgent or high-risk gate merely to form a batch. A blocked workstream does not make the whole project blocked while another authorized independent workstream can continue.
 
-Relena maintains the queue under Quatre orchestration. Kira supplies sanitized evidence directly to Quatre but does not edit the queue. Quatre routes only genuine Product Owner decisions to Relena for recording.
+Relena maintains the queue under Argama coordination. Kira supplies sanitized evidence directly to Argama but does not edit the queue. Argama routes only genuine Product Owner decisions to Relena for recording.
 
 Create an item only when delegated authority cannot safely resolve a genuine choice involving:
 
@@ -122,15 +122,15 @@ Create an item only when delegated authority cannot safely resolve a genuine cho
 - Cost or external-service commitments
 - Privacy or public-data implications
 
-Do not escalate routine implementation choices, ordinary brief acceptance, fixable test failures, documentation housekeeping, delegated engineering details, or questions answerable from accepted direction. An unknown alone is not a Planner decision; first determine whether it blocks authorized work or can be resolved through further authorized investigation.
+Do not escalate routine implementation choices, ordinary brief acceptance, fixable test failures, documentation housekeeping, delegated engineering details, or questions answerable from accepted direction. An unknown alone is not a Product Owner decision; first determine whether it blocks authorized work or can be resolved through further authorized investigation.
 
 Each pending item uses this concise structure:
 
 - Short decision title
-- Status: `AWAITING PLANNER`
+- Status: `AWAITING PRODUCT OWNER`
 - Raised by
 - One clear decision question
-- Why Planner authority is required
+- Why Product Owner authority is required
 - Two concise options when possible, with consequences
 - Designer recommendation, or `NONE`
 - Impact
@@ -140,10 +140,10 @@ Include only the minimum sanitized technical context required to decide. Link to
 
 Decision lifecycle:
 
-1. Kira evidence, Relena work, or Quatre orchestration identifies a genuine Product Owner decision.
-2. Quatre asks Relena to confirm and record the minimum decision item; routine implementation and internal routing never enter the queue.
-3. Quatre presents every available choice directly to the Product Owner, including the practical impact or tradeoff of each, a clearly identified recommendation with rationale, and a compact response format. Quatre does not require the Product Owner to infer alternatives from linked documentation or answer an undefined approval request.
-4. Quatre routes the answer to Relena, which records it in the permanent source of truth and updates requirements, roadmap, or goals when required.
+1. Kira evidence, Relena work, or Argama coordination identifies a genuine Product Owner decision.
+2. Argama asks Relena to confirm and record the minimum decision item; routine implementation and internal routing never enter the queue.
+3. Argama presents every available choice directly to the Product Owner, including the practical impact or tradeoff of each, a clearly identified recommendation with rationale, and a compact response format. Argama does not require the Product Owner to infer alternatives from linked documentation or answer an undefined approval request. The Product Owner may take material product choices to ChatGPT Product Planner Quatre.
+4. Argama routes the answer to Relena, which records it in the permanent source of truth and updates requirements, roadmap, or goals when required.
 5. Designer updates the changelog for a material milestone consequence and creates or supersedes an ADR when warranted.
 6. Designer removes the resolved queue item. Git history and permanent design documents retain the durable record.
 
@@ -178,14 +178,14 @@ Unstructured internal ideas that have not been accepted belong in [BACKLOG.md](B
 
 Use the [Knowledge Index](KNOWLEDGE_INDEX.md) to keep four authority levels distinct:
 
-- [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md) — Planner/Designer-ranked product and UX opportunities from comparable applications. Entries are candidates, not roadmap commitments.
+- [Future Improvement Catalog](FUTURE_IMPROVEMENT_CATALOG.md) — Product Planner/Designer-ranked product and UX opportunities from comparable applications. Entries are candidates, not roadmap commitments.
 - Engineer Research Sandbox — Engineer-local technical feasibility, patterns, risks, experiments, and options stored in the shared handoff workspace's `knowledge/` area. Raw entries do not belong in this repository and do not authorize implementation.
-- Kira goal/brief — approved implementation scope only, transmitted internally by Quatre.
+- Kira goal/brief — approved implementation scope only, transmitted internally by Argama.
 - Tester knowledge — coverage strategy, regression knowledge, and evidence conventions only; it does not define product behavior or implementation scope.
 
-Relena owns promotion from research into accepted product direction or a Kira goal/brief under Quatre orchestration. Product Owner participation occurs only through Quatre when a material escalation changes behavior, priority, cost, risk, or scope. Preserve rejected/superseded records briefly so research is not repeatedly rediscovered.
+Relena owns promotion from research into an Argama-routed Kira goal/brief after Product Owner-approved direction. Product Owner participation occurs through Argama for Codex delivery decisions and through ChatGPT Quatre for product planning when a material escalation changes behavior, priority, cost, risk, or scope. Preserve rejected/superseded records briefly so research is not repeatedly rediscovered.
 
-Kira records source URL, review date/status, license warning, revisit trigger, and explicit confirmation that no code was copied in local knowledge. Kira has read-only access to `book-collection-design`, returns evidence directly to Quatre, and must not create or modify any Design-repository or GitHub artifact. Relena alone may incorporate an approved conclusion into authoritative documentation. Do not present observed patterns as verified CYOA implementation facts.
+Kira records source URL, review date/status, license warning, revisit trigger, and explicit confirmation that no code was copied in local knowledge. Kira has read-only access to `book-collection-design`, returns evidence directly to Argama, and must not create or modify any Design-repository or GitHub artifact. Relena alone may incorporate an approved conclusion into authoritative documentation. Do not present observed patterns as verified CYOA implementation facts.
 
 ## Architecture Principles
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-15 — Codex parent identity transitioned from Quatre to Argama
+
+- Separated the two CYOA layers: ChatGPT Product Planner — Quatre remains the external product-planning counterpart, while Delivery Coordinator — Argama becomes the persistent Codex parent, Product Owner execution interface, usage governor, evidence reconciler, queue manager, Site owner, and final release-handoff coordinator.
+- Preserved Relena, Kira, Athrun, Lacus, and Cagalli as direct non-delegating Argama children without recreating them or resetting context, authority, attempts, checkpoints, evidence, or readiness. Kira remains the sole application-source writer when activated and retains no Sites authority.
+- Added ADR-0015, the Argama startup prompt, a safe deprecated-parent redirect, and updated current workflow authorities, startup/brief/handoff templates, child-report recipients, usage routing, Planner Inbox routing, and Site ownership. Historical Codex Quatre records remain attributed to Quatre.
+- Preserved public Version 34, exact source `14775b498dedcf71d54c4641ee457b0d64395f49`, its pending Product Owner review, Tags planning state, roadmap order, held Phase F work, shelved Shopkeeper state, and every production/publication/migration/destructive gate. No application, test, build, Site, production, migration, or publication action occurred.
+
 ## 2026-09-23 — Canonical Library scanner entry published as Version 34
 
 - Recorded exact source `14775b498dedcf71d54c4641ee457b0d64395f49` as pushed cleanly, saved, deployed, active, and public Version 34. Exact-source validation passed 14 files/182 tests, production build, lint with zero errors and three established warnings, diff check, and clean-worktree check.

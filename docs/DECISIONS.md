@@ -16,8 +16,9 @@ Architecture Decision Records capture durable choices and their consequences. Ac
 | [ADR-0010](decisions/ADR-0010-owner-authenticated-administration-surface.md) | Operate the migration bridge through an owner-authenticated in-Site administration surface | Accepted |
 | [ADR-0011](decisions/ADR-0011-catalog-first-export-identities.md) | Use catalog-first format v1 with persisted immutable Book IDs | Accepted |
 | [ADR-0012](decisions/ADR-0012-live-shopping-validation-sequence.md) | Validate Shopping through a controlled live release | Accepted |
-| [ADR-0013](decisions/ADR-0013-quatre-one-level-subagent-pilot.md) | Use Quatre as the one-level CYOA parent and Site owner | Accepted pilot |
+| [ADR-0013](decisions/ADR-0013-quatre-one-level-subagent-pilot.md) | Use Quatre as the one-level CYOA parent and Site owner | Superseded for current identity/routing by ADR-0015 |
 | [ADR-0014](decisions/ADR-0014-owner-download-complete-cover-backup.md) | Back up all accessible personal covers through owner-download-only packages | Accepted |
+| [ADR-0015](decisions/ADR-0015-argama-delivery-coordinator-transition.md) | Separate ChatGPT Quatre product planning from Codex Argama delivery coordination | Accepted |
 
 The accepted database direction and migration sequence are summarized in [Database](DATABASE.md). Current implementation status is maintained in [Current State](CURRENT_STATE.md).
 

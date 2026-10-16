@@ -198,7 +198,7 @@ A low-priority optional, dismissible, primarily mobile personality layer may rea
 
 ## Current priority and required visual review
 
-Product Owner Decision 1:A historically selected **Phase A — IA and responsive shell**; its delivered shell presentation was later accepted. Broader visual-design acceptance is now held, so no new visual change or phase is active. The criteria below remain durable product direction only. Any later visual goal requires Quatre assignment, current-source/collision and usage checks, relevant Cagalli/Lacus recommendations, Relena acceptance-boundary reconciliation, and separate implementation authority.
+Product Owner Decision 1:A historically selected **Phase A — IA and responsive shell**; its delivered shell presentation was later accepted. Broader visual-design acceptance is now held, so no new visual change or phase is active. The criteria below remain durable product direction only. Any later visual goal requires an Argama assignment from a Product Owner-approved goal, current-source/collision and usage checks, relevant Cagalli/Lacus recommendations, Relena acceptance-boundary reconciliation, and separate implementation authority.
 
 Phase A acceptance boundary:
 
